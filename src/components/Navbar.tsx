@@ -24,13 +24,22 @@ export default function Navbar() {
           <a
             key={link.name}
             href={link.href}
-            className={`px-4 py-2 rounded-full font-medium text-sm transition-colors duration-200 ${
+            className={`px-4 py-2 rounded-full font-medium text-sm transition-colors duration-200 flex items-center ${
               link.highlight
-                ? "bg-violet-600 text-white shadow-md border border-violet-400"
+                ? "bg-[#6164f6] text-white shadow-md border border-violet-400"
                 : "text-white/90 hover:bg-white/10"
             }`}
           >
             {link.name}
+            {link.highlight && (
+              <Image
+                src="/images/contact-logo.png"
+                alt="Contact"
+                width={20}
+                height={20}
+                className="ml-1"
+              />
+            )}
           </a>
         ))}
       </div>
