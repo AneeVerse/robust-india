@@ -6,8 +6,8 @@ export default function Home() {
     <main className="min-h-screen bg-white p-4 sm:p-6 md:p-8">
       <div className="container mx-auto bg-white rounded-3xl overflow-hidden shadow-lg">
         <HeroSection />
-        <ServicesSection />
       </div>
+      <ServicesSection />
     </main>
   );
 }

@@ -55,7 +55,7 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 mb-6">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-normal text-gray-900">Everything you'd</h1>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-normal text-gray-900">Everything you&apos;d</h1>
             <div className="relative">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold text-gray-900">need</h1>
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-pink-300 to-pink-400 rounded-full"></div>
