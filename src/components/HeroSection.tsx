@@ -82,7 +82,7 @@ export default function HeroSection() {
             End-to-End Sourcing, Warehousing & Delivery Solutions
           </p>
         </section>
-        <div className="pb-10">
+        <div className="pb-24">
           <Navbar />
         </div>
       </div>
