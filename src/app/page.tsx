@@ -1,6 +1,9 @@
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProjectShowcase from "@/components/ProjectShowcase";
+import ServiceSlider from "@/components/ServiceSlider";
+
+
 
 
 
@@ -29,6 +32,7 @@ export default function Home() {
     
       <ServicesSection />
       <ProjectShowcase />
+      <ServiceSlider />
     </main>
   );
 }
