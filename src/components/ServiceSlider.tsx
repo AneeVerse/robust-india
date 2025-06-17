@@ -2,15 +2,15 @@
 import React from 'react';
 
 const services = [
-  { name: 'OIL & GAS', img: '/images/service/oil-rig (2)1.png' },
-  { name: 'Agrochemicals', img: '/images/service/agrochemicals.png' },
-  { name: 'Water Treatment', img: '/images/service/water-treatment.png' },
-  { name: 'Mining & Metals', img: '/images/service/mining-and-metals.png' },
-  { name: 'Paints & Coatings', img: '/images/service/paints-and-coatings.png' },
-  { name: 'Polymers & Plastics', img: '/images/service/polymers-and-plastics.png' },
-  { name: 'Pharmaceuticals', img: '/images/service/pharmaceuticals.png' },
-  { name: 'Textiles & Fibers', img: '/images/service/textiles-and-fibers.png' },
-  { name: 'Automotive & Lubricants', img: '/images/service/automotive-and-lubricants.png' },
+  { name: 'OIL & GAS', img: '/images/service/oil-rig (2) 1.png' },
+  { name: 'Agrochemicals', img: '/images/service/chemicals 1.png' },
+  { name: 'Water Treatment', img: '/images/service/wastewater 1.png' },
+  { name: 'Mining & Metals', img: '/images/service/mining 1.png' },
+  { name: 'Paints & Coatings', img: '/images/service/varnish 1 (1).png' },
+  { name: 'Polymers & Plastics', img: '/images/service/polymer 1.png' },
+  { name: 'Pharmaceuticals', img: '/images/service/pill 1.png' },
+  { name: 'Textiles & Fibers', img: '/images/service/thread 1.png' },
+  { name: 'Automotive & Lubricants', img: '/images/service/automotive 1.png' },
 ];
 
 export default function ServiceSlider() {
@@ -45,8 +45,8 @@ export default function ServiceSlider() {
               <img
                 src={service.img}
                 alt={service.name}
-                className="w-24 h-24 mr-6 filter invert brightness-200"
-                style={{ filter: 'brightness(0) invert(1)' }}
+                className="w-24 h-24 mr-6 "
+            
               />
               <span className="text-white text-2xl md:text-3xl font-extrabold whitespace-nowrap">{service.name}</span>
             </div>
