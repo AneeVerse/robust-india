@@ -2,6 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
@@ -143,10 +144,13 @@ const ProjectShowcase = () => {
               justifyContent: "flex-start",
             }}
           >
-            <img
+            <Image
               ref={el => { imageRefs.current[i] = el; }}
               src={project.image}
               alt={project.title}
+              width={800}
+              height={500}
+              quality={90}
               style={{
                 objectFit: "cover",
                 borderRadius: "2.5rem",

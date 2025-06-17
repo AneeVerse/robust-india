@@ -3,6 +3,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ProjectShowcase from "@/components/ProjectShowcase";
 import ServiceSlider from "@/components/ServiceSlider";
 import WhatWeDo from "@/components/what-we-do";
+import BookCallSection from "@/components/BookCallSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ServicesSection />
       <ProjectShowcase />
       <ServiceSlider />
+      <BookCallSection />
     </main>
   );
 }

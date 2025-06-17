@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Image from 'next/image';
 
 const services = [
   { name: 'OIL & GAS', img: '/images/service/oil-rig (2) 1.png' },
@@ -42,11 +43,12 @@ export default function ServiceSlider() {
               className="flex items-center mx-14 min-w-[220px]"
               key={idx}
             >
-              <img
+              <Image
                 src={service.img}
                 alt={service.name}
-                className="w-24 h-24 mr-6 "
-            
+                width={96}
+                height={96}
+                className="w-24 h-24 mr-6"
               />
               <span className="text-white text-2xl md:text-3xl font-extrabold whitespace-nowrap">{service.name}</span>
             </div>

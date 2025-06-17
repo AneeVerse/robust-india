@@ -59,9 +59,11 @@ export default function HeroSection() {
             <span className="relative inline-block mx-1">
               <span className="z-10 relative">FTWZ</span>
             
-              <img
+              <Image
                 src="/images/Vector (4).png"
                 alt="Hand-drawn circle"
+                width={100}
+                height={100}
                 style={{
                   position: "absolute",
                   left: "50%",
