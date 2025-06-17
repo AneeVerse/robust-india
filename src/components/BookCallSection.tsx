@@ -1,44 +1,115 @@
 "use client"
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react"
+import Image from "next/image";
 
 export default function BookCallSection() {
   const ref = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center center"]
+    offset: ["start end", "end center"]
   });
 
-  // Animate from small, rotated, right-shifted to large, straight, centered
-  const rotate = useTransform(scrollYProgress, [0, 1], [15, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-  const x = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  // Animation for text and content
+  const textScale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+  const contentOpacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1]);
+  const contentY = useTransform(scrollYProgress, [0.3, 0.5], [50, 0]);
+  
+  // Card animation - make it start much smaller and end slightly smaller
+  const rotate = useTransform(scrollYProgress, [0.3, 0.7], [25, 0]);
+  const scale = useTransform(scrollYProgress, [0.3, 0.7], [0.3, 0.9]);
+  const x = useTransform(scrollYProgress, [0.3, 0.7], [180, 0]);
+  const y = useTransform(scrollYProgress, [0.3, 0.7], [70, 0]);
+
+  // Staggered button animations - adjusted for better scroll timing
+  const button1Opacity = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
+  const button2Opacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
+  const button3Opacity = useTransform(scrollYProgress, [0.7, 0.8], [0, 1]);
+  const button1Y = useTransform(scrollYProgress, [0.5, 0.6], [20, 0]);
+  const button2Y = useTransform(scrollYProgress, [0.6, 0.7], [20, 0]);
+  const button3Y = useTransform(scrollYProgress, [0.7, 0.8], [20, 0]);
 
   return (
-    <section ref={ref} className="w-full min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-24 bg-white">
-      {/* Left Side */}
-      <div className="flex-1 flex flex-col items-start justify-center mb-12 md:mb-0">
-        <h1 className="text-6xl md:text-8xl font-bold text-gray-800 mb-10">Let&apos;s talk</h1>
-        <p className="text-2xl text-gray-800 mb-8 max-w-xl">
-          Find out how we can take your digital product to the next level together.
-        </p>
-        <div className="flex gap-4">
-          <button className="px-5 py-2 rounded-md bg-gray-100 text-gray-800 font-medium shadow">Book a call</button>
-          <button className="px-5 py-2 rounded-xl font-medium text-sm transition-colors duration-200 flex items-center bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]">
-            Send a message
-          </button>
-        </div>
-      </div>
-      {/* Right Side (Animated Video Container) */}
-      <motion.div
-        style={{ rotate, scale, x }}
-        className="flex-1 flex items-center justify-center"
+    <section ref={ref} className="w-full min-h-[100vh] flex flex-col items-center px-6 md:px-20 py-24 bg-white relative">
+      {/* Centered heading - bigger text */}
+      <motion.h1 
+        style={{ scale: textScale, opacity: textOpacity }}
+        className="text-8xl md:text-[10rem] font-bold text-gray-800 mb-24 text-center leading-tight"
       >
-        <div className="w-56 h-72 md:w-72 md:h-96 bg-gray-200 rounded-2xl shadow-xl flex items-center justify-center">
-          {/* Placeholder for video */}
-          <span className="text-gray-400 text-lg">Video here</span>
-        </div>
-      </motion.div>
+        Let&apos;s talk
+      </motion.h1>
+      
+      {/* Content container - more space between heading and content */}
+      <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-start">
+        {/* Left Side - Text with larger font and width for three lines */}
+        <motion.div 
+          style={{ opacity: contentOpacity, y: contentY }}
+          className="md:w-1/2"
+        >
+          <p className="text-2xl md:text-3xl text-gray-800 mb-10 max-w-xl leading-relaxed">
+            Find out how we can take your digital product to the next level together.
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <motion.button 
+              style={{ opacity: button1Opacity, y: button1Y }}
+              className="px-5 py-2 rounded-md bg-gray-100 text-gray-800 font-medium shadow"
+            >
+              Book a call
+            </motion.button>
+            <motion.button 
+              style={{ opacity: button2Opacity, y: button2Y }}
+              className="px-5 py-2 rounded-md bg-gray-100 text-gray-800 font-medium shadow"
+            >
+              Chat with Vince
+            </motion.button>
+            <motion.button 
+              style={{ opacity: button3Opacity, y: button3Y }}
+              className="px-5 py-2 rounded-xl font-medium transition-colors duration-200 flex items-center bg-[#6164f6] text-white shadow-md"
+            >
+              Send a message
+            </motion.button>
+          </div>
+        </motion.div>
+        
+        {/* Right Side - Video with mute/unmute overlay */}
+        <motion.div
+          style={{ rotate, scale, x, y }}
+          className="md:w-1/3 mt-16 md:mt-0 flex justify-end"
+        >
+          <div className="w-48 h-64 md:w-72 md:h-88 bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative">
+            <video
+              ref={videoRef}
+              src="/video/Hydrophobic Club Moss Spores.mp4"
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted={muted}
+              playsInline
+            />
+            <button
+              type="button"
+              onClick={() => {
+                setMuted((m) => {
+                  if (videoRef.current) videoRef.current.muted = !m;
+                  return !m;
+                });
+              }}
+              className="absolute top-3 right-3 z-10 bg-gray-400/60 rounded-full p-1 w-9 h-9 flex items-center justify-center"
+            >
+              <Image
+                src={muted ? "/images/cta-mute.png" : "/images/cta-unmute.png"}
+                alt={muted ? "Muted" : "Unmuted"}
+                width={28}
+                height={28}
+                className="w-7 h-7"
+              />
+            </button>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

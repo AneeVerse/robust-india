@@ -1,6 +1,7 @@
 'use client';
 import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -14,10 +15,22 @@ export default function Navbar() {
   // Make it move slightly upward on scroll
   const y = useTransform(scrollY, [0, 100], [0, -10]);
 
+  // Hide when footer is in view
+  const [hideNav, setHideNav] = useState(false);
+  useEffect(() => {
+    const footer = document.getElementById('footer-section');
+    if (!footer) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setHideNav(entry.isIntersecting);
+    }, { root: null, threshold: 0 });
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.nav
       style={{ y }}
-      className="fixed bottom-10 left-0 w-full z-50 flex justify-center"
+      className={`fixed bottom-10 left-0 w-full z-50 flex justify-center transition-opacity duration-300 ${hideNav ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
     >
       <NavbarContent />
     </motion.nav>
