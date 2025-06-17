@@ -21,11 +21,42 @@ const projects = [
   },
 ];
 
+const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ visible, x, y }) => (
+  <div
+    style={{
+      position: "fixed",
+      left: x,
+      top: y,
+      pointerEvents: "none",
+      zIndex: 9999,
+      transform: "translate(-50%, -50%)",
+      opacity: visible ? 1 : 0,
+      transition: "opacity 0.2s",
+      background: "rgba(120,120,120,0.45)",
+      color: "#fff",
+      borderRadius: "2rem",
+      padding: "0.35rem 1.3rem",
+      fontSize: "1.05rem",
+      fontWeight: 700,
+      boxShadow: "0 4px 16px rgba(0,0,0,0.10)",
+      userSelect: "none",
+      whiteSpace: "nowrap",
+      backdropFilter: "blur(8px)",
+      WebkitBackdropFilter: "blur(8px)",
+      border: "1.5px solid rgba(255,255,255,0.18)",
+      letterSpacing: "0.01em"
+    }}
+  >
+    View Project
+  </div>
+);
+
 const ProjectShowcase = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
   const descRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [cursor, setCursor] = React.useState({ visible: false, x: 0, y: 0 });
 
   useEffect(() => {
     if (!sectionRef.current || !containerRef.current) return;
@@ -69,8 +100,21 @@ const ProjectShowcase = () => {
     };
   }, []);
 
+  const handleMouseMove = (e: React.MouseEvent) => {
+    setCursor({ visible: true, x: e.clientX, y: e.clientY });
+  };
+  const handleMouseLeave = () => {
+    setCursor(c => ({ ...c, visible: false }));
+  };
+
   return (
-    <section ref={sectionRef} style={{ position: "relative", height: "100vh", overflow: "hidden", background: "#fff" }}>
+    <section
+      ref={sectionRef}
+      style={{ position: "relative", height: "100vh", overflow: "hidden", background: "#fff" }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
       <div ref={containerRef} style={{ height: "100vh", display: "flex" }}>
         {projects.map((project, i) => (
           <div
@@ -119,7 +163,7 @@ const ProjectShowcase = () => {
                 alignItems: "flex-start",
               }}
             >
-              <button style={{
+              {/* <button style={{
                 background: "#bdbdbd",
                 color: "#fff",
                 border: "none",
@@ -129,7 +173,7 @@ const ProjectShowcase = () => {
                 marginBottom: "1.2rem",
                 fontWeight: 500,
                 cursor: "pointer"
-              }}>View Project</button>
+              }}>View Project</button> */}
               <h2 style={{
                 fontSize: "2.8rem",
                 fontWeight: 700,
