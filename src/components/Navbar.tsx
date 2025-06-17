@@ -40,9 +40,9 @@ function NavbarContent() {
         <a
           key={link.name}
           href={link.href}
-          className={`px-4 py-2 rounded-full font-medium text-sm transition-colors duration-200 flex items-center ${
+          className={`px-4 py-1.5 rounded-xl font-medium text-sm transition-colors duration-200 flex items-center ${
             link.highlight
-              ? "bg-[#6164f6] text-white shadow-md border border-violet-400"
+              ? "bg-[#6164f6] text-white shadow-md border border-transparent  border-t-2 border-t-[#888aed]"
               : "text-white/90 hover:bg-white/10"
           }`}
         >
