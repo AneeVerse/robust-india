@@ -19,6 +19,13 @@ const projects = [
       "A dashboard for tracking cloud migration initiatives, progress, and team collaboration.",
     tags: ["Dashboard", "Cloud", "Teamwork"],
   },
+  {
+    image: "/images/project/project3.png",
+    title: "On My Way!",
+    description:
+      "Together with On My Way we created a bold, cutting-edge brand with a smooth journey inside their mobile app.",
+    tags: ["Brand identity", "User research and testing", "Mobile app design"],
+  },
 ];
 
 const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ visible, x, y }) => (
@@ -62,41 +69,49 @@ const ProjectShowcase = () => {
     if (!sectionRef.current || !containerRef.current) return;
     const totalPanels = projects.length;
     const panelWidth = window.innerWidth;
-    gsap.set(containerRef.current, { width: `${totalPanels * 100}vw`, display: "flex" });
+    const gapVW = 10; // gap between panels in vw
+    const gapPx = panelWidth * gapVW / 100;
+    // Set container width to include panels and gaps
+    gsap.set(containerRef.current, { width: `${totalPanels * 100 + (totalPanels - 1) * gapVW}vw`, display: "flex" });
     projects.forEach((_, i) => {
       gsap.set(imageRefs.current[i], { width: "100vw", height: "90vh", x: 0 });
       gsap.set(descRefs.current[i], { x: "100%", opacity: 0 });
     });
 
-    // Horizontal scroll
+    // Horizontal scroll mapped to scroll distance including gaps
+    const scrollDistance = (panelWidth + gapPx) * (totalPanels - 1);
     ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top -4%",
-      end: `+=${panelWidth * totalPanels}`,
+      end: `+=${scrollDistance}`,
       scrub: true,
       pin: true,
       anticipatePin: 1,
       onUpdate: (self) => {
-        // Animate panels based on scroll progress
-        const progress = self.progress * (totalPanels - 1);
+        // Move container only after first panel completes shrink
+        const t0 = 1 / totalPanels;
+        let effProgress = (self.progress - t0) / (1 - t0);
+        effProgress = Math.max(0, Math.min(1, effProgress));
+        const containerX = -(panelWidth + gapPx) * (totalPanels - 1) * effProgress;
+        gsap.set(containerRef.current, { x: containerX });
+        // Animate each panel's image and description based on panelProgress
+        const panelProgress = self.progress * totalPanels; // 0 to totalPanels
         projects.forEach((_, i) => {
-          if (progress >= i && progress < i + 1) {
-            // Animate current panel out
-            gsap.to(imageRefs.current[i], { width: "60vw", duration: 1.2, ease: "power2.out" });
-            gsap.to(descRefs.current[i], { x: 0, opacity: 1, duration: 1.2, ease: "power2.out" });
-            // Animate next panel in
-            if (imageRefs.current[i + 1]) {
-              gsap.to(imageRefs.current[i + 1], { width: "100vw", duration: 0.5, ease: "power2.out" });
-              gsap.to(descRefs.current[i + 1], { x: "100%", opacity: 0, duration: 0.5, ease: "power2.out" });
-            }
-          }
+          const img = imageRefs.current[i];
+          const desc = descRefs.current[i];
+          if (!img || !desc) return;
+          const localProgress = Math.min(Math.max(panelProgress - i, 0), 1);
+          // width 100vw -> 60vw
+          const widthVal = 95 - 27 * localProgress;
+          gsap.set(img, { width: `${widthVal}vw` });
+          // desc x 100% -> 0%, opacity 0 -> 1
+          const xVal = (1 - localProgress) * 100;
+          gsap.set(desc, { x: `${xVal}%`, opacity: localProgress });
         });
-        // Move container horizontally
-        gsap.to(containerRef.current, { x: -progress * panelWidth, duration: 0.5, ease: "power2.out" });
       },
     });
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -115,7 +130,7 @@ const ProjectShowcase = () => {
       onMouseLeave={handleMouseLeave}
     >
       <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
-      <div ref={containerRef} style={{ height: "100vh", display: "flex" }}>
+      <div ref={containerRef} style={{ height: "100vh", display: "flex", gap: "10vw" }}>
         {projects.map((project, i) => (
           <div
             key={project.title}
@@ -126,7 +141,6 @@ const ProjectShowcase = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
-              marginRight: i !== projects.length - 1 ? "10vw" : "-1vw"
             }}
           >
             <img
@@ -150,7 +164,7 @@ const ProjectShowcase = () => {
               ref={el => { descRefs.current[i] = el; }}
               style={{
                 position: "absolute",
-                top: "50%",
+                top: "68%",
                 right: "-2vw",
                 transform: "translateY(-50%)",
                 width: "34vw",

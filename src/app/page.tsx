@@ -6,7 +6,7 @@ import ServiceSlider from "@/components/ServiceSlider";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white p-4 sm:p-6 md:p-8">
-      <div className="container mx-auto bg-white rounded-3xl overflow-hidden shadow-lg">
+      <div className="w-full bg-white rounded-3xl overflow-hidden ">
         <HeroSection />
       </div>
     
