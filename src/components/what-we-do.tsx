@@ -91,7 +91,7 @@ const WaveHandIcon = () => (
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen" style={{ background: "#131518", color: "white", marginTop: "10rem" }}>
+    <div className="min-h-screen" style={{ background: "#131518", color: "white", marginTop: "2rem" }}>
       {/* Main Content */}
       <div className="w-full py-16 flex flex-col items-center">
         {/* Header with Waving Hand */}
@@ -108,7 +108,7 @@ export default function LandingPage() {
           >
             <img src="/images/goodbye_5821930.svg" alt="Waving Hand" className="w-16 h-16 filter invert brightness-0 ml-20" />
           </motion.div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-left ml-20">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-light leading-tight text-left ml-20">
             Say hello to
           </h1>
         </div>
