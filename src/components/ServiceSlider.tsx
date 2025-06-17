@@ -2,15 +2,15 @@
 import React from 'react';
 
 const services = [
-  { name: 'OIL & GAS', img: '/images/service/da42257ad279c4d6f8aed2227ff751aadf429df4.png' },
-  { name: 'Agrochemicals', img: '/images/service/8ab1b9003e3075efd68ed2380913f8202fd843f0.png' },
-  { name: 'Water Treatment', img: '/images/service/81d7b605e9eb5a1a91c63e11db9c903d3153c925.png' },
-  { name: 'Mining & Metals', img: '/images/service/f8d9e9bf2b73d6d1005831f6156cbc9d88d9745c.png' },
-  { name: 'Paints & Coatings', img: '/images/service/e68dd2540e06771f29ae7ae2276b3fff8f7acbdb.png' },
-  { name: 'Polymers & Plastics', img: '/images/service/5533b3b677a0c420f28cf9c61360c2cd110ce182.png' },
-  { name: 'Pharmaceuticals', img: '/images/service/a0774780939bf9ab3ed22ec539eabfa48d67564c.png' },
-  { name: 'Textiles & Fibers', img: '/images/service/8278642b6bbd09dd87a607378e4474aa69122841.png' },
-  { name: 'Automotive & Lubricants', img: '/images/service/711edce868106dea0ae501668c6cbea3ec516b42.png' },
+  { name: 'OIL & GAS', img: '/images/service/oil-rig (2)1.png' },
+  { name: 'Agrochemicals', img: '/images/service/agrochemicals.png' },
+  { name: 'Water Treatment', img: '/images/service/water-treatment.png' },
+  { name: 'Mining & Metals', img: '/images/service/mining-and-metals.png' },
+  { name: 'Paints & Coatings', img: '/images/service/paints-and-coatings.png' },
+  { name: 'Polymers & Plastics', img: '/images/service/polymers-and-plastics.png' },
+  { name: 'Pharmaceuticals', img: '/images/service/pharmaceuticals.png' },
+  { name: 'Textiles & Fibers', img: '/images/service/textiles-and-fibers.png' },
+  { name: 'Automotive & Lubricants', img: '/images/service/automotive-and-lubricants.png' },
 ];
 
 export default function ServiceSlider() {
