@@ -58,24 +58,21 @@ export default function HeroSection() {
             Integrated Chemical Trade, 
             <span className="relative inline-block mx-1">
               <span className="z-10 relative">FTWZ</span>
-              <svg
-                className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-full z-0"
-                height="1.5em"
-                width="3.5em"
-                viewBox="0 0 70 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ pointerEvents: "none" }}
-              >
-                <ellipse
-                  cx="35"
-                  cy="16"
-                  rx="32"
-                  ry="13"
-                  stroke="#6366f1"
-                  strokeWidth="3"
-                />
-              </svg>
+            
+              <img
+                src="/images/Vector (4).png"
+                alt="Hand-drawn circle"
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  top: "55%",
+                  width: "100%",
+                  height: "100%",
+                  transform: "translate(-50%, -50%) scale(1.3)",
+                  zIndex: 0,
+                  pointerEvents: "none"
+                }}
+              />
             </span>
             Services & 3PL Excellence
             <br />
