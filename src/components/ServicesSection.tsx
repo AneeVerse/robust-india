@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react"
+import Link from 'next/link'
 
 export default function ServicesSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -109,9 +110,7 @@ export default function ServicesSection() {
         {/* Cards Container */}
         <div className="relative flex justify-center items-center min-h-[500px]">
           {/* Left Card - FTWZ */}
-          <div
-            className="absolute left-1/2 top-1/2 will-change-transform"
-            style={{
+          <Link href="/services/ftwz" className="absolute left-1/2 top-1/2 will-change-transform" style={{
               transform: `
                 translate(-50%, -50%)
                 translateX(${-450 * scrollProgress}px)
@@ -120,6 +119,8 @@ export default function ServicesSection() {
               zIndex: scrollProgress > 0.3 ? 20 : 5,
               opacity: 0.2 + 0.8 * scrollProgress,
               transition: "none",
+              textDecoration: 'none',
+              cursor: 'pointer',
             }}
           >
             <div
@@ -142,18 +143,18 @@ export default function ServicesSection() {
                 Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Center Card - Chemical Products */}
-          <div
-            className="relative z-30 will-change-transform"
-            style={{
+          <Link href="/services/chemical-products" className="relative z-30 will-change-transform" style={{
               transform: `scale(${0.95 + 0.05 * scrollProgress})`,
               transition: "none",
+              textDecoration: 'none',
+              cursor: 'pointer',
             }}
           >
             <div
-              className="bg-white rounded-3xl p-8 border w-[360px] h-80 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+              className="bg-white rounded-3xl p-8 border w-[380px] h-80 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
               style={{
                 borderColor: "#6164F6",
                 boxShadow: "0 0 48px 8px #bfcaff, 0 4px 12px rgba(0,0,0,0.04)",
@@ -172,12 +173,10 @@ export default function ServicesSection() {
                 A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Right Card - Integrated 3PL */}
-          <div
-            className="absolute left-1/2 top-1/2 will-change-transform"
-            style={{
+          <Link href="/services/integrated-3pl" className="absolute left-1/2 top-1/2 will-change-transform" style={{
               transform: `
                 translate(-50%, -50%)
                 translateX(${450 * scrollProgress}px)
@@ -186,6 +185,8 @@ export default function ServicesSection() {
               zIndex: scrollProgress > 0.3 ? 20 : 5,
               opacity: 0.2 + 0.8 * scrollProgress,
               transition: "none",
+              textDecoration: 'none',
+              cursor: 'pointer',
             }}
           >
             <div
@@ -209,7 +210,7 @@ export default function ServicesSection() {
                 distribution.
               </p>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

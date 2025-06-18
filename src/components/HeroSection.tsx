@@ -1,18 +1,43 @@
 "use client"
 import Image from "next/image";
-import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
+import { useNavbarVisibility } from "../context/NavbarVisibilityContext";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const [showSubheadline, setShowSubheadline] = useState(false);
+  const { setShowNavbar } = useNavbarVisibility();
 
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100);
-    return () => clearTimeout(timer);
+    // Calculate total animation time for headline
+    const headlineLines = ["Global Trade", "Simplified."];
+    const totalChars = headlineLines.reduce((acc, line) => acc + line.length, 0);
+    const lastLineIdx = headlineLines.length - 1;
+    const lastCharIdx = headlineLines[lastLineIdx].length - 1;
+    // Animation: 0.4s initial + 0.5s per line + 0.05s per char
+    const totalDelay = 0.4 + (lastLineIdx * 0.5) + (lastCharIdx * 0.05) + 0.5; // extra 0.5s buffer
+    const subTimer = setTimeout(() => {
+      setShowSubheadline(true);
+      setTimeout(() => {
+        setShowNavbar(true);
+      }, 1000);
+    }, totalDelay * 1000);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(subTimer);
+    }
   }, []);
+
+  // Split text into characters for letter-by-letter animation
+  const headlineText = "Global Trade\nSimplified.";
+  const characters = headlineText.split('');
+
+  // Headline lines for animation
+  const headlineLines = ["Global Trade", "Simplified."];
 
   // Gradient Control Options:
   // 1. Change position: "circle at 50% 50%" means centered gradient
@@ -66,35 +91,47 @@ export default function HeroSection() {
             </h1>
           </div>
           
-          {/* Headline */}
+          {/* Headline with Letter-by-Letter Animation, preserving original layout */}
           <h2 
-            className={`text-6xl sm:text-7xl md:text-8xl mb-10 mt-10 leading-tight text-black transition-all duration-1000 ease-out ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-            }`}
+            className="text-6xl sm:text-7xl md:text-8xl mb-10 mt-5 leading-tight text-black"
             style={{ 
               fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif", 
-              fontWeight: 400,
-              transitionDelay: '0.4s'
+              fontWeight: 400
             }}
           >
-            Global Trade<br />Simplified.
+            {headlineLines.map((line, lineIdx) => (
+              <span key={lineIdx} className="block">
+                {line.split('').map((char, charIdx) => (
+                  <span
+                    key={charIdx}
+                    className={`inline-block transition-all duration-500 ease-out ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`}
+                    style={{ 
+                      transitionDelay: `${0.4 + ((lineIdx * 0.5) + charIdx * 0.05)}s`
+                    }}
+                  >
+                    {char === ' ' ? '\u00A0' : char}
+                  </span>
+                ))}
+              </span>
+            ))}
           </h2>
           
           {/* Subheadline */}
           <p 
-            className={`text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto mb-10 transition-all duration-1000 ease-out ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            className={`text-xl sm:text-2xl text-gray-700 max-w-2xl mx-auto mb-10 transition-all duration-1000 ease-out ${
+              showSubheadline ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{ 
               fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif", 
               fontWeight: 400,
-              transitionDelay: '0.6s'
+              transitionDelay: showSubheadline ? '0s' : '0.6s'
             }}
           >
             Integrated Chemical Trade, 
             <span className="relative inline-block mx-1">
               <span className="z-10 relative">FTWZ</span>
-            
               <Image
                 src="/images/Vector (4).png"
                 alt="Hand-drawn circle"
@@ -117,9 +154,7 @@ export default function HeroSection() {
             End-to-End Sourcing, Warehousing & Delivery Solutions
           </p>
         </section>
-        <div className="pb-24">
-          <Navbar />
-        </div>
+        <div className="pb-24"></div>
       </div>
     </div>
   );

@@ -39,7 +39,7 @@ export default function Navbar() {
 
 function NavbarContent() {
   return (
-    <div className="flex items-center bg-black/80 rounded-3xl px-8 py-3 shadow-lg">
+    <div className="flex items-center bg-[#2a2927] rounded-3xl px-4 py-3 shadow-lg max-w-xl mx-auto">
       <div className="flex items-center mr-4">
         <Image
           src="/images/nav-logo.png"
@@ -48,28 +48,30 @@ function NavbarContent() {
           height={36}
         />
       </div>
-      {navLinks.map((link) => (
-        <a
-          key={link.name}
-          href={link.href}
-          className={`px-4 py-1.5 rounded-xl text-sm transition-colors duration-200 flex items-center ${
-            link.highlight
-              ? "font-medium bg-[#6164f6] text-white shadow-md border border-transparent  border-t-2 border-t-[#888aed]"
-              : "font-bold text-white/90 hover:bg-white/10"
-          }`}
-        >
-          {link.name}
-          {link.highlight && (
-            <Image
-              src="/images/contact-logo.png"
-              alt="Contact"
-              width={20}
-              height={20}
-              className="ml-1"
-            />
-          )}
-        </a>
-      ))}
+      <div className="flex gap-x-3">
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            className={`px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center ${
+              link.highlight
+                ? "text-sm font-medium bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]"
+                : "text-base font-bold text-white/90 hover:bg-white/10"
+            }`}
+          >
+            {link.name}
+            {link.highlight && (
+              <Image
+                src="/images/contact-logo.png"
+                alt="Contact"
+                width={20}
+                height={20}
+                className="ml-1"
+              />
+            )}
+          </a>
+        ))}
+      </div>
     </div>
   );
 } 
