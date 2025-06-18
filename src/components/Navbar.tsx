@@ -39,7 +39,8 @@ export default function Navbar() {
 
 function NavbarContent() {
   return (
-    <div className="flex items-center bg-[#2a2927] rounded-3xl px-4 py-3 shadow-lg max-w-xl mx-auto">
+    <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/90 to-[#252423]/90 rounded-3xl px-4 py-3 shadow-lg max-w-xl mx-auto overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       <div className="flex items-center mr-4">
         <Image
           src="/images/nav-logo.png"
