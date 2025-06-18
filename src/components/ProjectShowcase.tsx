@@ -103,7 +103,7 @@ const ProjectShowcase = () => {
           if (!img || !desc) return;
           const localProgress = Math.min(Math.max(panelProgress - i, 0), 1);
           // width 100vw -> 60vw
-          const widthVal = 95 - 27 * localProgress;
+          const widthVal = 95 - 35 * localProgress;
           gsap.set(img, { width: `${widthVal}vw` });
           // desc x 100% -> 0%, opacity 0 -> 1
           const xVal = (1 - localProgress) * 100;
@@ -169,7 +169,7 @@ const ProjectShowcase = () => {
               style={{
                 position: "absolute",
                 top: "68%",
-                right: "-2vw",
+                right: "4vw",
                 transform: "translateY(-50%)",
                 width: "34vw",
                 background: "transparent",
