@@ -4,7 +4,36 @@ import { useEffect, useState, useRef } from "react"
 
 export default function ServicesSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // Intersection Observer to trigger animations when section comes into view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+        rootMargin: '0px 0px -100px 0px' // Trigger slightly before the section is fully in view
+      }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,15 +82,25 @@ export default function ServicesSection() {
     <section ref={sectionRef} className="relative min-h-screen bg-white overflow-hidden py-20 px-4">
       <div className="w-full py-16">
         {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 mb-6">
+        <div ref={headerRef} className="text-center mb-20">
+          <div 
+            className={`inline-flex items-center gap-2 mb-6 transition-all duration-1000 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            style={{ transitionDelay: '0.2s' }}
+          >
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-normal text-gray-900">Everything you&apos;d</h1>
             <div className="relative">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold text-gray-900">need</h1>
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#6164F6] to-[#6164F6] rounded-full"></div>
             </div>
           </div>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p 
+            className={`text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            style={{ transitionDelay: '0.4s' }}
+          >
             Everything you need from product development and sourcing to packaging, warehousing, and global delivery
             managed under one roof with seamless precision and compliance.
           </p>
@@ -87,7 +126,7 @@ export default function ServicesSection() {
               className="bg-white rounded-3xl p-8 border w-80 h-80 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
               style={{
                 borderColor: "#6164F6",
-                boxShadow: "0 0 20px #6164F6, 0 4px 6px rgba(0, 0, 0, 0.05)",
+                boxShadow: "0 0 48px 8px #bfcaff, 0 4px 12px rgba(0,0,0,0.04)",
               }}
             >
               <div className="flex items-center gap-4 mb-6">
@@ -114,10 +153,10 @@ export default function ServicesSection() {
             }}
           >
             <div
-              className="bg-white rounded-3xl p-8 border w-80 h-80 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+              className="bg-white rounded-3xl p-8 border w-[360px] h-80 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
               style={{
                 borderColor: "#6164F6",
-                boxShadow: "0 0 25px #6164F6, 0 6px 8px rgba(0, 0, 0, 0.06)",
+                boxShadow: "0 0 48px 8px #bfcaff, 0 4px 12px rgba(0,0,0,0.04)",
               }}
             >
               <div className="flex items-center gap-4 mb-6">
@@ -153,7 +192,7 @@ export default function ServicesSection() {
               className="bg-white rounded-3xl p-8 border w-80 h-80 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
               style={{
                 borderColor: "#6164F6",
-                boxShadow: "0 0 20px #6164F6, 0 4px 6px rgba(0, 0, 0, 0.05)",
+                boxShadow: "0 0 48px 8px #bfcaff, 0 4px 12px rgba(0,0,0,0.04)",
               }}
             >
               <div className="flex items-center gap-4 mb-6">

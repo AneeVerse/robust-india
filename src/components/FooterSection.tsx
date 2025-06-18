@@ -42,7 +42,7 @@ export default function FooterSection() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:border-[#6164F6]"
+                className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:border-[#ffffff]"
               />
               <button type="submit" className="absolute right-1 bottom-1 p-0 shadow-lg">
                 <Image src="/images/Button - Subscribe to our newsletter.png" alt="Subscribe" width={32} height={32} className="h-8 w-8" />

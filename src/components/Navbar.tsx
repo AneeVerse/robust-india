@@ -39,24 +39,23 @@ export default function Navbar() {
 
 function NavbarContent() {
   return (
-    <div className="flex items-center bg-black/80 rounded-full px-3 py-1.5 shadow-lg">
+    <div className="flex items-center bg-black/80 rounded-3xl px-8 py-3 shadow-lg">
       <div className="flex items-center mr-4">
         <Image
           src="/images/nav-logo.png"
           alt="Robust India Nav Logo"
           width={36}
           height={36}
-        
         />
       </div>
       {navLinks.map((link) => (
         <a
           key={link.name}
           href={link.href}
-          className={`px-4 py-1.5 rounded-xl font-medium text-sm transition-colors duration-200 flex items-center ${
+          className={`px-4 py-1.5 rounded-xl text-sm transition-colors duration-200 flex items-center ${
             link.highlight
-              ? "bg-[#6164f6] text-white shadow-md border border-transparent  border-t-2 border-t-[#888aed]"
-              : "text-white/90 hover:bg-white/10"
+              ? "font-medium bg-[#6164f6] text-white shadow-md border border-transparent  border-t-2 border-t-[#888aed]"
+              : "font-bold text-white/90 hover:bg-white/10"
           }`}
         >
           {link.name}

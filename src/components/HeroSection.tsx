@@ -1,7 +1,19 @@
+"use client"
 import Image from "next/image";
 import Navbar from "./Navbar";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger animations after component mounts
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Gradient Control Options:
   // 1. Change position: "circle at 50% 50%" means centered gradient
   //    - "circle at 0% 0%" (top-left corner)
@@ -35,7 +47,12 @@ export default function HeroSection() {
       <div className="w-full" style={gradientStyle}>
         <section className="relative flex flex-col items-center justify-center w-full text-center px-4 pt-16 pb-2">
           {/* Brand Name and Logo - Side by Side */}
-          <div className="flex items-center justify-center mb-10">
+          <div 
+            className={`flex items-center justify-center mb-10 transition-all duration-1000 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            style={{ transitionDelay: '0.2s' }}
+          >
             <Image
               src="/images/top-logo.png"
               alt="Robust India Logo"
@@ -50,11 +67,30 @@ export default function HeroSection() {
           </div>
           
           {/* Headline */}
-          <h2 className="text-6xl sm:text-7xl md:text-8xl mb-10 mt-10 leading-tight text-black" style={{ fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif", fontWeight: 400 }}>
+          <h2 
+            className={`text-6xl sm:text-7xl md:text-8xl mb-10 mt-10 leading-tight text-black transition-all duration-1000 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            }`}
+            style={{ 
+              fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif", 
+              fontWeight: 400,
+              transitionDelay: '0.4s'
+            }}
+          >
             Global Trade<br />Simplified.
           </h2>
+          
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto mb-10" style={{ fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif", fontWeight: 400 }}>
+          <p 
+            className={`text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto mb-10 transition-all duration-1000 ease-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            style={{ 
+              fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif", 
+              fontWeight: 400,
+              transitionDelay: '0.6s'
+            }}
+          >
             Integrated Chemical Trade, 
             <span className="relative inline-block mx-1">
               <span className="z-10 relative">FTWZ</span>

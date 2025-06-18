@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen" style={{ background: "#131518", color: "white", marginTop: "2rem" }}>
+    <div className="min-h-screen" style={{ background: "#131518", color: "white", marginTop: "5rem" }}>
       {/* Main Content */}
       <div className="w-full py-16 flex flex-col items-center">
         {/* Header with Waving Hand */}
