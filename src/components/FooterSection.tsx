@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function FooterSection() {
   return (
-    <footer id="footer-section" className="bg-[#131518] text-white py-20 px-6 md:px-20 rounded-3xl">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+    <footer id="footer-section" className="bg-[#131518] text-white py-12 px-6 md:px-20 rounded-3xl">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-0">
         {/* Left: large headline + nav */}
-        <div className="md:w-2/3 space-y-8">
+        <div className="md:w-2/3 space-y-4">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight">
             Don&apos;t settle for good,<br />
             let&apos;s go for <span className="relative inline-block">
@@ -15,7 +15,7 @@ export default function FooterSection() {
             </span><br />
             together
           </h2>
-          <nav className="flex flex-wrap items-center gap-8">
+          <nav className="flex flex-wrap items-center gap-8 mt-16 text-2xl">
             {['Home', 'About', 'Projects', 'Process', 'Contact'].map((label, idx) => (
               <a
                 key={idx}
@@ -31,9 +31,9 @@ export default function FooterSection() {
         </div>
 
         {/* Right: newsletter signup */}
-        <div className="md:w-1/3 space-y-4 mt-38">
-          <h3 className="text-xl font-medium">Our newsletter</h3>
-          <p className="text-sm text-gray-300 leading-relaxed">
+        <div className="md:w-1/3 space-y-6 mt-46">
+          <h3 className="text-3xl font-bold">Our newsletter</h3>
+          <p className="text-lg text-gray-300 leading-relaxed">
             Scale your platform the right way. Get expert insights on design,
             development, and growth.
           </p>
@@ -42,19 +42,19 @@ export default function FooterSection() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-md focus:outline-none focus:border-[#ffffff]"
+                className="w-full px-5 py-3 text-lg bg-transparent border border-gray-600 rounded-lg focus:outline-none focus:border-[#ffffff]"
               />
-              <button type="submit" className="absolute right-1 bottom-1 p-0 shadow-lg">
-                <Image src="/images/Button - Subscribe to our newsletter.png" alt="Subscribe" width={32} height={32} className="h-8 w-8" />
+              <button type="submit" className="absolute right-2 bottom-2 p-0 shadow-lg">
+                <Image src="/images/Button - Subscribe to our newsletter.png" alt="Subscribe" width={40} height={40} className="h-10 w-10" />
               </button>
             </div>
           </form>
         </div>
       </div>
       {/* Divider */}
-      <hr className="border-gray-700 my-8" />
+      <hr className="border-gray-700 mt-26 mb-4" />
       {/* Bottom bar */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 mt-16 pb-0">
         <p className="mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">Robust india© — Helping businesses reach new heights since 2009</p>
         <a href="#terms" className="mb-2 md:mb-0 hover:text-white flex items-center w-full md:w-auto justify-center mr-50">Terms of Service</a>
         <div className="flex items-center gap-6 w-full md:w-auto justify-center md:justify-end">
