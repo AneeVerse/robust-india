@@ -46,11 +46,11 @@ export default function ServiceSlider() {
               <Image
                 src={service.img}
                 alt={service.name}
-                width={96}
-                height={96}
-                className="w-24 h-24 mr-6"
+                width={66}
+                height={66}
+                className="w-16 h-16 mr-6"
               />
-              <span className="text-white text-2xl md:text-3xl font-extrabold whitespace-nowrap">{service.name}</span>
+              <span className="text-white text-3xl md:text-5xl font-extrabold whitespace-nowrap">{service.name}</span>
             </div>
           ))}
         </div>
