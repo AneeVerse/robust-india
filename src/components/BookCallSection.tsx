@@ -62,19 +62,19 @@ export default function BookCallSection() {
           <div className="flex flex-wrap items-center gap-4">
             <motion.button 
               style={{ opacity: button1Opacity, y: button1Y }}
-              className="bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
+              className="bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 h-12 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
             >
               Book a call
             </motion.button>
             <motion.button 
               style={{ opacity: button2Opacity, y: button2Y }}
-              className="bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
+              className="bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 h-12 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
             >
               Chat with Vince
             </motion.button>
             <motion.button 
               style={{ opacity: button3Opacity, y: button3Y }}
-              className="bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-dark-blue-300"
+              className="bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 h-12 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-dark-blue-300"
             >
               Send a message
             </motion.button>

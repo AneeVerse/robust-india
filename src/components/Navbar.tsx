@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <motion.nav
       style={{ y }}
-      className={`fixed bottom-10 left-0 w-full z-50 flex justify-center transition-opacity duration-300 ${hideNav ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+      className={`fixed bottom-2 left-0 w-full z-50 flex justify-center transition-opacity duration-300 ${hideNav ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
     >
       <NavbarContent />
     </motion.nav>
@@ -39,7 +39,7 @@ export default function Navbar() {
 
 function NavbarContent() {
   return (
-    <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/90 to-[#252423]/90 rounded-3xl px-4 py-3 shadow-lg max-w-xl mx-auto overflow-hidden">
+    <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-3xl px-4 py-3 shadow-lg max-w-xl mx-auto overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       <div className="flex items-center mr-4">
         <Image
@@ -56,7 +56,7 @@ function NavbarContent() {
             href={link.href}
             className={`px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center ${
               link.highlight
-                ? "text-sm font-medium bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]"
+                ? "text-base font-bold bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]"
                 : "text-base font-bold text-white/90 hover:bg-white/10"
             }`}
           >

@@ -68,7 +68,7 @@ export default function HeroSection() {
         <section className="relative flex flex-col items-center justify-center w-full text-center px-4 pt-16 pb-2">
           {/* Brand Name and Logo - Side by Side */}
           <div 
-            className={`flex items-center justify-center mb-10 transition-all duration-1000 ease-out ${
+            className={`flex items-center justify-center mb-20 -mt-10 transition-all duration-1000 ease-out ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{ transitionDelay: '0.2s' }}
@@ -81,14 +81,14 @@ export default function HeroSection() {
               className="mr-3"
               priority
             />
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-black">
+            <h1 className="text-3xl sm:text-4xl md:text-4xl font-extrabold tracking-tight text-black">
               ROBUST INDIA
             </h1>
           </div>
           
           {/* Headline with Letter-by-Letter Animation, preserving original layout */}
           <h2 
-            className="text-6xl sm:text-7xl md:text-8xl mb-10 mt-5 leading-tight text-black"
+            className="text-7xl sm:text-8xl md:text-[6.5rem] mb-2 -mt-4 leading-tight text-black tracking-wide"
             style={{ 
               fontFamily: "NoiGrotesk", 
               fontWeight: 400
@@ -114,17 +114,17 @@ export default function HeroSection() {
           </h2>
           
           {/* Subheadline */}
-          <p 
-            className={`text-xl sm:text-2xl text-gray-700 max-w-2xl mx-auto mb-10 transition-all duration-1000 ease-out ${
+          <p
+            className={`text-xl sm:text-2xl text-gray-700 max-w-xl mx-auto mb-10 leading-relaxed transition-all duration-1000 ease-out ${
               showSubheadline ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
-            style={{ 
-              fontFamily: "FusionNeue", 
+            style={{
+              fontFamily: "FusionNeue",
               fontWeight: 400,
               transitionDelay: showSubheadline ? '0s' : '0.6s'
             }}
           >
-            Integrated Chemical Trade, 
+            Integrated Chemical Trade,
             <span className="relative inline-block mx-1">
               <span className="z-10 relative">FTWZ</span>
               <Image
@@ -144,8 +144,9 @@ export default function HeroSection() {
                 }}
               />
             </span>
-            Services & 3PL Excellence
-            <br />
+     
+              Services & 3PL Excellence
+         
             End-to-End Sourcing, Warehousing & Delivery Solutions
           </p>
         </section>
