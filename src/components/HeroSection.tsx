@@ -15,7 +15,6 @@ export default function HeroSection() {
     }, 100);
     // Calculate total animation time for headline
     const headlineLines = ["Global Trade", "Simplified."];
-    const totalChars = headlineLines.reduce((acc, line) => acc + line.length, 0);
     const lastLineIdx = headlineLines.length - 1;
     const lastCharIdx = headlineLines[lastLineIdx].length - 1;
     // Animation: 0.4s initial + 0.5s per line + 0.05s per char
@@ -31,10 +30,6 @@ export default function HeroSection() {
       clearTimeout(subTimer);
     }
   }, []);
-
-  // Split text into characters for letter-by-letter animation
-  const headlineText = "Global Trade\nSimplified.";
-  const characters = headlineText.split('');
 
   // Headline lines for animation
   const headlineLines = ["Global Trade", "Simplified."];

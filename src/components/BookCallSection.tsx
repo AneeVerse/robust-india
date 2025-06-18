@@ -15,6 +15,13 @@ export default function BookCallSection() {
   // Animation for text and content
   const textScale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+  // Fade out heading as you scroll further
+  const headingFadeOut = useTransform(scrollYProgress, [0.5, 0.8], [1, 0]);
+  // Combine fade-in and fade-out
+  const headingOpacity = useTransform(
+    [textOpacity, headingFadeOut],
+    (input: number[]) => (input[0] ?? 1) * (input[1] ?? 1)
+  );
   const contentOpacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1]);
   const contentY = useTransform(scrollYProgress, [0.3, 0.5], [50, 0]);
   
@@ -36,8 +43,8 @@ export default function BookCallSection() {
     <section ref={ref} className="w-full min-h-[100vh] flex flex-col items-center px-6 md:px-20 py-24 bg-white relative">
       {/* Centered heading - bigger text */}
       <motion.h1 
-        style={{ scale: textScale, opacity: textOpacity }}
-        className="text-8xl md:text-[10rem] font-bold text-gray-800 mb-24 text-center leading-tight"
+        style={{ scale: textScale, opacity: headingOpacity }}
+        className="text-8xl md:text-[12rem] font-bold text-gray-800 mb-24 text-center leading-tight"
       >
         Let&apos;s talk
       </motion.h1>

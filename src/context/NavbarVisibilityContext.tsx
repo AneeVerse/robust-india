@@ -1,9 +1,14 @@
 "use client"
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, Dispatch, SetStateAction } from "react";
 
-const NavbarVisibilityContext = createContext({
+interface NavbarVisibilityContextType {
+  showNavbar: boolean;
+  setShowNavbar: Dispatch<SetStateAction<boolean>>;
+}
+
+const NavbarVisibilityContext = createContext<NavbarVisibilityContextType>({
   showNavbar: false,
-  setShowNavbar: (show: boolean) => {},
+  setShowNavbar: () => {},
 });
 
 export function NavbarVisibilityProvider({ children }: { children: React.ReactNode }) {
