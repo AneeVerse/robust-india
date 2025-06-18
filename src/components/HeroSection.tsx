@@ -90,7 +90,7 @@ export default function HeroSection() {
           <h2 
             className="text-6xl sm:text-7xl md:text-8xl mb-10 mt-5 leading-tight text-black"
             style={{ 
-              fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif", 
+              fontFamily: "NoiGrotesk", 
               fontWeight: 400
             }}
           >
@@ -119,7 +119,7 @@ export default function HeroSection() {
               showSubheadline ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{ 
-              fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif", 
+              fontFamily: "FusionNeue", 
               fontWeight: 400,
               transitionDelay: showSubheadline ? '0s' : '0.6s'
             }}
