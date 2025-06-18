@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from 'next/image';
+import { MdWorkspacePremium, MdLayers, MdChatBubble, MdMenuBook } from "react-icons/md";
 
 export default function LandingPage() {
   return (
@@ -35,13 +36,7 @@ export default function LandingPage() {
               className="w-12 h-12 rounded-xl flex items-center justify-center"
               style={{ backgroundColor: "#6164F6" }}
             >
-              {/* ExpertsIcon with #6164F6 */}
-              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                <path d="M12 2C14 2 16 4 16 6C16 8 14 10 12 10C10 10 8 8 8 6C8 4 10 2 12 2Z" fill="#fff" stroke="#6164F6" strokeWidth="2" />
-                <path d="M22 12C22 10 20 8 18 8C16 8 14 10 14 12C14 14 16 16 18 16C20 16 22 14 22 12Z" fill="#fff" stroke="#6164F6" strokeWidth="2" />
-                <path d="M12 22C10 22 8 20 8 18C8 16 10 14 12 14C14 14 16 16 16 18C16 20 14 22 12 22Z" fill="#fff" stroke="#6164F6" strokeWidth="2" />
-                <path d="M2 12C2 14 4 16 6 16C8 16 10 14 10 12C10 10 8 8 6 8C4 8 2 10 2 12Z" fill="#fff" stroke="#6164F6" strokeWidth="2" />
-              </svg>
+              <MdWorkspacePremium className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-2xl font-bold">Top-tier team of experts</h2>
             <p className="text-gray-400 leading-relaxed text-base">
@@ -56,12 +51,7 @@ export default function LandingPage() {
               className="w-12 h-12 rounded-xl flex items-center justify-center"
               style={{ backgroundColor: "#6164F6" }}
             >
-              {/* ProcessIcon with #6164F6 */}
-              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                <path d="M9 6C9 6 9 6 9 6C9 6 9 18 9 18C9 18 9 18 9 18" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
-                <path d="M15 6C15 6 15 6 15 6C15 6 15 18 15 18C15 18 15 18 15 18" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
-                <rect x="2" y="2" width="20" height="20" rx="10" stroke="#6164F6" strokeWidth="2" fill="none" />
-              </svg>
+              <MdLayers className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-2xl font-bold">Proven powerful process</h2>
             <p className="text-gray-400 leading-relaxed text-base">
@@ -80,17 +70,7 @@ export default function LandingPage() {
               className="w-12 h-12 rounded-xl flex items-center justify-center"
               style={{ backgroundColor: "#6164F6" }}
             >
-              {/* CommsIcon with #6164F6 */}
-              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                <rect x="2" y="2" width="20" height="20" rx="10" stroke="#6164F6" strokeWidth="2" fill="none" />
-                <path
-                  d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"
-                  stroke="#fff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <MdChatBubble className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-2xl font-bold">Clear-cut comms</h2>
             <p className="text-gray-400 leading-relaxed text-base">
@@ -105,24 +85,7 @@ export default function LandingPage() {
               className="w-12 h-12 rounded-xl flex items-center justify-center"
               style={{ backgroundColor: "#6164F6" }}
             >
-              {/* KnowledgeIcon with #6164F6 */}
-              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-                <rect x="2" y="2" width="20" height="20" rx="10" stroke="#6164F6" strokeWidth="2" fill="none" />
-                <path
-                  d="M8 12L12 8L16 12"
-                  stroke="#fff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M16 12L12 16L8 12"
-                  stroke="#fff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <MdMenuBook className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-2xl font-bold">Sharing knowledge</h2>
             <p className="text-gray-400 leading-relaxed text-base">
