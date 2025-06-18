@@ -55,19 +55,19 @@ export default function BookCallSection() {
           <div className="flex flex-wrap items-center gap-4">
             <motion.button 
               style={{ opacity: button1Opacity, y: button1Y }}
-              className="px-5 py-2 rounded-md bg-gray-100 text-gray-800 font-medium shadow"
+              className="bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
             >
               Book a call
             </motion.button>
             <motion.button 
               style={{ opacity: button2Opacity, y: button2Y }}
-              className="px-5 py-2 rounded-md bg-gray-100 text-gray-800 font-medium shadow"
+              className="bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
             >
               Chat with Vince
             </motion.button>
             <motion.button 
               style={{ opacity: button3Opacity, y: button3Y }}
-              className="px-5 py-2 rounded-xl font-medium transition-colors duration-200 flex items-center bg-[#6164f6] text-white shadow-md"
+              className="bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-dark-blue-300"
             >
               Send a message
             </motion.button>
