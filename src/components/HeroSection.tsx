@@ -91,7 +91,7 @@ export default function HeroSection() {
             className="text-7xl sm:text-8xl md:text-[6.5rem] mb-2 -mt-4 leading-tight text-black tracking-wide"
             style={{ 
               fontFamily: "NoiGrotesk", 
-              fontWeight: 400
+              fontWeight: 600
             }}
           >
             {headlineLines.map((line, lineIdx) => (
