@@ -35,8 +35,7 @@ export default function ServiceSlider() {
         {/* Right blur overlay */}
         <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10" style={{background: 'linear-gradient(to left, #181a1b 70%, transparent 100%)'}} />
         <div
-          className="flex w-max animate-[slide_30s_linear_infinite] ml-10 md:ml-24 mt-10"
-          style={{ animation: 'slide 30s linear infinite' }}
+          className="flex w-max animate-[slide_80s_linear_infinite] ml-10 md:ml-24 mt-10"
         >
           {sliderItems.map((service, idx) => (
             <div
@@ -50,7 +49,7 @@ export default function ServiceSlider() {
                 height={66}
                 className="w-16 h-16 mr-6"
               />
-              <span className="text-white text-3xl md:text-5xl font-extrabold whitespace-nowrap">{service.name}</span>
+              <span className="text-white text-2xl md:text-4xl font-extrabold whitespace-nowrap">{service.name}</span>
             </div>
           ))}
         </div>
