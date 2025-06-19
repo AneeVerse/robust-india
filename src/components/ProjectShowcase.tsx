@@ -8,24 +8,24 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     image: "/images/project/project1.png",
-    title: "Vio.com",
+    title: "Chemical Products",
     description:
-      "We helped Vio.com with a fresh, impactful brand that resonates with deal-seeking travelers and reach into every product detail.",
-    tags: ["Brand identity", "Motion design", "Web app design", "+1"],
+      "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
+    tags: ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"],
   },
   {
     image: "/images/project/project2.png",
-    title: "Cloud Migration Dashboard",
+    title: "FTWZ",
     description:
-      "A dashboard for tracking cloud migration initiatives, progress, and team collaboration.",
-    tags: ["Dashboard", "Cloud", "Teamwork"],
+      "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
+    tags: ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"],
   },
   {
     image: "/images/project/project3.png",
-    title: "On My Way!",
+    title: "Integrated 3PL",
     description:
-      "Together with On My Way we created a bold, cutting-edge brand with a smooth journey inside their mobile app.",
-    tags: ["Brand identity", "User research and testing", "Mobile app design"],
+      "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",
+    tags: ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"],
   },
 ];
 
