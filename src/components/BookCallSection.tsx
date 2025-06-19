@@ -15,8 +15,8 @@ export default function BookCallSection() {
   // Animation for text and content
   const textScale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-  // Fade out heading as you scroll further
-  const headingFadeOut = useTransform(scrollYProgress, [0.5, 0.8], [1, 0]);
+  // Delay fade-out until after content appears
+  const headingFadeOut = useTransform(scrollYProgress, [0.6, 0.9], [1, 0]);
   // Combine fade-in and fade-out
   const headingOpacity = useTransform(
     [textOpacity, headingFadeOut],
@@ -44,7 +44,7 @@ export default function BookCallSection() {
       {/* Centered heading - bigger text */}
       <motion.h1 
         style={{ scale: textScale, opacity: headingOpacity }}
-        className="text-8xl md:text-[12rem] font-bold text-gray-800 mb-24 text-center leading-tight"
+        className="text-8xl md:text-[12rem] font-bold text-[#000000] mb-24 text-center leading-tight"
       >
         Let&apos;s talk
       </motion.h1>
@@ -54,7 +54,7 @@ export default function BookCallSection() {
         {/* Left Side - Text with larger font and width for three lines */}
         <motion.div 
           style={{ opacity: contentOpacity, y: contentY }}
-          className="md:w-1/2"
+          className="w-full md:w-auto"
         >
           <p className="text-2xl md:text-3xl text-gray-800 mb-10 max-w-xl leading-relaxed">
             Find out how we can take your digital product to the next level together.
@@ -84,7 +84,7 @@ export default function BookCallSection() {
         {/* Right Side - Video with mute/unmute overlay */}
         <motion.div
           style={{ rotate, scale, x, y }}
-          className="md:w-1/3 mt-16 md:mt-0 flex justify-end"
+          className="mt-16 md:mt-0 flex justify-end"
         >
           <div className="w-48 h-64 md:w-72 md:h-88 bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative">
             <video

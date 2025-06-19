@@ -55,7 +55,15 @@ export default function FooterSection() {
       <hr className="border-gray-700 mt-26 mb-4" />
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 mt-16 pb-0">
-        <p className="mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">Robust india© — Helping businesses reach new heights since 2009</p>
+        <p className="mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">
+          Robust india©
+          <span className="inline-block mx-2 align-middle">
+            <svg className="inline-block h-2 w-6 text-gray-400" fill="none" viewBox="0 0 27 10" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 6.10696C4.89099 6.10696 10.4306 6.79673 13.9209 4.58335C17.2052 2.50058 13.7605 -0.43632 11.8165 1.80381C11.0323 2.70752 10.4356 4.55498 10.9011 5.72606C13.5121 12.295 22.6498 7.43559 26 4.48555" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </span>
+          Helping businesses reach new heights since 2009
+        </p>
         <a href="#terms" className="mb-2 md:mb-0 hover:text-white flex items-center w-full md:w-auto justify-center mr-50">Terms of Service</a>
         <div className="flex items-center gap-6 w-full md:w-auto justify-center md:justify-end">
           <a href="#linkedin" className="hover:text-white">LinkedIn&nbsp;↗</a>
