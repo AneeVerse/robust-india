@@ -63,7 +63,7 @@ function NavbarContent() {
             {link.name}
             {link.highlight && (
               <Image
-                src="/images/contact-logo.png"
+                src="/images/contact-logo.svg"
                 alt="Contact"
                 width={20}
                 height={20}
