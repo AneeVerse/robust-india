@@ -125,19 +125,19 @@ export default function HeroSection() {
             }}
           >
             Integrated Chemical Trade,
-            <span className="relative inline-block mx-1">
+            <span className="relative inline-block mx-4">
               <span className="z-10 relative">FTWZ</span>
               <Image
                 src="/images/Vector (4).png"
                 alt="Hand-drawn circle"
-                width={100}
-                height={100}
+                width={90}
+                height={90}
                 style={{
                   position: "absolute",
                   left: "50%",
-                  top: "55%",
+                  top: "50%",
                   width: "100%",
-                  height: "100%",
+                  height: "80%",
                   transform: "translate(-50%, -50%) scale(1.3)",
                   zIndex: 0,
                   pointerEvents: "none"
