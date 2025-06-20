@@ -62,3 +62,7 @@ body {
   font-size: 1.15em;
   line-height: 1;
 }
+
+/* Hide default scrollbar across browsers */
+::-webkit-scrollbar { display: none; }
+html { -ms-overflow-style: none; scrollbar-width: none; }
