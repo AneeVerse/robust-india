@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useNavbarVisibility } from "../context/NavbarVisibilityContext";
+import Link from 'next/link';
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -67,7 +68,8 @@ export default function HeroSection() {
       <div className="w-full" style={gradientStyle}>
         <section className="relative flex flex-col items-center justify-center w-full text-center px-4 pt-16 pb-2">
           {/* Brand Name and Logo - Side by Side */}
-          <div 
+          <Link
+            href="/"
             className={`flex items-center justify-center mb-20 -mt-10 transition-all duration-1000 ease-out ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
@@ -84,7 +86,7 @@ export default function HeroSection() {
             <h1 className="text-3xl sm:text-4xl md:text-4xl font-extrabold tracking-tight text-black">
               ROBUST INDIA
             </h1>
-          </div>
+          </Link>
           
           {/* Headline with Letter-by-Letter Animation, preserving original layout */}
           <h2 

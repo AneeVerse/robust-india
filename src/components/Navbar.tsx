@@ -2,9 +2,10 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const navLinks = [
-  { name: "About", href: "#about" },
+  { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
   { name: "Process", href: "#process" },
   { name: "Contact", href: "#contact", highlight: true },
@@ -42,35 +43,60 @@ function NavbarContent() {
     <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-3xl px-4 py-3 shadow-lg max-w-xl mx-auto overflow-hidden border px-2 border-[#3c3a38]">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       <div className="flex items-center mr-4">
-        <Image
-          src="/images/nav-logo.png"
-          alt="Robust India Nav Logo"
-          width={36}
-          height={36}
-        />
+        <Link href="/">
+          <Image
+            src="/images/nav-logo.png"
+            alt="Robust India Nav Logo"
+            width={36}
+            height={36}
+          />
+        </Link>
       </div>
       <div className="flex gap-x-3">
         {navLinks.map((link) => (
-          <a
-            key={link.name}
-            href={link.href}
-            className={`px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center ${
-              link.highlight
-                ? "text-base font-bold bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]"
-                : "text-base font-bold text-white/90 hover:bg-white/10"
-            }`}
-          >
-            {link.name}
-            {link.highlight && (
-              <Image
-                src="/images/contact-logo.svg"
-                alt="Contact"
-                width={20}
-                height={20}
-                className="ml-1"
-              />
-            )}
-          </a>
+          link.href.startsWith('#') ? (
+            <a
+              key={link.name}
+              href={link.href}
+              className={`px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center ${
+                link.highlight
+                  ? "text-base font-bold bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]"
+                  : "text-base font-bold text-white/90 hover:bg-white/10"
+              }`}
+            >
+              {link.name}
+              {link.highlight && (
+                <Image
+                  src="/images/contact-logo.svg"
+                  alt="Contact"
+                  width={20}
+                  height={20}
+                  className="ml-1"
+                />
+              )}
+            </a>
+          ) : (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center ${
+                link.highlight
+                  ? "text-base font-bold bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]"
+                  : "text-base font-bold text-white/90 hover:bg-white/10"
+              }`}
+            >
+              {link.name}
+              {link.highlight && (
+                <Image
+                  src="/images/contact-logo.svg"
+                  alt="Contact"
+                  width={20}
+                  height={20}
+                  className="ml-1"
+                />
+              )}
+            </Link>
+          )
         ))}
       </div>
     </div>

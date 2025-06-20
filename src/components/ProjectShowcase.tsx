@@ -3,24 +3,25 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from 'next/image';
+import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  {
+  { slug: 'chemical-products',
     image: "/images/project/project1.png",
     title: "Chemical Products",
     description:
       "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
     tags: ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"],
   },
-  {
+  { slug: 'ftwz',
     image: "/images/project/project2.png",
     title: "FTWZ",
     description:
       "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
     tags: ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"],
   },
-  {
+  { slug: 'integrated-3pl',
     image: "/images/project/project3.png",
     title: "Integrated 3PL",
     description:
@@ -133,8 +134,9 @@ const ProjectShowcase = () => {
       <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
       <div ref={containerRef} style={{ height: "100vh", display: "flex", gap: "10vw" }}>
         {projects.map((project, i) => (
-          <div
-            key={project.title}
+          <Link
+            key={project.slug}
+            href={`/projects/${project.slug}`}
             style={{
               position: "relative",
               width: "100vw",
@@ -220,7 +222,7 @@ const ProjectShowcase = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

@@ -20,9 +20,7 @@ export default function FooterSection() {
               <a
                 key={idx}
                 href={`#${label.toLowerCase()}`}
-                className={`py-1 px-2 rounded-md transition-colors duration-200 ${
-                  label === 'Home' ? 'bg-white/10' : 'hover:bg-white/10'
-                }`}
+                className="py-1 px-2 rounded-md transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
               >
                 {label}
               </a>
@@ -56,7 +54,7 @@ export default function FooterSection() {
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 mt-16 pb-0">
         <p className="mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">
-          Robust india©
+          Robust India©
           <span className="inline-block mx-2 align-middle">
             <svg className="inline-block h-2 w-6 text-gray-400" fill="none" viewBox="0 0 27 10" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 6.10696C4.89099 6.10696 10.4306 6.79673 13.9209 4.58335C17.2052 2.50058 13.7605 -0.43632 11.8165 1.80381C11.0323 2.70752 10.4356 4.55498 10.9011 5.72606C13.5121 12.295 22.6498 7.43559 26 4.48555" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -72,4 +70,4 @@ export default function FooterSection() {
       </div>
     </footer>
   );
-} 
+}
