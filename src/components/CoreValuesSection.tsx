@@ -3,6 +3,8 @@
 import { useRef, useEffect } from "react"
 import { Sparkles, Diamond, Heart, Star } from 'lucide-react'
 import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger)
 
 // Card component (inline)
 const Card = ({ children, className = "", ...props }: any) => (
@@ -57,31 +59,32 @@ const coreValues = [
 ]
 
 export default function HorizontalScrollCards() {
+  const sectionRef = useRef<HTMLDivElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const scrollContainer = scrollContainerRef.current
-    if (!scrollContainer) return
+    const container = scrollContainerRef.current
+    if (!container) return
 
-    const handleWheel = (e: WheelEvent) => {
-      e.preventDefault()
+    const totalScrollWidth = container.scrollWidth
+    const viewportWidth = window.innerWidth
+    const scrollDistance = totalScrollWidth - viewportWidth
 
-      // Use GSAP for smooth horizontal scrolling
-      const scrollAmount = e.deltaY * 2
-      const currentScroll = scrollContainer.scrollLeft
-      const newScroll = currentScroll + scrollAmount
-
-      gsap.to(scrollContainer, {
-        scrollLeft: newScroll,
-        duration: 0.8,
-        ease: "power2.out",
-      })
-    }
-
-    scrollContainer.addEventListener("wheel", handleWheel, { passive: false })
+    gsap.to(container, {
+      x: -scrollDistance,
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        start: "top 20%",
+        end: () => `+=${totalScrollWidth}`,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      },
+    })
 
     return () => {
-      scrollContainer.removeEventListener("wheel", handleWheel)
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
     }
   }, [])
 
@@ -111,7 +114,7 @@ export default function HorizontalScrollCards() {
         }
       `}</style>
 
-      <div className="w-full bg-gray-50 py-16 px-4" style={{ fontFamily: "'NoiGrotesk', sans-serif" }}>
+      <div ref={sectionRef} className="w-full bg-gray-50 py-16 px-4" style={{ fontFamily: "'NoiGrotesk', sans-serif" }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-left mb-12">
             <h2 className="text-4xl md:text-6xl  text-gray-900 mb-4">The Core Values</h2>
@@ -120,7 +123,7 @@ export default function HorizontalScrollCards() {
 
           <div
             ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto scrollbar-hide pb-6 px-4"
+            className="flex gap-8 pb-6 px-4"
           >
             {coreValues.map((value) => {
               const IconComponent = value.icon
