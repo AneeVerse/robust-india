@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
 import BookACall from '@/components/BookCallSection';
 import FooterSection from '@/components/FooterSection';
 
@@ -64,7 +63,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   }
   return (
     <main className="min-h-screen bg-white p-4 sm:p-6 md:p-5">
-      <Navbar />
       <div className="w-full">
         <Image
           src={project.image}
@@ -144,7 +142,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <FooterSection />
         </div>
       </div>
-      <Navbar />
     </main>
   );
 } 

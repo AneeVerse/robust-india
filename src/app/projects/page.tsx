@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ServiceSlider from '@/components/ServiceSlider';
 import FooterSection from '@/components/FooterSection';
-import Navbar from '@/components/Navbar';
 import BookACall from '@/components/BookCallSection';
 
 const projects = [
@@ -174,7 +173,6 @@ export default function ProjectsPage() {
           <FooterSection />
         </div>
       </div>
-      <Navbar />
     </div>
   );
 } 

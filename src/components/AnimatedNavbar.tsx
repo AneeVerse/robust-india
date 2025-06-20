@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 export default function AnimatedNavbar() {
   const { showNavbar } = useNavbarVisibility();
   const pathname = usePathname();
-  if (pathname.startsWith('/projects')) return null;
   // Always show nav on non-home pages
   const isHome = pathname === '/';
   const displayNav = isHome ? showNavbar : true;
