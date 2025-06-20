@@ -31,13 +31,13 @@ export default function BookCallSection() {
   const x = useTransform(scrollYProgress, [0.3, 0.7], [180, 0]);
   const y = useTransform(scrollYProgress, [0.3, 0.7], [70, 0]);
 
-  // Staggered button animations - adjusted for better scroll timing
-  const button1Opacity = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
-  const button2Opacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
-  const button3Opacity = useTransform(scrollYProgress, [0.7, 0.8], [0, 1]);
-  const button1Y = useTransform(scrollYProgress, [0.5, 0.6], [20, 0]);
-  const button2Y = useTransform(scrollYProgress, [0.6, 0.7], [20, 0]);
-  const button3Y = useTransform(scrollYProgress, [0.7, 0.8], [20, 0]);
+  // Trigger button animations sooner for faster appearance
+  const button1Opacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
+  const button2Opacity = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
+  const button3Opacity = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
+  const button1Y = useTransform(scrollYProgress, [0.3, 0.4], [20, 0]);
+  const button2Y = useTransform(scrollYProgress, [0.4, 0.5], [20, 0]);
+  const button3Y = useTransform(scrollYProgress, [0.5, 0.6], [20, 0]);
 
   return (
     <section ref={ref} className="w-full min-h-[100vh] flex flex-col items-center px-6 md:px-20 py-24 bg-white relative">
