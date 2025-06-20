@@ -2,7 +2,6 @@
 import React, { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Navbar from '@/components/Navbar';
 import FooterSection from '@/components/FooterSection';
 import BookCallSection from '@/components/BookCallSection';
 import TeamSection from '@/components/TeamSection';
@@ -59,9 +58,6 @@ export default function AboutPage() {
 
   return (
     <div className="w-full bg-white">
-      {/* Navbar */}
-      <Navbar />
-
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center w-full text-center px-4 md:px-8 pt-16 pb-2 z-10">
         {/* Company logo and name */}
