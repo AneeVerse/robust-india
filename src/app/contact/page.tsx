@@ -63,9 +63,9 @@ export default function ContactPage() {
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 md:px-8 pt-16 pb-12 z-10">
+      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 md:px-8 pt-16 pb-12 z-10  ">
         {/* Company logo and name */}
-        <Link href="/" className="flex items-center justify-center gap-3 mb-8 mt-2">
+        <Link href="/" className="flex items-center justify-center gap-3 mb-25 mt-2">
           <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} />
           <span className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
         </Link>
