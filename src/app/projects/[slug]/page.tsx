@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import BookACall from '@/components/BookCallSection';
-import ServiceSlider from '@/components/ServiceSlider';
 import FooterSection from '@/components/FooterSection';
 
 interface Project {
@@ -57,8 +56,9 @@ export async function generateStaticParams() {
   return projects.map((proj) => ({ slug: proj.slug }));
 }
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) {
     return <div className="p-20 text-center">Project not found</div>;
   }

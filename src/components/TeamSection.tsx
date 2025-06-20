@@ -63,7 +63,7 @@ export default function TeamSection() {
             <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
             <p className="text-gray-500 mb-4">{member.role}</p>
             {member.quote && (
-              <blockquote className="italic text-gray-700">"{member.quote}"</blockquote>
+              <blockquote className="italic text-gray-700">&quot;{member.quote}&quot;</blockquote>
             )}
           </motion.div>
         ))}

@@ -22,7 +22,7 @@ export default function AboutPage() {
           Our team of experts has a sweet tooth for digital products.
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-700">
-          If there's one thing we love, it's sinking our teeth into platforms — and beyond — ensuring every detail reflects your unique vision.
+          If there&apos;s one thing we love, it&apos;s sinking our teeth into platforms — and beyond — ensuring every detail reflects your unique vision.
         </p>
       </section>
 
