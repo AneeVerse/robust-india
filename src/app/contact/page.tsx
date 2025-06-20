@@ -122,7 +122,7 @@ export default function ContactPage() {
             className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto"
             style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
           >
-            Ready to transform your chemical trade operations? Get in touch and let's discuss how we can streamline your global supply chain.
+            Ready to transform your chemical trade operations? Get in touch and let&apos;s discuss how we can streamline your global supply chain.
           </motion.p>
         </motion.div>
       </section>
@@ -270,7 +270,7 @@ export default function ContactPage() {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-12">
-                  Whether you're looking to optimize your chemical supply chain, explore FTWZ opportunities, or need comprehensive 3PL solutions, our team is here to help.
+                  Whether you&apos;re looking to optimize your chemical supply chain, explore FTWZ opportunities, or need comprehensive 3PL solutions, our team is here to help.
                 </p>
               </div>
 
