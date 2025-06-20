@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from "next/image";
 
 export default function FooterSection() {
@@ -16,14 +17,30 @@ export default function FooterSection() {
             together
           </h2>
           <nav className="flex flex-wrap items-center gap-8 mt-16 text-2xl">
-            {['Home', 'About', 'Projects', 'Process', 'Contact'].map((label, idx) => (
-              <a
-                key={idx}
-                href={`#${label.toLowerCase()}`}
-                className="py-1 px-2 rounded-md transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
-              >
-                {label}
-              </a>
+            {[
+              { label: 'Home', href: '/' },
+              { label: 'About', href: '/about' },
+              { label: 'Projects', href: '/projects' },
+              { label: 'Process', href: '#process' },
+              { label: 'Contact', href: '#contact' },
+            ].map((link, idx) => (
+              link.href.startsWith('/') ? (
+                <Link
+                  key={idx}
+                  href={link.href}
+                  className="py-1 px-2 rounded-md transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={idx}
+                  href={link.href}
+                  className="py-1 px-2 rounded-md transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </nav>
         </div>

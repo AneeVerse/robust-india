@@ -110,7 +110,7 @@ export default function ServicesSection() {
         {/* Cards Container */}
         <div className="relative flex justify-center items-center min-h-[500px]">
           {/* Left Card - FTWZ */}
-          <Link href="/services/ftwz" className="absolute left-1/2 top-1/2 will-change-transform" style={{
+          <Link href="/projects/ftwz" className="absolute left-1/2 top-1/2 will-change-transform" style={{
               transform: `
                 translate(-50%, -50%)
                 translateX(${-450 * scrollProgress}px)
@@ -146,7 +146,7 @@ export default function ServicesSection() {
           </Link>
 
           {/* Center Card - Chemical Products */}
-          <Link href="/services/chemical-products" className="relative z-30 will-change-transform" style={{
+          <Link href="/projects/chemical-products" className="relative z-30 will-change-transform" style={{
               transform: `scale(${0.95 + 0.05 * scrollProgress})`,
               transition: "none",
               textDecoration: 'none',
@@ -176,7 +176,7 @@ export default function ServicesSection() {
           </Link>
 
           {/* Right Card - Integrated 3PL */}
-          <Link href="/services/integrated-3pl" className="absolute left-1/2 top-1/2 will-change-transform" style={{
+          <Link href="/projects/integrated-3pl" className="absolute left-1/2 top-1/2 will-change-transform" style={{
               transform: `
                 translate(-50%, -50%)
                 translateX(${450 * scrollProgress}px)
