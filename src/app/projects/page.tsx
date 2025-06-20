@@ -89,7 +89,7 @@ export default function ProjectsPage() {
             {/* Top two project images */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
             {projects.slice(0, 2).map((project) => (
-              <Link key={project.slug} href={`/projects/${project.slug}`} className="block rounded-2xl overflow-hidden shadow-lg bg-white">
+              <Link key={project.slug} href={`/projects/${project.slug}`} className="block rounded-4xl overflow-hidden shadow-lg bg-white">
                 <Image
                   src={project.image}
                   alt={project.title}
