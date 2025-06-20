@@ -69,7 +69,7 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           variants={container}
-          className="text-6xl md:text-8xl font-normal text-gray-900 mb-8 leading-tight mt-8 md:mt-30 tracking-tight text-center"
+          className="text-6xl md:text-8xl font-normal text-gray-900 mb-8 leading-tight mt-8 md:mt-20 tracking-tight text-center"
           style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
         >
           {lines.map((line, lineIndex) => (
