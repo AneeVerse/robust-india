@@ -67,8 +67,8 @@ export default function HorizontalScrollCards() {
     if (!container) return
 
     const totalScrollWidth = container.scrollWidth
-    const viewportWidth = window.innerWidth
-    const scrollDistance = totalScrollWidth - viewportWidth
+    const containerWidth = container.clientWidth
+    const scrollDistance = totalScrollWidth - containerWidth
 
     gsap.to(container, {
       x: -scrollDistance,
@@ -76,7 +76,7 @@ export default function HorizontalScrollCards() {
       scrollTrigger: {
         trigger: container,
         start: "top 20%",
-        end: () => `+=${totalScrollWidth}`,
+        end: () => `+=${scrollDistance}`,
         scrub: true,
         pin: true,
         anticipatePin: 1,
