@@ -63,6 +63,6 @@ body {
   line-height: 1;
 }
 
-/* Hide default scrollbar across browsers */
-::-webkit-scrollbar { display: none; }
-html { -ms-overflow-style: none; scrollbar-width: none; }
+/* Hide default scrollbar only on elements with the .scrollbar-hide class */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
