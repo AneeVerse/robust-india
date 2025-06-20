@@ -118,7 +118,7 @@ export default function TestimonialsSection() {
 
   // Handle drag snapping in a circular loop
   const lastIndex = testimonials.length - 1;
-  const handleDragEnd = (event: any, info: PanInfo) => {
+  const handleDragEnd = (_event: unknown, info: PanInfo) => {
     if (info.offset.x < -50) {
       // drag left -> next, wrap to first if at end
       setCurrentIndex(currentIndex === lastIndex ? 0 : currentIndex + 1);

@@ -12,6 +12,7 @@ export default function FooterSection() {
             Don&apos;t settle for good,<br />
             let&apos;s go for <span className="relative inline-block">
               amazing,
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/SVG.png" alt="" className="absolute left-0 bottom-0 w-full h-auto pointer-events-none" />
             </span><br />
             together

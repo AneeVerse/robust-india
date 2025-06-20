@@ -11,6 +11,8 @@ export default function ServicesSection() {
 
   useEffect(() => {
     // Intersection Observer to trigger animations when section comes into view
+    const headerEl = headerRef.current;
+    if (!headerEl) return;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,15 +26,9 @@ export default function ServicesSection() {
         rootMargin: '0px 0px -100px 0px' // Trigger slightly before the section is fully in view
       }
     );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
+    observer.observe(headerEl);
     return () => {
-      if (headerRef.current) {
-        observer.unobserve(headerRef.current);
-      }
+      observer.unobserve(headerEl);
     };
   }, []);
 

@@ -1,19 +1,19 @@
 "use client"
 
-import { useRef, useEffect } from "react"
+import React, { useRef, useEffect } from "react"
 import { Sparkles, Diamond, Heart, Star } from 'lucide-react'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 // Card component (inline)
-const Card = ({ children, className = "", ...props }: any) => (
+const Card: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children, className = "", ...props }) => (
   <div className={`bg-white rounded-3xl border ${className}`} {...props}>
     {children}
   </div>
 )
 
-const CardContent = ({ children, className = "", ...props }: any) => (
+const CardContent: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children, className = "", ...props }) => (
   <div className={`p-6 ${className}`} {...props}>
     {children}
   </div>

@@ -30,7 +30,7 @@ export default function HeroSection() {
       clearTimeout(timer);
       clearTimeout(subTimer);
     }
-  }, []);
+  }, [setShowNavbar]);
 
   // Headline lines for animation
   const headlineLines = ["Global Trade", "Simplified."];

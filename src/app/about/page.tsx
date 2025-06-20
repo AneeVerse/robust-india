@@ -4,11 +4,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import FooterSection from '@/components/FooterSection';
 import BookCallSection from '@/components/BookCallSection';
-import TeamSection from '@/components/TeamSection';
 import StatsSection from '@/components/StatsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import CoreValuesSection from '@/components/CoreValuesSection';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
