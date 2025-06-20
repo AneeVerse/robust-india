@@ -23,7 +23,7 @@ export default function FooterSection() {
               { label: 'About', href: '/about' },
               { label: 'Projects', href: '/projects' },
               { label: 'Process', href: '#process' },
-              { label: 'Contact', href: '#contact' },
+              { label: 'Contact', href: '/contact' },
             ].map((link, idx) => (
               link.href.startsWith('/') ? (
                 <Link

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import ServiceSlider from '@/components/ServiceSlider';
@@ -77,7 +78,31 @@ export default function ProjectsPage() {
             <span className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
           </Link>
           {/* Heading */}
-          <h1 className="text-5xl md:text-7xl font-light text-center text-gray-900 mb-8 md:mb-18 leading-tight mt-8 md:mt-20" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>Some of our favorite projects</h1>
+          <motion.h1 
+            className="text-5xl md:text-7xl font-light text-center text-gray-900 mb-8 md:mb-18 leading-tight mt-8 md:mt-20" 
+            style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
+            initial="hidden"
+            animate="visible"
+          >
+            {"Some of our favorite projects".split('').map((char, idx) => (
+              <motion.span
+                key={idx}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      delay: idx * 0.03
+                    }
+                  }
+                }}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </motion.span>
+            ))}
+          </motion.h1>
           
           {/* Projects Container */}
           <div
