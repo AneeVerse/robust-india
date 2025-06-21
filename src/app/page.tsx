@@ -8,11 +8,11 @@ import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white p-4 sm:p-6 md:p-8">
-      <div className="w-full bg-white rounded-3xl overflow-hidden ">
+    <main className="min-h-screen bg-white p-2 sm:p-4 md:p-6 lg:p-8">
+              <div className="w-full bg-white rounded-2xl sm:rounded-3xl overflow-hidden">
         <HeroSection />
       </div>
-      <div className="-mx-4 sm:-mx-6 md:-mx-8">
+              <div className="-mx-2 sm:-mx-4 md:-mx-6 lg:-mx-8">
         <WhatWeDo />
       </div>
     

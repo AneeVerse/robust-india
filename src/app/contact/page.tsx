@@ -63,11 +63,11 @@ export default function ContactPage() {
   return (
     <div className="w-full bg-white">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 md:px-8 pt-16 pb-12 z-10  ">
+      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 md:pb-12 z-10">
         {/* Company logo and name */}
-        <Link href="/" className="flex items-center justify-center gap-3 mb-25 mt-2">
-          <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} />
-          <span className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
+        <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 md:mb-25 mt-2">
+          <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
         </Link>
 
         <motion.div
@@ -77,7 +77,7 @@ export default function ContactPage() {
           className="max-w-4xl mx-auto"
         >
           <motion.h1
-            className="text-6xl md:text-8xl font-normal text-gray-900 mb-6 leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal text-gray-900 mb-4 sm:mb-5 md:mb-6 leading-tight tracking-tight"
             style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
           >
             {["Let's Start a", "Conversation"].map((line, lineIndex) => (
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-relaxed max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto px-4 sm:px-0"
             style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
           >
             Ready to transform your chemical trade operations? Get in touch and let&apos;s discuss how we can streamline your global supply chain.
@@ -128,16 +128,16 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4 md:px-8">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
+                      <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-gray-50 rounded-3xl p-8 md:p-12"
+              className="bg-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 Send us a Message
@@ -266,7 +266,7 @@ export default function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                   Get in Touch
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-12">
