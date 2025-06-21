@@ -55,47 +55,65 @@ function NavbarContent() {
       <div className="flex gap-x-3">
         {navLinks.map((link) => (
           link.href.startsWith('#') ? (
-            <a
-              key={link.name}
-              href={link.href}
-              className={`px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center ${
-                link.highlight
-                  ? "text-base font-bold bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]"
-                  : "text-base font-bold text-white/90 hover:bg-white/10"
-              }`}
-            >
-              {link.name}
-              {link.highlight && (
-                <Image
-                  src="/images/contact-logo.svg"
-                  alt="Contact"
-                  width={20}
-                  height={20}
-                  className="ml-1"
-                />
-              )}
-            </a>
+            link.highlight ? (
+                              <motion.div
+                  key={link.name}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+              >
+                <a
+                  href={link.href}
+                  className="text-base font-bold bg-[#6164f6] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] px-4 py-1.5 rounded-xl transition-all duration-300 flex items-center"
+                >
+                  {link.name}
+                  <Image
+                    src="/images/contact-logo.svg"
+                    alt="Contact"
+                    width={20}
+                    height={20}
+                    className="ml-1"
+                  />
+                </a>
+              </motion.div>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-base font-bold text-white/90 hover:bg-white/10 px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center"
+              >
+                {link.name}
+              </a>
+            )
           ) : (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={`px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center ${
-                link.highlight
-                  ? "text-base font-bold bg-[#6164f6] text-white shadow-md border border-transparent border-t-2 border-t-[#888aed]"
-                  : "text-base font-bold text-white/90 hover:bg-white/10"
-              }`}
-            >
-              {link.name}
-              {link.highlight && (
-                <Image
-                  src="/images/contact-logo.svg"
-                  alt="Contact"
-                  width={20}
-                  height={20}
-                  className="ml-1"
-                />
-              )}
-            </Link>
+            link.highlight ? (
+                             <motion.div
+                 key={link.name}
+                 whileHover={{ scale: 1.05 }}
+                 whileTap={{ scale: 0.98 }}
+              >
+                <Link
+                  href={link.href}
+                  className="text-base font-bold bg-[#6164f6] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] px-4 py-1.5 rounded-xl transition-all duration-300 flex items-center"
+                >
+                  {link.name}
+                  <Image
+                    src="/images/contact-logo.svg"
+                    alt="Contact"
+                    width={20}
+                    height={20}
+                    className="ml-1"
+                  />
+                </Link>
+              </motion.div>
+            ) : (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-base font-bold text-white/90 hover:bg-white/10 px-4 py-1.5 rounded-xl transition-colors duration-200 flex items-center"
+              >
+                {link.name}
+              </Link>
+            )
           )
         ))}
       </div>
