@@ -40,41 +40,44 @@ export default function BookCallSection() {
   const button3Y = useTransform(scrollYProgress, [0.5, 0.6], [20, 0]);
 
   return (
-    <section ref={ref} className="w-full min-h-[100vh] flex flex-col items-center px-6 md:px-20 py-24 bg-white relative">
+    <section
+      ref={ref}
+      className="w-full flex flex-col items-center px-6 md:px-20 py-12 sm:py-24 bg-white relative overflow-auto h-auto sm:overflow-hidden sm:min-h-screen"
+    >
       {/* Centered heading - bigger text */}
-      <motion.h1 
+      <motion.h1
         style={{ scale: textScale, opacity: headingOpacity }}
-        className="text-8xl md:text-[12rem] font-bold text-[#000000] mb-24 text-center leading-tight"
+        className="text-4xl sm:text-6xl md:text-8xl lg:text-[12rem] font-bold text-black mb-8 sm:mb-24 text-center leading-tight whitespace-nowrap"
       >
         Let&apos;s talk
       </motion.h1>
       
       {/* Content container - more space between heading and content */}
-      <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-start">
+      <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row justify-between items-center">
         {/* Left Side - Text with larger font and width for three lines */}
-        <motion.div 
+        <motion.div
           style={{ opacity: contentOpacity, y: contentY }}
-          className="w-full md:w-auto"
+          className="w-full md:w-auto flex flex-col items-center md:items-start"
         >
-          <p className="text-2xl md:text-3xl text-gray-800 mb-10 max-w-xl leading-relaxed">
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-800 mb-6 sm:mb-10 max-w-xl leading-relaxed text-center md:text-left">
             Find out how we can take your digital product to the next level together.
           </p>
-          <div className="flex flex-wrap items-center gap-4">
-            <motion.button 
+          <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-4 w-full sm:w-auto">
+            <motion.button
               style={{ opacity: button1Opacity, y: button1Y }}
-              className="bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 h-12 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
+              className="w-full sm:flex-none sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
             >
               Book a call
             </motion.button>
-            <motion.button 
+            <motion.button
               style={{ opacity: button2Opacity, y: button2Y }}
-              className="bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 h-12 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
+              className="w-full sm:flex-none sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db]"
             >
               Chat with Vince
             </motion.button>
-            <motion.button 
+            <motion.button
               style={{ opacity: button3Opacity, y: button3Y }}
-              className="bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 h-12 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-dark-blue-300"
+              className="w-full sm:w-auto bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-[#4B4ED0]"
             >
               Send a message
             </motion.button>
@@ -84,13 +87,13 @@ export default function BookCallSection() {
         {/* Right Side - Video with mute/unmute overlay */}
         <motion.div
           style={{ rotate, scale, x, y }}
-          className="mt-16 md:mt-0 flex justify-end"
+          className="mt-16 md:mt-0 flex justify-center md:justify-end w-full md:w-auto"
         >
-          <div className="w-48 h-64 md:w-72 md:h-88 bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative">
+          <div className="w-full aspect-video bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative sm:w-48 sm:h-64 md:w-72 md:h-88">
             <video
               ref={videoRef}
               src="/video/Hydrophobic Club Moss Spores.mp4"
-              className="w-full h-full object-cover"
+              className="object-cover w-full h-full"
               autoPlay
               loop
               muted={muted}
