@@ -13,11 +13,11 @@ export default function LandingPage() {
         <div className="mb-16 w-full flex flex-col items-start">
           <motion.div
             className="mb-2 ml-2"
-            animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
+            animate={{ rotate: [0, 20, -10, 25, -5, 15, 0] }}
             transition={{
-              duration: 2,
+              duration: 1.5,
               repeat: Infinity,
-              repeatDelay: 3,
+              repeatDelay: 2,
               ease: "easeInOut",
             }}
           >
