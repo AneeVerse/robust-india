@@ -14,8 +14,9 @@ export default function FooterSection() {
             Don&apos;t settle for good,<br />
             let&apos;s go for <span className="relative inline-block">
               amazing,
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/SVG.png" alt="" className="absolute left-0 bottom-0 w-full h-auto pointer-events-none" />
+              <svg className="absolute left-0 bottom-0 w-full h-auto pointer-events-none -mb-5 -ml-2" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12C50 8, 100 8, 150 10C170 10.5, 190 11, 195 12" stroke="#6164F6" strokeWidth="3" strokeLinecap="round" fill="none"/>
+              </svg>
             </span><br />
             together
           </h2>
@@ -41,6 +42,14 @@ export default function FooterSection() {
                       {link.label}
                     </Link>
                   </motion.div>
+                ) : link.label === 'Home' ? (
+                  <Link
+                    key={idx}
+                    href={link.href}
+                    className="px-4 py-1.5 rounded-xl transition-colors duration-200 bg-[#6164f6] text-white"
+                  >
+                    {link.label}
+                  </Link>
                 ) : (
                   <Link
                     key={idx}
@@ -64,6 +73,14 @@ export default function FooterSection() {
                       {link.label}
                     </a>
                   </motion.div>
+                ) : link.label === 'Home' ? (
+                  <a
+                    key={idx}
+                    href={link.href}
+                    className="px-4 py-1.5 rounded-xl transition-colors duration-200 bg-[#6164f6] text-white"
+                  >
+                    {link.label}
+                  </a>
                 ) : (
                   <a
                     key={idx}
@@ -90,10 +107,12 @@ export default function FooterSection() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-5 py-3 text-lg bg-transparent border border-gray-600 rounded-lg focus:outline-none focus:border-[#ffffff]"
+                className="w-full px-5 py-3 text-lg bg-transparent border border-gray-600 rounded-lg focus:outline-none focus:border-[#6164F6]"
               />
-              <button type="submit" className="absolute right-2 bottom-2 p-0 shadow-lg">
-                <Image src="/images/Button - Subscribe to our newsletter.png" alt="Subscribe" width={40} height={40} className="h-10 w-10" />
+              <button type="submit" className="absolute right-2 bottom-2 p-2 bg-[#6164F6] rounded-lg shadow-lg hover:bg-[#5155E8] transition-colors duration-200">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
             </div>
           </form>
