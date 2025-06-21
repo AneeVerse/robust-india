@@ -1,10 +1,12 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 export default function FooterSection() {
   return (
-    <footer id="footer-section" className="bg-[#131518] text-white py-12 px-6 md:px-20 rounded-3xl">
+    <footer id="footer-section" className="bg-[#131518] text-white pt-12 pb-16 px-6 md:px-20 rounded-3xl">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-0">
         {/* Left: large headline + nav */}
         <div className="md:w-2/3 space-y-4">
@@ -26,21 +28,51 @@ export default function FooterSection() {
               { label: 'Contact', href: '/contact' },
             ].map((link, idx) => (
               link.href.startsWith('/') ? (
-                <Link
-                  key={idx}
-                  href={link.href}
-                  className="py-1 px-2 rounded-md transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
-                >
-                  {link.label}
-                </Link>
+                link.label === 'Contact' ? (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Link
+                      href={link.href}
+                      className="px-4 py-1.5 rounded-xl transition-all duration-300 hover:bg-[#6164f6] hover:text-white shadow-md hover:shadow-xl"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                ) : (
+                  <Link
+                    key={idx}
+                    href={link.href}
+                    className="px-4 py-1.5 rounded-xl transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                )
               ) : (
-                <a
-                  key={idx}
-                  href={link.href}
-                  className="py-1 px-2 rounded-md transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
-                >
-                  {link.label}
-                </a>
+                link.label === 'Contact' ? (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <a
+                      href={link.href}
+                      className="px-4 py-1.5 rounded-md transition-all duration-300 hover:bg-[#6164f6] hover:text-white shadow-md hover:shadow-xl"
+                    >
+                      {link.label}
+                    </a>
+                  </motion.div>
+                ) : (
+                  <a
+                    key={idx}
+                    href={link.href}
+                    className="px-4 py-1.5 rounded-xl transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                )
               )
             ))}
           </nav>
@@ -72,18 +104,27 @@ export default function FooterSection() {
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 mt-16 pb-0">
         <p className="mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">
-          Robust India©
+          Robust India
           <span className="inline-block mx-2 align-middle">
             <svg className="inline-block h-2 w-6 text-gray-400" fill="none" viewBox="0 0 27 10" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 6.10696C4.89099 6.10696 10.4306 6.79673 13.9209 4.58335C17.2052 2.50058 13.7605 -0.43632 11.8165 1.80381C11.0323 2.70752 10.4356 4.55498 10.9011 5.72606C13.5121 12.295 22.6498 7.43559 26 4.48555" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </span>
-          Helping businesses reach new heights since 2009
+          Helping businesses<br />  
+           reach new heights since 2009
         </p>
-        <a href="#terms" className="mb-2 md:mb-0 hover:text-white flex items-center w-full md:w-auto justify-center mr-50">Terms of Service</a>
-        <div className="flex items-center gap-6 w-full md:w-auto justify-center md:justify-end">
-          <a href="#linkedin" className="hover:text-white">LinkedIn&nbsp;↗</a>
-          <a href="#twitter" className="hover:text-white">X&nbsp;Twitter&nbsp;↗</a>
+        <div className="flex flex-col items-center md:items-end w-full md:w-auto justify-center md:justify-end relative z-50">
+          <div className="flex items-center gap-6 mb-2">
+            <a href="#terms" className="hover:text-white">Terms of Service</a>
+            <a href="#linkedin" className="hover:text-white">LinkedIn&nbsp;↗</a>
+            <a href="#twitter" className="hover:text-white">X&nbsp;Twitter&nbsp;↗</a>
+          </div>
+          <div className="mr-10">
+            <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white text-sm">
+              Designed & Managed by Aneeverse
+            </a>
+          </div>  
+
         </div>
       </div>
     </footer>

@@ -16,22 +16,12 @@ export default function Navbar() {
   // Make it move slightly upward on scroll
   const y = useTransform(scrollY, [0, 100], [0, -10]);
 
-  // Hide when footer is in view
-  const [hideNav, setHideNav] = useState(false);
-  useEffect(() => {
-    const footer = document.getElementById('footer-section');
-    if (!footer) return;
-    const observer = new IntersectionObserver(([entry]) => {
-      setHideNav(entry.isIntersecting);
-    }, { root: null, threshold: 0 });
-    observer.observe(footer);
-    return () => observer.disconnect();
-  }, []);
+  // Navigation is always visible now
 
   return (
     <motion.nav
       style={{ y }}
-      className={`fixed bottom-2 left-0 w-full z-50 flex justify-center transition-opacity duration-300 ${hideNav ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+      className="fixed bottom-2 left-0 w-full z-40 flex justify-center opacity-100 pointer-events-none"
     >
       <NavbarContent />
     </motion.nav>
@@ -40,7 +30,7 @@ export default function Navbar() {
 
 function NavbarContent() {
   return (
-    <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-3xl px-4 py-3 shadow-lg max-w-xl mx-auto overflow-hidden border px-2 border-[#3c3a38]">
+    <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-3xl px-4 py-3 shadow-lg max-w-xl mx-auto overflow-hidden border px-2 border-[#3c3a38] pointer-events-auto">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       <div className="flex items-center mr-4">
         <Link href="/">
