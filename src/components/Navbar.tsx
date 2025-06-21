@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import { useNavbarVisibility } from '@/context/NavbarVisibilityContext';
 
 const navLinks = [
   { name: "About", href: "/about" },
@@ -12,15 +13,17 @@ const navLinks = [
 
 export default function Navbar() {
   const { scrollY } = useScroll();
+  const { showNavbar } = useNavbarVisibility();
+  
   // Make it move slightly upward on scroll
   const y = useTransform(scrollY, [0, 100], [0, -10]);
-
-  // Navigation is always visible now
 
   return (
     <motion.nav
       style={{ y }}
-      className="fixed bottom-1 sm:bottom-2 left-0 w-full z-40 flex justify-center opacity-100 pointer-events-none px-2 sm:px-0"
+      className={`fixed bottom-1 sm:bottom-2 left-0 w-full z-40 flex justify-center px-2 sm:px-0 transition-opacity duration-300 pointer-events-none ${
+        showNavbar ? 'opacity-100' : 'opacity-0 sm:opacity-100'
+      }`}
     >
       <NavbarContent />
     </motion.nav>
