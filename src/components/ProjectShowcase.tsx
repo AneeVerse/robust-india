@@ -68,6 +68,8 @@ const ProjectShowcase = () => {
   const [cursor, setCursor] = React.useState({ visible: false, x: 0, y: 0 });
 
   useEffect(() => {
+    // Disable scroll-trigger animation on mobile
+    if (typeof window !== 'undefined' && window.innerWidth < 640) return;
     if (!sectionRef.current || !containerRef.current) return;
     const totalPanels = projects.length;
     const panelWidth = window.innerWidth;
@@ -127,103 +129,135 @@ const ProjectShowcase = () => {
   return (
     <section
       ref={sectionRef}
-      style={{ position: "relative", height: "100vh", overflow: "hidden", background: "#fff" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      className="relative bg-white overflow-auto h-auto sm:h-screen sm:overflow-hidden"
     >
-      <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
-      <div ref={containerRef} style={{ height: "100vh", display: "flex", gap: "10vw" }}>
-        {projects.map((project, i) => (
-          <Link
-            key={project.slug}
-            href={`/projects/${project.slug}`}
-            style={{
-              position: "relative",
-              width: "100vw",
-              height: "100vh",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start",
-            }}
-          >
-            <Image
-              ref={el => { imageRefs.current[i] = el; }}
-              src={project.image}
-              alt={project.title}
-              width={800}
-              height={500}
-              quality={90}
-              style={{
-                objectFit: "cover",
-                borderRadius: "2.5rem",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
-                position: "absolute",
-                top: "10%",
-                left: 0,
-                zIndex: 1,
-                width: "100vw",
-                height: "90vh",
-                transition: "border-radius 0.3s"
-              }}
-            />
-            <div
-              ref={el => { descRefs.current[i] = el; }}
-              style={{
-                position: "absolute",
-                top: "68%",
-                right: "4vw",
-                transform: "translateY(-50%)",
-                width: "34vw",
-                background: "transparent",
-                padding: "2.5rem 2rem",
-                borderRadius: "2rem",
-                zIndex: 2,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
-              {/* <button style={{
-                background: "#bdbdbd",
-                color: "#fff",
-                border: "none",
-                borderRadius: "1.5rem",
-                padding: "0.3rem 1.2rem",
-                fontSize: "1rem",
-                marginBottom: "1.2rem",
-                fontWeight: 500,
-                cursor: "pointer"
-              }}>View Project</button> */}
-              <h2 style={{
-                fontSize: "2.8rem",
-                fontWeight: 700,
-                margin: 0,
-                color: "#222",
-                marginBottom: "1.2rem"
-              }}>{project.title}</h2>
-              <p style={{
-                fontSize: "1.25rem",
-                color: "#444",
-                marginBottom: "2rem",
-                lineHeight: 1.5
-              }}>
-                {project.description}
-              </p>
-              <div style={{ display: "flex", gap: "0.7rem", flexWrap: "wrap" }}>
-                {project.tags.map(tag => (
-                  <span key={tag} style={{
-                    background: "#f5f5f5",
-                    color: "#222",
-                    borderRadius: "1.2rem",
-                    padding: "0.4rem 1.1rem",
-                    fontSize: "1rem",
-                    fontWeight: 500
-                  }}>{tag}</span>
+      <div className="hidden sm:block">
+        <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
+      </div>
+
+      {/* Mobile Static Project List */}
+      <div className="sm:hidden flex flex-col items-center space-y-8 px-4 py-8 bg-white">
+        {projects.map((project) => (
+          <Link key={project.slug} href={`/projects/${project.slug}`} className="w-full max-w-md">
+            <div className="bg-white rounded-3xl p-6 shadow-lg">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={800}
+                height={500}
+                className="rounded-xl w-full h-auto object-cover mb-4"
+              />
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h2>
+              <p className="text-base text-gray-600 mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>
           </Link>
         ))}
+      </div>
+
+      {/* Desktop Animated Carousel */}
+      <div className="hidden sm:block">
+        <div ref={containerRef} style={{ height: '100vh', display: 'flex', gap: '10vw' }}>
+          {projects.map((project, i) => (
+            <Link
+              key={project.slug}
+              href={`/projects/${project.slug}`}
+              style={{
+                position: "relative",
+                width: "100vw",
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-start",
+              }}
+            >
+              <Image
+                ref={el => { imageRefs.current[i] = el; }}
+                src={project.image}
+                alt={project.title}
+                width={800}
+                height={500}
+                quality={90}
+                style={{
+                  objectFit: "cover",
+                  borderRadius: "2.5rem",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                  position: "absolute",
+                  top: "10%",
+                  left: 0,
+                  zIndex: 1,
+                  width: "100vw",
+                  height: "90vh",
+                  transition: "border-radius 0.3s"
+                }}
+              />
+              <div
+                ref={el => { descRefs.current[i] = el; }}
+                style={{
+                  position: "absolute",
+                  top: "68%",
+                  right: "4vw",
+                  transform: "translateY(-50%)",
+                  width: "34vw",
+                  background: "transparent",
+                  padding: "2.5rem 2rem",
+                  borderRadius: "2rem",
+                  zIndex: 2,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                }}
+              >
+                {/* <button style={{
+                  background: "#bdbdbd",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: "1.5rem",
+                  padding: "0.3rem 1.2rem",
+                  fontSize: "1rem",
+                  marginBottom: "1.2rem",
+                  fontWeight: 500,
+                  cursor: "pointer"
+                }}>View Project</button> */}
+                <h2 style={{
+                  fontSize: "2.8rem",
+                  fontWeight: 700,
+                  margin: 0,
+                  color: "#222",
+                  marginBottom: "1.2rem"
+                }}>{project.title}</h2>
+                <p style={{
+                  fontSize: "1.25rem",
+                  color: "#444",
+                  marginBottom: "2rem",
+                  lineHeight: 1.5
+                }}>
+                  {project.description}
+                </p>
+                <div style={{ display: "flex", gap: "0.7rem", flexWrap: "wrap" }}>
+                  {project.tags.map(tag => (
+                    <span key={tag} style={{
+                      background: "#f5f5f5",
+                      color: "#222",
+                      borderRadius: "1.2rem",
+                      padding: "0.4rem 1.1rem",
+                      fontSize: "1rem",
+                      fontWeight: 500
+                    }}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
