@@ -148,9 +148,9 @@ export default function FooterSection() {
               <span>© 2025</span>
             </div>
             
-            <div className="text-center">
-              <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm inline-flex items-center gap-2 group">
-                <span>Designed & Managed by <span className="hover:underline">Aneeverse</span></span>
+            <div className="text-center ml-6">
+              <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm inline-flex items-center gap-2 group ">
+                <span >Designed & Managed by <span className="hover:underline">Aneeverse</span></span>
                 <svg width="16" height="16" viewBox="0 0 314.1 314.1" className="fill-gray-400 group-hover:fill-white transition-colors duration-200">
                   <path d="M157.1,42c42.5,42.2,55,86.1,55,86.1l-55-46.6c-27.9,23.5-49.7,66-49.7,66l43.2,36.9l8.6-11.6l-28.7-27.2
                     c8.2-23.1,26.6-36.4,26.6-36.4c14.2,4.7,61.8,50.2,61.8,50.2c9-10.8,19.8-49.8,19.8-49.8c-15.7-27.8-81.6-80-81.6-80
@@ -297,7 +297,7 @@ export default function FooterSection() {
                 <a href="#linkedin" className="hover:text-white">LinkedIn&nbsp;↗</a>
                 <a href="#twitter" className="hover:text-white">X&nbsp;Twitter&nbsp;↗</a>
               </div>
-              <div className="mr-10">
+              <div className="mr-9">
                 <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white text-sm inline-flex items-center gap-2 group">
                   <span>Designed & Managed by <span className="hover:underline">Aneeverse</span></span>
                   <svg width="20" height="20" viewBox="0 0 314.1 314.1" className="fill-gray-400 group-hover:fill-white transition-colors duration-200">
