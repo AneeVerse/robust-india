@@ -16,11 +16,10 @@ export default function FooterSection() {
         const footerRect = footer.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         
-        // Check if we're on mobile (width < 640px) and footer is in view
-        const isMobile = window.innerWidth < 640;
+        // Hide navbar when footer is in view on all screen sizes
         const isFooterInView = footerRect.top <= windowHeight && footerRect.bottom >= 0;
         
-        if (isMobile && isFooterInView) {
+        if (isFooterInView) {
           setShowNavbar(false);
         } else {
           setShowNavbar(true);
@@ -35,7 +34,7 @@ export default function FooterSection() {
   }, [setShowNavbar]);
 
   return (
-    <footer id="footer-section" className="bg-[#131518] text-white px-4 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-12 pb-20 sm:pb-16 rounded-t-3xl">
+    <footer id="footer-section" className="bg-[#131518] text-white px-4 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-12 pb-20 sm:pb-16 rounded-b-3xl sm:rounded-b-3xl rounded-t-3xl">
       <div className="max-w-7xl mx-auto">
         {/* Mobile Layout */}
         <div className="block sm:hidden">
@@ -150,8 +149,16 @@ export default function FooterSection() {
             </div>
             
             <div className="text-center">
-              <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm">
-                Designed & Managed by Aneeverse
+              <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm inline-flex items-center gap-2 group">
+                <span>Designed & Managed by <span className="hover:underline">Aneeverse</span></span>
+                <svg width="16" height="16" viewBox="0 0 314.1 314.1" className="fill-gray-400 group-hover:fill-white transition-colors duration-200">
+                  <path d="M157.1,42c42.5,42.2,55,86.1,55,86.1l-55-46.6c-27.9,23.5-49.7,66-49.7,66l43.2,36.9l8.6-11.6l-28.7-27.2
+                    c8.2-23.1,26.6-36.4,26.6-36.4c14.2,4.7,61.8,50.2,61.8,50.2c9-10.8,19.8-49.8,19.8-49.8c-15.7-27.8-81.6-80-81.6-80
+                    C98.2,68.5,39.2,156.9,39.2,156.9l0,0c4.9,12.2,12.9,22.9,23.3,31.1l2.1,1.6C82,127.4,157.1,42,157.1,42z"/>
+                  <path d="M157,272.1C114.5,230,101.9,186,101.9,186l55.1,46.5c27.9-23.5,49.7-66,49.7-66l-43.2-36.9l-8.6,11.6
+                    l28.7,27.2c-8.2,23.1-26.5,36-26.5,36c-14.2-4.7-61.8-49.8-61.8-49.8c-8.9,10.8-19.8,49.8-19.8,49.8c15.7,27.8,81.6,80,81.6,80
+                    c58.8-38.8,117.9-127.2,117.9-127.2l0,0c-4.9-12.2-12.9-22.9-23.3-31.1l-2.1-1.6C232.1,186.7,157,272.1,157,272.1z"/>
+                </svg>
               </a>
             </div>
           </div>
@@ -291,8 +298,16 @@ export default function FooterSection() {
                 <a href="#twitter" className="hover:text-white">X&nbsp;Twitter&nbsp;↗</a>
               </div>
               <div className="mr-10">
-                <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white text-sm">
-                  Designed & Managed by Aneeverse
+                <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white text-sm inline-flex items-center gap-2 group">
+                  <span>Designed & Managed by <span className="hover:underline">Aneeverse</span></span>
+                  <svg width="20" height="20" viewBox="0 0 314.1 314.1" className="fill-gray-400 group-hover:fill-white transition-colors duration-200">
+                    <path d="M157.1,42c42.5,42.2,55,86.1,55,86.1l-55-46.6c-27.9,23.5-49.7,66-49.7,66l43.2,36.9l8.6-11.6l-28.7-27.2
+                      c8.2-23.1,26.6-36.4,26.6-36.4c14.2,4.7,61.8,50.2,61.8,50.2c9-10.8,19.8-49.8,19.8-49.8c-15.7-27.8-81.6-80-81.6-80
+                      C98.2,68.5,39.2,156.9,39.2,156.9l0,0c4.9,12.2,12.9,22.9,23.3,31.1l2.1,1.6C82,127.4,157.1,42,157.1,42z"/>
+                    <path d="M157,272.1C114.5,230,101.9,186,101.9,186l55.1,46.5c27.9-23.5,49.7-66,49.7-66l-43.2-36.9l-8.6,11.6
+                      l28.7,27.2c-8.2,23.1-26.5,36-26.5,36c-14.2-4.7-61.8-49.8-61.8-49.8c-8.9,10.8-19.8,49.8-19.8,49.8c15.7,27.8,81.6,80,81.6,80
+                      c58.8-38.8,117.9-127.2,117.9-127.2l0,0c-4.9-12.2-12.9-22.9-23.3-31.1l-2.1-1.6C232.1,186.7,157,272.1,157,272.1z"/>
+                  </svg>
                 </a>
               </div>  
             </div>

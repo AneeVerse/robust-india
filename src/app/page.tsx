@@ -8,11 +8,15 @@ import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white p-2 sm:p-4 md:p-6 lg:p-8">
-              <div className="w-full bg-white rounded-2xl sm:rounded-3xl overflow-hidden">
+    <main className="min-h-screen bg-white p-4 sm:p-6 md:p-8 lg:p-10">
+      <div className="w-full bg-white rounded-2xl sm:rounded-3xl overflow-hidden">
         <HeroSection />
       </div>
-              <div className="-mx-2 sm:-mx-4 md:-mx-6 lg:-mx-8">
+      
+      {/* Add spacing between hero and next section */}
+      <div className="h-12 sm:h-16 md:h-20 lg:h-24 xl:h-28 2xl:h-32"></div>
+      
+      <div className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-10">
         <WhatWeDo />
       </div>
     

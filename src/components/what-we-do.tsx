@@ -6,7 +6,7 @@ import { MdWorkspacePremium, MdLayers, MdChatBubble, MdMenuBook } from "react-ic
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen" style={{ background: "#131518", color: "white", marginTop: "3rem sm:5rem" }}>
+    <div className="min-h-screen" style={{ background: "#131518", color: "white" }}>
       {/* Main Content */}
       <div className="w-full py-8 sm:py-16 flex flex-col items-center px-4 sm:px-0">
         {/* Header with Waving Hand */}
