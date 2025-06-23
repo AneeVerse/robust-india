@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import BookACall from '@/components/BookCallSection';
 import FooterSection from '@/components/FooterSection';
+import ChemicalFamilySection from '@/components/ChemicalFamilySection';
 
 interface Project {
   slug: string;
@@ -11,6 +12,138 @@ interface Project {
   fullImage: string;
   smallImages: string[];
 }
+
+interface ChemicalProduct {
+  name: string;
+  code?: string;
+}
+
+interface ChemicalCategory {
+  name: string;
+  count: number;
+  products: ChemicalProduct[];
+}
+
+const chemicalCategories: ChemicalCategory[] = [
+  {
+    name: 'Basic Petrochemicals & Feedstocks',
+    count: 12,
+    products: [
+      { name: 'Naphtha' },
+      { name: 'Propylene' },
+      { name: 'Isobutylene (IB)' },
+      { name: 'Benzene' },
+      { name: 'Toluene' },
+      { name: 'Paraxylene (PX)' },
+      { name: 'Ortho Xylene (OX)' },
+      { name: 'Cyclohexane' },
+      { name: 'Isohexane SBP' },
+      { name: 'C-6 Aliphatic Hydrocarbons' },
+      { name: 'Methanol' },
+      { name: 'Sulphur' }
+    ]
+  },
+  {
+    name: 'Fuel Additives (Oxygenates)',
+    count: 3,
+    products: [
+      { name: 'MTBE (Methyl Tert-Butyl Ether)' },
+      { name: 'ETBE (Ethyl Tert-Butyl Ether)' },
+      { name: 'Bio-ETBE' }
+    ]
+  },
+  {
+    name: 'Polymers & Intermediates',
+    count: 5,
+    products: [
+      { name: 'Polypropylene (PP)' },
+      { name: 'Polyethylene (PE)' },
+      { name: 'Styrene Monomer' },
+      { name: 'Vinyl Chloride Monomer' },
+      { name: 'Ethylene Glycol' }
+    ]
+  },
+  {
+    name: 'Phosphorus-Based Chemicals',
+    count: 4,
+    products: [
+      { name: 'Phosphoric Acid' },
+      { name: 'Phosphorus Pentoxide' },
+      { name: 'Triphenyl Phosphite' },
+      { name: 'Phosphorus Trichloride' }
+    ]
+  },
+  {
+    name: 'Sulfur-Based Chemicals',
+    count: 3,
+    products: [
+      { name: 'Sulfuric Acid' },
+      { name: 'Sodium Bisulfite' },
+      { name: 'Sulfur Dioxide' }
+    ]
+  },
+  {
+    name: 'Amines & Amine Derivatives',
+    count: 6,
+    products: [
+      { name: 'Diethylamine' },
+      { name: 'Triethylamine' },
+      { name: 'Monoethanolamine' },
+      { name: 'Diethanolamine' },
+      { name: 'Triethanolamine' },
+      { name: 'N-Methylpyrrolidone' }
+    ]
+  },
+  {
+    name: 'Phenols & Derivatives',
+    count: 7,
+    products: [
+      { name: 'Phenol' },
+      { name: 'Bisphenol A' },
+      { name: 'Cresol' },
+      { name: 'Resorcinol' },
+      { name: 'Hydroquinone' },
+      { name: 'Catechol' },
+      { name: 'Nonylphenol' }
+    ]
+  },
+  {
+    name: 'Aromatic Hydrocarbons & Derivatives',
+    count: 4,
+    products: [
+      { name: 'Toluene Diisocyanate' },
+      { name: 'Methylene Diphenyl Diisocyanate' },
+      { name: 'Aniline' },
+      { name: 'Nitrobenzene' }
+    ]
+  },
+  {
+    name: 'Acrylic Monomers & Derivatives',
+    count: 3,
+    products: [
+      { name: 'Acrylic Acid' },
+      { name: 'Methyl Methacrylate' },
+      { name: 'Butyl Acrylate' }
+    ]
+  },
+  {
+    name: 'Cyanide-Based Chemicals',
+    count: 1,
+    products: [
+      { name: 'Sodium Cyanide' }
+    ]
+  },
+  {
+    name: 'Organometallic-Based Chemicals',
+    count: 4,
+    products: [
+      { name: 'Tetraethyl Lead' },
+      { name: 'Tributyltin Oxide' },
+      { name: 'Organotin Compounds' },
+      { name: 'Organozinc Compounds' }
+    ]
+  }
+];
 
 const projects: Project[] = [
   {
@@ -61,6 +194,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   if (!project) {
     return <div className="p-20 text-center">Project not found</div>;
   }
+
   return (
     <main className="min-h-screen bg-white p-4 sm:p-6 md:p-5">
       <div className="w-full">
@@ -75,14 +209,23 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <div className="w-full px-4 sm:px-6 md:px-5 py-16">
         <h1 className="text-5xl font-normal text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{project.title}</h1>
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{project.description}</p>
-        <p className="text-lg font-semibold mb-4 text-gray-900 mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>Services provided</p>
-        <div className="flex flex-wrap gap-4 mb-12 mt-10 -ml-4">
-          {project.tags.map((tag) => (
-            <span key={tag} className="inline-block bg-[#f5f5f5] text-[#222] rounded-[1.2rem] px-4 py-1 text-base font-medium">
-              {tag}
-            </span>
-          ))}
-        </div>
+        
+        {project.slug === 'chemical-products' ? (
+          // Chemical Family section for chemical-products page
+          <ChemicalFamilySection />
+        ) : (
+          // Original Services provided section for other projects
+          <>
+            <p className="text-lg font-semibold mb-4 text-gray-900 mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>Services provided</p>
+            <div className="flex flex-wrap gap-4 mb-12 mt-10 -ml-4">
+              {project.tags.map((tag) => (
+                <span key={tag} className="inline-block bg-[#f5f5f5] text-[#222] rounded-[1.2rem] px-4 py-1 text-base font-medium">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
       </div>
       {/* Stats section */}
       <div className="w-full px-4 sm:px-6 md:px-5 mb-16">
@@ -112,15 +255,17 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
       </div>
       {/* Additional project showcase images */}
-      <div className="w-full mb-16">
-        <Image
-          src={project.fullImage}
-          alt={project.title}
-          width={1920}
-          height={1080}
-          className="w-full h-[95vh] object-cover rounded-xl"
-        />
-      </div>
+      {project.slug !== 'chemical-products' && (
+        <div className="w-full mb-16">
+          <Image
+            src={project.fullImage}
+            alt={project.title}
+            width={1920}
+            height={1080}
+            className="w-full h-[95vh] object-cover rounded-xl"
+          />
+        </div>
+      )}
       <div className="w-full mb-16 -mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           {project.smallImages.map((src, idx) => (
