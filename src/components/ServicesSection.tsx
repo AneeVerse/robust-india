@@ -11,6 +11,8 @@ export default function ServicesSection() {
 
   useEffect(() => {
     // Intersection Observer to trigger animations when section comes into view
+    if (typeof window === 'undefined') return;
+    
     const headerEl = headerRef.current;
     if (!headerEl) return;
     const observer = new IntersectionObserver(
@@ -33,6 +35,8 @@ export default function ServicesSection() {
   }, []);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const handleScroll = () => {
       if (!sectionRef.current) return
 
@@ -86,7 +90,7 @@ export default function ServicesSection() {
             }`}
             style={{ transitionDelay: '0.2s' }}
           >
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-gray-900">Everything you'd</h1>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-gray-900">Everything you&apos;d</h1>
             <div className="relative">
               <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-gray-900">need</h1>
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#6164F6] to-[#6164F6] rounded-full"></div>

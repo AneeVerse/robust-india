@@ -108,7 +108,8 @@ export default function TestimonialsSection() {
       setContainerWidth(cw);
       const iw = cw * 0.6;
       setInnerWidth(iw);
-      const style = window.getComputedStyle(trackRef.current);
+      const style = typeof window !== 'undefined' ? window.getComputedStyle(trackRef.current) : null;
+      if (!style) return;
       setGapPx(parseFloat(style.gap));
     }
   }, []);

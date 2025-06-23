@@ -106,7 +106,7 @@ export default function HeroSection() {
                     }`}
                     style={{ 
                       transitionDelay: `${0.4 + ((lineIdx * 0.5) + charIdx * 0.05)}s`,
-                      fontWeight: window.innerWidth < 640 ? "700" : "600"
+                      fontWeight: typeof window !== 'undefined' && window.innerWidth < 640 ? "700" : "600"
                     }}
                   >
                     {char === ' ' ? '\u00A0' : char}

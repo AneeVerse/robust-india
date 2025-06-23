@@ -8,6 +8,8 @@ export default function FooterSection() {
   const { setShowNavbar } = useNavbarVisibility();
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const handleScroll = () => {
       const footer = document.getElementById('footer-section');
       if (footer) {
