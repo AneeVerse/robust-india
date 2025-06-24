@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'NoiGrotesk';
   src: url('/font/NoiGrotesk/NoiGrotesk-Semibold.woff') format('woff');
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -21,6 +21,42 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Ensure consistent font rendering across browsers */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Cross-browser font consistency */
+.hero-heading {
+  font-family: 'NoiGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  -webkit-font-feature-settings: 'kern' 1, 'liga' 1;
+  -moz-font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+.hero-subheading {
+  font-family: 'FusionNeue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  -webkit-font-feature-settings: 'kern' 1, 'liga' 1;
+  -moz-font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Additional Edge compatibility */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .hero-heading {
+    -ms-font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+  
+  .hero-subheading {
+    -ms-font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+}
+
 :root {
   --background: #ffffff;
   

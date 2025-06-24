@@ -90,11 +90,7 @@ export default function HeroSection() {
           
           {/* Headline - Mobile Centered, Desktop Original */}
           <h2 
-            className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[6.5rem] mb-4 sm:mb-2 -mt-0 sm:-mt-2 md:-mt-3 lg:-mt-4 leading-tight text-black tracking-wide font-bold sm:font-normal max-w-xs sm:max-w-none "
-            style={{ 
-              fontFamily: "NoiGrotesk", 
-              fontWeight: "700"
-            }}
+            className="hero-heading text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[6.5rem] mb-4 sm:mb-2 -mt-0 sm:-mt-2 md:-mt-3 lg:-mt-4 leading-tight text-black tracking-wide max-w-xs sm:max-w-none"
           >
             {headlineLines.map((line, lineIdx) => (
               <span key={lineIdx} className="block">
@@ -105,8 +101,7 @@ export default function HeroSection() {
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
                     style={{ 
-                      transitionDelay: `${0.4 + ((lineIdx * 0.5) + charIdx * 0.05)}s`,
-                      fontWeight: typeof window !== 'undefined' && window.innerWidth < 640 ? "700" : "600"
+                      transitionDelay: `${0.4 + ((lineIdx * 0.5) + charIdx * 0.05)}s`
                     }}
                   >
                     {char === ' ' ? '\u00A0' : char}
@@ -118,12 +113,10 @@ export default function HeroSection() {
           
           {/* Subheadline - Mobile Simplified, Desktop Original */}
           <div
-            className={`text-lg sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-gray-600 sm:text-gray-700 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto mb-0 sm:mb-6 md:mb-0 lg:mb-10 leading-relaxed transition-all duration-1000 ease-out px-2 sm:px-4 md:px-0 text-center ${
+            className={`hero-subheading text-lg sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] text-gray-600 sm:text-gray-700 max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto mb-0 sm:mb-6 md:mb-0 lg:mb-10 leading-relaxed transition-all duration-1000 ease-out px-2 sm:px-4 md:px-0 text-center ${
               showSubheadline ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{
-              fontFamily: "FusionNeue",
-              fontWeight: 400,
               transitionDelay: showSubheadline ? '0s' : '0.6s'
             }}
           >
