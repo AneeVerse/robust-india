@@ -1,6 +1,27 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { 
+  GiChemicalDrop, 
+  GiTestTubes, 
+  GiAtomicSlashes, 
+  GiMolecule, 
+  GiAcid,
+  GiDna2,
+  GiCrystalBars,
+  GiPlantRoots,
+  GiPaintBrush,
+  GiDeadlyStrike,
+  GiElectric
+} from 'react-icons/gi';
+import { 
+  IoFlaskOutline,
+  IoWaterOutline 
+} from 'react-icons/io5';
+import { 
+  TbFlask,
+  TbAtom
+} from 'react-icons/tb';
 
 interface ChemicalProduct {
   name: string;
@@ -26,12 +47,14 @@ interface ChemicalCategory {
   name: string;
   count: number;
   products: ChemicalProduct[];
+  IconComponent: React.ComponentType<{ className?: string }>;
 }
 
 const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Basic Petrochemicals & Feedstocks',
     count: 12,
+    IconComponent: GiChemicalDrop,
     products: [
       { 
         name: 'Naphtha',
@@ -109,6 +132,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Fuel Additives (Oxygenates)',
     count: 3,
+    IconComponent: IoWaterOutline,
     products: [
       { name: 'MTBE (Methyl Tert-Butyl Ether)' },
       { name: 'ETBE (Ethyl Tert-Butyl Ether)' },
@@ -118,6 +142,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Polymers & Intermediates',
     count: 5,
+    IconComponent: GiMolecule,
     products: [
       { name: 'Polypropylene (PP)' },
       { name: 'Polyethylene (PE)' },
@@ -129,6 +154,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Phosphorus-Based Chemicals',
     count: 4,
+    IconComponent: GiAtomicSlashes,
     products: [
       { name: 'Phosphoric Acid' },
       { name: 'Phosphorus Pentoxide' },
@@ -139,6 +165,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Sulfur-Based Chemicals',
     count: 3,
+    IconComponent: GiAcid,
     products: [
       { name: 'Sulfuric Acid' },
       { name: 'Sodium Bisulfite' },
@@ -148,6 +175,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Amines & Amine Derivatives',
     count: 6,
+    IconComponent: GiDna2,
     products: [
       { name: 'Diethylamine' },
       { name: 'Triethylamine' },
@@ -160,6 +188,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Phenols & Derivatives',
     count: 7,
+    IconComponent: GiCrystalBars,
     products: [
       { name: 'Phenol' },
       { name: 'Bisphenol A' },
@@ -173,6 +202,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Aromatic Hydrocarbons & Derivatives',
     count: 4,
+    IconComponent: GiPlantRoots,
     products: [
       { name: 'Toluene Diisocyanate' },
       { name: 'Methylene Diphenyl Diisocyanate' },
@@ -183,6 +213,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Acrylic Monomers & Derivatives',
     count: 3,
+    IconComponent: GiPaintBrush,
     products: [
       { name: 'Acrylic Acid' },
       { name: 'Methyl Methacrylate' },
@@ -192,6 +223,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Cyanide-Based Chemicals',
     count: 1,
+    IconComponent: GiDeadlyStrike,
     products: [
       { name: 'Sodium Cyanide' }
     ]
@@ -199,6 +231,7 @@ const chemicalCategories: ChemicalCategory[] = [
   {
     name: 'Organometallic-Based Chemicals',
     count: 4,
+    IconComponent: GiElectric,
     products: [
       { name: 'Tetraethyl Lead' },
       { name: 'Tributyltin Oxide' },
@@ -214,35 +247,29 @@ export default function ChemicalFamilySection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isChemicalDetailOpen, setIsChemicalDetailOpen] = useState(false);
 
-  // Hide navbar and prevent scroll when modal is open
   useEffect(() => {
     if (isModalOpen || isChemicalDetailOpen) {
-      // Hide navbar and prevent body scroll
       document.body.style.overflow = 'hidden';
       const navbar = document.querySelector('nav');
       if (navbar) {
         navbar.style.display = 'none';
       }
-      // Hide any fixed bottom navigation
       const bottomNav = document.querySelector('[data-navbar="bottom"]');
       if (bottomNav) {
         (bottomNav as HTMLElement).style.display = 'none';
       }
     } else {
-      // Restore navbar and allow body scroll
       document.body.style.overflow = 'unset';
       const navbar = document.querySelector('nav');
       if (navbar) {
         navbar.style.display = '';
       }
-      // Restore any fixed bottom navigation
       const bottomNav = document.querySelector('[data-navbar="bottom"]');
       if (bottomNav) {
         (bottomNav as HTMLElement).style.display = '';
       }
     }
 
-    // Cleanup on component unmount
     return () => {
       document.body.style.overflow = 'unset';
       const navbar = document.querySelector('nav');
@@ -286,55 +313,65 @@ export default function ChemicalFamilySection() {
     if (!isOpen || !category) return null;
 
     return (
-      <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-[9999] p-4">
-        <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-          <div className="p-6 border-b border-gray-200 flex justify-between items-center">
-            <h2 className="text-2xl font-semibold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-              {category.name}
-            </h2>
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
+        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl shadow-blue-900/30">
+          <div className="p-8 border-b border-white/20 flex justify-between items-center">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl">
+                <category.IconComponent className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  {category.name}
+                </h2>
+                <p className="text-blue-600 mt-1">{category.count} products available</p>
+              </div>
+            </div>
             <button 
               onClick={onClose}
-              className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200"
             >
-              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          <div className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.products.map((product, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 bg-[#6164F6] rounded-lg flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12,3L8,12C8,15.31 9.79,18 12,18C14.21,18 16,15.31 16,12L12,3Z"/>
-                      </svg>
+                <div key={index} className="group relative">
+                  <div className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-2xl p-6 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm hover:-translate-y-1">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <GiTestTubes className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-blue-900 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                          {product.name}
+                        </h3>
+                      </div>
                     </div>
-                    <h3 className="text-sm font-medium text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {product.name}
-                    </h3>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (product.description) {
+                          openChemicalDetail(product);
+                        }
+                      }}
+                      className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors group-hover:translate-x-1 duration-300"
+                      disabled={!product.description}
+                    >
+                      View Details
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </button>
                   </div>
-                  <button 
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (product.description) {
-                        openChemicalDetail(product);
-                      }
-                    }}
-                    className="text-xs text-gray-600 hover:text-[#6164F6] transition-colors flex items-center gap-1"
-                    disabled={!product.description}
-                  >
-                    View Details
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </button>
                 </div>
               ))}
             </div>
-            <div className="mt-8">
-              <button className="w-full bg-[#131518] text-white py-3 px-6 rounded-xl hover:bg-[#323B4A] transition-colors font-medium">
+            <div className="mt-10">
+              <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                 Request Detailed Information
               </button>
             </div>
@@ -353,78 +390,69 @@ export default function ChemicalFamilySection() {
     if (!isOpen || !chemical || !chemical.description) return null;
 
     return (
-      <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-[9999] p-4">
-        <div className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
+        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl shadow-blue-900/30">
           {/* Header */}
-          <div className="p-6 border-b border-gray-200 flex justify-between items-center">
-            <div className="flex items-center gap-4">
+          <div className="p-8 border-b border-white/20 flex justify-between items-center">
+            <div className="flex items-center gap-6">
               <button 
                 onClick={onBack}
-                className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+                className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200"
               >
-                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              <h2 className="text-2xl font-semibold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                {chemical.name}
-              </h2>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  {chemical.name}
+                </h2>
+                <p className="text-blue-600 mt-1">Chemical Product Details</p>
+              </div>
             </div>
             <button 
               onClick={onClose}
-              className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200"
             >
-              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
-          <div className="p-6">
+          <div className="p-8">
             {/* Description */}
             <div className="mb-8">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                Description
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                {chemical.description}
-              </p>
+              <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-6 shadow-sm">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                    <IoFlaskOutline className="w-4 h-4 text-white" />
+                  </div>
+                  Description
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  {chemical.description}
+                </p>
+              </div>
             </div>
 
             {/* Physical Properties */}
             {chemical.physicalProperties && (
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  Physical Properties
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Appearance</h4>
-                    <p className="text-gray-600 text-sm">{chemical.physicalProperties.appearance}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Odor</h4>
-                    <p className="text-gray-600 text-sm">{chemical.physicalProperties.odor}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Boiling Point</h4>
-                    <p className="text-gray-600 text-sm">{chemical.physicalProperties.boilingPoint}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Density</h4>
-                    <p className="text-gray-600 text-sm">{chemical.physicalProperties.density}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Flash Point</h4>
-                    <p className="text-gray-600 text-sm">{chemical.physicalProperties.flashPoint}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Solubility</h4>
-                    <p className="text-gray-600 text-sm">{chemical.physicalProperties.solubility}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-gray-900 mb-1">Viscosity</h4>
-                    <p className="text-gray-600 text-sm">{chemical.physicalProperties.viscosity}</p>
+                <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-6 shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                      <TbAtom className="w-4 h-4 text-white" />
+                    </div>
+                    Physical Properties
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {chemical.physicalProperties && Object.entries(chemical.physicalProperties).map(([key, value], index) => (
+                      <div key={index} className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-xl p-4 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm">
+                        <h4 className="font-semibold text-blue-900 mb-2 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
+                        <p className="text-blue-700 text-sm leading-relaxed">{value}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -433,16 +461,21 @@ export default function ChemicalFamilySection() {
             {/* Applications */}
             {chemical.applications && chemical.applications.length > 0 && (
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  Applications
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {chemical.applications.map((app, index) => (
-                    <div key={index}>
-                      <h4 className="font-medium text-gray-900 mb-2">{app.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{app.description}</p>
+                <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-6 shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                      <TbFlask className="w-4 h-4 text-white" />
                     </div>
-                  ))}
+                    Applications
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {chemical.applications.map((app, index) => (
+                      <div key={index} className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-xl p-5 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm">
+                        <h4 className="font-semibold text-blue-900 mb-3 text-lg">{app.title}</h4>
+                        <p className="text-blue-700 leading-relaxed">{app.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
@@ -450,22 +483,27 @@ export default function ChemicalFamilySection() {
             {/* Industries Served */}
             {chemical.industriesServed && chemical.industriesServed.length > 0 && (
               <div className="mb-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  Industries Served
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {chemical.industriesServed.map((industry, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center">
-                      <p className="text-sm font-medium text-gray-800">{industry}</p>
+                <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-6 shadow-sm">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                      <GiMolecule className="w-4 h-4 text-white" />
                     </div>
-                  ))}
+                    Industries Served
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {chemical.industriesServed.map((industry, index) => (
+                      <div key={index} className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-xl p-4 text-center hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm">
+                        <p className="font-medium text-blue-900">{industry}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
 
             {/* Request Information Button */}
-            <div className="mt-8">
-              <button className="w-full bg-[#131518] text-white py-3 px-6 rounded-xl hover:bg-[#323B4A] transition-colors font-medium">
+            <div className="mt-10">
+              <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                 Request Detailed Information
               </button>
             </div>
@@ -477,40 +515,65 @@ export default function ChemicalFamilySection() {
 
   return (
     <>
-      <div className="mt-16">
-        <div className="flex items-center gap-3 mb-3">
-          <div className="w-8 h-8 bg-[#6164F6] rounded-lg flex items-center justify-center">
-            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M9 2V7H8.5C7.67 7 7 7.67 7 8.5V9L2.4 18.8C2.1 19.4 2.5 20 3.2 20H20.8C21.5 20 21.9 19.4 21.6 18.8L17 9V8.5C17 7.67 16.33 7 15.5 7H15V2H9M11 4H13V7H11V4M9 9H15V9.5L19.2 18H4.8L9 9.5V9Z"/>
-            </svg>
+      <div className="mt-24 px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div className="text-left mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl">
+              <GiTestTubes className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              Chemical Family
+            </h2>
           </div>
-          <h2 className="text-2xl font-semibold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>Chemical Family</h2>
+          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed" style={{ fontFamily: 'FusionNeue, sans-serif' }}>
+            Explore our comprehensive range of chemical products and
+            <br />
+            solutions designed to innovate and scale with confidence.
+          </p>
         </div>
-        <p className="text-lg text-gray-600 mb-8" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-          Explore our comprehensive range of chemical products and solutions
-        </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {chemicalCategories.map((category, index) => (
             <div 
               key={index} 
               onClick={() => openModal(category)}
-              className="bg-[#131518] rounded-xl p-6 text-white hover:bg-[#5056E5] transition-colors duration-200 cursor-pointer"
+              className="group cursor-pointer h-full"
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <h3 className="text-sm font-medium mb-3 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              <div className="relative overflow-hidden bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 hover:bg-white/100 h-full flex flex-col">
+                {/* Glass effect overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/3 to-blue-700/3 backdrop-blur-lg"></div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                      <category.IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="w-8 h-8 bg-blue-400/20 backdrop-blur-lg rounded-full flex items-center justify-center group-hover:bg-blue-400/30 transition-colors duration-300 border border-blue-300/40">
+                      <svg className="w-4 h-4 text-blue-700 group-hover:text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-gray-800 transition-colors duration-300 flex-1" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                     {category.name}
                   </h3>
-                  <div className="text-xs text-gray-300">
-                    View Products <span className="ml-1">{category.count}</span>
+                  
+                  <div className="flex items-center justify-between mt-auto">
+                    <span className="text-sm font-medium text-blue-700 bg-blue-100/60 backdrop-blur-sm px-3 py-1 rounded-full border border-blue-200/50">
+                      {category.count} products
+                    </span>
+                    <span className="text-xs text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
+                      View Products →
+                    </span>
                   </div>
                 </div>
-                <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center ml-3 flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12,3L8,12C8,15.31 9.79,18 12,18C14.21,18 16,15.31 16,12L12,3Z"/>
-                  </svg>
-                </div>
+
+                {/* Hover effect overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-700/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md"></div>
               </div>
             </div>
           ))}
