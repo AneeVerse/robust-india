@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { motion, PanInfo } from 'framer-motion';
 
@@ -83,6 +83,18 @@ const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ vi
   </div>
 );
 
+// Responsive hook
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+  return isMobile;
+}
+
 export default function TestimonialsSection() {
   // Cursor and drag state
   const [cursor, setCursor] = useState({ visible: false, x: 0, y: 0 });
@@ -129,19 +141,25 @@ export default function TestimonialsSection() {
     }
   };
 
+  const isMobile = useIsMobile();
+
+  // Mobile navigation handlers
+  const goNext = useCallback(() => setCurrentIndex(i => (i === lastIndex ? 0 : i + 1)), [lastIndex]);
+  const goPrev = useCallback(() => setCurrentIndex(i => (i === 0 ? lastIndex : i - 1)), [lastIndex]);
+
   return (
-    <section className="py-24 bg-white" style={{ fontFamily: "'NoiGrotesk', sans-serif" }}>
+    <section className="py-16 md:py-24 bg-white" style={{ fontFamily: "'NoiGrotesk', sans-serif" }}>
       <div
         ref={containerRef}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        className="max-w-7xl mx-auto px-6 md:px-8"
+        onMouseMove={!isMobile ? handleMouseMove : undefined}
+        onMouseLeave={!isMobile ? handleMouseLeave : undefined}
+        className="max-w-7xl mx-auto px-4 md:px-8"
       >
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl  text-gray-900 mb-4 text-center"
+          className="text-2xl xs:text-3xl md:text-6xl text-gray-900 mb-2 md:mb-4 text-center"
         >
           They say it best
         </motion.h2>
@@ -150,56 +168,79 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-xl text-gray-600 mb-16 text-center"
+          className="text-base xs:text-lg md:text-xl text-gray-600 mb-8 md:mb-16 text-center"
         >
           What clients love about working with us
         </motion.p>
 
-        {/* Slider Carousel */}
-        <div className=" h-[80vh]">
-          <motion.div
-            ref={trackRef}
-            drag="x"
-            onDragEnd={handleDragEnd}
-            whileTap={{ cursor: 'grabbing' }}
-            className="flex items-center h-full"
-            style={{ gap: '2rem' }}
-            animate={{ x: trackLeftOffset - currentIndex * (innerWidth + gapPx) }}
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-          >
+        {/* Responsive Testimonials */}
+        {isMobile ? (
+          <div className="flex flex-nowrap overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-4 -mx-4 px-4">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="flex-shrink-0 flex justify-center items-center h-full">
-                <motion.div
-                  variants={itemVariants}
-                  className={`bg-gray-50 rounded-2xl p-12 flex flex-col h-full border border-[#6164F6] shadow-2xl ${index !== currentIndex ? 'filter blur-sm' : ''}`}
-                  style={{ width: innerWidth }}
-                >
-                  <blockquote className="flex-grow mb-12 text-3xl text-gray-800 leading-snug">
-                    {testimonial.quote.split(' ').map((word, i) => {
-                      const isHighlighted = testimonial.highlight.some(h =>
-                        testimonial.quote.toLowerCase().indexOf(h.toLowerCase()) ===
-                        testimonial.quote.toLowerCase().split(' ').slice(0, i + 1).join(' ').length - word.length
-                      );
-                      return (
-                        <span key={i} className={isHighlighted ? "text-blue-600 font-semibold" : ""}>
-                          {word}{' '}
-                        </span>
-                      );
-                    })}
+              <div key={index} className="snap-center shrink-0 w-[90vw] max-w-xs">
+                <div className="bg-gray-50 rounded-2xl p-6 xs:p-8 flex flex-col border border-[#6164F6] shadow-2xl h-full">
+                  <blockquote className="mb-6 text-base xs:text-lg text-gray-800 leading-snug">
+                    {testimonial.quote}
                   </blockquote>
-                  <div className="flex items-center mb-8 mt-auto">
-                    <Image src={testimonial.image} alt={testimonial.author} width={80} height={80} className="rounded-lg object-cover mr-8" />
+                  <div className="flex items-center mb-4 mt-auto">
+                    <Image src={testimonial.image} alt={testimonial.author} width={48} height={48} className="rounded-lg object-cover mr-4" />
                     <div>
-                      <p className="font-semibold text-gray-900 text-lg">{testimonial.author}</p>
-                      <p className="text-gray-500 text-base tracking-wide leading-snug">{testimonial.role}</p>
+                      <p className="font-semibold text-gray-900 text-base xs:text-lg">{testimonial.author}</p>
+                      <p className="text-gray-500 text-xs xs:text-sm tracking-wide leading-snug">{testimonial.role}</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             ))}
-          </motion.div>
-        </div>
-        <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
+          </div>
+        ) : (
+          // Desktop carousel as before
+          <div className="h-[80vh]">
+            <motion.div
+              ref={trackRef}
+              drag="x"
+              onDragEnd={handleDragEnd}
+              whileTap={{ cursor: 'grabbing' }}
+              className="flex items-center h-full"
+              style={{ gap: '2rem' }}
+              animate={{ x: trackLeftOffset - currentIndex * (innerWidth + gapPx) }}
+              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="flex-shrink-0 flex justify-center items-center h-full">
+                  <motion.div
+                    variants={itemVariants}
+                    className={`bg-gray-50 rounded-2xl p-12 flex flex-col h-full border border-[#6164F6] shadow-2xl ${index !== currentIndex ? 'filter blur-sm' : ''}`}
+                    style={{ width: innerWidth }}
+                  >
+                    <blockquote className="flex-grow mb-12 text-3xl text-gray-800 leading-snug">
+                      {testimonial.quote.split(' ').map((word, i) => {
+                        const isHighlighted = testimonial.highlight.some(h =>
+                          testimonial.quote.toLowerCase().indexOf(h.toLowerCase()) ===
+                          testimonial.quote.toLowerCase().split(' ').slice(0, i + 1).join(' ').length - word.length
+                        );
+                        return (
+                          <span key={i} className={isHighlighted ? "text-blue-600 font-semibold" : ""}>
+                            {word}{' '}
+                          </span>
+                        );
+                      })}
+                    </blockquote>
+                    <div className="flex items-center mb-8 mt-auto">
+                      <Image src={testimonial.image} alt={testimonial.author} width={80} height={80} className="rounded-lg object-cover mr-8" />
+                      <div>
+                        <p className="font-semibold text-gray-900 text-lg">{testimonial.author}</p>
+                        <p className="text-gray-500 text-base tracking-wide leading-snug">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        )}
+        {/* Custom cursor only on desktop */}
+        {!isMobile && <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />}
       </div>
     </section>
   );

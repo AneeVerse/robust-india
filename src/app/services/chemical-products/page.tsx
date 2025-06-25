@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ChemicalProductsPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-white pb-24 sm:pb-4">
       <div
         className="bg-white rounded-3xl p-8 border w-96 md:w-[420px] h-auto shadow-xl flex flex-col items-start"
         style={{

@@ -138,7 +138,7 @@ export default function AboutPage() {
       </div>
 
       {/* Footer */}
-      <div className="px-10 mb-8">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-10 mb-24 sm:mb-8">
         <FooterSection />
       </div>
     </div>

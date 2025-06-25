@@ -57,6 +57,36 @@
   }
 }
 
+/* Mobile navbar improvements */
+@supports (padding: max(0px)) {
+  .mobile-navbar-safe {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Prevent navbar interference with mobile browser UI */
+@media (max-width: 640px) {
+  .mobile-navbar-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    z-index: 50;
+  }
+  
+  /* Ensure body has proper bottom padding on mobile */
+  body {
+    padding-bottom: max(80px, calc(80px + env(safe-area-inset-bottom)));
+  }
+}
+
+/* Prevent scrollbar from affecting layout */
+html {
+  scrollbar-gutter: stable;
+}
+
 :root {
   --background: #ffffff;
   

@@ -70,7 +70,7 @@ export default function ProjectsPage() {
       {/* Gradient top left, rotated */}
       <div className="absolute top-0 left-0 w-[700px] h-[400px] -z-10" style={{ background: 'radial-gradient(circle at 0% 0%, #97CCFB 0%, #B9E0FF 30%, #f8f6f4 60%)', transform: 'rotate(-20deg)' }} />
       <div className="w-full">
-        <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-16 sm:pt-20 md:pt-24 pb-2 z-10">
+        <section className="relative flex flex-col items-center justify-center w-full text-center px-6 sm:px-6 md:px-8 pt-16 sm:pt-20 md:pt-24 pb-2 z-10">
           {/* Company logo and name */}
           <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 mt-2">
             <Image src="/images/top-logo.png" alt="Robust India Logo" width={32} height={32} className="sm:w-[38px] sm:h-[38px]" />
@@ -78,8 +78,8 @@ export default function ProjectsPage() {
           </Link>
           {/* Heading */}
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-center text-gray-900 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-18 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-20 px-2" 
-            style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
+            className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light text-center text-gray-900 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-18 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-20 px-1 sm:px-2 max-w-5xl mx-auto break-words" 
+            style={{ fontFamily: 'NoiGrotesk, sans-serif', wordBreak: 'break-word', hyphens: 'auto' }}
             initial="hidden"
             animate="visible"
           >
@@ -168,7 +168,7 @@ export default function ProjectsPage() {
       </div>
 
       {/* Footer Section */}
-      <div className="mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 md:px-8 mb-10">
+      <div className="mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 md:px-8 mb-24 sm:mb-10">
         <div className="max-w-[1400px] mx-auto">
           <FooterSection />
         </div>

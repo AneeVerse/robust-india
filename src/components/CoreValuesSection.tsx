@@ -66,6 +66,11 @@ export default function HorizontalScrollCards() {
     const container = scrollContainerRef.current
     if (!container) return
 
+    // Only run GSAP animation on desktop/tablet
+    if (typeof window !== 'undefined' && window.innerWidth < 640) {
+      return;
+    }
+
     const totalScrollWidth = container.scrollWidth
     const containerWidth = container.clientWidth
     const scrollDistance = totalScrollWidth - containerWidth
@@ -123,14 +128,16 @@ export default function HorizontalScrollCards() {
 
           <div
             ref={scrollContainerRef}
-            className="flex gap-8 pb-6 px-4"
+            className="flex gap-8 pb-6 px-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory sm:overflow-visible sm:snap-none"
           >
             {coreValues.map((value) => {
               const IconComponent = value.icon
               return (
                 <Card
                   key={value.id}
-                  className="flex-shrink-0 w-[480px] h-[480px] bg-white border border-indigo-200 hover:border-transparent shadow-sm hover:shadow-lg transition-all duration-300 rounded-3xl overflow-hidden relative group"
+                  className="w-[90vw] max-w-xs h-[420px] shrink-0 snap-center
+                    sm:w-[480px] sm:h-[480px] sm:max-w-none sm:flex-none sm:snap-none
+                    bg-white border border-indigo-200 hover:border-transparent shadow-sm hover:shadow-lg transition-all duration-300 rounded-3xl overflow-hidden relative group"
                 >
                   <CardContent className="p-10 h-full flex flex-col items-start relative">
                     {/* Full inset gradient overlay for card background */}

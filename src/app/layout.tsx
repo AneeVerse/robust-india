@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { NavbarVisibilityProvider } from "../context/NavbarVisibilityContext";
 import AnimatedNavbar from "../components/AnimatedNavbar";
@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     shortcut: '/images/top-logo.png',
     apple: '/images/top-logo.png',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({

@@ -153,7 +153,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       </div>
       <BookACall />
    
-      <div className="mt-0 mb-2 ">
+      <div className="mt-0 mb-24 sm:mb-2">
         <div className="">
           <FooterSection />
         </div>

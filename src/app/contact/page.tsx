@@ -402,7 +402,7 @@ export default function ContactPage() {
       </section>
 
       {/* Footer */}
-      <div className="px-10 mb-8">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-10 mb-8">
         <FooterSection />
       </div>
     </div>
