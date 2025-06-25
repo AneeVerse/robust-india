@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, PanInfo } from 'framer-motion';
 
@@ -142,10 +142,6 @@ export default function TestimonialsSection() {
   };
 
   const isMobile = useIsMobile();
-
-  // Mobile navigation handlers
-  const goNext = useCallback(() => setCurrentIndex(i => (i === lastIndex ? 0 : i + 1)), [lastIndex]);
-  const goPrev = useCallback(() => setCurrentIndex(i => (i === 0 ? lastIndex : i - 1)), [lastIndex]);
 
   return (
     <section className="py-16 md:py-24 bg-white" style={{ fontFamily: "'NoiGrotesk', sans-serif" }}>
