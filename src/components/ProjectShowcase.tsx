@@ -8,21 +8,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   { slug: 'chemical-products',
-    image: "/images/project/project1.png",
+    image: "/images/project/slug1/chemical-product-thumbnail.png",
     title: "Chemical Products",
     description:
       "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
     tags: ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"],
   },
   { slug: 'ftwz',
-    image: "/images/project/project2.png",
+    image: "/images/project/slug1/ftw-thumbnail.png",
     title: "FTWZ",
     description:
       "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
     tags: ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"],
   },
   { slug: 'integrated-3pl',
-    image: "/images/project/project3.png",
+    image: "/images/project/slug1/3PL-thumbnail.png",
     title: "Integrated 3PL",
     description:
       "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",

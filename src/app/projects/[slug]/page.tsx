@@ -21,11 +21,11 @@ const projects: Project[] = [
     slug: 'chemical-products',
     title: 'Chemical Products',
     description: 'Our Chemical Products division sources a comprehensive range of high-purity specialty and bulk chemicals from leading global producers. From precise formulation and rigorous quality assurance testing to custom packaging and compliant distribution, we manage every aspect of the supply chain to deliver tailored solutions that meet the exacting specifications of clients across industries. Our expertise in regulatory compliance and logistical coordination ensures safe, reliable delivery, helping businesses innovate and scale with confidence.',
-    image: '/images/project/project1.png',
-    fullImage: '/images/project/SLUG/1st project-width.avif',
+    image: '/images/project/slug1/chemical-product-thumbnail.png',
+    fullImage: '/images/project/slug1/chemical-product-1.png',
     smallImages: [
-      '/images/project/SLUG/1st project 2nd.avif',
-      '/images/project/SLUG/1st project 3rd.avif',
+      '/images/project/slug1/chemical-product-3.png',
+      '/images/project/slug1/chemical-product-2.png',
     ],
     tags: ['Chemical Products', 'Global Distribution', 'Packaging', 'Brand Identity'],
   },
@@ -33,11 +33,11 @@ const projects: Project[] = [
     slug: 'ftwz',
     title: 'FTWZ',
     description: 'FTWZ (Free Trade Warehousing Zone) provides fully bonded storage facilities and value-added services without the need for a local entity. We streamline import and export processes through seamless customs handling, real-time inventory tracking, and integrated digital reporting. Our turnkey solutions include kitting, labeling, and distribution under one roof, enabling businesses to optimize cash flow, reduce overhead, and accelerate time to market.',
-    image: '/images/project/project2.png',
-    fullImage: '/images/project/SLUG/2nd project-width.avif',
+    image: '/images/project/slug1/ftw-thumbnail.png',
+    fullImage: '/images/project/slug1/ftw-1.png',
     smallImages: [
-      '/images/project/SLUG/2nd project 2nd.avif',
-      '/images/project/SLUG/2nd image 3rd.avif',
+      '/images/project/slug1/ftw-2.png',
+      '/images/project/slug1/ftw-3.png',
     ],
     tags: ['FTWZ', 'Inventory Management', 'Import/Export', 'Warehousing'],
   },
@@ -45,11 +45,11 @@ const projects: Project[] = [
     slug: 'integrated-3pl',
     title: 'Integrated 3PL',
     description: 'Our Integrated 3PL service offers end-to-end logistics management, combining warehousing, transportation, and inventory control under a unified platform. Leveraging advanced warehouse management systems, predictive analytics, and a global carrier network, we optimize storage layouts, automate order fulfillment, and provide real-time visibility across the supply chain. From inbound procurement to last-mile delivery, we ensure cost-effective, scalable solutions tailored to each client\'s unique operational needs.',
-    image: '/images/project/project3.png',
-    fullImage: '/images/project/SLUG/3rd project-width.avif',
+    image: '/images/project/slug1/3PL-thumbnail.png',
+    fullImage: '/images/project/slug1/3PL-1.png',
     smallImages: [
-      '/images/project/SLUG/3rd project 2nd.avif',
-      '/images/project/SLUG/3rd project 3rd.avif',
+      '/images/project/slug1/3PL-2.png',
+      '/images/project/slug1/3PL-3.png',
     ],
     tags: ['Integrated 3PL', 'Logistics', 'Storage', 'Global Distribution'],
   },
@@ -146,7 +146,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               alt={`${project.title} detail ${idx + 1}`}
               width={800}
               height={500}
-              className="w-full h-auto rounded-xl"
+              className="w-full h-[450px] sm:h-[500px] md:h-[550px] object-cover rounded-xl"
             />
           ))}
         </div>
