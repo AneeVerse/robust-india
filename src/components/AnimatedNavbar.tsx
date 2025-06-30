@@ -1,11 +1,8 @@
 "use client";
 import Navbar from "./Navbar";
 import { useNavbarVisibility } from "../context/NavbarVisibilityContext";
-import { usePathname } from "next/navigation";
-
 export default function AnimatedNavbar() {
   const { showNavbar } = useNavbarVisibility();
-  const pathname = usePathname();
   // Hide navbar when footer is in view on all pages
   const displayNav = showNavbar;
   
