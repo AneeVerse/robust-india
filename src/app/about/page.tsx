@@ -326,22 +326,22 @@ export default function AboutPage() {
 
       {/* Stats Section */}
       <div className="w-full overflow-x-hidden">
-        <StatsSection />
+      <StatsSection />
       </div>
 
       {/* Testimonials Section */}
       <div className="w-full overflow-x-hidden">
-        <TestimonialsSection />
+      <TestimonialsSection />
       </div>
 
       {/* Core Values Section */}
       <div className="w-full overflow-x-hidden">
-        <CoreValuesSection />
+      <CoreValuesSection />
       </div>
 
       {/* Book a Call Section */}
       <div className="w-full overflow-x-hidden">
-        <BookCallSection />
+      <BookCallSection />
       </div>
 
       {/* Newsletter Section */}

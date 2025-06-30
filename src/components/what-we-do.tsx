@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import Image from 'next/image';
-import { MdScience, MdVerifiedUser, MdLocalShipping, MdWarehouse } from "react-icons/md";
 
 export default function LandingPage() {
   return (
@@ -28,71 +27,41 @@ export default function LandingPage() {
           </h1>
         </div>
 
-
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-24 gap-y-8 sm:gap-y-16 max-w-sm sm:max-w-5xl w-full px-4 sm:px-0">
-          {/* Chemical Sourcing & Distribution */}
-          <div className="space-y-3 sm:space-y-4">
-            <div
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center"
-              style={{ backgroundColor: "#6164F6" }}
+        {/* About Content Section */}
+        <div className="max-w-full w-full px-4 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-6 lg:gap-8 items-center">
+            {/* Left Side - Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="flex justify-center lg:justify-start"
             >
-              <MdScience className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
-            </div>
-            <h2 className="text-lg sm:text-2xl font-bold">Chemical Sourcing & Distribution</h2>
-            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              We specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers.
-            </p>
-          </div>
+              <Image 
+                src="/images/ABOUT-US.png" 
+                alt="About Robust India" 
+                width={1200} 
+                height={900} 
+                className="rounded-lg shadow-xl"
+                style={{ width: 'auto', height: 'auto', maxWidth: '100%' }}
+              />
+            </motion.div>
 
-          {/* Quality Assurance & Compliance */}
-          <div className="space-y-3 sm:space-y-4">
-            <div
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center"
-              style={{ backgroundColor: "#6164F6" }}
+            {/* Right Side - Text */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-8 pr-4 sm:pr-8"
             >
-              <MdVerifiedUser className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
-            </div>
-            <h2 className="text-lg sm:text-2xl font-bold">Quality Assurance & Compliance</h2>
-            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              Our rigorous quality-inspection processes, aligned with international standards{" "}
-              <span className="underline" style={{ color: "#6164F6" }}>
-                (ISO, ASTM, REACH)
-              </span>
-              , guarantee consistent purity and performance for every product.
-            </p>
-          </div>
-
-          {/* FTWZ Logistics Network */}
-          <div className="space-y-3 sm:space-y-4">
-            <div
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center"
-              style={{ backgroundColor: "#6164F6" }}
-            >
-              <MdLocalShipping className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
-            </div>
-            <h2 className="text-lg sm:text-2xl font-bold">FTWZ Logistics Network</h2>
-            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              At the heart of our offering is an integrated logistics network anchored by India&apos;s leading Free Trade & Warehousing Zones in Mumbai, Chennai, and Delhi.
-            </p>
-          </div>
-
-          {/* 3PL Services */}
-          <div className="space-y-3 sm:space-y-4">
-            <div
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center"
-              style={{ backgroundColor: "#6164F6" }}
-            >
-              <MdWarehouse className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
-            </div>
-            <h2 className="text-lg sm:text-2xl font-bold">3PL Services</h2>
-            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              We provide end-to-end 3PL services including bonded warehousing, value-added labeling or repackaging, and streamlined import/export handling without the need for clients to establish a local entity.
-            </p>
+              <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl">
+                Robust India an import-export company dedicated to delivering comprehensive chemical supply chain solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers.
+              </p>
+            </motion.div>
           </div>
         </div>
-
 
       </div>
     </div>
