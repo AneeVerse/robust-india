@@ -3,9 +3,19 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useNavbarVisibility } from '@/context/NavbarVisibilityContext';
+import { usePathname } from 'next/navigation';
 
 export default function FooterSection() {
   const { setShowNavbar } = useNavbarVisibility();
+  const pathname = usePathname();
+
+  // Function to check if a link is active
+  const isActiveLink = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -58,7 +68,7 @@ export default function FooterSection() {
             <div className="flex-1">
               <nav className="space-y-4">
                 {[
-                  { label: 'Home', href: '/', active: true },
+                  { label: 'Home', href: '/' },
                   { label: 'About', href: '/about' },
                   { label: 'Projects', href: '/projects' },
                   { label: 'Process', href: '#process' },
@@ -69,7 +79,7 @@ export default function FooterSection() {
                       <Link
                         href={link.href}
                         className={`block text-lg ${
-                          link.active 
+                          isActiveLink(link.href) 
                             ? 'text-[#6164f6] font-medium' 
                             : 'text-white hover:text-[#6164f6] transition-colors duration-200'
                         }`}
@@ -196,24 +206,24 @@ export default function FooterSection() {
                       >
                         <Link
                           href={link.href}
-                          className="px-4 py-1.5 rounded-xl transition-all duration-300 hover:bg-[#6164f6] hover:text-white shadow-md hover:shadow-xl"
+                          className={`px-4 py-1.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl ${
+                            isActiveLink(link.href) 
+                              ? 'bg-[#6164f6] text-white' 
+                              : 'hover:bg-[#6164f6] hover:text-white'
+                          }`}
                         >
                           {link.label}
                         </Link>
                       </motion.div>
-                    ) : link.label === 'Home' ? (
-                      <Link
-                        key={idx}
-                        href={link.href}
-                        className="px-4 py-1.5 rounded-xl transition-colors duration-200 bg-[#6164f6] text-white"
-                      >
-                        {link.label}
-                      </Link>
                     ) : (
                       <Link
                         key={idx}
                         href={link.href}
-                        className="px-4 py-1.5 rounded-xl transition-colors duration-200 hover:bg-[#6164f6] hover:text-white"
+                        className={`px-4 py-1.5 rounded-xl transition-colors duration-200 ${
+                          isActiveLink(link.href) 
+                            ? 'bg-[#6164f6] text-white' 
+                            : 'hover:bg-[#6164f6] hover:text-white'
+                        }`}
                       >
                         {link.label}
                       </Link>
@@ -232,14 +242,6 @@ export default function FooterSection() {
                           {link.label}
                         </a>
                       </motion.div>
-                    ) : link.label === 'Home' ? (
-                      <a
-                        key={idx}
-                        href={link.href}
-                        className="px-4 py-1.5 rounded-xl transition-colors duration-200 bg-[#6164f6] text-white"
-                      >
-                        {link.label}
-                      </a>
                     ) : (
                       <a
                         key={idx}
