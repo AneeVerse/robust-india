@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { 
   GiChemicalDrop, 
   GiTestTubes, 
@@ -242,10 +243,23 @@ const chemicalCategories: ChemicalCategory[] = [
 ];
 
 export default function ChemicalFamilySection() {
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<ChemicalCategory | null>(null);
   const [selectedChemical, setSelectedChemical] = useState<ChemicalProduct | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isChemicalDetailOpen, setIsChemicalDetailOpen] = useState(false);
+
+  // Function to create URL-friendly slugs from chemical names
+  const createSlug = (name: string) => {
+    return name
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[()]/g, '')
+      .replace(/&/g, 'and')
+      .replace(/[^a-z0-9-]/g, '')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '');
+  };
 
   useEffect(() => {
     if (isModalOpen || isChemicalDetailOpen) {
@@ -314,7 +328,7 @@ export default function ChemicalFamilySection() {
 
     return (
       <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
-        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide shadow-2xl shadow-blue-900/30">
+        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-7xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide shadow-2xl shadow-blue-900/30">
           <div className="p-8 border-b border-white/20 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl">
@@ -337,13 +351,13 @@ export default function ChemicalFamilySection() {
             </button>
           </div>
           <div className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {category.products.map((product, index) => (
                 <div key={index} className="group relative">
-                  <div className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-2xl p-6 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm hover:-translate-y-1">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                        <GiTestTubes className="w-6 h-6 text-white" />
+                  <div className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-2xl p-4 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm hover:-translate-y-1">
+                    <div className="flex items-start gap-3 mb-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <GiTestTubes className="w-5 h-5 text-white" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold text-blue-900 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
@@ -355,7 +369,8 @@ export default function ChemicalFamilySection() {
                       onClick={(e) => {
                         e.stopPropagation();
                         if (product.description) {
-                          openChemicalDetail(product);
+                          const slug = createSlug(product.name);
+                          router.push(`/chemical/${slug}`);
                         }
                       }}
                       className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors group-hover:translate-x-1 duration-300"
