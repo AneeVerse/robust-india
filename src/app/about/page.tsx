@@ -69,8 +69,11 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           variants={container}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-20 tracking-tight text-center max-w-full"
-          style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
+          className="font-normal text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-20 tracking-tight text-center max-w-full"
+          style={{ 
+            fontFamily: 'NoiGrotesk, sans-serif',
+            fontSize: 'clamp(2.5rem, 8vw, 6rem)'
+          }}
         >
           {lines.map((line, lineIndex) => (
             <React.Fragment key={lineIndex}>
