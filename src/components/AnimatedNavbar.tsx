@@ -6,9 +6,8 @@ import { usePathname } from "next/navigation";
 export default function AnimatedNavbar() {
   const { showNavbar } = useNavbarVisibility();
   const pathname = usePathname();
-  // Always show nav on non-home pages
-  const isHome = pathname === '/';
-  const displayNav = isHome ? showNavbar : true;
+  // Hide navbar when footer is in view on all pages
+  const displayNav = showNavbar;
   
   return (
     <div className={`
