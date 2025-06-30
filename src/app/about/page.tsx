@@ -56,9 +56,9 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-2 z-10">
+      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-2 z-10 max-w-full">
         {/* Company logo and name */}
         <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-4 mt-2">
           <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
@@ -69,7 +69,7 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           variants={container}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-20 tracking-tight text-center"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-20 tracking-tight text-center max-w-full"
           style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
         >
           {lines.map((line, lineIndex) => (
@@ -100,7 +100,7 @@ export default function AboutPage() {
         </motion.div>
         <p
           ref={paraRef}
-          className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-800 leading-relaxed mb-20"
+          className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-800 leading-relaxed mb-20 px-4"
           style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
         >
           {paraLines.map((line, lineIdx) => (
@@ -120,25 +120,33 @@ export default function AboutPage() {
       {/* <TeamSection /> */}
 
       {/* Stats Section */}
-      <StatsSection />
+      <div className="w-full overflow-x-hidden">
+        <StatsSection />
+      </div>
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      <div className="w-full overflow-x-hidden">
+        <TestimonialsSection />
+      </div>
 
       {/* Core Values Section */}
-      <CoreValuesSection />
+      <div className="w-full overflow-x-hidden">
+        <CoreValuesSection />
+      </div>
 
       {/* Book a Call Section */}
-      <BookCallSection />
+      <div className="w-full overflow-x-hidden">
+        <BookCallSection />
+      </div>
 
       {/* Newsletter Section */}
-      <div id="newsletter" className="py-20 px-6 md:px-20">
+      <div id="newsletter" className="py-20 px-6 md:px-20 w-full overflow-x-hidden">
         {/* TODO: Implement NewsletterSection component */}
         {/* <NewsletterSection /> */}
       </div>
 
       {/* Footer */}
-      <div className="px-4 sm:px-6 md:px-8 lg:px-10 mb-24 sm:mb-8">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-10 mb-24 sm:mb-8 w-full overflow-x-hidden">
         <FooterSection />
       </div>
     </div>
