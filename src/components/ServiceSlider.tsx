@@ -22,7 +22,7 @@ export default function ServiceSlider() {
     <div className="mt-12 min-h-[300px] py-8 sm:py-30 sm:min-h-[520px] flex flex-col bg-[#181a1b] w-full overflow-hidden rounded-3xl">
       <div className="max-w-5xl mx-auto w-full px-4 mr-100">
         <h2
-          className="text-white text-left text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-normal mb-6 sm:mb-14 leading-tight"
+          className="text-white text-left text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-normal mb-6 sm:mb-14 leading-tight"
           style={{ fontFamily: 'Segoe UI, Arial, sans-serif', letterSpacing: '-1px', wordBreak: 'break-word' }}
         >
           Supporting Diverse<br />Industrial Sectors

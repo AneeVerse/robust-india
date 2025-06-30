@@ -44,7 +44,7 @@ export default function FooterSection() {
   }, [setShowNavbar]);
 
   return (
-    <footer id="footer-section" className="bg-[#131518] text-white px-4 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-12 pb-20 sm:pb-16 rounded-b-3xl sm:rounded-b-3xl rounded-t-3xl">
+    <footer id="footer-section" className="bg-[#131518] text-white px-4 sm:px-6 md:px-12 lg:px-20 pt-4 sm:pt-6 pb-8 sm:pb-10 rounded-b-3xl sm:rounded-b-3xl rounded-t-3xl">
       <div className="max-w-7xl mx-auto">
         {/* Mobile Layout */}
         <div className="block sm:hidden">
@@ -177,7 +177,7 @@ export default function FooterSection() {
         <div className="hidden sm:block">
           <div className="flex flex-col md:flex-row justify-between gap-8 sm:gap-10 md:gap-12 mb-0">
             {/* Left: large headline + nav */}
-            <div className="md:w-2/3 space-y-4">
+            <div className="md:w-2/3 space-y-4 mt-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light leading-tight">
                 Don&apos;t settle for good,<br />
                 let&apos;s go for <span className="relative inline-block">
@@ -188,7 +188,7 @@ export default function FooterSection() {
                 </span><br />
                 together
               </h2>
-              <nav className="flex flex-wrap items-center gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 md:mt-16 text-base sm:text-lg md:text-xl lg:text-2xl">
+              <nav className="flex flex-wrap items-center gap-4 sm:gap-6 md:gap-8 mt-12 sm:mt-20 md:mt-24 text-base sm:text-lg md:text-xl lg:text-2xl">
                 {[
                   { label: 'Home', href: '/' },
                   { label: 'About', href: '/about' },
@@ -255,7 +255,7 @@ export default function FooterSection() {
             </div>
 
             {/* Right: newsletter signup */}
-            <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-8 sm:mt-12 md:mt-46">
+            <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-24 sm:mt-32 md:mt-60">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">Our newsletter</h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                 Scale your platform the right way. Get expert insights on design,
@@ -278,9 +278,9 @@ export default function FooterSection() {
             </div>
           </div>
           {/* Divider */}
-          <hr className="border-gray-700 mt-26 mb-4" />
+          <hr className="border-gray-700 mt-8 mb-2" />
           {/* Bottom bar */}
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs sm:text-sm text-gray-400 mt-8 sm:mt-12 md:mt-16 pb-0 gap-4 md:gap-0">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs sm:text-sm text-gray-400 mt-4 sm:mt-6 md:mt-8 pb-0 gap-4 md:gap-0">
             <p className="mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">
               Robust India
               <span className="inline-block mx-2 align-middle">
