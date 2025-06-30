@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import FooterSection from '@/components/FooterSection';
 import BookCallSection from '@/components/BookCallSection';
-import { IoFlaskOutline } from 'react-icons/io5';
+
 import { TbAtom, TbFlask } from 'react-icons/tb';
 import { GiMolecule } from 'react-icons/gi';
 

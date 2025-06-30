@@ -16,13 +16,8 @@ import {
   GiElectric
 } from 'react-icons/gi';
 import { 
-  IoFlaskOutline,
   IoWaterOutline 
 } from 'react-icons/io5';
-import { 
-  TbFlask,
-  TbAtom
-} from 'react-icons/tb';
 
 interface ChemicalProduct {
   name: string;
@@ -245,9 +240,7 @@ const chemicalCategories: ChemicalCategory[] = [
 export default function ChemicalFamilySection() {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<ChemicalCategory | null>(null);
-  const [selectedChemical, setSelectedChemical] = useState<ChemicalProduct | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isChemicalDetailOpen, setIsChemicalDetailOpen] = useState(false);
 
   // Function to create URL-friendly slugs from chemical names
   const createSlug = (name: string) => {
@@ -262,7 +255,7 @@ export default function ChemicalFamilySection() {
   };
 
   useEffect(() => {
-    if (isModalOpen || isChemicalDetailOpen) {
+    if (isModalOpen) {
       document.body.style.overflow = 'hidden';
       const navbar = document.querySelector('nav');
       if (navbar) {
@@ -295,7 +288,7 @@ export default function ChemicalFamilySection() {
         (bottomNav as HTMLElement).style.display = '';
       }
     };
-  }, [isModalOpen, isChemicalDetailOpen]);
+  }, [isModalOpen]);
 
   const openModal = (category: ChemicalCategory) => {
     setSelectedCategory(category);
@@ -307,21 +300,7 @@ export default function ChemicalFamilySection() {
     setSelectedCategory(null);
   };
 
-  const openChemicalDetail = (chemical: ChemicalProduct) => {
-    setSelectedChemical(chemical);
-    setIsChemicalDetailOpen(true);
-    setIsModalOpen(false);
-  };
 
-  const closeChemicalDetail = () => {
-    setIsChemicalDetailOpen(false);
-    setSelectedChemical(null);
-  };
-
-  const backToCategory = () => {
-    setIsChemicalDetailOpen(false);
-    setIsModalOpen(true);
-  };
 
   const ChemicalModal = ({ category, isOpen, onClose }: { category: ChemicalCategory | null; isOpen: boolean; onClose: () => void }) => {
     if (!isOpen || !category) return null;
@@ -396,137 +375,7 @@ export default function ChemicalFamilySection() {
     );
   };
 
-  const ChemicalDetailModal = ({ chemical, isOpen, onClose, onBack }: { 
-    chemical: ChemicalProduct | null; 
-    isOpen: boolean; 
-    onClose: () => void;
-    onBack: () => void;
-  }) => {
-    if (!isOpen || !chemical || !chemical.description) return null;
 
-    return (
-      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
-        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide shadow-2xl shadow-blue-900/30">
-          {/* Header */}
-          <div className="p-8 border-b border-white/20 flex justify-between items-center">
-            <div className="flex items-center gap-6">
-              <button 
-                onClick={onBack}
-                className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200"
-              >
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  {chemical.name}
-                </h2>
-                <p className="text-blue-600 mt-1">Chemical Product Details</p>
-              </div>
-            </div>
-            <button 
-              onClick={onClose}
-              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200"
-            >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          <div className="p-8">
-            {/* Description */}
-            <div className="mb-8">
-              <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-                    <IoFlaskOutline className="w-4 h-4 text-white" />
-                  </div>
-                  Description
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  {chemical.description}
-                </p>
-              </div>
-            </div>
-
-            {/* Physical Properties */}
-            {chemical.physicalProperties && (
-              <div className="mb-8">
-                <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-                      <TbAtom className="w-4 h-4 text-white" />
-                    </div>
-                    Physical Properties
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {chemical.physicalProperties && Object.entries(chemical.physicalProperties).map(([key, value], index) => (
-                      <div key={index} className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-xl p-4 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm">
-                        <h4 className="font-semibold text-blue-900 mb-2 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</h4>
-                        <p className="text-blue-700 text-sm leading-relaxed">{value}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Applications */}
-            {chemical.applications && chemical.applications.length > 0 && (
-              <div className="mb-8">
-                <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-                      <TbFlask className="w-4 h-4 text-white" />
-                    </div>
-                    Applications
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {chemical.applications.map((app, index) => (
-                      <div key={index} className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-xl p-5 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm">
-                        <h4 className="font-semibold text-blue-900 mb-3 text-lg">{app.title}</h4>
-                        <p className="text-blue-700 leading-relaxed">{app.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Industries Served */}
-            {chemical.industriesServed && chemical.industriesServed.length > 0 && (
-              <div className="mb-8">
-                <div className="bg-white/70 backdrop-blur-md border border-white/40 rounded-2xl p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-                      <GiMolecule className="w-4 h-4 text-white" />
-                    </div>
-                    Industries Served
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {chemical.industriesServed.map((industry, index) => (
-                      <div key={index} className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-xl p-4 text-center hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm">
-                        <p className="font-medium text-blue-900">{industry}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Request Information Button */}
-            <div className="mt-10">
-              <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-                Request Detailed Information
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
 
   return (
     <>
@@ -601,12 +450,7 @@ export default function ChemicalFamilySection() {
         onClose={closeModal}
       />
       
-      <ChemicalDetailModal 
-        chemical={selectedChemical}
-        isOpen={isChemicalDetailOpen}
-        onClose={closeChemicalDetail}
-        onBack={backToCategory}
-      />
+
     </>
   );
 } 

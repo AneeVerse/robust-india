@@ -313,7 +313,7 @@ export default function AboutPage() {
                   className="text-lg md:text-xl text-gray-600 leading-relaxed"
                   style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
                 >
-                  To be the world's most trusted partner for chemical sourcing and supply chain excellence, enabling clients to focus on growth while we handle the complexities of international trade.
+                  To be the world&apos;s most trusted partner for chemical sourcing and supply chain excellence, enabling clients to focus on growth while we handle the complexities of international trade.
                 </motion.p>
               </div>
             </div>
