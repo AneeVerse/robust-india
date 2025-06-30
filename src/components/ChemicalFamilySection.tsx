@@ -314,7 +314,7 @@ export default function ChemicalFamilySection() {
 
     return (
       <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
-        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl shadow-blue-900/30">
+        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide shadow-2xl shadow-blue-900/30">
           <div className="p-8 border-b border-white/20 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl">
@@ -391,7 +391,7 @@ export default function ChemicalFamilySection() {
 
     return (
       <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
-        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-y-auto shadow-2xl shadow-blue-900/30">
+        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide shadow-2xl shadow-blue-900/30">
           {/* Header */}
           <div className="p-8 border-b border-white/20 flex justify-between items-center">
             <div className="flex items-center gap-6">
