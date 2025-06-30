@@ -388,7 +388,7 @@ export default function ContactPage() {
               className="inline-block"
             >
               <Link
-                href="/projects"
+                href="/services"
                 className="bg-gradient-to-r from-[#6164F6] to-[#8B8FFF] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-3"
               >
                 View Our Services

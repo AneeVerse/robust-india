@@ -3,7 +3,7 @@ import BookACall from '@/components/BookCallSection';
 import FooterSection from '@/components/FooterSection';
 import ChemicalFamilySection from '@/components/ChemicalFamilySection';
 
-interface Project {
+interface Service {
   slug: string;
   title: string;
   description: string;
@@ -13,10 +13,7 @@ interface Project {
   smallImages: string[];
 }
 
-
-
-
-const projects: Project[] = [
+const services: Service[] = [
   {
     slug: 'chemical-products',
     title: 'Chemical Products',
@@ -56,40 +53,40 @@ const projects: Project[] = [
 ];
 
 export async function generateStaticParams() {
-  return projects.map((proj) => ({ slug: proj.slug }));
+  return services.map((service) => ({ slug: service.slug }));
 }
 
-export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
-  if (!project) {
-    return <div className="p-20 text-center">Project not found</div>;
+  const service = services.find((s) => s.slug === slug);
+  if (!service) {
+    return <div className="p-20 text-center">Service not found</div>;
   }
 
   return (
     <main className="min-h-screen bg-white p-4 sm:p-6 md:p-5">
       <div className="w-full">
         <Image
-          src={project.image}
-          alt={project.title}
+          src={service.image}
+          alt={service.title}
           width={1920}
           height={1080}
           className="w-full h-[95vh] object-cover rounded-xl"
         />
       </div>
       <div className="w-full px-4 sm:px-6 md:px-5 py-16">
-        <h1 className="text-5xl font-normal text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{project.title}</h1>
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{project.description}</p>
+        <h1 className="text-5xl font-normal text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{service.title}</h1>
+        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{service.description}</p>
         
-        {project.slug === 'chemical-products' ? (
+        {service.slug === 'chemical-products' ? (
           // Chemical Family section for chemical-products page
           <ChemicalFamilySection />
         ) : (
-          // Original Services provided section for other projects
+          // Original Services provided section for other services
           <>
             <p className="text-lg font-semibold mb-4 text-gray-900 mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>Services provided</p>
             <div className="flex flex-wrap gap-4 mb-12 mt-10 -ml-4">
-              {project.tags.map((tag) => (
+              {service.tags.map((tag) => (
                 <span key={tag} className="inline-block bg-[#f5f5f5] text-[#222] rounded-[1.2rem] px-4 py-1 text-base font-medium">
                   {tag}
                 </span>
@@ -125,12 +122,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </div>
-      {/* Additional project showcase images */}
-      {project.slug !== 'chemical-products' && (
+      {/* Additional service showcase images */}
+      {service.slug !== 'chemical-products' && (
         <div className="w-full mb-16">
           <Image
-            src={project.fullImage}
-            alt={project.title}
+            src={service.fullImage}
+            alt={service.title}
             width={1920}
             height={1080}
             className="w-full h-[95vh] object-cover rounded-xl"
@@ -139,11 +136,11 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       )}
       <div className="w-full mb-16 -mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-          {project.smallImages.map((src, idx) => (
+          {service.smallImages.map((src, idx) => (
             <Image
               key={idx}
               src={src}
-              alt={`${project.title} detail ${idx + 1}`}
+              alt={`${service.title} detail ${idx + 1}`}
               width={800}
               height={500}
               className="w-full h-[450px] sm:h-[500px] md:h-[550px] object-cover rounded-xl"

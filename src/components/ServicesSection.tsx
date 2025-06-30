@@ -110,7 +110,7 @@ export default function ServicesSection() {
         {/* Mobile Cards - vertical stack, hidden on desktop */}
         <div className="sm:hidden flex flex-col items-center space-y-6">
           {/* Mobile FTWZ Card */}
-          <Link href="/projects/ftwz" className="w-full max-w-xs">
+          <Link href="/services/ftwz" className="w-full max-w-xs">
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
@@ -126,7 +126,7 @@ export default function ServicesSection() {
             </div>
           </Link>
           {/* Mobile Chemical Products Card */}
-          <Link href="/projects/chemical-products" className="w-full max-w-xs">
+          <Link href="/services/chemical-products" className="w-full max-w-xs">
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
@@ -142,7 +142,7 @@ export default function ServicesSection() {
             </div>
           </Link>
           {/* Mobile Integrated 3PL Card */}
-          <Link href="/projects/integrated-3pl" className="w-full max-w-xs">
+          <Link href="/services/integrated-3pl" className="w-full max-w-xs">
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
@@ -162,7 +162,7 @@ export default function ServicesSection() {
         {/* Desktop Cards Container */}
         <div className="hidden sm:flex relative flex justify-center items-center min-h-[500px]">
           {/* Left Card - FTWZ */}
-          <Link href="/projects/ftwz" className="absolute left-1/2 top-1/2 will-change-transform" style={{
+                      <Link href="/services/ftwz" className="absolute left-1/2 top-1/2 will-change-transform" style={{
               transform: `
                 translate(-50%, -50%)
                 translateX(${-450 * scrollProgress}px)
@@ -198,7 +198,7 @@ export default function ServicesSection() {
           </Link>
 
           {/* Center Card - Chemical Products */}
-          <Link href="/projects/chemical-products" className="relative z-30 will-change-transform" style={{
+                      <Link href="/services/chemical-products" className="relative z-30 will-change-transform" style={{
               transform: `scale(${0.95 + 0.05 * scrollProgress})`,
               transition: "none",
               textDecoration: 'none',
@@ -228,7 +228,7 @@ export default function ServicesSection() {
           </Link>
 
           {/* Right Card - Integrated 3PL */}
-          <Link href="/projects/integrated-3pl" className="absolute left-1/2 top-1/2 will-change-transform" style={{
+                      <Link href="/services/integrated-3pl" className="absolute left-1/2 top-1/2 will-change-transform" style={{
               transform: `
                 translate(-50%, -50%)
                 translateX(${450 * scrollProgress}px)

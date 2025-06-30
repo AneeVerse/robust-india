@@ -6,8 +6,7 @@ import { useNavbarVisibility } from '@/context/NavbarVisibilityContext';
 
 const navLinks = [
   { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
-  { name: "Process", href: "#process" },
+  { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact", highlight: true },
 ];
 

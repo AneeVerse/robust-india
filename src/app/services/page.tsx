@@ -8,7 +8,7 @@ import ServiceSlider from '@/components/ServiceSlider';
 import FooterSection from '@/components/FooterSection';
 import BookACall from '@/components/BookCallSection';
 
-const projects = [
+const services = [
   { slug: 'chemical-products',
     image: '/images/project/slug1/chemical-product-thumbnail.png',
     title: 'Chemical Products',
@@ -52,11 +52,11 @@ const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ vi
       letterSpacing: "0.01em"
     }}
   >
-    View Project
+    View Service
   </div>
 );
 
-export default function ProjectsPage() {
+export default function ServicesPage() {
   const [cursor, setCursor] = useState({ visible: false, x: 0, y: 0 });
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     setCursor({ visible: true, x: e.clientX, y: e.clientY });
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
             initial="hidden"
             animate="visible"
           >
-            {"Some of our favorite projects".split('').map((char, idx) => (
+            {"Our comprehensive service offerings".split('').map((char, idx) => (
               <motion.span
                 key={idx}
                 variants={{
@@ -103,20 +103,20 @@ export default function ProjectsPage() {
             ))}
           </motion.h1>
           
-          {/* Projects Container */}
+          {/* Services Container */}
           <div
             className="w-full max-w-[1400px] px-2 sm:px-4"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
             <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
-            {/* Top two project images */}
+            {/* Top two service images */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 w-full">
-            {projects.slice(0, 2).map((project) => (
-              <Link key={project.slug} href={`/projects/${project.slug}`} className="block rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden shadow-lg bg-white">
+            {services.slice(0, 2).map((service) => (
+              <Link key={service.slug} href={`/services/${service.slug}`} className="block rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden shadow-lg bg-white">
                 <Image
-                  src={project.image}
-                  alt={project.title}
+                  src={service.image}
+                  alt={service.title}
                   width={1200}
                   height={600}
                   className="w-full h-auto object-cover"
@@ -126,27 +126,27 @@ export default function ProjectsPage() {
           </div>
           {/* Titles and descriptions for top two */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-6 sm:mt-8 w-full text-left">
-            {projects.slice(0, 2).map((project) => (
-              <Link key={project.slug} href={`/projects/${project.slug}`} className="block px-2 sm:px-4">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{project.title}</h2>
-                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{project.description}</p>
+            {services.slice(0, 2).map((service) => (
+              <Link key={service.slug} href={`/services/${service.slug}`} className="block px-2 sm:px-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{service.title}</h2>
+                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{service.description}</p>
               </Link>
             ))}
           </div>
-            {/* Third project full-width */}
+            {/* Third service full-width */}
             <div className="mt-12 sm:mt-16 lg:mt-24 w-full">
-              <Link href={`/projects/${projects[2].slug}`} className="block w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-white">
+              <Link href={`/services/${services[2].slug}`} className="block w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-white">
                 <Image
-                  src={projects[2].image}
-                  alt={projects[2].title}
+                  src={services[2].image}
+                  alt={services[2].title}
                   width={1200}
                   height={600}
                   className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
                 />
               </Link>
-              <Link href={`/projects/${projects[2].slug}`} className="block mt-6 sm:mt-8 w-full text-left px-2 sm:px-4">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{projects[2].title}</h2>
-                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{projects[2].description}</p>
+              <Link href={`/services/${services[2].slug}`} className="block mt-6 sm:mt-8 w-full text-left px-2 sm:px-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{services[2].title}</h2>
+                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{services[2].description}</p>
               </Link>
             </div>
           </div>

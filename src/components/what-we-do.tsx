@@ -24,7 +24,7 @@ export default function LandingPage() {
             <Image src="/images/goodbye_5821930.svg" alt="Waving Hand" width={64} height={64} className="w-12 h-12 sm:w-16 sm:h-16 filter invert brightness-0 ml-4 sm:ml-20" />
           </motion.div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-light leading-tight text-left ml-8 sm:ml-20">
-            Say hello
+            About us
           </h1>
         </div>
 
