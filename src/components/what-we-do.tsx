@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from 'next/image';
-import { MdWorkspacePremium, MdLayers, MdChatBubble, MdMenuBook } from "react-icons/md";
+import { MdScience, MdVerifiedUser, MdLocalShipping, MdWarehouse } from "react-icons/md";
 
 export default function LandingPage() {
   return (
@@ -28,72 +28,72 @@ export default function LandingPage() {
           </h1>
         </div>
 
+
+
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-x-6 sm:gap-x-24 gap-y-8 sm:gap-y-16 max-w-sm sm:max-w-5xl w-full px-4 sm:px-0">
-          {/* Top-tier team of experts */}
+          {/* Chemical Sourcing & Distribution */}
           <div className="space-y-3 sm:space-y-4">
             <div
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center"
               style={{ backgroundColor: "#6164F6" }}
             >
-              <MdWorkspacePremium className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+              <MdScience className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
             </div>
-            <h2 className="text-lg sm:text-2xl font-bold">Top-tier team of experts</h2>
+            <h2 className="text-lg sm:text-2xl font-bold">Chemical Sourcing & Distribution</h2>
             <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              Even the best teams need help. Following industry standards and beyond, our team of experts knows exactly
-              what tools, methods and stack works best in your situation.
+              We specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers.
             </p>
           </div>
 
-          {/* Proven powerful process */}
+          {/* Quality Assurance & Compliance */}
           <div className="space-y-3 sm:space-y-4">
             <div
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center"
               style={{ backgroundColor: "#6164F6" }}
             >
-              <MdLayers className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+              <MdVerifiedUser className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
             </div>
-            <h2 className="text-lg sm:text-2xl font-bold">Proven powerful process</h2>
+            <h2 className="text-lg sm:text-2xl font-bold">Quality Assurance & Compliance</h2>
             <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              Stop hitting snooze on updating your product&apos;s look and feel, launching that gold-nugget feature, or
-              shaking off technical debt. Our{" "}
+              Our rigorous quality-inspection processes, aligned with international standards{" "}
               <span className="underline" style={{ color: "#6164F6" }}>
-                trusty process
-              </span>{" "}
-              is set up to make power moves.
+                (ISO, ASTM, REACH)
+              </span>
+              , guarantee consistent purity and performance for every product.
             </p>
           </div>
 
-          {/* Clear-cut comms */}
+          {/* FTWZ Logistics Network */}
           <div className="space-y-3 sm:space-y-4">
             <div
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center"
               style={{ backgroundColor: "#6164F6" }}
             >
-              <MdChatBubble className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+              <MdLocalShipping className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
             </div>
-            <h2 className="text-lg sm:text-2xl font-bold">Clear-cut comms</h2>
+            <h2 className="text-lg sm:text-2xl font-bold">FTWZ Logistics Network</h2>
             <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              Slow and foggy communication weighs down on your ability to scale efficiently. Whether it&apos;s a Slack
-              message, a video call, or an on-site session, we value clarity.
+              At the heart of our offering is an integrated logistics network anchored by India&apos;s leading Free Trade & Warehousing Zones in Mumbai, Chennai, and Delhi.
             </p>
           </div>
 
-          {/* Sharing knowledge */}
+          {/* 3PL Services */}
           <div className="space-y-3 sm:space-y-4">
             <div
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center"
               style={{ backgroundColor: "#6164F6" }}
             >
-              <MdMenuBook className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+              <MdWarehouse className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
             </div>
-            <h2 className="text-lg sm:text-2xl font-bold">Sharing knowledge</h2>
+            <h2 className="text-lg sm:text-2xl font-bold">3PL Services</h2>
             <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
-              Building a high quality and scalable product takes ongoing effort. After helping you level up we enable
-              your in-house teams to keep up the pace. We hand-off our work *and* expertise.
+              We provide end-to-end 3PL services including bonded warehousing, value-added labeling or repackaging, and streamlined import/export handling without the need for clients to establish a local entity.
             </p>
           </div>
         </div>
+
+
       </div>
     </div>
   )

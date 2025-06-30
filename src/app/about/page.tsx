@@ -10,6 +10,7 @@ import CoreValuesSection from '@/components/CoreValuesSection';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { MdScience, MdVerifiedUser, MdLocalShipping, MdWarehouse } from "react-icons/md";
 
 // TODO: Create and import these components
 // import NewsletterSection from '@/components/NewsletterSection';
@@ -145,9 +146,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
-                </svg>
+                <MdScience className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 Chemical Sourcing
@@ -166,9 +165,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
-                </svg>
+                <MdVerifiedUser className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 Quality Assurance
@@ -187,9 +184,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3,4H7.5L9.5,6H20A1,1 0 0,1 21,7V19A1,1 0 0,1 20,20H4A1,1 0 0,1 3,19V4M15,9V12H18V15L22,11L18,7V10H15V9Z"/>
-                </svg>
+                <MdLocalShipping className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 FTWZ Logistics
@@ -208,9 +203,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19,7H18V6A2,2 0 0,0 16,4H8A2,2 0 0,0 6,6V7H5A3,3 0 0,0 2,10V20A1,1 0 0,0 3,21H21A1,1 0 0,0 22,20V10A3,3 0 0,0 19,7M8,6H16V7H8V6M20,19H4V17H20V19M20,15H4V10A1,1 0 0,1 5,9H19A1,1 0 0,1 20,10V15Z"/>
-                </svg>
+                <MdWarehouse className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 3PL Services
@@ -227,15 +220,102 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-center mt-20"
+            className="text-center mt-20 mb-16"
           >
-            <div className="max-w-2xl mx-auto mt-30 -mb-10">
-              <h3 className="text-2xl md:text-4xl font-light text-gray-900 mb-6 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                Your trusted partner in global chemical trade
-              </h3>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                Experience efficiency, compliance, and reliability in one integrated platform
-              </p>
+            <div className="max-w-2xl mx-auto">
+              <div className=" rounded-3xl p-8 md:p-12">
+                <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-4 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  Your trusted partner in global chemical trade
+                </h3>
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  Experience efficiency, compliance, and reliability in one integrated platform
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Mission & Vision Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-16 mb-20"
+          >
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-16 -mb-20">
+              {/* Mission */}
+              <div className="text-center">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="flex justify-center mb-6"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#6164F6] to-[#8B8FFF] rounded-3xl flex items-center justify-center shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
+                    </svg>
+                  </div>
+                </motion.div>
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-3xl md:text-4xl font-light text-gray-900 mb-6"
+                  style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
+                >
+                  Our Mission
+                </motion.h3>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-lg md:text-xl text-gray-600 leading-relaxed"
+                  style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
+                >
+                  To simplify global chemical trade by offering turnkey solutions that blend product innovation, quality assurance, and seamless logistics under one roof with comprehensive expertise.
+                </motion.p>
+              </div>
+
+              {/* Vision */}
+              <div className="text-center">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="flex justify-center mb-6"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#8B8FFF] to-[#6164F6] rounded-3xl flex items-center justify-center shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"/>
+                    </svg>
+                  </div>
+                </motion.div>
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="text-3xl md:text-4xl font-light text-gray-900 mb-6"
+                  style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
+                >
+                  Our Vision
+                </motion.h3>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="text-lg md:text-xl text-gray-600 leading-relaxed"
+                  style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
+                >
+                  To be the world's most trusted partner for chemical sourcing and supply chain excellence, enabling clients to focus on growth while we handle the complexities of international trade.
+                </motion.p>
+              </div>
             </div>
           </motion.div>
         </div>
