@@ -221,16 +221,18 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-center mt-20 mb-16"
+            className="mt-20 mb-16"
           >
-            <div className="max-w-2xl mx-auto">
-              <div className=" rounded-3xl p-8 md:p-12">
-                <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-4 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  Your trusted partner in global chemical trade
-                </h3>
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  Experience efficiency, compliance, and reliability in one integrated platform
-                </p>
+            <div className="max-w-6xl mx-auto px-6">
+              <div className="rounded-3xl p-8 md:p-12 bg-gray-50 shadow-lg">
+                <div className="space-y-8 text-center md:text-left">
+                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                    Leveraging our deep expertise in product development, we partner with manufacturers to create customized chemical formulations from pilot-scale trials through full production, ensuring that every product meets your exact specifications. Our rigorous quality-inspection processes, aligned with international standards (ISO, ASTM, REACH), guarantee consistent purity and performance.
+                  </p>
+                  <p className="text-lg md:text-xl text-gray-800 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                    At the heart of our offering is an integrated logistics network anchored by India's leading Free Trade & Warehousing Zones (FTWZ). Through these duty-free facilities in Mumbai, Chennai, and Delhi, we provide end-to-end 3PL services including bonded warehousing, value-added labeling or repackaging, and streamlined import/export handling without the need for clients to establish a local entity. Real-time inventory management and secure, compliant packaging solutions further ensure that your materials are accurately tracked and safely delivered on time, every time.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
