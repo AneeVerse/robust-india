@@ -109,48 +109,26 @@ export default async function ChemicalDetailPage({ params }: { params: Promise<{
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-8 z-10 max-w-full">
+      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-4 z-10 max-w-full">
         {/* Company logo and name */}
-        <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-4 mt-2">
+        <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-4 mt-2 cursor-pointer">
           <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
           <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
         </Link>
-        
-        <h1 
-          className="font-normal text-gray-900 mb-6 leading-tight mt-8 tracking-tight text-center max-w-5xl"
-          style={{ 
-            fontFamily: 'NoiGrotesk, sans-serif',
-            fontSize: 'clamp(2rem, 6vw, 4rem)'
-          }}
-        >
-          {chemical.description}
+        {/* Chemical title and subtitle */}
+        <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-2 mt-12 tracking-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+          {chemical.name}
         </h1>
-        
-        <div className="my-8 mt-50">
-          <Image
-            src="/images/SVG.png"
-            alt=""
-            width={150}
-            height={150}
-            className="transform rotate-270 mx-auto"
-          />
-        </div>
+        {/* Chemical description */}
+        <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed px-4 mt-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+          {chemical.description}
+        </p>
       </section>
 
       {/* Chemical Details Section */}
       <section className="w-full px-4 sm:px-6 md:px-8 py-16">
         <div className="max-w-6xl mx-auto">
           
-          {/* Chemical Name */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-              {chemical.name}
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-              Chemical Product Details
-            </p>
-          </div>
-
           {/* Physical Properties */}
           {chemical.physicalProperties && (
             <div className="mb-16">
