@@ -300,14 +300,12 @@ export default function ChemicalFamilySection() {
     setSelectedCategory(null);
   };
 
-
-
   const ChemicalModal = ({ category, isOpen, onClose }: { category: ChemicalCategory | null; isOpen: boolean; onClose: () => void }) => {
     if (!isOpen || !category) return null;
 
     return (
-      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
-        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-7xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide shadow-2xl shadow-blue-900/30">
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-start justify-center z-[9999] p-2 pt-6">
+        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-7xl w-full h-auto overflow-visible shadow-2xl shadow-blue-900/30">
           <div className="p-8 border-b border-white/20 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl">
@@ -322,7 +320,7 @@ export default function ChemicalFamilySection() {
             </div>
             <button 
               onClick={onClose}
-              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200"
+              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200 cursor-pointer"
             >
               <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -332,7 +330,16 @@ export default function ChemicalFamilySection() {
           <div className="p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
               {category.products.map((product, index) => (
-                <div key={index} className="group relative">
+                <div
+                  key={index}
+                  className="group relative cursor-pointer"
+                  onClick={() => {
+                    if (product.description) {
+                      const slug = createSlug(product.name);
+                      router.push(`/chemical/${slug}`);
+                    }
+                  }}
+                >
                   <div className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-2xl p-4 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm hover:-translate-y-1">
                     <div className="flex items-start gap-3 mb-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
@@ -374,8 +381,6 @@ export default function ChemicalFamilySection() {
       </div>
     );
   };
-
-
 
   return (
     <>
@@ -450,7 +455,6 @@ export default function ChemicalFamilySection() {
         onClose={closeModal}
       />
       
-
     </>
   );
 } 
