@@ -26,9 +26,10 @@ export default function AboutPage() {
   const container = { hidden: {}, visible: { transition: { staggerChildren: 0.05 } } };
   const letter = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } };
   const paraLines = [
-    "Robust India an import-export company dedicated to delivering comprehensive",
-    "chemical supply chain solutions worldwide. Founded on the principles of",
-    "reliability, transparency, and innovation."
+    "Robust India is an import-export company dedicated to delivering comprehensive chemical supply chain.",
+    "solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize ",
+    "in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries",
+    "ranging from oil & gas and agrochemicals to water treatment and specialty polymers."
   ];
 
   // GSAP scroll-triggered paragraph reveal
@@ -104,7 +105,7 @@ export default function AboutPage() {
         </motion.div>
         <p
           ref={paraRef}
-          className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-800 leading-relaxed mb-12 px-4"
+          className="mt-0 max-w-5xl mx-auto text-lg md:text-xl text-gray-700 leading-[1.8] mb-16 px-6 text-center"
           style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
         >
           {paraLines.map((line, lineIdx) => (
