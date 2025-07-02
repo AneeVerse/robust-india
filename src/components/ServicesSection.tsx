@@ -163,7 +163,7 @@ export default function ServicesSection() {
             </div>
           </Link>
           {/* Mobile Chemical Products Card */}
-          <Link href="/services/chemical-products" className="w-full max-w-xs">
+          <Link href="/product/chemical" className="w-full max-w-xs">
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
@@ -242,7 +242,7 @@ export default function ServicesSection() {
 
           {/* Center Card - Chemical Products */}
                       <Link 
-            href="/services/chemical-products" 
+            href="/product/chemical" 
             className="relative will-change-transform" 
             style={{
               transform: `scale(${0.95 + 0.05 * scrollProgress})`,

@@ -19,7 +19,7 @@ export default function ServiceSlider() {
   const sliderItems = [...services, ...services];
 
   return (
-    <div className="mt-12 min-h-[300px] py-8 sm:py-30 sm:min-h-[520px] flex flex-col bg-[#181a1b] w-full overflow-hidden rounded-3xl">
+    <div className="mx-4 sm:mx-6 md:mx-8 my-16 sm:my-20 md:my-24 min-h-[300px] py-12 sm:py-16 md:py-20 sm:min-h-[520px] flex flex-col bg-[#181a1b] w-auto overflow-hidden rounded-3xl">
       <div className="max-w-5xl mx-auto w-full px-4 mr-100">
         <h2
           className="text-white text-left text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-normal mb-6 sm:mb-14 leading-tight"

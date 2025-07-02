@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-react';
 import FooterSection from '@/components/FooterSection';
+import ServiceSlider from '@/components/ServiceSlider';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -398,6 +399,11 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Supporting Diverse Industrial Sectors Section */}
+      <div className="w-full overflow-x-hidden">
+        <ServiceSlider />
+      </div>
 
       {/* Footer */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-10 mb-8">

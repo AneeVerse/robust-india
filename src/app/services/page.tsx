@@ -9,11 +9,6 @@ import FooterSection from '@/components/FooterSection';
 import BookACall from '@/components/BookCallSection';
 
 const services = [
-  { slug: 'chemical-products',
-    image: '/images/project/slug1/chemical-product-thumbnail.png',
-    title: 'Chemical Products',
-    description: 'A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.',
-  },
   { slug: 'ftwz',
     image: '/images/project/slug1/ftw-thumbnail.png',
     title: 'FTWZ',
@@ -110,9 +105,9 @@ export default function ServicesPage() {
             onMouseLeave={handleMouseLeave}
           >
             <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
-            {/* Top two service images */}
+            {/* Service images */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 w-full">
-            {services.slice(0, 2).map((service) => (
+            {services.map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`} className="block rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden shadow-lg bg-white">
                 <Image
                   src={service.image}
@@ -124,33 +119,24 @@ export default function ServicesPage() {
               </Link>
             ))}
           </div>
-          {/* Titles and descriptions for top two */}
+          {/* Titles and descriptions */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-6 sm:mt-8 w-full text-left">
-            {services.slice(0, 2).map((service) => (
+            {services.map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`} className="block px-2 sm:px-4">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{service.title}</h2>
                   <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{service.description}</p>
               </Link>
             ))}
           </div>
-            {/* Third service full-width */}
-            <div className="mt-12 sm:mt-16 lg:mt-24 w-full">
-              <Link href={`/services/${services[2].slug}`} className="block w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg bg-white">
-                <Image
-                  src={services[2].image}
-                  alt={services[2].title}
-                  width={1200}
-                  height={600}
-                  className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
-                />
-              </Link>
-              <Link href={`/services/${services[2].slug}`} className="block mt-6 sm:mt-8 w-full text-left px-2 sm:px-4">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{services[2].title}</h2>
-                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{services[2].description}</p>
-              </Link>
-            </div>
           </div>
         </section>
+      </div>
+      
+      {/* Service Slider Section */}
+      <div className="mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 md:px-8">
+        <div className="max-w-[1400px] mx-auto">
+          <ServiceSlider />
+        </div>
       </div>
       
       {/*book a call section*/ }
@@ -160,13 +146,6 @@ export default function ServicesPage() {
         </div>
       </div>
       
-      {/* Service Slider Section */}
-      <div className="mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 md:px-8">
-        <div className="max-w-[1400px] mx-auto">
-          <ServiceSlider />
-        </div>
-      </div>
-
       {/* Footer Section */}
       <div className="mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 md:px-8 mb-24 sm:mb-10">
         <div className="max-w-[1400px] mx-auto">

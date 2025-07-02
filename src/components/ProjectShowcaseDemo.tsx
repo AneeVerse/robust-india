@@ -140,7 +140,7 @@ const ProjectShowcaseDemo = () => {
       {/* Mobile Static Project List */}
       <div className="sm:hidden flex flex-col items-center space-y-8 px-4 py-8 bg-white">
         {projects.map((project) => (
-          <Link key={project.slug} href={`/services/${project.slug}`} className="w-full max-w-md">
+          <Link key={project.slug} href={project.slug === 'chemical-products' ? '/product/chemical' : `/services/${project.slug}`} className="w-full max-w-md">
             <div className="bg-white rounded-3xl p-6 shadow-lg">
               <Image
                 src={project.image}
@@ -169,7 +169,7 @@ const ProjectShowcaseDemo = () => {
           {projects.map((project, i) => (
             <Link
               key={project.slug}
-              href={`/services/${project.slug}`}
+              href={project.slug === 'chemical-products' ? '/product/chemical' : `/services/${project.slug}`}
               style={{
                 position: "relative",
                 width: "100vw",

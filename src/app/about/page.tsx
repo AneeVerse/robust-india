@@ -7,6 +7,7 @@ import BookCallSection from '@/components/BookCallSection';
 import StatsSection from '@/components/StatsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import CoreValuesSection from '@/components/CoreValuesSection';
+import ServiceSlider from '@/components/ServiceSlider';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -340,6 +341,11 @@ export default function AboutPage() {
       {/* Core Values Section */}
       <div className="w-full overflow-x-hidden">
       <CoreValuesSection />
+      </div>
+
+      {/* Supporting Diverse Industrial Sectors Section */}
+      <div className="w-full overflow-x-hidden">
+      <ServiceSlider />
       </div>
 
       {/* Book a Call Section */}

@@ -70,6 +70,7 @@ export default function FooterSection() {
                 {[
                   { label: 'Home', href: '/' },
                   { label: 'About', href: '/about' },
+                  { label: 'Product', href: '/product/chemical' },
                   { label: 'Services', href: '/services' },
                   { label: 'Contact', href: '/contact' },
                 ].map((link, idx) => (
@@ -192,6 +193,7 @@ export default function FooterSection() {
                 {[
                   { label: 'Home', href: '/' },
                   { label: 'About', href: '/about' },
+                  { label: 'Product', href: '/product/chemical' },
                   { label: 'Services', href: '/services' },
                   { label: 'Contact', href: '/contact' },
                 ].map((link, idx) => (
