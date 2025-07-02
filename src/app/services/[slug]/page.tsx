@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import BookACall from '@/components/BookCallSection';
 import FooterSection from '@/components/FooterSection';
-import ChemicalFamilySection from '@/components/ChemicalFamilySection';
 import ServiceSlider from '@/components/ServiceSlider';
 
 interface Service {
