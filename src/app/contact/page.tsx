@@ -132,7 +132,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
                       <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
             {/* Contact Form */}
-            <motion.div
+            <motion.div id="contact-form"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

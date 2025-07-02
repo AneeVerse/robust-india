@@ -255,7 +255,7 @@ export default function FooterSection() {
             </div>
 
             {/* Right: newsletter signup */}
-            <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-24 sm:mt-32 md:mt-60">
+            <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-20 sm:mt-32 md:mt-65">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">Our newsletter</h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                 Scale your platform the right way. Get expert insights on design,
