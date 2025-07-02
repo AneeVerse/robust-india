@@ -454,7 +454,7 @@ export default function ChemicalFamilySection() {
         isOpen={isModalOpen}
         onClose={closeModal}
       />
-      
+
     </>
   );
 } 
