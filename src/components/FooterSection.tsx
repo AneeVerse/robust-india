@@ -153,7 +153,7 @@ export default function FooterSection() {
           {/* Bottom Section */}
           <div className="space-y-4 pt-4">
             <div className="flex justify-between items-center text-sm text-gray-500">
-              <a href="#terms" className="hover:text-white">Terms of Service</a>
+              <Link href="/terms" className="hover:text-white">Terms of Service</Link>
               <span>© 2025</span>
             </div>
             
@@ -293,7 +293,7 @@ export default function FooterSection() {
             </p>
             <div className="flex flex-col items-center md:items-end w-full md:w-auto justify-center md:justify-end relative z-50">
               <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 sm:gap-4 md:gap-6 mb-2">
-                <a href="#terms" className="hover:text-white">Terms of Service</a>
+                <Link href="/terms" className="hover:text-white">Terms of Service</Link>
                 <a href="#linkedin" className="hover:text-white">LinkedIn&nbsp;↗</a>
                 <a href="#twitter" className="hover:text-white">X&nbsp;Twitter&nbsp;↗</a>
               </div>
