@@ -6,6 +6,7 @@ import Link from 'next/link'
 export default function ServicesSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
 
@@ -78,6 +79,42 @@ export default function ServicesSection() {
 
     return () => window.removeEventListener("scroll", smoothScroll)
   }, [])
+
+  // Helper function to determine z-index based on card type, scroll progress, and hover state
+  const getCardZIndex = (cardType: 'left' | 'center' | 'right') => {
+    // If a card is being hovered, it gets the highest z-index
+    if (hoveredCard === cardType) {
+      return 40
+    }
+    
+    // If another card is being hovered, this card gets lower z-index
+    if (hoveredCard && hoveredCard !== cardType) {
+      return cardType === 'center' ? 10 : 5
+    }
+    
+    // Default behavior based on scroll progress
+    if (cardType === 'center') {
+      return 30
+    } else {
+      return scrollProgress > 0.3 ? 20 : 5
+    }
+  }
+
+  // Helper function to determine opacity based on card type, scroll progress, and hover state
+  const getCardOpacity = (cardType: 'left' | 'center' | 'right') => {
+    // If no card is being hovered, use default scroll-based opacity
+    if (!hoveredCard) {
+      return cardType === 'center' ? 1 : 0.2 + 0.8 * scrollProgress
+    }
+    
+    // If this card is being hovered, make it fully visible
+    if (hoveredCard === cardType) {
+      return 1
+    }
+    
+    // If another card is being hovered, reduce this card's opacity slightly
+    return cardType === 'center' ? 0.7 : 0.5
+  }
 
   return (
     <section ref={sectionRef} className="relative min-h-screen bg-white overflow-hidden py-20 px-4">
@@ -162,18 +199,24 @@ export default function ServicesSection() {
         {/* Desktop Cards Container */}
         <div className="hidden sm:flex relative flex justify-center items-center min-h-[500px]">
           {/* Left Card - FTWZ */}
-                      <Link href="/services/ftwz" className="absolute left-1/2 top-1/2 will-change-transform" style={{
+                      <Link 
+            href="/services/ftwz" 
+            className="absolute left-1/2 top-1/2 will-change-transform" 
+            style={{
               transform: `
                 translate(-50%, -50%)
                 translateX(${-450 * scrollProgress}px)
+                translateY(${hoveredCard === 'right' ? '20px' : '0px'})
                 rotate(${-6 * scrollProgress}deg)
               `,
-              zIndex: scrollProgress > 0.3 ? 20 : 5,
-              opacity: 0.2 + 0.8 * scrollProgress,
-              transition: "none",
+              zIndex: getCardZIndex('left'),
+              opacity: getCardOpacity('left'),
+              transition: hoveredCard ? "z-index 0.2s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out" : "none",
               textDecoration: 'none',
               cursor: 'pointer',
             }}
+            onMouseEnter={() => setHoveredCard('left')}
+            onMouseLeave={() => setHoveredCard(null)}
           >
             <div
               className="bg-white rounded-3xl p-8 border w-80 h-80 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
@@ -198,15 +241,22 @@ export default function ServicesSection() {
           </Link>
 
           {/* Center Card - Chemical Products */}
-                      <Link href="/services/chemical-products" className="relative z-30 will-change-transform" style={{
+                      <Link 
+            href="/services/chemical-products" 
+            className="relative will-change-transform" 
+            style={{
               transform: `scale(${0.95 + 0.05 * scrollProgress})`,
-              transition: "none",
+              zIndex: getCardZIndex('center'),
+              opacity: getCardOpacity('center'),
+              transition: hoveredCard ? "z-index 0.2s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out" : "none",
               textDecoration: 'none',
               cursor: 'pointer',
             }}
+            onMouseEnter={() => setHoveredCard('center')}
+            onMouseLeave={() => setHoveredCard(null)}
           >
             <div
-              className="bg-white rounded-3xl p-8 border w-[380px] h-80 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+              className="bg-white rounded-3xl p-8 border w-[350px] h-80 hover:shadow-2xl transition-all duration-300 hover:-translate-y-8 flex flex-col"
               style={{
                 borderColor: "#6164F6",
                 boxShadow: "0 0 48px 8px #bfcaff, 0 4px 12px rgba(0,0,0,0.04)",
@@ -228,18 +278,24 @@ export default function ServicesSection() {
           </Link>
 
           {/* Right Card - Integrated 3PL */}
-                      <Link href="/services/integrated-3pl" className="absolute left-1/2 top-1/2 will-change-transform" style={{
+                      <Link 
+            href="/services/integrated-3pl" 
+            className="absolute left-1/2 top-1/2 will-change-transform" 
+            style={{
               transform: `
                 translate(-50%, -50%)
                 translateX(${450 * scrollProgress}px)
+                translateY(${hoveredCard === 'left' ? '20px' : '0px'})
                 rotate(${6 * scrollProgress}deg)
               `,
-              zIndex: scrollProgress > 0.3 ? 20 : 5,
-              opacity: 0.2 + 0.8 * scrollProgress,
-              transition: "none",
+              zIndex: getCardZIndex('right'),
+              opacity: getCardOpacity('right'),
+              transition: hoveredCard ? "z-index 0.2s ease-out, opacity 0.3s ease-out, transform 0.3s ease-out" : "none",
               textDecoration: 'none',
               cursor: 'pointer',
             }}
+            onMouseEnter={() => setHoveredCard('right')}
+            onMouseLeave={() => setHoveredCard(null)}
           >
             <div
               className="bg-white rounded-3xl p-8 border w-80 h-80 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
