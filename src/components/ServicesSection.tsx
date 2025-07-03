@@ -151,9 +151,7 @@ export default function ServicesSection() {
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                  </svg>
+                  <img src="/images/container-crane.svg" alt="FTWZ Container Crane" className="filter invert brightness-0 w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">FTWZ</h3>
               </div>
@@ -167,9 +165,7 @@ export default function ServicesSection() {
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 16.54l-8.8-4.4L12 7.74l8.8 4.4L12 16.54zm0-12.54L1 9l11 5.5L23 9 12 4z" />
-                  </svg>
+                  <img src="/images/laboratory.svg" alt="Chemical Products" className="filter invert brightness-0 w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Chemical Products</h3>
               </div>
@@ -183,9 +179,7 @@ export default function ServicesSection() {
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                  </svg>
+                  <img src="/images/container (5).svg" alt="3PL Container" className="filter invert brightness-0 w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Integrated 3PL</h3>
               </div>
@@ -199,7 +193,7 @@ export default function ServicesSection() {
         {/* Desktop Cards Container */}
         <div className="hidden sm:flex relative flex justify-center items-center min-h-[500px]">
           {/* Left Card - FTWZ */}
-                      <Link 
+          <Link 
             href="/services/ftwz" 
             className="absolute left-1/2 top-1/2 will-change-transform" 
             style={{
@@ -227,10 +221,7 @@ export default function ServicesSection() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
-                  {/* Heart Icon */}
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                  </svg>
+                  <img src="/images/container-crane.svg" alt="FTWZ Container Crane" className="filter invert brightness-0 w-8 h-8" />
                 </div>
                 <h3 className="text-4xl font-normal text-gray-900">FTWZ</h3>
               </div>
@@ -241,7 +232,7 @@ export default function ServicesSection() {
           </Link>
 
           {/* Center Card - Chemical Products */}
-                      <Link 
+          <Link 
             href="/product/chemical" 
             className="relative will-change-transform" 
             style={{
@@ -264,10 +255,7 @@ export default function ServicesSection() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
-                  {/* Layers Icon */}
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 16.54l-8.8-4.4L12 7.74l8.8 4.4L12 16.54zm0-12.54L1 9l11 5.5L23 9 12 4z" />
-                  </svg>
+                  <img src="/images/laboratory.svg" alt="Chemical Products" className="filter invert brightness-0 w-8 h-8" />
                 </div>
                 <h3 className="text-4xl font-normal text-gray-900">Chemical Products</h3>
               </div>
@@ -278,7 +266,7 @@ export default function ServicesSection() {
           </Link>
 
           {/* Right Card - Integrated 3PL */}
-                      <Link 
+          <Link 
             href="/services/integrated-3pl" 
             className="absolute left-1/2 top-1/2 will-change-transform" 
             style={{
@@ -306,10 +294,7 @@ export default function ServicesSection() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
-                  {/* Globe Icon */}
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                  </svg>
+                  <img src="/images/container (5).svg" alt="3PL Container" className="filter invert brightness-0 w-8 h-8" />
                 </div>
                 <h3 className="text-4xl font-normal text-gray-900">Integrated 3PL</h3>
               </div>
