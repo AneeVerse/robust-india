@@ -59,7 +59,7 @@ function NavbarContent() {
               >
                 <a
                   href={link.href}
-                  className="text-xs sm:text-sm md:text-base font-bold bg-[#97CCFB] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] px-2 sm:px-3 md:px-4 py-2 sm:py-1.5 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center min-h-[36px] justify-center"
+                  className="text-xs sm:text-sm md:text-base font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] px-2 sm:px-3 md:px-4 py-2 sm:py-1.5 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center min-h-[36px] justify-center"
                 >
                   <span className="whitespace-nowrap">{link.name}</span>
                   <Image
@@ -90,7 +90,7 @@ function NavbarContent() {
               >
                 <Link
                   href={link.href}
-                  className="text-xs sm:text-sm md:text-base font-bold bg-[#b7defe] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] px-2 sm:px-3 md:px-4 py-2 sm:py-1.5 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center min-h-[36px] justify-center"
+                  className="text-xs sm:text-sm md:text-base font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] px-2 sm:px-3 md:px-4 py-2 sm:py-1.5 rounded-lg sm:rounded-xl transition-all duration-300 flex items-center min-h-[36px] justify-center"
                 >
                   <span className="whitespace-nowrap">{link.name}</span>
                   <Image
