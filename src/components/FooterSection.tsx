@@ -120,7 +120,7 @@ export default function FooterSection() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm leading-relaxed">Helping businesses<br />reach new heights since<br />2009</p>
+                  <p className="text-sm leading-relaxed">© 2025 Robust India<br />All rights reserved.</p>
                 </div>
               </div>
             </div>
@@ -285,14 +285,7 @@ export default function FooterSection() {
           {/* Bottom bar */}
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs sm:text-sm text-gray-400 mt-4 sm:mt-6 md:mt-8 pb-0 gap-4 md:gap-0">
             <p className="mb-2 md:mb-0 w-full md:w-auto text-center md:text-left">
-              Robust India
-              <span className="inline-block mx-2 align-middle">
-                <svg className="inline-block h-2 w-6 text-gray-400" fill="none" viewBox="0 0 27 10" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 6.10696C4.89099 6.10696 10.4306 6.79673 13.9209 4.58335C17.2052 2.50058 13.7605 -0.43632 11.8165 1.80381C11.0323 2.70752 10.4356 4.55498 10.9011 5.72606C13.5121 12.295 22.6498 7.43559 26 4.48555" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              </span>
-              Helping businesses<br />  
-               reach new heights since 2009
+              © 2025 Robust India All rights reserved.
             </p>
             <div className="flex flex-col items-center md:items-end w-full md:w-auto justify-center md:justify-end relative z-50">
               <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 sm:gap-4 md:gap-6 mb-2">
