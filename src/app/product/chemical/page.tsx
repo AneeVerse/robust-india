@@ -42,11 +42,7 @@ export default function ProductChemicalPage() {
         <div className="flex items-center flex-wrap gap-8">
           <div>
             <p className="text-lg text-gray-900">Headquarters</p>
-            <p className="text-base md:text-md font-medium text-gray-800">Amsterdam</p>
-          </div>
-          <div>
-            <p className="text-lg text-gray-900">Industry</p>
-            <p className="text-base md:text-md font-medium text-gray-800">EdTech</p>
+            <p className="text-base md:text-md font-medium text-gray-800">Mumbai</p>
           </div>
           <div>
             <svg className="inline-block h-10 w-8 text-gray-400 transform rotate-90" fill="none" viewBox="0 0 27 10" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +55,7 @@ export default function ProductChemicalPage() {
           </div>
           <div>
             <p className="text-lg text-gray-900">Used by</p>
-            <p className="text-base md:text-md font-medium text-[#6164f6]">600+ organizations</p>
+            <p className="text-base md:text-md font-medium text-[#6164f6]">100+ organizations</p>
           </div>
         </div>
       </div>
