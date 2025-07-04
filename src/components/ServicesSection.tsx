@@ -193,7 +193,7 @@ export default function ServicesSection() {
         {/* Desktop Cards Container */}
         <div className="hidden sm:flex relative flex justify-center items-center min-h-[500px]">
           {/* Left Card - FTWZ */}
-          <Link 
+                      <Link 
             href="/services/ftwz" 
             className="absolute left-1/2 top-1/2 will-change-transform" 
             style={{
@@ -232,7 +232,7 @@ export default function ServicesSection() {
           </Link>
 
           {/* Center Card - Chemical Products */}
-          <Link 
+                      <Link 
             href="/product/chemical" 
             className="relative will-change-transform" 
             style={{
@@ -266,7 +266,7 @@ export default function ServicesSection() {
           </Link>
 
           {/* Right Card - Integrated 3PL */}
-          <Link 
+                      <Link 
             href="/services/integrated-3pl" 
             className="absolute left-1/2 top-1/2 will-change-transform" 
             style={{

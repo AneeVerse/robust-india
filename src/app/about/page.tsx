@@ -11,7 +11,7 @@ import ServiceSlider from '@/components/ServiceSlider';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { MdScience, MdVerifiedUser, MdLocalShipping, MdWarehouse } from "react-icons/md";
+import { MdVerifiedUser } from "react-icons/md";
 
 // TODO: Create and import these components
 // import NewsletterSection from '@/components/NewsletterSection';
@@ -148,7 +148,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <MdScience className="w-8 h-8 text-white" />
+                <img src="/images/laboratory.svg" alt="Chemical Products" className="filter invert brightness-0 w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 Chemical Sourcing
@@ -186,7 +186,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <MdLocalShipping className="w-8 h-8 text-white" />
+                <img src="/images/container-crane.svg" alt="FTWZ Container Crane" className="filter invert brightness-0 w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 FTWZ Logistics
@@ -205,7 +205,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <MdWarehouse className="w-8 h-8 text-white" />
+                <img src="/images/container (5).svg" alt="3PL Container" className="filter invert brightness-0 w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 3PL Services
