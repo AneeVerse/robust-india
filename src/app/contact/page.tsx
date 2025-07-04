@@ -331,6 +331,7 @@ export default function ContactPage() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-gradient-to-r from-[#6164F6] to-[#8B8FFF] text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                    onClick={() => window.location.href = 'tel:+919833950755'}
                   >
                     Call us
                   </motion.button>
@@ -338,6 +339,7 @@ export default function ContactPage() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-white text-[#6164F6] font-semibold py-3 px-6 rounded-xl border-2 border-[#6164F6] hover:bg-[#6164F6] hover:text-white transition-all duration-300"
+                    onClick={() => window.open('https://wa.me/919833950755', '_blank')}
                   >
                     Chat with us
                   </motion.button>
