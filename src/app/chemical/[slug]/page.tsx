@@ -5,7 +5,6 @@ import BookCallSection from '@/components/BookCallSection';
 import ServiceSlider from '@/components/ServiceSlider';
 
 import { TbAtom, TbFlask } from 'react-icons/tb';
-import { GiMolecule } from 'react-icons/gi';
 
 interface ChemicalProduct {
   name: string;
