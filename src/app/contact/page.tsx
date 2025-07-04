@@ -145,7 +145,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               className="bg-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 -mt-5" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 Send us a Message
               </h2>
               
@@ -269,7 +269,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
-                      rows={8}
+                      rows={5.0}
                       className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 resize-none text-gray-900"
                       placeholder="Message *"
                     />
@@ -303,7 +303,7 @@ export default function ContactPage() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 mt-7" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                   Get in Touch
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-12">
@@ -320,7 +320,7 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Our Office</h3>
+                    <h3 className="font-bold text-gray-900 mb-2 -mt-4">Our Office</h3>
                     <p className="text-gray-600">
                     robust india, 61, Citi Tower, Sector 15, CBD Belapur, Navi Mumbai, Maharashtra 400614
                       India
@@ -367,7 +367,7 @@ export default function ContactPage() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-[#6164F6] to-[#8B8FFF] text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                    className="bg-gradient-to-r from-[#6164F6] to-[#8B8FFF] text-white font-semibold py-4 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => window.location.href = 'tel:+919833950755'}
                   >
                     Call us
