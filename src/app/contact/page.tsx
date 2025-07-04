@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, User, MessageSquare } from 'lucide-react';
 import FooterSection from '@/components/FooterSection';
 import ServiceSlider from '@/components/ServiceSlider';
 

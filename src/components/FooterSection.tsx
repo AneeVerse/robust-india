@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useNavbarVisibility } from '@/context/NavbarVisibilityContext';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function FooterSection() {
   const { setShowNavbar } = useNavbarVisibility();
@@ -132,7 +133,7 @@ export default function FooterSection() {
           {/* Newsletter Section */}
           <div className="mb-10">
             <div className="flex justify-center mb-6 -mt-4 -ml-4">
-              <img src="/images/nav-logo.png" alt="Robust India Logo" className="h-16 w-auto mx-auto" />
+              <Image src="/images/nav-logo.png" alt="Robust India Logo" width={80} height={80} className="h-16 w-auto mx-auto" unoptimized />
             </div>
             <h3 className="text-xl font-bold mb-4">Our newsletter</h3>
             <p className="text-gray-300 text-base mb-6 leading-relaxed">
@@ -262,7 +263,7 @@ export default function FooterSection() {
             {/* Right: newsletter signup */}
             <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-20 md:mt-12 md:mb-2">
               <div className="flex justify-center mb-6 -mt-4 -ml-4">
-                <img src="/images/nav-logo.png" alt="Robust India Logo" className="h-20 w-auto mx-auto" />
+                <Image src="/images/nav-logo.png" alt="Robust India Logo" width={100} height={100} className="h-20 w-auto mx-auto" unoptimized />
               </div>
               <h3 style={{ fontSize: 'clamp(1.4rem, 2.8vw, 2.2rem)' }} className="font-bold">Our newsletter</h3>
               <p style={{ fontSize: 'clamp(1rem, 1.8vw, 1.3rem)' }} className="text-gray-300 leading-relaxed">

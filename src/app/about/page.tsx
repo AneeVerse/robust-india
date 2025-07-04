@@ -148,7 +148,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <img src="/images/laboratory.svg" alt="Chemical Products" className="filter invert brightness-0 w-8 h-8" />
+                <Image src="/images/laboratory.svg" alt="Chemical Products" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 Chemical Sourcing
@@ -186,7 +186,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <img src="/images/container-crane.svg" alt="FTWZ Container Crane" className="filter invert brightness-0 w-8 h-8" />
+                <Image src="/images/container-crane.svg" alt="FTWZ Container Crane" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 FTWZ Logistics
@@ -205,7 +205,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="w-16 h-16 bg-[#6164F6] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <img src="/images/container (5).svg" alt="3PL Container" className="filter invert brightness-0 w-8 h-8" />
+                <Image src="/images/container (5).svg" alt="3PL Container" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 3PL Services

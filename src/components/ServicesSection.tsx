@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function ServicesSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -151,7 +152,7 @@ export default function ServicesSection() {
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
-                  <img src="/images/container-crane.svg" alt="FTWZ Container Crane" className="filter invert brightness-0 w-5 h-5" />
+                  <Image src="/images/container-crane.svg" alt="FTWZ Container Crane" width={20} height={20} className="filter invert brightness-0 w-5 h-5" unoptimized />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">FTWZ</h3>
               </div>
@@ -165,7 +166,7 @@ export default function ServicesSection() {
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
-                  <img src="/images/laboratory.svg" alt="Chemical Products" className="filter invert brightness-0 w-5 h-5" />
+                  <Image src="/images/laboratory.svg" alt="Chemical Products" width={20} height={20} className="filter invert brightness-0 w-5 h-5" unoptimized />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Chemical Products</h3>
               </div>
@@ -179,7 +180,7 @@ export default function ServicesSection() {
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
-                  <img src="/images/container (5).svg" alt="3PL Container" className="filter invert brightness-0 w-5 h-5" />
+                  <Image src="/images/container (5).svg" alt="3PL Container" width={20} height={20} className="filter invert brightness-0 w-5 h-5" unoptimized />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Integrated 3PL</h3>
               </div>
@@ -221,7 +222,7 @@ export default function ServicesSection() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img src="/images/container-crane.svg" alt="FTWZ Container Crane" className="filter invert brightness-0 w-8 h-8" />
+                  <Image src="/images/container-crane.svg" alt="FTWZ Container Crane" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
                 </div>
                 <h3 className="text-4xl font-normal text-gray-900">FTWZ</h3>
               </div>
@@ -255,7 +256,7 @@ export default function ServicesSection() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img src="/images/laboratory.svg" alt="Chemical Products" className="filter invert brightness-0 w-8 h-8" />
+                  <Image src="/images/laboratory.svg" alt="Chemical Products" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
                 </div>
                 <h3 className="text-4xl font-normal text-gray-900">Chemical Products</h3>
               </div>
@@ -294,7 +295,7 @@ export default function ServicesSection() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <img src="/images/container (5).svg" alt="3PL Container" className="filter invert brightness-0 w-8 h-8" />
+                  <Image src="/images/container (5).svg" alt="3PL Container" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
                 </div>
                 <h3 className="text-4xl font-normal text-gray-900">Integrated 3PL</h3>
               </div>
