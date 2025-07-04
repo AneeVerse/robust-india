@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import FooterSection from '@/components/FooterSection';
 import BookCallSection from '@/components/BookCallSection';
+import ServiceSlider from '@/components/ServiceSlider';
 
 import { TbAtom, TbFlask } from 'react-icons/tb';
 import { GiMolecule } from 'react-icons/gi';
@@ -181,31 +182,13 @@ export default async function ChemicalDetailPage({ params }: { params: Promise<{
             </div>
           )}
 
-          {/* Industries Served */}
-          {chemical.industriesServed && chemical.industriesServed.length > 0 && (
-            <div className="mb-16">
-              <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
-                <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
-                    <GiMolecule className="w-6 h-6 text-white" />
-                  </div>
-                  Industries Served
-                </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                  {chemical.industriesServed.map((industry, index) => (
-                    <div key={index} className="bg-gray-50 rounded-xl p-4 text-center hover:bg-gray-100 transition-all duration-300">
-                      <p className="font-medium text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                        {industry}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
         </div>
       </section>
+
+      {/* Supporting Diverse Industrial Sectors Section */}
+      <div className="w-full overflow-x-hidden">
+        <ServiceSlider />
+      </div>
 
       {/* Book Call Section */}
       <BookCallSection />
