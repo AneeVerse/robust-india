@@ -131,6 +131,9 @@ export default function FooterSection() {
 
           {/* Newsletter Section */}
           <div className="mb-10">
+            <div className="flex justify-center mb-6 -mt-4 -ml-4">
+              <img src="/images/nav-logo.png" alt="Robust India Logo" className="h-16 w-auto mx-auto" />
+            </div>
             <h3 className="text-xl font-bold mb-4">Our newsletter</h3>
             <p className="text-gray-300 text-base mb-6 leading-relaxed">
               Scale your platform the right way. Get expert insights on design, development, and growth.
@@ -258,6 +261,9 @@ export default function FooterSection() {
 
             {/* Right: newsletter signup */}
             <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-20 md:mt-12 md:mb-2">
+              <div className="flex justify-center mb-6 -mt-4 -ml-4">
+                <img src="/images/nav-logo.png" alt="Robust India Logo" className="h-20 w-auto mx-auto" />
+              </div>
               <h3 style={{ fontSize: 'clamp(1.4rem, 2.8vw, 2.2rem)' }} className="font-bold">Our newsletter</h3>
               <p style={{ fontSize: 'clamp(1rem, 1.8vw, 1.3rem)' }} className="text-gray-300 leading-relaxed">
                 Scale your platform the right way. Get expert insights on design,

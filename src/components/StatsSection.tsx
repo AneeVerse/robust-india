@@ -6,12 +6,12 @@ import Image from 'next/image';
 
 const stats = [
   {
-    number: 16,
+    number: 6,
     label: 'Years of agency experience',
   },
   {
-    number: 150,
-    label: 'Happy clients successfully served',
+    number: 100,
+    label: 'organizations successfully served',
   },
   {
     number: 4.7,

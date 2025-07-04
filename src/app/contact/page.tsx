@@ -284,8 +284,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2">Our Office</h3>
                     <p className="text-gray-600">
-                      123 Trade Center, Global Business District<br />
-                      Mumbai, Maharashtra 400001<br />
+                    robust india, 61, Citi Tower, Sector 15, CBD Belapur, Navi Mumbai, Maharashtra 400614
                       India
                     </p>
                   </div>
@@ -301,8 +300,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2">Phone</h3>
                     <p className="text-gray-600">
-                      +91 22 1234 5678<br />
-                      +91 98765 43210
+                      +91 9833950755
                     </p>
                   </div>
                 </motion.div>
@@ -317,28 +315,12 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2">Email</h3>
                     <p className="text-gray-600">
-                      info@robustindia.com<br />
-                      sales@robustindia.com
+                    robustindia@outlook.com
                     </p>
                   </div>
                 </motion.div>
 
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Business Hours</h3>
-                    <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 9:00 AM - 2:00 PM<br />
-                      Sunday: Closed
-                    </p>
-                  </div>
-                </motion.div>
+               
               </div>
 
               {/* Quick Actions */}
@@ -350,14 +332,14 @@ export default function ContactPage() {
                     whileTap={{ scale: 0.95 }}
                     className="bg-gradient-to-r from-[#6164F6] to-[#8B8FFF] text-white font-semibold py-3 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
                   >
-                    Book a Call
+                    Call us
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-white text-[#6164F6] font-semibold py-3 px-6 rounded-xl border-2 border-[#6164F6] hover:bg-[#6164F6] hover:text-white transition-all duration-300"
                   >
-                    Live Chat
+                    Chat with us
                   </motion.button>
                 </div>
               </div>

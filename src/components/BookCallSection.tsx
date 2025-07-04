@@ -82,7 +82,7 @@ export default function BookCallSection() {
               className="w-full sm:w-auto bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-[#4B4ED0] cursor-pointer"
               onClick={() => window.open('https://wa.me/919833950755', '_blank')}
             >
-              Send a message
+              Chat with us
             </motion.button>
           </div>
         </motion.div>
