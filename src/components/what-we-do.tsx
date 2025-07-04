@@ -39,7 +39,7 @@ export default function LandingPage() {
               className="flex justify-center lg:justify-start"
             >
               <Image 
-                src="/images/about-us2.jpg" 
+                src="/images/about-us4.jpg" 
                 alt="About Robust India" 
                 width={1200} 
                 height={900} 

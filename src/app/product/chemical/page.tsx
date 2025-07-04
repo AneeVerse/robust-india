@@ -9,11 +9,11 @@ export default function ProductChemicalPage() {
     slug: 'chemical-products',
     title: 'Chemical Products',
     description: 'Our Chemical Products division sources a comprehensive range of high-purity specialty and bulk chemicals from leading global producers. From precise formulation and rigorous quality assurance testing to custom packaging and compliant distribution, we manage every aspect of the supply chain to deliver tailored solutions that meet the exacting specifications of clients across industries. Our expertise in regulatory compliance and logistical coordination ensures safe, reliable delivery, helping businesses innovate and scale with confidence.',
-    image: '/images/project/slug1/chemical-product-thumbnail.png',
+    image: '/images/product2.jpg',
     fullImage: '/images/project/slug1/chemical-product-1.png',
     smallImages: [
-      '/images/project/slug1/chemical-product-3.png',
-      '/images/project/slug1/chemical-product-2.png',
+      '/images/product.jpg',
+      '/images/product3.jpg',
     ],
     tags: ['Chemical Products', 'Global Distribution', 'Packaging', 'Brand Identity'],
   };

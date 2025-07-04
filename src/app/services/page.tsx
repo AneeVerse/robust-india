@@ -10,12 +10,12 @@ import BookACall from '@/components/BookCallSection';
 
 const services = [
   { slug: 'ftwz',
-    image: '/images/project/slug1/ftw-thumbnail.png',
+    image: '/images/demo/ftw.jpg',
     title: 'FTWZ',
     description: 'Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.',
   },
   { slug: 'integrated-3pl',
-    image: '/images/project/slug1/3PL-thumbnail.png',
+    image: '/images/demo/shipping.jpg',
     title: 'Integrated 3PL',
     description: 'End-to-end logistics including storage, handling, inventory management, and efficient global distribution.',
   },

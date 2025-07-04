@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   { slug: 'chemical-products',
-    image: "/images/project/slug1/chemical-product-thumbnail.png",
+    image: "/images/product2.jpg",
     title: "Chemical Products",
     description:
       "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
