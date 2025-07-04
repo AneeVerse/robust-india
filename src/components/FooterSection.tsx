@@ -191,17 +191,17 @@ export default function FooterSection() {
         {/* Desktop Layout - Keep existing */}
         <div className="hidden sm:block relative">
           {/* Absolutely positioned logo+text block, free from newsletter */}
-          <div className="absolute top-0 right-0 flex items-center gap-2 z-20 p-4 mt-20 mr-28 ">
+          <div className="absolute top-0 right-0 flex items-center gap-2 z-20 p-4 mt-12 mr-2 ">
             <Image
               src="/images/nav-logo.png"
               alt="Robust India Logo"
-              width={50}
-              height={50}
-              className="w-10 h-10 lg:w-12 lg:h-12"
+              width={60}
+              height={60}
+              className="w-16 h-16 lg:w-16 lg:h-16"
               priority
               unoptimized
             />
-            <span className="text-2xl lg:text-3xl font-extrabold tracking-tight text-white uppercase">Robust India</span>
+            <span className="text-3xl lg:text-[2.5rem] font-extrabold tracking-tight text-white uppercase">Robust India</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 sm:gap-10 md:gap-12 mb-0">
             {/* Left: large headline + nav */}
@@ -284,9 +284,9 @@ export default function FooterSection() {
             </div>
 
             {/* Right: logo + newsletter signup */}
-            <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-20 md:mt-12 md:mb-2">
-              <h3 style={{ fontSize: 'clamp(1.4rem, 2.8vw, 2.2rem)' }} className="font-bold">Our newsletter</h3>
-              <p style={{ fontSize: 'clamp(1rem, 1.8vw, 1.3rem)' }} className="text-gray-300 leading-relaxed">
+            <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-20 md:mt-12 md:mb-2 ">
+              <h3 style={{ fontSize: 'clamp(1.4rem, 2.8vw, 2.5rem)' }} className="font-bold">Our newsletter</h3>
+              <p style={{ fontSize: 'clamp(0.5rem, 1.8vw, 1.2rem)' }} className="text-gray-300 leading-relaxed pb-2 -mt-2">
                 Scale your platform the right way. Get expert insights on design,
                 development, and growth.
               </p>
