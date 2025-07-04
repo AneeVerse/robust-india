@@ -132,8 +132,18 @@ export default function FooterSection() {
 
           {/* Newsletter Section */}
           <div className="mb-10">
-            <div className="flex justify-center mb-6 -mt-4 -ml-4">
-              <Image src="/images/nav-logo.png" alt="Robust India Logo" width={80} height={80} className="h-16 w-auto mx-auto" unoptimized />
+            {/* Logo + Text block, styled like HeroSection, above newsletter */}
+            <div className="flex items-center justify-center mb-8 mt-0 gap-3">
+              <Image
+                src="/images/nav-logo.png"
+                alt="Robust India Logo"
+                width={50}
+                height={50}
+                className="mr-2 sm:mr-3 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
+                priority
+                unoptimized
+              />
+              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-white uppercase">Robust India</span>
             </div>
             <h3 className="text-xl font-bold mb-4">Our newsletter</h3>
             <p className="text-gray-300 text-base mb-6 leading-relaxed">
@@ -179,7 +189,20 @@ export default function FooterSection() {
         </div>
 
         {/* Desktop Layout - Keep existing */}
-        <div className="hidden sm:block">
+        <div className="hidden sm:block relative">
+          {/* Absolutely positioned logo+text block, free from newsletter */}
+          <div className="absolute top-0 right-0 flex items-center gap-2 z-20 p-4 mt-20 mr-28 ">
+            <Image
+              src="/images/nav-logo.png"
+              alt="Robust India Logo"
+              width={50}
+              height={50}
+              className="w-10 h-10 lg:w-12 lg:h-12"
+              priority
+              unoptimized
+            />
+            <span className="text-2xl lg:text-3xl font-extrabold tracking-tight text-white uppercase">Robust India</span>
+          </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 sm:gap-10 md:gap-12 mb-0">
             {/* Left: large headline + nav */}
             <div className="md:w-2/3 space-y-4 mt-12">
@@ -260,11 +283,8 @@ export default function FooterSection() {
               </nav>
             </div>
 
-            {/* Right: newsletter signup */}
+            {/* Right: logo + newsletter signup */}
             <div className="md:w-1/3 space-y-4 sm:space-y-5 md:space-y-6 mt-20 md:mt-12 md:mb-2">
-              <div className="flex justify-center mb-6 -mt-4 -ml-4">
-                <Image src="/images/nav-logo.png" alt="Robust India Logo" width={100} height={100} className="h-20 w-auto mx-auto" unoptimized />
-              </div>
               <h3 style={{ fontSize: 'clamp(1.4rem, 2.8vw, 2.2rem)' }} className="font-bold">Our newsletter</h3>
               <p style={{ fontSize: 'clamp(1rem, 1.8vw, 1.3rem)' }} className="text-gray-300 leading-relaxed">
                 Scale your platform the right way. Get expert insights on design,

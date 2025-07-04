@@ -11,7 +11,10 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    organizationName: '',
+    address: '',
+    phoneNo: '',
+    jobPosition: '',
     message: '',
     service: ''
   });
@@ -34,7 +37,10 @@ export default function ContactPage() {
     setFormData({
       name: '',
       email: '',
-      company: '',
+      organizationName: '',
+      address: '',
+      phoneNo: '',
+      jobPosition: '',
       message: '',
       service: ''
     });
@@ -144,11 +150,9 @@ export default function ContactPage() {
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name and Organization Name side by side */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Full Name *
-                    </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
@@ -158,16 +162,74 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200"
-                        placeholder="John Doe"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
+                        placeholder="Name *"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email Address *
-                    </label>
+                    <input
+                      type="text"
+                      id="organizationName"
+                      name="organizationName"
+                      value={formData.organizationName}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
+                      placeholder="Organization Name"
+                    />
+                  </div>
+                </div>
+
+                {/* Service Interest */}
+                <div>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
+                  >
+                    <option value="" className="text-gray-500">Service Interest</option>
+                    <option value="chemical-products" className="text-gray-900">Chemical Products</option>
+                    <option value="ftwz" className="text-gray-900">FTWZ Services</option>
+                    <option value="integrated-3pl" className="text-gray-900">Integrated 3PL</option>
+                    <option value="consulting" className="text-gray-900">Consulting</option>
+                    <option value="other" className="text-gray-900">Other</option>
+                  </select>
+                </div>
+
+                {/* Address */}
+                <div>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
+                    placeholder="Address"
+                  />
+                </div>
+
+                {/* Phone and Email side by side */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <div className="relative">
+                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <input
+                        type="tel"
+                        id="phoneNo"
+                        name="phoneNo"
+                        value={formData.phoneNo}
+                        onChange={handleInputChange}
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
+                        placeholder="Phone No"
+                      />
+                    </div>
+                  </div>
+                   
+                  <div>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
@@ -177,52 +239,28 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200"
-                        placeholder="john@company.com"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
+                        placeholder="Email *"
                       />
                     </div>
                   </div>
                 </div>
 
+                {/* Job Position */}
                 <div>
-                  <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Company Name
-                  </label>
                   <input
                     type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    id="jobPosition"
+                    name="jobPosition"
+                    value={formData.jobPosition}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200"
-                    placeholder="Your Company"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
+                    placeholder="Job Position"
                   />
                 </div>
 
+                {/* Message */}
                 <div>
-                  <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
-                  >
-                    <option value="" className="text-gray-500">Select a service</option>
-                    <option value="chemical-products" className="text-gray-900">Chemical Products</option>
-                    <option value="ftwz" className="text-gray-900">FTWZ Services</option>
-                    <option value="integrated-3pl" className="text-gray-900">Integrated 3PL</option>
-                    <option value="consulting" className="text-gray-900">Consulting</option>
-                    <option value="other" className="text-gray-900">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Message *
-                  </label>
                   <div className="relative">
                     <MessageSquare className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
                     <textarea
@@ -231,9 +269,9 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
-                      rows={6}
-                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 resize-none"
-                      placeholder="Tell us about your project and how we can help..."
+                      rows={8}
+                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 resize-none text-gray-900"
+                      placeholder="Message *"
                     />
                   </div>
                 </div>
@@ -324,8 +362,7 @@ export default function ContactPage() {
               </div>
 
               {/* Quick Actions */}
-              <div className="pt-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Quick Actions</h3>
+              <div className="pt-0">
                 <div className="grid grid-cols-2 gap-4">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
