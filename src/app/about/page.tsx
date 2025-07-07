@@ -12,25 +12,28 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { MdVerifiedUser } from "react-icons/md";
+import { useTranslation } from 'next-i18next';
 
 // TODO: Create and import these components
 // import NewsletterSection from '@/components/NewsletterSection';
 
 export default function AboutPage() {
+  const { t } = useTranslation('common');
+  
   // Scroll reveal refs and variants
   const headingRef = useRef(null);
   const lines = [
-    "simplify global chemical trade",
-    "by offering turnkey",
-    "solutions"
+    t('about.hero.line1'),
+    t('about.hero.line2'),
+    t('about.hero.line3')
   ];
   const container = { hidden: {}, visible: { transition: { staggerChildren: 0.05 } } };
   const letter = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } };
   const paraLines = [
-    "Robust India is an import-export company dedicated to delivering comprehensive chemical supply chain.",
-    "solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize ",
-    "in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries",
-    "ranging from oil & gas and agrochemicals to water treatment and specialty polymers."
+    t('about.intro.line1'),
+    t('about.intro.line2'),
+    t('about.intro.line3'),
+    t('about.intro.line4')
   ];
 
   // GSAP scroll-triggered paragraph reveal
@@ -65,7 +68,7 @@ export default function AboutPage() {
         {/* Company logo and name */}
         <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-4 mt-2">
           <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-wide">{t('hero.brandName')}</span>
         </Link>
         <motion.h1
           ref={headingRef}
@@ -131,10 +134,10 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-light text-gray-900 mb-6 mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-              What we do
+              {t('about.whatWeDo.title')}
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-              Comprehensive chemical supply chain solutions for global industries
+              {t('about.whatWeDo.subtitle')}
             </p>
           </motion.div>
 
@@ -151,10 +154,10 @@ export default function AboutPage() {
                 <Image src="/images/laboratory.svg" alt="Chemical Products" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                Chemical Sourcing
+                {t('about.whatWeDo.services.chemicalSourcing.title')}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                High-quality specialty and bulk chemicals for oil & gas, agrochemicals, and polymers
+                {t('about.whatWeDo.services.chemicalSourcing.description')}
               </p>
             </motion.div>
 
@@ -170,10 +173,10 @@ export default function AboutPage() {
                 <MdVerifiedUser className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                Quality Assurance
+                {t('about.whatWeDo.services.qualityAssurance.title')}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                ISO, ASTM, REACH compliance ensuring consistent purity and performance
+                {t('about.whatWeDo.services.qualityAssurance.description')}
               </p>
             </motion.div>
 
@@ -189,10 +192,10 @@ export default function AboutPage() {
                 <Image src="/images/container-crane.svg" alt="FTWZ Container Crane" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                FTWZ Logistics
+                {t('about.whatWeDo.services.ftwzLogistics.title')}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                Duty-free facilities in Mumbai, Chennai, Delhi for seamless import/export
+                {t('about.whatWeDo.services.ftwzLogistics.description')}
               </p>
             </motion.div>
 
@@ -208,10 +211,10 @@ export default function AboutPage() {
                 <Image src="/images/container (5).svg" alt="3PL Container" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                3PL Services
+                {t('about.whatWeDo.services.3plServices.title')}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                End-to-end warehousing, packaging, and inventory management solutions
+                {t('about.whatWeDo.services.3plServices.description')}
               </p>
             </motion.div>
           </div>
@@ -228,10 +231,10 @@ export default function AboutPage() {
               <div className="rounded-3xl p-8 md:p-12 bg-gray-50 shadow-lg">
                 <div className="space-y-8 text-center md:text-left">
                   <p className="text-lg md:text-xl text-gray-800 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    Leveraging our deep expertise in product development, we partner with manufacturers to create customized chemical formulations from pilot-scale trials through full production, ensuring that every product meets your exact specifications. Our rigorous quality-inspection processes, aligned with international standards (ISO, ASTM, REACH), guarantee consistent purity and performance.
+                    {t('about.whatWeDo.detailedInfo.part1')}
                   </p>
                   <p className="text-lg md:text-xl text-gray-800 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    At the heart of our offering is an integrated logistics network anchored by India&apos;s leading Free Trade & Warehousing Zones (FTWZ). Through these duty-free facilities in Mumbai, Chennai, and Delhi, we provide end-to-end 3PL services including bonded warehousing, value-added labeling or repackaging, and streamlined import/export handling without the need for clients to establish a local entity. Real-time inventory management and secure, compliant packaging solutions further ensure that your materials are accurately tracked and safely delivered on time, every time.
+                    {t('about.whatWeDo.detailedInfo.part2')}
                   </p>
                 </div>
               </div>
@@ -262,26 +265,12 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </motion.div>
-                <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-3xl md:text-4xl font-light text-gray-900 mb-6"
-                  style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
-                >
-                  Our Mission
-                </motion.h3>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-lg md:text-xl text-gray-600 leading-relaxed"
-                  style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
-                >
-                  To simplify global chemical trade by offering turnkey solutions that blend product innovation, quality assurance, and seamless logistics under one roof with comprehensive expertise.
-                </motion.p>
+                <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  {t('about.mission.title')}
+                </h3>
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  {t('about.mission.description')}
+                </p>
               </div>
 
               {/* Vision */}
@@ -299,26 +288,12 @@ export default function AboutPage() {
                     </svg>
                   </div>
                 </motion.div>
-                <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="text-3xl md:text-4xl font-light text-gray-900 mb-6"
-                  style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
-                >
-                  Our Vision
-                </motion.h3>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="text-lg md:text-xl text-gray-600 leading-relaxed"
-                  style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
-                >
-                  To be the world&apos;s most trusted partner for chemical sourcing and supply chain excellence, enabling clients to focus on growth while we handle the complexities of international trade.
-                </motion.p>
+                <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  {t('about.vision.title')}
+                </h3>
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  {t('about.vision.description')}
+                </p>
               </div>
             </div>
           </motion.div>

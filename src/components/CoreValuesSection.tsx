@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from "react"
 import { Sparkles, Diamond, Heart, Star } from 'lucide-react'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useTranslation } from 'next-i18next'
 gsap.registerPlugin(ScrollTrigger)
 
 // Card component (inline)
@@ -19,46 +20,20 @@ const CardContent: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children,
   </div>
 )
 
-const coreValues = [
-  {
-    id: 1,
-    category: "GROWTH",
-    title: "Expand your skillset",
-    description:
-      "We think a person is never done learning. Gaining new experience and picking up new skills is key to staying ahead.",
-    icon: Sparkles,
-    categoryColor: "text-indigo-500",
-  },
-  {
-    id: 2,
-    category: "EXCELLENCE",
-    title: "Go for the very best",
-    description:
-      "We're about setting the bar high and then overdeliver. That's why we aim for the very best in our work and in the way we work.",
-    icon: Diamond,
-    categoryColor: "text-indigo-500",
-  },
-  {
-    id: 3,
-    category: "JOY",
-    title: "Do what you love",
-    description:
-      "All the amazing things that we want to exist without barriers. We believe in doing work, relentlessly, with joy and passion.",
-    icon: Heart,
-    categoryColor: "text-indigo-500",
-  },
-  {
-    id: 4,
-    category: "SYNERGY",
-    title: "Own your journey",
-    description:
-      "We believe in taking ownership of your path and creating meaningful impact through collaborative effort.",
-    icon: Star,
-    categoryColor: "text-indigo-600",
-  },
-]
+const iconMap = {
+  GROWTH: Sparkles,
+  EXCELLENCE: Diamond,
+  JOY: Heart,
+  SYNERGY: Star,
+  // Russian translations
+  РОСТ: Sparkles,
+  СОВЕРШЕНСТВО: Diamond,
+  РАДОСТЬ: Heart,
+  СИНЕРГИЯ: Star,
+}
 
 export default function HorizontalScrollCards() {
+  const { t } = useTranslation()
   const sectionRef = useRef<HTMLDivElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
@@ -93,6 +68,12 @@ export default function HorizontalScrollCards() {
     }
   }, [])
 
+  const coreValues = t('coreValues.values', { returnObjects: true }) as Array<{
+    category: keyof typeof iconMap;
+    title: string;
+    description: string;
+  }>
+
   return (
     <>
       {/* Inline CSS Styles */}
@@ -122,19 +103,19 @@ export default function HorizontalScrollCards() {
       <div ref={sectionRef} className="w-full bg-gray-50 py-16 px-4" style={{ fontFamily: "'NoiGrotesk', sans-serif" }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-left mb-12">
-            <h2 className="text-4xl md:text-6xl  text-gray-900 mb-4">The Core Values</h2>
-            <p className="text-4xl md:text-6xl  text-gray-900">we stand by</p>
+            <h2 className="text-4xl md:text-6xl text-gray-900 mb-4">{t('coreValues.title.line1')}</h2>
+            <p className="text-4xl md:text-6xl text-gray-900">{t('coreValues.title.line2')}</p>
           </div>
 
           <div
             ref={scrollContainerRef}
             className="flex gap-8 pb-6 px-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory sm:overflow-visible sm:snap-none"
           >
-            {coreValues.map((value) => {
-              const IconComponent = value.icon
+            {coreValues.map((value, index) => {
+              const IconComponent = iconMap[value.category]
               return (
                 <Card
-                  key={value.id}
+                  key={index}
                   className="w-[90vw] max-w-xs h-[420px] shrink-0 snap-center
                     sm:w-[480px] sm:h-[480px] sm:max-w-none sm:flex-none sm:snap-none
                     bg-white border border-indigo-200 hover:border-transparent shadow-sm hover:shadow-lg transition-all duration-300 rounded-3xl overflow-hidden relative group"
@@ -155,7 +136,7 @@ export default function HorizontalScrollCards() {
                     </div>
 
                     <div className="flex-1 text-left relative z-10">
-                      <p className={`text-sm font-bold tracking-widest ${value.categoryColor} mb-6 uppercase`}>
+                      <p className="text-sm font-bold tracking-widest text-indigo-500 mb-6 uppercase">
                         {value.category}
                       </p>
 
@@ -168,8 +149,6 @@ export default function HorizontalScrollCards() {
               )
             })}
           </div>
-
-        
         </div>
       </div>
     </>

@@ -54,7 +54,52 @@
   },
   "about": {
     "title": "About us",
-    "description": "Robust India an import-export company dedicated to delivering comprehensive chemical supply chain solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers."
+    "description": "Robust India an import-export company dedicated to delivering comprehensive chemical supply chain solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers.",
+    "hero": {
+      "line1": "simplify global chemical trade",
+      "line2": "by offering turnkey",
+      "line3": "solutions"
+    },
+    "intro": {
+      "line1": "Robust India is an import-export company dedicated to delivering comprehensive chemical supply chain.",
+      "line2": "solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize ",
+      "line3": "in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries",
+      "line4": "ranging from oil & gas and agrochemicals to water treatment and specialty polymers."
+    },
+    "whatWeDo": {
+      "title": "What we do",
+      "subtitle": "Comprehensive chemical supply chain solutions for global industries",
+      "services": {
+        "chemicalSourcing": {
+          "title": "Chemical Sourcing",
+          "description": "High-quality specialty and bulk chemicals for oil & gas, agrochemicals, and polymers"
+        },
+        "qualityAssurance": {
+          "title": "Quality Assurance",
+          "description": "ISO, ASTM, REACH compliance ensuring consistent purity and performance"
+        },
+        "ftwzLogistics": {
+          "title": "FTWZ Logistics",
+          "description": "Duty-free facilities in Mumbai, Chennai, Delhi for seamless import/export"
+        },
+        "3plServices": {
+          "title": "3PL Services",
+          "description": "End-to-end warehousing, packaging, and inventory management solutions"
+        }
+      },
+      "detailedInfo": {
+        "part1": "Leveraging our deep expertise in product development, we partner with manufacturers to create customized chemical formulations from pilot-scale trials through full production, ensuring that every product meets your exact specifications. Our rigorous quality-inspection processes, aligned with international standards (ISO, ASTM, REACH), guarantee consistent purity and performance.",
+        "part2": "At the heart of our offering is an integrated logistics network anchored by India's leading Free Trade & Warehousing Zones (FTWZ). Through these duty-free facilities in Mumbai, Chennai, and Delhi, we provide end-to-end 3PL services including bonded warehousing, value-added labeling or repackaging, and streamlined import/export handling without the need for clients to establish a local entity. Real-time inventory management and secure, compliant packaging solutions further ensure that your materials are accurately tracked and safely delivered on time, every time."
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To simplify global chemical trade by offering turnkey solutions that blend product innovation, quality assurance, and seamless logistics under one roof with comprehensive expertise."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the world's most trusted partner for chemical sourcing and supply chain excellence, enabling clients to focus on growth while we handle the complexities of international trade."
+    }
   },
   "projects": {
     "viewProject": "View Project",
@@ -143,5 +188,69 @@
       "description": "Join hundreds of companies who trust Robust India for their chemical trade, warehousing, and logistics needs.",
       "button": "View Our Services"
     }
+  },
+  "testimonials": {
+    "title": "They say it best",
+    "subtitle": "What clients love about working with us",
+    "items": [
+      {
+        "quote": "Our brand needed a refresh to fit our our identity, and Yummygum made it happen. They truly listened, acted on feedback, and kept communication clear and direct, making collaboration seamless. The result speaks for itself—we're happy to continue collaboration.",
+        "author": "Marjolein van Koningsveld",
+        "role": "Co-Founder & CEO at ORYX",
+        "highlight": ["communication clear", "direct"]
+      },
+      {
+        "quote": "We'd been trying to position ourselves in a competing market. Through various workshops Yummygum guided us and delivered a beautiful brand identity that's inspired us ever since.",
+        "author": "Sefa Şentürk",
+        "role": "Partner at Tuple",
+        "highlight": ["inspired"]
+      },
+      {
+        "quote": "We needed a website that attracted bigger clients and reflected our growth. Yummygum delivered a structured, high-quality process. The first design version was spot on, and communication was seamless. Now, we have a professional website that builds trust and is easy for our marketing team to manage —giving them time to focus on growth.",
+        "author": "Jordi Dijkstra",
+        "role": "Head of Marketing & Growth at Employes",
+        "highlight": ["focus on growth"]
+      },
+      {
+        "quote": "Yummygum helped us successfully expand our audience with a strong brand identity, new platform design and a stunning marketing website. We appreciated their systematic approach throughout the branding process and would 100% work with them again. Our platform's users are excited and engaged, and the results have received overwhelmingly positive reactions.",
+        "author": "Bram Jetten",
+        "role": "Chief Technology Officer at PlanGo",
+        "highlight": ["expand our audience"]
+      },
+      {
+        "quote": "Yummygum's approach to redesigning our app's navigation was exceptional. They dove deep to understand the entire user experience, emerging with a solution that feels deceptively simple. What seems completely natural and intuitive now was far from obvious at the start—that's the hallmark of brilliant UX design.",
+        "author": "Scott O'Reilly",
+        "role": "Founder & Chief Architect @ Spider Strategies",
+        "highlight": []
+      }
+    ]
+  },
+  "coreValues": {
+    "title": {
+      "line1": "The Core Values",
+      "line2": "we stand by"
+    },
+    "values": [
+      {
+        "category": "GROWTH",
+        "title": "Expand your skillset",
+        "description": "We think a person is never done learning. Gaining new experience and picking up new skills is key to staying ahead."
+      },
+      {
+        "category": "EXCELLENCE",
+        "title": "Go for the very best",
+        "description": "We're about setting the bar high and then overdeliver. That's why we aim for the very best in our work and in the way we work."
+      },
+      {
+        "category": "JOY",
+        "title": "Do what you love",
+        "description": "All the amazing things that we want to exist without barriers. We believe in doing work, relentlessly, with joy and passion."
+      },
+      {
+        "category": "SYNERGY",
+        "title": "Own your journey",
+        "description": "We believe in taking ownership of your path and creating meaningful impact through collaborative effort."
+      }
+    ]
   }
 } 
