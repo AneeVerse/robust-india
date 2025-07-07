@@ -3,13 +3,9 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { useNavbarVisibility } from '@/context/NavbarVisibilityContext';
+import { useTranslation } from 'react-i18next';
 
-const navLinks = [
-  { name: "About", href: "/about" },
-  { name: "Product", href: "/product/chemical" },
-  { name: "Services", href: "/services" },
-  { name: "Contact", href: "/contact", highlight: true },
-];
+// Nav link definitions will be built with translated names inside the component.
 
 export default function Navbar() {
   const { scrollY } = useScroll();
@@ -31,6 +27,15 @@ export default function Navbar() {
 }
 
 function NavbarContent() {
+  const { t } = useTranslation('common');
+
+  const navLinks = [
+    { name: t('nav.about'), href: '/about' },
+    { name: t('nav.product'), href: '/product/chemical' },
+    { name: t('nav.services'), href: '/services' },
+    { name: t('nav.contact'), href: '/contact', highlight: true },
+  ];
+
   return (
     <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg max-w-md sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto overflow-hidden border border-[#3c3a38] pointer-events-auto backdrop-blur-md">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />

@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react"
 import Link from 'next/link'
 import Image from 'next/image'
+import { useTranslation } from 'react-i18next'
 
 export default function ServicesSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -10,6 +11,7 @@ export default function ServicesSection() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
+  const { t } = useTranslation('common')
 
   useEffect(() => {
     // Intersection Observer to trigger animations when section comes into view
@@ -128,9 +130,9 @@ export default function ServicesSection() {
             }`}
             style={{ transitionDelay: '0.2s' }}
           >
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-gray-900">Everything you&apos;d</h1>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal text-gray-900">{t('services.headingPart1')}</h1>
             <div className="relative">
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-gray-900">need</h1>
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-gray-900">{t('services.headingPart2')}</h1>
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[#6164F6] to-[#6164F6] rounded-full"></div>
             </div>
           </div>
@@ -140,8 +142,7 @@ export default function ServicesSection() {
             }`}
             style={{ transitionDelay: '0.4s' }}
           >
-            Everything you need from product development and sourcing to packaging, warehousing, and global delivery
-            managed under one roof with seamless precision and compliance.
+            {t('services.tagline')}
           </p>
         </div>
 
@@ -154,10 +155,10 @@ export default function ServicesSection() {
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
                   <Image src="/images/container-crane.svg" alt="FTWZ Container Crane" width={20} height={20} className="filter invert brightness-0 w-5 h-5" unoptimized />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">FTWZ</h3>
+                <h3 className="text-xl font-bold text-gray-900">{t('services.ftwzTitle')}</h3>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.
+                {t('services.ftwzDesc')}
               </p>
             </div>
           </Link>
@@ -168,10 +169,10 @@ export default function ServicesSection() {
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
                   <Image src="/images/laboratory.svg" alt="Chemical Products" width={20} height={20} className="filter invert brightness-0 w-5 h-5" unoptimized />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Chemical Products</h3>
+                <h3 className="text-xl font-bold text-gray-900">{t('services.chemTitle')}</h3>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.
+                {t('services.chemDesc')}
               </p>
             </div>
           </Link>
@@ -182,10 +183,10 @@ export default function ServicesSection() {
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
                   <Image src="/images/container (5).svg" alt="3PL Container" width={20} height={20} className="filter invert brightness-0 w-5 h-5" unoptimized />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Integrated 3PL</h3>
+                <h3 className="text-xl font-bold text-gray-900">{t('services.plTitle')}</h3>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                End-to-end logistics including storage, handling, inventory management, and efficient global distribution.
+                {t('services.plDesc')}
               </p>
             </div>
           </Link>
@@ -224,10 +225,10 @@ export default function ServicesSection() {
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
                   <Image src="/images/container-crane.svg" alt="FTWZ Container Crane" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
                 </div>
-                <h3 className="text-4xl font-normal text-gray-900">FTWZ</h3>
+                <h3 className="text-4xl font-normal text-gray-900">{t('services.ftwzTitle')}</h3>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed flex-1">
-                Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.
+                {t('services.ftwzDesc')}
               </p>
             </div>
           </Link>
@@ -258,10 +259,10 @@ export default function ServicesSection() {
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
                   <Image src="/images/laboratory.svg" alt="Chemical Products" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
                 </div>
-                <h3 className="text-4xl font-normal text-gray-900">Chemical Products</h3>
+                <h3 className="text-4xl font-normal text-gray-900">{t('services.chemTitle')}</h3>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed flex-1">
-                A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.
+                {t('services.chemDesc')}
               </p>
             </div>
           </Link>
@@ -297,11 +298,10 @@ export default function ServicesSection() {
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
                   <Image src="/images/container (5).svg" alt="3PL Container" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
                 </div>
-                <h3 className="text-4xl font-normal text-gray-900">Integrated 3PL</h3>
+                <h3 className="text-2xl sm:text-3xl font-normal text-gray-900 leading-snug break-words max-w-[220px] whitespace-normal">{t('services.plTitle')}</h3>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed flex-1">
-                End-to-end logistics including storage, handling, inventory management, and efficient global
-                distribution.
+                {t('services.plDesc')}
               </p>
             </div>
           </Link>

@@ -46,12 +46,12 @@ export default function RootLayout({
       <body className="antialiased">
         <LanguageProvider>
           <ContactWidgetProvider>
-            <NavbarVisibilityProvider>
-              {children}
-              <AnimatedNavbar />
-              <FloatingActionButton />
+        <NavbarVisibilityProvider>
+          {children}
+          <AnimatedNavbar />
+          <FloatingActionButton />
               <LanguageSwitcher />
-            </NavbarVisibilityProvider>
+        </NavbarVisibilityProvider>
           </ContactWidgetProvider>
         </LanguageProvider>
       </body>

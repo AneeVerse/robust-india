@@ -3,26 +3,7 @@ import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
-
-const stats = [
-  {
-    number: 6,
-    label: 'Years of agency experience',
-  },
-  {
-    number: 100,
-    label: 'organizations successfully served',
-  },
-  {
-    number: 4.7,
-    label: 'Our clients happily rate us a 4.7 out of 5',
-  },
-  {
-    number: 81,
-    label: 'Most clients start another project with us',
-    suffix: '%',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -48,6 +29,14 @@ const itemVariants = {
 export default function StatsSection() {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, amount: 0.3 });
+  const { t } = useTranslation('common');
+
+  const stats = [
+    { number: 6, label: t('stats.years') },
+    { number: 100, label: t('stats.organizations') },
+    { number: 4.7, label: t('stats.rating') },
+    { number: 81, label: t('stats.repeat'), suffix: '%' },
+  ];
 
   return (
     <section className="py-24 bg-white">
@@ -59,7 +48,7 @@ export default function StatsSection() {
           className="text-4xl md:text-7xl font-normal text-gray-900 mb-10 text-center"
           style={{ fontFamily: 'NoiGrotesk, sans-serif', fontWeight: 400 }}
         >
-          Tried, tested, trusted
+          {t('stats.title')}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -69,7 +58,7 @@ export default function StatsSection() {
           className="mt-10 mb-25 text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto font-normal"
           style={{ fontFamily: 'NoiGrotesk, sans-serif', fontWeight: 400 }}
         >
-          With almost 2 decades of experience, we know all about the challenges tech companies face. But most importantly we know exactly how to overcome them. And our track record shows.
+          {t('stats.description')}
         </motion.p>
 
         <motion.div

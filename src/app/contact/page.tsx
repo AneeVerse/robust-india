@@ -67,7 +67,7 @@ export default function ContactPage() {
       console.error('Error submitting form:', error);
       alert('Something went wrong. Please try again or contact us directly.');
     } finally {
-      setIsSubmitting(false);
+    setIsSubmitting(false);
     }
   };
 

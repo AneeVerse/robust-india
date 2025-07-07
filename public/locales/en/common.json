@@ -6,5 +6,50 @@
     "subheadlineMobile": "Robust India is your trusted partner in chemical trade. We help businesses scale their operations with integrated FTWZ services and 3PL excellence.",
     "subheadlineDesktop1": "Integrated Chemical Trade, FTWZ Services & 3PL Excellence",
     "subheadlineDesktop2": "End-to-End Sourcing, Warehousing & Delivery Solutions"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "product": "Product",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "footer": {
+    "headline1": "We build bridges",
+    "headline2Before": "between ",
+    "headlineHighlight": "businesses",
+    "headline2After": "& global markets",
+    "newsletterTitle": "Our newsletter",
+    "newsletterDescription": "Scale your platform the right way. Get expert insights on design, development, and growth.",
+    "newsletterPlaceholder": "Enter your email",
+    "terms": "Terms of Service",
+    "designedBy": "Designed & Managed by",
+    "allRights": "All rights reserved."
+  },
+  "stats": {
+    "title": "Tried, tested, trusted",
+    "description": "With almost 2 decades of experience, we know all about the challenges tech companies face. But most importantly we know exactly how to overcome them. And our track record shows.",
+    "years": "Years of agency experience",
+    "organizations": "organizations successfully served",
+    "rating": "Our clients happily rate us a 4.7 out of 5",
+    "repeat": "Most clients start another project with us"
+  },
+  "services": {
+    "headingPart1": "Everything you'd",
+    "headingPart2": "need",
+    "tagline": "Everything you need from product development and sourcing to packaging, warehousing, and global delivery managed under one roof with seamless precision and compliance.",
+    "ftwzTitle": "FTWZ",
+    "ftwzDesc": "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
+    "chemTitle": "Chemical Products",
+    "chemDesc": "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
+    "plTitle": "Integrated 3PL",
+    "plDesc": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution."
+  },
+  "book": {
+    "heading": "Let's talk",
+    "tagline": "Find out how we can take your digital product to the next level together.",
+    "call": "Call Us",
+    "contact": "Contact Us",
+    "chat": "Chat with us"
   }
 } 

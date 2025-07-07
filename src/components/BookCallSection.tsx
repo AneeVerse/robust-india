@@ -3,9 +3,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react"
 import Image from "next/image";
 import { useProtectedContact } from "@/hooks/useProtectedContact";
+import { useTranslation } from 'react-i18next';
 
 export default function BookCallSection() {
   const { handleProtectedAction } = useProtectedContact();
+  const { t } = useTranslation('common');
   const ref = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
@@ -51,7 +53,7 @@ export default function BookCallSection() {
         style={{ scale: textScale, opacity: headingOpacity }}
         className="text-4xl sm:text-6xl md:text-8xl lg:text-[12rem] font-bold text-black mb-8 sm:mb-24 text-center leading-tight whitespace-nowrap"
       >
-        Let&apos;s talk
+        {t('book.heading')}
       </motion.h1>
       
       {/* Content container - more space between heading and content */}
@@ -62,7 +64,7 @@ export default function BookCallSection() {
           className="w-full md:w-auto flex flex-col items-center md:items-start"
         >
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-800 mb-6 sm:mb-10 max-w-xl leading-relaxed text-center md:text-left">
-            Find out how we can take your digital product to the next level together.
+            {t('book.tagline')}
           </p>
           <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-4 w-full sm:w-auto">
             <motion.button
@@ -70,21 +72,21 @@ export default function BookCallSection() {
               className="w-full sm:flex-none sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db] cursor-pointer"
               onClick={() => handleProtectedAction('Phone')}
             >
-              Call Us
+              {t('book.call')}
             </motion.button>
             <motion.button
               style={{ opacity: button2Opacity, y: button2Y }}
               className="w-full sm:flex-none sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db] cursor-pointer"
               onClick={() => window.location.href = '/contact#contact-form'}
             >
-              Contact Us
+              {t('book.contact')}
             </motion.button>
             <motion.button
               style={{ opacity: button3Opacity, y: button3Y }}
               className="w-full sm:w-auto bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-[#4B4ED0] cursor-pointer"
               onClick={() => handleProtectedAction('WhatsApp')}
             >
-              Chat with us
+              {t('book.chat')}
             </motion.button>
           </div>
         </motion.div>
