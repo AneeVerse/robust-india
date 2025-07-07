@@ -2,8 +2,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react"
 import Image from "next/image";
+import { useProtectedContact } from "@/hooks/useProtectedContact";
 
 export default function BookCallSection() {
+  const { handleProtectedAction } = useProtectedContact();
   const ref = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
@@ -66,7 +68,7 @@ export default function BookCallSection() {
             <motion.button
               style={{ opacity: button1Opacity, y: button1Y }}
               className="w-full sm:flex-none sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db] cursor-pointer"
-              onClick={() => window.location.href = 'tel:+919833950755'}
+              onClick={() => handleProtectedAction('Phone')}
             >
               Call Us
             </motion.button>
@@ -80,7 +82,7 @@ export default function BookCallSection() {
             <motion.button
               style={{ opacity: button3Opacity, y: button3Y }}
               className="w-full sm:w-auto bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-[#4B4ED0] cursor-pointer"
-              onClick={() => window.open('https://wa.me/919833950755', '_blank')}
+              onClick={() => handleProtectedAction('WhatsApp')}
             >
               Chat with us
             </motion.button>

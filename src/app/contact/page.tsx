@@ -6,8 +6,10 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send, User, MessageSquare } from 'lucide-react';
 import FooterSection from '@/components/FooterSection';
 import ServiceSlider from '@/components/ServiceSlider';
+import { useProtectedContact } from '@/hooks/useProtectedContact';
 
 export default function ContactPage() {
+  const { handleProtectedAction } = useProtectedContact();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,21 +31,44 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validation
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Please fill in all required fields (Name, Email, and Message)');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      organizationName: '',
-      address: '',
-      phoneNo: '',
-      jobPosition: '',
-      message: '',
-      service: ''
-    });
+
+    try {
+      const response = await fetch('/api/contact-page', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Redirect to thank you page
+        window.location.href = '/thank-you';
+      } else {
+        const errorData = await response.json();
+        alert(errorData.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Something went wrong. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -330,7 +355,8 @@ export default function ContactPage() {
 
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+                  className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 cursor-pointer"
+                  onClick={() => handleProtectedAction('Phone')}
                 >
                   <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
@@ -345,7 +371,8 @@ export default function ContactPage() {
 
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
+                  className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 cursor-pointer"
+                  onClick={() => handleProtectedAction('Email')}
                 >
                   <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
@@ -368,7 +395,7 @@ export default function ContactPage() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-gradient-to-r from-[#6164F6] to-[#8B8FFF] text-white font-semibold py-4 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-                    onClick={() => window.location.href = 'tel:+919833950755'}
+                    onClick={() => handleProtectedAction('Phone')}
                   >
                     Call us
                   </motion.button>
@@ -376,7 +403,7 @@ export default function ContactPage() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-white text-[#6164F6] font-semibold py-3 px-6 rounded-xl border-2 border-[#6164F6] hover:bg-[#6164F6] hover:text-white transition-all duration-300"
-                    onClick={() => window.open('https://wa.me/919833950755', '_blank')}
+                    onClick={() => handleProtectedAction('WhatsApp')}
                   >
                     Chat with us
                   </motion.button>

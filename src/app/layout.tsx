@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { NavbarVisibilityProvider } from "../context/NavbarVisibilityContext";
+import { ContactWidgetProvider } from "../context/ContactWidgetContext";
 import AnimatedNavbar from "../components/AnimatedNavbar";
+import FloatingActionButton from "../components/FloatingActionButton";
 
 export const metadata: Metadata = {
   title: "Robust India",
@@ -40,10 +42,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <NavbarVisibilityProvider>
-          {children}
-          <AnimatedNavbar />
-        </NavbarVisibilityProvider>
+        <ContactWidgetProvider>
+          <NavbarVisibilityProvider>
+            {children}
+            <AnimatedNavbar />
+            <FloatingActionButton />
+          </NavbarVisibilityProvider>
+        </ContactWidgetProvider>
       </body>
     </html>
   );
