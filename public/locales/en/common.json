@@ -51,5 +51,97 @@
     "call": "Call Us",
     "contact": "Contact Us",
     "chat": "Chat with us"
+  },
+  "about": {
+    "title": "About us",
+    "description": "Robust India an import-export company dedicated to delivering comprehensive chemical supply chain solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers."
+  },
+  "projects": {
+    "viewProject": "View Project",
+    "chemical": {
+      "title": "Chemical Products",
+      "description": "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
+      "tags": ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"]
+    },
+    "ftwz": {
+      "title": "FTWZ",
+      "description": "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
+      "tags": ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"]
+    },
+    "3pl": {
+      "title": "Integrated 3PL",
+      "description": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",
+      "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"]
+    }
+  },
+  "serviceSlider": {
+    "title": {
+      "line1": "Supporting Diverse",
+      "line2": "Industrial Sectors"
+    },
+    "sectors": {
+      "oilAndGas": "OIL & GAS",
+      "agrochemicals": "Agrochemicals",
+      "waterTreatment": "Water Treatment",
+      "miningMetals": "Mining & Metals",
+      "paintsCoatings": "Paints & Coatings",
+      "polymersPlastics": "Polymers & Plastics",
+      "pharmaceuticals": "Pharmaceuticals",
+      "textilesFibers": "Textiles & Fibers",
+      "automotiveLubricants": "Automotive & Lubricants"
+    }
+  },
+  "contact": {
+    "hero": {
+      "line1": "Let's Start a",
+      "line2": "Conversation",
+      "description": "Ready to transform your chemical trade operations? Get in touch and let's discuss how we can streamline your global supply chain."
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name *",
+      "organizationName": "Organization Name",
+      "service": {
+        "label": "Service Interest",
+        "options": {
+          "chemical": "Chemical Products",
+          "ftwz": "FTWZ Services",
+          "3pl": "Integrated 3PL",
+          "consulting": "Consulting",
+          "other": "Other"
+        }
+      },
+      "address": "Address",
+      "phone": "Phone No",
+      "email": "Email *",
+      "jobPosition": "Job Position",
+      "message": "Message *",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Get in Touch",
+      "description": "Whether you're looking to optimize your chemical supply chain, explore FTWZ opportunities, or need comprehensive 3PL solutions, our team is here to help.",
+      "office": {
+        "title": "Our Office",
+        "address": "robust india, 61, Citi Tower, Sector 15, CBD Belapur, Navi Mumbai, Maharashtra 400614\nIndia"
+      },
+      "phone": {
+        "title": "Phone",
+        "number": "+91 9833950755"
+      },
+      "email": {
+        "title": "Email",
+        "address": "robustindia@outlook.com"
+      },
+      "actions": {
+        "call": "Call us",
+        "chat": "Chat with us"
+      }
+    },
+    "cta": {
+      "title": "Ready to Simplify Your Global Trade?",
+      "description": "Join hundreds of companies who trust Robust India for their chemical trade, warehousing, and logistics needs.",
+      "button": "View Our Services"
+    }
   }
 } 

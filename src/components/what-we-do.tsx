@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion"
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 export default function LandingPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen" style={{ background: "#131518", color: "white" }}>
       {/* Main Content */}
@@ -23,7 +26,7 @@ export default function LandingPage() {
             <Image src="/images/goodbye_5821930.svg" alt="Waving Hand" width={64} height={64} className="w-12 h-12 sm:w-16 sm:h-16 filter invert brightness-0 ml-4 sm:ml-20" />
           </motion.div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-light leading-tight text-left ml-8 sm:ml-20">
-            About us
+            {t('about.title')}
           </h1>
         </div>
 
@@ -40,7 +43,7 @@ export default function LandingPage() {
             >
               <Image 
                 src="/images/about-us4.jpg" 
-                alt="About Robust India" 
+                alt={t('about.title')} 
                 width={1200} 
                 height={900} 
                 className="rounded-lg shadow-xl"
@@ -57,7 +60,7 @@ export default function LandingPage() {
               className="space-y-8 pr-4 sm:pr-8"
             >
               <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl text-justify hyphens-auto" style={{ textJustify: 'inter-word', hyphens: 'auto' }}>
-                Robust India an import-export company dedicated to delivering comprehensive chemical supply chain solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers.
+                {t('about.description')}
               </p>
             </motion.div>
           </div>

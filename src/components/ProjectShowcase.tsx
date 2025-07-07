@@ -4,33 +4,28 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { slug: 'chemical-products',
+  { 
+    slug: 'chemical-products',
     image: "/images/product2.jpg",
-    title: "Chemical Products",
-    description:
-      "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
-    tags: ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"],
+    translationKey: "chemical"
   },
-  { slug: 'ftwz',
+  { 
+    slug: 'ftwz',
     image: "/images/demo/ftw.jpg",
-    title: "FTWZ",
-    description:
-      "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
-    tags: ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"],
+    translationKey: "ftwz"
   },
-  { slug: 'integrated-3pl',
+  { 
+    slug: 'integrated-3pl',
     image: "/images/demo/shipping.jpg",
-    title: "Integrated 3PL",
-    description:
-      "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",
-    tags: ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"],
+    translationKey: "3pl"
   },
 ];
 
-const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ visible, x, y }) => (
+const CustomCursor: React.FC<{ visible: boolean; x: number; y: number; text: string }> = ({ visible, x, y, text }) => (
   <div
     style={{
       position: "fixed",
@@ -56,16 +51,23 @@ const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ vi
       letterSpacing: "0.01em"
     }}
   >
-    View Project
+    {text}
   </div>
 );
 
 const ProjectShowcase = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
   const descRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [cursor, setCursor] = React.useState({ visible: false, x: 0, y: 0 });
+
+  // Helper function to safely get tags array
+  const getProjectTags = (translationKey: string): string[] => {
+    const tags = t(`projects.${translationKey}.tags`, { returnObjects: true });
+    return Array.isArray(tags) ? tags.map(tag => String(tag)) : [];
+  };
 
   useEffect(() => {
     // Disable scroll-trigger animation on mobile
@@ -134,7 +136,7 @@ const ProjectShowcase = () => {
       className="relative bg-white overflow-auto h-auto sm:h-screen sm:overflow-hidden"
     >
       <div className="hidden sm:block">
-        <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
+        <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} text={t('projects.viewProject')} />
       </div>
 
       {/* Mobile Static Project List */}
@@ -144,15 +146,19 @@ const ProjectShowcase = () => {
             <div className="bg-white rounded-3xl p-6 shadow-lg">
               <Image
                 src={project.image}
-                alt={project.title}
+                alt={t(`projects.${project.translationKey}.title`)}
                 width={800}
                 height={500}
                 className="rounded-xl w-full h-auto object-cover mb-4"
               />
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h2>
-              <p className="text-base text-gray-600 mb-4">{project.description}</p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                {t(`projects.${project.translationKey}.title`)}
+              </h2>
+              <p className="text-base text-gray-600 mb-4">
+                {t(`projects.${project.translationKey}.description`)}
+              </p>
               <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
+                {getProjectTags(project.translationKey).map((tag: string) => (
                   <span key={tag} className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
                     {tag}
                   </span>
@@ -182,7 +188,7 @@ const ProjectShowcase = () => {
               <Image
                 ref={el => { imageRefs.current[i] = el; }}
                 src={project.image}
-                alt={project.title}
+                alt={t(`projects.${project.translationKey}.title`)}
                 width={800}
                 height={500}
                 quality={90}
@@ -216,34 +222,23 @@ const ProjectShowcase = () => {
                   alignItems: "flex-start",
                 }}
               >
-                {/* <button style={{
-                  background: "#bdbdbd",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: "1.5rem",
-                  padding: "0.3rem 1.2rem",
-                  fontSize: "1rem",
-                  marginBottom: "1.2rem",
-                  fontWeight: 500,
-                  cursor: "pointer"
-                }}>View Project</button> */}
                 <h2 style={{
                   fontSize: "2.8rem",
                   fontWeight: 700,
                   margin: 0,
                   color: "#222",
                   marginBottom: "1.2rem"
-                }}>{project.title}</h2>
+                }}>{t(`projects.${project.translationKey}.title`)}</h2>
                 <p style={{
                   fontSize: "1.25rem",
                   color: "#444",
                   marginBottom: "2rem",
                   lineHeight: 1.5
                 }}>
-                  {project.description}
+                  {t(`projects.${project.translationKey}.description`)}
                 </p>
                 <div style={{ display: "flex", gap: "0.7rem", flexWrap: "wrap" }}>
-                  {project.tags.map(tag => (
+                  {getProjectTags(project.translationKey).map((tag: string) => (
                     <span key={tag} style={{
                       background: "#f5f5f5",
                       color: "#222",

@@ -7,8 +7,10 @@ import { MapPin, Phone, Mail, Send, User, MessageSquare } from 'lucide-react';
 import FooterSection from '@/components/FooterSection';
 import ServiceSlider from '@/components/ServiceSlider';
 import { useProtectedContact } from '@/hooks/useProtectedContact';
+import { useTranslation } from 'next-i18next';
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   const { handleProtectedAction } = useProtectedContact();
   const [formData, setFormData] = useState({
     name: '',
@@ -67,7 +69,7 @@ export default function ContactPage() {
       console.error('Error submitting form:', error);
       alert('Something went wrong. Please try again or contact us directly.');
     } finally {
-    setIsSubmitting(false);
+      setIsSubmitting(false);
     }
   };
 
@@ -112,7 +114,7 @@ export default function ContactPage() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal text-gray-900 mb-4 sm:mb-5 md:mb-6 leading-tight tracking-tight"
             style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
           >
-            {["Let's Start a", "Conversation"].map((line, lineIndex) => (
+            {[t('contact.hero.line1'), t('contact.hero.line2')].map((line, lineIndex) => (
               <React.Fragment key={lineIndex}>
                 {lineIndex === 1 ? (
                   <span className="relative inline-block">
@@ -154,7 +156,7 @@ export default function ContactPage() {
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-relaxed max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto px-4 sm:px-0"
             style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
           >
-            Ready to transform your chemical trade operations? Get in touch and let&apos;s discuss how we can streamline your global supply chain.
+            {t('contact.hero.description')}
           </motion.p>
         </motion.div>
       </section>
@@ -162,7 +164,7 @@ export default function ContactPage() {
       {/* Main Content */}
       <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
         <div className="max-w-7xl mx-auto">
-                      <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16">
             {/* Contact Form */}
             <motion.div id="contact-form"
               initial={{ opacity: 0, x: -50 }}
@@ -171,7 +173,7 @@ export default function ContactPage() {
               className="bg-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 -mt-5" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                Send us a Message
+                {t('contact.form.title')}
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -188,7 +190,7 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
-                        placeholder="Name *"
+                        placeholder={t('contact.form.name')}
                       />
                     </div>
                   </div>
@@ -201,7 +203,7 @@ export default function ContactPage() {
                       value={formData.organizationName}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
-                      placeholder="Organization Name"
+                      placeholder={t('contact.form.organizationName')}
                     />
                   </div>
                 </div>
@@ -215,12 +217,12 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
                   >
-                    <option value="" className="text-gray-500">Service Interest</option>
-                    <option value="chemical-products" className="text-gray-900">Chemical Products</option>
-                    <option value="ftwz" className="text-gray-900">FTWZ Services</option>
-                    <option value="integrated-3pl" className="text-gray-900">Integrated 3PL</option>
-                    <option value="consulting" className="text-gray-900">Consulting</option>
-                    <option value="other" className="text-gray-900">Other</option>
+                    <option value="">{t('contact.form.service.label')}</option>
+                    <option value="chemical-products">{t('contact.form.service.options.chemical')}</option>
+                    <option value="ftwz">{t('contact.form.service.options.ftwz')}</option>
+                    <option value="integrated-3pl">{t('contact.form.service.options.3pl')}</option>
+                    <option value="consulting">{t('contact.form.service.options.consulting')}</option>
+                    <option value="other">{t('contact.form.service.options.other')}</option>
                   </select>
                 </div>
 
@@ -233,7 +235,7 @@ export default function ContactPage() {
                     value={formData.address}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
-                    placeholder="Address"
+                    placeholder={t('contact.form.address')}
                   />
                 </div>
 
@@ -249,7 +251,7 @@ export default function ContactPage() {
                         value={formData.phoneNo}
                         onChange={handleInputChange}
                         className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
-                        placeholder="Phone No"
+                        placeholder={t('contact.form.phone')}
                       />
                     </div>
                   </div>
@@ -265,7 +267,7 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
-                        placeholder="Email *"
+                        placeholder={t('contact.form.email')}
                       />
                     </div>
                   </div>
@@ -280,7 +282,7 @@ export default function ContactPage() {
                     value={formData.jobPosition}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 text-gray-900"
-                    placeholder="Job Position"
+                    placeholder={t('contact.form.jobPosition')}
                   />
                 </div>
 
@@ -296,7 +298,7 @@ export default function ContactPage() {
                       required
                       rows={5.0}
                       className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#6164F6] focus:border-[#6164F6] transition-all duration-200 resize-none text-gray-900"
-                      placeholder="Message *"
+                      placeholder={t('contact.form.message')}
                     />
                   </div>
                 </div>
@@ -313,7 +315,7 @@ export default function ContactPage() {
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      Send Message
+                      {t('contact.form.submit')}
                     </>
                   )}
                 </motion.button>
@@ -329,10 +331,10 @@ export default function ContactPage() {
             >
               <div>
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 mt-7" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  Get in Touch
+                  {t('contact.info.title')}
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-12">
-                  Whether you&apos;re looking to optimize your chemical supply chain, explore FTWZ opportunities, or need comprehensive 3PL solutions, our team is here to help.
+                  {t('contact.info.description')}
                 </p>
               </div>
 
@@ -345,10 +347,9 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2 -mt-4">Our Office</h3>
+                    <h3 className="font-bold text-gray-900 mb-2 -mt-4">{t('contact.info.office.title')}</h3>
                     <p className="text-gray-600">
-                    robust india, 61, Citi Tower, Sector 15, CBD Belapur, Navi Mumbai, Maharashtra 400614
-                      India
+                      {t('contact.info.office.address')}
                     </p>
                   </div>
                 </motion.div>
@@ -362,9 +363,9 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Phone</h3>
+                    <h3 className="font-bold text-gray-900 mb-2">{t('contact.info.phone.title')}</h3>
                     <p className="text-gray-600">
-                      +91 9833950755
+                      {t('contact.info.phone.number')}
                     </p>
                   </div>
                 </motion.div>
@@ -378,14 +379,12 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-2">Email</h3>
+                    <h3 className="font-bold text-gray-900 mb-2">{t('contact.info.email.title')}</h3>
                     <p className="text-gray-600">
-                    robustindia@outlook.com
+                      {t('contact.info.email.address')}
                     </p>
                   </div>
                 </motion.div>
-
-               
               </div>
 
               {/* Quick Actions */}
@@ -397,7 +396,7 @@ export default function ContactPage() {
                     className="bg-gradient-to-r from-[#6164F6] to-[#8B8FFF] text-white font-semibold py-4 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
                     onClick={() => handleProtectedAction('Phone')}
                   >
-                    Call us
+                    {t('contact.info.actions.call')}
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -405,7 +404,7 @@ export default function ContactPage() {
                     className="bg-white text-[#6164F6] font-semibold py-3 px-6 rounded-xl border-2 border-[#6164F6] hover:bg-[#6164F6] hover:text-white transition-all duration-300"
                     onClick={() => handleProtectedAction('WhatsApp')}
                   >
-                    Chat with us
+                    {t('contact.info.actions.chat')}
                   </motion.button>
                 </div>
               </div>
@@ -424,10 +423,10 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-              Ready to Simplify Your Global Trade?
+              {t('contact.cta.title')}
             </h2>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Join hundreds of companies who trust Robust India for their chemical trade, warehousing, and logistics needs.
+              {t('contact.cta.description')}
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -438,7 +437,7 @@ export default function ContactPage() {
                 href="/services"
                 className="bg-gradient-to-r from-[#6164F6] to-[#8B8FFF] text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-3"
               >
-                View Our Services
+                {t('contact.cta.button')}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

@@ -1,20 +1,22 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 const services = [
-  { name: 'OIL & GAS', img: '/images/service/oil-rig (2) 1.png' },
-  { name: 'Agrochemicals', img: '/images/service/chemicals 1.png' },
-  { name: 'Water Treatment', img: '/images/service/wastewater 1.png' },
-  { name: 'Mining & Metals', img: '/images/service/mining 1.png' },
-  { name: 'Paints & Coatings', img: '/images/service/varnish 1 (1).png' },
-  { name: 'Polymers & Plastics', img: '/images/service/polymer 1.png' },
-  { name: 'Pharmaceuticals', img: '/images/service/pill 1.png' },
-  { name: 'Textiles & Fibers', img: '/images/service/thread 1.png' },
-  { name: 'Automotive & Lubricants', img: '/images/service/automotive 1.png' },
+  { key: 'oilAndGas', img: '/images/service/oil-rig (2) 1.png' },
+  { key: 'agrochemicals', img: '/images/service/chemicals 1.png' },
+  { key: 'waterTreatment', img: '/images/service/wastewater 1.png' },
+  { key: 'miningMetals', img: '/images/service/mining 1.png' },
+  { key: 'paintsCoatings', img: '/images/service/varnish 1 (1).png' },
+  { key: 'polymersPlastics', img: '/images/service/polymer 1.png' },
+  { key: 'pharmaceuticals', img: '/images/service/pill 1.png' },
+  { key: 'textilesFibers', img: '/images/service/thread 1.png' },
+  { key: 'automotiveLubricants', img: '/images/service/automotive 1.png' },
 ];
 
 export default function ServiceSlider() {
+  const { t } = useTranslation();
   // Duplicate the array for seamless infinite effect
   const sliderItems = [...services, ...services];
 
@@ -25,7 +27,7 @@ export default function ServiceSlider() {
           className="text-white text-left text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-normal mb-6 sm:mb-14 leading-tight"
           style={{ fontFamily: 'Segoe UI, Arial, sans-serif', letterSpacing: '-1px', wordBreak: 'break-word' }}
         >
-          Supporting Diverse<br />Industrial Sectors
+          {t('serviceSlider.title.line1')}<br />{t('serviceSlider.title.line2')}
         </h2>
       </div>
       {/* Full-width slider row below heading */}
@@ -44,12 +46,14 @@ export default function ServiceSlider() {
             >
               <Image
                 src={service.img}
-                alt={service.name}
+                alt={t(`serviceSlider.sectors.${service.key}`)}
                 width={66}
                 height={66}
                 className="w-12 h-12 mr-2 sm:w-16 sm:h-16 sm:mr-6"
               />
-              <span className="text-white text-lg sm:text-2xl md:text-4xl font-extrabold whitespace-nowrap">{service.name}</span>
+              <span className="text-white text-lg sm:text-2xl md:text-4xl font-extrabold whitespace-nowrap">
+                {t(`serviceSlider.sectors.${service.key}`)}
+              </span>
             </div>
           ))}
         </div>
