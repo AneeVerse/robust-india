@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { NavbarVisibilityProvider } from "../context/NavbarVisibilityContext";
 import { ContactWidgetProvider } from "../context/ContactWidgetContext";
+import { LanguageProvider } from "../components/LanguageProvider";
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import AnimatedNavbar from "../components/AnimatedNavbar";
 import FloatingActionButton from "../components/FloatingActionButton";
 
@@ -42,13 +44,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <ContactWidgetProvider>
-          <NavbarVisibilityProvider>
-            {children}
-            <AnimatedNavbar />
-            <FloatingActionButton />
-          </NavbarVisibilityProvider>
-        </ContactWidgetProvider>
+        <LanguageProvider>
+          <ContactWidgetProvider>
+            <NavbarVisibilityProvider>
+              {children}
+              <AnimatedNavbar />
+              <FloatingActionButton />
+              <LanguageSwitcher />
+            </NavbarVisibilityProvider>
+          </ContactWidgetProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

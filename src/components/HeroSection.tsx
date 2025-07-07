@@ -3,8 +3,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useNavbarVisibility } from "../context/NavbarVisibilityContext";
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 export default function HeroSection() {
+  const { t } = useTranslation('common');
   const [isVisible, setIsVisible] = useState(false);
   const [showSubheadline, setShowSubheadline] = useState(false);
   const { setShowNavbar } = useNavbarVisibility();
@@ -33,7 +35,7 @@ export default function HeroSection() {
   }, [setShowNavbar]);
 
   // Headline lines for animation
-  const headlineLines = ["Global Trade", "Simplified."];
+  const headlineLines = [t('hero.headline1'), t('hero.headline2')];
 
   // Customize your gradient here:
   const gradientStyle = {
@@ -61,7 +63,7 @@ export default function HeroSection() {
               priority
             />
             <h1 className="text-lg font-extrabold tracking-tight text-black">
-              ROBUST INDIA
+              {t('hero.brandName')}
             </h1>
           </Link>
         </div>
@@ -84,7 +86,7 @@ export default function HeroSection() {
               priority
             />
             <h1 className="text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-extrabold tracking-tight text-black ">
-              ROBUST INDIA
+              {t('hero.brandName')}
             </h1>
           </Link>
           
@@ -122,24 +124,13 @@ export default function HeroSection() {
           >
             {/* Mobile version */}
             <p className="block sm:hidden">
-              Robust India is your trusted partner in chemical trade. We help businesses scale their operations with integrated{' '}
-              <span className="relative inline-block mx-1">
-                <span className="z-10 relative font-medium">FTWZ</span>
-                <Image
-                  src="/images/Vector (4).png"
-                  alt="Hand-drawn circle"
-                  width={60}
-                  height={40}
-                  className="absolute left-1/2 top-1/2 w-full h-full transform -translate-x-1/2 -translate-y-1/2 scale-125 z-0 pointer-events-none opacity-80"
-                />
-              </span>
-              {' '}services and 3PL excellence.
+              {t('hero.subheadlineMobile')}
             </p>
             
             {/* Desktop version */}
             <div className="hidden sm:block">
               <p className="mb-2">
-                Integrated Chemical Trade,{' '}
+                {t('hero.subheadlineDesktop1').split('FTWZ')[0]}
                 <span className="relative inline-block mx-1 sm:mx-2 md:mx-3 lg:mx-4">
                   <span className="z-10 relative">FTWZ</span>
                   <Image
@@ -159,10 +150,10 @@ export default function HeroSection() {
                     }}
                   />
                 </span>
-                {' '}Services & 3PL Excellence
+                {t('hero.subheadlineDesktop1').split('FTWZ')[1]}
               </p>
               <p>
-                End-to-End Sourcing, Warehousing & Delivery Solutions
+                {t('hero.subheadlineDesktop2')}
               </p>
             </div>
           </div>
