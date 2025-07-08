@@ -1,37 +1,36 @@
+'use client';
+
 import Image from 'next/image';
 import BookACall from '@/components/BookCallSection';
 import FooterSection from '@/components/FooterSection';
 import ChemicalFamilySection from '@/components/ChemicalFamilySection';
 import ServiceSlider from '@/components/ServiceSlider';
+import { useTranslation } from 'next-i18next';
+import { chemicalProductImages } from './images';
 
 export default function ProductChemicalPage() {
-  const service = {
-    slug: 'chemical-products',
-    title: 'Chemical Products',
-    description: 'Our Chemical Products division sources a comprehensive range of high-purity specialty and bulk chemicals from leading global producers. From precise formulation and rigorous quality assurance testing to custom packaging and compliant distribution, we manage every aspect of the supply chain to deliver tailored solutions that meet the exacting specifications of clients across industries. Our expertise in regulatory compliance and logistical coordination ensures safe, reliable delivery, helping businesses innovate and scale with confidence.',
-    image: '/images/product2.jpg',
-    fullImage: '/images/project/slug1/chemical-product-1.png',
-    smallImages: [
-      '/images/product.jpg',
-      '/images/product3.jpg',
-    ],
-    tags: ['Chemical Products', 'Global Distribution', 'Packaging', 'Brand Identity'],
+  const { t } = useTranslation();
+
+  const serviceData = {
+    title: t('chemicalProduct.title'),
+    description: t('chemicalProduct.description'),
+    tags: t('chemicalProduct.tags', { returnObjects: true }) as string[],
   };
 
   return (
     <main className="min-h-screen bg-white p-4 sm:p-6 md:p-5">
       <div className="w-full">
         <Image
-          src={service.image}
-          alt={service.title}
+          src={chemicalProductImages.main}
+          alt={serviceData.title}
           width={1920}
           height={1080}
           className="w-full h-[95vh] object-cover rounded-xl"
         />
       </div>
       <div className="w-full px-4 sm:px-6 md:px-5 py-16">
-        <h1 className="text-5xl font-normal text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{service.title}</h1>
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{service.description}</p>
+        <h1 className="text-5xl font-normal text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{serviceData.title}</h1>
+        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{serviceData.description}</p>
         
         {/* Chemical Family section */}
         <ChemicalFamilySection />
@@ -41,8 +40,8 @@ export default function ProductChemicalPage() {
         <hr className="border-gray-300 mb-8" />
         <div className="flex items-center flex-wrap gap-8">
           <div>
-            <p className="text-lg text-gray-900">Headquarters</p>
-            <p className="text-base md:text-md font-medium text-gray-800">Mumbai</p>
+            <p className="text-lg text-gray-900">{t('chemicalProduct.stats.headquarters.label')}</p>
+            <p className="text-base md:text-md font-medium text-gray-800">{t('chemicalProduct.stats.headquarters.value')}</p>
           </div>
           <div>
             <svg className="inline-block h-10 w-8 text-gray-400 transform rotate-90" fill="none" viewBox="0 0 27 10" xmlns="http://www.w3.org/2000/svg">
@@ -50,23 +49,23 @@ export default function ProductChemicalPage() {
             </svg>
           </div>
           <div>
-            <p className="text-lg text-gray-900">Monthly Visitors</p>
-            <p className="text-base md:text-md font-medium text-[#6164f6]">250K+</p>
+            <p className="text-lg text-gray-900">{t('chemicalProduct.stats.monthlyVisitors.label')}</p>
+            <p className="text-base md:text-md font-medium text-[#6164f6]">{t('chemicalProduct.stats.monthlyVisitors.value')}</p>
           </div>
           <div>
-            <p className="text-lg text-gray-900">Used by</p>
-            <p className="text-base md:text-md font-medium text-[#6164f6]">100+ organizations</p>
+            <p className="text-lg text-gray-900">{t('chemicalProduct.stats.usedBy.label')}</p>
+            <p className="text-base md:text-md font-medium text-[#6164f6]">{t('chemicalProduct.stats.usedBy.value')}</p>
           </div>
         </div>
       </div>
       
       <div className="w-full mb-16 -mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-          {service.smallImages.map((src, idx) => (
+          {chemicalProductImages.smallImages.map((src, idx) => (
             <Image
               key={idx}
               src={src}
-              alt={`${service.title} detail ${idx + 1}`}
+              alt={`${serviceData.title} detail ${idx + 1}`}
               width={800}
               height={500}
               className="w-full h-[450px] sm:h-[500px] md:h-[550px] object-cover rounded-xl"

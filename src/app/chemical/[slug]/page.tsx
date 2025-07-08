@@ -1,16 +1,18 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+import { use } from 'react';
 import FooterSection from '@/components/FooterSection';
 import BookCallSection from '@/components/BookCallSection';
 import ServiceSlider from '@/components/ServiceSlider';
-
 import { TbAtom, TbFlask } from 'react-icons/tb';
 
 interface ChemicalProduct {
   name: string;
-  slug: string;
-  description?: string;
-  physicalProperties?: {
+  description: string;
+  physicalProperties: {
     appearance: string;
     odor: string;
     boilingPoint: string;
@@ -19,91 +21,24 @@ interface ChemicalProduct {
     solubility: string;
     viscosity: string;
   };
-  applications?: {
+  applications: Array<{
     title: string;
     description: string;
-  }[];
-  industriesServed?: string[];
+  }>;
+  industriesServed: string[];
 }
 
-const chemicalProducts: ChemicalProduct[] = [
-  { 
-    name: 'Naphtha',
-    slug: 'naphtha',
-    description: 'A highly volatile, flammable liquid hydrocarbon mixture derived from crude oil refining or natural gas processing.',
-    physicalProperties: {
-      appearance: 'Clear to pale yellow liquid',
-      odor: 'Strong gasoline-like smell',
-      boilingPoint: '30-200°C (86-392°F), varies by type',
-      density: '~0.65-0.75 g/cm³',
-      flashPoint: 'Typically < 30°C (86°F), making it highly flammable',
-      solubility: 'Insoluble in water, soluble in organic solvents',
-      viscosity: 'Low'
-    },
-    applications: [
-      { title: 'Petrochemical Feedstock', description: 'Used as a feedstock for the production of ethylene, propylene, and other olefins' },
-      { title: 'Fuel Blending', description: 'A key ingredient in blending gasoline to enhance octane levels' },
-      { title: 'Solvent Applications', description: 'Used as a solvent in paints, coatings, adhesives, and cleaning agents' },
-      { title: 'Aromatics Production', description: 'Serves as a feedstock for producing benzene, toluene, and xylene (BTX)' },
-      { title: 'Industrial Processing', description: 'Acts as a processing solvent in industries such as rubber, textiles, and agrochemicals' },
-      { title: 'Energy and Heating', description: 'Used as a fuel in certain industrial heating systems and turbines' }
-    ],
-    industriesServed: ['Petrochemicals', 'Fuel and Energy', 'Paints and Coatings', 'Adhesives and Sealants', 'Agrochemicals', 'Textiles and Rubber']
-  },
-  { 
-    name: 'Propylene',
-    slug: 'propylene',
-    description: 'A colorless gas hydrocarbon with a faint petroleum-like odor, primarily used as a building block for plastics and chemicals.',
-    physicalProperties: {
-      appearance: 'Colorless gas',
-      odor: 'Faint petroleum-like odor',
-      boilingPoint: '-47.6°C (-53.7°F)',
-      density: '0.51 g/cm³ (liquid at -47°C)',
-      flashPoint: '-108°C (-162°F)',
-      solubility: 'Slightly soluble in water, soluble in organic solvents',
-      viscosity: 'Very low'
-    },
-    applications: [
-      { title: 'Polypropylene Production', description: 'Primary raw material for manufacturing polypropylene plastics' },
-      { title: 'Chemical Intermediates', description: 'Used to produce propylene oxide, isopropanol, and other chemicals' },
-      { title: 'Fuel Applications', description: 'Used in fuel blending and as a component in liquefied petroleum gas (LPG)' },
-      { title: 'Synthetic Rubber', description: 'Raw material for producing synthetic rubber and elastomers' }
-    ],
-    industriesServed: ['Plastics and Polymers', 'Chemical Manufacturing', 'Automotive', 'Packaging', 'Textiles', 'Construction']
-  },
-  { 
-    name: 'Benzene',
-    slug: 'benzene',
-    description: 'A colorless, highly flammable liquid with a sweet odor, serving as a fundamental building block in petrochemical industry.',
-    physicalProperties: {
-      appearance: 'Colorless liquid',
-      odor: 'Sweet aromatic odor',
-      boilingPoint: '80.1°C (176.2°F)',
-      density: '0.8765 g/cm³',
-      flashPoint: '-11°C (12°F)',
-      solubility: 'Slightly soluble in water, miscible with organic solvents',
-      viscosity: 'Low'
-    },
-    applications: [
-      { title: 'Styrene Production', description: 'Major feedstock for producing styrene monomer used in polystyrene' },
-      { title: 'Phenol Manufacturing', description: 'Key raw material for phenol production via cumene process' },
-      { title: 'Cyclohexane Production', description: 'Used to produce cyclohexane for nylon manufacturing' },
-      { title: 'Chemical Solvents', description: 'Industrial solvent for various chemical processes' }
-    ],
-    industriesServed: ['Petrochemicals', 'Plastics', 'Synthetic Fibers', 'Pharmaceuticals', 'Paints and Coatings', 'Rubber']
-  }
-];
-
-export async function generateStaticParams() {
-  return chemicalProducts.map((chemical) => ({ slug: chemical.slug }));
+interface ChemicalParams {
+  slug: string;
 }
 
-export default async function ChemicalDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const chemical = chemicalProducts.find((c) => c.slug === slug);
+export default function ChemicalDetailPage({ params }: { params: Promise<ChemicalParams> }) {
+  const { t } = useTranslation();
+  const { slug } = use(params);
+  const chemical = t(`chemicalDetail.products.${slug}`, { returnObjects: true }) as ChemicalProduct;
   
   if (!chemical || !chemical.description) {
-    return <div className="p-20 text-center">Chemical not found</div>;
+    return <div className="p-20 text-center">{t('chemicalDetail.notFound')}</div>;
   }
 
   return (
@@ -137,13 +72,13 @@ export default async function ChemicalDetailPage({ params }: { params: Promise<{
                   <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                     <TbAtom className="w-6 h-6 text-white" />
                   </div>
-                  Physical Properties
+                  {t('chemicalDetail.physicalProperties.title')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {Object.entries(chemical.physicalProperties).map(([key, value], index) => (
                     <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
-                      <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
+                      <h4 className="font-semibold text-gray-900 mb-3 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {t(`chemicalDetail.physicalProperties.${key}`)}
                       </h4>
                       <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                         {value}
@@ -163,7 +98,7 @@ export default async function ChemicalDetailPage({ params }: { params: Promise<{
                   <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                     <TbFlask className="w-6 h-6 text-white" />
                   </div>
-                  Applications
+                  {t('chemicalDetail.applications.title')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {chemical.applications.map((app, index) => (

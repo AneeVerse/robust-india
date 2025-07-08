@@ -7,21 +7,16 @@ import Link from 'next/link';
 import ServiceSlider from '@/components/ServiceSlider';
 import FooterSection from '@/components/FooterSection';
 import BookACall from '@/components/BookCallSection';
+import { useTranslation } from 'next-i18next';
 
-const services = [
-  { slug: 'ftwz',
-    image: '/images/demo/ftw.jpg',
-    title: 'FTWZ',
-    description: 'Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.',
-  },
-  { slug: 'integrated-3pl',
-    image: '/images/demo/shipping.jpg',
-    title: 'Integrated 3PL',
-    description: 'End-to-end logistics including storage, handling, inventory management, and efficient global distribution.',
-  },
-];
+const serviceImages = {
+  'ftwz': '/images/demo/ftw.jpg',
+  'integrated-3pl': '/images/demo/shipping.jpg',
+};
 
-const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ visible, x, y }) => (
+const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ visible, x, y }) => {
+  const { t } = useTranslation();
+  return (
   <div
     style={{
       position: "fixed",
@@ -47,15 +42,25 @@ const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ vi
       letterSpacing: "0.01em"
     }}
   >
-    View Service
+      {t('servicesPage.viewService')}
   </div>
 );
+};
 
 export default function ServicesPage() {
+  const { t } = useTranslation();
   const [cursor, setCursor] = useState({ visible: false, x: 0, y: 0 });
+  
+  const services = t('servicesPage.mainServices', { returnObjects: true }) as Array<{
+    slug: keyof typeof serviceImages;
+    title: string;
+    description: string;
+  }>;
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     setCursor({ visible: true, x: e.clientX, y: e.clientY });
   };
+  
   const handleMouseLeave = () => {
     setCursor(c => ({ ...c, visible: false }));
   };
@@ -78,7 +83,7 @@ export default function ServicesPage() {
             initial="hidden"
             animate="visible"
           >
-            {"Our comprehensive service offerings".split('').map((char, idx) => (
+            {t('servicesPage.heading').split('').map((char, idx) => (
               <motion.span
                 key={idx}
                 variants={{
@@ -110,7 +115,7 @@ export default function ServicesPage() {
             {services.map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`} className="block rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden shadow-lg bg-white">
                 <Image
-                  src={service.image}
+                    src={serviceImages[service.slug]}
                   alt={service.title}
                   width={1200}
                   height={600}

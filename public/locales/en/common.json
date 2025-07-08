@@ -252,5 +252,246 @@
         "description": "We believe in taking ownership of your path and creating meaningful impact through collaborative effort."
       }
     ]
+  },
+  "chemicalFamily": {
+    "title": "Chemical Family",
+    "subtitle": "Explore our comprehensive range of chemical products and solutions designed to innovate and scale with confidence.",
+    "viewProducts": "View Products",
+    "productsAvailable": "{{count}} products",
+    "requestInfo": "Request Detailed Information",
+    "viewDetails": "View Details",
+    "categories": {
+      "basicPetrochemicals": {
+        "name": "Basic Petrochemicals & Feedstocks",
+        "count": 12
+      },
+      "fuelAdditives": {
+        "name": "Fuel Additives (Oxygenates)",
+        "count": 3
+      },
+      "polymers": {
+        "name": "Polymers & Intermediates",
+        "count": 5
+      },
+      "phosphorus": {
+        "name": "Phosphorus-Based Chemicals",
+        "count": 4
+      },
+      "sulfur": {
+        "name": "Sulfur-Based Chemicals",
+        "count": 3
+      },
+      "amines": {
+        "name": "Amines & Amine Derivatives",
+        "count": 6
+      },
+      "phenols": {
+        "name": "Phenols & Derivatives",
+        "count": 7
+      },
+      "aromatics": {
+        "name": "Aromatic Hydrocarbons & Derivatives",
+        "count": 4
+      },
+      "acrylics": {
+        "name": "Acrylic Monomers & Derivatives",
+        "count": 3
+      },
+      "cyanide": {
+        "name": "Cyanide-Based Chemicals",
+        "count": 1
+      },
+      "organometallic": {
+        "name": "Organometallic-Based Chemicals",
+        "count": 4
+      }
+    }
+  },
+  "servicesPage": {
+    "heading": "Our comprehensive service offerings",
+    "viewService": "View Service",
+    "mainServices": [
+      {
+        "slug": "ftwz",
+        "title": "FTWZ",
+        "description": "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed."
+      },
+      {
+        "slug": "integrated-3pl",
+        "title": "Integrated 3PL",
+        "description": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution."
+      }
+    ]
+  },
+  "serviceDetail": {
+    "notFound": "Service not found",
+    "servicesProvided": "Services provided",
+    "stats": {
+      "headquarters": {
+        "label": "Headquarters",
+        "value": "Mumbai"
+      },
+      "monthlyVisitors": {
+        "label": "Monthly Visitors",
+        "value": "250K+"
+      },
+      "usedBy": {
+        "label": "Used by",
+        "value": "100+ organizations"
+      }
+    },
+    "services": {
+      "ftwz": {
+        "title": "FTWZ",
+        "description": "FTWZ (Free Trade Warehousing Zone) provides fully bonded storage facilities and value-added services without the need for a local entity. We streamline import and export processes through seamless customs handling, real-time inventory tracking, and integrated digital reporting. Our turnkey solutions include kitting, labeling, and distribution under one roof, enabling businesses to optimize cash flow, reduce overhead, and accelerate time to market.",
+        "tags": ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"]
+      },
+      "integrated-3pl": {
+        "title": "Integrated 3PL",
+        "description": "Our Integrated 3PL service offers end-to-end logistics management, combining warehousing, transportation, and inventory control under a unified platform. Leveraging advanced warehouse management systems, predictive analytics, and a global carrier network, we optimize storage layouts, automate order fulfillment, and provide real-time visibility across the supply chain. From inbound procurement to last-mile delivery, we ensure cost-effective, scalable solutions tailored to each client's unique operational needs.",
+        "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"]
+      }
+    }
+  },
+  "chemicalProduct": {
+    "title": "Chemical Products",
+    "description": "Our Chemical Products division sources a comprehensive range of high-purity specialty and bulk chemicals from leading global producers. From precise formulation and rigorous quality assurance testing to custom packaging and compliant distribution, we manage every aspect of the supply chain to deliver tailored solutions that meet the exacting specifications of clients across industries. Our expertise in regulatory compliance and logistical coordination ensures safe, reliable delivery, helping businesses innovate and scale with confidence.",
+    "tags": ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"],
+    "stats": {
+      "headquarters": {
+        "label": "Headquarters",
+        "value": "Mumbai"
+      },
+      "monthlyVisitors": {
+        "label": "Monthly Visitors",
+        "value": "250K+"
+      },
+      "usedBy": {
+        "label": "Used by",
+        "value": "100+ organizations"
+      }
+    }
+  },
+  "chemicalDetail": {
+    "notFound": "Chemical not found",
+    "physicalProperties": {
+      "title": "Physical Properties",
+      "appearance": "Appearance",
+      "odor": "Odor",
+      "boilingPoint": "Boiling Point",
+      "density": "Density",
+      "flashPoint": "Flash Point",
+      "solubility": "Solubility",
+      "viscosity": "Viscosity"
+    },
+    "applications": {
+      "title": "Applications"
+    },
+    "products": {
+      "naphtha": {
+        "name": "Naphtha",
+        "description": "A highly volatile, flammable liquid hydrocarbon mixture derived from crude oil refining or natural gas processing.",
+        "physicalProperties": {
+          "appearance": "Clear to pale yellow liquid",
+          "odor": "Strong gasoline-like smell",
+          "boilingPoint": "30-200°C (86-392°F), varies by type",
+          "density": "~0.65-0.75 g/cm³",
+          "flashPoint": "Typically < 30°C (86°F), making it highly flammable",
+          "solubility": "Insoluble in water, soluble in organic solvents",
+          "viscosity": "Low"
+        },
+        "applications": [
+          {
+            "title": "Petrochemical Feedstock",
+            "description": "Used as a feedstock for the production of ethylene, propylene, and other olefins"
+          },
+          {
+            "title": "Fuel Blending",
+            "description": "A key ingredient in blending gasoline to enhance octane levels"
+          },
+          {
+            "title": "Solvent Applications",
+            "description": "Used as a solvent in paints, coatings, adhesives, and cleaning agents"
+          },
+          {
+            "title": "Aromatics Production",
+            "description": "Serves as a feedstock for producing benzene, toluene, and xylene (BTX)"
+          },
+          {
+            "title": "Industrial Processing",
+            "description": "Acts as a processing solvent in industries such as rubber, textiles, and agrochemicals"
+          },
+          {
+            "title": "Energy and Heating",
+            "description": "Used as a fuel in certain industrial heating systems and turbines"
+          }
+        ],
+        "industriesServed": ["Petrochemicals", "Fuel and Energy", "Paints and Coatings", "Adhesives and Sealants", "Agrochemicals", "Textiles and Rubber"]
+      },
+      "propylene": {
+        "name": "Propylene",
+        "description": "A colorless gas hydrocarbon with a faint petroleum-like odor, primarily used as a building block for plastics and chemicals.",
+        "physicalProperties": {
+          "appearance": "Colorless gas",
+          "odor": "Faint petroleum-like odor",
+          "boilingPoint": "-47.6°C (-53.7°F)",
+          "density": "0.51 g/cm³ (liquid at -47°C)",
+          "flashPoint": "-108°C (-162°F)",
+          "solubility": "Slightly soluble in water, soluble in organic solvents",
+          "viscosity": "Very low"
+        },
+        "applications": [
+          {
+            "title": "Polypropylene Production",
+            "description": "Primary raw material for manufacturing polypropylene plastics"
+          },
+          {
+            "title": "Chemical Intermediates",
+            "description": "Used to produce propylene oxide, isopropanol, and other chemicals"
+          },
+          {
+            "title": "Fuel Applications",
+            "description": "Used in fuel blending and as a component in liquefied petroleum gas (LPG)"
+          },
+          {
+            "title": "Synthetic Rubber",
+            "description": "Raw material for producing synthetic rubber and elastomers"
+          }
+        ],
+        "industriesServed": ["Plastics and Polymers", "Chemical Manufacturing", "Automotive", "Packaging", "Textiles", "Construction"]
+      },
+      "benzene": {
+        "name": "Benzene",
+        "description": "A colorless, highly flammable liquid with a sweet odor, serving as a fundamental building block in petrochemical industry.",
+        "physicalProperties": {
+          "appearance": "Colorless liquid",
+          "odor": "Sweet aromatic odor",
+          "boilingPoint": "80.1°C (176.2°F)",
+          "density": "0.8765 g/cm³",
+          "flashPoint": "-11°C (12°F)",
+          "solubility": "Slightly soluble in water, miscible with organic solvents",
+          "viscosity": "Low"
+        },
+        "applications": [
+          {
+            "title": "Styrene Production",
+            "description": "Major feedstock for producing styrene monomer used in polystyrene"
+          },
+          {
+            "title": "Phenol Manufacturing",
+            "description": "Key raw material for phenol production via cumene process"
+          },
+          {
+            "title": "Cyclohexane Production",
+            "description": "Used to produce cyclohexane for nylon manufacturing"
+          },
+          {
+            "title": "Chemical Solvents",
+            "description": "Industrial solvent for various chemical processes"
+          }
+        ],
+        "industriesServed": ["Petrochemicals", "Plastics", "Synthetic Fibers", "Pharmaceuticals", "Paints and Coatings", "Rubber"]
+      }
+    }
   }
 } 

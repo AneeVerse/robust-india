@@ -153,7 +153,7 @@ export default function TestimonialsSection() {
         {/* Responsive Testimonials */}
         {isMobile ? (
           <div className="flex flex-nowrap overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-4 -mx-4 px-4">
-            {testimonials.map((testimonial: any, index: number) => (
+            {testimonials.map((testimonial: Testimonial, index: number) => (
               <div key={index} className="snap-center shrink-0 w-[90vw] max-w-xs">
                 <div className="bg-gray-50 rounded-2xl p-6 xs:p-8 flex flex-col border border-[#6164F6] shadow-2xl h-full">
                   <blockquote className="mb-6 text-sm xs:text-base text-gray-800 leading-snug">
@@ -183,7 +183,7 @@ export default function TestimonialsSection() {
               animate={{ x: trackLeftOffset - currentIndex * (innerWidth + gapPx) }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
-              {testimonials.map((testimonial: any, index: number) => (
+              {testimonials.map((testimonial: Testimonial, index: number) => (
                 <div key={index} className="flex-shrink-0 flex justify-center items-center h-full">
                   <motion.div
                     variants={itemVariants}

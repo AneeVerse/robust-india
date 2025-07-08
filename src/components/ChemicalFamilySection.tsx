@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 import { 
   GiChemicalDrop, 
   GiTestTubes, 
@@ -40,7 +41,7 @@ interface ChemicalProduct {
 }
 
 interface ChemicalCategory {
-  name: string;
+  id: string;
   count: number;
   products: ChemicalProduct[];
   IconComponent: React.ComponentType<{ className?: string }>;
@@ -48,7 +49,7 @@ interface ChemicalCategory {
 
 const chemicalCategories: ChemicalCategory[] = [
   {
-    name: 'Basic Petrochemicals & Feedstocks',
+    id: 'basicPetrochemicals',
     count: 12,
     IconComponent: GiChemicalDrop,
     products: [
@@ -126,7 +127,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Fuel Additives (Oxygenates)',
+    id: 'fuelAdditives',
     count: 3,
     IconComponent: IoWaterOutline,
     products: [
@@ -136,7 +137,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Polymers & Intermediates',
+    id: 'polymers',
     count: 5,
     IconComponent: GiMolecule,
     products: [
@@ -148,7 +149,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Phosphorus-Based Chemicals',
+    id: 'phosphorus',
     count: 4,
     IconComponent: GiAtomicSlashes,
     products: [
@@ -159,7 +160,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Sulfur-Based Chemicals',
+    id: 'sulfur',
     count: 3,
     IconComponent: GiAcid,
     products: [
@@ -169,7 +170,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Amines & Amine Derivatives',
+    id: 'amines',
     count: 6,
     IconComponent: GiDna2,
     products: [
@@ -182,7 +183,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Phenols & Derivatives',
+    id: 'phenols',
     count: 7,
     IconComponent: GiCrystalBars,
     products: [
@@ -196,7 +197,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Aromatic Hydrocarbons & Derivatives',
+    id: 'aromatics',
     count: 4,
     IconComponent: GiPlantRoots,
     products: [
@@ -207,7 +208,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Acrylic Monomers & Derivatives',
+    id: 'acrylics',
     count: 3,
     IconComponent: GiPaintBrush,
     products: [
@@ -217,7 +218,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Cyanide-Based Chemicals',
+    id: 'cyanide',
     count: 1,
     IconComponent: GiDeadlyStrike,
     products: [
@@ -225,7 +226,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    name: 'Organometallic-Based Chemicals',
+    id: 'organometallic',
     count: 4,
     IconComponent: GiElectric,
     products: [
@@ -239,6 +240,7 @@ const chemicalCategories: ChemicalCategory[] = [
 
 export default function ChemicalFamilySection() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<ChemicalCategory | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -313,9 +315,11 @@ export default function ChemicalFamilySection() {
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  {category.name}
+                  {t(`chemicalFamily.categories.${category.id}.name`)}
                 </h2>
-                <p className="text-blue-600 mt-1">{category.count} products available</p>
+                <p className="text-blue-600 mt-1">
+                  {t('chemicalFamily.productsAvailable', { count: category.count })}
+                </p>
               </div>
             </div>
             <button 
@@ -362,7 +366,7 @@ export default function ChemicalFamilySection() {
                       className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors group-hover:translate-x-1 duration-300"
                       disabled={!product.description}
                     >
-                      View Details
+                      {t('chemicalFamily.viewDetails')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
@@ -373,7 +377,7 @@ export default function ChemicalFamilySection() {
             </div>
             <div className="mt-10">
               <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-                Request Detailed Information
+                {t('chemicalFamily.requestInfo')}
               </button>
             </div>
           </div>
@@ -392,13 +396,11 @@ export default function ChemicalFamilySection() {
               <GiTestTubes className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-              Chemical Family
+              {t('chemicalFamily.title')}
             </h2>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed" style={{ fontFamily: 'FusionNeue, sans-serif' }}>
-            Explore our comprehensive range of chemical products and
-            <br />
-            solutions designed to innovate and scale with confidence.
+            {t('chemicalFamily.subtitle')}
           </p>
         </div>
         
@@ -428,15 +430,15 @@ export default function ChemicalFamilySection() {
                   </div>
                   
                   <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-gray-800 transition-colors duration-300 flex-1" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    {category.name}
+                    {t(`chemicalFamily.categories.${category.id}.name`)}
                   </h3>
                   
                   <div className="flex items-center justify-between mt-auto">
                     <span className="text-sm font-medium text-blue-700 bg-blue-100/60 backdrop-blur-sm px-3 py-1 rounded-full border border-blue-200/50">
-                      {category.count} products
+                      {t('chemicalFamily.productsAvailable', { count: category.count })}
                     </span>
                     <span className="text-xs text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
-                      View Products →
+                      {t('chemicalFamily.viewProducts')} →
                     </span>
                   </div>
                 </div>
@@ -454,7 +456,6 @@ export default function ChemicalFamilySection() {
         isOpen={isModalOpen}
         onClose={closeModal}
       />
-
     </>
   );
 } 
