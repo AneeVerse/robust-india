@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
         <div className="flex gap-2">
           <button
             onClick={() => changeLanguage('en')}
-            className={`px-3 py-2 rounded-lg font-semibold transition-all duration-200 ${
+            className={`px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg font-semibold text-xs sm:text-base transition-all duration-200 ${
               i18n.language === 'en' 
                 ? 'bg-[#6164F6] text-white' 
                 : 'bg-white text-[#6164F6] border border-[#6164F6] hover:bg-[#6164F6] hover:text-white'
@@ -26,7 +26,7 @@ export function LanguageSwitcher() {
           </button>
           <button
             onClick={() => changeLanguage('ru')}
-            className={`px-3 py-2 rounded-lg font-semibold transition-all duration-200 ${
+            className={`px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg font-semibold text-xs sm:text-base transition-all duration-200 ${
               i18n.language === 'ru' 
                 ? 'bg-[#6164F6] text-white' 
                 : 'bg-white text-[#6164F6] border border-[#6164F6] hover:bg-[#6164F6] hover:text-white'

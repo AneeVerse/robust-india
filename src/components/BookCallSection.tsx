@@ -46,7 +46,7 @@ export default function BookCallSection() {
   return (
     <section
       ref={ref}
-      className="w-full flex flex-col items-center px-6 md:px-20 py-12 sm:py-24 bg-white relative overflow-auto h-auto sm:overflow-hidden sm:min-h-screen"
+      className="w-full flex flex-col items-center px-6 md:px-20 py-12 sm:py-24 bg-white relative overflow-y-auto overflow-x-hidden scrollbar-hide h-auto sm:overflow-hidden sm:min-h-screen"
     >
       {/* Centered heading - bigger text */}
       <motion.h1

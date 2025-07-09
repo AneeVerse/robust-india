@@ -18,7 +18,7 @@ const services = [
 export default function ServiceSlider() {
   const { t } = useTranslation();
   // Duplicate the array for seamless infinite effect
-  const sliderItems = [...services, ...services];
+  const sliderItems = [...services, ...services]; // keep two copies for seamless loop
 
   return (
     <div className="mx-4 sm:mx-6 md:mx-8 my-16 sm:my-20 md:my-24 min-h-[300px] py-12 sm:py-16 md:py-20 sm:min-h-[520px] flex flex-col bg-[#181a1b] w-auto overflow-hidden rounded-3xl">
@@ -37,11 +37,12 @@ export default function ServiceSlider() {
         {/* Right blur overlay */}
         <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10" style={{background: 'linear-gradient(to left, #181a1b 70%, transparent 100%)'}} />
         <div
-          className="flex w-max animate-[slide_80s_linear_infinite] ml-0 sm:ml-10 md:ml-24 mt-4 sm:mt-10"
+          className="flex w-max animate-[slide_40s_linear_infinite] ml-0 sm:ml-10 md:ml-24 mt-4 sm:mt-10"
+          style={{ willChange: 'transform' }}
         >
           {sliderItems.map((service, idx) => (
             <div
-              className="flex items-center mx-4 sm:mx-14 min-w-[220px]"
+              className="flex-none flex items-center mx-4 sm:mx-14 min-w-[220px]"
               key={idx}
             >
               <Image

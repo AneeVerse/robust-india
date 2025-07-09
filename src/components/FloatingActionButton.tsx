@@ -139,42 +139,42 @@ const FloatingActionButton = () => {
   }, [showSuccess, countdown, selectedContactType, pendingAction, setPendingAction]);
 
   return (
-    <div className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-40">
+    <div className="fixed bottom-25 right-3 sm:bottom-6 sm:right-6 z-40">
       {open && !showForm && (
         <motion.div 
           initial="hidden" 
           animate="visible" 
           exit="exit" 
-          className="flex flex-col items-center gap-3 mb-4"
+          className="flex flex-col items-center gap-1 mb-2"
         >
           <motion.button
             onClick={() => handleContactClick('WhatsApp')}
-            className="w-14 h-14 bg-white text-[#25D366] rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+            className="w-9 h-9 sm:w-14 sm:h-14 bg-white text-[#25D366] rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             variants={buttonVariants}
           >
-            <FaWhatsapp size={26} />
+            <FaWhatsapp size={15} className="sm:w-6 sm:h-6 w-4 h-4" />
           </motion.button>
 
           <motion.button
             onClick={() => handleContactClick('Email')}
-            className="w-14 h-14 bg-white text-[#6164F6] rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+            className="w-9 h-9 sm:w-14 sm:h-14 bg-white text-[#6164F6] rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             variants={buttonVariants}
           >
-            <FaEnvelope size={24} />
+            <FaEnvelope size={13} className="sm:w-6 sm:h-6 w-4 h-4" />
           </motion.button>
 
           <motion.button
             onClick={() => handleContactClick('Phone')}
-            className="w-14 h-14 bg-white text-[#6164F6] rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+            className="w-9 h-9 sm:w-14 sm:h-14 bg-white text-[#6164F6] rounded-full flex items-center justify-center shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             variants={buttonVariants}
           >
-            <FaPhone size={24} />
+            <FaPhone size={13} className="sm:w-6 sm:h-6 w-4 h-4" />
           </motion.button>
         </motion.div>
       )}
@@ -293,7 +293,7 @@ const FloatingActionButton = () => {
       )}
 
       <motion.button
-        className="w-16 h-16 bg-gradient-to-br from-[#6164F6] to-[#8B8FFF] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl focus:outline-none border-2 border-white transition-all duration-300"
+        className="w-11 h-11 sm:w-16 sm:h-16 bg-gradient-to-br from-[#6164F6] to-[#8B8FFF] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl focus:outline-none border-2 border-white transition-all duration-300"
         onClick={() => setOpen(!open)}
         whileHover="hover"
         whileTap="tap"
@@ -301,9 +301,9 @@ const FloatingActionButton = () => {
       >
         <div>
           {open ? (
-            <IoClose className='h-7 w-7' />
+            <IoClose className='h-5 w-5 sm:h-7 sm:w-7' />
           ) : (
-            <IoMdChatboxes className="h-8 w-8" />
+            <IoMdChatboxes className="h-6 w-6 sm:h-8 sm:w-8" />
           )}
         </div> 
       </motion.button>

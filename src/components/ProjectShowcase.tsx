@@ -133,7 +133,8 @@ const ProjectShowcase = () => {
       ref={sectionRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative bg-white overflow-auto h-auto sm:h-screen sm:overflow-hidden"
+      style={{ touchAction: 'pan-y' }}
+      className="relative bg-white h-auto overflow-visible sm:h-screen "
     >
       <div className="hidden sm:block">
         <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} text={t('projects.viewProject')} />
