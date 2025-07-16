@@ -56,7 +56,7 @@ export default function WhatWeDoDemo() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8 pr-4 sm:pr-8"
             >
-              <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl text-justify hyphens-auto" style={{ textJustify: 'inter-word', hyphens: 'auto' }}>
+              <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl text-left">
                 Robust India an import-export company dedicated to delivering comprehensive chemical supply chain solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers.
               </p>
             </motion.div>

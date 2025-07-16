@@ -54,51 +54,295 @@
   },
   "about": {
     "title": "About us",
-    "description": "Robust India an import-export company dedicated to delivering comprehensive chemical supply chain solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries ranging from oil & gas and agrochemicals to water treatment and specialty polymers.",
+    "description": "Robust India is a premier import-export company committed to delivering end-to-end chemical supply-chain solutions on a global scale. Built on the pillars of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals across diverse sectors—from oil & gas and agrochemicals to water treatment and specialty polymers.",
     "hero": {
-      "line1": "simplify global chemical trade",
-      "line2": "by offering turnkey",
-      "line3": "solutions"
+      "line1": "Empowering Businesses with",
+      "line2": "Comprehensive Import–Export",
+      "line3": "Solutions Across Industries"
     },
     "intro": {
-      "line1": "Robust India is an import-export company dedicated to delivering comprehensive chemical supply chain.",
-      "line2": "solutions worldwide. Founded on the principles of reliability, transparency, and innovation, we specialize ",
-      "line3": "in sourcing, developing, and distributing high-quality specialty and bulk chemicals to industries",
-      "line4": "ranging from oil & gas and agrochemicals to water treatment and specialty polymers."
+      "line1": "Robust India is a premier import-export company committed to delivering end-to-end",
+      "line2": "chemical supply-chain solutions on a global scale. Built on the pillars of reliability,",
+      "line3": "transparency, and innovation, we specialize in sourcing, developing, and distributing",
+      "line4": "high-quality specialty and bulk chemicals across diverse sectors—from oil & gas",
+      "line5": "and agrochemicals to water treatment and specialty polymers."
     },
     "whatWeDo": {
       "title": "What we do",
       "subtitle": "Comprehensive chemical supply chain solutions for global industries",
       "services": {
-        "chemicalSourcing": {
-          "title": "Chemical Sourcing",
-          "description": "High-quality specialty and bulk chemicals for oil & gas, agrochemicals, and polymers"
+        "customDevelopment": {
+          "title": "Custom Product Development",
+          "description": "Partnering with leading manufacturers, we translate your specifications into reality from pilot-scale trials to full-scale production."
+        },
+        "globalSourcing": {
+          "title": "Global Sourcing & Procurement",
+          "description": "Leveraging our extensive network, we secure premium feedstocks and finished chemicals at competitive terms."
         },
         "qualityAssurance": {
-          "title": "Quality Assurance",
-          "description": "ISO, ASTM, REACH compliance ensuring consistent purity and performance"
+          "title": "Quality Inspection & Assurance",
+          "description": "Through rigorous in-house and third-party testing aligned with ISO, ASTM, and REACH standards, we guarantee consistent purity and performance."
         },
-        "ftwzLogistics": {
-          "title": "FTWZ Logistics",
-          "description": "Duty-free facilities in Mumbai, Chennai, Delhi for seamless import/export"
+        "secureLogistics": {
+          "title": "Secure Packaging & Logistics",
+          "description": "We offer UN/IMDG-compliant packaging, ISO-tank bookings, and flexible shipping solutions (FOB/CFR/CIF/DDP) to ensure your products arrive safely and on schedule."
         },
-        "3plServices": {
-          "title": "3PL Services",
-          "description": "End-to-end warehousing, packaging, and inventory management solutions"
+        "ftwzServices": {
+          "title": "Integrated 3PL & FTWZ Services",
+          "description": "Anchored in India's leading Free Trade & Warehousing Zones at Mumbai, Chennai, and Delhi, our duty-free facilities provide bonded warehousing, value-added services (labeling, repackaging, sampling), and seamless import/export handling—all without the need for you to establish a local entity."
+        },
+        "inventoryManagement": {
+          "title": "Real-Time Inventory Management",
+          "description": "Our cloud-based platform delivers 24×7 visibility, batch-lot control, and automated reorder alerts, so you maintain full oversight of your materials at every stage."
         }
-      },
-      "detailedInfo": {
-        "part1": "Leveraging our deep expertise in product development, we partner with manufacturers to create customized chemical formulations from pilot-scale trials through full production, ensuring that every product meets your exact specifications. Our rigorous quality-inspection processes, aligned with international standards (ISO, ASTM, REACH), guarantee consistent purity and performance.",
-        "part2": "At the heart of our offering is an integrated logistics network anchored by India's leading Free Trade & Warehousing Zones (FTWZ). Through these duty-free facilities in Mumbai, Chennai, and Delhi, we provide end-to-end 3PL services including bonded warehousing, value-added labeling or repackaging, and streamlined import/export handling without the need for clients to establish a local entity. Real-time inventory management and secure, compliant packaging solutions further ensure that your materials are accurately tracked and safely delivered on time, every time."
       }
     },
     "mission": {
       "title": "Our Mission",
-      "description": "To simplify global chemical trade by offering turnkey solutions that blend product innovation, quality assurance, and seamless logistics under one roof with comprehensive expertise."
+      "description": "To simplify global chemical trade by delivering turnkey solutions that integrate product innovation, uncompromising quality, and seamless logistics under one roof."
     },
     "vision": {
       "title": "Our Vision",
       "description": "To be the world's most trusted partner for chemical sourcing and supply chain excellence, enabling clients to focus on growth while we handle the complexities of international trade."
+    },
+    "ftwz": {
+      "sectionTitle": "Integrated 3PL & FTWZ Services",
+      "subtitle": "Duty-Free Warehousing & Value-Added Handling in FTWZs",
+      "keyFeatures": {
+        "dutyFree": {
+          "title": "Duty-Free Warehousing",
+          "desc": "Defer customs duties until domestic release or re-export."
+        },
+        "valueAdded": {
+          "title": "Value-Added Services",
+          "desc": "Labeling, repackaging, sampling, blending—customized to your needs."
+        },
+        "noEntity": {
+          "title": "No Local Entity Required",
+          "desc": "Operate through our FTWZ license in Mumbai, Chennai & Delhi."
+        },
+        "strategic": {
+          "title": "Strategic Locations",
+          "desc": "Proximity to major ports and dry ports for faster clearance."
+        },
+        "distribution": {
+          "title": "Efficient Distribution",
+          "desc": "Consolidation, cross-dock, and last-mile solutions to reduce costs."
+        },
+        "importExport": {
+          "title": "Import & Re-Export",
+          "desc": "Streamlined clearance for cross-border trade—single-window invoicing."
+        },
+        "tracking": {
+          "title": "Real-Time Tracking",
+          "desc": "Online dashboard with inventory levels, movement logs, and alerts."
+        },
+        "payments": {
+          "title": "Simplified Payments",
+          "desc": "Flexible LC/TT/CAD terms, multi-currency invoicing, GST compliance support."
+        }
+      },
+      "whatIsFtwz": {
+        "title": "What is an FTWZ & Our 3PL Services",
+        "description": "A Free Trade Warehousing Zone (FTWZ) is a special category of SEZ (governed under the SEZ Act, 2005) that sits within India's geographic borders but outside its customs territory, enabling:",
+        "features": [
+          "Duty-free storage of imported goods until clearance or re-export",
+          "Foreign-currency transactions without needing a local establishment",
+          "Value-added operations (labelling, kitting, sampling, etc.) without separate approvals"
+        ],
+        "conclusion": "As an integrated 3PL provider in India's premier FTWZs (Mumbai, Chennai, Delhi), we combine bonded warehousing with end-to-end logistics: consolidation, customs clearance, multimodal transport, and real-time inventory management—so you enjoy faster lead times, reduced working capital requirements, and no local-entity hassles."
+      },
+      "servicesOffered": {
+        "title": "Services We Offer Inside FTWZ",
+        "services": {
+          "warehousing": {
+            "title": "Bonded Warehousing & Storage",
+            "points": [
+              "Secure, multi-temperature racked/unracked storage",
+              "Hazardous-cargo segregation"
+            ]
+          },
+          "valueAdded": {
+            "title": "Value-Added Services (VAS)",
+            "points": [
+              "Labelling, MRP tagging, unitising",
+              "Kitting & de-kitting, clubbing, consolidation",
+              "Re-packing, crating, bagging, blending, sampling",
+              "Quality inspection, survey & testing, certification"
+            ]
+          },
+          "handling": {
+            "title": "Cargo Handling & Distribution",
+            "points": [
+              "Loading/unloading, stuffing/de-stuffing of containers",
+              "Bulk liquid/gas cylinder filling, palletizing",
+              "Door-to-door turnkey logistics, freight forwarding"
+            ]
+          },
+          "inventory": {
+            "title": "Inventory Management & Reporting",
+            "points": [
+              "Real-time dashboard for batch-lot control, reorder alerts",
+              "Online visibility of stock movements, storage duration, duty status"
+            ]
+          },
+          "compliance": {
+            "title": "Custom House Agency & Compliance",
+            "points": [
+              "Single-window interface for duty deferment, certification",
+              "Handling of all SEZ/FTWZ regulatory filings and documentation"
+            ]
+          },
+          "consolidation": {
+            "title": "Consolidation & High-Seas Sales",
+            "points": [
+              "Combine multiple shipments under one BL for cost efficiency",
+              "High-seas sales arrangements keeping cargo under supplier ownership",
+              "Transact in any freely-convertible currency"
+            ]
+          }
+        }
+      },
+      "whyChoose": {
+        "title": "Why Choose Robust India for Your FTWZ & 3PL Needs?",
+        "reasons": [
+          {
+            "number": "01",
+            "title": "One-Stop, Single-Window Solution",
+            "desc": "From bonded storage and value-added handling to customs clearance and final distribution, we manage every step under one roof—eliminating the complexity of coordinating multiple vendors."
+          },
+          {
+            "number": "02",
+            "title": "Duty-Deferral & Working-Capital Efficiency",
+            "desc": "Store and process goods duty-free until domestic release or re-export. Free up cash flow and reduce upfront tax outlays, improving your working-capital cycle."
+          },
+          {
+            "number": "03",
+            "title": "Zero-Entity, Zero-Hassle",
+            "desc": "Operate in India's premier FTWZs without setting up a local company. We leverage our SEZ license to handle all regulatory, banking, and statutory requirements on your behalf."
+          },
+          {
+            "number": "04",
+            "title": "Strategic Locations & Network Reach",
+            "desc": "Facilities at Nhava Sheva (Mumbai), Chennai, and Delhi are directly linked to major ports, airports, and inland logistics corridors—ensuring faster clearance and lower transit times."
+          },
+          {
+            "number": "05",
+            "title": "Tailored Value-Added Services",
+            "desc": "From custom labeling and re-packaging to blending, sampling, and quality inspections, our turnkey VAS capabilities let you adapt inventory to market needs on-demand."
+          },
+          {
+            "number": "06",
+            "title": "Technology-Driven Visibility",
+            "desc": "Gain 24×7 access to your stock position, duty status, inbound/outbound movements, and automated reorder alerts through our secure, cloud-based portal."
+          },
+          {
+            "number": "07",
+            "title": "Expert Compliance & Risk Management",
+            "desc": "Our in-house customs experts and compliance team handle all FTWZ/SEZ filings, hazard-cargo segregation, and audit readiness—minimizing your regulatory exposure."
+          },
+          {
+            "number": "08",
+            "title": "Optimized Cost Structure",
+            "desc": "Consolidation, high-seas sales, and multi-modal transport solutions—combined with our scale in India—translate into lower logistics costs and competitive end-pricing."
+          },
+          {
+            "number": "09",
+            "title": "Dedicated Account Leadership",
+            "desc": "You'll enjoy personalized support from a single point of contact who understands your business goals, anticipates challenges, and drives continuous improvement."
+          },
+          {
+            "number": "10",
+            "title": "Proven Track Record",
+            "desc": "We've empowered leading chemical, agro, and manufacturing clients to accelerate their supply chains, slash demurrage, and enhance service levels—demonstrating measurable ROI and operational excellence."
+          }
+        ],
+        "conclusion": "By partnering with Robust India, you gain more than just warehouse space—you unlock a fully integrated, compliant, and cost-effective platform designed to propel your global trade ambitions."
+      }
+    },
+    "endToEnd": {
+      "title": "What Are Our End-to-End Solutions?",
+      "subtitle": "Our End-to-End Solutions package is designed to manage every phase of your chemical product lifecycle—from concept and formulation right through to delivery and ongoing support. By consolidating R&D, procurement, quality, packaging, logistics, and inventory under one coordinated umbrella, we eliminate handovers, accelerate timelines, and optimize costs.",
+      "solutions": [
+        {
+          "title": "Custom Product Development",
+          "points": [
+            "Formulation & R&D: Tailored chemistries developed to your exact specifications",
+            "Pilot‐Scale Trials: Small‐batch testing to validate performance and scalability",
+            "Scale‐Up Support: Technical guidance and partner introductions to transition from pilot to full production seamlessly"
+          ]
+        },
+        {
+          "title": "Global Sourcing & Procurement",
+          "points": [
+            "Supplier Vetting: Rigorous audits of raw‐material manufacturers to ensure quality and compliance",
+            "Competitive Negotiation: Volume pricing and long‐term agreements to secure cost advantages",
+            "Supply Assurance: Multi‐source strategies and safety‐stock planning to guard against disruptions"
+          ]
+        },
+        {
+          "title": "Quality Inspection & Assurance",
+          "points": [
+            "Incoming QC: Sampling and analysis at point of origin—density, purity, moisture, and more",
+            "In-House Laboratory: ISO/ASTM/REACH-aligned testing for consistent performance",
+            "Third-Party Certification: Independent audits and CoA issuance for regulatory peace of mind"
+          ]
+        },
+        {
+          "title": "Compliant Packaging Solutions",
+          "points": [
+            "UN/IMDG-Certified drums, IBCs, and bulk containers for hazardous and non-hazardous goods",
+            "Customized Labeling & MRP Tagging to meet local and end-market regulations",
+            "Protective Inner-Packaging (liners, desiccants) for moisture- or air-sensitive products"
+          ]
+        },
+        {
+          "title": "Logistics & Freight Management",
+          "points": [
+            "Multimodal Planning: Sea, air, road, and rail options tailored to cost, speed, and cargo type",
+            "Trade-Term Expertise: FOB, CFR, CIF, DDP—and everything in between—handled end-to-end",
+            "Haz-Cargo Specialists: Certified handling for ADR, IMDG, and IATA regulations"
+          ]
+        },
+        {
+          "title": "Secure Warehousing & Inventory Control",
+          "points": [
+            "Bonded & Non-Bonded Storage: Flexible temperature zones, racked or block storage",
+            "Real-Time Tracking: Cloud dashboard with batch-lot visibility, expiry alerts, and automated reorder triggers",
+            "Cycle Counting & Audits: Regular stock reconciliations to maintain accuracy and compliance"
+          ]
+        },
+        {
+          "title": "After-Sales Support & Continuous Improvement",
+          "points": [
+            "Technical Hotline: 24×7 access to our chemists and logistics experts for troubleshooting",
+            "Performance Reviews: Quarterly business reviews with KPI tracking and optimization roadmaps",
+            "Regulatory Updates: Proactive advisory on changing customs, environmental, and safety regulations"
+          ]
+        }
+      ]
+    },
+    "benefitHighlights": {
+      "title": "Why Choose Our Solutions?",
+      "benefits": [
+        {
+          "title": "Single-Point Accountability",
+          "desc": "One partner, one process, zero gaps."
+        },
+        {
+          "title": "Faster Time-to-Market",
+          "desc": "Integrated workflows reduce lead times by up to 30%."
+        },
+        {
+          "title": "Cost Optimization",
+          "desc": "Bulk sourcing, consolidation, and process efficiencies lower your TCO."
+        },
+        {
+          "title": "Regulatory Confidence",
+          "desc": "End-to-end compliance managed in-house—no surprises."
+        }
+      ],
+      "conclusion": "Equip your business with a truly turnkey solution—where innovation, quality, and logistics converge to propel your products and projects forward."
     }
   },
   "projects": {

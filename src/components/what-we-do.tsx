@@ -59,7 +59,7 @@ export default function LandingPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8 pr-4 sm:pr-8"
             >
-              <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl text-justify hyphens-auto" style={{ textJustify: 'inter-word', hyphens: 'auto' }}>
+              <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl text-left">
                 {t('about.description')}
               </p>
             </motion.div>
