@@ -149,7 +149,7 @@ export default function ServicesSection() {
         {/* Mobile Cards - vertical stack, hidden on desktop */}
         <div className="sm:hidden flex flex-col items-center space-y-6">
           {/* Mobile FTWZ Card */}
-          <Link href="/services/ftwz" className="w-full max-w-xs">
+          <Link href="/services/integrated-3pl-ftwz" className="w-full max-w-xs">
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
@@ -176,8 +176,8 @@ export default function ServicesSection() {
               </p>
             </div>
           </Link>
-          {/* Mobile Integrated 3PL Card */}
-          <Link href="/services/integrated-3pl" className="w-full max-w-xs">
+          {/* Mobile End-to-End Solutions Card */}
+          <Link href="/services/end-to-end-solutions" className="w-full max-w-xs">
             <div className="bg-white rounded-3xl p-6 border border-[#6164F6] shadow-md transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#6164F6] rounded-xl flex items-center justify-center">
@@ -196,7 +196,7 @@ export default function ServicesSection() {
         <div className="hidden sm:flex relative flex justify-center items-center min-h-[500px]">
           {/* Left Card - FTWZ */}
                       <Link 
-            href="/services/ftwz" 
+            href="/services/integrated-3pl-ftwz" 
             className="absolute left-1/2 top-1/2 will-change-transform" 
             style={{
               transform: `
@@ -225,7 +225,7 @@ export default function ServicesSection() {
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
                   <Image src="/images/container-crane.svg" alt="FTWZ Container Crane" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
                 </div>
-                <h3 className="text-4xl font-normal text-gray-900">{t('services.ftwzTitle')}</h3>
+                <h3 className="text-3xl font-normal text-gray-900">{t('services.ftwzTitle')}</h3>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed flex-1">
                 {t('services.ftwzDesc')}
@@ -259,7 +259,7 @@ export default function ServicesSection() {
                 <div className="w-12 h-12 bg-[#6164F6] rounded-xl flex items-center justify-center flex-shrink-0">
                   <Image src="/images/laboratory.svg" alt="Chemical Products" width={32} height={32} className="filter invert brightness-0 w-8 h-8" unoptimized />
                 </div>
-                <h3 className="text-4xl font-normal text-gray-900">{t('services.chemTitle')}</h3>
+                <h3 className="text-3xl font-normal text-gray-900">{t('services.chemTitle')}</h3>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed flex-1">
                 {t('services.chemDesc')}
@@ -267,9 +267,9 @@ export default function ServicesSection() {
             </div>
           </Link>
 
-          {/* Right Card - Integrated 3PL */}
+          {/* Right Card - End-to-End Solutions */}
                       <Link 
-            href="/services/integrated-3pl" 
+            href="/services/end-to-end-solutions" 
             className="absolute left-1/2 top-1/2 will-change-transform" 
             style={{
               transform: `

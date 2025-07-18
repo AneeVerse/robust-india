@@ -10,8 +10,8 @@ import BookACall from '@/components/BookCallSection';
 import { useTranslation } from 'next-i18next';
 
 const serviceImages = {
-  'ftwz': '/images/demo/ftw.jpg',
-  'integrated-3pl': '/images/demo/shipping.jpg',
+  'integrated-3pl-ftwz': '/images/demo/ftw.jpg',
+  'end-to-end-solutions': '/images/demo/shipping.jpg',
 };
 
 const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ visible, x, y }) => {

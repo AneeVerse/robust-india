@@ -38,11 +38,11 @@
     "headingPart1": "Everything you'd",
     "headingPart2": "need",
     "tagline": "Everything you need from product development and sourcing to packaging, warehousing, and global delivery managed under one roof with seamless precision and compliance.",
-    "ftwzTitle": "FTWZ",
-    "ftwzDesc": "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
+    "ftwzTitle": "Integrated 3PL & FTWZ",
+    "ftwzDesc": "A Free Trade Warehousing Zone (FTWZ) is a special category of SEZ that sits within India's geographic borders but outside its customs territory, enabling:",
     "chemTitle": "Chemical Products",
     "chemDesc": "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
-    "plTitle": "Integrated 3PL",
+    "plTitle": "End-to-End Solutions",
     "plDesc": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution."
   },
   "book": {
@@ -353,12 +353,12 @@
       "tags": ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"]
     },
     "ftwz": {
-      "title": "FTWZ",
+      "title": "Integrated 3PL & FTWZ",
       "description": "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
       "tags": ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"]
     },
     "3pl": {
-      "title": "Integrated 3PL",
+      "title": "End-to-End Solutions",
       "description": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",
       "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"]
     }
@@ -394,8 +394,8 @@
         "label": "Service Interest",
         "options": {
           "chemical": "Chemical Products",
-          "ftwz": "FTWZ Services",
-          "3pl": "Integrated 3PL",
+          "ftwz": "Integrated 3PL & FTWZ",
+          "3pl": "End-to-End Solutions",
           "consulting": "Consulting",
           "other": "Other"
         }
@@ -556,14 +556,14 @@
     "viewService": "View Service",
     "mainServices": [
       {
-        "slug": "ftwz",
-        "title": "FTWZ",
-        "description": "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed."
+        "slug": "integrated-3pl-ftwz",
+        "title": "Integrated 3PL & FTWZ",
+        "description": "A Free Trade Warehousing Zone (FTWZ) is a special category of SEZ (governed under the SEZ Act, 2005) that sits within India's geographic borders but outside its customs territory, enabling duty-free storage of imported goods until clearance or re-export, foreign-currency transactions without needing a local establishment, and value-added operations (labelling, kitting, sampling, etc.) without separate approvals. As an integrated 3PL provider in India's premier FTWZs (Mumbai, Chennai, Delhi), we combine bonded warehousing with end-to-end logistics: consolidation, customs clearance, multimodal transport, and real-time inventory management—so you enjoy faster lead times, reduced working capital requirements, and no local-entity hassles."
       },
       {
-        "slug": "integrated-3pl",
-        "title": "Integrated 3PL",
-        "description": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution."
+        "slug": "end-to-end-solutions",
+        "title": "End-to-End Solutions",
+        "description": "Our End-to-End Solutions package is designed to manage every phase of your chemical product lifecycle from concept and formulation right through to delivery and ongoing support. By consolidating R&D, procurement, quality, packaging, logistics, and inventory under one coordinated umbrella, we eliminate handovers, accelerate timelines, and optimize costs."
       }
     ]
   },
@@ -585,14 +585,14 @@
       }
     },
     "services": {
-      "ftwz": {
-        "title": "FTWZ",
-        "description": "FTWZ (Free Trade Warehousing Zone) provides fully bonded storage facilities and value-added services without the need for a local entity. We streamline import and export processes through seamless customs handling, real-time inventory tracking, and integrated digital reporting. Our turnkey solutions include kitting, labeling, and distribution under one roof, enabling businesses to optimize cash flow, reduce overhead, and accelerate time to market.",
+      "integrated-3pl-ftwz": {
+        "title": "Integrated 3PL & FTWZ",
+        "description": "A Free Trade Warehousing Zone (FTWZ) is a special category of SEZ (governed under the SEZ Act, 2005) that sits within India's geographic borders but outside its customs territory, enabling duty-free storage of imported goods until clearance or re-export, foreign-currency transactions without needing a local establishment, and value-added operations (labelling, kitting, sampling, etc.) without separate approvals. As an integrated 3PL provider in India's premier FTWZs (Mumbai, Chennai, Delhi), we combine bonded warehousing with end-to-end logistics: consolidation, customs clearance, multimodal transport, and real-time inventory management—so you enjoy faster lead times, reduced working capital requirements, and no local-entity hassles.",
         "tags": ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"]
       },
-      "integrated-3pl": {
-        "title": "Integrated 3PL",
-        "description": "Our Integrated 3PL service offers end-to-end logistics management, combining warehousing, transportation, and inventory control under a unified platform. Leveraging advanced warehouse management systems, predictive analytics, and a global carrier network, we optimize storage layouts, automate order fulfillment, and provide real-time visibility across the supply chain. From inbound procurement to last-mile delivery, we ensure cost-effective, scalable solutions tailored to each client's unique operational needs.",
+      "end-to-end-solutions": {
+        "title": "End-to-End Solutions",
+        "description": "Our End-to-End Solutions package is designed to manage every phase of your chemical product lifecycle from concept and formulation right through to delivery and ongoing support. By consolidating R&D, procurement, quality, packaging, logistics, and inventory under one coordinated umbrella, we eliminate handovers, accelerate timelines, and optimize costs.",
         "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"]
       }
     }

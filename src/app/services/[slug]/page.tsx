@@ -7,6 +7,8 @@ import FooterSection from '@/components/FooterSection';
 import ServiceSlider from '@/components/ServiceSlider';
 import { useTranslation } from 'next-i18next';
 import { serviceImages } from './generateStaticParams';
+import Integrated3PLFTWZInfo from '@/components/Integrated3PLFTWZInfo';
+import EndtoEndSoulutionInfo from '@/components/EndtoEndSoulutionInfo';
 
 export default function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { t } = useTranslation();
@@ -96,6 +98,20 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           ))}
         </div>
       </div>
+      {/* Conditional Info Sections */}
+      {slug === 'integrated-3pl-ftwz' && (
+        <>
+          {/* FTWZ/3PL Info Section */}
+          <Integrated3PLFTWZInfo />
+        </>
+      )}
+      
+      {slug === 'end-to-end-solutions' && (
+        <>
+          {/* End-to-End Solutions Info Section */}
+          <EndtoEndSoulutionInfo />
+        </>
+      )}
       
       {/* Supporting Diverse Industrial Sectors Section */}
       <div className="w-full overflow-x-hidden">
