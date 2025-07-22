@@ -64,6 +64,16 @@ export default function LandingPage() {
               </p>
             </motion.div>
           </div>
+          {/* Learn More Button */}
+          <div className="flex justify-end mt-8">
+            <a
+              href="/about"
+              className="bg-[#6164F6] hover:bg-[#5055E5] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 shadow-lg text-lg"
+              style={{ textDecoration: 'none' }}
+            >
+              Learn More
+            </a>
+          </div>
         </div>
 
       </div>

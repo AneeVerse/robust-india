@@ -28,15 +28,75 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
 
   return (
     <main className="min-h-screen bg-white p-4 sm:p-6 md:p-5">
-      <div className="w-full">
-        <Image
-          src={images.image}
-          alt={serviceData.title}
-          width={1920}
-          height={1080}
-          className="w-full h-[95vh] object-cover rounded-xl"
-        />
-      </div>
+      {/* Modern Split-Screen Layout for Integrated 3PL & FTWZ */}
+      {slug === 'integrated-3pl-ftwz' ? (
+        <div className="min-h-[95vh] flex items-center">
+          <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Side - Content */}
+            <div className="space-y-10 flex flex-col justify-center -ml-10">
+              <div className="space-y-8">
+                <h1 className="leading-[0.9]" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  <span className="block text-[#6164F6] font-bold text-5xl lg:text-6xl xl:text-7xl mb-3">INTEGRATED</span>
+                  <span className="block text-gray-900 font-light text-5xl lg:text-6xl xl:text-7xl">3PL & FTWZ</span>
+                </h1>
+                
+                <h2 className="text-xl lg:text-2xl xl:text-3xl text-gray-600 font-light leading-relaxed max-w-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  Free Trade Warehousing Solutions
+                </h2>
+                
+                <p className="text-base lg:text-lg xl:text-xl text-gray-700 leading-relaxed max-w-xl" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                  Skip the complexities, save costs and enjoy seamless warehousing and logistics solutions in Free Trade Warehousing Zones
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <a
+                  href="#integrated-info"
+                  className="bg-[#6164F6] hover:bg-[#5055E5] text-white px-10 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-xl text-base lg:text-lg flex items-center justify-center"
+                  style={{ textDecoration: 'none' }}
+                >
+                  Learn More
+                </a>
+                {/* Contact Us Button - black theme, links to /contact */}
+                <a
+                  href="/contact"
+                  className="bg-black hover:bg-gray-700 hover:border-gray-700 text-white px-10 py-4 rounded-2xl font-semibold transition-all duration-300 text-base lg:text-lg flex items-center justify-center border-2 border-black"
+                  style={{ textDecoration: 'none' }}
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+
+            {/* Right Side - Image */}
+            <div className="order-first lg:order-last">
+              <div className="relative -mx-8 lg:-mx-16">
+                <Image
+                  src={images.image}
+                  alt={serviceData.title}
+                  width={1200}
+                  height={600}
+                  className="w-full h-[350px] lg:h-[600px] object-cover rounded-3xl shadow-2xl"
+                />
+                {/* Modern Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="w-full">
+          <Image
+            src={images.image}
+            alt={serviceData.title}
+            width={1920}
+            height={1080}
+            className="w-full h-[95vh] object-cover rounded-xl"
+          />
+        </div>
+      )}
       <div className="w-full px-4 sm:px-6 md:px-5 py-16">
         <h1 className="text-5xl font-normal text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{serviceData.title}</h1>
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{serviceData.description}</p>
@@ -102,7 +162,9 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
       {slug === 'integrated-3pl-ftwz' && (
         <>
           {/* FTWZ/3PL Info Section */}
-          <Integrated3PLFTWZInfo />
+          <div id="integrated-info">
+            <Integrated3PLFTWZInfo />
+          </div>
         </>
       )}
       
