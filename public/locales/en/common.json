@@ -548,6 +548,22 @@
       "organometallic": {
         "name": "Organometallic-Based Chemicals",
         "count": 4
+      },
+      "redPhosphorus": {
+        "name": "Red Phosphorus & Allotropes",
+        "count": 1
+      },
+      "inorganicsSalts": {
+        "name": "Inorganics & Salts",
+        "count": 1
+      },
+      "alcoholsGlycols": {
+        "name": "Alcohols & Glycols",
+        "count": 1
+      },
+      "solventsHydrocarbonBlends": {
+        "name": "Solvents & Hydrocarbon Blends",
+        "count": 1
       }
     }
   },
@@ -618,124 +634,2076 @@
   },
   "chemicalDetail": {
     "notFound": "Chemical not found",
-    "physicalProperties": {
-      "title": "Physical Properties",
-      "appearance": "Appearance",
-      "odor": "Odor",
-      "boilingPoint": "Boiling Point",
-      "density": "Density",
-      "flashPoint": "Flash Point",
-      "solubility": "Solubility",
-      "viscosity": "Viscosity"
+    "headings": {
+      "identification": "Identification",
+      "physicalChemicalProperties": "Physical & Chemical Properties",
+      "gradesPurity": "Grades & Purity",
+      "applicationsUses": "Applications & Uses",
+      "storageHandling": "Storage & Handling",
+      "safetyRegulatory": "Safety & Regulatory",
+      "industriesServed": "Industries Served"
     },
     "applications": {
       "title": "Applications"
     },
     "products": {
       "naphtha": {
-        "name": "Naphtha",
-        "description": "A highly volatile, flammable liquid hydrocarbon mixture derived from crude oil refining or natural gas processing.",
-        "physicalProperties": {
-          "appearance": "Clear to pale yellow liquid",
-          "odor": "Strong gasoline-like smell",
-          "boilingPoint": "30-200°C (86-392°F), varies by type",
-          "density": "~0.65-0.75 g/cm³",
-          "flashPoint": "Typically < 30°C (86°F), making it highly flammable",
-          "solubility": "Insoluble in water, soluble in organic solvents",
-          "viscosity": "Low"
+        "overview": {
+          "name": "Naphtha",
+          "description": "A volatile, clear, colorless to pale yellow liquid hydrocarbon mixture used as a petrochemical feedstock, solvent, fuel, and in chemical synthesis."
         },
-        "applications": [
-          {
-            "title": "Petrochemical Feedstock",
-            "description": "Used as a feedstock for the production of ethylene, propylene, and other olefins"
-          },
-          {
-            "title": "Fuel Blending",
-            "description": "A key ingredient in blending gasoline to enhance octane levels"
-          },
-          {
-            "title": "Solvent Applications",
-            "description": "Used as a solvent in paints, coatings, adhesives, and cleaning agents"
-          },
-          {
-            "title": "Aromatics Production",
-            "description": "Serves as a feedstock for producing benzene, toluene, and xylene (BTX)"
-          },
-          {
-            "title": "Industrial Processing",
-            "description": "Acts as a processing solvent in industries such as rubber, textiles, and agrochemicals"
-          },
-          {
-            "title": "Energy and Heating",
-            "description": "Used as a fuel in certain industrial heating systems and turbines"
-          }
-        ],
-        "industriesServed": ["Petrochemicals", "Fuel and Energy", "Paints and Coatings", "Adhesives and Sealants", "Agrochemicals", "Textiles and Rubber"]
+        "identification": {
+          "iupacName": "Petroleum naphtha (complex hydrocarbon mixture)",
+          "commonNames": "Light naphtha, Heavy naphtha, Petroleum ether, Ligroin",
+          "casNumber": "8030-30-6 (general); other variants may have specific CAS numbers",
+          "chemicalFormula": "Mixture of C₅–C₁₂ hydrocarbons (mainly alkanes, cycloalkanes, aromatics)",
+          "molecularWeight": "~70–200 g/mol (varies by composition)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Volatile liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Gasoline-like, sweetish (light naphtha) to strong (heavy naphtha)",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "30–200°C (depends on grade)",
+          "meltingPoint": "Below –50°C",
+          "density": "0.65–0.78 g/cm³ (at 20°C)",
+          "flashPoint": "–20 to 60°C (varies; light naphtha is highly flammable)",
+          "solubility": "Insoluble in water; miscible with most organic solvents (benzene, ether, chloroform)"
+        },
+        "gradesPurity": {
+          "lightNaphtha": "C₅–C₇: Boiling 30–90°C (solvent)",
+          "heavyNaphtha": "C₇–C₁₂: Boiling 90–200°C (petrochemical)",
+          "purityNotes": "Varies by refining, may contain sulfur, olefins, additives"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Petrochemical Feedstock", "description": "Cracked to produce ethylene and propylene (steam cracking); reformed to make gasoline (catalytic reforming)." },
+            { "title": "Solvent", "description": "Used in dry cleaning, paints, varnishes, rubber, and adhesive manufacturing." },
+            { "title": "Fuel", "description": "Component of gasoline; camping stove fuel (light naphtha)." },
+            { "title": "Chemical Synthesis", "description": "Feedstock for aromatics (BTX: benzene, toluene, xylene)." }
+          ],
+          "industriesServed": [
+            "Petroleum Refining",
+            "Plastics & Polymers",
+            "Paints & Coatings",
+            "Pharmaceuticals (solvent use)",
+            "Agriculture (pesticide formulations)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers (prevent evaporation/flammability). Explosion-proof storage (light naphtha). Grounded tanks (static prevention)",
+          "handling": "Chemical-resistant gloves (nitrile, neoprene). Vapor respirators if needed. No open flames/sparks."
+        },
+        "safetyRegulatory": {
+          "hazards": "Highly flammable (light naphtha flash point < –20°C). Harmful if inhaled (CNS depression). Skin irritant (defats skin). Environmental risk (toxic to aquatic life).",
+          "nfpaRating": "Health: 2 | Flammability: 3 | Reactivity: 0",
+          "regulations": "GHS Symbols: Flame, Health Hazard. UN 1255 (Petroleum Naphtha), UN 3295 (Hydrocarbon Mixture)"
+        }
       },
-      "propylene": {
-        "name": "Propylene",
-        "description": "A colorless gas hydrocarbon with a faint petroleum-like odor, primarily used as a building block for plastics and chemicals.",
-        "physicalProperties": {
-          "appearance": "Colorless gas",
-          "odor": "Faint petroleum-like odor",
-          "boilingPoint": "-47.6°C (-53.7°F)",
-          "density": "0.51 g/cm³ (liquid at -47°C)",
-          "flashPoint": "-108°C (-162°F)",
+      "propylene-propene": {
+        "overview": {
+          "name": "Propylene (Propene)",
+          "description": "A colorless, mildly sweet-smelling gas used primarily for polypropylene production, as a chemical intermediate, fuel gas, and in synthetic rubber manufacturing."
+        },
+        "identification": {
+          "iupacName": "Propene",
+          "commonNames": "Propylene, Methylethylene",
+          "casNumber": "115-07-1",
+          "chemicalFormula": "C₃H₆",
+          "molecularWeight": "42.08 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless gas (at room temperature)",
+          "color": "Colorless",
+          "odor": "Mildly sweet, petroleum-like",
+          "appearance": "Compressed liquefied gas (when pressurized)",
+          "boilingPoint": "-47.6°C",
+          "meltingPoint": "-185.2°C",
+          "density": "1.81 kg/m³ (gas, 25°C); 0.61 g/cm³ (liquid)",
+          "vaporPressure": "9.5 bar (at 20°C)",
+          "flashPoint": "-108°C",
+          "autoignitionTemp": "455°C",
           "solubility": "Slightly soluble in water, soluble in organic solvents",
           "viscosity": "Very low"
         },
-        "applications": [
-          {
-            "title": "Polypropylene Production",
-            "description": "Primary raw material for manufacturing polypropylene plastics"
-          },
-          {
-            "title": "Chemical Intermediates",
-            "description": "Used to produce propylene oxide, isopropanol, and other chemicals"
-          },
-          {
-            "title": "Fuel Applications",
-            "description": "Used in fuel blending and as a component in liquefied petroleum gas (LPG)"
-          },
-          {
-            "title": "Synthetic Rubber",
-            "description": "Raw material for producing synthetic rubber and elastomers"
-          }
-        ],
-        "industriesServed": ["Plastics and Polymers", "Chemical Manufacturing", "Automotive", "Packaging", "Textiles", "Construction"]
+        "gradesPurity": {
+          "chemicalGrade": ">=99.5% (polymer production)",
+          "refineryGrade": "50-70% (mixed with propane)",
+          "polymerGrade": ">=99.9% (for PP production)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polypropylene Production", "description": "Primary use, ~65% of global demand." },
+            { "title": "Chemical Intermediate", "description": "For acrylonitrile (acrylic fibers), propylene oxide (polyurethanes), cumene (phenol/acetone)." },
+            { "title": "Fuel Gas", "description": "Used in LPG blends." },
+            { "title": "Synthetic Rubber", "description": "Via polymerization." }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers",
+            "Petrochemicals",
+            "Automotive (plastic components)",
+            "Textiles (acrylic fibers)",
+            "Packaging (food containers, films)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Pressurized steel cylinders (small quantities), refrigerated tanks (large volumes, -48°C), grounded containers (static prevention)",
+          "handling": "Use explosion-proof equipment, continuous gas detection, SCBA for leaks"
+        },
+        "safetyRegulatory": {
+          "hazards": "Extremely flammable (LFL 2.0%, UFL 11.1%). Asphyxiant (displaces oxygen). Frostbite risk from liquefied gas contact.",
+          "nfpaRating": "Health: 1 | Flammability: 4 | Reactivity: 1",
+          "regulations": "GHS Symbols: Flame, Gas Cylinder. Transport Class: UN 1077 (Class 2.1 Flammable Gas)."
+        }
       },
       "benzene": {
-        "name": "Benzene",
-        "description": "A colorless, highly flammable liquid with a sweet odor, serving as a fundamental building block in petrochemical industry.",
-        "physicalProperties": {
-          "appearance": "Colorless liquid",
+        "overview": {
+          "name": "Benzene",
+          "description": "A colorless, highly flammable liquid with a sweet odor, serving as a fundamental building block in petrochemical industry."
+        },
+        "identification": {
+          "iupacName": "Benzene",
+          "commonNames": "Benzol",
+          "casNumber": "71-43-2",
+          "chemicalFormula": "C₆H₆",
+          "molecularWeight": "78.11 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "color": "Colorless",
           "odor": "Sweet aromatic odor",
+          "appearance": "Clear liquid",
           "boilingPoint": "80.1°C (176.2°F)",
+          "meltingPoint": "5.5°C",
           "density": "0.8765 g/cm³",
           "flashPoint": "-11°C (12°F)",
           "solubility": "Slightly soluble in water, miscible with organic solvents",
           "viscosity": "Low"
         },
+        "gradesPurity": {
+          "technicalGrade": ">=99% (industrial)",
+          "highPurityGrade": ">=99.9% (laboratory/analytical)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Styrene Production", "description": "Major feedstock for producing styrene monomer used in polystyrene" },
+            { "title": "Phenol Manufacturing", "description": "Key raw material for phenol production via cumene process" },
+            { "title": "Cyclohexane Production", "description": "Used to produce cyclohexane for nylon manufacturing" },
+            { "title": "Chemical Solvents", "description": "Industrial solvent for various chemical processes" }
+          ],
+          "industriesServed": [
+            "Petrochemicals",
+            "Plastics",
+            "Synthetic Fibers",
+            "Pharmaceuticals",
+            "Paints and Coatings",
+            "Rubber"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in tightly closed containers in a cool, well-ventilated area away from ignition sources.",
+          "handling": "Use chemical-resistant gloves, goggles, and work in a fume hood. Avoid inhalation and skin contact."
+        },
+        "safetyRegulatory": {
+          "hazards": "Highly flammable. Toxic by inhalation, skin absorption, and ingestion. Carcinogenic. Environmental hazard.",
+          "nfpaRating": "Health: 2 | Flammability: 3 | Reactivity: 0",
+          "regulations": "GHS: Flame, Health Hazard. UN 1114 (Class 3, Flammable Liquid). OSHA PEL: 1 ppm (8-hour TWA). IARC Group 1 (carcinogenic to humans)."
+        }
+      },
+      "red-phosphorus": {
+        "overview": {
+          "name": "Red Phosphorus",
+          "description": "An amorphous, odorless, brittle, non-crystalline allotrope of phosphorus, widely used in flame retardants, matches, pyrotechnics, semiconductors, and chemical synthesis."
+        },
+        "identification": {
+          "iupacName": "Phosphorus (Red allotrope)",
+          "commonNames": "Red Phosphorus",
+          "casNumber": "7723-14-0",
+          "chemicalFormula": "P (Polymeric structure, not a simple molecule)",
+          "molecularWeight": "30.97 g/mol (per phosphorus atom)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Amorphous powder or granular solid",
+          "color": "Dark red, violet, or purple",
+          "odor": "Odorless",
+          "appearance": "Amorphous powder or granular solid",
+          "boilingPoint": "Sublimes at ~431°C",
+          "meltingPoint": "~590°C (under pressure, sublimes before melting at 1 atm)",
+          "density": "2.34 g/cm³",
+          "flashPoint": "Ignites at ~260°C in air",
+          "solubility": "Insoluble in water & organic solvents; soluble in molten metals",
+          "viscosity": "N/A (solid)"
+        },
+        "gradesPurity": {
+          "technicalGrade": "~98-99% (industrial)",
+          "highPurityGrade": ">99.9% (electronics/pharma)",
+          "impurities": "May contain traces of white phosphorus, oxides, or metals"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Flame Retardants", "description": "Added to plastics, textiles, and electronics for fire resistance." },
+            { "title": "Matches", "description": "Used on matchbox striking surfaces." },
+            { "title": "Pyrotechnics & Explosives", "description": "Used in smoke grenades and incendiaries." },
+            { "title": "Semiconductors", "description": "Dopant in electronics manufacturing." },
+            { "title": "Chemical Synthesis", "description": "Precursor for phosphoric acid and phosphine (PH₃)." },
+            { "title": "Metallurgy", "description": "Alloying agent in some metals." },
+            { "title": "Batteries", "description": "Research in Li-ion/Na-ion battery anodes." }
+          ],
+          "industriesServed": [
+            "Electronics (flame retardants, semiconductors)",
+            "Chemical Manufacturing (phosphorus derivatives)",
+            "Defense & Pyrotechnics",
+            "Match Production",
+            "Pharmaceuticals (intermediate synthesis)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Cool, dry, ventilated area in airtight containers. Separate from oxidizers, acids, and heat sources.",
+          "handling": "Avoid dust formation (flammable when dispersed). Use PPE (gloves, goggles, dust mask). Work in a fume hood for fine powders."
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable solid (dust can ignite). Reacts with oxidizers (fire/explosion risk). Chronic exposure may affect bones/liver.",
+          "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 1",
+          "regulations": "Transported as UN 1338 (Class 4.1 Flammable Solid)"
+        }
+      },
+      "trimethyl-phosphite-tmpi": {
+        "overview": {
+          "name": "Trimethyl Phosphite (TMPi)",
+          "description": "A colorless to pale yellow, pungent, garlic-like liquid used as a chemical intermediate in pesticides, flame retardants, pharmaceuticals, and as an additive in batteries and lubricants."
+        },
+        "identification": {
+          "iupacName": "Trimethyl phosphite",
+          "commonNames": "TMPi, Methyl phosphite, Phosphorous acid trimethyl ester",
+          "casNumber": "121-45-9",
+          "chemicalFormula": "C₃H₉O₃P or (CH₃O)₃P",
+          "molecularWeight": "124.08 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Pungent, garlic-like odor",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "111–112°C",
+          "meltingPoint": "–78°C",
+          "density": "1.052 g/cm³ (at 20°C)",
+          "flashPoint": "38°C (closed cup)",
+          "refractiveIndex": "1.408 (20°C)",
+          "solubility": "Miscible with most organic solvents; reacts violently with water",
+          "viscosity": "N/A (liquid)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial)",
+          "highPurityGrade": ">=99% (pharma/electronics)",
+          "impurities": "May contain traces of methanol, dimethyl phosphite"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Used in synthesis of pesticides, flame retardants, pharmaceuticals." },
+            { "title": "Plasticizers & Stabilizers", "description": "For PVC and other polymers." },
+            { "title": "Lubricant Additives", "description": "Anti-wear and extreme-pressure agents." },
+            { "title": "Electrolyte Additive", "description": "Improves stability in lithium-ion batteries." },
+            { "title": "Organic Synthesis", "description": "Used as a reducing agent and for Michaelis-Arbuzov reactions." }
+          ],
+          "industriesServed": [
+            "Agrochemicals (pesticide manufacturing)",
+            "Polymers & Plastics (flame retardants, stabilizers)",
+            "Pharmaceuticals (drug synthesis)",
+            { "title": "Electronics (battery electrolytes)", "description": "In lithium-ion batteries." },
+            "Lubricants & Coatings"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in tightly sealed containers under nitrogen/inert gas (moisture-sensitive). Keep away from heat, sparks, and open flames. Store in a cool, dry, well-ventilated area.",
+          "handling": "Use chemical-resistant gloves (nitrile, neoprene) and goggles. Avoid inhalation (use fume hood). Do not expose to water (violent reaction)."
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable (Flash point 38°C). Moisture-sensitive – reacts with water to methanol, phosphorous acid, and heat. Harmful if inhaled/swallowed. Skin/eye irritant.",
+          "nfpaRating": "Health: 2 | Flammability: 2 | Reactivity: 1",
+          "regulations": "GHS Symbols: Flame, Corrosion, Exclamation Mark. Transport Class: UN 2329 (Class 3 Flammable Liquid)"
+        }
+      },
+      
+      "triphenyl-phosphite-tppi": {
+        "overview": {
+          "name": "Triphenyl Phosphite (TPPi)",
+          "description": "A colorless to pale yellow, clear, viscous liquid used as a stabilizer, scavenger, and intermediate in the polymer, agrochemical, and specialty chemical industries."
+        },
+        "identification": {
+          "iupacName": "Triphenyl phosphite",
+          "commonNames": "TPPi, Phosphorous acid triphenyl ester",
+          "casNumber": "101-02-0",
+          "chemicalFormula": "C₁₈H₁₅O₃P or (C₆H₅O)₃P",
+          "molecularWeight": "310.28 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid (at room temperature)",
+          "color": "Colorless to pale yellow",
+          "odor": "Mild, phenolic odor",
+          "appearance": "Clear, viscous liquid",
+          "boilingPoint": "360°C",
+          "meltingPoint": "22–25°C (can solidify in cold conditions)",
+          "density": "1.184 g/cm³ (at 25°C)",
+          "flashPoint": "220°C",
+          "refractiveIndex": "1.589 (20°C)",
+          "solubility": "Soluble in organic solvents (ethanol, acetone, benzene); insoluble in water (hydrolyzes slowly)",
+          "viscosity": "N/A (liquid)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial)",
+          "highPurityGrade": ">=99% (pharmaceuticals/specialty chemicals)",
+          "impurities": "May contain traces of phenol or diphenyl phosphite"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Industry", "description": "Used as a stabilizer for PVC and other plastics, and as a scavenger for peroxides and metal ions." },
+            { "title": "Chemical Intermediate", "description": "For synthesizing organophosphorus compounds (pesticides, flame retardants) and ligands in metal-catalyzed reactions." },
+            { "title": "Lubricant Additive", "description": "Provides anti-wear and antioxidant properties." },
+            { "title": "Adhesives & Coatings", "description": "Improves thermal stability." }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers (stabilizers, plasticizers)",
+            "Agrochemicals (pesticide synthesis)",
+            "Lubricants & Fuel Additives",
+            "Pharmaceuticals (intermediate for drug synthesis)",
+            "Specialty Chemicals (catalysis, ligands)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Keep in tightly closed containers away from moisture. Store in a cool, dry place (can solidify at low temps). Avoid contact with strong oxidizers.",
+          "handling": "Use gloves (nitrile) and safety goggles. Ensure good ventilation (may release phenol vapors upon decomposition)."
+        },
+        "safetyRegulatory": {
+          "hazards": "Combustible (high flash point, but burns if heated). Skin/Eye Irritant – Causes mild irritation. Harmful if swallowed (may release phenol in the body). Slow hydrolysis in water → phenol + phosphorous acid.",
+          "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 0",
+          "regulations": "GHS Symbols: Exclamation Mark (irritant). Not classified as highly hazardous under major regulations (OSHA, EPA)."
+        }
+      },
+      "triethyl-phosphite-tepi": {
+        "overview": {
+          "name": "Triethyl Phosphite (TEPi)",
+          "description": "A colorless, clear, mobile liquid with a characteristic pungent odor, used as a chemical intermediate, reducing agent, and stabilizer in agrochemicals, pharmaceuticals, and polymer industries."
+        },
+        "identification": {
+          "iupacName": "Triethyl phosphite",
+          "commonNames": "TEPi, Ethyl phosphite, Phosphorous acid triethyl ester",
+          "casNumber": "122-52-1",
+          "chemicalFormula": "C₆H₁₅O₃P or (C₂H₅O)₃P",
+          "molecularWeight": "166.16 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Characteristic, pungent",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "156°C",
+          "meltingPoint": "<-80°C",
+          "density": "1.01 g/cm³ (20°C)",
+          "vaporPressure": "0.4 mmHg (20°C)",
+          "flashPoint": "54°C (closed cup)",
+          "autoignitionTemp": "Not available",
+          "solubility": "Miscible with most organic solvents; slightly soluble in water"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=97% (industrial)",
+          "highPurityGrade": ">=99% (laboratory)",
+          "impurities": "May contain diethyl phosphite, ethanol"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Agrochemicals", "description": "Intermediate for pesticides and herbicides." },
+            { "title": "Pharmaceuticals", "description": "Used in synthesis of active pharmaceutical ingredients." },
+            { "title": "Polymer Industry", "description": "Stabilizer and additive in plastics and resins." },
+            { "title": "Reducing Agent", "description": "Used in organic synthesis as a reducing agent." }
+          ],
+          "industriesServed": [
+            "Agrochemical",
+            "Pharmaceutical",
+            "Polymer",
+            "Fine chemicals"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in tightly closed containers in a cool, dry, well-ventilated area away from sources of ignition.",
+          "handling": "Use with adequate ventilation. Avoid contact with skin and eyes. Wear suitable protective equipment."
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable liquid and vapor. Harmful if swallowed or inhaled. Causes skin and eye irritation.",
+          "precautions": "Keep away from heat, sparks, open flames. Use explosion-proof equipment. Wear protective gloves and goggles.",
+          "regulatory": "Classified as hazardous according to GHS. Subject to transport and workplace safety regulations."
+        }
+      },
+      "diethyl-phosphite-depi": {
+        "overview": {
+          "name": "Diethyl Phosphite (DEPi)",
+          "description": "A colorless to pale yellow, clear, mobile liquid with a characteristic pungent odor, used as a chemical intermediate, plastic additive, lubricant additive, corrosion inhibitor, and in organic synthesis."
+        },
+        "identification": {
+          "iupacName": "Diethyl phosphonate",
+          "commonNames": "DEPi, Diethyl hydrogen phosphite, Phosphonic acid diethyl ester",
+          "casNumber": "762-04-9",
+          "chemicalFormula": "C₄H₁₁O₃P or (C₂H₅O)₂P(O)H",
+          "molecularWeight": "138.10 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Characteristic pungent odor",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "50-51°C (1 mmHg), 138°C (decomposes at atm pressure)",
+          "meltingPoint": "-70°C",
+          "density": "1.072 g/cm³ (at 20°C)",
+          "refractiveIndex": "1.416 (20°C)",
+          "flashPoint": "85°C (closed cup) - Combustible liquid",
+          "solubility": "Miscible with most organic solvents (ethanol, ether, acetone); reacts slowly with water (hydrolysis to ethanol and phosphorous acid)",
+          "viscosity": "N/A (liquid)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial applications)",
+          "highPurityGrade": ">=98% (pharmaceuticals/electronics)",
+          "impurities": "May contain traces of ethanol or ethyl phosphite"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "For flame retardants (phosphonate esters), pesticides (organophosphorus insecticides), and pharmaceuticals (antiviral and anticancer agents)." },
+            { "title": "Plastic Additives", "description": "Stabilizer for PVC." },
+            { "title": "Lubricant Additives", "description": "Anti-wear properties." },
+            { "title": "Corrosion Inhibitors", "description": "In metal treatment." },
+            { "title": "Organic Synthesis", "description": "For Horner-Wadsworth-Emmons reactions." }
+          ],
+          "industriesServed": [
+            "Agrochemicals (pesticide production)",
+            "Polymers & Plastics (flame retardants, stabilizers)",
+            "Pharmaceuticals (drug synthesis)",
+            "Lubricants & Coatings",
+            "Metal Treatment"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in airtight containers under dry conditions. Keep away from strong oxidizers and bases. Store in cool, well-ventilated area.",
+          "handling": "Use chemical-resistant gloves (nitrile) and goggles. Avoid inhalation (use local exhaust). Minimize contact with moisture."
+        },
+        "safetyRegulatory": {
+          "hazards": "Combustible liquid (Flash point 85°C). Skin/Eye Irritant - Causes irritation on contact. Harmful if swallowed - May cause gastrointestinal irritation. Moisture-sensitive - Slow hydrolysis in water.",
+          "nfpaRating": "Health: 2 | Flammability: 2 | Reactivity: 1",
+          "regulations": "GHS Symbols: Exclamation Mark. Not classified as hazardous for transport."
+        }
+      },
+      "dimethyl-phosphite-dmpi": {
+        "overview": {
+          "name": "Dimethyl Phosphite (DMPi)",
+          "description": "A colorless, clear, mobile liquid with a pungent, characteristic odor, used as a chemical intermediate, plastic additive, corrosion inhibitor, and in organic synthesis and batteries."
+        },
+        "identification": {
+          "iupacName": "Dimethyl phosphonate",
+          "commonNames": "DMPi, Dimethyl hydrogen phosphite, Phosphonic acid dimethyl ester",
+          "casNumber": "868-85-9",
+          "chemicalFormula": "C₂H₇O₃P or (CH₃O)₂P(O)H",
+          "molecularWeight": "110.05 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "color": "Colorless",
+          "odor": "Pungent, characteristic odor",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "170-172°C (decomposes)",
+          "meltingPoint": "-50°C",
+          "density": "1.200 g/cm³ (at 20°C)",
+          "refractiveIndex": "1.400 (20°C)",
+          "flashPoint": "85°C (closed cup) - Combustible liquid",
+          "solubility": "Miscible with water and most organic solvents; reacts slowly with water (hydrolysis to methanol and phosphorous acid)",
+          "viscosity": "N/A (liquid)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial use)",
+          "highPurityGrade": ">=98% (electronics/pharma)",
+          "impurities": "May contain traces of methanol or methyl phosphite"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "For flame retardants (phosphonate esters), pesticides (organophosphorus compounds), and pharmaceuticals (antiviral agents)." },
+            { "title": "Plastic Additives", "description": "Stabilizer for polymers." },
+            { "title": "Corrosion Inhibitors", "description": "In metal treatment." },
+            { "title": "Organic Synthesis", "description": "For Horner-Wadsworth-Emmons reactions." },
+            { "title": "Electrolyte Additives", "description": "In lithium-ion batteries." }
+          ],
+          "industriesServed": [
+            "Agrochemicals (pesticide production)",
+            "Polymers & Plastics (flame retardants)",
+            "Pharmaceuticals (drug synthesis)",
+            "Electronics (battery components)",
+            "Metal Treatment"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in airtight containers under dry conditions. Keep away from strong oxidizers. Store in cool, well-ventilated area.",
+          "handling": "Use chemical-resistant gloves and goggles. Avoid inhalation (use fume hood). Minimize contact with moisture."
+        },
+        "safetyRegulatory": {
+          "hazards": "Combustible liquid (Flash point 85°C). Skin/Eye Irritant - Causes irritation. Harmful if swallowed - May cause gastrointestinal effects. Moisture-sensitive - Slow hydrolysis in water.",
+          "nfpaRating": "Health: 2 | Flammability: 2 | Reactivity: 1",
+          "regulations": "GHS Symbols: Exclamation Mark. Not classified as hazardous for transport."
+        }
+      },
+      "dimethyl-methylphosphonate-dmmp": {
+        "overview": {
+          "name": "Dimethyl Methylphosphonate (DMMP)",
+          "description": "A colorless, clear, viscous liquid with a mild, characteristic odor, used as a flame retardant, chemical intermediate, solvent, plasticizer, lubricant additive, and decontamination agent."
+        },
+        "identification": {
+          "iupacName": "Dimethyl methylphosphonate",
+          "commonNames": "DMMP, Methylphosphonic acid dimethyl ester",
+          "casNumber": "756-79-6",
+          "chemicalFormula": "C₃H₉O₃P or (CH₃O)₂P(O)CH₃",
+          "molecularWeight": "124.08 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "color": "Colorless",
+          "odor": "Mild, characteristic odor",
+          "appearance": "Clear, viscous liquid",
+          "boilingPoint": "181-182°C",
+          "meltingPoint": "-50°C",
+          "density": "1.145 g/cm³ (at 25°C)",
+          "refractiveIndex": "1.411 (20°C)",
+          "flashPoint": "107°C (closed cup) - Combustible liquid",
+          "solubility": "Miscible with water and most organic solvents; hydrolytically stable under normal conditions",
+          "viscosity": "N/A (liquid)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial applications)",
+          "highPurityGrade": ">=99% (military/specialty)",
+          "impurities": "May contain traces of methanol or methyl phosphonate derivatives"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Flame Retardant", "description": "Effective plasticizer for polyurethane foams, epoxy resins, and polyester resins." },
+            { "title": "Chemical Intermediate", "description": "For nerve agent simulants (military training), pesticide synthesis." },
+            { "title": "Solvent & Plasticizer", "description": "For specialty polymers." },
+            { "title": "Lubricant Additive", "description": "Extreme pressure properties." },
+            { "title": "Decontamination Agent", "description": "In chemical warfare defense." }
+          ],
+          "industriesServed": [
+            "Military/Defense (chemical agent simulants)",
+            "Aerospace (flame-retardant materials)",
+            "Construction (fire-resistant foams)",
+            "Electronics (flame-retardant coatings)",
+            "Chemical Manufacturing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in tightly sealed containers. Keep away from strong oxidizers. Ambient temperature storage acceptable.",
+          "handling": "Use nitrile gloves and safety goggles. Ensure adequate ventilation. Avoid prolonged skin contact."
+        },
+        "safetyRegulatory": {
+          "hazards": "Combustible liquid (Flash point 107°C). Eye Irritant - Causes moderate eye irritation. May cause drowsiness if inhaled. Low acute toxicity but chronic effects possible.",
+          "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 0",
+          "regulations": "GHS Symbols: Exclamation Mark. Not classified as hazardous for transport."
+        }
+      },
+      "carbon-disulfide-cs2": {
+        "overview": {
+          "name": "Carbon Disulfide (CS₂)",
+          "description": "A volatile, colorless to pale yellow liquid with an ether-like (pure) or sharp, radish-like (technical) odor. Used in the production of viscose, cellophane, pesticides, rubber, chemical synthesis, and electronics."
+        },
+        "identification": {
+          "iupacName": "Carbon disulfide",
+          "commonNames": "Carbon bisulfide, dithiocarbonic acid anhydride",
+          "casNumber": "75-15-0",
+          "chemicalFormula": "CS₂",
+          "molecularWeight": "76.13 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Volatile liquid",
+          "color": "Colorless or pale yellow (pure product)",
+          "odor": "Ether-like, sweet (pure); sharp, radish-like (technical)",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "46.3°C",
+          "meltingPoint": "–111.6°C",
+          "density": "1.26 g/cm³ (at 20°C)",
+          "vaporPressure": "357 mm Hg (at 20°C)",
+          "flashPoint": "–30°C (extremely flammable)",
+          "autoignitionTemp": "90°C (may self-ignite in air)",
+          "solubility": "Slightly soluble in water (0.3 g/L at 20°C); miscible with alcohol, ether, benzene, oils"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial use, may contain sulfur)",
+          "highPurityGrade": ">=99.9% (for laboratories and electronics)",
+          "impurities": "May contain H₂S, COS, and sulfur"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Viscose and Cellophane Production", "description": "Main industrial use (85% of global CS₂)." },
+            { "title": "Pesticides and Fumigants", "description": "Used for soil treatment (e.g., against nematodes)." },
+            { "title": "Rubber Industry", "description": "Vulcanization accelerator." },
+            { "title": "Chemical Synthesis", "description": "Production of carbon tetrachloride (CCl₄), xanthates (ore flotation)." },
+            { "title": "Solvent", "description": "For fats, resins, and sulfur." },
+            { "title": "Electronics", "description": "Purification of monocrystalline silicon." }
+          ],
+          "industriesServed": [
+            "Textiles (viscose production)",
+            "Agriculture (fumigants)",
+            "Mining (xanthates for ore beneficiation)",
+            
+            "Chemicals (sulfur derivatives)",
+            "Pharmaceuticals (intermediate synthesis)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in airtight, explosion-proof containers under nitrogen. Keep away from heat, sparks, open flames. Use grounded vessels.",
+          "handling": "Use chemically resistant gloves (butyl rubber), goggles, respirators. Work in well-ventilated areas/fume hoods. Avoid contact with metals."
+        },
+        "safetyRegulatory": {
+          "hazards": "Extremely flammable (flash point: –30°C; explosive vapors). Highly toxic—affects CNS, liver, kidneys; chronic exposure causes psychosis ('CS₂-madness'). Environmentally hazardous—very toxic to aquatic life.",
+          "nfpaRating": "Health: 3 | Flammability: 4 | Reactivity: 0",
+          "regulations": "GHS: Flame, Skull & Crossbones, Health Hazard. Transport class: UN 1131 (Class 3, flammable liquid, packing group I). OSHA PEL: 20 ppm (8-hour shift). Category 3 (suspected carcinogen)."
+        }
+      },
+      "sodium-sulfide-na2s": {
+        "overview": {
+          "name": "Sodium Sulfide (Na₂S)",
+          "description": "A hygroscopic solid with a strong rotten-egg odor, used in leather tanning, mining, pulp & paper, chemical manufacturing, dye industry, and wastewater treatment."
+        },
+        "identification": {
+          "iupacName": "Sodium sulfide",
+          "commonNames": "Sodium monosulfide, Disodium sulfide",
+          "casNumber": "1313-82-2 (Anhydrous) | 1313-84-4 (Hydrated, Na₂S·xH₂O)",
+          "chemicalFormula": "Na₂S",
+          "molecularWeight": "78.04 g/mol (anhydrous)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Anhydrous: Yellow-to-red flakes or powder; Hydrated: Colorless crystals",
+          "color": "Yellow-to-red (anhydrous), colorless (hydrated)",
+          "odor": "Strong rotten-egg smell (due to H₂S release)",
+          "appearance": "Hygroscopic solid",
+          "meltingPoint": "1,176°C (anhydrous) | 50°C (hydrated, loses water)",
+          "density": "1.86 g/cm³ (anhydrous)",
+          "solubility": "Highly soluble in water (186 g/L at 20°C); reacts violently with acids (toxic H₂S release)",
+          "ph": "~12 (strong alkaline solution)"
+        },
+        "gradesPurity": {
+          "technicalGrade": "60-70% Na₂S (leather tanning, mining)",
+          "highPurityGrade": "≥98% Na₂S (chemical synthesis)",
+          "flakeGrade": "30-40% Na₂S (commercial form)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Leather Industry", "description": "Dehairing hides (replaces lime in 'sulfide liming')." },
+            { "title": "Mining", "description": "Flotation agent for copper, lead, and zinc ores." },
+            { "title": "Pulp & Paper", "description": "Kraft process (breaks down lignin)." },
+            { "title": "Chemical Manufacturing", "description": "Precursor for sodium hydrosulfide (NaSH), thioorganic compounds (e.g., thiourea)." },
+            { "title": "Dye Industry", "description": "Sulfur dye production." },
+            { "title": "Wastewater Treatment", "description": "Heavy metal precipitation." }
+          ],
+          "industriesServed": [
+            "Leather Tanning",
+            "Mining & Metallurgy",
+            "Textiles (dyeing)",
+            "Chemical Synthesis",
+            "Water Treatment"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight, dry containers (hygroscopic, oxidizes in air). Separate from acids, oxidizers, moisture. Store cool, ventilated (H₂S risk).",
+          "handling": "Use nitrile gloves, goggles, respirators (if dust/fumes). Avoid contact with water (exothermic)."
+        },
+        "safetyRegulatory": {
+          "hazards": "Corrosive – Causes severe skin/eye burns. Toxic H₂S release with acids/moisture. Environmental hazard – toxic to aquatic life.",
+          "nfpaRating": "Health: 3 | Flammability: 1 | Reactivity: 1",
+          "regulations": "GHS Symbols: Corrosion, Skull & Crossbones. Transport Class: UN 1385 (Class 4.2 Spontaneously Combustible). OSHA PEL: 5 mg/m³ (as sulfide)."
+        }
+      },
+      "methyl-tertiary-butyl-ether-mtbe": {
+        "overview": {
+          "name": "Methyl Tertiary Butyl Ether (MTBE)",
+          "description": "A clear, colorless, volatile liquid with a characteristic turpentine-like odor, used as a gasoline additive, solvent, and chemical intermediate."
+        },
+        "identification": {
+          "iupacName": "2-Methoxy-2-methylpropane",
+          "commonNames": "MTBE, Methyl tert-butyl ether",
+          "casNumber": "1634-04-4",
+          "chemicalFormula": "C₅H₁₂O or (CH₃)₃COCH₃",
+          "molecularWeight": "88.15 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "color": "Colorless",
+          "odor": "Characteristic, turpentine-like odor",
+          "appearance": "Clear, volatile liquid",
+          "boilingPoint": "55.2°C",
+          "meltingPoint": "–109°C",
+          "density": "0.740 g/cm³ (at 20°C)",
+          "refractiveIndex": "1.369 (20°C)",
+          "flashPoint": "–28°C (highly flammable)",
+          "solubility": "Miscible with most organic solvents (ethanol, ether); moderately soluble in water (48 g/L at 20°C)"
+        },
+        "gradesPurity": {
+          "fuelGrade": ">=98% (gasoline blending)",
+          "chemicalGrade": ">=99.5% (lab/synthesis)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Gasoline Additive", "description": "Oxygenate to boost octane and reduce CO emissions (phased out in many regions)." },
+            { "title": "Solvent", "description": "For organic reactions and extractions." },
+            { "title": "Chemical Intermediate", "description": "Production of isobutene (via MTBE cracking), pharmaceuticals (tert-butyl alcohol derivatives)." },
+            { "title": "Analytical Chemistry", "description": "HPLC solvent." }
+          ],
+          "industriesServed": [
+            "Petroleum Refining (historical use)",
+            "Chemical Manufacturing",
+            "Pharmaceuticals",
+            "Laboratory & Research"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in tightly sealed, explosion-proof containers. Keep away from heat, sparks, oxidizers. Use nitrogen blanketing to prevent peroxide formation.",
+          "handling": "Wear chemical-resistant gloves (nitrile) and goggles. Use in well-ventilated areas (volatile vapors)."
+        },
+        "safetyRegulatory": {
+          "hazards": "Highly flammable (Flash point: –28°C). Irritant – causes eye/skin irritation. Groundwater contaminant – persistent in water (banned in many areas).",
+          "nfpaRating": "Health: 1 | Flammability: 3 | Reactivity: 1",
+          "regulations": "GHS Symbols: Flame, Health Hazard. Transport Class: UN 2398 (Class 3 Flammable Liquid)."
+        }
+      },
+      "sulfur": {
+  "overview": {
+    "name": "Sulfur",
+    "description": "A yellow, odorless non-metallic element found in multiple allotropes; essential in fertilizer and chemical production."
+  },
+  "identification": {
+    "iupacName": "Sulfur",
+    "commonNames": "Brimstone, Elemental sulfur",
+    "casNumber": "7704-34-9",
+    "chemicalFormula": "S₈",
+    "molecularWeight": "256.48 g/mol"
+  },
+  "physicalChemicalProperties": {
+    "form": "Solid",
+    "color": "Yellow",
+    "odor": "Odorless (pure), rotten egg smell when impure (due to H₂S)",
+    "appearance": "Rhombic sulfur: Yellow crystals; Amorphous sulfur: Dark, plastic-like",
+    "boilingPoint": "444.6°C",
+    "meltingPoint": "115.21°C",
+    "density": "2.07 g/cm³",
+    "flashPoint": null,
+    "solubility": "Insoluble in water; soluble in carbon disulfide and toluene",
+    "viscosity": "N/A"
+  },
+  "gradesPurity": {
+    "technicalGrade": "99.5% (used in agriculture, chemicals)",
+    "highPurityGrade": "99.9% (used in pharmaceuticals, food)",
+    "impurities": "Flowers of sulfur: sublimed fine powder"
+  },
+  "applicationsUses": {
+    "applications": [
+      { "title": "Fertilizers", "description": "Used in sulfuric acid production for phosphate fertilizers like ammonium sulfate ((NH₄)₂SO₄)" },
+      { "title": "Chemical Manufacturing", "description": "Sulfuric acid production via the Contact Process" },
+      { "title": "Rubber Industry", "description": "Used in vulcanization of rubber" },
+      { "title": "Pharmaceuticals", "description": "Used in topical treatments for scabies and acne" },
+      { "title": "Pesticides & Fungicides", "description": "Used in lime-sulfur sprays" },
+      { "title": "Batteries", "description": "Present in lead-acid batteries as sulfuric acid electrolyte" }
+    ],
+    "industriesServed": [
+      "Agriculture",
+      "Chemical Manufacturing",
+      "Rubber & Plastics",
+      "Mining & Metallurgy",
+      "Pharmaceuticals"
+    ]
+  },
+  "storageHandling": {
+    "storage": "Store in a dry, well-ventilated area away from oxidizers to prevent H₂S and SO₂ formation.",
+    "handling": "Use dust masks and nitrile gloves when handling powder forms. Avoid dust accumulation and skin contact."
+  },
+  "safetyRegulatory": {
+    "hazards": "Flammable in dust form. Produces toxic SO₂ gas when burned. Can irritate skin and eyes.",
+    "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 0",
+    "regulations": "GHS: Exclamation Mark (Irritant). Not classified as hazardous for bulk transport."
+  }
+},
+
+  "etbe": {
+    "overview": {
+      "name": "Ethyl Tertiary Butyl Ether (ETBE)",
+      "description": "A colorless, flammable ether used primarily as a gasoline oxygenate to boost octane and reduce emissions."
+    },
+    "identification": {
+      "iupacName": "2‑Ethoxy‑2‑methylpropane",
+      "commonNames": "ETBE, Ethyl tert‑butyl ether",
+      "casNumber": "637‑92‑3",
+      "chemicalFormula": "C₆H₁₄O",
+      "molecularWeight": "102.17 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "Colorless liquid",
+      "odor": "Mild, characteristic ether‑like odor",
+      "appearance": "Clear, mobile liquid",
+      "boilingPoint": "72–73°C",
+      "meltingPoint": "−94°C",
+      "density": "0.742 g/cm³ (20°C)",
+      "refractiveIndex": "1.379 (20°C)",
+      "flashPoint": "−19°C",
+      "solubility": "Miscible with organic solvents; ~12 g/L in water at 20°C"
+    },
+    "gradesPurity": {
+      "fuelGrade": "≥98% (for gasoline blending)",
+      "chemicalGrade": "≥99.5% (laboratory/synthesis)",
+      "impurities": "May contain traces of ethanol, isobutene"
+    },
+    "applicationsUses": {
+      "applications": [
+        { "title": "Gasoline Additive", "description": "Oxygenate to boost octane and reduce emissions" },
+        { "title": "Solvent", "description": "Used in organic reactions and extractions" },
+        { "title": "Chemical Intermediate", "description": "Precursor for isobutene and tert‑butyl alcohol derivatives" }
+      ],
+      "industriesServed": ["Petroleum Refining", "Chemical Manufacturing", "Environmental"]
+    },
+    "storageHandling": {
+      "storage": "Store in tightly sealed, explosion‑proof containers; avoid heat, sparks, oxidizers; nitrogen blanket to prevent peroxides.",
+      "handling": "Use nitrile gloves and goggles; operate in well‑ventilated areas."
+    },
+    "safetyRegulatory": {
+      "hazards": "Highly flammable; causes eye/skin irritation; lower groundwater risk than MTBE.",
+      "nfpaRating": "Health: 1 | Flammability: 3 | Reactivity: 1",
+      "regulations": "GHS symbols: Flame, Health Hazard; UN‑1993 Class 3 Flammable Liquid; Approved for EU gasoline."
+    }
+  },
+  "pta": {
+    "overview": {
+      "name": "Purified Terephthalic Acid (PTA)",
+      "description": "A high-purity white crystalline acid, primary feedstock for polyester and PET resins."
+    },
+    "identification": {
+      "iupacName": "Benzene‑1,4‑dicarboxylic acid",
+      "commonNames": "PTA, Terephthalic acid",
+      "casNumber": "100‑21‑0",
+      "chemicalFormula": "C₈H₆O₄",
+      "molecularWeight": "166.13 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "White crystalline powder",
+      "odor": "Odorless",
+      "appearance": "Free‑flowing powder",
+      "meltingPoint": ">300°C (sublimes before melting)",
+      "density": "1.52 g/cm³",
+      "solubility": "Insoluble in water, ethanol, ether; soluble in hot DMF, DMSO",
+      "pKa": "~3.5"
+    },
+    "gradesPurity": {
+      "fiberGrade": "≥99.9% (polyester fiber production)",
+      "bottleGrade": "≥99.95% (PET bottle resin)",
+      "filmGrade": "≥99.9% (packaging films)"
+    },
+    "applicationsUses": {
+      "applications": [
+        { "title": "Polyester Production", "description": "Used to make PET for bottles, fibers, films (~90% of use)" },
+        { "title": "Liquid Crystal Polymers", "description": "Feeding into LCP production" },
+        { "title": "Plasticizers", "description": "Used in additive production" },
+        { "title": "Paints & Coatings", "description": "Used as resin intermediate" }
+      ],
+      "industriesServed": ["Textiles", "Packaging", "Plastics", "Automotive"]
+    },
+    "storageHandling": {
+      "storage": "Store in dry, well‑ventilated area; avoid moisture (hygroscopic)",
+      "handling": "Use dust masks and gloves; powder may irritate skin"
+    },
+    "safetyRegulatory": {
+      "hazards": "Low toxicity; dust explosion risk if airborne",
+      "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 0",
+      "regulations": "Generally recognized as safe for food contact (FDA)."
+    }
+  },
+  "meg": {
+    "overview": {
+      "name": "Mono Ethylene Glycol (MEG)",
+      "description": "A clear, colorless hygroscopic liquid used as antifreeze, coolant, and a precursor in polyester production."
+    },
+    "identification": {
+      "iupacName": "Ethane‑1,2‑diol",
+      "commonNames": "MEG, Ethylene glycol, 1,2‑Ethanediol",
+      "casNumber": "107‑21‑1",
+      "chemicalFormula": "C₂H₆O₂",
+      "molecularWeight": "62.07 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "Colorless syrupy liquid",
+      "odor": "Odorless",
+      "appearance": "Viscous liquid, hygroscopic",
+      "meltingPoint": "−12.9°C",
+      "boilingPoint": "197.3°C",
+      "density": "1.113 g/cm³ (20°C)",
+      "viscosity": "16.1 mPa·s (25°C)",
+      "flashPoint": "111°C (closed cup)",
+      "solubility": "Miscible with water, alcohols, acetone; slightly soluble in ether"
+    },
+    "gradesPurity": {
+      "industrialGrade": "≥99% (antifreeze, polyester)",
+      "fiberGrade": "≥99.9% (PET production)",
+      "pharmaceuticalGrade": "≥99.99% (medical applications)"
+    },
+    "applicationsUses": {
+      "applications": [
+        { "title": "Polyester Production", "description": "Raw material for PET (∼60% of use)" },
+        { "title": "Antifreeze/Coolants", "description": "Used in automotive & industrial systems (∼30%)" },
+        { "title": "Hydraulic & Deicing Fluids", "description": "Used in aircraft/runway deicing and hydraulic applications" },
+        { "title": "Solvent", "description": "Used in paints and inks" }
+      ],
+      "industriesServed": ["Textiles", "Packaging", "Automotive", "Chemicals", "Aviation"]
+    },
+    "storageHandling": {
+      "storage": "Seal in containers (hygroscopic); store in carbon steel or stainless tanks; keep away from oxidizers.",
+      "handling": "Wear chemical‑resistant gloves and eye protection; use adequate ventilation."
+    },
+    "safetyRegulatory": {
+      "hazards": "Toxic if ingested (LD₅₀ ~4.7 g/kg in rats); may cause kidney failure; not flammable but combustible.",
+      "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 0",
+      "regulations": "GHS: Health Hazard; Transport UN‑3082 (environmentally hazardous substance)."
+    }
+  },
+
+
+  
+  "px": {
+    "overview": {
+      "name": "Paraxylene (PX)",
+      "description": "A colorless, sweet-smelling aromatic hydrocarbon used primarily as a feedstock for producing purified terephthalic acid (PTA) in polyester production."
+    },
+    "identification": {
+      "iupacName": "1,4-Dimethylbenzene",
+      "commonNames": "p-Xylene, PX, Para-xylene",
+      "casNumber": "106-42-3",
+      "chemicalFormula": "C₈H₁₀",
+      "molecularWeight": "106.16 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "Colorless liquid",
+      "odor": "Sweet, aromatic (similar to other xylenes)",
+      "appearance": "Clear, mobile liquid",
+      "meltingPoint": "13.2°C",
+      "boilingPoint": "138.4°C",
+      "density": "0.861 g/cm³ (20°C)",
+      "refractiveIndex": "1.4958 (20°C)",
+      "flashPoint": "27°C",
+      "solubility": "Insoluble in water; miscible with most organic solvents"
+    },
+    "gradesPurity": {
+      "fiberGrade": "≥99.7% (for PTA/PET production)",
+      "chemicalGrade": "≥99% (general industrial use)",
+      "isomerMixture": "Typically 90–95% PX in mixed xylenes"
+    },
+    "applicationsUses": {
+      "applications": [
+        { "title": "Feedstock for PTA", "description": "Used in purified terephthalic acid production for polyester (PET)" },
+        { "title": "Solvent", "description": "Used in paints, coatings, and inks" },
+        { "title": "Chemical Intermediate", "description": "Precursor for terephthaloyl chloride" },
+        { "title": "Laboratory Reagent", "description": "Used in research and testing" }
+      ],
+      "industriesServed": ["Textiles", "Packaging", "Paints & Coatings", "Chemical Manufacturing"]
+    },
+    "storageHandling": {
+      "storage": "Store in steel or aluminum containers with nitrogen blanketing. Explosion-proof equipment required.",
+      "handling": "Use butyl rubber gloves, vapor respirator if needed. Ensure grounding/bonding during transfer."
+    },
+    "safetyRegulatory": {
+      "hazards": "Flammable liquid/vapor (LFL 1.1%, UFL 7.0%). CNS depressant and skin irritant.",
+      "nfpaRating": "Health: 2 | Flammability: 3 | Reactivity: 0",
+      "regulations": "GHS: Flame, Exclamation Mark; UN 1307 (Class 3 Flammable Liquid)"
+    }
+  },
+  "ox": {
+    "overview": {
+      "name": "Ortho-Xylene (OX)",
+      "description": "A colorless aromatic liquid hydrocarbon, primarily used in the production of phthalic anhydride for plasticizers and resins."
+    },
+    "identification": {
+      "iupacName": "1,2-Dimethylbenzene",
+      "commonNames": "o-Xylene, OX",
+      "casNumber": "95-47-6",
+      "chemicalFormula": "C₈H₁₀",
+      "molecularWeight": "106.16 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "Colorless liquid",
+      "odor": "Aromatic, sweet (similar to other xylenes)",
+      "appearance": "Clear, mobile liquid",
+      "meltingPoint": "-25.2°C",
+      "boilingPoint": "144.4°C",
+      "density": "0.880 g/cm³ (20°C)",
+      "refractiveIndex": "1.505 (20°C)",
+      "flashPoint": "32°C",
+      "solubility": "Insoluble in water; miscible with most organic solvents"
+    },
+    "gradesPurity": {
+      "technicalGrade": "≥96% (industrial use)",
+      "highPurityGrade": "≥99% (for phthalic anhydride production)",
+      "mixedXylenes": "Typically contains 10–25% OX"
+    },
+    "applicationsUses": {
+      "applications": [
+        { "title": "Phthalic Anhydride Production", "description": "Used for plasticizers and resins (~85% of usage)" },
+        { "title": "Solvent", "description": "Used in paints, coatings, adhesives" },
+        { "title": "Chemical Intermediate", "description": "Used in dyes, insecticides, and pharmaceuticals" },
+        { "title": "Laboratory Reagent", "description": "Used in analytical applications" }
+      ],
+      "industriesServed": ["Plastics", "Paints & Coatings", "Chemical Manufacturing", "Pharmaceuticals"]
+    },
+    "storageHandling": {
+      "storage": "Store in grounded steel/aluminum tanks. Keep in cool, ventilated area.",
+      "handling": "Use nitrile/butyl rubber gloves, respirator if needed. Explosion-proof equipment required."
+    },
+    "safetyRegulatory": {
+      "hazards": "Flammable liquid/vapor (LFL 1.0%, UFL 7.0%). CNS depressant and skin irritant.",
+      "nfpaRating": "Health: 2 | Flammability: 3 | Reactivity: 0",
+      "regulations": "GHS: Flame, Exclamation Mark; UN 1307 (Class 3 Flammable Liquid)"
+    }
+  },
+  
+  
+    "toluene": {
+      "overview": {
+        "name": "Toluene",
+        "description": "A clear, volatile, aromatic hydrocarbon used primarily as a solvent and chemical feedstock."
+      },
+      "identification": {
+        "iupacName": "Methylbenzene",
+        "commonNames": "Toluene, Toluol, Phenylmethane",
+        "casNumber": "108-88-3",
+        "chemicalFormula": "C₇H₈",
+        "molecularWeight": "92.14 g/mol"
+      },
+      "physicalChemicalProperties": {
+        "form": "Colorless liquid",
+        "odor": "Sweet, pungent (similar to paint thinner)",
+        "appearance": "Clear, volatile liquid",
+        "meltingPoint": "-95°C",
+        "boilingPoint": "110.6°C",
+        "density": "0.867 g/cm³ (20°C)",
+        "refractiveIndex": "1.496 (20°C)",
+        "flashPoint": "4°C",
+        "solubility": "Insoluble in water (0.52 g/L at 20°C); miscible with most organic solvents"
+      },
+      "gradesPurity": {
+        "technicalGrade": "≥99% (industrial use)",
+        "highPurityGrade": "≥99.5% (analytical use)",
+        "reagentGrade": "Ultra-high purity (HPLC/Spectroscopy)"
+      },
+      "applicationsUses": {
         "applications": [
-          {
-            "title": "Styrene Production",
-            "description": "Major feedstock for producing styrene monomer used in polystyrene"
-          },
-          {
-            "title": "Phenol Manufacturing",
-            "description": "Key raw material for phenol production via cumene process"
-          },
-          {
-            "title": "Cyclohexane Production",
-            "description": "Used to produce cyclohexane for nylon manufacturing"
-          },
-          {
-            "title": "Chemical Solvents",
-            "description": "Industrial solvent for various chemical processes"
-          }
+          { "title": "Chemical Feedstock", "description": "Used for benzene production and TDI for polyurethanes" },
+          { "title": "Solvent", "description": "Used in paints, coatings, adhesives, inks" },
+          { "title": "Gasoline Additive", "description": "Octane booster (being phased out)" },
+          { "title": "Pharmaceuticals", "description": "Used as a precursor for drugs such as sulfonamides" }
         ],
-        "industriesServed": ["Petrochemicals", "Plastics", "Synthetic Fibers", "Pharmaceuticals", "Paints and Coatings", "Rubber"]
+        "industriesServed": ["Petrochemicals", "Paints & Coatings", "Plastics & Polymers", "Pharmaceuticals", "Printing"]
+      },
+      "storageHandling": {
+        "storage": "Store in sealed containers with nitrogen blanket in explosion-proof areas; use grounded equipment.",
+        "handling": "Use chemical-resistant gloves (nitrile/butyl), vapor respirator, and ensure adequate ventilation."
+      },
+      "safetyRegulatory": {
+        "hazards": "Highly flammable (LFL 1.1%, UFL 7.1%), CNS depressant, possible reproductive toxin.",
+        "regulations": "GHS: Flame, Health Hazard; UN 1294 (Class 3 Flammable Liquid)",
+        "exposureLimits": "OSHA PEL: 200 ppm; ACGIH TLV: 20 ppm"
+      }
+    },
+    
+      "cyclohexane": {
+        "overview": {
+          "name": "Cyclohexane",
+          "description": "A clear, flammable hydrocarbon used mainly in nylon production and as a solvent in industrial processes."
+        },
+        "identification": {
+          "iupacName": "Cyclohexane",
+          "commonNames": "Hexahydrobenzene, Hexamethylene",
+          "casNumber": "110-82-7",
+          "chemicalFormula": "C₆H₁₂",
+          "molecularWeight": "84.16 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Mild, sweet (similar to gasoline)",
+          "appearance": "Clear, mobile liquid",
+          "meltingPoint": "6.5°C",
+          "boilingPoint": "80.7°C",
+          "density": "0.779 g/cm³ (20°C)",
+          "refractiveIndex": "1.426 (20°C)",
+          "flashPoint": "-20°C",
+          "solubility": "Insoluble in water (50 mg/L at 25°C); miscible with most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥99% (industrial use)",
+          "highPurityGrade": "≥99.5% (analytical use)",
+          "reagentGrade": "≥99.9% (electronics/pharmaceuticals)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Nylon Production", "description": "Oxidized to cyclohexanol/cyclohexanone for adipic acid and nylon 6,6" },
+            { "title": "Solvent", "description": "Used in paints, varnishes, resins, and extraction processes" },
+            { "title": "Chemical Intermediate", "description": "Used in the production of caprolactam for nylon 6" },
+            { "title": "Laboratory Reagent", "description": "Solvent for NMR spectroscopy and research" }
+          ],
+          "industriesServed": ["Textiles", "Plastics & Polymers", "Paints & Coatings", "Pharmaceuticals"]
+        },
+        "storageHandling": {
+          "storage": "Store in sealed containers under nitrogen. Explosion-proof refrigeration recommended (<10°C). Use grounded equipment.",
+          "handling": "Use chemical-resistant gloves (nitrile/neoprene), organic vapor respirator, and avoid ignition sources."
+        },
+        "safetyRegulatory": {
+          "hazards": "Extremely flammable (LFL 1.3%, UFL 8.4%), CNS depressant, skin irritant.",
+          "regulations": "GHS: Flame, Health Hazard; UN 1145 (Class 3 Flammable Liquid)",
+          "exposureLimits": "OSHA PEL: 300 ppm; ACGIH TLV: 100 ppm"
+        }
+      },
+      "antioxidant-1010": {
+        "overview": {
+          "name": "Antioxidant 1010 (CAS No. 6683-19-8)",
+          "description": "A white, odorless, fine crystalline powder used as a primary antioxidant and stabilizer in polymers, food packaging, adhesives, and coatings."
+        },
+        "identification": {
+          "iupacName": "Pentaerythritol tetrakis(3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionate)",
+          "commonNames": "Antioxidant 1010, Irganox 1010 (BASF trade name), Tetrakis[methylene(3,5-di-tert-butyl-4-hydroxyhydrocinnamate)]methane",
+          "casNumber": "6683-19-8",
+          "chemicalFormula": "C₇₃H₁₀₈O₁₂",
+          "molecularWeight": "1,177.63 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder",
+          "odor": "Odorless",
+          "appearance": "Fine free-flowing powder",
+          "meltingPoint": "110-125°C",
+          "density": "~1.15 g/cm³",
+          "solubility": "Soluble in chloroform, acetone, benzene; insoluble in water (<0.01 g/L at 20°C)",
+          "thermalStability": "Stable up to 300°C (in polymer matrices)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial polymers)",
+          "highPurityGrade": ">=99% (food-contact applications)",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Stabilizer", "description": "Used for stabilization of polypropylene (PP), polyethylene (PE), ABS resins, and PVC." },
+            { "title": "Food Packaging", "description": "Approved for food-contact plastics (FDA, EU)." },
+            { "title": "Rubber Products", "description": "Prevents oxidative degradation in rubber products." },
+            { "title": "Adhesives & Coatings", "description": "Extends product lifespan in adhesives and coatings." }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers",
+            "Packaging (food, medical)",
+            "Automotive (plastic components)",
+            "Wire & Cable",
+            "Consumer Goods"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Keep in tightly sealed containers. Store in cool, dry place (<30°C). Avoid moisture and direct sunlight.",
+          "handling": "Use dust masks (NIOSH N95) for powder handling. Gloves (nitrile) and safety goggles recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low acute toxicity (LD50 >2,000 mg/kg oral rat). Dust explosion risk (if airborne in high concentrations). Eye irritant (mechanical irritation from powder).",
+          "regulations": "GHS Classification: Not classified as hazardous. FDA Status: Approved for food-contact plastics. EU REACH: Registered with no restriction."
+        }
+      },
+      "antioxidant-1076": {
+        "overview": {
+          "name": "Antioxidant 1076 (CAS No. 2082-79-3)",
+          "description": "A white, odorless, free-flowing crystalline powder or granules used as a primary antioxidant and stabilizer in polymers, food packaging, adhesives, lubricants, and oils."
+        },
+        "identification": {
+          "iupacName": "Octadecyl 3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionate",
+          "commonNames": "Antioxidant 1076, Irganox 1076 (BASF trade name), Octadecyl-3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionate",
+          "casNumber": "2082-79-3",
+          "chemicalFormula": "C₃₅H₆₂O₃",
+          "molecularWeight": "530.87 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder or granules",
+          "odor": "Odorless",
+          "appearance": "Free-flowing powder or small pellets",
+          "meltingPoint": "50–55°C",
+          "density": "~1.02 g/cm³",
+          "solubility": "Soluble in chloroform, acetone, toluene; insoluble in water (<0.01 g/L at 20°C)",
+          "thermalStability": "Stable up to 250°C (in polymer processing)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (general polymer applications)",
+          "highPurityGrade": ">=99% (food-contact and medical-grade polymers)",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010 and EU 10/2011"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Stabilizer", "description": "Used for stabilization of polypropylene (PP), polyethylene (PE), polystyrene (PS), rubber, and elastomers." },
+            { "title": "Food Packaging", "description": "FDA-approved for food-contact plastics." },
+            { "title": "Adhesives & Coatings", "description": "Prevents oxidative degradation in hot-melt adhesives." },
+            { "title": "Lubricants & Oils", "description": "Extends service life of synthetic lubricants." }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers",
+            "Packaging (food, medical, industrial)",
+            "Automotive (under-the-hood components)",
+            "Wire & Cable (insulation protection)",
+            "Consumer Goods (durable plastics)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers (prevent moisture absorption). Cool, dry place (<30°C, away from sunlight). Separate from strong oxidizers.",
+          "handling": "Dust mask (NIOSH N95) for powder handling. Nitrile gloves & safety goggles recommended. Avoid inhalation & skin contact."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low toxicity (LD50 >2,000 mg/kg oral rat). Dust may irritate eyes/respiratory tract. Not classified as flammable (but avoid high heat).",
+          "regulations": "GHS Classification: Not hazardous (no GHS symbols required). FDA Status: Approved for indirect food contact. EU REACH: Fully registered (no restrictions). Disposal: Incineration preferred with emission control; landfill permitted (non-hazardous)."
+        }
+      },
+      "antioxidant-168": {
+        "overview": {
+          "name": "Antioxidant 168 (CAS No. 31570-04-4)",
+          "description": "A white, free-flowing crystalline powder or granules with a slight aromatic odor, used as a secondary antioxidant and phosphite stabilizer in polymers, food packaging, and high-temperature processing."
+        },
+        "identification": {
+          "iupacName": "Tris(2,4-di-tert-butylphenyl) phosphite",
+          "commonNames": "Antioxidant 168, Irgafos 168 (BASF trade name), Phosphite stabilizer 168",
+          "casNumber": "31570-04-4",
+          "chemicalFormula": "C₄₂H₆₃O₃P",
+          "molecularWeight": "646.93 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder or granules",
+          "odor": "Slight aromatic odor",
+          "appearance": "Free-flowing powder",
+          "meltingPoint": "180–185°C",
+          "density": "~1.03 g/cm³",
+          "solubility": "Soluble in chloroform, toluene, acetone; insoluble in water (<0.01 g/L at 20°C)",
+          "thermalStability": "Stable up to 300°C (in polymer processing)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial polymers)",
+          "highPurityGrade": ">=99% (food-contact applications)",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010 and EU 10/2011"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Secondary Antioxidant", "description": "Used with phenolic antioxidants like 1010/1076 to prevent polymer degradation during high-temperature processing." },
+            { "title": "Synergistic Stabilizer", "description": "Combined with Irganox 1010/1076 for enhanced performance." },
+            { "title": "Polymer Protection", "description": "Protects polypropylene (PP), polyethylene (PE), ABS, and nylon during processing." },
+            { "title": "Food Packaging", "description": "Approved for food-contact plastics." }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers",
+            "Packaging (food, medical)",
+            "Automotive (under-the-hood components)",
+            "Wire & Cable",
+            "Consumer Goods"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers (prevent moisture absorption). Cool, dry place (<30°C, away from sunlight). Separate from strong oxidizers.",
+          "handling": "Dust mask (NIOSH N95) for powder handling. Nitrile gloves & safety goggles recommended. Avoid inhalation & skin contact."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low toxicity (LD50 >2,000 mg/kg oral rat). Dust may irritate eyes/respiratory tract. Not classified as flammable (but avoid high heat).",
+          "regulations": "GHS Classification: Not hazardous (no GHS symbols required). FDA Status: Approved for indirect food contact. EU REACH: Fully registered (no restrictions). Disposal: Incineration preferred with emission control; landfill permitted (non-hazardous)."
+        },
+        "keyAdvantages": [
+          "Excellent Hydrolytic Stability (resists moisture breakdown)",
+          "Synergistic with Phenolic Antioxidants (e.g., 1010/1076)",
+          "High-Temperature Performance (ideal for PP/PE processing)"
+        ]
+      },
+      "antioxidant-1098": {
+        "overview": {
+          "name": "Antioxidant 1098 (CAS No. 23128-74-7)",
+          "description": "A white to off-white, odorless, fine free-flowing crystalline powder used as a high-molecular-weight phenolic antioxidant for engineering plastics, automotive, electronics, and industrial fibers."
+        },
+        "identification": {
+          "iupacName": "N,N'-Hexane-1,6-diylbis[3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionamide]",
+          "commonNames": "Antioxidant 1098, Irganox 1098 (BASF trade name), High-molecular-weight phenolic antioxidant",
+          "casNumber": "23128-74-7",
+          "chemicalFormula": "C₄₀H₆₄N₂O₄",
+          "molecularWeight": "636.96 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White to off-white crystalline powder",
+          "odor": "Odorless",
+          "appearance": "Fine free-flowing powder",
+          "meltingPoint": "156-161°C",
+          "density": "~1.15 g/cm³",
+          "solubility": "Soluble in chloroform, acetone, hot toluene; insoluble in water (<0.01 g/L at 20°C)",
+          "thermalStability": "Stable up to 300°C (in polymer matrices)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (general polymer applications)",
+          "highPurityGrade": ">=99% (for high-performance polymers)",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Stabilizer for Engineering Plastics", "description": "Used for stabilization of polyamides (Nylon 6, Nylon 66), polyesters (PET, PBT), and polyurethanes." },
+            { "title": "Synergistic Stabilization", "description": "Often combined with phosphite antioxidants (e.g., Irgafos 168) for enhanced performance." },
+            { "title": "Demanding Applications", "description": "Used in automotive under-the-hood components, electrical connectors, and industrial fibers." }
+          ],
+          "industriesServed": [
+            "Automotive (engine components, fuel systems)",
+            "Electrical & Electronics (connectors, housings)",
+            "Industrial Fibers (high-strength applications)",
+            "Packaging (specialty films)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Keep in tightly sealed containers. Store in cool, dry place (<30°C). Avoid moisture and direct sunlight.",
+          "handling": "Use dust masks (NIOSH N95) for powder handling. Chemical-resistant gloves (nitrile) and safety goggles recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low acute toxicity (LD50 >2000 mg/kg oral rat). Dust may cause mechanical eye irritation. Not classified as flammable.",
+          "regulations": "GHS Classification: Not classified as hazardous. FDA Status: Approved for food-contact applications. EU REACH: Registered with no restrictions. Disposal: Incineration recommended (with proper emission controls)."
+        },
+        "keyTechnicalAdvantages": [
+          "Excellent compatibility with polyamides and polyesters",
+          "Low volatility for long-term stabilization",
+          "High extraction resistance in demanding applications"
+        ]
+      },
+      "antioxidant-l135": {
+        "overview": {
+          "name": "Antioxidant L135 (CAS No. 125643-61-0)",
+          "description": "A white, odorless, free-flowing fine crystalline powder used as a high-performance spirocyclic phosphite antioxidant for engineering plastics, high-temperature polymers, medical devices, and optical materials."
+        },
+        "identification": {
+          "iupacName": "3,9-Bis[2,4-bis(1-methyl-1-phenylethyl)phenoxy]-2,4,8,10-tetraoxa-3,9-diphosphaspiro[5.5]undecane",
+          "commonNames": "Antioxidant L135, ADK STAB PEP-36 (Adeka trade name), Spirocyclic phosphite antioxidant",
+          "casNumber": "125643-61-0",
+          "chemicalFormula": "C₅₃H₆₄O₆P₂",
+          "molecularWeight": "859.02 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder",
+          "odor": "Odorless",
+          "appearance": "Free-flowing fine powder",
+          "meltingPoint": "235-245°C",
+          "density": "~1.20 g/cm³",
+          "solubility": "Soluble in chloroform, toluene; insoluble in water (<0.01 g/L)",
+          "thermalStability": "Stable up to 320°C"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial polymer applications)",
+          "highPurityGrade": ">=99% (food-contact and medical applications)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "High-Performance Phosphite Antioxidant", "description": "Used for engineering plastics (PC, PBT, PET) and high-temperature polymers." },
+            { "title": "Synergistic Stabilization", "description": "Used with phenolic antioxidants (e.g., Irganox 1010/1076) for enhanced performance." },
+            { "title": "Specialty Applications", "description": "Optical grade polycarbonates and medical device polymers." }
+          ],
+          "industriesServed": [
+            "Electrical & Electronics",
+            "Automotive",
+            "Medical Devices",
+            "Optical Materials"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers. Cool, dry place (<30°C). Protect from moisture.",
+          "handling": "Use dust mask (NIOSH N95). Nitrile gloves and goggles recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low toxicity (LD50 >2000 mg/kg). Dust may irritate eyes.",
+          "regulations": "FDA compliant for food-contact. EU REACH registered."
+        },
+        "keyAdvantages": [
+          "Exceptional hydrolytic stability",
+          "Excellent color retention",
+          "High-temperature performance"
+        ]
+      },
+      "antioxidant-1135": {
+        "overview": {
+          "name": "Antioxidant 1135 (CAS No. 125643-61-0)",
+          "description": "A white, odorless, free-flowing fine crystalline powder used as a high-performance spirocyclic phosphite stabilizer for polycarbonates, polyesters, polyamides, and high-clarity plastics in electronics, automotive, medical, and packaging applications."
+        },
+        "identification": {
+          "iupacName": "3,9-Bis[2,4-bis(1-methyl-1-phenylethyl)phenoxy]-2,4,8,10-tetraoxa-3,9-diphosphaspiro[5.5]undecane",
+          "commonNames": "Antioxidant 1135, ADK STAB PEP-36 (Adeka trade name), Spirocyclic phosphite stabilizer",
+          "casNumber": "125643-61-0",
+          "chemicalFormula": "C₅₃H₆₄O₆P₂",
+          "molecularWeight": "859.02 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder",
+          "odor": "Odorless",
+          "appearance": "Free-flowing fine powder",
+          "meltingPoint": "235-245°C",
+          "density": "~1.20 g/cm³",
+          "solubility": "Soluble in chloroform, toluene; insoluble in water (<0.01 g/L)",
+          "thermalStability": "Stable up to 320°C"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (general polymer applications)",
+          "highPurityGrade": ">=99% (optical/medical-grade polymers)",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "High-Performance Phosphite Antioxidant", "description": "Used for polycarbonates (PC), polyesters (PET, PBT), and polyamides (PA)." },
+            { "title": "Prevents Yellowing", "description": "Prevents yellowing in transparent plastics and provides excellent hydrolytic stability." },
+            { "title": "Synergistic Use", "description": "Combined with phenolic antioxidants (e.g., Irganox 1010) for enhanced performance." }
+          ],
+          "industriesServed": [
+            "Electronics (LED components, connectors)",
+            "Automotive (headlight lenses)",
+            "Medical (transparent devices)",
+            "Packaging (high-clarity films)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers. Cool (<30°C), dry conditions. Nitrogen blanket recommended.",
+          "handling": "Use NIOSH N95 mask for powders. Nitrile gloves and safety goggles recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low toxicity (LD50 >2000 mg/kg). Dust may cause eye irritation.",
+          "regulations": "FDA compliant (food-contact). EU REACH registered. Not classified as hazardous."
+        },
+        "keyTechnicalAdvantages": [
+          "Spirocyclic structure: Superior hydrolysis resistance",
+          "High melting point: No volatilization during processing",
+          "Phenolic-free: No discoloration in clear polymers"
+        ]
+      },
+      "antioxidant-1315": {
+        "overview": {
+          "name": "Antioxidant 1315 (CAS No. 171090-93-0)",
+          "description": "A white, odorless, fine free-flowing crystalline powder used as a high-performance spirocyclic diphosphite stabilizer for polycarbonates, polyesters, polyamides, and high-clarity plastics in electronics, automotive, medical, and packaging applications."
+        },
+        "identification": {
+          "iupacName": "3,9-Bis[2,6-di-tert-butyl-4-methylphenoxy]-2,4,8,10-tetraoxa-3,9-diphosphaspiro[5.5]undecane",
+          "commonNames": "Antioxidant 1315, Spirocyclic diphosphite stabilizer, ADK STAB HP-10 (Adeka trade name)",
+          "casNumber": "171090-93-0",
+          "chemicalFormula": "C₃₉H₅₈O₆P₂",
+          "molecularWeight": "708.83 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder",
+          "odor": "Odorless",
+          "appearance": "Fine free-flowing powder",
+          "meltingPoint": "235-245°C",
+          "density": "~1.18 g/cm³",
+          "solubility": "Soluble in chloroform, toluene; insoluble in water (<0.01 g/L)",
+          "thermalStability": "Stable up to 300°C"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial polymer applications)",
+          "highPurityGrade": ">=99.5% (optical/medical-grade polymers)",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "High-Performance Phosphite Antioxidant", "description": "Used for polycarbonates (PC), polyesters (PET, PBT), and polyamides (PA6, PA66)." },
+            { "title": "Excellent Color Retention", "description": "Provides excellent color retention in transparent plastics and superior hydrolysis resistance." },
+            { "title": "Synergistic Use", "description": "Combined with phenolic antioxidants (e.g., Irganox 1010) for enhanced performance." }
+          ],
+          "industriesServed": [
+            "Electronics (LED components, connectors)",
+            "Automotive (headlight lenses, interior parts)",
+            "Medical (transparent devices, packaging)",
+            "Packaging (high-clarity films, bottles)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers. Cool (<30°C), dry conditions. Nitrogen blanket recommended.",
+          "handling": "Use NIOSH N95 mask for powders. Nitrile gloves and safety goggles recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low toxicity (LD50 >2000 mg/kg, oral rat). Dust may cause eye irritation. Not classified as flammable.",
+          "regulations": "FDA compliant (food-contact). EU REACH registered. Not classified as hazardous."
+        },
+        "keyTechnicalAdvantages": [
+          "Spirocyclic structure: Exceptional hydrolysis resistance",
+          "High thermal stability: Suitable for high-temperature processing",
+          "Phenolic-free: Prevents yellowing in clear polymers"
+        ]
+      },
+      "antioxidant-blend-168-1010": {
+        "overview": {
+          "name": "Antioxidant Blend (1:2 Ratio of Antioxidant 168 & 1010)",
+          "description": "A homogeneous, white to off-white, free-flowing powder or granules composed of a 1:2 weight ratio blend of Antioxidant 168 and Antioxidant 1010, providing synergistic stabilization for polyolefins and engineering plastics."
+        },
+        "identification": {
+          "primaryComponents": "Antioxidant 168 (CAS 31570-04-4): Tris(2,4-di-tert-butylphenyl) phosphite; Antioxidant 1010 (CAS 6683-19-8): Pentaerythritol tetrakis(3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionate)",
+          "commonNames": "AO Blend 168/1010 (1:2), Synergistic stabilizer system",
+          "casNumbers": "168: 31570-04-4; 1010: 6683-19-8",
+          "chemicalFormula": "168: C₄₂H₆₃O₃P | 1010: C₇₃H₁₀₈O₁₂",
+          "molecularWeight": "168: 646.93 g/mol | 1010: 1,177.63 g/mol",
+          "blendRatio": "1 part 168 : 2 parts 1010 (by weight)"
+        },
+        "physicalChemicalProperties": {
+          "form": "White to off-white powder or granules",
+          "odor": "Slight aromatic odor (from 168)",
+          "appearance": "Homogeneous free-flowing mixture",
+          "meltingRange": "110–125°C (1010) + 180–185°C (168); blend melts progressively",
+          "solubility": "Soluble in chloroform, toluene (both components); insoluble in water (<0.01 g/L)",
+          "thermalStability": "Up to 300°C (in polymer matrices)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% active content",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010 (both components)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Synergistic Stabilization", "description": "Used for stabilization of polypropylene (PP), polyethylene (PE), and ABS resins." },
+            { "title": "Mechanism", "description": "1010 (Primary AO): Scavenges free radicals; 168 (Secondary AO): Decomposes peroxides." },
+            { "title": "Key Benefits", "description": "Extended polymer lifespan, reduced discoloration." }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers",
+            "Packaging (food, medical)",
+            "Automotive (interior/exterior parts)",
+            "Consumer Goods"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers. Cool (<30°C), dry place. Separate from strong oxidizers.",
+          "handling": "NIOSH N95 mask for powders. Nitrile gloves and safety goggles recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low toxicity (LD50 >2000 mg/kg for both). Dust may irritate eyes/respiratory tract.",
+          "regulations": "FDA: Approved for food-contact plastics. EU REACH: Registered (both components). GHS: Not classified as hazardous."
+        },
+        "synergisticPerformanceData": {
+          "oxidationInductionTime": "45 min (1010 alone); 120 min (168/1010 blend 1:2)",
+          "yellownessIndex": "ΔYI: 5.2 (1010 alone); 2.1 (168/1010 blend 1:2)"
+        }
+      },
+      "potassium-bicarbonate": {
+        "overview": {
+          "name": "Potassium Bicarbonate (KHCO₃, CAS No. 298-14-6)",
+          "description": "A white, odorless, free-flowing crystalline powder or granules used as a food additive, leavening agent, agricultural fungicide, fire suppressant, and pharmaceutical antacid."
+        },
+        "identification": {
+          "iupacName": "Potassium hydrogen carbonate",
+          "commonNames": "Potassium bicarbonate, Potassium acid carbonate, Food additive E501(ii)",
+          "casNumber": "298-14-6",
+          "chemicalFormula": "KHCO₃",
+          "molecularWeight": "100.12 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder or granules",
+          "odor": "Odorless",
+          "appearance": "Free-flowing powder",
+          "meltingPoint": "Decomposes at 100–120°C → K₂CO₃ + CO₂ + H₂O",
+          "density": "2.17 g/cm³",
+          "solubility": "Water: 33.7 g/100 mL (20°C); insoluble in ethanol",
+          "ph": "8.2 (1% solution)"
+        },
+        "gradesPurity": {
+          "foodGrade": ">=99% (FCC, USP standards)",
+          "technicalGrade": ">=98% (industrial use)",
+          "agriculturalGrade": ">=95% (foliar sprays)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Food Industry", "description": "Leavening agent (baking powders), pH regulator (beverages, dairy)." },
+            { "title": "Agriculture", "description": "Fungicide (organic farming), potassium fertilizer." },
+            { "title": "Fire Extinguishers", "description": "Dry chemical fire suppressant (Class B/C fires)." },
+            { "title": "Pharmaceuticals", "description": "Antacid (potassium supplement)." }
+          ],
+          "industriesServed": [
+            "Food & Beverage",
+            "Agriculture",
+            "Fire Safety",
+            "Pharmaceuticals",
+            "Chemicals"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers. Cool, dry place (<25°C). Avoid moisture (hygroscopic).",
+          "handling": "Gloves and dust mask (NIOSH N95). Eye protection recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low toxicity (LD50 >2,000 mg/kg oral rat). Dust may irritate eyes/respiratory tract. Incompatible with strong acids (violent CO₂ release).",
+          "regulations": "FDA GRAS (Generally Recognized As Safe). EU Approved (Food additive E501(ii)). GHS Classification: Not hazardous."
+        }
+      },
+      "mixed-hexenes": {
+        "overview": {
+          "name": "Mixed Hexenes (C₆ Aliphatic Hydrocarbons)",
+          "description": "A colorless, clear, mobile liquid mixture of C₆ olefin isomers (hexenes) with a mild gasoline-like odor, used in polymer production, chemical synthesis, fuel additives, and specialty solvents."
+        },
+        "identification": {
+          "iupacName": "Mixed hexene isomers (C₆H₁₂)",
+          "commonNames": "Hexene mix, C6 olefin blend, Mixed hexenes",
+          "casNumbers": "1-Hexene: 592-41-6; 2-Hexene: 592-43-8, 7688-21-3; 3-Hexene: 7642-09-3, 7642-10-6; other C₆ olefins",
+          "chemicalFormula": "C₆H₁₂",
+          "molecularWeight": "84.16 g/mol (all isomers)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Mild, gasoline-like",
+          "appearance": "Clear, mobile liquid",
+          "boilingRange": "63-68°C (varies by isomer)",
+          "meltingRange": "-140 to -98°C",
+          "density": "~0.67-0.69 g/cm³ (20°C)",
+          "flashPoint": "< -7°C (highly flammable)",
+          "solubility": "Insoluble in water; miscible with most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "70-90% hexenes (balance other C₆ hydrocarbons)",
+          "polymerGrade": ">=99% α-olefin content (for PE co-monomer)",
+          "refineryGrade": "Mixed with paraffins/naphthenes"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Production", "description": "Co-monomer for LLDPE (linear low-density polyethylene)." },
+            { "title": "Chemical Synthesis", "description": "Alcohols (via hydroformylation), synthetic lubricants." },
+            { "title": "Fuel Additives", "description": "Octane booster (being phased out)." },
+            { "title": "Solvents", "description": "Specialty cleaning formulations." }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers",
+            "Petrochemicals",
+            "Lubricants",
+            "Adhesives"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Pressurized tanks with nitrogen blanket. Explosion-proof refrigeration (<10°C recommended). Grounded containers.",
+          "handling": "Chemical-resistant gloves (butyl rubber). Vapor respirator (organic cartridge). No smoking/open flames."
+        },
+        "safetyRegulatory": {
+          "hazards": "Extremely flammable (LFL ~1.2%, UFL ~7.7%). CNS depressant (inhalation risk). Skin irritant (defatting agent).",
+          "regulations": "GHS Symbols: Flame, Health Hazard. Transport Class: UN 2370 (Class 3 Flammable Liquid). OSHA PEL: 100 ppm (8-hr TWA)."
+        },
+        "isomerDistribution": {
+          "1-Hexene": "20-50%",
+          "2-Hexenes (cis+trans)": "30-60%",
+          "3-Hexenes (cis+trans)": "10-30%"
+        }
+      },
+      "tert-butylamine": {
+        "overview": {
+          "name": "Tert-Butylamine (CAS No. 75-64-9)",
+          "description": "A colorless, volatile liquid with a strong ammonia-like odor, used as an intermediate in pharmaceuticals, agrochemicals, rubber chemicals, dyes, and gas treatment."
+        },
+        "identification": {
+          "iupacName": "2-Amino-2-methylpropane",
+          "commonNames": "tert-Butylamine (TBA), Trimethylaminomethane, 2-Aminoisobutane",
+          "casNumber": "75-64-9",
+          "chemicalFormula": "C₄H₁₁N or (CH₃)₃CNH₂",
+          "molecularWeight": "73.14 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Strong, ammonia-like",
+          "appearance": "Clear, volatile liquid",
+          "boilingPoint": "44.4°C",
+          "meltingPoint": "–67.5°C",
+          "density": "0.696 g/cm³ (20°C)",
+          "refractiveIndex": "1.378 (20°C)",
+          "flashPoint": "–38°C (extremely flammable)",
+          "solubility": "Miscible with water, ethanol, ether; pH of 1% solution: ~11.5 (strong base)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial use)",
+          "highPurityGrade": ">=99.5% (pharmaceuticals)",
+          "anhydrousGrade": "Water content <0.1%"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Pharmaceuticals", "description": "Intermediate for antihistamines, antibiotics." },
+            { "title": "Agrochemicals", "description": "Synthesis of herbicides (e.g., terbuthylazine)." },
+            { "title": "Rubber Chemicals", "description": "Vulcanization accelerator." },
+            { "title": "Dyes & Pigments", "description": "Precursor for azo dyes." },
+            { "title": "Gas Treatment", "description": "CO₂ scrubbing agent." }
+          ],
+          "industriesServed": [
+            "Pharmaceuticals",
+            "Agriculture",
+            "Rubber & Plastics",
+            "Chemicals"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers under nitrogen. Explosion-proof refrigeration (<10°C). Separate from acids/oxidizers.",
+          "handling": "Full-face respirator (ammonia cartridges). Butyl rubber gloves + apron. Grounded equipment."
+        },
+        "safetyRegulatory": {
+          "hazards": "Extremely flammable (LFL 1.7%, UFL 8.9%). Corrosive (causes severe burns). Toxic if inhaled (TLV 5 ppm).",
+          "regulations": "GHS Symbols: Flame, Corrosion, Health Hazard. Transport Class: UN 1126 (Class 3 Flammable Liquid). EPA Listed: Toxic Substance Control Act (TSCA)."
+        }
+      },
+      "methanol": {
+        "overview": {
+          "name": "Methanol (CAS No. 67-56-1)",
+          "description": "A colorless, clear, volatile liquid with a sharp alcoholic odor, used as a chemical feedstock, fuel, solvent, and antifreeze in various industries."
+        },
+        "identification": {
+          "iupacName": "Methanol",
+          "commonNames": "Methyl alcohol, Wood alcohol, Carbinol",
+          "casNumber": "67-56-1",
+          "chemicalFormula": "CH₃OH",
+          "molecularWeight": "32.04 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Characteristic, sharp alcoholic odor",
+          "appearance": "Clear, volatile liquid",
+          "boilingPoint": "64.7°C",
+          "meltingPoint": "-97.6°C",
+          "density": "0.791 g/cm³ (20°C)",
+          "refractiveIndex": "1.328 (20°C)",
+          "flashPoint": "11°C (flammable liquid)",
+          "solubility": "Miscible with water, ethanol, ether; hygroscopic"
+        },
+        "gradesPurity": {
+          "industrialGrade": ">=99.85% (fuel/chemical use)",
+          "acsGrade": ">=99.9% (laboratory use)",
+          "fuelGrade": "Denatured with additives"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Feedstock (Primary Use)", "description": "Formaldehyde production (~40% global demand), MTBE/biodiesel synthesis." },
+            { "title": "Fuel Applications", "description": "Racing fuel additive, marine fuel." },
+            { "title": "Solvent Uses", "description": "Paints, inks, resins." },
+            { "title": "Antifreeze", "description": "Windshield washer fluid." }
+          ],
+          "industriesServed": [
+            "Chemicals",
+            "Energy",
+            "Automotive",
+            "Pharmaceuticals"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers (carbon steel/stainless steel). Explosion-proof ventilation. Grounded equipment.",
+          "handling": "Chemical-resistant gloves (neoprene/nitrile). Vapor respirator (organic cartridges). No smoking/open flames."
+        },
+        "safetyRegulatory": {
+          "hazards": "Highly flammable (LFL 6%, UFL 36%). Toxic if ingested (30 mL can be fatal). Blindness risk (metabolizes to formic acid).",
+          "regulations": "GHS Symbols: Flame, Skull & Crossbones. Transport Class: UN 1230 (Class 3 Flammable Liquid)."
+        }
+      },
+      "isobutylene": {
+        "overview": {
+          "name": "Isobutylene (IB, CAS No. 115-11-7)",
+          "description": "A colorless gas with a mild petroleum-like odor, used primarily in butyl rubber and polyisobutylene production, as well as in fuel additives and chemical intermediates."
+        },
+        "identification": {
+          "iupacName": "2-Methylpropene",
+          "commonNames": "Isobutene, 2-Methylpropylene, IB",
+          "casNumber": "115-11-7",
+          "chemicalFormula": "C₄H₈",
+          "molecularWeight": "56.11 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless gas (at room temperature)",
+          "odor": "Mild, petroleum-like",
+          "appearance": "Compressed liquefied gas (when pressurized)",
+          "boilingPoint": "-6.9°C",
+          "meltingPoint": "-140.3°C",
+          "density": "0.5879 g/cm³ (liquid at 20°C)",
+          "vaporPressure": "3.1 bar (at 20°C)",
+          "flashPoint": "-80°C (extremely flammable)",
+          "solubility": "Insoluble in water; miscible with most organic solvents"
+        },
+        "gradesPurity": {
+          "polymerGrade": ">=99.5% (for butyl rubber production)",
+          "chemicalGrade": ">=98% (MTBE/ETBE synthesis)",
+          "refineryGrade": "70-90% (mixed with other C₄ hydrocarbons)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Production (Primary Use - ~60%)", "description": "Butyl rubber (IIR), Polyisobutylene (PIB)." },
+            { "title": "Fuel Additives", "description": "MTBE/ETBE production (octane boosters)." },
+            { "title": "Chemical Intermediates", "description": "Methacrolein (for methacrylic acid), tert-Butanol (TBA)." },
+            { "title": "Lubricant Additives", "description": "Polyisobutenes (PIBs)." }
+          ],
+          "industriesServed": [
+            "Rubber & Tire",
+            "Petrochemicals",
+            "Fuel & Energy",
+            "Adhesives & Sealants"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Pressurized steel cylinders (small quantities). Refrigerated tanks (large volumes, <10°C). Grounded containers (static prevention).",
+          "handling": "Explosion-proof equipment required. Self-contained breathing apparatus (SCBA) for leaks. Continuous gas detection systems."
+        },
+        "safetyRegulatory": {
+          "hazards": "Extreme Flammability (LFL 1.8%, UFL 8.8%). Asphyxiant (displaces oxygen). Polymerization Risk (if contaminated).",
+          "regulations": "GHS Symbols: Flame, Gas Cylinder. Transport Class: UN 1055 (Class 2.1 Flammable Gas)."
+        }
+      },
+      "ptbba": {
+        "overview": {
+          "name": "Para-Tertiary Butyl Benzoic Acid (PTBBA, CAS No. 98-73-7)",
+          "description": "A white, odorless, fine free-flowing crystalline powder used as an intermediate in resins, plasticizers, pharmaceuticals, cosmetics, and as a corrosion inhibitor."
+        },
+        "identification": {
+          "iupacName": "4-(tert-Butyl)benzoic acid",
+          "commonNames": "PTBBA, p-tert-Butylbenzoic acid, 4-(1,1-Dimethylethyl)benzoic acid",
+          "casNumber": "98-73-7",
+          "chemicalFormula": "C₁₁H₁₄O₂",
+          "molecularWeight": "178.23 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder",
+          "odor": "Odorless",
+          "appearance": "Fine, free-flowing powder",
+          "meltingPoint": "164–167°C",
+          "boilingPoint": "300°C (decomposes)",
+          "density": "~1.12 g/cm³",
+          "solubility": "Soluble in ethanol, acetone, and alkaline solutions; insoluble in water (<0.1 g/L at 25°C)",
+          "pKa": "~4.4 (weak organic acid)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial applications)",
+          "highPurityGrade": ">=99.5% (pharmaceutical/cosmetic use)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Industry", "description": "Intermediate for alkyd resins, plasticizer stabilizer." },
+            { "title": "Cosmetics", "description": "Preservative (limited use due to regulations)." },
+            { "title": "Pharmaceuticals", "description": "Intermediate for drug synthesis." },
+            { "title": "Lubricants", "description": "Corrosion inhibitor additive." }
+          ],
+          "industriesServed": [
+            "Coatings & Resins",
+            "Personal Care",
+            "Pharmaceuticals",
+            "Chemical Manufacturing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Tightly sealed containers. Cool, dry place (<30°C). Away from strong oxidizers.",
+          "handling": "Dust mask (NIOSH N95) for powders. Nitrile gloves and goggles."
+        },
+        "safetyRegulatory": {
+          "hazards": "Irritant (eyes/skin/respiratory tract). Not flammable but decomposes at high temps.",
+          "regulations": "GHS Symbols: Exclamation Mark. Not classified as carcinogenic. EU REACH: Registered."
+        }
+      },
+      "ptbmb": {
+        "overview": {
+          "name": "Methyl 4-Tert-Butyl Benzoate (PTBMB, CAS No. 26537-19-9)",
+          "description": "A colorless to pale yellow, clear, mobile liquid with a mild aromatic ester-like odor, used as a fragrance fixative, plasticizer, chemical intermediate, and lubricant additive."
+        },
+        "identification": {
+          "iupacName": "Methyl 4-(tert-butyl)benzoate",
+          "commonNames": "PTBMB, Methyl p-tert-butylbenzoate, Methyl 4-(1,1-dimethylethyl)benzoate",
+          "casNumber": "26537-19-9",
+          "chemicalFormula": "C₁₂H₁₆O₂",
+          "molecularWeight": "192.26 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid",
+          "odor": "Mild, aromatic ester-like",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "245–247°C",
+          "meltingPoint": "~10°C",
+          "density": "0.995–1.005 g/cm³ (20°C)",
+          "refractiveIndex": "1.504–1.508 (20°C)",
+          "flashPoint": ">100°C (combustible liquid)",
+          "solubility": "Soluble in ethanol, ether, acetone; insoluble in water (<0.1 g/L)",
+          "odorThreshold": "0.1–1 ppm",
+          "vaporPressure": "0.01 mmHg (25°C)",
+          "dielectricConstant": "~6.5"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=97% (industrial use)",
+          "highPurityGrade": ">=99% (fragrance/pharma applications)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Fragrance Industry", "description": "Fixative in perfumes, floral/fruity note modifier." },
+            { "title": "Plasticizers", "description": "Specialty ester for PVC." },
+            { "title": "Chemical Intermediate", "description": "Synthesis of UV absorbers." },
+            { "title": "Lubricant Additives", "description": "High-temperature ester base." }
+          ],
+          "industriesServed": [
+            "Fragrance & Flavor",
+            "Polymers",
+            "Lubricants",
+            "Chemical Synthesis"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Tightly sealed containers. Cool (<25°C), dry conditions. Away from strong oxidizers.",
+          "handling": "Chemical-resistant gloves (nitrile). Eye protection recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Combustible (not highly flammable). Mild irritant (eyes/skin). Low toxicity (LD50 >2000 mg/kg rat oral).",
+          "regulations": "GHS Classification: Not hazardous. IFRA Approved for fragrances. EU REACH: Registered."
+        }
+      },
+      "isohexane": {
+        "overview": {
+          "name": "Isohexane (SBP, CAS No. 64742-49-0)",
+          "description": "A colorless, clear, volatile liquid mixture of branched C₆ alkanes (mainly 2-methylpentane, 3-methylpentane) with a mild gasoline-like odor, used as a solvent, extraction agent, and fuel component."
+        },
+        "identification": {
+          "iupacName": "Mixture of branched C₆ alkanes (mainly 2-methylpentane, 3-methylpentane)",
+          "commonNames": "Isohexane SBP (Special Boiling Point), Petroleum spirit (light), Hexane isomers blend",
+          "casNumber": "64742-49-0",
+          "chemicalFormula": "C₆H₁₄ (isomeric mixture)",
+          "molecularWeight": "~86.18 g/mol (average)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Mild, gasoline-like",
+          "appearance": "Clear, volatile liquid",
+          "boilingRange": "55-65°C",
+          "meltingRange": "-100 to -90°C",
+          "density": "~0.66 g/cm³ (20°C)",
+          "flashPoint": "-23°C (highly flammable)",
+          "solubility": "Insoluble in water; miscible with most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "70-90% isohexanes (balance n-hexane & other C₆)",
+          "highPurityGrade": ">=95% branched isomers",
+          "lowBenzeneGrade": "<0.1% benzene content"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Solvent Uses", "description": "Adhesive formulations, rubber cement, ink manufacturing." },
+            { "title": "Extraction Processes", "description": "Vegetable oil processing, pharmaceutical extractions." },
+            { "title": "Laboratory Applications", "description": "HPLC mobile phase component." },
+            { "title": "Fuel Component", "description": "Gasoline blending (limited use)." }
+          ],
+          "industriesServed": [
+            "Adhesives & Sealants",
+            "Printing Inks",
+            "Pharmaceuticals",
+            "Food Processing (oil extraction)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Pressurized containers (for large volumes). Explosion-proof refrigeration (<10°C). Grounded tanks/equipment.",
+          "handling": "Chemical-resistant gloves (butyl rubber). Organic vapor respirator. No smoking/open flames."
+        },
+        "safetyRegulatory": {
+          "hazards": "Extremely flammable (LFL 1.1%, UFL 7.5%). Neurotoxic (chronic exposure risk). Skin irritant (defatting action).",
+          "regulations": "GHS Symbols: Flame, Health Hazard. Transport Class: UN 1208 (Class 3 Flammable Liquid)."
+        }
+      },
+      "toa": {
+        "overview": {
+          "name": "N-Tert-Octyl Acrylamide (TOA, CAS No. 4223-03-4)",
+          "description": "A white to off-white crystalline solid (powder or flakes) with a slight amine-like odor, used as a hydrophobic monomer for acrylic copolymers, coatings, adhesives, and biomedical research."
+        },
+        "identification": {
+          "iupacName": "N-(1,1,3,3-Tetramethylbutyl)acrylamide",
+          "commonNames": "TOA, N-tert-Octylacrylamide, N-(2,4,4-Trimethylpentan-2-yl)acrylamide",
+          "casNumber": "4223-03-4",
+          "chemicalFormula": "C₁₁H₂₁NO",
+          "molecularWeight": "183.29 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White to off-white crystalline solid",
+          "odor": "Slight amine-like odor",
+          "appearance": "Powder or flakes",
+          "meltingPoint": "80–85°C",
+          "boilingPoint": "~280°C (decomposes)",
+          "density": "~0.95 g/cm³",
+          "solubility": "Soluble in organic solvents (acetone, THF); insoluble in water (<0.1 g/L)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=97% (polymer applications)",
+          "highPurityGrade": ">=99% (pharmaceutical research)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Modification", "description": "Hydrophobic monomer for acrylic copolymers, temperature-responsive polymers (LCST tuning)." },
+            { "title": "Coatings", "description": "Water-resistant surface treatments." },
+            { "title": "Adhesives", "description": "Pressure-sensitive adhesive formulations." },
+            { "title": "Biomedical Research", "description": "Smart hydrogel components." }
+          ],
+          "industriesServed": [
+            "Specialty Polymers",
+            "Coatings & Inks",
+            "Adhesives",
+            "Biomedical Engineering"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers under nitrogen. Cool (<25°C), dry conditions. Protect from light.",
+          "handling": "Nitrile gloves + lab coat. Dust mask (NIOSH N95) for powders."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin sensitizer (may cause allergic reactions). Eye irritant. Not flammable but decomposes at high temps.",
+          "regulations": "GHS Symbols: Exclamation Mark. Not classified as carcinogenic. EU REACH: Registered."
+        },
+        "keyPolymerProperties": {
+          "hydrophobicity": "Increases water resistance",
+          "lcstAdjustable": "Adjustable 20–60°C (Lower Critical Solution Temperature)"
+        }
+      },
+      "naamps": {
+        "overview": {
+          "name": "Sodium Salt of 2-Acrylamido-2-Methylpropane Sulfonic Acid (NaAMPS, CAS No. 5165-97-9)",
+          "description": "A white, odorless, free-flowing crystalline powder highly soluble in water, used in oil recovery, water treatment, personal care, adhesives, and medical hydrogels."
+        },
+        "identification": {
+          "iupacName": "Sodium 2-acrylamido-2-methylpropane-1-sulfonate",
+          "commonNames": "NaAMPS, AMPS sodium salt, 2-Acrylamido-2-methylpropanesulfonic acid sodium salt",
+          "casNumber": "5165-97-9",
+          "chemicalFormula": "C₇H₁₂NNaO₄S",
+          "molecularWeight": "229.23 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder",
+          "odor": "Odorless",
+          "appearance": "Free-flowing powder",
+          "meltingPoint": ">300°C (decomposes)",
+          "density": "~1.25 g/cm³",
+          "solubility": "Highly soluble in water (>500 g/L at 25°C); insoluble in most organic solvents",
+          "ph": "6.5–8.5 (1% solution)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial applications)",
+          "highPurityGrade": ">=99.5% (pharmaceutical/cosmetic use)",
+          "solutionGrade": "50% aqueous solution"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Enhanced Oil Recovery (EOR)", "description": "Polymer flooding agents." },
+            { "title": "Water Treatment", "description": "Scale inhibitor in cooling systems." },
+            { "title": "Personal Care", "description": "Hair fixative in styling products." },
+            { "title": "Adhesives", "description": "Improves wet adhesion." },
+            { "title": "Medical Hydrogels", "description": "Contact lens materials." }
+          ],
+          "industriesServed": [
+            "Oil & Gas",
+            "Water Treatment",
+            "Cosmetics",
+            "Medical Devices",
+            "Adhesives"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers. Cool (<30°C), dry conditions. Avoid contact with strong oxidizers.",
+          "handling": "Dust mask (NIOSH N95). Nitrile gloves + goggles."
+        },
+        "safetyRegulatory": {
+          "hazards": "Low toxicity (LD50 >2000 mg/kg oral rat). Dust may irritate eyes/respiratory tract. Not flammable.",
+          "regulations": "GHS Classification: Not hazardous. FDA Approved for indirect food contact. EU REACH: Registered."
+        },
+        "keyPolymerProperties": {
+          "sulfonateGroup": "Extreme water solubility",
+          "thermalStability": "Stable to 250°C in polymers",
+          "chargeDensity": "Enhances ionic interactions"
+        }
       }
     }
+    
   }
-} 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -55,66 +55,16 @@ const chemicalCategories: ChemicalCategory[] = [
     products: [
       { 
         name: 'Naphtha',
-        description: 'A highly volatile, flammable liquid hydrocarbon mixture derived from crude oil refining or natural gas processing.',
-        physicalProperties: {
-          appearance: 'Clear to pale yellow liquid',
-          odor: 'Strong gasoline-like smell',
-          boilingPoint: '30-200°C (86-392°F), varies by type',
-          density: '~0.65-0.75 g/cm³',
-          flashPoint: 'Typically < 30°C (86°F), making it highly flammable',
-          solubility: 'Insoluble in water, soluble in organic solvents',
-          viscosity: 'Low'
-        },
-        applications: [
-          { title: 'Petrochemical Feedstock', description: 'Used as a feedstock for the production of ethylene, propylene, and other olefins' },
-          { title: 'Fuel Blending', description: 'A key ingredient in blending gasoline to enhance octane levels' },
-          { title: 'Solvent Applications', description: 'Used as a solvent in paints, coatings, adhesives, and cleaning agents' },
-          { title: 'Aromatics Production', description: 'Serves as a feedstock for producing benzene, toluene, and xylene (BTX)' },
-          { title: 'Industrial Processing', description: 'Acts as a processing solvent in industries such as rubber, textiles, and agrochemicals' },
-          { title: 'Energy and Heating', description: 'Used as a fuel in certain industrial heating systems and turbines' }
-        ],
-        industriesServed: ['Petrochemicals', 'Fuel and Energy', 'Paints and Coatings', 'Adhesives and Sealants', 'Agrochemicals', 'Textiles and Rubber']
+        code: 'naphtha'
       },
       { 
-        name: 'Propylene',
-        description: 'A colorless gas hydrocarbon with a faint petroleum-like odor, primarily used as a building block for plastics and chemicals.',
-        physicalProperties: {
-          appearance: 'Colorless gas',
-          odor: 'Faint petroleum-like odor',
-          boilingPoint: '-47.6°C (-53.7°F)',
-          density: '0.51 g/cm³ (liquid at -47°C)',
-          flashPoint: '-108°C (-162°F)',
-          solubility: 'Slightly soluble in water, soluble in organic solvents',
-          viscosity: 'Very low'
-        },
-        applications: [
-          { title: 'Polypropylene Production', description: 'Primary raw material for manufacturing polypropylene plastics' },
-          { title: 'Chemical Intermediates', description: 'Used to produce propylene oxide, isopropanol, and other chemicals' },
-          { title: 'Fuel Applications', description: 'Used in fuel blending and as a component in liquefied petroleum gas (LPG)' },
-          { title: 'Synthetic Rubber', description: 'Raw material for producing synthetic rubber and elastomers' }
-        ],
-        industriesServed: ['Plastics and Polymers', 'Chemical Manufacturing', 'Automotive', 'Packaging', 'Textiles', 'Construction']
+        name: 'Propylene (Propene)',
+        code: 'propylene-propene'
       },
-      { name: 'Isobutylene (IB)' },
+      { name: 'Isobutylene (IB)', code: 'isobutylene' },
       { 
         name: 'Benzene',
-        description: 'A colorless, highly flammable liquid with a sweet odor, serving as a fundamental building block in petrochemical industry.',
-        physicalProperties: {
-          appearance: 'Colorless liquid',
-          odor: 'Sweet aromatic odor',
-          boilingPoint: '80.1°C (176.2°F)',
-          density: '0.8765 g/cm³',
-          flashPoint: '-11°C (12°F)',
-          solubility: 'Slightly soluble in water, miscible with organic solvents',
-          viscosity: 'Low'
-        },
-        applications: [
-          { title: 'Styrene Production', description: 'Major feedstock for producing styrene monomer used in polystyrene' },
-          { title: 'Phenol Manufacturing', description: 'Key raw material for phenol production via cumene process' },
-          { title: 'Cyclohexane Production', description: 'Used to produce cyclohexane for nylon manufacturing' },
-          { title: 'Chemical Solvents', description: 'Industrial solvent for various chemical processes' }
-        ],
-        industriesServed: ['Petrochemicals', 'Plastics', 'Synthetic Fibers', 'Pharmaceuticals', 'Paints and Coatings', 'Rubber']
+        code: 'benzene'
       },
       { name: 'Toluene' },
       { name: 'Paraxylene (PX)' },
@@ -122,8 +72,10 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Cyclohexane' },
       { name: 'Isohexane SBP' },
       { name: 'C-6 Aliphatic Hydrocarbons' },
+      { name: 'Mixed Hexenes', code: 'mixed-hexenes' },
       { name: 'Methanol' },
-      { name: 'Sulphur' }
+      { name: 'Sulphur' },
+      { name: 'Cyclohexane', code: 'cyclohexane' }
     ]
   },
   {
@@ -131,8 +83,8 @@ const chemicalCategories: ChemicalCategory[] = [
     count: 3,
     IconComponent: IoWaterOutline,
     products: [
-      { name: 'MTBE (Methyl Tert-Butyl Ether)' },
-      { name: 'ETBE (Ethyl Tert-Butyl Ether)' },
+      { name: 'Methyl Tertiary Butyl Ether (MTBE)', code: 'methyl-tertiary-butyl-ether-mtbe' },
+      { name: 'ETBE (Ethyl Tert-Butyl Ether)', code: 'etbe' },
       { name: 'Bio-ETBE' }
     ]
   },
@@ -145,18 +97,35 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Polyethylene (PE)' },
       { name: 'Styrene Monomer' },
       { name: 'Vinyl Chloride Monomer' },
-      { name: 'Ethylene Glycol' }
+      { name: 'Ethylene Glycol' },
+      {name: 'Purified Terephthalic Acid ', code: 'pta'},
+      {name: 'Mono Ethylene Glycol', code: 'meg'},
+      { name: 'Antioxidant 1010', code: 'antioxidant-1010' },
+      { name: 'Antioxidant 1076', code: 'antioxidant-1076' },
+      { name: 'Antioxidant 168', code: 'antioxidant-168' },
+      { name: 'Antioxidant 1098', code: 'antioxidant-1098' },
+      { name: 'Antioxidant L135', code: 'antioxidant-l135' },
+      { name: 'Antioxidant 1135', code: 'antioxidant-1135' },
+      { name: 'Antioxidant 1315', code: 'antioxidant-1315' },
+      { name: 'Antioxidant Blend (168/1010)', code: 'antioxidant-blend-168-1010' }
     ]
   },
   {
     id: 'phosphorus',
-    count: 4,
+    count: 6, // update count to 6
     IconComponent: GiAtomicSlashes,
     products: [
       { name: 'Phosphoric Acid' },
       { name: 'Phosphorus Pentoxide' },
-      { name: 'Triphenyl Phosphite' },
-      { name: 'Phosphorus Trichloride' }
+      { name: 'Triphenyl Phosphite (TPPi)', code: 'triphenyl-phosphite-tppi' },
+      { name: 'Phosphorus Trichloride' },
+      { name: 'Red Phosphorus', code: 'red-phosphorus' },
+      { name: 'Trimethyl Phosphite (TMPi)', code: 'trimethyl-phosphite-tmpi' },
+      { name: 'Triethyl Phosphite (TEPi)', code: 'triethyl-phosphite-tepi' },
+      { name: 'Diethyl Phosphite (DEPi)', code: 'diethyl-phosphite-depi' },
+      { name: 'Dimethyl Phosphite (DMPi)', code: 'dimethyl-phosphite-dmpi' },
+      { name: 'Dimethyl Methylphosphonate (DMMP)', code: 'dimethyl-methylphosphonate-dmmp' },
+      { name: 'Sulfur', code: 'sulfur' }
     ]
   },
   {
@@ -166,7 +135,9 @@ const chemicalCategories: ChemicalCategory[] = [
     products: [
       { name: 'Sulfuric Acid' },
       { name: 'Sodium Bisulfite' },
-      { name: 'Sulfur Dioxide' }
+      { name: 'Sulfur Dioxide' },
+      { name: 'Carbon Disulfide (CS₂)', code: 'carbon-disulfide-cs2' },
+      { name: 'Sodium Sulfide (Na₂S)', code: 'sodium-sulfide-na2s' }
     ]
   },
   {
@@ -179,7 +150,8 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Monoethanolamine' },
       { name: 'Diethanolamine' },
       { name: 'Triethanolamine' },
-      { name: 'N-Methylpyrrolidone' }
+      { name: 'N-Methylpyrrolidone' },
+      { name: 'Tert-Butylamine', code: 'tert-butylamine' }
     ]
   },
   {
@@ -193,7 +165,8 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Resorcinol' },
       { name: 'Hydroquinone' },
       { name: 'Catechol' },
-      { name: 'Nonylphenol' }
+      { name: 'Nonylphenol' },
+      { name: 'Para-Tertiary Butyl Benzoic Acid (PTBBA)', code: 'ptbba' }
     ]
   },
   {
@@ -204,7 +177,11 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Toluene Diisocyanate' },
       { name: 'Methylene Diphenyl Diisocyanate' },
       { name: 'Aniline' },
-      { name: 'Nitrobenzene' }
+      { name: 'Nitrobenzene' },
+      { name: 'Paraxylene', code: 'px' },
+      { name: 'Ortho Xylene', code: 'ox' },
+      { name: 'Toluene', code: 'toluene' },
+      { name: 'Methyl 4-Tert-Butyl Benzoate (PTBMB)', code: 'ptbmb' }
     ]
   },
   {
@@ -214,7 +191,9 @@ const chemicalCategories: ChemicalCategory[] = [
     products: [
       { name: 'Acrylic Acid' },
       { name: 'Methyl Methacrylate' },
-      { name: 'Butyl Acrylate' }
+      { name: 'Butyl Acrylate' },
+      { name: 'N-Tert-Octyl Acrylamide (TOA)', code: 'toa' },
+      { name: 'Sodium Salt of 2-Acrylamido-2-Methylpropane Sulfonic Acid (NaAMPS)', code: 'naamps' }
     ]
   },
   {
@@ -234,6 +213,30 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Tributyltin Oxide' },
       { name: 'Organotin Compounds' },
       { name: 'Organozinc Compounds' }
+    ]
+  },
+  {
+    id: 'inorganicsSalts',
+    count: 1,
+    IconComponent: GiAcid,
+    products: [
+      { name: 'Potassium Bicarbonate', code: 'potassium-bicarbonate' }
+    ]
+  },
+  {
+    id: 'alcoholsGlycols',
+    count: 1,
+    IconComponent: GiAcid,
+    products: [
+      { name: 'Methanol', code: 'methanol' }
+    ]
+  },
+  {
+    id: 'solventsHydrocarbonBlends',
+    count: 1,
+    IconComponent: GiAcid,
+    products: [
+      { name: 'Isohexane (SBP)', code: 'isohexane' }
     ]
   }
 ];
@@ -318,7 +321,7 @@ export default function ChemicalFamilySection() {
                   {t(`chemicalFamily.categories.${category.id}.name`)}
                 </h2>
                 <p className="text-blue-600 mt-1">
-                  {t('chemicalFamily.productsAvailable', { count: category.count })}
+                  {t('chemicalFamily.productsAvailable', { count: category.products.length })}
                 </p>
               </div>
             </div>
@@ -338,9 +341,8 @@ export default function ChemicalFamilySection() {
                   key={index}
                   className="group relative cursor-pointer"
                   onClick={() => {
-                    if (product.description) {
-                      const slug = createSlug(product.name);
-                      router.push(`/chemical/${slug}`);
+                    if (product.code) {
+                      router.push(`/chemical/${product.code}`);
                     }
                   }}
                 >
@@ -358,13 +360,12 @@ export default function ChemicalFamilySection() {
                     <button 
                       onClick={(e) => {
                         e.stopPropagation();
-                        if (product.description) {
-                          const slug = createSlug(product.name);
-                          router.push(`/chemical/${slug}`);
+                        if (product.code) {
+                          router.push(`/chemical/${product.code}`);
                         }
                       }}
                       className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors group-hover:translate-x-1 duration-300"
-                      disabled={!product.description}
+                      disabled={!product.code}
                     >
                       {t('chemicalFamily.viewDetails')}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -435,7 +436,7 @@ export default function ChemicalFamilySection() {
                   
                   <div className="flex items-center justify-between mt-auto">
                     <span className="text-sm font-medium text-blue-700 bg-blue-100/60 backdrop-blur-sm px-3 py-1 rounded-full border border-blue-200/50">
-                      {t('chemicalFamily.productsAvailable', { count: category.count })}
+                      {t('chemicalFamily.productsAvailable', { count: category.products.length })}
                     </span>
                     <span className="text-xs text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
                       {t('chemicalFamily.viewProducts')} →
