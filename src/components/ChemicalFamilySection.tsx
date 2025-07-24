@@ -327,81 +327,106 @@ export default function ChemicalFamilySection() {
     if (!isOpen || !category) return null;
 
     return (
-      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-start justify-center z-[9999] p-2 pt-6">
-        <div className="bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-7xl w-full h-auto overflow-visible shadow-2xl shadow-blue-900/30">
-          <div className="p-8 border-b border-white/20 flex justify-between items-center">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl">
-                <category.IconComponent className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  {t(`chemicalFamily.categories.${category.id}.name`)}
-                </h2>
-                <p className="text-blue-600 mt-1">
-                  {t('chemicalFamily.productsAvailable', { count: category.products.length })}
-                </p>
-              </div>
-            </div>
-            <button 
-              onClick={onClose}
-              className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200 cursor-pointer"
-            >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              {category.products.map((product, index) => (
-                <div
-                  key={index}
-                  className="group relative cursor-pointer"
-                  onClick={() => {
-                    if (product.code) {
-                      router.push(`/chemical/${product.code}`);
-                    }
-                  }}
-                >
-                  <div className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-2xl p-4 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm hover:-translate-y-1">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                        <GiTestTubes className="w-5 h-5 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-blue-900 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                          {product.name}
-                        </h3>
-                      </div>
-                    </div>
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (product.code) {
-                          router.push(`/chemical/${product.code}`);
-                        }
-                      }}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors group-hover:translate-x-1 duration-300"
-                      disabled={!product.code}
-                    >
-                      {t('chemicalFamily.viewDetails')}
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </button>
-                  </div>
+      <>
+        <style jsx global>{`
+          .chemical-modal-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: #1e3a8a #ffffff00;
+          }
+          .chemical-modal-scroll::-webkit-scrollbar {
+            width: 6px;
+          }
+          .chemical-modal-scroll::-webkit-scrollbar-thumb {
+            background: #1e3a8a;
+            border-radius: 12px;
+            box-shadow: 0 0 4px 0 rgba(30,58,138,0.25);
+            border: 2px solid #f4f6fa;
+            min-height: 40px;
+            transition: background 0.2s;
+          }
+          .chemical-modal-scroll::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; /* Tailwind blue-600 */
+          }
+          .chemical-modal-scroll::-webkit-scrollbar-track {
+            background: transparent;
+          }
+        `}</style>
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-start justify-center z-[9999] p-2 pt-6">
+          <div className="chemical-modal-scroll bg-white/95 backdrop-blur-xl border border-blue-300/30 rounded-3xl max-w-7xl w-full max-h-[90vh] overflow-y-auto shadow-2xl shadow-blue-900/30">
+            <div className="p-8 border-b border-white/20 flex justify-between items-center">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl">
+                  <category.IconComponent className="w-8 h-8 text-white" />
                 </div>
-              ))}
-            </div>
-            <div className="mt-10">
-              <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-                {t('chemicalFamily.requestInfo')}
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                    {t(`chemicalFamily.categories.${category.id}.name`)}
+                  </h2>
+                  <p className="text-blue-600 mt-1">
+                    {t('chemicalFamily.productsAvailable', { count: category.products.length })}
+                  </p>
+                </div>
+              </div>
+              <button 
+                onClick={onClose}
+                className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-200 cursor-pointer"
+              >
+                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
+            </div>
+            <div className="p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                {category.products.map((product, index) => (
+                  <div
+                    key={index}
+                    className="group relative cursor-pointer"
+                    onClick={() => {
+                      if (product.code) {
+                        router.push(`/chemical/${product.code}`);
+                      }
+                    }}
+                  >
+                    <div className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-2xl p-4 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm hover:-translate-y-1 min-h-[140px] h-[140px] max-h-[120px] flex flex-col justify-between">
+                      <div className="flex items-start gap-3 mb-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+                          <GiTestTubes className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-blue-900 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {product.name}
+                          </h3>
+                        </div>
+                      </div>
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (product.code) {
+                            router.push(`/chemical/${product.code}`);
+                          }
+                        }}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors group-hover:translate-x-1 duration-300"
+                        disabled={!product.code}
+                      >
+                        {t('chemicalFamily.viewDetails')}
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-10">
+                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                  {t('chemicalFamily.requestInfo')}
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   };
 
