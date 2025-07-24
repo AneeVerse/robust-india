@@ -265,18 +265,6 @@ export default function ChemicalFamilySection() {
   const [selectedCategory, setSelectedCategory] = useState<ChemicalCategory | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Function to create URL-friendly slugs from chemical names
-  const createSlug = (name: string) => {
-    return name
-      .toLowerCase()
-      .replace(/\s+/g, '-')
-      .replace(/[()]/g, '')
-      .replace(/&/g, 'and')
-      .replace(/[^a-z0-9-]/g, '')
-      .replace(/-+/g, '-')
-      .replace(/^-|-$/g, '');
-  };
-
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
@@ -330,25 +318,10 @@ export default function ChemicalFamilySection() {
       <>
         <style jsx global>{`
           .chemical-modal-scroll {
-            scrollbar-width: thin;
-            scrollbar-color: #1e3a8a #ffffff00;
+            scrollbar-width: none; /* Firefox */
           }
           .chemical-modal-scroll::-webkit-scrollbar {
-            width: 6px;
-          }
-          .chemical-modal-scroll::-webkit-scrollbar-thumb {
-            background: #1e3a8a;
-            border-radius: 12px;
-            box-shadow: 0 0 4px 0 rgba(30,58,138,0.25);
-            border: 2px solid #f4f6fa;
-            min-height: 40px;
-            transition: background 0.2s;
-          }
-          .chemical-modal-scroll::-webkit-scrollbar-thumb:hover {
-            background: #2563eb; /* Tailwind blue-600 */
-          }
-          .chemical-modal-scroll::-webkit-scrollbar-track {
-            background: transparent;
+            display: none; /* Chrome, Safari, Opera */
           }
         `}</style>
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-start justify-center z-[9999] p-2 pt-6">

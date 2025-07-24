@@ -9,28 +9,6 @@ import BookCallSection from '@/components/BookCallSection';
 import ServiceSlider from '@/components/ServiceSlider';
 import { TbAtom, TbFlask } from 'react-icons/tb';
 
-interface ChemicalProduct {
-  name: string;
-  description: string;
-  physicalProperties: {
-    appearance: string;
-    odor: string;
-    boilingPoint: string;
-    density: string;
-    flashPoint: string;
-    solubility: string;
-    viscosity: string;
-  };
-  applications: Array<{
-    title: string;
-    description: string;
-  }>;
-  industriesServed: string[];
-  extraDetails?: {
-    [key: string]: string;
-  };
-}
-
 interface ChemicalParams {
   slug: string;
 }
@@ -41,16 +19,16 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
   const chemical = t(`chemicalDetail.products.${slug}`, { returnObjects: true });
 
   // Fallback for legacy chemicals
-  let overview = (chemical as any)?.overview || { name: (chemical as any)?.name, description: (chemical as any)?.description };
-  let identification = (chemical as any)?.identification;
-  let physical = (chemical as any)?.physicalChemicalProperties || (chemical as any)?.physicalProperties;
-  let gradesPurity = (chemical as any)?.gradesPurity;
-  let applicationsUses: any = (chemical as any)?.applicationsUses || {
-    applications: (chemical as any)?.applications,
-    industriesServed: (chemical as any)?.industriesServed,
+  const overview = (chemical as unknown as { overview: { name: string; description: string } })?.overview || { name: (chemical as unknown as { name: string })?.name, description: (chemical as unknown as { description: string })?.description };
+  const identification = (chemical as unknown as { [key: string]: string })?.identification;
+  const physical = (chemical as unknown as { [key: string]: string })?.physicalChemicalProperties || (chemical as unknown as { [key: string]: string })?.physicalProperties;
+  const gradesPurity = (chemical as unknown as { [key: string]: string })?.gradesPurity;
+  const applicationsUses: { applications: Array<{ title: string; description: string }>; industriesServed: string[] } = (chemical as unknown as { applicationsUses: { applications: Array<{ title: string; description: string }>; industriesServed: string[] } })?.applicationsUses || {
+    applications: (chemical as unknown as { applications: Array<{ title: string; description: string }> })?.applications,
+    industriesServed: (chemical as unknown as { industriesServed: string[] })?.industriesServed,
   };
-  let storageHandling = (chemical as any)?.storageHandling;
-  let safetyRegulatory = (chemical as any)?.safetyRegulatory;
+  const storageHandling = (chemical as unknown as { [key: string]: string })?.storageHandling;
+  const safetyRegulatory = (chemical as unknown as { [key: string]: string })?.safetyRegulatory;
 
   if (!overview || !overview.name) {
     return <div className="p-20 text-center">{t('chemicalDetail.notFound')}</div>;
@@ -138,13 +116,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['identification'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.entries(identification).map(([key, value]: [string, unknown], idx: number) => (
+                {Object.entries(identification).map(([key, value]: [string, string], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {String(value)}
+                      {value}
                     </p>
                   </div>
                 ))}
@@ -162,13 +140,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['physicalChemicalProperties'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.entries(physical).map(([key, value]: [string, unknown], idx: number) => (
+                {Object.entries(physical).map(([key, value]: [string, string], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {String(value)}
+                      {value}
                     </p>
                   </div>
                 ))}
@@ -186,13 +164,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['gradesPurity'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.entries(gradesPurity).map(([key, value]: [string, unknown], idx: number) => (
+                {Object.entries(gradesPurity).map(([key, value]: [string, string], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {String(value)}
+                      {value}
                     </p>
                   </div>
                 ))}
@@ -210,13 +188,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['applicationsUses'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                {applicationsUses.applications && applicationsUses.applications.map((app: any, idx: number) => (
+                {applicationsUses.applications && applicationsUses.applications.map((app: { title: string; description: string }, idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-4 text-xl" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {String(app.title)}
+                      {app.title}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {String(app.description)}
+                      {app.description}
                     </p>
                   </div>
                 ))}
@@ -227,8 +205,8 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                     {sectionHeadings['industriesServed'][currentLang]}
                   </h4>
                   <ul className="list-disc pl-6 text-gray-700">
-                    {applicationsUses.industriesServed.map((industry: any, idx: number) => (
-                      <li key={idx}>{String(industry)}</li>
+                    {applicationsUses.industriesServed.map((industry: string, idx: number) => (
+                      <li key={idx}>{industry}</li>
                     ))}
                   </ul>
                 </div>
@@ -246,13 +224,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['storageHandling'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {Object.entries(storageHandling).map(([key, value]: [string, unknown], idx: number) => (
+                {Object.entries(storageHandling).map(([key, value]: [string, string], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {String(value)}
+                      {value}
                     </p>
                   </div>
                 ))}
@@ -270,13 +248,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['safetyRegulatory'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.entries(safetyRegulatory).map(([key, value]: [string, unknown], idx: number) => (
+                {Object.entries(safetyRegulatory).map(([key, value]: [string, string], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {String(value)}
+                      {value}
                     </p>
                   </div>
                 ))}
