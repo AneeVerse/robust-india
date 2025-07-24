@@ -89,6 +89,15 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
+    id: 'additives',
+    count: 2,
+    IconComponent: GiTestTubes,
+    products: [
+      { name: 'Zinc Dialkyl Dithiophosphate (ZDDP-MD)', code: 'zddp-md' },
+      { name: 'Zinc Dialkyl Dithiophosphate (ZDDP-IM)', code: 'zddp-im' }
+    ]
+  },
+  {
     id: 'polymers',
     count: 5,
     IconComponent: GiMolecule,
@@ -171,7 +180,7 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'aromatics',
-    count: 4,
+    count: 11, // updated count
     IconComponent: GiPlantRoots,
     products: [
       { name: 'Toluene Diisocyanate' },
@@ -181,27 +190,36 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Paraxylene', code: 'px' },
       { name: 'Ortho Xylene', code: 'ox' },
       { name: 'Toluene', code: 'toluene' },
-      { name: 'Methyl 4-Tert-Butyl Benzoate (PTBMB)', code: 'ptbmb' }
+      { name: 'Methyl 4-Tert-Butyl Benzoate (PTBMB)', code: 'ptbmb' },
+      { name: '4-Butylaniline', code: '4-butylaniline' },
+      { name: 'C10 Aromatic Solvent / Aromatic 150', code: 'c10-aromatic-solvent' },
+      { name: '3-Phenylpentane (3-PP)', code: '3-phenylpentane' },
+      { name: 'Tertiary Amyl Benzene (TAB)', code: 'tertiary-amyl-benzene' },
+      { name: 'Secondary Butyl Benzene (SBB)', code: 'secondary-butyl-benzene' },
+      { name: 'Normal Butyl Benzene (NBB)', code: 'normal-butyl-benzene' },
+      { name: 'Isobutyl Benzene (IBB)', code: 'isobutyl-benzene' }
     ]
   },
   {
     id: 'acrylics',
-    count: 3,
+    count: 5, // updated count
     IconComponent: GiPaintBrush,
     products: [
       { name: 'Acrylic Acid' },
       { name: 'Methyl Methacrylate' },
       { name: 'Butyl Acrylate' },
       { name: 'N-Tert-Octyl Acrylamide (TOA)', code: 'toa' },
-      { name: 'Sodium Salt of 2-Acrylamido-2-Methylpropane Sulfonic Acid (NaAMPS)', code: 'naamps' }
+      { name: 'N-Tert-Butyl Acrylamide (TBA)', code: 'tba' },
+      { name: 'Sodium Salt of 2-Acrylamido-2-Methylpropane Sulfonic Acid (NaAMPS)', code: 'naamps' },
+      { name: '2-Acrylamido-2-Methylpropane Sulfonic Acid (ATBS)', code: 'atbs' }
     ]
   },
   {
     id: 'cyanide',
-    count: 1,
+    count: 2,
     IconComponent: GiDeadlyStrike,
     products: [
-      { name: 'Sodium Cyanide' }
+      { name: 'Sodium Cyanide (NaCN)', code: 'sodium-cyanide' }
     ]
   },
   {
@@ -216,7 +234,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    id: 'inorganicsSalts',
+    id: 'inorganics',
     count: 1,
     IconComponent: GiAcid,
     products: [
@@ -224,7 +242,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    id: 'alcoholsGlycols',
+    id: 'alcohols',
     count: 1,
     IconComponent: GiAcid,
     products: [
@@ -232,7 +250,7 @@ const chemicalCategories: ChemicalCategory[] = [
     ]
   },
   {
-    id: 'solventsHydrocarbonBlends',
+    id: 'solvents',
     count: 1,
     IconComponent: GiAcid,
     products: [

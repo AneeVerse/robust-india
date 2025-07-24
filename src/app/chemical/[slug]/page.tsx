@@ -36,7 +36,7 @@ interface ChemicalParams {
 }
 
 export default function ChemicalDetailPage({ params }: { params: Promise<ChemicalParams> }) {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const { slug } = use(params);
   const chemical = t(`chemicalDetail.products.${slug}`, { returnObjects: true });
 
@@ -55,6 +55,60 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
   if (!overview || !overview.name) {
     return <div className="p-20 text-center">{t('chemicalDetail.notFound')}</div>;
   }
+
+  // Add a mapping for field labels in both English and Russian
+  const fieldLabels: { [key: string]: { [lang: string]: string } } = {
+    iupacName: { en: 'IUPAC Name', ru: 'ИЮПАК-название' },
+    commonNames: { en: 'Common Names', ru: 'Общие названия' },
+    casNumber: { en: 'CAS Number', ru: 'CAS-номер' },
+    chemicalFormula: { en: 'Chemical Formula', ru: 'Химическая формула' },
+    molecularWeight: { en: 'Molecular Weight', ru: 'Молекулярная масса' },
+    form: { en: 'Form', ru: 'Форма' },
+    color: { en: 'Color', ru: 'Цвет' },
+    odor: { en: 'Odor', ru: 'Запах' },
+    appearance: { en: 'Appearance', ru: 'Внешний вид' },
+    boilingPoint: { en: 'Boiling Point', ru: 'Температура кипения' },
+    meltingPoint: { en: 'Melting Point', ru: 'Температура плавления' },
+    density: { en: 'Density', ru: 'Плотность' },
+    vaporPressure: { en: 'Vapor Pressure', ru: 'Давление пара' },
+    flashPoint: { en: 'Flash Point', ru: 'Температура вспышки' },
+    autoignitionTemp: { en: 'Autoignition Temp', ru: 'Температура самовоспламенения' },
+    solubility: { en: 'Solubility', ru: 'Растворимость' },
+    viscosity: { en: 'Viscosity', ru: 'Вязкость' },
+    refractiveIndex: { en: 'Refractive Index', ru: 'Показатель преломления' },
+    ph: { en: 'pH', ru: 'pH' },
+    impurities: { en: 'Impurities', ru: 'Примеси' },
+    purity: { en: 'Purity', ru: 'Чистота' },
+    stability: { en: 'Stability', ru: 'Стабильность' },
+    storage: { en: 'Storage', ru: 'Хранение' },
+    handling: { en: 'Handling', ru: 'Обращение' },
+    hazards: { en: 'Hazards', ru: 'Опасности' },
+    nfpaRating: { en: 'NFPA Rating', ru: 'Рейтинг NFPA' },
+    regulations: { en: 'Regulations', ru: 'Регламенты' },
+    texture: { en: 'Texture', ru: 'Текстура' },
+    technicalGrade: { en: 'Technical Grade', ru: 'Технический сорт' },
+    highPurityGrade: { en: 'High Purity Grade', ru: 'Высокочистый сорт' },
+    flakeGrade: { en: 'Flake Grade', ru: 'Хлопьевидная форма' },
+    fuelGrade: { en: 'Fuel Grade', ru: 'Топливный сорт' },
+    chemicalGrade: { en: 'Chemical Grade', ru: 'Химический сорт' },
+    highPurity: { en: 'High Purity', ru: 'Высокая чистота' },
+    lowPurity: { en: 'Low Purity', ru: 'Низкая чистота' },
+    polymerGrade: { en: 'Polymer Grade', ru: 'Полимерный сорт' },
+    refineryGrade: { en: 'Refinery Grade', ru: 'Нефтеперерабатывающий сорт' },
+    lightNaphtha: { en: 'Light Naphtha', ru: 'Лёгкая нафта' },
+    heavyNaphtha: { en: 'Heavy Naphtha', ru: 'Тяжёлая нафта' },
+    // Add more fields as needed
+  };
+  const sectionHeadings: { [key: string]: { [lang: string]: string } } = {
+    identification: { en: 'Identification', ru: 'Идентификация' },
+    physicalChemicalProperties: { en: 'Physical & Chemical Properties', ru: 'Физические и химические свойства' },
+    gradesPurity: { en: 'Grades & Purity', ru: 'Сорта и чистота' },
+    applicationsUses: { en: 'Applications & Uses', ru: 'Применение и области использования' },
+    storageHandling: { en: 'Storage & Handling', ru: 'Хранение и обращение' },
+    safetyRegulatory: { en: 'Safety & Regulatory', ru: 'Безопасность и нормативные требования' },
+    industriesServed: { en: 'Industries Served', ru: 'Обслуживаемые отрасли' },
+  };
+  const currentLang = i18n.language || 'en';
 
   return (
     <main className="min-h-screen bg-white">
@@ -81,13 +135,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                   <TbAtom className="w-6 h-6 text-white" />
                 </div>
-                {t('chemicalDetail.headings.identification')}
+                {sectionHeadings['identification'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Object.entries(identification).map(([key, value]: [string, unknown], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {t(`chemicalDetail.extraDetailsLabels.${key}`, String(key).replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()))}
+                      {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {String(value)}
@@ -105,13 +159,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                   <TbAtom className="w-6 h-6 text-white" />
                 </div>
-                {t('chemicalDetail.headings.physicalChemicalProperties')}
+                {sectionHeadings['physicalChemicalProperties'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Object.entries(physical).map(([key, value]: [string, unknown], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {t(`chemicalDetail.extraDetailsLabels.${key}`, String(key).replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()))}
+                      {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {String(value)}
@@ -129,13 +183,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                   <TbAtom className="w-6 h-6 text-white" />
                 </div>
-                {t('chemicalDetail.headings.gradesPurity')}
+                {sectionHeadings['gradesPurity'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Object.entries(gradesPurity).map(([key, value]: [string, unknown], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {t(`chemicalDetail.extraDetailsLabels.${key}`, String(key).replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()))}
+                      {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {String(value)}
@@ -153,7 +207,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                   <TbFlask className="w-6 h-6 text-white" />
                 </div>
-                {t('chemicalDetail.headings.applicationsUses')}
+                {sectionHeadings['applicationsUses'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 {applicationsUses.applications && applicationsUses.applications.map((app: any, idx: number) => (
@@ -170,7 +224,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
               {applicationsUses.industriesServed && (
                 <div className="mt-8">
                   <h4 className="font-semibold text-gray-900 mb-3 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    {t('chemicalDetail.headings.industriesServed')}
+                    {sectionHeadings['industriesServed'][currentLang]}
                   </h4>
                   <ul className="list-disc pl-6 text-gray-700">
                     {applicationsUses.industriesServed.map((industry: any, idx: number) => (
@@ -189,13 +243,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                   <TbAtom className="w-6 h-6 text-white" />
                 </div>
-                {t('chemicalDetail.headings.storageHandling')}
+                {sectionHeadings['storageHandling'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {Object.entries(storageHandling).map(([key, value]: [string, unknown], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {t(`chemicalDetail.extraDetailsLabels.${key}`, String(key).replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()))}
+                      {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {String(value)}
@@ -213,13 +267,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                   <TbAtom className="w-6 h-6 text-white" />
                 </div>
-                {t('chemicalDetail.headings.safetyRegulatory')}
+                {sectionHeadings['safetyRegulatory'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Object.entries(safetyRegulatory).map(([key, value]: [string, unknown], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {t(`chemicalDetail.extraDetailsLabels.${key}`, String(key).replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()))}
+                      {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {String(value)}

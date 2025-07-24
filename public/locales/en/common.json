@@ -518,15 +518,15 @@
         "count": 5
       },
       "phosphorus": {
-        "name": "Phosphorus-Based Chemicals",
+        "name": "Phosphorus Chemicals",
         "count": 4
       },
       "sulfur": {
-        "name": "Sulfur-Based Chemicals",
+        "name": "Sulfur Chemicals",
         "count": 3
       },
       "amines": {
-        "name": "Amines & Amine Derivatives",
+        "name": "Amines & Derivatives",
         "count": 6
       },
       "phenols": {
@@ -534,34 +534,34 @@
         "count": 7
       },
       "aromatics": {
-        "name": "Aromatic Hydrocarbons & Derivatives",
-        "count": 4
+        "name": "Aromatics & Derivatives",
+        "count": 10
       },
       "acrylics": {
         "name": "Acrylic Monomers & Derivatives",
         "count": 3
       },
       "cyanide": {
-        "name": "Cyanide-Based Chemicals",
+        "name": "Cyanide Chemicals",
         "count": 1
       },
       "organometallic": {
-        "name": "Organometallic-Based Chemicals",
+        "name": "Organometallic Chemicals",
         "count": 4
       },
-      "redPhosphorus": {
-        "name": "Red Phosphorus & Allotropes",
+      "additives": {
+        "name": "Additives & Lubricant Additives",
         "count": 1
       },
-      "inorganicsSalts": {
-        "name": "Inorganics & Salts",
+      "inorganics": {
+        "name": "Inorganic Chemicals & Salts",
         "count": 1
       },
-      "alcoholsGlycols": {
+      "alcohols": {
         "name": "Alcohols & Glycols",
         "count": 1
       },
-      "solventsHydrocarbonBlends": {
+      "solvents": {
         "name": "Solvents & Hydrocarbon Blends",
         "count": 1
       }
@@ -2634,6 +2634,58 @@
           "lcstAdjustable": "Adjustable 20–60°C (Lower Critical Solution Temperature)"
         }
       },
+      "tba": {
+        "overview": {
+          "name": "N-tert-Butyl Acrylamide (TBA, CAS No. 107-58-4)",
+          "description": "A white crystalline solid (powder or flakes) with a slight amine-like odor, used as a hydrophobic monomer for stimuli-responsive polymers, smart hydrogels, coatings, adhesives, and biomedical engineering."
+        },
+        "identification": {
+          "iupacName": "N-(tert-Butyl)acrylamide",
+          "commonNames": "TBA, N-tert-Butylacrylamide, NTBA",
+          "casNumber": "107-58-4",
+          "chemicalFormula": "C₇H₁₃NO",
+          "molecularWeight": "127.18 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline solid",
+          "odor": "Slight amine-like odor",
+          "appearance": "Powder or flakes",
+          "meltingPoint": "128–131°C",
+          "boilingPoint": "~250°C (decomposes)",
+          "density": "~0.95 g/cm³",
+          "solubility": "Soluble in acetone, methanol, THF; slightly soluble in water (~5 g/L at 25°C)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=97% (polymer applications)",
+          "highPurityGrade": ">=99% (pharmaceutical research)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Science", "description": "Hydrophobic monomer for stimuli-responsive polymers; used in smart hydrogels (temperature/pH-sensitive)." },
+            { "title": "Coatings & Adhesives", "description": "Enhances water resistance." },
+            { "title": "Biomedical Engineering", "description": "Drug delivery systems." },
+            { "title": "Oilfield Chemicals", "description": "Viscosity modifiers." }
+          ],
+          "industriesServed": [
+            "Smart Materials",
+            "Biomedical",
+            "Coatings",
+            "Oil & Gas"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers under nitrogen. Cool (<25°C), dry, dark place. Separate from oxidizers.",
+          "handling": "Nitrile gloves + lab coat. Dust mask (NIOSH N95) for powders."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin sensitizer (may cause allergic reactions). Eye irritant. Not flammable (but decomposes at high temps).",
+          "regulations": "GHS Symbols: Exclamation Mark. Not classified as carcinogenic. EU REACH: Registered."
+        },
+        "keyPolymerProperties": {
+          "hydrophobicity": "Increases LCST (Lower Critical Solution Temperature) of polymers",
+          "stericHindrance": "Reduces polymer crystallinity"
+        }
+      },
       "naamps": {
         "overview": {
           "name": "Sodium Salt of 2-Acrylamido-2-Methylpropane Sulfonic Acid (NaAMPS, CAS No. 5165-97-9)",
@@ -2688,6 +2740,570 @@
           "sulfonateGroup": "Extreme water solubility",
           "thermalStability": "Stable to 250°C in polymers",
           "chargeDensity": "Enhances ionic interactions"
+        }
+      },
+      "atbs": {
+        "overview": {
+          "name": "2-Acrylamido-2-Methylpropane Sulfonic Acid (ATBS, CAS No. 15214-89-8)",
+          "description": "A white, odorless, free-flowing hygroscopic crystalline powder, used as a key monomer for sulfonated polyacrylamides in oil recovery, water treatment, personal care, adhesives, and medical hydrogels."
+        },
+        "identification": {
+          "iupacName": "2-Acrylamido-2-methylpropane-1-sulfonic acid",
+          "commonNames": "ATBS, AMPS® (Lubrizol trade name), 2-Acrylamido-2-methyl-1-propanesulfonic acid",
+          "casNumber": "15214-89-8",
+          "chemicalFormula": "C₇H₁₃NO₄S",
+          "molecularWeight": "207.25 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder",
+          "odor": "Odorless",
+          "appearance": "Free-flowing hygroscopic powder",
+          "meltingPoint": "195°C (decomposes)",
+          "density": "1.15 g/cm³",
+          "solubility": "Highly soluble in water (>500 g/L at 25°C); soluble in polar organic solvents (DMF, DMSO); insoluble in non-polar solvents",
+          "pKa": "~1.5 (strong acid)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial use)",
+          "highPurityGrade": ">=99.5% (pharmaceutical applications)",
+          "solutionGrade": "50% aqueous solution available"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Enhanced Oil Recovery (EOR)", "description": "Key monomer for sulfonated polyacrylamides." },
+            { "title": "Water Treatment", "description": "Scale and corrosion inhibitor." },
+            { "title": "Personal Care", "description": "Hair fixative polymers." },
+            { "title": "Adhesives", "description": "Improves wet adhesion strength." },
+            { "title": "Medical Hydrogels", "description": "Contact lens materials." }
+          ],
+          "industriesServed": [
+            "Oilfield Chemicals",
+            "Water Treatment",
+            "Cosmetics",
+            "Medical Devices",
+            "Adhesives & Coatings"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight moisture-proof containers. Cool (<25°C), dry conditions. Separate from bases and oxidizers.",
+          "handling": "Nitrile gloves + goggles. Dust mask (NIOSH N95) recommended."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin/eye irritant (acidic properties). Dust may cause respiratory irritation. Not flammable.",
+          "regulations": "GHS Symbols: Corrosion, Exclamation Mark. FDA: Approved for indirect food contact. EU REACH: Registered."
+        },
+        "keyPolymerProperties": {
+          "sulfonicAcidGroup": "Provides permanent anionic charge",
+          "hydrolyticStability": "Resists degradation in harsh conditions",
+          "temperatureResistance": "Stable up to 250°C in polymers"
+        }
+      },
+      "4-butylaniline": {
+        "overview": {
+          "name": "4-Butylaniline (CAS No. 104-13-2)",
+          "description": "A light yellow to amber, clear to slightly viscous liquid with an amine-like, fishy odor, used as a chemical intermediate for dyes, pigments, liquid crystal compounds, pharmaceuticals, and agrochemicals."
+        },
+        "identification": {
+          "iupacName": "4-Butylaniline",
+          "commonNames": "p-Butylaniline, 1-Amino-4-butylbenzene, 4-Aminobutylbenzene",
+          "casNumber": "104-13-2",
+          "chemicalFormula": "C₁₀H₁₅N",
+          "molecularWeight": "149.24 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Light yellow to amber liquid",
+          "odor": "Amine-like, fishy",
+          "appearance": "Clear to slightly viscous liquid",
+          "boilingPoint": "248–250°C",
+          "meltingPoint": "–15°C",
+          "density": "0.92–0.94 g/cm³ (20°C)",
+          "refractiveIndex": "1.535–1.540 (20°C)",
+          "flashPoint": "110°C (combustible liquid)",
+          "solubility": "Soluble in ethanol, ether, acetone; slightly soluble in water (~0.5 g/L)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial use)",
+          "highPurityGrade": ">=98% (pharmaceutical intermediates)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Production of dyes & pigments; synthesis of liquid crystal compounds." },
+            { "title": "Pharmaceuticals", "description": "Precursor for drug molecules." },
+            { "title": "Agrochemicals", "description": "Building block for pesticides." }
+          ],
+          "industriesServed": [
+            "Dyes & Pigments",
+            "Pharmaceuticals",
+            "Agrochemicals",
+            "Electronics (LCD materials)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Amber glass or stainless steel containers. Cool (<25°C), dry, well-ventilated area. Under nitrogen blanket (prevents oxidation).",
+          "handling": "Butyl rubber gloves + goggles. Organic vapor respirator."
+        },
+        "safetyRegulatory": {
+          "hazards": "Toxic if swallowed (LD50 500 mg/kg rat). Skin/eye irritant. Possible methemoglobinemia risk.",
+          "regulations": "GHS Symbols: Health Hazard, Exclamation Mark. Transport Class: UN 2734 (Class 6.1 Toxic)."
+        }
+      },
+      "c10-aromatic-solvent": {
+        "overview": {
+          "name": "C10 Aromatic Solvent / Aromatic 150 (CAS No. N/A)",
+          "description": "A colorless to pale yellow, clear, mobile liquid with a characteristic aromatic (benzene-like) odor, used as a high-boiling solvent for industrial finishes, inks, adhesives, and extraction processes."
+        },
+        "identification": {
+          "iupacName": "Mixed C10 aromatic hydrocarbons",
+          "commonNames": "Aromatic 150, Heavy aromatic naphtha, High-flash aromatic solvent",
+          "casNumber": "N/A",
+          "chemicalFormula": "CₙH₂ₙ₋₆ (n=9–12, mainly C10)",
+          "molecularWeight": "120–160 g/mol (range)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid",
+          "odor": "Characteristic aromatic (benzene-like)",
+          "appearance": "Clear, mobile liquid",
+          "boilingRange": "180–210°C",
+          "meltingRange": "–30 to –10°C",
+          "density": "0.86–0.89 g/cm³ (20°C)",
+          "flashPoint": "65–75°C",
+          "solubility": "Miscible with most organic solvents; immiscible with water (<0.1 g/L)"
+        },
+        "gradesPurity": {
+          "industrialGrade": "98% C9–C12 aromatics",
+          "lowSulfurGrade": "<10 ppm sulfur",
+          "highFlashGrade": "Flash point >65°C"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Paints & Coatings", "description": "High-boiling solvent for industrial finishes." },
+            { "title": "Inks", "description": "Vehicle for gravure/flexographic inks." },
+            { "title": "Adhesives", "description": "Slow-evaporating component." },
+            { "title": "Chemical Processing", "description": "Extraction solvent." }
+          ],
+          "industriesServed": [
+            "Coatings Manufacturing",
+            "Printing Inks",
+            "Adhesive Formulation",
+            "Rubber & Tire"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Steel or polyethylene containers. Grounded tanks (static prevention). Cool, ventilated area (<30°C).",
+          "handling": "Chemical-resistant gloves (nitrile). Vapor respirator if ventilated."
+        },
+        "safetyRegulatory": {
+          "hazards": "Combustible liquid. Skin irritant (defatting action). Aspiration hazard if swallowed.",
+          "regulations": "GHS Symbols: Flame, Health Hazard. Transport Class: UN 3082 (Class 9)."
+        }
+      },
+      "3-phenylpentane": {
+        "overview": {
+          "name": "3-Phenylpentane (3-PP, CAS No. 1196-58-3)",
+          "description": "A colorless, clear, mobile liquid with a mild aromatic odor (similar to toluene), used as a chemical intermediate, high-boiling aromatic solvent, and research chemical."
+        },
+        "identification": {
+          "iupacName": "3-Phenylpentane",
+          "commonNames": "3-PP, Ethylpropylbenzene",
+          "casNumber": "1196-58-3",
+          "chemicalFormula": "C₁₁H₁₆",
+          "molecularWeight": "148.25 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Mild, aromatic (similar to toluene)",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "200–202°C",
+          "meltingPoint": "–75°C",
+          "density": "0.86 g/cm³ (20°C)",
+          "refractiveIndex": "1.487 (20°C)",
+          "flashPoint": "68°C (combustible liquid)",
+          "solubility": "Soluble in ethanol, ether, benzene; insoluble in water (<0.1 g/L)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial use)",
+          "highPurityGrade": ">=99% (analytical/research)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Precursor for specialty chemicals." },
+            { "title": "Solvent", "description": "High-boiling aromatic solvent." },
+            { "title": "Research Chemical", "description": "Organic synthesis studies." }
+          ],
+          "industriesServed": [
+            "Chemical Manufacturing",
+            "Research & Development",
+            "Pharmaceuticals (intermediate)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers (glass/steel). Cool (<30°C), ventilated area. Away from oxidizers.",
+          "handling": "Nitrile gloves + goggles. Local exhaust ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "Combustible liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
+          "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
+        },
+        "keyPhysicalProperties": {
+          "vaporPressure": "0.2 mmHg (25°C)",
+          "dielectricConstant": "~2.3"
+        }
+      },
+      "tertiary-amyl-benzene": {
+        "overview": {
+          "name": "Tertiary Amyl Benzene (TAB, CAS No. 2049-95-8)",
+          "description": "A colorless, clear, mobile liquid with a mild aromatic odor, used as a chemical intermediate, high-boiling aromatic solvent, and research chemical."
+        },
+        "identification": {
+          "iupacName": "(1,1-Dimethylpropyl)benzene",
+          "commonNames": "TAB, tert-Pentylbenzene, 2-Methyl-2-phenylbutane",
+          "casNumber": "2049-95-8",
+          "chemicalFormula": "C₁₁H₁₆",
+          "molecularWeight": "148.25 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Mild, aromatic",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "192–194°C",
+          "meltingPoint": "–75°C",
+          "density": "0.862 g/cm³ (20°C)",
+          "refractiveIndex": "1.489 (20°C)",
+          "flashPoint": "62°C (combustible liquid)",
+          "solubility": "Soluble in ethanol, ether, acetone; insoluble in water (<0.1 g/L)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial use)",
+          "highPurityGrade": ">=99% (research applications)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Production of pharmaceuticals & agrochemicals." },
+            { "title": "Solvent", "description": "High-boiling point aromatic solvent." },
+            { "title": "Research Chemical", "description": "Organic synthesis studies." }
+          ],
+          "industriesServed": [
+            "Chemical Manufacturing",
+            "Pharmaceuticals",
+            "Agrochemicals",
+            "Research & Development"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers (glass/steel). Cool (<30°C), ventilated area. Away from oxidizers.",
+          "handling": "Nitrile gloves + goggles. Local exhaust ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "Combustible liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
+          "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
+        },
+        "keyPhysicalProperties": {
+          "vaporPressure": "0.3 mmHg (25°C)",
+          "dielectricConstant": "~2.3"
+        }
+      },
+      "secondary-butyl-benzene": {
+        "overview": {
+          "name": "Secondary Butyl Benzene (SBB, CAS No. 135-98-8)",
+          "description": "A colorless, clear, mobile liquid with a mild aromatic odor (similar to toluene), used as a chemical intermediate, high-boiling aromatic solvent, and research chemical."
+        },
+        "identification": {
+          "iupacName": "(2-Butyl)benzene",
+          "commonNames": "SBB, sec-Butylbenzene, 2-Phenylbutane",
+          "casNumber": "135-98-8",
+          "chemicalFormula": "C₁₀H₁₄",
+          "molecularWeight": "134.22 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Mild, aromatic (similar to toluene)",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "173–175°C",
+          "meltingPoint": "–75°C",
+          "density": "0.862 g/cm³ (20°C)",
+          "refractiveIndex": "1.490 (20°C)",
+          "flashPoint": "57°C (flammable liquid)",
+          "solubility": "Soluble in ethanol, ether, benzene; insoluble in water (<0.1 g/L)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial use)",
+          "highPurityGrade": ">=99% (analytical/research)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Production of pharmaceuticals & fragrances." },
+            { "title": "Solvent", "description": "High-boiling aromatic solvent." },
+            { "title": "Research Chemical", "description": "Organic synthesis studies." }
+          ],
+          "industriesServed": [
+            "Chemical Manufacturing",
+            "Pharmaceuticals",
+            "Fragrance & Flavor",
+            "Research & Development"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers (glass/steel). Cool (<30°C), ventilated area. Away from oxidizers.",
+          "handling": "Nitrile gloves + goggles. Local exhaust ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
+          "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
+        }
+      },
+      "normal-butyl-benzene": {
+        "overview": {
+          "name": "Normal Butyl Benzene (NBB, CAS No. 104-51-8)",
+          "description": "A colorless, clear, mobile liquid with a mild aromatic odor (similar to toluene), used as a chemical intermediate, high-boiling aromatic solvent, and research chemical."
+        },
+        "identification": {
+          "iupacName": "1-Phenylbutane",
+          "commonNames": "NBB, n-Butylbenzene, Butylbenzene",
+          "casNumber": "104-51-8",
+          "chemicalFormula": "C₁₀H₁₄",
+          "molecularWeight": "134.22 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Mild, aromatic (similar to toluene)",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "183–185°C",
+          "meltingPoint": "–88°C",
+          "density": "0.860 g/cm³ (20°C)",
+          "refractiveIndex": "1.489 (20°C)",
+          "flashPoint": "60°C (flammable liquid)",
+          "solubility": "Soluble in ethanol, ether, benzene; insoluble in water (<0.1 g/L)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial use)",
+          "highPurityGrade": ">=99% (analytical/research)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Production of pharmaceuticals & fragrances." },
+            { "title": "Solvent", "description": "High-boiling aromatic solvent." },
+            { "title": "Research Chemical", "description": "Organic synthesis studies." }
+          ],
+          "industriesServed": [
+            "Chemical Manufacturing",
+            "Pharmaceuticals",
+            "Fragrance & Flavor",
+            "Research & Development"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers (glass/steel). Cool (<30°C), ventilated area. Away from oxidizers.",
+          "handling": "Nitrile gloves + goggles. Local exhaust ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
+          "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
+        },
+        "keyPhysicalProperties": {
+          "vaporPressure": "1.0 mmHg (25°C)",
+          "dielectricConstant": "~2.3"
+        }
+      },
+      "isobutyl-benzene": {
+        "overview": {
+          "name": "Isobutyl Benzene (IBB, CAS No. 538-93-2)",
+          "description": "A colorless, clear, mobile liquid with a mild aromatic odor (similar to toluene), used as a chemical intermediate, high-boiling aromatic solvent, and research chemical."
+        },
+        "identification": {
+          "iupacName": "(2-Methylpropyl)benzene",
+          "commonNames": "IBB, Isobutylbenzene, 2-Methyl-1-phenylpropane",
+          "casNumber": "538-93-2",
+          "chemicalFormula": "C₁₀H₁₄",
+          "molecularWeight": "134.22 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Mild, aromatic (similar to toluene)",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "170–172°C",
+          "meltingPoint": "–52°C",
+          "density": "0.853 g/cm³ (20°C)",
+          "refractiveIndex": "1.486 (20°C)",
+          "flashPoint": "54°C (flammable liquid)",
+          "solubility": "Soluble in ethanol, ether, benzene; insoluble in water (<0.1 g/L)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=95% (industrial use)",
+          "highPurityGrade": ">=99% (analytical/research)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Production of pharmaceuticals & fragrances." },
+            { "title": "Solvent", "description": "High-boiling aromatic solvent." },
+            { "title": "Research Chemical", "description": "Organic synthesis studies." }
+          ],
+          "industriesServed": [
+            "Chemical Manufacturing",
+            "Pharmaceuticals",
+            "Fragrance & Flavor",
+            "Research & Development"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers (glass/steel). Cool (<30°C), ventilated area. Away from oxidizers.",
+          "handling": "Nitrile gloves + goggles. Local exhaust ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
+          "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
+        },
+        "keyPhysicalProperties": {
+          "vaporPressure": "1.5 mmHg (25°C)",
+          "dielectricConstant": "~2.3"
+        }
+      },
+      "zddp-md": {
+        "overview": {
+          "name": "Zinc Dialkyl Dithiophosphate (ZDDP-MD, CAS No. 2215-35-2)",
+          "description": "An amber to dark brown, oily, viscous liquid with a sulfurous odor, used as an anti-wear and antioxidant additive in engine oils, metalworking fluids, and industrial lubricants."
+        },
+        "identification": {
+          "iupacName": "Zinc O,O'-dialkyl dithiophosphate",
+          "commonNames": "ZDDP, Zinc dithiophosphate, Anti-wear additive",
+          "casNumber": "2215-35-2 (generic for ZDDP mixtures)",
+          "chemicalFormula": "[S₂P(OR)₂]₂Zn (R = alkyl group)",
+          "molecularWeight": "500–800 g/mol (varies by alkyl chain)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Amber to dark brown viscous liquid",
+          "odor": "Sulfurous",
+          "appearance": "Oily liquid",
+          "density": "1.10–1.25 g/cm³ (20°C)",
+          "flashPoint": ">150°C",
+          "viscosity": "100–300 cSt (40°C)",
+          "solubility": "Soluble in oils, hydrocarbons; insoluble in water"
+        },
+        "gradesPurity": {
+          "industrialGrade": "85–95% active ingredient",
+          "highPurityGrade": ">=97% (specialty lubricants)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Lubricant Additive", "description": "Anti-wear/anti-oxidant in engine oils." },
+            { "title": "Metalworking Fluids", "description": "Extreme pressure (EP) agent." },
+            { "title": "Industrial Oils", "description": "Gear oil formulations." }
+          ],
+          "industriesServed": [
+            "Automotive",
+            "Industrial Machinery",
+            "Aviation",
+            "Marine"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed steel drums. Cool (<40°C), dry conditions. Avoid contact with strong oxidizers.",
+          "handling": "Nitrile/neoprene gloves. Chemical goggles."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin/eye irritant. Contains zinc (environmental concern). Thermal decomposition releases toxic gases.",
+          "regulations": "GHS Symbols: Health Hazard, Environment. REACH: Registered."
+        },
+        "keyPerformanceData": {
+          "wearPrevention": "70–90% reduction",
+          "oxidationStability": "2–3x improvement"
+        }
+      },
+      "zddp-im": {
+        "overview": {
+          "name": "Zinc Dialkyl Dithiophosphate (ZDDP-IM, CAS No. 84605-29-8)",
+          "description": "An amber to dark brown, oily, homogeneous viscous liquid with a characteristic sulfurous odor, used as an anti-wear additive in engine oils, hydraulic fluids, and gear oils."
+        },
+        "identification": {
+          "iupacName": "Zinc O,O'-diisobutyl dithiophosphate",
+          "commonNames": "ZDDP-IM (Isomer Mixture), Zinc diisobutyldithiophosphate, Anti-wear additive",
+          "casNumber": "84605-29-8",
+          "chemicalFormula": "C₁₆H₃₆O₄P₂S₄Zn",
+          "molecularWeight": "546.03 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Amber to dark brown viscous liquid",
+          "odor": "Characteristic sulfurous",
+          "appearance": "Oily, homogeneous liquid",
+          "density": "1.12–1.18 g/cm³ (20°C)",
+          "viscosity": "90–150 cSt (40°C)",
+          "flashPoint": ">160°C",
+          "solubility": "Fully soluble in mineral/synthetic oils; insoluble in water (<0.01 g/L)"
+        },
+        "gradesPurity": {
+          "industrialGrade": "85–92% active ingredient",
+          "highPurityGrade": ">=95% (specialty lubricants)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Engine Oils", "description": "Primary anti-wear agent (reduces metal-to-metal contact)." },
+            { "title": "Hydraulic Fluids", "description": "Protects pumps and valves." },
+            { "title": "Gear Oils", "description": "Extreme pressure (EP) performance." }
+          ],
+          "industriesServed": [
+            "Automotive Lubricants",
+            "Industrial Machinery",
+            "Aviation Hydraulics"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed carbon steel drums. Store below 40°C (avoid sunlight). Nitrogen blanket recommended.",
+          "handling": "Chemical-resistant gloves (nitrile/neoprene). Face shield + vapor respirator."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin irritant (prolonged contact). Zinc content (regulated in wastewater). Decomposition risk >200°C (toxic fumes).",
+          "regulations": "GHS Symbols: Health Hazard, Environment. OECD HPV: Registered. US EPA: Regulated under TSCA."
+        },
+        "technicalPerformanceData": {
+          "wearScarDiameter": "≤0.40 mm (ASTM D4172)",
+          "phosphorusContent": "7–8 wt%",
+          "sulfurContent": "14–16 wt%"
+        }
+      },
+      "sodium-cyanide": {
+        "overview": {
+          "name": "Sodium Cyanide (NaCN, CAS No. 143-33-9)",
+          "description": "A white, hygroscopic crystalline solid or powder with a faint almond-like odor, used primarily for gold mining, chemical synthesis, and electroplating. Extremely toxic."
+        },
+        "identification": {
+          "iupacName": "Sodium cyanide",
+          "commonNames": "NaCN, Cyanogran (commercial form)",
+          "casNumber": "143-33-9",
+          "chemicalFormula": "NaCN",
+          "molecularWeight": "49.01 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline solid or powder",
+          "odor": "Faint almond-like (not reliable for detection)",
+          "appearance": "Hygroscopic crystals or briquettes",
+          "meltingPoint": "563°C",
+          "density": "1.60 g/cm³",
+          "solubility": "Highly soluble in water (480 g/L at 25°C); slightly soluble in ethanol",
+          "ph": "~11 (1% solution, strongly alkaline)"
+        },
+        "gradesPurity": {
+          "technicalGrade": "94–98% (mining industry)",
+          "highPurityGrade": ">=99% (chemical synthesis)",
+          "solutionGrade": "30–50% aqueous solution"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Gold Mining (Primary Use - 75%)", "description": "Extracts gold via cyanidation (Au + 2CN⁻ → [Au(CN)₂]⁻)." },
+            { "title": "Chemical Synthesis", "description": "Production of nitriles and chelating agents." },
+            { "title": "Electroplating", "description": "Silver and gold plating baths." }
+          ],
+          "industriesServed": [
+            "Mining & Metallurgy",
+            "Chemical Manufacturing",
+            "Electroplating"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight, corrosion-resistant containers (HDPE/SS316). Dry, ventilated area (<25°C, RH <50%). Separate from acids (risk of HCN gas).",
+          "handling": "Full-face respirator (with cyanide cartridges). Impermeable gloves (silver shield/butyl rubber). Mandatory buddy system in workplaces."
+        },
+        "safetyRegulatory": {
+          "hazards": "Extremely toxic (LD50 oral human: 1–3 mg/kg). Releases HCN gas with acids/moisture. Inhibits cellular respiration (binds to cytochrome oxidase).",
+          "regulations": "GHS Symbols: Skull & Crossbones, Health Hazard. UN Transport: UN 1689 (Class 6.1 Toxic)."
         }
       }
     }
