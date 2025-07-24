@@ -395,7 +395,7 @@ export default function ChemicalFamilySection() {
                         </div>
                         <div className="flex-1">
                           <h3 className="text-lg font-semibold text-blue-900 leading-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                            {product.name}
+                            {t(`chemicalNames.${product.name}`, product.name)}
                           </h3>
                         </div>
                       </div>

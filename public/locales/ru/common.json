@@ -32,7 +32,19 @@
     "years": "Лет опыта в агентстве",
     "organizations": "организаций успешно обслужено",
     "rating": "Наши клиенты оценивают нас на 4,7 из 5",
-    "repeat": "Большинство клиентов начинают ещё один проект с нами"
+    "repeat": "Большинство клиентов начинают ещё один проект с нами",
+    "headquarters": {
+      "label": "Главный офис",
+      "value": "Мумбаи"
+    },
+    "monthlyVisitors": {
+      "label": "Ежемесячных посетителей",
+      "value": "250К+"
+    },
+    "usedBy": {
+      "label": "Используют",
+      "value": "100+ организаций"
+    }
   },
   "services": {
     "headingPart1": "Всё, что вам",
@@ -521,50 +533,21 @@
     "requestInfo": "Запросить подробную информацию",
     "viewDetails": "Подробнее",
     "categories": {
-      "basicPetrochemicals": {
-        "name": "Базовые нефтехимические продукты и сырье",
-        "count": 12
-      },
-      "fuelAdditives": {
-        "name": "Топливные присадки (оксигенаты)",
-        "count": 3
-      },
-      "polymers": {
-        "name": "Полимеры и промежуточные продукты",
-        "count": 5
-      },
-      "phosphorus": {
-        "name": "Фосфорсодержащие химикаты",
-        "count": 4
-      },
-      "sulfur": {
-        "name": "Серосодержащие химикаты",
-        "count": 3
-      },
-      "amines": {
-        "name": "Амины и их производные",
-        "count": 6
-      },
-      "phenols": {
-        "name": "Фенолы и их производные",
-        "count": 7
-      },
-      "aromatics": {
-        "name": "Ароматические углеводороды и их производные",
-        "count": 4
-      },
-      "acrylics": {
-        "name": "Акриловые мономеры и их производные",
-        "count": 3
-      },
-      "cyanide": {
-        "name": "Цианидсодержащие химикаты",
-        "count": 1
-      },
-      "organometallic": {
-        "name": "Металлоорганические химикаты",
-        "count": 4
-      }
+      "basicPetrochemicals": { "name": "Базовые нефтехимические продукты и сырье" },
+      "fuelAdditives": { "name": "Топливные присадки" },
+      "additives": { "name": "Добавки и присадки к смазкам" },
+      "polymers": { "name": "Полимеры и гликоли" },
+      "phosphorus": { "name": "Фосфорные соединения" },
+      "sulfur": { "name": "Серные соединения" },
+      "amines": { "name": "Амины и их производные" },
+      "phenols": { "name": "Фенолы и их производные" },
+      "aromatics": { "name": "Ароматические соединения" },
+      "acrylics": { "name": "Акрилаты и производные" },
+      "cyanide": { "name": "Цианиды" },
+      "organometallic": { "name": "Органометаллические соединения" },
+      "inorganics": { "name": "Неорганические химикаты и соли" },
+      "alcohols": { "name": "Спирты и гликоли" },
+      "solvents": { "name": "Растворители и углеводородные смеси" }
     }
   },
   "chemicalDetail": {
@@ -2357,110 +2340,10 @@
         }
       }
     }
-
-    },
-    "extraDetailsLabels": {
-      "iupacName": "ИЮПАК-название",
-      "commonNames": "Общие названия",
-      "casNumber": "CAS-номер",
-      "chemicalFormula": "Химическая формула",
-      "molecularWeight": "Молекулярная масса",
-      "form": "Форма",
-      "color": "Цвет",
-      "odor": "Запах",
-      "appearance": "Внешний вид",
-      "boilingPoint": "Температура кипения",
-      "meltingPoint": "Температура плавления",
-      "density": "Плотность",
-      "vaporPressure": "Давление пара",
-      "flashPoint": "Температура вспышки",
-      "autoignitionTemp": "Температура самовоспламенения",
-      "solubility": "Растворимость",
-      "viscosity": "Вязкость",
-      "refractiveIndex": "Показатель преломления",
-      "ph": "pH",
-      "impurities": "Примеси",
-      "purity": "Чистота",
-      "stability": "Стабильность",
-      "storage": "Хранение",
-      "handling": "Обращение",
-      "hazards": "Опасности",
-      "nfpaRating": "Рейтинг NFPA",
-      "regulations": "Регламенты",
-      "texture": "Текстура",
-      "technicalGrade": "Технический сорт",
-      "highPurityGrade": "Высокочистый сорт",
-      "flakeGrade": "Хлопьевидная форма",
-      "fuelGrade": "Топливный сорт",
-      "chemicalGrade": "Химический сорт",
-      "highPurity": "Высокая чистота",
-      "lowPurity": "Низкая чистота",
-      "polymerGrade": "Полимерный сорт",
-      "refineryGrade": "Нефтеперерабатывающий сорт",
-      "lightNaphtha": "Лёгкая нафта",
-      "heavyNaphtha": "Тяжёлая нафта",
-      "Form": "Форма",
-      "Color": "Цвет",
-      "Odor": "Запах",
-      "Appearance": "Внешний вид",
-      "Solubility": "Растворимость",
-      "Melting Point": "Температура плавления",
-      "Density": "Плотность",
-      "Ph": "pH",
-      "Storage": "Хранение",
-      "Handling": "Обращение",
-      "Hazards": "Опасности",
-      "Nfpa Rating": "Рейтинг NFPA",
-      "Regulations": "Регламенты",
-      "Texture": "Текстура"
-    },
-    "headings": {
-      "identification": "Идентификация",
-      "physicalChemicalProperties": "Физические и химические свойства",
-      "gradesPurity": "Сорта и чистота",
-      "applicationsUses": "Применение и области использования",
-      "storageHandling": "Хранение и обращение",
-      "safetyRegulatory": "Безопасность и нормативные требования",
-      "industriesServed": "Обслуживаемые отрасли"
-    }
-  }
-  
-  },
-
-  "serviceDetail": {
-    "notFound": "Услуга не найдена",
-    "servicesProvided": "Предоставляемые услуги",
-    "stats": {
-      "headquarters": {
-        "label": "Главный офис",
-        "value": "Мумбаи"
-      },
-      "monthlyVisitors": {
-        "label": "Ежемесячных посетителей",
-        "value": "250K+"
-      },
-      "usedBy": {
-        "label": "Используют",
-        "value": "100+ организаций"
-      }
-    },
-    "services": {
-      "ftwz": {
-        "title": "FTWZ",
-        "description": "FTWZ (Зона свободной торговли и складирования) предоставляет полностью таможенные складские помещения и услуги с добавленной стоимостью без необходимости создания местного юридического лица. Мы оптимизируем процессы импорта и экспорта через бесперебойное таможенное оформление, отслеживание запасов в реальном времени и интегрированную цифровую отчетность. Наши комплексные решения включают комплектацию, маркировку и дистрибуцию под одной крышей, позволяя бизнесу оптимизировать денежный поток, снизить накладные расходы и ускорить выход на рынок.",
-        "tags": ["FTWZ", "Управление запасами", "Импорт/Экспорт", "Складирование"]
-      },
-      "integrated-3pl": {
-        "title": "Интегрированный 3PL",
-        "description": "Наш сервис Интегрированного 3PL предлагает комплексное управление логистикой, объединяя складирование, транспортировку и контроль запасов на единой платформе. Используя передовые системы управления складом, предиктивную аналитику и глобальную сеть перевозчиков, мы оптимизируем складские планировки, автоматизируем выполнение заказов и обеспечиваем видимость в реальном времени по всей цепочке поставок. От входящих закупок до доставки конечному потребителю мы обеспечиваем экономически эффективные, масштабируемые решения, адаптированные под уникальные операционные потребности каждого клиента.",
-        "tags": ["Интегрированный 3PL", "Логистика", "Хранение", "Глобальная дистрибуция"]
-      }
-    }
   },
   "chemicalProduct": {
     "title": "Химическая продукция",
     "description": "Наше подразделение химической продукции поставляет широкий ассортимент высокочистых специальных и массовых химикатов от ведущих мировых производителей. От точного состава и строгого контроля качества до индивидуальной упаковки и соответствующей дистрибуции, мы управляем каждым аспектом цепочки поставок, чтобы предоставить индивидуальные решения, отвечающие точным требованиям клиентов из разных отраслей. Наш опыт в соблюдении нормативных требований и логистической координации обеспечивает безопасную и надежную доставку, помогая бизнесу внедрять инновации и масштабироваться с уверенностью.",
-    "tags": ["Химическая продукция", "Глобальная дистрибуция", "Упаковка", "Брендинг"],
     "stats": {
       "headquarters": {
         "label": "Главный офис",
@@ -2468,16 +2351,107 @@
       },
       "monthlyVisitors": {
         "label": "Ежемесячных посетителей",
-        "value": "250K+"
+        "value": "250К+"
       },
       "usedBy": {
         "label": "Используют",
         "value": "100+ организаций"
       }
     }
+  },
+  "chemicalNames": {
+    "Naphtha": "Нафта",
+    "Propylene (Propene)": "Пропилен (Пропен)",
+    "Isobutylene (IB)": "Изобутилен (IB)",
+    "Benzene": "Бензол",
+    "Toluene": "Толуол",
+    "Paraxylene (PX)": "Параксилол (PX)",
+    "Ortho Xylene (OX)": "Орто-ксилол (OX)",
+    "Cyclohexane": "Циклогексан",
+    "Isohexane SBP": "Изогексан SBP",
+    "C-6 Aliphatic Hydrocarbons": "C-6 алифатические углеводороды",
+    "Mixed Hexenes": "Смешанные гексены",
+    "Methanol": "Метанол",
+    "Sulphur": "Сера",
+    "Methyl Tertiary Butyl Ether (MTBE)": "Метил-трет-бутиловый эфир (MTBE)",
+    "ETBE (Ethyl Tert-Butyl Ether)": "ЭТБЭ (этил-трет-бутиловый эфир)",
+    "Bio-ETBE": "Био-ЭТБЭ",
+    "Zinc Dialkyl Dithiophosphate (ZDDP-MD)": "Цинковый диалкилдитиофосфат (ZDDP-MD)",
+    "Zinc Dialkyl Dithiophosphate (ZDDP-IM)": "Цинковый диалкилдитиофосфат (ZDDP-IM)",
+    "Polypropylene (PP)": "Полипропилен (PP)",
+    "Polyethylene (PE)": "Полиэтилен (PE)",
+    "Styrene Monomer": "Стирольный мономер",
+    "Vinyl Chloride Monomer": "Винилхлоридный мономер",
+    "Ethylene Glycol": "Этиленгликоль",
+    "Purified Terephthalic Acid ": "Очищенная терефталевая кислота",
+    "Mono Ethylene Glycol": "Моноэтиленгликоль",
+    "Antioxidant 1010": "Антиоксидант 1010",
+    "Antioxidant 1076": "Антиоксидант 1076",
+    "Antioxidant 168": "Антиоксидант 168",
+    "Antioxidant 1098": "Антиоксидант 1098",
+    "Antioxidant L135": "Антиоксидант L135",
+    "Antioxidant 1135": "Антиоксидант 1135",
+    "Antioxidant 1315": "Антиоксидант 1315",
+    "Antioxidant Blend (168/1010)": "Смесь антиоксидантов (168/1010)",
+    "Phosphoric Acid": "Фосфорная кислота",
+    "Phosphorus Pentoxide": "Пятиокись фосфора",
+    "Triphenyl Phosphite (TPPi)": "Трифенилфосфит (TPPi)",
+    "Phosphorus Trichloride": "Трихлорид фосфора",
+    "Red Phosphorus": "Красный фосфор",
+    "Trimethyl Phosphite (TMPi)": "Триметилфосфит (TMPi)",
+    "Triethyl Phosphite (TEPi)": "Триэтилфосфит (TEPi)",
+    "Diethyl Phosphite (DEPi)": "Диэтилфосфит (DEPi)",
+    "Dimethyl Phosphite (DMPi)": "Диметилфосфит (DMPi)",
+    "Dimethyl Methylphosphonate (DMMP)": "Диметилметилфосфонат (DMMP)",
+    "Sulfur": "Сера",
+    "Sulfuric Acid": "Серная кислота",
+    "Sodium Bisulfite": "Бисульфит натрия",
+    "Sulfur Dioxide": "Диоксид серы",
+    "Carbon Disulfide (CS₂)": "Дисульфид углерода (CS₂)",
+    "Sodium Sulfide (Na₂S)": "Сульфид натрия (Na₂S)",
+    "Diethylamine": "Диэтиламин",
+    "Triethylamine": "Триэтиламин",
+    "Monoethanolamine": "Моноэтаноламин",
+    "Diethanolamine": "Диэтаноламин",
+    "Triethanolamine": "Триэтаноламин",
+    "N-Methylpyrrolidone": "N-метилпирролидон",
+    "Tert-Butylamine": "Трет-бутиламин",
+    "Phenol": "Фенол",
+    "Bisphenol A": "Бисфенол А",
+    "Cresol": "Крезол",
+    "Resorcinol": "Резорцинол",
+    "Hydroquinone": "Гидрохинон",
+    "Catechol": "Катехол",
+    "Nonylphenol": "Нонилфенол",
+    "Para-Tertiary Butyl Benzoic Acid (PTBBA)": "Пара-трет-бутилбензойная кислота (PTBBA)",
+    "Toluene Diisocyanate": "Толуолдиизоцианат",
+    "Methylene Diphenyl Diisocyanate": "Метилендифенилдиазоцианат",
+    "Aniline": "Анилин",
+    "Nitrobenzene": "Нитробензол",
+    "Paraxylene": "Параксилол",
+    "Ortho Xylene": "Орто-ксилол",
+    "Toluene": "Толуол",
+    "Methyl 4-Tert-Butyl Benzoate (PTBMB)": "Метил-4-трет-бутилбензоат (PTBMB)",
+    "4-Butylaniline": "4-Бутиланилин",
+    "C10 Aromatic Solvent / Aromatic 150": "C10 ароматический растворитель / Ароматический 150",
+    "3-Phenylpentane (3-PP)": "3-Фенилпентан (3-PP)",
+    "Tertiary Amyl Benzene (TAB)": "Третичный амилбензол (TAB)",
+    "Secondary Butyl Benzene (SBB)": "Вторичный бутилбензол (SBB)",
+    "Normal Butyl Benzene (NBB)": "Нормальный бутилбензол (NBB)",
+    "Isobutyl Benzene (IBB)": "Изобутилбензол (IBB)",
+    "Acrylic Acid": "Акриловая кислота",
+    "Methyl Methacrylate": "Метилметакрилат",
+    "Butyl Acrylate": "Бутилакрилат",
+    "N-Tert-Octyl Acrylamide (TOA)": "N-трет-октил акриламид (TOA)",
+    "N-Tert-Butyl Acrylamide (TBA)": "N-трет-бутил акриламид (TBA)",
+    "Sodium Salt of 2-Acrylamido-2-Methylpropane Sulfonic Acid (NaAMPS)": "Натриевая соль 2-акриламидо-2-метилпропансульфоновой кислоты (NaAMPS)",
+    "2-Acrylamido-2-Methylpropane Sulfonic Acid (ATBS)": "2-Акриламидо-2-метилпропансульфоновая кислота (ATBS)",
+    "Sodium Cyanide (NaCN)": "Цианид натрия (NaCN)",
+    "Tetraethyl Lead": "Тетраэтилсвинец",
+    "Tributyltin Oxide": "Трибутилолово оксид",
+    "Organotin Compounds": "Органооловянные соединения",
+    "Organozinc Compounds": "Органоцинковые соединения",
+    "Potassium Bicarbonate": "Бикарбонат калия",
+    "Isohexane (SBP)": "Изогексан (SBP)"
   }
-} 
-
-
-
-
+}
