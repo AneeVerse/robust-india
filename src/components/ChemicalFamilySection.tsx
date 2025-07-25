@@ -171,7 +171,7 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'phenols',
-    count: 8, // incremented from 7
+    count: 9, // incremented from 8
     IconComponent: GiCrystalBars,
     products: [
       { name: 'Phenol' },
@@ -185,7 +185,9 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Para-Tertiary Butyl Benzoic Acid (PTBBA)', code: 'ptbba' },
       { name: '2,4-Di-Tert-Butyl Phenol (2,4-DTBP)', code: '2-4-di-tert-butyl-phenol-2-4-dtbp' },
       { name: '2,6-Di-Tert-Butyl Phenol (2,6-DTBP)', code: '2-6-di-tert-butyl-phenol-2-6-dtbp' },
-      { name: 'Ortho-Tert-Butyl Phenol (OTBP)', code: 'ortho-tert-butyl-phenol-otbp' }
+      { name: 'Di-Sec-Butyl Phenol (2,6-DSBP)', code: '2-6-di-sec-butyl-phenol-2-6-dsbp' },
+      { name: 'Ortho-Tert-Butyl Phenol (OTBP)', code: 'ortho-tert-butyl-phenol-otbp' },
+      { name: 'Ortho-Sec-Butyl Phenol (OSBP)', code: 'osbp' }
     ]
   },
   {

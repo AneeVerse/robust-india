@@ -3947,6 +3947,200 @@
           "pKa": "10.6 (weaker acid than phenol)",
           "vaporPressure": "0.03 mmHg (25°C)"
         }
+      },
+      "osbp": {
+        "overview": {
+          "name": "Ortho-Sec-Butyl Phenol (OSBP)",
+          "description": "A colorless to pale yellow, clear, viscous liquid with a characteristic phenolic odor. Used as an intermediate for fragrances, agrochemicals, phenolic resins, and as a lubricant additive."
+        },
+        "identification": {
+          "iupacName": "2-(1-Methylpropyl)phenol",
+          "synonyms": "OSBP, 2-sec-Butylphenol, o-(1-Methylpropyl)phenol",
+          "casNumber": "89-72-5",
+          "ecNumber": "201-934-1",
+          "unNumber": "Not regulated"
+        },
+        "molecularCharacteristics": {
+          "chemicalFormula": "C₁₀H₁₄O",
+          "molecularWeight": "150.22 g/mol",
+          "structure": "Phenol with sec-butyl group at ortho position"
+        },
+        "physicalDescription": {
+          "state": "Liquid below 14°C, solid above",
+          "color": "Colorless to pale yellow",
+          "odor": "Characteristic phenolic",
+          "visual": "Clear viscous liquid"
+        },
+        "qualitySpecifications": {
+          "industrial": { "purity": ">=95%", "impurities": "<3% other butylphenols" },
+          "highPurity": { "purity": ">=98%", "impurities": "<1% meta/para isomers" },
+          "pharma": { "purity": ">=99.5%", "impurities": "Heavy metals <10ppm" }
+        },
+        "thermodynamicProperties": {
+          "meltingRange": "12-14°C",
+          "boilingPoint": "226-228°C",
+          "flashPoint": "102°C (PMCC)",
+          "density": "0.983 g/mL (20°C)",
+          "refractiveIndex": "n²⁰D 1.522"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Manufacturing", "description": "Intermediate for fragrance compounds (musk chemicals), agricultural chemicals" },
+            { "title": "Polymer Industry", "description": "Modifier for phenolic resins" },
+            { "title": "Functional Fluids", "description": "Additive in lubricant formulations" }
+          ],
+          "industriesServed": [
+            "Flavor & Fragrance",
+            "Agrochemicals",
+            "Specialty Polymers",
+            "Lubricant Additives"
+          ]
+        },
+        "storageHandling": {
+          "containerType": "200L steel drums with poly liners, stainless steel totes (bulk storage)",
+          "environmentalControls": "Temperature: 15-25°C (avoid freezing); Atmosphere: Nitrogen blanket recommended",
+          "handlingPPE": "Butyl rubber gloves, chemical goggles + face shield, organic vapor respirator"
+        },
+        "safetyRegulatory": {
+          "acuteHazards": "Skin corrosion (Category 1B), Eye damage (Category 1)",
+          "chronicEffects": "Suspected endocrine disruptor, Aquatic toxicity (LC50 fish <10 mg/L)",
+          "firstAid": "Skin: Wash with soap/water, apply dimethicone. Eyes: Irrigate 15+ minutes.",
+          "fireFighting": "Use alcohol-resistant foam, avoid water jets.",
+          "ghsClassification": ["H314: Causes severe skin burns", "H411: Toxic to aquatic life"],
+          "transportRegulations": "Not classified as dangerous goods",
+          "globalInventories": "TSCA: Listed, REACH: Registered, DSL: Listed"
+        },
+        "technicalComparison": {
+          "property": ["Boiling Pt.", "Water Sol.", "pKa"],
+          "osbp": ["226°C", "1 g/L", "10.5"],
+          "4-sec-BP": ["239°C", "0.8 g/L", "10.3"]
+        }
+      },
+      "osbp-detailed": {
+        "overview": {
+          "name": "Ortho-Sec-Butyl Phenol (OSBP, detailed)",
+          "description": "A colorless to pale yellow, clear, viscous liquid with a characteristic phenolic odor. Used as an intermediate for fragrances, agrochemicals, phenolic resins, and as a lubricant additive."
+        },
+        "identification": {
+          "iupacName": "2-(1-Methylpropyl)phenol",
+          "synonyms": "OSBP, 2-sec-Butylphenol, o-(1-Methylpropyl)phenol",
+          "casNumber": "89-72-5",
+          "ecNumber": "201-934-1",
+          "unNumber": "Not regulated"
+        },
+        "molecularCharacteristics": {
+          "chemicalFormula": "C₁₀H₁₄O",
+          "molecularWeight": "150.22 g/mol",
+          "structure": "Phenol with sec-butyl group at ortho position"
+        },
+        "physicalDescription": {
+          "state": "Liquid below 14°C, solid above",
+          "color": "Colorless to pale yellow",
+          "odor": "Characteristic phenolic",
+          "visual": "Clear viscous liquid"
+        },
+        "qualitySpecifications": {
+          "industrial": { "purity": ">=95%", "impurities": "<3% other butylphenols" },
+          "highPurity": { "purity": ">=98%", "impurities": "<1% meta/para isomers" },
+          "pharma": { "purity": ">=99.5%", "impurities": "Heavy metals <10ppm" }
+        },
+        "thermodynamicProperties": {
+          "meltingRange": "12-14°C",
+          "boilingPoint": "226-228°C",
+          "flashPoint": "102°C (PMCC)",
+          "density": "0.983 g/mL (20°C)",
+          "refractiveIndex": "n²⁰D 1.522"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Manufacturing", "description": "Intermediate for fragrance compounds (musk chemicals), agricultural chemicals" },
+            { "title": "Polymer Industry", "description": "Modifier for phenolic resins" },
+            { "title": "Functional Fluids", "description": "Additive in lubricant formulations" }
+          ],
+          "industriesServed": [
+            "Flavor & Fragrance",
+            "Agrochemicals",
+            "Specialty Polymers",
+            "Lubricant Additives"
+          ]
+        },
+        "storageHandling": {
+          "containerType": "200L steel drums with poly liners, stainless steel totes (bulk storage)",
+          "environmentalControls": "Temperature: 15-25°C (avoid freezing); Atmosphere: Nitrogen blanket recommended",
+          "handlingPPE": "Butyl rubber gloves, chemical goggles + face shield, organic vapor respirator"
+        },
+        "safetyRegulatory": {
+          "acuteHazards": "Skin corrosion (Category 1B), Eye damage (Category 1)",
+          "chronicEffects": "Suspected endocrine disruptor, Aquatic toxicity (LC50 fish <10 mg/L)",
+          "firstAid": "Skin: Wash with soap/water, apply dimethicone. Eyes: Irrigate 15+ minutes.",
+          "fireFighting": "Use alcohol-resistant foam, avoid water jets.",
+          "ghsClassification": ["H314: Causes severe skin burns", "H411: Toxic to aquatic life"],
+          "transportRegulations": "Not classified as dangerous goods",
+          "globalInventories": "TSCA: Listed, REACH: Registered, DSL: Listed"
+        },
+        "technicalComparison": {
+          "property": ["Boiling Pt.", "Water Sol.", "pKa"],
+          "osbp": ["226°C", "1 g/L", "10.5"],
+          "4-sec-BP": ["239°C", "0.8 g/L", "10.3"]
+        }
+      },
+      "2-6-di-sec-butyl-phenol-2-6-dsbp": {
+        "overview": {
+          "name": "Di-Sec-Butyl Phenol (2,6-DSBP, CAS No. 5510-99-6)",
+          "description": "A colorless to pale yellow, clear, viscous liquid with a mild phenolic odor. Used as an antioxidant in plastics, lubricant additive, chemical intermediate for phenolic resins, and fuel stabilizer."
+        },
+        "identification": {
+          "iupacName": "2,6-Bis(1-methylpropyl)phenol",
+          "commonNames": "2,6-DSBP, 2,6-Di-sec-butylphenol, 2,6-Bis(sec-butyl)phenol",
+          "casNumber": "5510-99-6",
+          "chemicalFormula": "C₁₄H₂₂O",
+          "molecularWeight": "206.32 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid",
+          "odor": "Mild phenolic",
+          "appearance": "Clear, viscous liquid",
+          "boilingPoint": "260–265°C",
+          "meltingPoint": "–10°C",
+          "density": "0.92–0.94 g/cm³ (20°C)",
+          "refractiveIndex": "1.495–1.505 (20°C)",
+          "flashPoint": ">110°C (combustible)",
+          "solubility": {
+            "solubleIn": ["ethanol", "ether", "acetone"],
+            "insolubleInWater": "<0.1 g/L"
+          }
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥95% (industrial use)",
+          "highPurityGrade": "≥98% (specialty applications)",
+          "lowIsomerGrade": "<1% other butylphenols"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Stabilizer", "description": "Antioxidant in plastics (PP, PE)" },
+            { "title": "Lubricant Additive", "description": "Oxidation inhibitor in oils" },
+            { "title": "Chemical Intermediate", "description": "Production of phenolic resins" },
+            { "title": "Fuel Additive", "description": "Stabilizer for gasoline" }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers",
+            "Lubricants & Fuels",
+            "Chemical Manufacturing",
+            "Adhesives & Coatings"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Sealed containers (stainless steel/HDPE)", "Cool (<30°C), dry, ventilated area", "Nitrogen blanket (prevents oxidation)"],
+          "handling": ["Nitrile gloves + goggles", "Local exhaust ventilation"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Skin/eye irritant", "Combustible at high temps", "Environmental toxicity (aquatic organisms)"],
+          "regulatoryStatus": {"ghsSymbols": ["Health Hazard", "Environment"], "euReach": "Registered", "notCarcinogenic": true}
+        },
+        "keyPerformanceData": {
+          "antioxidantEfficiency": "Moderate (better than BHT)",
+          "thermalStability": "Up to 200°C"
+        }
       }
     }
     
