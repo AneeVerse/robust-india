@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { IoClose } from "react-icons/io5";
 import { IoMdChatboxes } from "react-icons/io";
-import { MdContentCopy } from 'react-icons/md';
 import { useContactWidget } from '@/context/ContactWidgetContext';
 
 const FloatingActionButton = () => {
@@ -22,21 +21,6 @@ const FloatingActionButton = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [countdown, setCountdown] = useState(3);
-  const [copied, setCopied] = useState('');
-
-  const handleContactClick = (type: string) => {
-    setSelectedContactType(type);
-    setFormData({ ...formData, contactType: type });
-    setShowForm(true);
-    setOpen(false);
-  };
-
-  const handleCopy = (text: string) => {
-    navigator.clipboard.writeText(text)
-      .then(() => setCopied(text))
-      .catch((err) => alert('Failed to copy: ' + err));
-    setTimeout(() => setCopied(''), 1200);
-  };
 
   const handleInputChange = (field: string, value: string) => {
     setFormData({ ...formData, [field]: value });
