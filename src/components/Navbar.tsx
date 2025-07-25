@@ -37,7 +37,8 @@ function NavbarContent() {
   ];
 
   return (
-    <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg max-w-md sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto overflow-hidden border border-[#3c3a38] pointer-events-auto backdrop-blur-md">
+    <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg max-w-md sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl 3xl:max-w-3xl mx-auto overflow-x-auto border border-[#3c3a38] pointer-events-auto backdrop-blur-md min-w-0">
+      {/* Increased max-width for Russian, added overflow-x-auto, min-w-0 for flex, and ensured border is always visible */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       
       <div className="flex items-center mr-2 sm:mr-3 md:mr-4 flex-shrink-0">

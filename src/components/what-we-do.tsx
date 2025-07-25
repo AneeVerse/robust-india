@@ -11,7 +11,7 @@ export default function LandingPage() {
     <div className="min-h-screen" style={{ background: "#131518", color: "white" }}>
       {/* Main Content */}
       <div className="w-full py-8 sm:py-16 flex flex-col items-center px-4 sm:px-0">
-        {/* Header with Waving Hand and About Us Title + Learn More Button */}
+        {/* Header with Waving Hand and About Us Title */}
         <div className="mb-12 sm:mb-16 w-full flex flex-col sm:flex-row items-start sm:items-center justify-between">
           <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
             <motion.div
@@ -29,16 +29,6 @@ export default function LandingPage() {
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-light leading-tight text-left ml-8 sm:ml-20">
               {t('about.title')}
             </h1>
-          </div>
-          {/* Learn More Button aligned right for desktop, below for mobile */}
-          <div className="flex justify-end w-full sm:w-auto mt-4 sm:mt-0">
-            <a
-              href="/contact"
-              className="bg-[#6164F6] hover:bg-[#5055E5] text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg text-base mr-4 whitespace-nowrap"
-              style={{ textDecoration: 'none', minHeight: 'unset' }}
-            >
-              Contact Us
-            </a>
           </div>
         </div>
 
@@ -69,10 +59,17 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-8 pr-4 sm:pr-8"
+              className="pr-4 sm:pr-8"
             >
-              <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl text-left">
+              <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl text-left m-0 inline">
                 {t('about.description')}
+                <a
+                  href="/about"
+                  className="bg-[#6164F6] hover:bg-[#5055E5] text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg text-base whitespace-nowrap ml-4 align-baseline inline-block"
+                  style={{ textDecoration: 'none', minHeight: 'unset' }}
+                >
+                  Read More
+                </a>
               </p>
             </motion.div>
           </div>

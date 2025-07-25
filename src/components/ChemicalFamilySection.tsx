@@ -415,9 +415,17 @@ export default function ChemicalFamilySection() {
     );
   };
 
+  // Filter out products without a code and remove empty categories
+  const filteredChemicalCategories: ChemicalCategory[] = chemicalCategories
+    .map(category => ({
+      ...category,
+      products: category.products.filter(product => !!product.code),
+    }))
+    .filter(category => category.products.length > 0);
+
   return (
     <>
-      <div className="mt-24 px-4 sm:px-6 lg:px-8">
+      <div id="chemical-family-section" className="mt-24 px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-left mb-16">
           <div className="flex items-center gap-3 mb-4">
@@ -435,7 +443,7 @@ export default function ChemicalFamilySection() {
         
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {chemicalCategories.map((category, index) => (
+          {filteredChemicalCategories.map((category, index) => (
             <div 
               key={index} 
               onClick={() => openModal(category)}
