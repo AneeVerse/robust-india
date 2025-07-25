@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   { 
     slug: 'chemical-products',
-    image: "/images/product2.jpg",
+    image: "/images/product4.jpg",
     translationKey: "chemical"
   },
   { 

@@ -3305,6 +3305,648 @@
           "hazards": "Extremely toxic (LD50 oral human: 1–3 mg/kg). Releases HCN gas with acids/moisture. Inhibits cellular respiration (binds to cytochrome oxidase).",
           "regulations": "GHS Symbols: Skull & Crossbones, Health Hazard. UN Transport: UN 1689 (Class 6.1 Toxic)."
         }
+      },
+      "cyanuric-chloride": {
+        "overview": {
+          "name": "Cyanuric Chloride (CAS No. 108-77-0)",
+          "description": "A white crystalline solid with a pungent, chlorine-like odor, used as a key intermediate in herbicides, dyes, pharmaceuticals, and flame retardants."
+        },
+        "identification": {
+          "iupacName": "2,4,6-Trichloro-1,3,5-triazine",
+          "commonNames": "Cyanuric chloride, Trichlorotriazine, TCT",
+          "casNumber": "108-77-0",
+          "chemicalFormula": "C₃Cl₃N₃",
+          "molecularWeight": "184.41 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline solid",
+          "odor": "Pungent, chlorine-like",
+          "appearance": "Fine powder or flakes",
+          "meltingPoint": "145–147°C",
+          "boilingPoint": "190°C (sublimes)",
+          "density": "1.92 g/cm³",
+          "solubility": "Soluble in acetone, benzene; reacts violently with water"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98% (industrial use)",
+          "highPurityGrade": "≥99.5% (pharmaceutical intermediates)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Herbicides", "description": "Key intermediate for triazine herbicides (e.g., atrazine)" },
+            { "title": "Dyes & Pigments", "description": "Reactive dye manufacturing" },
+            { "title": "Pharmaceuticals", "description": "Antiviral drug synthesis" },
+            { "title": "Flame Retardants", "description": "Triazine-based additives" }
+          ],
+          "industriesServed": [
+            "Agrochemicals",
+            "Textiles",
+            "Pharmaceuticals",
+            "Polymers"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers under dry nitrogen. Cool (<25°C), dry, ventilated area. Separate from water/alkalis.",
+          "handling": "Full-face respirator (chlorine cartridges). PVC/neoprene gloves + apron. Emergency shower/eyewash required."
+        },
+        "safetyRegulatory": {
+          "hazards": "Corrosive (causes severe burns). Releases HCl gas with moisture. Lachrymator (tear-inducing).",
+          "regulations": "GHS Symbols: Corrosion, Health Hazard, Environment. UN Transport: UN 2670 (Class 8 Corrosive)"
+        }
+      },
+      "ethylenediamine": {
+        "overview": {
+          "name": "Ethylenediamine (EDA, CAS No. 107-15-3)",
+          "description": "A clear, colorless, hygroscopic liquid with a pungent ammonia-like odor, used as a chemical intermediate, epoxy curing agent, and in pharmaceuticals, agriculture, and fuel additives."
+        },
+        "identification": {
+          "iupacName": "Ethane-1,2-diamine",
+          "commonNames": "EDA, 1,2-Diaminoethane, Ethylenediamine",
+          "casNumber": "107-15-3",
+          "chemicalFormula": "C₂H₈N₂",
+          "molecularWeight": "60.10 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "odor": "Ammonia-like, pungent",
+          "appearance": "Clear, hygroscopic liquid",
+          "boilingPoint": "116–117°C",
+          "meltingPoint": "8.5°C",
+          "density": "0.899 g/cm³ (20°C)",
+          "viscosity": "1.6 mPa·s (25°C)",
+          "flashPoint": "34°C (flammable liquid)",
+          "solubility": "Miscible with water, ethanol; slightly soluble in ether"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98% (industrial use)",
+          "highPurityGrade": "≥99.5% (pharmaceutical applications)",
+          "anhydrousGrade": "Water content <0.1%"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Production of EDTA (chelating agent); synthesis of fungicides (e.g., Maneb)" },
+            { "title": "Pharmaceuticals", "description": "Precursor for antihistamines & antibiotics" },
+            { "title": "Epoxy Curing Agent", "description": "Hardener for resins/adhesives" },
+            { "title": "Fuel Additives", "description": "Corrosion inhibitor" }
+          ],
+          "industriesServed": [
+            "Chemicals & Polymers",
+            "Pharmaceuticals",
+            "Agriculture",
+            "Adhesives & Coatings"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers (stainless steel/HDPE). Cool (<25°C), ventilated area. Nitrogen blanket recommended.",
+          "handling": "Chemical goggles + face shield. Neoprene/nitrile gloves. Vapor respirator (ammonia cartridges)."
+        },
+        "safetyRegulatory": {
+          "hazards": "Corrosive (skin/eye burns). Flammable vapor (LFL 2.7%, UFL 16.6%). Sensitizer (allergic dermatitis risk).",
+          "regulations": "GHS Symbols: Flame, Corrosion, Health Hazard. UN 1604 (Class 8 Corrosive)"
+        }
+      },
+      "piperazine": {
+        "overview": {
+          "name": "Piperazine (Anhydrous, CAS No. 110-85-0)",
+          "description": "A white, hygroscopic crystalline solid with a faint ammonia-like odor, used in pharmaceuticals, polymers, water treatment, and as a corrosion inhibitor."
+        },
+        "identification": {
+          "iupacName": "1,4-Diazacyclohexane",
+          "commonNames": "Piperazine (anhydrous), Diethylenediamine, Hexahydropyrazine",
+          "casNumber": "110-85-0",
+          "chemicalFormula": "C₄H₁₀N₂",
+          "molecularWeight": "86.14 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline solid",
+          "odor": "Ammonia-like, faint fishy odor",
+          "appearance": "Hygroscopic flakes or powder",
+          "meltingPoint": "109–112°C",
+          "boilingPoint": "146°C (sublimes)",
+          "density": "1.1 g/cm³",
+          "solubility": "Highly soluble in water (150 g/100 mL at 20°C); soluble in ethanol, glycerol; insoluble in ether"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98% (industrial use)",
+          "pharmaceuticalGrade": "≥99.5% (USP/EP compliance)",
+          "anhydrousGrade": "Water content <0.1%"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Pharmaceuticals", "description": "Anthelmintic drugs (treats parasitic worms); antihistamine synthesis (e.g., cetirizine)" },
+            { "title": "Polymer Industry", "description": "Epoxy curing agent; polyurethane catalyst" },
+            { "title": "Corrosion Inhibitors", "description": "Boiler water treatment" }
+          ],
+          "industriesServed": [
+            "Pharmaceuticals",
+            "Polymers & Resins",
+            "Water Treatment",
+            "Agriculture"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers (moisture-sensitive). Cool (<25°C), dry, ventilated area. Separate from acids/oxidizers.",
+          "handling": "Nitrile gloves + goggles. Dust mask (NIOSH N95) for powders. Local exhaust ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin/eye irritant. Respiratory sensitizer. Forms explosive salts with strong oxidizers.",
+          "regulations": "GHS Symbols: Health Hazard. FDA Approved: For pharmaceutical use. EU REACH: Registered."
+        }
+      },
+      "polymers": {
+        "overview": {
+          "name": "Polymers",
+          "description": "A broad category of materials that can be formed into various shapes and used in a wide range of applications."
+        },
+        "identification": {
+          "iupacName": "Polymer",
+          "commonNames": "Polyethylene, Polypropylene, Polystyrene",
+          "casNumber": "N/A",
+          "chemicalFormula": "N/A",
+          "molecularWeight": "N/A"
+        },
+        "physicalChemicalProperties": {
+          "form": "Solid or liquid",
+          "color": "Various",
+          "odor": "Varies",
+          "appearance": "Varies",
+          "meltingPoint": "Varies",
+          "boilingPoint": "Varies",
+          "density": "Varies",
+          "solubility": "Varies",
+          "viscosity": "Varies"
+        },
+        "gradesPurity": {
+          "technicalGrade": "Varies",
+          "highPurityGrade": "Varies",
+          "impurities": "Varies"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Plastics", "description": "Used in a wide range of products from packaging to automotive components." },
+            { "title": "Rubber", "description": "Used in tires, hoses, and seals." },
+            { "title": "Textiles", "description": "Used in fibers, films, and composites." },
+            { "title": "Adhesives", "description": "Used in adhesives and coatings." }
+          ],
+          "industriesServed": [
+            "Plastics",
+            "Rubber",
+            "Textiles",
+            "Adhesives"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed containers",
+          "handling": "Avoid exposure to heat, moisture, and strong oxidizing agents"
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable, toxic, reactive, and potentially hazardous",
+          "regulations": "GHS: Hazard symbols required"
+        }
+      },
+      "diethylene-triamine": {
+        "overview": {
+          "name": "Diethylene Triamine (DETA, CAS No. 111-40-0)",
+          "description": "A clear, colorless to pale yellow, hygroscopic, viscous liquid with a pungent ammonia-like odor, used in epoxy curing, chelating agents, oilfield chemicals, and textile auxiliaries."
+        },
+        "identification": {
+          "iupacName": "N-(2-Aminoethyl)ethane-1,2-diamine",
+          "commonNames": "DETA, Bis(2-aminoethyl)amine, 2,2'-Diaminodiethylamine",
+          "casNumber": "111-40-0",
+          "chemicalFormula": "C₄H₁₃N₃",
+          "molecularWeight": "103.17 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow viscous liquid",
+          "odor": "Ammonia-like, pungent",
+          "appearance": "Clear, hygroscopic liquid",
+          "boilingPoint": "206–207°C",
+          "meltingPoint": "–39°C",
+          "density": "0.955 g/cm³ (20°C)",
+          "viscosity": "6.5 mPa·s (25°C)",
+          "flashPoint": "101°C (combustible)",
+          "solubility": "Miscible with water, ethanol; insoluble in hydrocarbons"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥90% (industrial use)",
+          "highPurityGrade": "≥98% (epoxy curing)",
+          "lowChlorideGrade": "≤10 ppm Cl (electronics)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Epoxy Curing", "description": "High-performance adhesives/composites" },
+            { "title": "Chelating Agents", "description": "EDTA derivatives production" },
+            { "title": "Oilfield Chemicals", "description": "Corrosion inhibitor" },
+            { "title": "Textile Auxiliaries", "description": "Dye fixatives" }
+          ],
+          "industriesServed": [
+            "Adhesives & Composites",
+            "Oil & Gas",
+            "Water Treatment",
+            "Textiles"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed steel/HDPE containers. Nitrogen blanket (prevents oxidation). Cool (<30°C), dry, ventilated area.",
+          "handling": "Neoprene gloves + face shield. Vapor respirator (ammonia cartridges)."
+        },
+        "safetyRegulatory": {
+          "hazards": "Corrosive (skin/eye burns). Sensitizer (allergic dermatitis). Toxic fumes when heated.",
+          "regulations": "GHS Symbols: Corrosion, Health Hazard. UN 2079 (Class 8). OSHA PEL: 1 ppm (skin)"
+        },
+        "keyTechnicalData": {
+          "amineValue": "1,630–1,670 mg KOH/g",
+          "equivalentWeight": "34 g/eq (epoxy curing)"
+        }
+      },
+      "aminoethyl-ethanolamine": {
+        "overview": {
+          "name": "Aminoethyl Ethanolamine (AEEA, CAS No. 111-41-1)",
+          "description": "A clear, colorless to pale yellow, hygroscopic, viscous liquid with a mild ammonia-like odor, used in surfactants, gas treatment, epoxy curing, and textile chemicals."
+        },
+        "identification": {
+          "iupacName": "2-(2-Aminoethylamino)ethanol",
+          "commonNames": "AEEA, N-(2-Hydroxyethyl)ethylenediamine, Hydroxyethyl ethylenediamine",
+          "casNumber": "111-41-1",
+          "chemicalFormula": "C₄H₁₂N₂O",
+          "molecularWeight": "104.15 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow viscous liquid",
+          "odor": "Ammonia-like, mild",
+          "appearance": "Clear, hygroscopic liquid",
+          "boilingPoint": "243–245°C",
+          "meltingPoint": "–28°C",
+          "density": "1.030 g/cm³ (20°C)",
+          "viscosity": "120–150 mPa·s (25°C)",
+          "flashPoint": "129°C (combustible)",
+          "solubility": "Miscible with water, ethanol; soluble in acetone; insoluble in hydrocarbons"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98% (industrial use)",
+          "highPurityGrade": "≥99.5% (pharmaceutical intermediates)",
+          "lowChlorideGrade": "≤10 ppm Cl (electronics)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Surfactants & Detergents", "description": "Key intermediate for amphoteric surfactants (e.g., cocamidopropyl hydroxysultaine)" },
+            { "title": "Gas Treatment", "description": "CO₂/H₂S scrubbing agent" },
+            { "title": "Epoxy Curing", "description": "Modifies resin flexibility" },
+            { "title": "Textile Chemicals", "description": "Dye leveling agent" }
+          ],
+          "industriesServed": [
+            "Personal Care (shampoos, body washes)",
+            "Oil & Gas (acid gas removal)",
+            "Coatings & Adhesives",
+            "Textiles"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed stainless steel/HDPE containers. Nitrogen blanket (prevents oxidation). Cool (<30°C), dry, ventilated area.",
+          "handling": "Nitrile/neoprene gloves + goggles. Local exhaust ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin/eye irritant. Sensitizer (allergic reactions possible). Combustible at high temps.",
+          "regulations": "GHS Symbols: Health Hazard. Not classified as hazardous for transport. EU REACH: Registered."
+        },
+        "keyPerformanceData": {
+          "amineValue": "1,000–1,100 mg KOH/g",
+          "ph": "11–12 (1% solution)"
+        }
+      },
+      "diethanolamine": {
+        "overview": {
+          "name": "Diethanolamine (DEA, CAS No. 141-78-6)",
+          "description": "A colorless, hygroscopic liquid with a mild ammonia-like odor, used as a chemical intermediate, surfactant, and in the production of polymers."
+        },
+        "identification": {
+          "iupacName": "Diethanolamine",
+          "commonNames": "DEA, Diethanolamine",
+          "casNumber": "141-78-6",
+          "chemicalFormula": "C₂H₆O₂N",
+          "molecularWeight": "74.08 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless, hygroscopic liquid",
+          "odor": "Mild ammonia-like",
+          "appearance": "Clear",
+          "boilingPoint": "189°C",
+          "meltingPoint": "–15°C",
+          "density": "0.95 g/cm³ (20°C)",
+          "viscosity": "1.5 mPa·s (25°C)",
+          "solubility": "Miscible with water, ethanol, ether; slightly soluble in acetone"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98% (industrial use)",
+          "highPurityGrade": "≥99.5% (pharmaceutical intermediates)",
+          "lowChlorideGrade": "≤10 ppm Cl (electronics)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Surfactants & Detergents", "description": "Key intermediate for amphoteric surfactants (e.g., cocamidopropyl hydroxysultaine)" },
+            { "title": "Polymer Industry", "description": "Intermediate for alkyd resins, plasticizer stabilizer." },
+            { "title": "Cosmetics", "description": "Preservative (limited use due to regulations)." },
+            { "title": "Lubricants", "description": "Corrosion inhibitor additive." }
+          ],
+          "industriesServed": [
+            "Coatings & Resins",
+            "Personal Care",
+            "Pharmaceuticals",
+            "Chemical Manufacturing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Tightly sealed containers. Cool (<30°C). Away from strong oxidizers.",
+          "handling": "Dust mask (NIOSH N95) for powders. Nitrile gloves and goggles."
+        },
+        "safetyRegulatory": {
+          "hazards": "Irritant (eyes/skin/respiratory tract). Not flammable but decomposes at high temps.",
+          "regulations": "GHS Symbols: Exclamation Mark. Not classified as carcinogenic. EU REACH: Registered."
+        }
+      },
+      "aminoethylpiperazine": {
+        "overview": {
+          "name": "Aminoethylpiperazine (AEP, CAS No. 140-31-8)",
+          "description": "A clear, colorless to pale yellow, viscous liquid with an amine-like, fishy odor, used as an epoxy curing agent, corrosion inhibitor, pharmaceutical intermediate, and polyurethane catalyst."
+        },
+        "identification": {
+          "iupacName": "1-(2-Aminoethyl)piperazine",
+          "commonNames": "AEP, N-Aminoethylpiperazine, 1-Piperazineethylamine",
+          "casNumber": "140-31-8",
+          "chemicalFormula": "C₆H₁₅N₃",
+          "molecularWeight": "129.20 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid",
+          "odor": "Amine-like, fishy",
+          "appearance": "Clear, viscous liquid",
+          "boilingPoint": "222–224°C",
+          "meltingPoint": "–19°C",
+          "density": "0.984 g/cm³ (20°C)",
+          "viscosity": "15–20 mPa·s (25°C)",
+          "flashPoint": "93°C (combustible)",
+          "solubility": "Miscible with water, ethanol; soluble in acetone; insoluble in hydrocarbons"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥95% (industrial use)",
+          "highPurityGrade": "≥98% (pharmaceutical intermediates)",
+          "lowChlorideGrade": "≤5 ppm Cl (electronics)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Epoxy Curing", "description": "Flexible curing agent for adhesives/coatings" },
+            { "title": "Corrosion Inhibitors", "description": "Oilfield chemical formulations" },
+            { "title": "Pharmaceuticals", "description": "Intermediate for antihistamines" },
+            { "title": "Polyurethane Catalysts", "description": "Foam production" }
+          ],
+          "industriesServed": [
+            "Adhesives & Sealants",
+            "Oil & Gas",
+            "Pharmaceuticals",
+            "Polymers"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Sealed steel/HDPE containers. Nitrogen blanket (prevents oxidation). Cool (<30°C), dry, ventilated area.",
+          "handling": "Nitrile gloves + goggles. Vapor respirator (amine cartridges)."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin/eye corrosion (pH 11–12). Sensitizer (allergic dermatitis). Combustible at high temps.",
+          "regulations": "GHS Symbols: Corrosion, Health Hazard. UN 2735 (Class 8). OSHA PEL: 5 ppm (skin)"
+        },
+        "keyTechnicalData": {
+          "amineValue": "1,300–1,350 mg KOH/g",
+          "equivalentWeight": "43 g/eq (epoxy curing)"
+        }
+      },
+      "para-tertiary-butyl-phenol-ptbp": {
+        "overview": {
+          "name": "Para-Tertiary Butyl Phenol (PTBP)",
+          "description": "White crystalline solid or flakes with a phenolic, medicinal odor. Used in resin production, surfactants, lubricant additives, and adhesives."
+        },
+        "identification": {
+          "iupacName": "4-(tert-Butyl)phenol",
+          "commonNames": "PTBP, p-tert-Butylphenol, 4-(1,1-Dimethylethyl)phenol",
+          "casNumber": "98-54-4",
+          "chemicalFormula": "C₁₀H₁₄O",
+          "molecularWeight": "150.22 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline solid",
+          "odor": "Phenolic, medicinal",
+          "appearance": "Flakes or powder",
+          "meltingPoint": "98–101°C",
+          "boilingPoint": "237°C",
+          "density": "0.908 g/cm³ (liquid at 110°C)",
+          "flashPoint": "110°C (combustible)",
+          "solubility": "Soluble in ethanol, ether, acetone; slightly soluble in water (0.5 g/L at 25°C)",
+          "pKa": "10.4 (weak acid)",
+          "vaporPressure": "0.01 mmHg (25°C)"
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial use)",
+          "highPurityGrade": ">=99.5% (pharmaceuticals)",
+          "foodGrade": "Complies with FDA 21 CFR §175.300"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Resin Production", "description": "Alkyd and phenolic resins" },
+            { "title": "Surfactants", "description": "Nonionic detergents (Tergitol-type)" },
+            { "title": "Lubricant Additives", "description": "Antioxidant in oils" },
+            { "title": "Adhesives", "description": "Tackifier modifier" }
+          ],
+          "industriesServed": [
+            "Polymers & Resins",
+            "Personal Care",
+            "Lubricants",
+            "Adhesives"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Airtight containers (prevents oxidation). Cool (<30°C), dry, ventilated area. Separate from strong oxidizers.",
+          "handling": "Nitrile gloves + goggles. Dust mask (NIOSH N95)."
+        },
+        "safetyRegulatory": {
+          "hazards": "Skin/eye irritant. Environmental toxicity (aquatic organisms). Combustible dust when powdered.",
+          "regulations": "GHS Symbols: Health Hazard, Environment. EU REACH: Registered. Not classified as carcinogenic."
+        },
+        "keyProperties": {
+          "pKa": "10.4 (weak acid)",
+          "vaporPressure": "0.01 mmHg (25°C)"
+        }
+      },
+      "2,4-Di-Tert-Butyl Phenol (2,4-DTBP)": "2,4-Di-Tert-Butyl Phenol (2,4-DTBP)",
+      "2-4-di-tert-butyl-phenol-2-4-dtbp": {
+        "overview": {
+          "name": "2,4-Di-Tert-Butyl Phenol (2,4-DTBP)",
+          "description": "White crystalline solid or flakes with a mild phenolic odor. Used as an antioxidant in plastics, lubricant additive, and chemical intermediate for UV absorbers."
+        },
+        "identification": {
+          "iupacName": "2,4-Bis(1,1-dimethylethyl)phenol",
+          "commonNames": "2,4-DTBP, 2,4-Di-tert-butylphenol, Bis(tert-butyl)phenol",
+          "casNumber": "96-76-4",
+          "chemicalFormula": "C₁₄H₂₂O",
+          "molecularWeight": "206.32 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline solid",
+          "odor": "Mild phenolic",
+          "appearance": "Flakes or powder",
+          "meltingPoint": "56–58°C",
+          "boilingPoint": "280–285°C",
+          "density": "0.91 g/cm³ (liquid at 60°C)",
+          "flashPoint": "132°C (combustible)",
+          "solubility": {
+            "solubleIn": ["ethanol", "ether", "acetone"],
+            "insolubleInWater": "<0.1 g/L"
+          }
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial use)",
+          "highPurityGrade": ">=99.5% (polymer stabilizers)",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Polymer Stabilizer", "description": "Antioxidant in plastics (PP, PE)" },
+            { "title": "Lubricant Additive", "description": "Oxidation inhibitor" },
+            { "title": "Chemical Intermediate", "description": "Production of UV absorbers" }
+          ],
+          "industriesServed": [
+            "Plastics & Polymers",
+            "Lubricants",
+            "Coatings"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Airtight containers", "Cool (<30°C), dry place", "Separate from oxidizers"],
+          "handling": ["Nitrile gloves + goggles", "Local exhaust ventilation"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Skin irritant", "Environmental toxicity", "Combustible at high temps"],
+          "regulatoryStatus": {"ghsSymbols": ["Health Hazard"], "euReach": "Registered"}
+        },
+        "keyPerformanceData": {
+          "antioxidantEfficiency": "3–5x better than BHT",
+          "volatility": "Lower than BHT"
+        }
+      },
+      "2,6-Di-Tert-Butyl Phenol (2,6-DTBP)": "2,6-Di-Tert-Butyl Phenol (2,6-DTBP)",
+      "2-6-di-tert-butyl-phenol-2-6-dtbp": {
+        "overview": {
+          "name": "2,6-Di-Tert-Butyl Phenol (2,6-DTBP)",
+          "description": "White crystalline solid or flakes with a slight phenolic odor. Used as a precursor for BHT, antioxidant in rubber/plastics, jet fuel stabilizer, and in pharmaceutical synthesis."
+        },
+        "identification": {
+          "iupacName": "2,6-Bis(1,1-dimethylethyl)phenol",
+          "commonNames": "2,6-DTBP, 2,6-Di-tert-butylphenol, BHT precursor",
+          "casNumber": "128-39-2",
+          "chemicalFormula": "C₁₄H₂₂O",
+          "molecularWeight": "206.32 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline solid",
+          "odor": "Slight phenolic",
+          "appearance": "Flakes or powder",
+          "meltingPoint": "36–38°C",
+          "boilingPoint": "253°C",
+          "density": "0.914 g/cm³ (liquid at 40°C)",
+          "flashPoint": "113°C (combustible)",
+          "solubility": {
+            "solubleIn": ["ethanol (500 g/L)", "acetone"],
+            "insolubleInWater": "<0.01 g/L"
+          }
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=98% (industrial antioxidants)",
+          "highPurityGrade": ">=99.5% (pharmaceutical synthesis)",
+          "foodGrade": "Complies with FDA 21 CFR §178.2010"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Primary precursor for BHT (butylated hydroxytoluene)" },
+            { "title": "Polymer Stabilizer", "description": "Antioxidant in rubber and plastics" },
+            { "title": "Fuel Additive", "description": "Jet fuel stabilizer" },
+            { "title": "Pharmaceuticals", "description": "Synthesis of lipid-soluble antioxidants" }
+          ],
+          "industriesServed": [
+            "Plastics & Rubber",
+            "Petrochemicals",
+            "Pharmaceuticals",
+            "Food Packaging"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Airtight containers (prevents oxidation)", "Cool (<25°C), dark conditions", "Separate from strong acids/oxidizers"],
+          "handling": ["Nitrile gloves + safety goggles", "Local exhaust ventilation"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Skin/eye irritant", "Combustible at high temps", "Low acute toxicity (LD50 >2000 mg/kg)"],
+          "regulatoryStatus": {"ghsSymbols": ["Exclamation Mark"], "euReach": "Registered", "fda": "Indirect food additive approved"}
+        },
+        "keyChemicalProperties": {
+          "antioxidantEfficiency": "Moderate (better than phenol)",
+          "pKa": "11.5 (weakly acidic)"
+        }
+      },
+      "Ortho-Tert-Butyl Phenol (OTBP)": "Ortho-Tert-Butyl Phenol (OTBP)",
+      "ortho-tert-butyl-phenol-otbp": {
+        "overview": {
+          "name": "Ortho-Tert-Butyl Phenol (OTBP)",
+          "description": "Colorless to pale yellow liquid (below 15°C) or low-melting solid (above 15°C) with a phenolic, medicinal odor. Used as a chemical intermediate for fragrances, UV stabilizers, resin modifiers, lubricant additives, and disinfectants."
+        },
+        "identification": {
+          "iupacName": "2-(tert-Butyl)phenol",
+          "commonNames": "OTBP, o-tert-Butylphenol, 2-(1,1-Dimethylethyl)phenol",
+          "casNumber": "88-18-6",
+          "chemicalFormula": "C₁₀H₁₄O",
+          "molecularWeight": "150.22 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless to pale yellow liquid (below 15°C) / low-melting solid (above 15°C)",
+          "odor": "Phenolic, medicinal",
+          "appearance": "Clear viscous liquid or crystalline solid",
+          "meltingPoint": "14–16°C",
+          "boilingPoint": "224–226°C",
+          "density": "0.976 g/cm³ (25°C)",
+          "refractiveIndex": "1.520 (20°C)",
+          "flashPoint": "96°C (combustible)",
+          "solubility": {
+            "solubleIn": ["ethanol", "ether", "acetone"],
+            "slightlySolubleInWater": "1.2 g/L at 25°C"
+          }
+        },
+        "gradesPurity": {
+          "technicalGrade": ">=97% (industrial use)",
+          "highPurityGrade": ">=99% (pharmaceutical intermediates)",
+          "lowIsomerGrade": "<1% para-isomer"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Chemical Intermediate", "description": "Production of fragrances (musk chemicals), synthesis of UV stabilizers" },
+            { "title": "Resin Modifier", "description": "Phenolic resin formulations" },
+            { "title": "Lubricant Additive", "description": "Antioxidant precursor" },
+            { "title": "Disinfectants", "description": "Antimicrobial formulations" }
+          ],
+          "industriesServed": [
+            "Fragrance & Flavor",
+            "Polymers & Resins",
+            "Lubricants",
+            "Pharmaceuticals"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Sealed containers under nitrogen", "Temperature-controlled (10–25°C)", "Separate from oxidizers/strong bases"],
+          "handling": ["Nitrile gloves + chemical goggles", "Fume hood recommended"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Skin corrosion/irritation (Category 2)", "Environmental toxicity (aquatic organisms)", "Combustible liquid"],
+          "regulatoryStatus": {"ghsSymbols": ["Corrosion", "Environment"], "euReach": "Registered", "notCarcinogenic": true}
+        },
+        "keyChemicalProperties": {
+          "pKa": "10.6 (weaker acid than phenol)",
+          "vaporPressure": "0.03 mmHg (25°C)"
+        }
       }
     }
     

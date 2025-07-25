@@ -140,13 +140,17 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['physicalChemicalProperties'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.entries(physical).map(([key, value]: [string, string], idx: number) => (
+                {Object.entries(physical).map(([key, value]: [string, any], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {value}
+                      {typeof value === 'object' && value !== null
+                        ? Array.isArray(value)
+                          ? value.join(', ')
+                          : Object.entries(value).map(([k, v]) => `${fieldLabels[k]?.[currentLang] || k}: ${Array.isArray(v) ? v.join(', ') : v}`).join('; ')
+                        : value}
                     </p>
                   </div>
                 ))}
@@ -164,13 +168,17 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['gradesPurity'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.entries(gradesPurity).map(([key, value]: [string, string], idx: number) => (
+                {Object.entries(gradesPurity).map(([key, value]: [string, any], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {value}
+                      {typeof value === 'object' && value !== null
+                        ? Array.isArray(value)
+                          ? value.join(', ')
+                          : Object.entries(value).map(([k, v]) => `${fieldLabels[k]?.[currentLang] || k}: ${Array.isArray(v) ? v.join(', ') : v}`).join('; ')
+                        : value}
                     </p>
                   </div>
                 ))}
@@ -224,13 +232,17 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['storageHandling'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {Object.entries(storageHandling).map(([key, value]: [string, string], idx: number) => (
+                {Object.entries(storageHandling).map(([key, value]: [string, any], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {value}
+                      {typeof value === 'object' && value !== null
+                        ? Array.isArray(value)
+                          ? value.join(', ')
+                          : Object.entries(value).map(([k, v]) => `${fieldLabels[k]?.[currentLang] || k}: ${Array.isArray(v) ? v.join(', ') : v}`).join('; ')
+                        : value}
                     </p>
                   </div>
                 ))}
@@ -248,13 +260,17 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 {sectionHeadings['safetyRegulatory'][currentLang]}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.entries(safetyRegulatory).map(([key, value]: [string, string], idx: number) => (
+                {Object.entries(safetyRegulatory).map(([key, value]: [string, any], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {value}
+                      {typeof value === 'object' && value !== null
+                        ? Array.isArray(value)
+                          ? value.join(', ')
+                          : Object.entries(value).map(([k, v]) => `${fieldLabels[k]?.[currentLang] || k}: ${Array.isArray(v) ? v.join(', ') : v}`).join('; ')
+                        : value}
                     </p>
                   </div>
                 ))}

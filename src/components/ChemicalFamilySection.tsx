@@ -90,11 +90,12 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'additives',
-    count: 2,
+    count: 3, // incremented from 2
     IconComponent: GiTestTubes,
     products: [
       { name: 'Zinc Dialkyl Dithiophosphate (ZDDP-MD)', code: 'zddp-md' },
-      { name: 'Zinc Dialkyl Dithiophosphate (ZDDP-IM)', code: 'zddp-im' }
+      { name: 'Zinc Dialkyl Dithiophosphate (ZDDP-IM)', code: 'zddp-im' },
+      { name: 'Cyanuric Chloride', code: 'cyanuric-chloride' }
     ]
   },
   {
@@ -151,21 +152,26 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'amines',
-    count: 6,
+    count: 12, // incremented from 11
     IconComponent: GiDna2,
     products: [
       { name: 'Diethylamine' },
       { name: 'Triethylamine' },
       { name: 'Monoethanolamine' },
       { name: 'Diethanolamine' },
+      { name: 'Diethylene Triamine (DETA)', code: 'diethylene-triamine' },
+      { name: 'Aminoethyl Ethanolamine (AEEA)', code: 'aminoethyl-ethanolamine' },
+      { name: 'Aminoethylpiperazine (AEP)', code: 'aminoethylpiperazine' },
       { name: 'Triethanolamine' },
       { name: 'N-Methylpyrrolidone' },
-      { name: 'Tert-Butylamine', code: 'tert-butylamine' }
+      { name: 'Tert-Butylamine', code: 'tert-butylamine' },
+      { name: 'Ethylenediamine (EDA)', code: 'ethylenediamine' },
+      { name: 'Piperazine', code: 'piperazine' }
     ]
   },
   {
     id: 'phenols',
-    count: 7,
+    count: 8, // incremented from 7
     IconComponent: GiCrystalBars,
     products: [
       { name: 'Phenol' },
@@ -175,7 +181,11 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Hydroquinone' },
       { name: 'Catechol' },
       { name: 'Nonylphenol' },
-      { name: 'Para-Tertiary Butyl Benzoic Acid (PTBBA)', code: 'ptbba' }
+      { name: 'Para-Tertiary Butyl Phenol (PTBP)', code: 'para-tertiary-butyl-phenol-ptbp' },
+      { name: 'Para-Tertiary Butyl Benzoic Acid (PTBBA)', code: 'ptbba' },
+      { name: '2,4-Di-Tert-Butyl Phenol (2,4-DTBP)', code: '2-4-di-tert-butyl-phenol-2-4-dtbp' },
+      { name: '2,6-Di-Tert-Butyl Phenol (2,6-DTBP)', code: '2-6-di-tert-butyl-phenol-2-6-dtbp' },
+      { name: 'Ortho-Tert-Butyl Phenol (OTBP)', code: 'ortho-tert-butyl-phenol-otbp' }
     ]
   },
   {
