@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     slug: 'about-us',
-    image: '/images/about-us4.jpg',
+    image: '/images/about-us5.jpg',
     translationKey: 'about',
     title: 'About Us',
     description: 'Robust India delivers end-to-end chemical supply-chain solutions globally, specializing in sourcing, developing, and distributing high-quality chemicals.',
