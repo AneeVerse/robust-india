@@ -51,6 +51,14 @@ function NavbarContent() {
           />
         </Link>
       </div>
+      {/* Vertical Divider - left white, right black, middle gradient */}
+      <div
+        className="h-10 w-[2px] mx-2 sm:mx-3 md:mx-4"
+        style={{
+          background: 'linear-gradient(to right, rgba(255,255,255,0.35) 0%, #333 50%, #000 100%)',
+          borderRadius: '2px',
+        }}
+      />
       
       <div className="flex gap-x-3 sm:gap-x-2 md:gap-x-3 flex-1 justify-end">
         {navLinks.map((link) => (

@@ -28,32 +28,36 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
 
   return (
     <main className="min-h-screen bg-white p-4 sm:p-6 md:p-5">
-      {/* Modern Split-Screen Layout for Integrated 3PL & FTWZ */}
-      {slug === 'integrated-3pl-ftwz' ? (
+      {/* Modern Split-Screen Layout for Integrated 3PL & FTWZ and End-to-End Solutions */}
+      {(slug === 'integrated-3pl-ftwz' || slug === 'end-to-end-solutions') ? (
         <div className="min-h-[95vh] flex items-center">
           <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            
             {/* Left Side - Content */}
             <div className="space-y-10 flex flex-col justify-center -ml-10">
               <div className="space-y-8">
                 <h1 className="leading-[0.9]" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  <span className="block text-[#6164F6] font-bold text-5xl lg:text-6xl xl:text-7xl mb-3">INTEGRATED</span>
-                  <span className="block text-gray-900 font-light text-5xl lg:text-6xl xl:text-7xl">3PL & FTWZ</span>
+                  <span className="block text-[#6164F6] font-bold text-5xl lg:text-6xl xl:text-7xl mb-3">
+                    {slug === 'integrated-3pl-ftwz' ? 'INTEGRATED' : 'END-TO-END'}
+                  </span>
+                  <span className="block text-gray-900 font-light text-5xl lg:text-6xl xl:text-7xl">
+                    {slug === 'integrated-3pl-ftwz' ? '3PL & FTWZ' : 'SOLUTIONS'}
+                  </span>
                 </h1>
-                
                 <h2 className="text-xl lg:text-2xl xl:text-3xl text-gray-600 font-light leading-relaxed max-w-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  Free Trade Warehousing Solutions
+                  {slug === 'integrated-3pl-ftwz'
+                    ? 'Free Trade Warehousing Solutions'
+                    : 'Comprehensive Chemical Supply Chain Solutions'}
                 </h2>
-                
                 <p className="text-base lg:text-lg xl:text-xl text-gray-700 leading-relaxed max-w-xl" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  Skip the complexities, save costs and enjoy seamless warehousing and logistics solutions in Free Trade Warehousing Zones
+                  {slug === 'integrated-3pl-ftwz'
+                    ? 'Skip the complexities, save costs and enjoy seamless warehousing and logistics solutions in Free Trade Warehousing Zones'
+                    : 'From sourcing and procurement to delivery and ongoing support, our end-to-end solutions manage every phase of your chemical product lifecycle for maximum efficiency and peace of mind.'}
                 </p>
               </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
-                  href="#integrated-info"
+                  href={slug === 'integrated-3pl-ftwz' ? '#integrated-info' : '#end-to-end-info'}
                   className="bg-[#6164F6] hover:bg-[#5055E5] text-white px-10 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-xl text-base lg:text-lg flex items-center justify-center"
                   style={{ textDecoration: 'none' }}
                 >
@@ -69,7 +73,6 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
                 </a>
               </div>
             </div>
-
             {/* Right Side - Image */}
             <div className="order-first lg:order-last">
               <div className="relative -mx-8 lg:-mx-16">

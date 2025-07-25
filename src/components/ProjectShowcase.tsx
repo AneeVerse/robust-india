@@ -78,7 +78,10 @@ const ProjectShowcase = () => {
   };
 
   useEffect(() => {
-    // Disable scroll-trigger animation on mobile
+    // Disable scroll-trigger animation on mobile and desktop to prevent unwanted horizontal scroll
+    if (typeof window !== 'undefined') {
+      document.body.style.overflowX = 'hidden';
+    }
     if (typeof window !== 'undefined' && window.innerWidth < 640) return;
     if (!sectionRef.current || !containerRef.current) return;
     const totalPanels = projects.length;
@@ -125,6 +128,9 @@ const ProjectShowcase = () => {
       },
     });
     return () => {
+      if (typeof window !== 'undefined') {
+        document.body.style.overflowX = '';
+      }
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -141,7 +147,7 @@ const ProjectShowcase = () => {
       ref={sectionRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ touchAction: 'pan-y' }}
+      style={{ touchAction: 'pan-y', overflowX: 'hidden' }}
       className="relative bg-white h-auto overflow-visible sm:h-screen "
     >
       <div className="hidden sm:block">
