@@ -11,23 +11,35 @@ export default function LandingPage() {
     <div className="min-h-screen" style={{ background: "#131518", color: "white" }}>
       {/* Main Content */}
       <div className="w-full py-8 sm:py-16 flex flex-col items-center px-4 sm:px-0">
-        {/* Header with Waving Hand */}
-        <div className="mb-12 sm:mb-16 w-full flex flex-col items-start">
-          <motion.div
-            className="mb-2 ml-4 sm:ml-2"
-            animate={{ rotate: [0, 20, -10, 25, -5, 15, 0] }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              repeatDelay: 2,
-              ease: "easeInOut",
-            }}
-          >
-            <Image src="/images/goodbye_5821930.svg" alt="Waving Hand" width={64} height={64} className="w-12 h-12 sm:w-16 sm:h-16 filter invert brightness-0 ml-4 sm:ml-20" />
-          </motion.div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-light leading-tight text-left ml-8 sm:ml-20">
-            {t('about.title')}
-          </h1>
+        {/* Header with Waving Hand and About Us Title + Learn More Button */}
+        <div className="mb-12 sm:mb-16 w-full flex flex-col sm:flex-row items-start sm:items-center justify-between">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center w-full">
+            <motion.div
+              className="mb-2 ml-4 sm:ml-2"
+              animate={{ rotate: [0, 20, -10, 25, -5, 15, 0] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatDelay: 2,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src="/images/goodbye_5821930.svg" alt="Waving Hand" width={64} height={64} className="w-12 h-12 sm:w-16 sm:h-16 filter invert brightness-0 ml-4 sm:ml-20" />
+            </motion.div>
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-light leading-tight text-left ml-8 sm:ml-20">
+              {t('about.title')}
+            </h1>
+          </div>
+          {/* Learn More Button aligned right for desktop, below for mobile */}
+          <div className="flex justify-end w-full sm:w-auto mt-4 sm:mt-0">
+            <a
+              href="/contact"
+              className="bg-[#6164F6] hover:bg-[#5055E5] text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg text-base mr-4 whitespace-nowrap"
+              style={{ textDecoration: 'none', minHeight: 'unset' }}
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
 
         {/* About Content Section */}
@@ -63,16 +75,6 @@ export default function LandingPage() {
                 {t('about.description')}
               </p>
             </motion.div>
-          </div>
-          {/* Learn More Button */}
-          <div className="flex justify-end mt-8">
-            <a
-              href="/about"
-              className="bg-[#6164F6] hover:bg-[#5055E5] text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 shadow-lg text-lg"
-              style={{ textDecoration: 'none' }}
-            >
-              Learn More
-            </a>
           </div>
         </div>
 

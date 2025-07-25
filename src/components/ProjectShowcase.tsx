@@ -8,18 +8,26 @@ import { useTranslation } from 'next-i18next';
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
+  {
+    slug: 'about-us',
+    image: '/images/about-us4.jpg',
+    translationKey: 'about',
+    title: 'About Us',
+    description: 'Robust India delivers end-to-end chemical supply-chain solutions globally, specializing in sourcing, developing, and distributing high-quality chemicals.',
+    tags: ['Integrated FTWZ', '3PL', 'Chemical Product', 'End-to-End'],
+  },
   { 
     slug: 'chemical-products',
     image: "/images/product4.jpg",
     translationKey: "chemical"
   },
   { 
-    slug: 'ftwz',
+    slug: 'integrated-3pl-ftwz',
     image: "/images/demo/ftw.jpg",
     translationKey: "ftwz"
   },
   { 
-    slug: 'integrated-3pl',
+    slug: 'end-to-end',
     image: "/images/demo/shipping.jpg",
     translationKey: "3pl"
   },
@@ -176,7 +184,13 @@ const ProjectShowcase = () => {
           {projects.map((project, i) => (
             <Link
               key={project.slug}
-              href={project.slug === 'chemical-products' ? '/product/chemical' : `/services/${project.slug}`}
+              href={
+                project.slug === 'about-us' ? '/about'
+                : project.slug === 'chemical-products' ? '/product/chemical'
+                : project.slug === 'integrated-3pl' ? '/services/integrated-3pl-ftwz'
+                : project.slug === 'end-to-end' ? '/services/end-to-end-solutions'
+                : `/services/${project.slug}`
+              }
               style={{
                 position: "relative",
                 width: "100vw",
@@ -189,7 +203,7 @@ const ProjectShowcase = () => {
               <Image
                 ref={el => { imageRefs.current[i] = el; }}
                 src={project.image}
-                alt={t(`projects.${project.translationKey}.title`)}
+                alt={project.title || t(`projects.${project.translationKey}.title`)}
                 width={800}
                 height={500}
                 quality={90}
@@ -229,17 +243,21 @@ const ProjectShowcase = () => {
                   margin: 0,
                   color: "#222",
                   marginBottom: "1.2rem"
-                }}>{t(`projects.${project.translationKey}.title`)}</h2>
+                }}>{project.slug === 'about-us' ? project.title : t(`projects.${project.translationKey}.title`)}</h2>
                 <p style={{
                   fontSize: "1.25rem",
                   color: "#444",
                   marginBottom: "2rem",
                   lineHeight: 1.5
                 }}>
-                  {t(`projects.${project.translationKey}.description`)}
+                  {project.slug === 'about-us' ? project.description : t(`projects.${project.translationKey}.description`)}
                 </p>
                 <div style={{ display: "flex", gap: "0.7rem", flexWrap: "wrap" }}>
-                  {getProjectTags(project.translationKey).map((tag: string) => (
+                  {(
+                    project.slug === 'about-us'
+                      ? (project.tags || [])
+                      : (getProjectTags(project.translationKey) || [])
+                  ).map((tag: string) => (
                     <span key={tag} style={{
                       background: "#f5f5f5",
                       color: "#222",

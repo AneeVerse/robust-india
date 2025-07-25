@@ -9,10 +9,10 @@ import FooterSection from '@/components/FooterSection';
 import BookACall from '@/components/BookCallSection';
 import { useTranslation } from 'next-i18next';
 
-const serviceImages = {
-  'integrated-3pl-ftwz': '/images/demo/ftw.jpg',
-  'end-to-end-solutions': '/images/demo/shipping.jpg',
-};
+const serviceImagesArr = [
+  '/images/demo/ftw.jpg',
+  '/images/demo/shipping.jpg',
+];
 
 const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ visible, x, y }) => {
   const { t } = useTranslation();
@@ -52,7 +52,7 @@ export default function ServicesPage() {
   const [cursor, setCursor] = useState({ visible: false, x: 0, y: 0 });
   
   const services = t('servicesPage.mainServices', { returnObjects: true }) as Array<{
-    slug: keyof typeof serviceImages;
+    slug: string;
     title: string;
     description: string;
   }>;
@@ -83,7 +83,7 @@ export default function ServicesPage() {
             initial="hidden"
             animate="visible"
           >
-            {t('servicesPage.heading').split('').map((char, idx) => (
+            {t('servicesPage.heading').replace('service offerings', 'service  offerings').split('').map((char, idx) => (
               <motion.span
                 key={idx}
                 variants={{
@@ -98,7 +98,7 @@ export default function ServicesPage() {
                   }
                 }}
               >
-                {char === ' ' ? '\u00A0' : char}
+                {char}
               </motion.span>
             ))}
           </motion.h1>
@@ -112,10 +112,10 @@ export default function ServicesPage() {
             <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
             {/* Service images */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 w-full">
-            {services.map((service) => (
+            {services.map((service, idx) => (
               <Link key={service.slug} href={`/services/${service.slug}`} className="block rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden shadow-lg bg-white">
                 <Image
-                    src={serviceImages[service.slug]}
+                  src={serviceImagesArr[idx]}
                   alt={service.title}
                   width={1200}
                   height={600}
