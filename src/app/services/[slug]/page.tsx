@@ -140,29 +140,123 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
       
-      {/* Additional service showcase images */}
-      <div className="w-full mb-16">
-        <Image
-          src={images.fullImage}
-          alt={serviceData.title}
-          width={1920}
-          height={1080}
-          className="w-full h-[95vh] object-cover rounded-xl"
-        />
-      </div>
-      
-      <div className="w-full mb-16 px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-          {images.smallImages.map((src, idx) => (
-            <Image
-              key={idx}
-              src={src}
-              alt={`${serviceData.title} detail ${idx + 1}`}
-              width={800}
-              height={500}
-              className="w-full h-[450px] sm:h-[500px] md:h-[550px] object-cover rounded-xl"
-            />
-          ))}
+      {/* Three alternating image-text sections */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 space-y-24">
+        {/* First section: Full image left, Text right */}
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Full Image */}
+          <div className="order-first">
+            <div className="relative">
+              <Image
+                src={images.fullImage}
+                alt={serviceData.title}
+                width={1920}
+                height={1080}
+                className="w-full h-[450px] sm:h-[500px] md:h-[600px] object-cover rounded-3xl shadow-2xl"
+              />
+              {/* Modern Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+            </div>
+          </div>
+          {/* Right Side - Text */}
+          <div className="space-y-8 flex flex-col justify-center">
+            <h2 className="leading-[0.9]" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              <span className="block text-[#6164F6] font-bold text-3xl lg:text-4xl xl:text-5xl mb-3">
+                {slug === 'end-to-end-solutions' 
+                  ? t('serviceDetail.sections.endToEnd.fullImage.title', { defaultValue: 'Complete' })
+                  : t('serviceDetail.sections.fullImage.title', { defaultValue: 'Industry' })
+                }
+              </span>
+              <span className="block text-gray-900 font-light text-3xl lg:text-4xl xl:text-5xl">
+                {slug === 'end-to-end-solutions' 
+                  ? 'Integration'
+                  : 'Excellence'
+                }
+              </span>
+            </h2>
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-xl" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              {slug === 'end-to-end-solutions' 
+                ? t('serviceDetail.sections.endToEnd.fullImage.description', { defaultValue: 'From initial concept to final delivery, we provide seamless end-to-end solutions that cover every aspect of your supply chain. Our integrated approach ensures complete visibility, optimal efficiency, and maximum value creation throughout your entire business process.' })
+                : t('serviceDetail.sections.fullImage.description', { defaultValue: 'Our state-of-the-art facilities and cutting-edge technology ensure the highest standards of quality and efficiency in every operation. With decades of industry expertise, we deliver comprehensive solutions that drive your business forward through innovative processes and unwavering commitment to excellence.' })
+              }
+            </p>
+          </div>
+        </div>
+
+        {/* Second section: Text left, Small image right */}
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Text */}
+          <div className="order-first lg:order-first space-y-8 flex flex-col justify-center">
+            <h2 className="leading-[0.9]" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              <span className="block text-[#6164F6] font-bold text-3xl lg:text-4xl xl:text-5xl mb-3">
+                {slug === 'end-to-end-solutions' 
+                  ? t('serviceDetail.sections.endToEnd.section1.title', { defaultValue: 'Seamless' })
+                  : t('serviceDetail.sections.section1.title', { defaultValue: 'Comprehensive' })
+                }
+              </span>
+              <span className="block text-gray-900 font-light text-3xl lg:text-4xl xl:text-5xl">
+                {slug === 'end-to-end-solutions' ? 'Workflow' : 'Solutions'}
+              </span>
+            </h2>
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-xl" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              {slug === 'end-to-end-solutions'
+                ? t('serviceDetail.sections.endToEnd.section1.description', { defaultValue: 'We orchestrate every step of your business process, from raw material sourcing to final product delivery. Our seamless workflow solutions eliminate bottlenecks, reduce costs, and create a unified system that adapts to your evolving business requirements and market demands.' })
+                : t('serviceDetail.sections.section1.description', { defaultValue: 'We provide end-to-end solutions tailored to your specific industry needs, ensuring seamless operations and maximum efficiency. Our integrated approach combines advanced logistics, strategic planning, and cutting-edge technology to deliver results that exceed expectations and drive sustainable growth for your business.' })
+              }
+            </p>
+          </div>
+          {/* Right Side - Small Image */}
+          <div className="order-last lg:order-last">
+            <div className="relative">
+              <Image
+                src={images.smallImages[0]}
+                alt={`${serviceData.title} detail 1`}
+                width={800}
+                height={500}
+                className="w-full h-[450px] sm:h-[500px] md:h-[550px] object-cover rounded-3xl shadow-2xl"
+              />
+              {/* Modern Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Third section: Small image left, Text right */}
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Small Image */}
+          <div className="order-first">
+            <div className="relative">
+              <Image
+                src={images.smallImages[1]}
+                alt={`${serviceData.title} detail 2`}
+                width={800}
+                height={500}
+                className="w-full h-[450px] sm:h-[500px] md:h-[550px] object-cover rounded-3xl shadow-2xl"
+              />
+              {/* Modern Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+            </div>
+          </div>
+          {/* Right Side - Text */}
+          <div className="space-y-8 flex flex-col justify-center">
+            <h2 className="leading-[0.9]" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              <span className="block text-[#6164F6] font-bold text-3xl lg:text-4xl xl:text-5xl mb-3">
+                {slug === 'end-to-end-solutions' 
+                  ? t('serviceDetail.sections.endToEnd.section2.title', { defaultValue: 'Strategic' })
+                  : t('serviceDetail.sections.section2.title', { defaultValue: 'Expert' })
+                }
+              </span>
+              <span className="block text-gray-900 font-light text-3xl lg:text-4xl xl:text-5xl">
+                {slug === 'end-to-end-solutions' ? 'Partnership' : 'Team'}
+              </span>
+            </h2>
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-xl" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+              {slug === 'end-to-end-solutions'
+                ? t('serviceDetail.sections.endToEnd.section2.description', { defaultValue: 'We become your strategic partner, working closely with your team to understand your unique challenges and objectives. Our collaborative approach ensures that every solution is perfectly aligned with your business goals, creating lasting partnerships that drive continuous improvement and long-term success.' })
+                : t('serviceDetail.sections.section2.description', { defaultValue: 'Our experienced team of professionals brings decades of industry knowledge to deliver exceptional results for your business. With specialized expertise across multiple sectors, we provide strategic insights, innovative solutions, and dedicated support to ensure your operations run smoothly and efficiently at every step.' })
+              }
+            </p>
+          </div>
         </div>
       </div>
       
