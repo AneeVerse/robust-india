@@ -142,43 +142,62 @@ const FloatingActionButton = () => {
           exit="exit" 
           className="flex flex-col items-end gap-3 mb-2"
         >
-          <motion.a
-            href="https://wa.me/919833950755"
+          <motion.button
+            onClick={() => {
+              setPendingAction('WhatsApp');
+              setSelectedContactType('WhatsApp');
+              setFormData(prev => ({ ...prev, contactType: 'WhatsApp' }));
+              setShowForm(true);
+              setOpen(false);
+            }}
             className="w-12 h-12 sm:w-14 sm:h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#25D366] shadow-lg hover:shadow-[0_0_16px_#25D366] hover:scale-110"
-            target="_blank"
-            rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 600, damping: 28 }}
             variants={buttonVariants}
             aria-label="WhatsApp"
+            type="button"
           >
             <FaWhatsapp size={24} className="sm:text-[28px] text-[#25D366]" />
-          </motion.a>
+          </motion.button>
 
-          <motion.a
-            href="mailto:robustindia@outlook.com"
+          <motion.button
+            onClick={() => {
+              setPendingAction('Email');
+              setSelectedContactType('Email');
+              setFormData(prev => ({ ...prev, contactType: 'Email' }));
+              setShowForm(true);
+              setOpen(false);
+            }}
             className="w-12 h-12 sm:w-14 sm:h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#6164F6] shadow-lg hover:shadow-[0_0_16px_#6164F6] hover:scale-110"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 600, damping: 28 }}
             variants={buttonVariants}
             aria-label="Email"
+            type="button"
           >
             <FaEnvelope size={20} className="sm:text-[24px] text-[#6164F6]" />
-          </motion.a>
+          </motion.button>
 
-          <motion.a
-            href="tel:+919833950755"
+          <motion.button
+            onClick={() => {
+              setPendingAction('Phone');
+              setSelectedContactType('Phone');
+              setFormData(prev => ({ ...prev, contactType: 'Phone' }));
+              setShowForm(true);
+              setOpen(false);
+            }}
             className="w-12 h-12 sm:w-14 sm:h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#6164F6] shadow-lg hover:shadow-[0_0_16px_#6164F6] hover:scale-110"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 600, damping: 28 }}
             variants={buttonVariants}
             aria-label="Phone"
+            type="button"
           >
             <FaPhone size={20} className="sm:text-[24px] text-[#6164F6]" />
-          </motion.a>
+          </motion.button>
         </motion.div>
       )}
 
