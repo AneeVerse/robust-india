@@ -133,7 +133,7 @@ const FloatingActionButton = () => {
 
   // --- UI ---
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 z-50 flex flex-col items-end gap-3">
       {/* Floating Action Buttons (stacked above main button) */}
       {open && !showForm && (
         <motion.div 
@@ -144,7 +144,7 @@ const FloatingActionButton = () => {
         >
           <motion.a
             href="https://wa.me/919833950755"
-            className="w-14 h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#25D366] shadow-lg hover:shadow-[0_0_16px_#25D366] hover:scale-110"
+            className="w-12 h-12 sm:w-14 sm:h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#25D366] shadow-lg hover:shadow-[0_0_16px_#25D366] hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -153,38 +153,38 @@ const FloatingActionButton = () => {
             variants={buttonVariants}
             aria-label="WhatsApp"
           >
-            <FaWhatsapp size={28} className="text-[#25D366]" />
+            <FaWhatsapp size={24} className="sm:text-[28px] text-[#25D366]" />
           </motion.a>
 
           <motion.a
             href="mailto:robustindia@outlook.com"
-            className="w-14 h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#6164F6] shadow-lg hover:shadow-[0_0_16px_#6164F6] hover:scale-110"
+            className="w-12 h-12 sm:w-14 sm:h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#6164F6] shadow-lg hover:shadow-[0_0_16px_#6164F6] hover:scale-110"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 600, damping: 28 }}
             variants={buttonVariants}
             aria-label="Email"
           >
-            <FaEnvelope size={24} className="text-[#6164F6]" />
+            <FaEnvelope size={20} className="sm:text-[24px] text-[#6164F6]" />
           </motion.a>
 
           <motion.a
             href="tel:+919833950755"
-            className="w-14 h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#6164F6] shadow-lg hover:shadow-[0_0_16px_#6164F6] hover:scale-110"
+            className="w-12 h-12 sm:w-14 sm:h-14 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-[#6164F6] shadow-lg hover:shadow-[0_0_16px_#6164F6] hover:scale-110"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 600, damping: 28 }}
             variants={buttonVariants}
             aria-label="Phone"
           >
-            <FaPhone size={24} className="text-[#6164F6]" />
+            <FaPhone size={20} className="sm:text-[24px] text-[#6164F6]" />
           </motion.a>
         </motion.div>
       )}
 
       {/* Main Floating Button (always at the bottom) */}
       <motion.button
-        className="w-16 h-16 bg-gradient-to-br from-[#6164F6] to-[#8B8FFF] text-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl focus:outline-none border-2 border-white"
+        className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#6164F6] to-[#8B8FFF] text-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl focus:outline-none border-2 border-white"
         onClick={() => setOpen(!open)}
         whileHover="hover"
         whileTap="tap"
@@ -194,9 +194,9 @@ const FloatingActionButton = () => {
       >
         <div>
           {open ? (
-            <IoClose className='h-7 w-7 sm:h-9 sm:w-9' />
+            <IoClose className='h-6 w-6 sm:h-7 sm:w-7' />
           ) : (
-            <IoMdChatboxes className="h-8 w-8 sm:h-10 sm:w-10" />
+            <IoMdChatboxes className="h-7 w-7 sm:h-8 sm:w-8" />
           )}
         </div> 
       </motion.button>
