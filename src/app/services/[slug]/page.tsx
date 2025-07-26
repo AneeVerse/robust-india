@@ -101,7 +101,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
         </div>
       )}
       
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-16">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-16">
         <h1 className="text-5xl font-normal text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{serviceData.title}</h1>
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{serviceData.description}</p>
         
@@ -117,7 +117,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
       </div>
       
       {/* Stats section */}
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 mb-16">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 mb-16">
         <hr className="border-gray-300 mb-8" />
         <div className="flex items-center flex-wrap gap-8">
           <div>
@@ -141,9 +141,9 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
       </div>
       
       {/* Three alternating image-text sections */}
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 space-y-24">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 space-y-24">
         {/* First section: Full image left, Text right */}
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div className="w-full grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Full Image */}
           <div className="order-first">
             <div className="relative">
@@ -184,7 +184,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
         </div>
 
         {/* Second section: Text left, Small image right */}
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div className="w-full grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text */}
           <div className="order-first lg:order-first space-y-8 flex flex-col justify-center">
             <h2 className="leading-[0.9]" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
@@ -222,7 +222,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
         </div>
 
         {/* Third section: Small image left, Text right */}
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div className="w-full grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Small Image */}
           <div className="order-first">
             <div className="relative">
