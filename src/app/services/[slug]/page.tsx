@@ -186,7 +186,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
         {/* Second section: Text left, Small image right */}
         <div className="w-full grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text */}
-          <div className="order-first lg:order-first space-y-8 flex flex-col justify-center">
+          <div className="order-last lg:order-first space-y-8 flex flex-col justify-center">
             <h2 className="leading-[0.9]" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
               <span className="block text-[#6164F6] font-bold text-3xl lg:text-4xl xl:text-5xl mb-3">
                 {slug === 'end-to-end-solutions' 
@@ -206,7 +206,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
             </p>
           </div>
           {/* Right Side - Small Image */}
-          <div className="order-last lg:order-last">
+          <div className="order-first lg:order-last">
             <div className="relative">
               <Image
                 src={images.smallImages[0]}
