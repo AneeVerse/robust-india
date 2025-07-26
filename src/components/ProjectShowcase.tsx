@@ -12,9 +12,6 @@ const projects = [
     slug: 'about-us',
     image: '/images/about-us5.jpg',
     translationKey: 'about',
-    title: 'About Us',
-    description: 'Robust India delivers end-to-end chemical supply-chain solutions globally, specializing in sourcing, developing, and distributing high-quality chemicals.',
-    tags: ['Integrated FTWZ', '3PL', 'Chemical Product', 'End-to-End'],
   },
   { 
     slug: 'chemical-products',
@@ -209,7 +206,7 @@ const ProjectShowcase = () => {
               <Image
                 ref={el => { imageRefs.current[i] = el; }}
                 src={project.image}
-                alt={project.title || t(`projects.${project.translationKey}.title`)}
+                alt={t(`projects.${project.translationKey}.title`)}
                 width={800}
                 height={500}
                 quality={90}
@@ -249,21 +246,17 @@ const ProjectShowcase = () => {
                   margin: 0,
                   color: "#222",
                   marginBottom: "1.2rem"
-                }}>{project.slug === 'about-us' ? project.title : t(`projects.${project.translationKey}.title`)}</h2>
+                }}>{t(`projects.${project.translationKey}.title`)}</h2>
                 <p style={{
                   fontSize: "1.25rem",
                   color: "#444",
                   marginBottom: "2rem",
                   lineHeight: 1.5
                 }}>
-                  {project.slug === 'about-us' ? project.description : t(`projects.${project.translationKey}.description`)}
+                  {t(`projects.${project.translationKey}.description`)}
                 </p>
                 <div style={{ display: "flex", gap: "0.7rem", flexWrap: "wrap" }}>
-                  {(
-                    project.slug === 'about-us'
-                      ? (project.tags || [])
-                      : (getProjectTags(project.translationKey) || [])
-                  ).map((tag: string) => (
+                  {(getProjectTags(project.translationKey) || []).map((tag: string) => (
                     <span key={tag} style={{
                       background: "#f5f5f5",
                       color: "#222",

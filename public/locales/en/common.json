@@ -347,6 +347,11 @@
   },
   "projects": {
     "viewProject": "View Project",
+    "about": {
+      "title": "About Us",
+      "description": "Robust India delivers end-to-end chemical supply-chain solutions globally, specializing in sourcing, developing, and distributing high-quality chemicals.",
+      "tags": ["Integrated FTWZ", "3PL", "Chemical Product", "End-to-End"]
+    },
     "chemical": {
       "title": "Chemical Products",
       "description": "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
