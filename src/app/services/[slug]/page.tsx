@@ -18,6 +18,10 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
     title: string;
     description: string;
     tags: string[];
+    mainHeading: string;
+    subHeading: string;
+    subtitle: string;
+    heroDescription: string;
   } | null;
 
   const images = serviceImages.find((s) => s.slug === slug);
@@ -27,31 +31,27 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
   }
 
   return (
-    <main className="min-h-screen bg-white p-4 sm:p-6 md:p-5">
+    <main className="min-h-screen bg-white p-4 sm:p-6 md:p-8 lg:p-10">
       {/* Modern Split-Screen Layout for Integrated 3PL & FTWZ and End-to-End Solutions */}
       {(slug === 'integrated-3pl-ftwz' || slug === 'end-to-end-solutions') ? (
         <div className="min-h-[95vh] flex items-center">
           <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
-            <div className="space-y-10 flex flex-col justify-center -ml-10">
+            <div className="space-y-10 flex flex-col justify-center">
               <div className="space-y-8">
                 <h1 className="leading-[0.9]" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                   <span className="block text-[#6164F6] font-bold text-5xl lg:text-6xl xl:text-7xl mb-3">
-                    {slug === 'integrated-3pl-ftwz' ? 'INTEGRATED' : 'END-TO-END'}
+                    {serviceData.mainHeading}
                   </span>
                   <span className="block text-gray-900 font-light text-5xl lg:text-6xl xl:text-7xl">
-                    {slug === 'integrated-3pl-ftwz' ? '3PL & FTWZ' : 'SOLUTIONS'}
+                    {serviceData.subHeading}
                   </span>
                 </h1>
                 <h2 className="text-xl lg:text-2xl xl:text-3xl text-gray-600 font-light leading-relaxed max-w-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  {slug === 'integrated-3pl-ftwz'
-                    ? 'Free Trade Warehousing Solutions'
-                    : 'Comprehensive Chemical Supply Chain Solutions'}
+                  {serviceData.subtitle}
                 </h2>
                 <p className="text-base lg:text-lg xl:text-xl text-gray-700 leading-relaxed max-w-xl" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                  {slug === 'integrated-3pl-ftwz'
-                    ? 'Skip the complexities, save costs and enjoy seamless warehousing and logistics solutions in Free Trade Warehousing Zones'
-                    : 'From sourcing and procurement to delivery and ongoing support, our end-to-end solutions manage every phase of your chemical product lifecycle for maximum efficiency and peace of mind.'}
+                  {serviceData.heroDescription}
                 </p>
               </div>
               {/* CTA Buttons */}
@@ -75,7 +75,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
             </div>
             {/* Right Side - Image */}
             <div className="order-first lg:order-last">
-              <div className="relative -mx-8 lg:-mx-16">
+              <div className="relative">
                 <Image
                   src={images.image}
                   alt={serviceData.title}
@@ -100,13 +100,14 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           />
         </div>
       )}
-      <div className="w-full px-4 sm:px-6 md:px-5 py-16">
+      
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-16">
         <h1 className="text-5xl font-normal text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{serviceData.title}</h1>
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{serviceData.description}</p>
         
         {/* Services provided section */}
         <p className="text-lg font-semibold mb-4 text-gray-900 mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>{t('serviceDetail.servicesProvided')}</p>
-        <div className="flex flex-wrap gap-4 mb-12 mt-10 -ml-4">
+        <div className="flex flex-wrap gap-4 mb-12 mt-10">
           {serviceData.tags.map((tag) => (
             <span key={tag} className="inline-block bg-[#f5f5f5] text-[#222] rounded-[1.2rem] px-4 py-1 text-base font-medium">
               {tag}
@@ -114,8 +115,9 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           ))}
         </div>
       </div>
+      
       {/* Stats section */}
-      <div className="w-full px-4 sm:px-6 md:px-5 mb-16">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 mb-16">
         <hr className="border-gray-300 mb-8" />
         <div className="flex items-center flex-wrap gap-8">
           <div>
@@ -137,6 +139,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </div>
+      
       {/* Additional service showcase images */}
       <div className="w-full mb-16">
         <Image
@@ -147,7 +150,8 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           className="w-full h-[95vh] object-cover rounded-xl"
         />
       </div>
-      <div className="w-full mb-16 -mt-10">
+      
+      <div className="w-full mb-16 px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           {images.smallImages.map((src, idx) => (
             <Image
@@ -161,6 +165,7 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ slug: 
           ))}
         </div>
       </div>
+      
       {/* Conditional Info Sections */}
       {slug === 'integrated-3pl-ftwz' && (
         <>

@@ -603,11 +603,19 @@
     "services": {
       "integrated-3pl-ftwz": {
         "title": "Integrated 3PL & FTWZ",
+        "mainHeading": "INTEGRATED",
+        "subHeading": "3PL & FTWZ",
+        "subtitle": "Free Trade Warehousing Solutions",
+        "heroDescription": "Skip the complexities, save costs and enjoy seamless warehousing and logistics solutions in Free Trade Warehousing Zones",
         "description": "A Free Trade Warehousing Zone (FTWZ) is a special category of SEZ (governed under the SEZ Act, 2005) that sits within India's geographic borders but outside its customs territory, enabling duty-free storage of imported goods until clearance or re-export, foreign-currency transactions without needing a local establishment, and value-added operations (labelling, kitting, sampling, etc.) without separate approvals. As an integrated 3PL provider in India's premier FTWZs (Mumbai, Chennai, Delhi), we combine bonded warehousing with end-to-end logistics: consolidation, customs clearance, multimodal transport, and real-time inventory management—so you enjoy faster lead times, reduced working capital requirements, and no local-entity hassles.",
         "tags": ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"]
       },
       "end-to-end-solutions": {
         "title": "End-to-End Solutions",
+        "mainHeading": "END-TO-END",
+        "subHeading": "SOLUTIONS",
+        "subtitle": "Comprehensive Chemical Supply Chain Solutions",
+        "heroDescription": "From sourcing and procurement to delivery and ongoing support, our end-to-end solutions manage every phase of your chemical product lifecycle for maximum efficiency and peace of mind.",
         "description": "Our End-to-End Solutions package is designed to manage every phase of your chemical product lifecycle from concept and formulation right through to delivery and ongoing support. By consolidating R&D, procurement, quality, packaging, logistics, and inventory under one coordinated umbrella, we eliminate handovers, accelerate timelines, and optimize costs.",
         "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"]
       }
@@ -615,6 +623,10 @@
   },
   "chemicalProduct": {
     "title": "Chemical Products",
+    "mainHeading": "CHEMICAL",
+    "subHeading": "PRODUCTS",
+    "subtitle": "Comprehensive Chemical Product Solutions",
+    "heroDescription": "From sourcing and quality assurance to packaging and delivery, our chemical products division manages every phase of your supply chain for safe, reliable, and innovative solutions.",
     "description": "Our Chemical Products division sources a comprehensive range of high-purity specialty and bulk chemicals from leading global producers. From precise formulation and rigorous quality assurance testing to custom packaging and compliant distribution, we manage every aspect of the supply chain to deliver tailored solutions that meet the exacting specifications of clients across industries. Our expertise in regulatory compliance and logistical coordination ensures safe, reliable delivery, helping businesses innovate and scale with confidence.",
     "tags": ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"],
     "stats": {
