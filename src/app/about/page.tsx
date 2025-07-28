@@ -90,7 +90,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-2 z-10 max-w-full">
         {/* Company logo and name */}
-        <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-4 mt-2">
+        <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 -mb-10 mt-2 ">
           <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
           <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-wide">{t('hero.brandName')}</span>
         </Link>

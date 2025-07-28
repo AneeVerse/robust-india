@@ -25,9 +25,9 @@ export default function ServiceSlider() {
       <div className="max-w-5xl mx-auto w-full px-4 mr-100">
         <h2
           className="text-white text-left text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-normal mb-6 sm:mb-14 leading-tight"
-          style={{ fontFamily: 'Segoe UI, Arial, sans-serif', letterSpacing: '-1px', wordBreak: 'break-word' }}
+          style={{ fontFamily: 'Segoe UI, Arial, sans-serif', letterSpacing: '-1px', whiteSpace: 'nowrap' }}
         >
-          {t('serviceSlider.title.line1')}<br />{t('serviceSlider.title.line2')}
+          {t('serviceSlider.title.line1')}{t('serviceSlider.title.line2')}
         </h2>
       </div>
       {/* Full-width slider row below heading */}

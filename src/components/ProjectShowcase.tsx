@@ -28,6 +28,52 @@ const projects = [
     image: "/images/demo/shipping.jpg",
     translationKey: "3pl"
   },
+  // New services
+  {
+    slug: 'oil-and-gas',
+    image: '/images/service/oil-rig (2) 1.png',
+    translationKey: 'oilAndGas',
+  },
+  {
+    slug: 'agrochemicals',
+    image: '/images/service/chemicals 1.png',
+    translationKey: 'agrochemicals',
+  },
+  {
+    slug: 'water-treatment',
+    image: '/images/service/wastewater 1.png',
+    translationKey: 'waterTreatment',
+  },
+  {
+    slug: 'mining-metals',
+    image: '/images/service/mining 1.png',
+    translationKey: 'miningMetals',
+  },
+  {
+    slug: 'paints-coatings',
+    image: '/images/service/varnish 1 (1).png',
+    translationKey: 'paintsCoatings',
+  },
+  {
+    slug: 'polymers-plastics',
+    image: '/images/service/polymer 1.png',
+    translationKey: 'polymersPlastics',
+  },
+  {
+    slug: 'pharmaceuticals',
+    image: '/images/service/pill 1.png',
+    translationKey: 'pharmaceuticals',
+  },
+  {
+    slug: 'textiles-fibers',
+    image: '/images/service/thread 1.png',
+    translationKey: 'textilesFibers',
+  },
+  {
+    slug: 'automotive-lubricants',
+    image: '/images/service/automotive 1.png',
+    translationKey: 'automotiveLubricants',
+  },
 ];
 
 const CustomCursor: React.FC<{ visible: boolean; x: number; y: number; text: string }> = ({ visible, x, y, text }) => (
@@ -73,6 +119,48 @@ const ProjectShowcase = () => {
     const tags = t(`projects.${translationKey}.tags`, { returnObjects: true });
     return Array.isArray(tags) ? tags.map(tag => String(tag)) : [];
   };
+
+  // Shuffle state for tags per project
+  const [shuffledTags, setShuffledTags] = React.useState<{ [key: string]: string[] }>({});
+  const [fade, setFade] = React.useState(false);
+
+  // Shuffle function
+  function shuffleArray<T>(array: T[]): T[] {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // Set up shuffling for each project
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(true);
+      setTimeout(() => {
+        setShuffledTags(prev => {
+          const newTags: { [key: string]: string[] } = {};
+          for (const project of projects) {
+            const tags = getProjectTags(project.translationKey);
+            newTags[project.translationKey] = shuffleArray(tags);
+          }
+          return newTags;
+        });
+        setFade(false);
+      }, 250); // fade out before shuffle
+    }, 2000);
+    // Initial shuffle
+    setShuffledTags(() => {
+      const newTags: { [key: string]: string[] } = {};
+      for (const project of projects) {
+        const tags = getProjectTags(project.translationKey);
+        newTags[project.translationKey] = shuffleArray(tags);
+      }
+      return newTags;
+    });
+    return () => clearInterval(interval);
+  }, [t]);
 
   useEffect(() => {
     // Disable scroll-trigger animation on mobile and desktop to prevent unwanted horizontal scroll
@@ -170,10 +258,8 @@ const ProjectShowcase = () => {
                 {t(`projects.${project.translationKey}.description`)}
               </p>
               <div className="flex flex-wrap gap-2">
-                {getProjectTags(project.translationKey).map((tag: string) => (
-                  <span key={tag} className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                    {tag}
-                  </span>
+                {(shuffledTags[project.translationKey] || getProjectTags(project.translationKey)).map((tag: string) => (
+                  <AnimatedTag key={tag} tag={tag} fade={fade} />
                 ))}
               </div>
             </div>
@@ -256,15 +342,8 @@ const ProjectShowcase = () => {
                   {t(`projects.${project.translationKey}.description`)}
                 </p>
                 <div style={{ display: "flex", gap: "0.7rem", flexWrap: "wrap" }}>
-                  {(getProjectTags(project.translationKey) || []).map((tag: string) => (
-                    <span key={tag} style={{
-                      background: "#f5f5f5",
-                      color: "#222",
-                      borderRadius: "1.2rem",
-                      padding: "0.4rem 1.1rem",
-                      fontSize: "1rem",
-                      fontWeight: 500
-                    }}>{tag}</span>
+                  {(shuffledTags[project.translationKey] || getProjectTags(project.translationKey)).map((tag: string) => (
+                    <AnimatedTag key={tag} tag={tag} fade={fade} />
                   ))}
                 </div>
               </div>
@@ -275,5 +354,35 @@ const ProjectShowcase = () => {
     </section>
   );
 };
+
+// Replace tag rendering with letter-by-letter animation
+// Helper for splitting tag into spans
+function AnimatedTag({ tag, fade }: { tag: string, fade: boolean }) {
+  return (
+    <span
+      className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full"
+      style={{
+        display: 'inline-block',
+        opacity: fade ? 0 : 1,
+        transition: 'opacity 0.25s',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      {tag.split('').map((char, idx) => (
+        <span
+          key={idx}
+          style={{
+            display: 'inline-block',
+            transition: 'opacity 0.25s',
+            transitionDelay: fade ? '0ms' : `${idx * 30}ms`,
+            opacity: fade ? 0 : 1,
+          }}
+        >
+          {char}
+        </span>
+      ))}
+    </span>
+  );
+}
 
 export default ProjectShowcase; 

@@ -207,6 +207,8 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                   </div>
                 ))}
               </div>
+              {/* Remove Industries Served section */}
+              {/*
               {applicationsUses.industriesServed && (
                 <div className="mt-8">
                   <h4 className="font-semibold text-gray-900 mb-3 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
@@ -219,6 +221,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                   </ul>
                 </div>
               )}
+              */}
             </div>
           )}
 

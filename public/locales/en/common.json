@@ -57,7 +57,7 @@
     "description": "Robust India is a premier import-export company committed to delivering end-to-end chemical supply-chain solutions on a global scale. Built on the pillars of reliability, transparency, and innovation, we specialize in sourcing, developing, and distributing high-quality specialty and bulk chemicals across diverse sectors from oil & gas and agrochemicals to water treatment and specialty polymers.",
     "hero": {
       "line1": "Empowering Businesses with",
-      "line2": "Comprehensive Import–Export",
+      "line2": "Comprehensive Import Export",
       "line3": "Solutions Across Industries"
     },
     "intro": {
@@ -366,6 +366,51 @@
       "title": "End-to-End Solutions",
       "description": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",
       "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"]
+    },
+    "oilAndGas": {
+      "title": "Oil & Gas",
+      "description": "Comprehensive solutions for the oil and gas industry, including supply, logistics, and safety.",
+      "tags": ["Upstream", "Downstream", "Logistics", "Safety"]
+    },
+    "agrochemicals": {
+      "title": "Agrochemicals",
+      "description": "Innovative agrochemical products and services for modern agriculture.",
+      "tags": ["Crop Protection", "Fertilizers", "Distribution", "Sustainability"]
+    },
+    "waterTreatment": {
+      "title": "Water Treatment",
+      "description": "Advanced water treatment chemicals and solutions for industrial and municipal needs.",
+      "tags": ["Purification", "Filtration", "Chemicals", "Sustainability"]
+    },
+    "miningMetals": {
+      "title": "Mining & Metals",
+      "description": "End-to-end solutions for the mining and metals sector, from extraction to processing.",
+      "tags": ["Extraction", "Processing", "Logistics", "Safety"]
+    },
+    "paintsCoatings": {
+      "title": "Paints & Coatings",
+      "description": "High-performance paints and coatings for industrial and commercial applications.",
+      "tags": ["Protective", "Decorative", "Industrial", "Innovation"]
+    },
+    "polymersPlastics": {
+      "title": "Polymers & Plastics",
+      "description": "Comprehensive range of polymers and plastics for diverse industries.",
+      "tags": ["Polymers", "Plastics", "Innovation", "Distribution"]
+    },
+    "pharmaceuticals": {
+      "title": "Pharmaceuticals",
+      "description": "Quality pharmaceutical ingredients and solutions for healthcare.",
+      "tags": ["APIs", "Formulations", "Quality", "Distribution"]
+    },
+    "textilesFibers": {
+      "title": "Textiles & Fibers",
+      "description": "Advanced textiles and fiber solutions for various industries.",
+      "tags": ["Fibers", "Textiles", "Innovation", "Sustainability"]
+    },
+    "automotiveLubricants": {
+      "title": "Automotive & Lubricants",
+      "description": "Lubricants and solutions for the automotive industry.",
+      "tags": ["Lubricants", "Automotive", "Performance", "Innovation"]
     }
   },
   "serviceSlider": {
