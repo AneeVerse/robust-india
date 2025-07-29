@@ -77,10 +77,10 @@ export default function ServicesPage() {
             <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
           </Link>
           {/* Heading */}
-          <div className="w-full overflow-x-auto ">
+          <div className="w-full flex justify-center items-center overflow-x-auto">
             <motion.h1 
-              className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light text-center text-gray-900 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-18 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:-mt-0 px-1 sm:px-2 max-w-5xl mx-auto break-words" 
-              style={{ fontFamily: 'NoiGrotesk, sans-serif', wordBreak: 'break-word', hyphens: 'auto' }}
+              className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light text-center text-gray-900 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-18 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:-mt-0 px-1 sm:px-2 whitespace-nowrap" 
+              style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
               initial="hidden"
               animate="visible"
             >
@@ -105,47 +105,151 @@ export default function ServicesPage() {
             </motion.h1>
           </div>
           
-          {/* Services Container */}
+          {/* Beautiful Alternating Services Layout */}
           <div
-            className="w-full max-w-[1400px] px-2 sm:px-4"
+            className="w-full max-w-[1600px] px-2 sm:px-4 lg:px-6"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
             <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
-            {/* New horizontal zig-zag layout */}
-            <div className="flex flex-col lg:flex-row items-stretch gap-6 sm:gap-8 w-full mt-10 mb-10">
-              {/* First image + text pair */}
-              <div className="flex flex-row items-center w-full lg:w-[48%] gap-4">
-                <Link href={`/services/${services[0].slug}`} className="block flex-shrink-0 w-[45%]">
-                  <Image
-                    src={serviceImagesArr[0]}
-                    alt={services[0].title}
-                    width={600}
-                    height={600}
-                    className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl lg:rounded-4xl shadow-lg bg-white"
-                  />
+            
+            {/* Desktop: Image-Text-Image-Text in one row */}
+            <div className="hidden lg:grid lg:grid-cols-4 gap-8 xl:gap-12 items-center mt-12 mb-16">
+              {/* First Image */}
+              <motion.div 
+                className="relative group"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <Link href={`/services/${services[0].slug}`} className="block relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 p-2">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <Image
+                      src={serviceImagesArr[0]}
+                      alt={services[0].title}
+                      width={400}
+                      height={300}
+                      className="w-full h-[240px] xl:h-[280px] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
                 </Link>
-                <Link href={`/services/${services[0].slug}`} className="block flex-1 flex flex-col justify-center text-left">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{services[0].title}</h2>
-                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{services[0].description}</p>
+              </motion.div>
+
+              {/* First Text */}
+              <motion.div 
+                className="flex flex-col justify-center space-y-4 px-2"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <Link href={`/services/${services[0].slug}`} className="group">
+                  <h2 className="text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                    {services[0].title}
+                  </h2>
+                  <p className="text-base xl:text-lg text-gray-600 leading-relaxed line-clamp-4 group-hover:text-gray-800 transition-colors duration-300">
+                    {services[0].description}
+                  </p>
+                  <div className="inline-flex items-center mt-4 text-blue-600 font-medium group-hover:text-blue-700 transition-colors duration-300">
+                    <span className="text-sm xl:text-base">Learn More</span>
+                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </Link>
-              </div>
-              {/* Second image + text pair */}
-              <div className="flex flex-row items-center w-full lg:w-[48%] gap-4">
-                <Link href={`/services/${services[1].slug}`} className="block flex-shrink-0 w-[45%]">
-                  <Image
-                    src={serviceImagesArr[1]}
-                    alt={services[1].title}
-                    width={600}
-                    height={600}
-                    className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl lg:rounded-4xl shadow-lg bg-white"
-                  />
+              </motion.div>
+
+              {/* Second Image */}
+              <motion.div 
+                className="relative group"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <Link href={`/services/${services[1].slug}`} className="block relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 p-2">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <Image
+                      src={serviceImagesArr[1]}
+                      alt={services[1].title}
+                      width={400}
+                      height={300}
+                      className="w-full h-[240px] xl:h-[280px] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
                 </Link>
-                <Link href={`/services/${services[1].slug}`} className="block flex-1 flex flex-col justify-center text-left">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{services[1].title}</h2>
-                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{services[1].description}</p>
+              </motion.div>
+
+              {/* Second Text */}
+              <motion.div 
+                className="flex flex-col justify-center space-y-4 px-2"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <Link href={`/services/${services[1].slug}`} className="group">
+                  <h2 className="text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                    {services[1].title}
+                  </h2>
+                  <p className="text-base xl:text-lg text-gray-600 leading-relaxed line-clamp-4 group-hover:text-gray-800 transition-colors duration-300">
+                    {services[1].description}
+                  </p>
+                  <div className="inline-flex items-center mt-4 text-blue-600 font-medium group-hover:text-blue-700 transition-colors duration-300">
+                    <span className="text-sm xl:text-base">Learn More</span>
+                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </Link>
-              </div>
+              </motion.div>
+            </div>
+
+            {/* Mobile & Tablet: Stacked Layout */}
+            <div className="lg:hidden space-y-8 mt-10 mb-12">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.slug}
+                  className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.3 }}
+                >
+                  <div className="relative group w-full sm:w-1/2 flex-shrink-0">
+                    <Link href={`/services/${service.slug}`} className="block relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 p-2">
+                      <div className="relative overflow-hidden rounded-2xl">
+                        <Image
+                          src={serviceImagesArr[index]}
+                          alt={service.title}
+                          width={600}
+                          height={400}
+                          className="w-full h-[200px] sm:h-[240px] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
+                      <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
+                    </Link>
+                  </div>
+                  
+                  <div className="flex flex-col justify-center space-y-4 w-full sm:w-1/2 text-center sm:text-left">
+                    <Link href={`/services/${service.slug}`} className="group">
+                      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                        {service.title}
+                      </h2>
+                      <p className="text-base sm:text-lg text-gray-600 leading-relaxed line-clamp-4 group-hover:text-gray-800 transition-colors duration-300">
+                        {service.description}
+                      </p>
+                      <div className="inline-flex items-center mt-4 text-blue-600 font-medium group-hover:text-blue-700 transition-colors duration-300">
+                        <span className="text-sm sm:text-base">Learn More</span>
+                        <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -153,7 +257,7 @@ export default function ServicesPage() {
       
       {/* Service Slider Section */}
       <div className="mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 md:px-8">
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-[1600px] mx-auto">
           <ServiceSlider />
         </div>
       </div>
