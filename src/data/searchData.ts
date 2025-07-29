@@ -8,7 +8,8 @@ export interface SearchItem {
 }
 
 // Function to get localized search data
-export const getLocalizedSearchData = (t: (key: string) => string | string[]): SearchItem[] => [
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const getLocalizedSearchData = (_t: (key: string) => string | string[]): SearchItem[] => [
   // Pages
   {
     id: 'home',

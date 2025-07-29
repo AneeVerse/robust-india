@@ -1264,7 +1264,7 @@
             "Agrochemicals (pesticide manufacturing)",
             "Polymers & Plastics (flame retardants, stabilizers)",
             "Pharmaceuticals (drug synthesis)",
-            { "title": "Electronics (battery electrolytes)", "description": "In lithium-ion batteries." },
+            "Electronics (battery electrolytes)",
             "Lubricants & Coatings"
           ]
         },

@@ -102,7 +102,7 @@ const ModernAnimatedTag: React.FC<{
   isVisible: boolean; 
   delay: number;
   index: number;
-}> = ({ tag, isVisible, delay, index }) => {
+}> = ({ tag, isVisible, delay }) => {
   return (
     <span
       className="inline-block relative overflow-hidden"

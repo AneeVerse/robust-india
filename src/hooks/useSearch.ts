@@ -1,21 +1,14 @@
 import { useState, useMemo, useEffect } from 'react';
 import Fuse from 'fuse.js';
-import { getLocalizedSearchData, SearchItem, getCategoryNames } from '@/data/searchData';
+import { getLocalizedSearchData, getCategoryNames } from '@/data/searchData';
 
 interface LocalizedSearchItem {
   id: string;
   title: string;
   description: string;
-  category: 'page' | 'chemical' | 'service' | 'content';
+  category: 'page' | 'chemical' | 'service' | 'content' | 'category';
   url: string;
   keywords: string[];
-}
-
-interface UseSearchResult {
-  results: GroupedResults;
-  isSearching: boolean;
-  hasResults: boolean;
-  totalResults: number;
 }
 
 interface GroupedResults {

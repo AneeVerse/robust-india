@@ -5,8 +5,6 @@ import Image from 'next/image';
 import FooterSection from '@/components/FooterSection';
 import BookCallSection from '@/components/BookCallSection';
 import StatsSection from '@/components/StatsSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import CoreValuesSection from '@/components/CoreValuesSection';
 import ServiceSlider from '@/components/ServiceSlider';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';

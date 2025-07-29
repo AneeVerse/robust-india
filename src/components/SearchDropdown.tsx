@@ -78,7 +78,7 @@ export default function SearchDropdown({
         {!isSearching && query.length >= 2 && !hasResults && (
           <div className="py-8 text-center">
             <div className="text-gray-400 text-sm mb-2">No results found for</div>
-            <div className="text-white font-medium">"{query}"</div>
+            <div className="text-white font-medium">&quot;{query}&quot;</div>
           </div>
         )}
 
@@ -152,22 +152,22 @@ export default function SearchDropdown({
 }
 
 // Custom scrollbar styles (add to globals.css if not already present)
-const styles = `
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-}
+// const styles = `
+// .custom-scrollbar::-webkit-scrollbar {
+//   width: 6px;
+// }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 3px;
-}
+// .custom-scrollbar::-webkit-scrollbar-track {
+//   background: rgba(255, 255, 255, 0.05);
+//   border-radius: 3px;
+// }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(123, 185, 247, 0.3);
-  border-radius: 3px;
-}
+// .custom-scrollbar::-webkit-scrollbar-thumb {
+//   background: rgba(123, 185, 247, 0.3);
+//   border-radius: 3px;
+// }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(123, 185, 247, 0.5);
-}
-`; 
+// .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+//   background: rgba(123, 185, 247, 0.5);
+// }
+// `; 
