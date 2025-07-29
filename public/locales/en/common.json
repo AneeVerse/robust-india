@@ -628,22 +628,54 @@
     "about": {
       "title": "About Us",
       "description": "Robust India delivers end-to-end chemical supply-chain solutions globally, specializing in sourcing, developing, and distributing high-quality chemicals.",
-      "tags": ["Integrated FTWZ", "3PL", "Chemical Product", "End-to-End"]
+      "tags": ["Integrated FTWZ", "3PL", "Chemical Product", "End-to-End"],
+      "detailedTags": [
+        "Global Supply Chain", "Chemical Trading", "Import Export", "Quality Assurance", 
+        "Regulatory Compliance", "Market Intelligence", "Strategic Partnerships", "Industry Expertise",
+        "Customer Support", "Innovation Hub", "Sustainability", "Risk Management",
+        "Supply Chain Optimization", "Global Network", "Technical Support", "Market Analysis",
+        "Business Solutions", "Trade Finance", "Logistics Excellence", "Chemical Distribution",
+        "Industry Leadership", "Operational Excellence", "Client Relations", "Market Expansion"
+      ]
     },
     "chemical": {
       "title": "Chemical Products",
       "description": "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
-      "tags": ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"]
+      "tags": ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"],
+      "detailedTags": [
+        "Petrochemicals", "Specialty Chemicals", "Bulk Chemicals", "Fine Chemicals",
+        "Pharmaceutical Intermediates", "Agricultural Chemicals", "Industrial Solvents", "Polymer Additives",
+        "Catalyst Systems", "Chemical Processing", "Quality Control", "Product Development",
+        "Chemical Analysis", "Formulation Services", "Custom Synthesis", "Chemical Storage",
+        "Hazmat Handling", "Chemical Packaging", "Technical Documentation", "Regulatory Support",
+        "Chemical Sourcing", "Product Innovation", "Chemical Engineering", "Process Optimization"
+      ]
     },
     "ftwz": {
       "title": "Integrated 3PL & FTWZ",
       "description": "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
-      "tags": ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"]
+      "tags": ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"],
+      "detailedTags": [
+        "Free Trade Zone", "Warehousing Solutions", "Inventory Management", "Cross Docking",
+        "Distribution Centers", "Customs Clearance", "Duty Optimization", "Storage Facilities",
+        "Material Handling", "Order Fulfillment", "Supply Chain Integration", "Logistics Coordination",
+        "Trade Facilitation", "Bonded Storage", "Export Processing", "Import Management",
+        "Cargo Handling", "Documentation Services", "Compliance Management", "Cost Optimization",
+        "Freight Forwarding", "Transportation Services", "Value Added Services", "Digital Tracking"
+      ]
     },
     "3pl": {
       "title": "End-to-End Solutions",
       "description": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",
-      "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"]
+      "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"],
+      "detailedTags": [
+        "Third Party Logistics", "End-to-End Solutions", "Supply Chain Management", "Freight Management",
+        "Transportation Planning", "Route Optimization", "Delivery Services", "Last Mile Delivery",
+        "Warehouse Management", "Distribution Network", "Logistics Consulting", "Supply Chain Analytics",
+        "Vendor Management", "Procurement Services", "Inventory Optimization", "Order Processing",
+        "Shipping Solutions", "Cargo Insurance", "Track & Trace", "Real-time Monitoring",
+        "Multi-modal Transport", "International Shipping", "Domestic Distribution", "Logistics Technology"
+      ]
     },
     "oilAndGas": {
       "title": "Oil & Gas",

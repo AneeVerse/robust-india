@@ -30,41 +30,13 @@ const projects = [
   },
 ];
 
-// Enhanced service tags for each project category
-const projectTags = {
-  about: [
-    "Global Supply Chain", "Chemical Trading", "Import Export", "Quality Assurance", 
-    "Regulatory Compliance", "Market Intelligence", "Strategic Partnerships", "Industry Expertise",
-    "Customer Support", "Innovation Hub", "Sustainability", "Risk Management",
-    "Supply Chain Optimization", "Global Network", "Technical Support", "Market Analysis",
-    "Business Solutions", "Trade Finance", "Logistics Excellence", "Chemical Distribution",
-    "Industry Leadership", "Operational Excellence", "Client Relations", "Market Expansion"
-  ],
-  chemical: [
-    "Petrochemicals", "Specialty Chemicals", "Bulk Chemicals", "Fine Chemicals",
-    "Pharmaceutical Intermediates", "Agricultural Chemicals", "Industrial Solvents", "Polymer Additives",
-    "Catalyst Systems", "Chemical Processing", "Quality Control", "Product Development",
-    "Chemical Analysis", "Formulation Services", "Custom Synthesis", "Chemical Storage",
-    "Hazmat Handling", "Chemical Packaging", "Technical Documentation", "Regulatory Support",
-    "Chemical Sourcing", "Product Innovation", "Chemical Engineering", "Process Optimization"
-  ],
-  ftwz: [
-    "Free Trade Zone", "Warehousing Solutions", "Inventory Management", "Cross Docking",
-    "Distribution Centers", "Customs Clearance", "Duty Optimization", "Storage Facilities",
-    "Material Handling", "Order Fulfillment", "Supply Chain Integration", "Logistics Coordination",
-    "Trade Facilitation", "Bonded Storage", "Export Processing", "Import Management",
-    "Cargo Handling", "Documentation Services", "Compliance Management", "Cost Optimization",
-    "Freight Forwarding", "Transportation Services", "Value Added Services", "Digital Tracking"
-  ],
-  "3pl": [
-    "Third Party Logistics", "End-to-End Solutions", "Supply Chain Management", "Freight Management",
-    "Transportation Planning", "Route Optimization", "Delivery Services", "Last Mile Delivery",
-    "Warehouse Management", "Distribution Network", "Logistics Consulting", "Supply Chain Analytics",
-    "Vendor Management", "Procurement Services", "Inventory Optimization", "Order Processing",
-    "Shipping Solutions", "Cargo Insurance", "Track & Trace", "Real-time Monitoring",
-    "Multi-modal Transport", "International Shipping", "Domestic Distribution", "Logistics Technology"
-  ]
-};
+// Get translated tags for each project category
+const getProjectTags = (t: (key: string, options?: { returnObjects?: boolean }) => string | string[]) => ({
+  about: t('projects.about.detailedTags', { returnObjects: true }) as string[],
+  chemical: t('projects.chemical.detailedTags', { returnObjects: true }) as string[],
+  ftwz: t('projects.ftwz.detailedTags', { returnObjects: true }) as string[],
+  "3pl": t('projects.3pl.detailedTags', { returnObjects: true }) as string[]
+});
 
 const CustomCursor: React.FC<{ visible: boolean; x: number; y: number; text: string }> = ({ visible, x, y, text }) => (
   <div
@@ -159,6 +131,9 @@ const ProjectShowcase = () => {
   const descRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [cursor, setCursor] = React.useState({ visible: false, x: 0, y: 0 });
 
+  // Get translated project tags
+  const projectTags = getProjectTags(t);
+
   // State for managing tag animations
   const [currentTagSets, setCurrentTagSets] = React.useState<{ [key: string]: number }>({
     about: 0,
@@ -187,10 +162,10 @@ const ProjectShowcase = () => {
           setIsAnimating(false);
         }, 100);
       }, 300);
-    }, 3500); // Change every 3.5 seconds
+    }, 2000); // Change every 2 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [projectTags]);
 
   useEffect(() => {
     // Disable scroll-trigger animation on mobile and desktop to prevent unwanted horizontal scroll
