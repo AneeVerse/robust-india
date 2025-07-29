@@ -207,21 +207,31 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                   </div>
                 ))}
               </div>
-              {/* Remove Industries Served section */}
-              {/*
-              {applicationsUses.industriesServed && (
-                <div className="mt-8">
-                  <h4 className="font-semibold text-gray-900 mb-3 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    {sectionHeadings['industriesServed'][currentLang]}
-                  </h4>
-                  <ul className="list-disc pl-6 text-gray-700">
-                    {applicationsUses.industriesServed.map((industry: string, idx: number) => (
-                      <li key={idx}>{industry}</li>
-                    ))}
-                  </ul>
+             
+              
+
+              
+            </div>
+          )}
+
+          {/* Industries Served */}
+          {applicationsUses.industriesServed && applicationsUses.industriesServed.length > 0 && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbAtom className="w-6 h-6 text-white" />
                 </div>
-              )}
-              */}
+                {sectionHeadings['industriesServed'][currentLang]}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {applicationsUses.industriesServed.map((industry: string, idx: number) => (
+                  <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
+                    <h4 className="font-semibold text-gray-900 mb-3 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                      {industry}
+                    </h4>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
@@ -262,7 +272,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 </div>
                 {sectionHeadings['safetyRegulatory'][currentLang]}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className={`grid grid-cols-1 md:grid-cols-2 ${Object.keys(safetyRegulatory).length > 2 ? 'lg:grid-cols-3' : ''} gap-6`}>
                 {Object.entries(safetyRegulatory).map(([key, value]: [string, string | number | boolean | object | undefined], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
