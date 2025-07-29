@@ -31,12 +31,15 @@ export default function Navbar() {
 }
 
 function NavbarContent() {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const [search, setSearch] = useState('');
   const [focused, setFocused] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Check if current language is Russian
+  const isRussian = i18n.language === 'ru';
 
   // Use the search hook with translation function
   const { results, isSearching, hasResults } = useSearch(search, t);
@@ -111,7 +114,11 @@ function NavbarContent() {
   }, []);
 
   return (
-    <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${focused ? 'max-w-3xl' : 'max-w-xl'}`}>
+    <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${
+      focused 
+        ? isRussian ? 'max-w-4xl' : 'max-w-3xl' 
+        : isRussian ? 'max-w-2xl' : 'max-w-xl'
+    }`}>
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       
@@ -129,7 +136,11 @@ function NavbarContent() {
       </div>
       
       {/* Search bar with dropdown */}
-      <div ref={searchRef} className={`relative transition-all duration-300 ${focused ? 'w-48 sm:w-64 md:w-80' : 'w-24 sm:w-32 md:w-36'} mr-2 sm:mr-3`}>
+      <div ref={searchRef} className={`relative transition-all duration-300 ${
+        focused 
+          ? isRussian ? 'w-48 sm:w-72 md:w-96' : 'w-48 sm:w-64 md:w-80'
+          : isRussian ? 'w-28 sm:w-36 md:w-40' : 'w-24 sm:w-32 md:w-36'
+      } mr-2 sm:mr-3`}>
         <form onSubmit={handleSearchSubmit} className="relative flex items-center">
           <FiSearch className="absolute left-3 text-gray-400 w-4 h-4 pointer-events-none z-10" />
           <input
@@ -140,7 +151,7 @@ function NavbarContent() {
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder={t('search.placeholder', 'Search...')}
-            className={`w-full pl-9 pr-3 py-1.5 sm:py-2 rounded-xl bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''}`}
+            className={`w-full pl-9 pr-3 py-1.5 sm:py-2 rounded-xl bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''} ${isRussian ? 'text-sm' : ''}`}
             style={{ minWidth: 0 }}
           />
         </form>
@@ -161,7 +172,7 @@ function NavbarContent() {
       </div>
       
       {/* Navigation links */}
-      <div className="flex gap-x-1 sm:gap-x-2 flex-1 justify-end min-w-0">
+      <div className={`flex gap-x-1 sm:gap-x-2 flex-1 justify-end min-w-0 ${isRussian ? 'gap-x-0.5 sm:gap-x-1' : ''}`}>
         {navLinks.map((link) => (
           link.href.startsWith('#') ? (
             link.highlight ? (
@@ -173,15 +184,19 @@ function NavbarContent() {
               >
                 <a
                   href={link.href}
-                  className="text-xs sm:text-sm font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg transition-all duration-300 flex items-center justify-center min-h-[32px] sm:min-h-[36px]"
+                  className={`font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] rounded-lg transition-all duration-300 flex items-center justify-center ${
+                    isRussian 
+                      ? 'text-xs sm:text-sm px-1.5 sm:px-2.5 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                      : 'text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                  }`}
                 >
-                  <span className="whitespace-nowrap">{link.name}</span>
+                  <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
                   <Image
                     src="/images/contact-logo.svg"
                     alt="Contact"
                     width={16}
                     height={16}
-                    className="ml-1 w-3 h-3 sm:w-4 sm:h-4 hidden sm:block flex-shrink-0"
+                    className={`ml-1 flex-shrink-0 ${isRussian ? 'w-3 h-3 sm:w-3.5 sm:h-3.5 hidden md:block' : 'w-3 h-3 sm:w-4 sm:h-4 hidden sm:block'}`}
                   />
                 </a>
               </motion.div>
@@ -189,9 +204,13 @@ function NavbarContent() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs sm:text-sm font-bold text-white/90 hover:bg-white/10 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg transition-colors duration-200 flex items-center justify-center min-h-[32px] sm:min-h-[36px] flex-shrink-0"
+                className={`font-bold text-white/90 hover:bg-white/10 rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
+                  isRussian
+                    ? 'text-xs sm:text-sm px-1.5 sm:px-2.5 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                    : 'text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                }`}
               >
-                <span className="whitespace-nowrap">{link.name}</span>
+                <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
               </a>
             )
           ) : (
@@ -204,15 +223,19 @@ function NavbarContent() {
               >
                 <Link
                   href={link.href}
-                  className="text-xs sm:text-sm font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg transition-all duration-300 flex items-center justify-center min-h-[32px] sm:min-h-[36px]"
+                  className={`font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] rounded-lg transition-all duration-300 flex items-center justify-center ${
+                    isRussian 
+                      ? 'text-xs sm:text-sm px-1.5 sm:px-2.5 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                      : 'text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                  }`}
                 >
-                  <span className="whitespace-nowrap">{link.name}</span>
+                  <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
                   <Image
                     src="/images/contact-logo.svg"
                     alt="Contact"
                     width={16}
                     height={16}
-                    className="ml-1 w-3 h-3 sm:w-4 sm:h-4 hidden sm:block flex-shrink-0"
+                    className={`ml-1 flex-shrink-0 ${isRussian ? 'w-3 h-3 sm:w-3.5 sm:h-3.5 hidden md:block' : 'w-3 h-3 sm:w-4 sm:h-4 hidden sm:block'}`}
                   />
                 </Link>
               </motion.div>
@@ -220,9 +243,13 @@ function NavbarContent() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-xs sm:text-sm font-bold text-white/90 hover:bg-white/10 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg transition-colors duration-200 flex items-center justify-center min-h-[32px] sm:min-h-[36px] flex-shrink-0"
+                className={`font-bold text-white/90 hover:bg-white/10 rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
+                  isRussian
+                    ? 'text-xs sm:text-sm px-1.5 sm:px-2.5 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                    : 'text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                }`}
               >
-                <span className="whitespace-nowrap">{link.name}</span>
+                <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
               </Link>
             )
           )
