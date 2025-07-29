@@ -116,24 +116,9 @@ export default function AboutPage() {
             </React.Fragment>
           ))}
         </motion.h1>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5 }}
-          className="my-6 mt-30 mb-30"
-        >
-          <Image
-            src="/images/SVG.png"
-            alt=""
-            width={200}
-            height={200}
-            className="transform rotate-270 mx-auto"
-          />
-        </motion.div>
         <p
           ref={paraRef}
-          className="mt-0 max-w-6xl mx-auto text-lg md:text-xl lg:text-2xl text-gray-700 leading-[1.9] mb-16 px-6"
+          className="mt-8 sm:mt-10 md:mt-12 max-w-6xl mx-auto text-lg md:text-xl lg:text-2xl text-gray-700 leading-[1.9] mb-16 px-6"
           style={{ 
             fontFamily: 'NoiGrotesk, sans-serif', 
             textAlign: 'justify', 
@@ -352,21 +337,7 @@ export default function AboutPage() {
             }}>
               {t('about.mission.description')}
             </p>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.5 }}
-              className="my-6 mt-30 mb-30"
-            >
-              <Image
-                src="/images/SVG.png"
-                alt=""
-                width={200}
-                height={200}
-                className="transform rotate-270 mx-auto"
-              />
-            </motion.div>
+
           </motion.div>
 
       {/* Team Section */}
@@ -377,15 +348,15 @@ export default function AboutPage() {
       <StatsSection />
       </div>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section 
       <div className="w-full overflow-x-hidden">
       <TestimonialsSection />
-      </div>
+      </div> *
 
-      {/* Core Values Section */}
+      {/* Core Values Section 
       <div className="w-full overflow-x-hidden">
       <CoreValuesSection />
-      </div>
+      </div> */}
 
       {/* Supporting Diverse Industrial Sectors Section */}
       <div className="w-full overflow-x-hidden">

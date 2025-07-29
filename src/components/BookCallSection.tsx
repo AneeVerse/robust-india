@@ -96,7 +96,7 @@ export default function BookCallSection() {
           style={{ rotate, scale, x, y }}
           className="mt-16 md:mt-0 flex justify-center md:justify-end w-full md:w-auto"
         >
-          <div className="w-full aspect-video bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative sm:w-48 sm:h-64 md:w-72 md:h-88">
+          <div className="w-full aspect-video bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative sm:w-48 sm:h-64 md:w-72 md:h-88 -mb-20">
             <video
               ref={videoRef}
               src="/video/letstalk4.mp4"

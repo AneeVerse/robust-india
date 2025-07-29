@@ -28,52 +28,7 @@ const projects = [
     image: "/images/demo/shipping.jpg",
     translationKey: "3pl"
   },
-  // New services
-  {
-    slug: 'oil-and-gas',
-    image: '/images/service/oil-rig (2) 1.png',
-    translationKey: 'oilAndGas',
-  },
-  {
-    slug: 'agrochemicals',
-    image: '/images/service/chemicals 1.png',
-    translationKey: 'agrochemicals',
-  },
-  {
-    slug: 'water-treatment',
-    image: '/images/service/wastewater 1.png',
-    translationKey: 'waterTreatment',
-  },
-  {
-    slug: 'mining-metals',
-    image: '/images/service/mining 1.png',
-    translationKey: 'miningMetals',
-  },
-  {
-    slug: 'paints-coatings',
-    image: '/images/service/varnish 1 (1).png',
-    translationKey: 'paintsCoatings',
-  },
-  {
-    slug: 'polymers-plastics',
-    image: '/images/service/polymer 1.png',
-    translationKey: 'polymersPlastics',
-  },
-  {
-    slug: 'pharmaceuticals',
-    image: '/images/service/pill 1.png',
-    translationKey: 'pharmaceuticals',
-  },
-  {
-    slug: 'textiles-fibers',
-    image: '/images/service/thread 1.png',
-    translationKey: 'textilesFibers',
-  },
-  {
-    slug: 'automotive-lubricants',
-    image: '/images/service/automotive 1.png',
-    translationKey: 'automotiveLubricants',
-  },
+ 
 ];
 
 const CustomCursor: React.FC<{ visible: boolean; x: number; y: number; text: string }> = ({ visible, x, y, text }) => (
