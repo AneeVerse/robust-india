@@ -760,6 +760,21 @@
           "hazards": "Highly flammable (light naphtha flash point < –20°C). Harmful if inhaled (CNS depression). Skin irritant (defats skin). Environmental risk (toxic to aquatic life).",
           "nfpaRating": "Health: 2 | Flammability: 3 | Reactivity: 0",
           "regulations": "GHS Symbols: Flame, Health Hazard. UN 1255 (Petroleum Naphtha), UN 3295 (Hydrocarbon Mixture)"
+        },
+        "keyDifferences": {
+          "title": "Key Differences Between Grades",
+          "property": "Property",
+          "lightNaphtha": "Light Naphtha",
+          "heavyNaphtha": "Heavy Naphtha",
+          "boilingRange": "Boiling Range",
+          "flammability": "Flammability",
+          "mainUse": "Main Use",
+          "boilingRangeLight": "30–90°C",
+          "boilingRangeHeavy": "90–200°C",
+          "flammabilityLight": "Extremely high",
+          "flammabilityHeavy": "Moderate",
+          "mainUseLight": "Solvents, fuels",
+          "mainUseHeavy": "Petrochemicals"
         }
       },
       "propylene-propene": {

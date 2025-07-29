@@ -160,7 +160,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
 
           {/* Grades & Purity */}
           {gradesPurity && (
-            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm mb-8">
               <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                 <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
                   <TbAtom className="w-6 h-6 text-white" />
@@ -182,6 +182,43 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                     </p>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* Key Differences Between Grades Table for Naphtha */}
+          {slug === 'naphtha' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm mb-8">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                {t('chemicalDetail.products.naphtha.keyDifferences.title')}
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-2 px-4 font-bold text-gray-800">{t('chemicalDetail.products.naphtha.keyDifferences.property')}</th>
+                      <th className="py-2 px-4 font-bold text-gray-800">{t('chemicalDetail.products.naphtha.keyDifferences.lightNaphtha')}</th>
+                      <th className="py-2 px-4 font-bold text-gray-800">{t('chemicalDetail.products.naphtha.keyDifferences.heavyNaphtha')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b">
+                      <td className="py-2 px-4 font-semibold text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.boilingRange')}</td>
+                      <td className="py-2 px-4 text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.boilingRangeLight')}</td>
+                      <td className="py-2 px-4 text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.boilingRangeHeavy')}</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-2 px-4 font-semibold text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.flammability')}</td>
+                      <td className="py-2 px-4 text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.flammabilityLight')}</td>
+                      <td className="py-2 px-4 text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.flammabilityHeavy')}</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-4 font-semibold text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.mainUse')}</td>
+                      <td className="py-2 px-4 text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.mainUseLight')}</td>
+                      <td className="py-2 px-4 text-gray-700">{t('chemicalDetail.products.naphtha.keyDifferences.mainUseHeavy')}</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           )}
