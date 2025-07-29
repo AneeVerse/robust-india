@@ -14,6 +14,284 @@
     "services": "Services",
     "contact": "Contact"
   },
+  "search": {
+    "placeholder": "Search...",
+    "categories": {
+      "pages": "Pages",
+      "chemicals": "Chemical Products",
+      "services": "Services",
+      "industries": "Industries",
+      "categories": "Categories"
+    },
+    "items": {
+      "home": {
+        "title": "Home",
+        "description": "Robust India - Premier import-export chemical supply solutions",
+        "keywords": ["home", "main", "index", "robust india", "homepage", "start"]
+      },
+      "about": {
+        "title": "About Us",
+        "description": "Learn about Robust India - our mission, vision, and team",
+        "keywords": ["about", "company", "mission", "vision", "team", "history", "who we are"]
+      },
+      "contact": {
+        "title": "Contact Us",
+        "description": "Get in touch with Robust India for chemical supply solutions",
+        "keywords": ["contact", "reach", "phone", "email", "address", "location", "get in touch"]
+      },
+      "services": {
+        "title": "Services",
+        "description": "Our comprehensive chemical supply chain services",
+        "keywords": ["services", "supply chain", "logistics", "distribution", "solutions"]
+      },
+      "products": {
+        "title": "Chemical Products",
+        "description": "Browse our extensive range of specialty and bulk chemicals",
+        "keywords": ["products", "chemicals", "catalog", "browse", "specialty", "bulk"]
+      },
+      "naphtha": {
+        "title": "Naphtha",
+        "description": "High-quality naphtha for petrochemical and industrial applications",
+        "keywords": ["naphtha", "petrochemical", "solvent", "light", "heavy", "industrial"]
+      },
+      "benzene": {
+        "title": "Benzene",
+        "description": "Pure benzene for chemical synthesis and manufacturing",
+        "keywords": ["benzene", "aromatic", "synthesis", "manufacturing", "pure", "chemical"]
+      },
+      "toluene": {
+        "title": "Toluene",
+        "description": "Industrial grade toluene for various applications",
+        "keywords": ["toluene", "solvent", "industrial", "aromatic", "grade", "applications"]
+      },
+      "xylene": {
+        "title": "Xylene",
+        "description": "High-purity xylene for industrial and chemical processes",
+        "keywords": ["xylene", "aromatic", "industrial", "chemical", "processes", "purity"]
+      },
+      "methanol": {
+        "title": "Methanol",
+        "description": "Technical grade methanol for various industrial uses",
+        "keywords": ["methanol", "alcohol", "technical", "industrial", "fuel", "solvent"]
+      },
+      "ethanol": {
+        "title": "Ethanol",
+        "description": "High-grade ethanol for pharmaceutical and industrial applications",
+        "keywords": ["ethanol", "alcohol", "pharmaceutical", "industrial", "grade", "pure"]
+      },
+      "acetone": {
+        "title": "Acetone",
+        "description": "Pure acetone for cleaning, manufacturing and chemical processes",
+        "keywords": ["acetone", "solvent", "cleaning", "manufacturing", "chemical", "pure"]
+      },
+      "importExport": {
+        "title": "Import Export Services",
+        "description": "Global chemical import and export solutions",
+        "keywords": ["import", "export", "global", "international", "trade", "customs"]
+      },
+      "supplyChain": {
+        "title": "Supply Chain Management",
+        "description": "End-to-end chemical supply chain solutions",
+        "keywords": ["supply chain", "logistics", "management", "distribution", "end-to-end"]
+      },
+      "qualityControl": {
+        "title": "Quality Control",
+        "description": "Rigorous quality control and testing services",
+        "keywords": ["quality", "control", "testing", "analysis", "standards", "certification"]
+      },
+      "ftwzServices": {
+        "title": "FTWZ Services",
+        "description": "Free Trade Warehouse Zone services for efficient operations",
+        "keywords": ["FTWZ", "free trade", "warehouse", "zone", "operations", "efficient"]
+      },
+      "thirdPartyLogistics": {
+        "title": "3PL Logistics",
+        "description": "Third-party logistics solutions for chemical distribution",
+        "keywords": ["3PL", "logistics", "third party", "distribution", "warehousing", "transport"]
+      },
+      "oilGas": {
+        "title": "Oil & Gas Industry",
+        "description": "Chemical solutions for oil and gas sector",
+        "keywords": ["oil", "gas", "petroleum", "energy", "upstream", "downstream", "refining"]
+      },
+      "agrochemicals": {
+        "title": "Agrochemicals",
+        "description": "Agricultural chemical products and solutions",
+        "keywords": ["agriculture", "farming", "pesticides", "fertilizers", "crop", "agro"]
+      },
+      "waterTreatment": {
+        "title": "Water Treatment",
+        "description": "Chemicals for water treatment and purification",
+        "keywords": ["water", "treatment", "purification", "filtration", "clean", "chemicals"]
+      },
+      "polymers": {
+        "title": "Specialty Polymers",
+        "description": "High-performance polymer solutions",
+        "keywords": ["polymers", "plastics", "specialty", "materials", "engineering", "performance"]
+      },
+      "pharmaceuticals": {
+        "title": "Pharmaceuticals",
+        "description": "Chemical ingredients for pharmaceutical industry",
+        "keywords": ["pharmaceuticals", "drugs", "medicine", "API", "ingredients", "healthcare"]
+      },
+      "textiles": {
+        "title": "Textiles Industry",
+        "description": "Chemical solutions for textile manufacturing",
+        "keywords": ["textiles", "fabric", "dyes", "manufacturing", "clothing", "fiber"]
+      },
+      "mining": {
+        "title": "Mining Industry",
+        "description": "Chemical products for mining and mineral processing",
+        "keywords": ["mining", "minerals", "extraction", "processing", "chemicals", "industry"]
+      },
+      "automotive": {
+        "title": "Automotive Industry",
+        "description": "Chemical solutions for automotive manufacturing",
+        "keywords": ["automotive", "cars", "manufacturing", "chemicals", "industry", "vehicles"]
+      },
+      "propylene": {
+        "keywords": ["propylene", "propene", "petrochemical", "polymer", "plastic", "feedstock"]
+      },
+      "redPhosphorus": {
+        "keywords": ["red phosphorus", "phosphorus", "flame retardant", "matches", "pyrotechnics"]
+      },
+      "trimethylPhosphite": {
+        "keywords": ["trimethyl phosphite", "TMPi", "phosphite", "stabilizer", "antioxidant"]
+      },
+      "triphenylPhosphite": {
+        "keywords": ["triphenyl phosphite", "TPPi", "phosphite", "stabilizer", "polymer", "antioxidant"]
+      },
+      "triethylPhosphite": {
+        "keywords": ["triethyl phosphite", "TEPi", "phosphite", "stabilizer", "chemical"]
+      },
+      "paraxylene": {
+        "keywords": ["paraxylene", "PX", "xylene", "aromatic", "petrochemical", "PTA"]
+      },
+      "orthoXylene": {
+        "keywords": ["ortho xylene", "OX", "xylene", "aromatic", "solvent", "chemical"]
+      },
+      "mtbe": {
+        "keywords": ["MTBE", "methyl tertiary butyl ether", "fuel additive", "octane booster", "gasoline"]
+      },
+      "etbe": {
+        "keywords": ["ETBE", "ethyl tertiary butyl ether", "fuel additive", "biofuel", "octane"]
+      },
+      "pta": {
+        "keywords": ["PTA", "purified terephthalic acid", "polyester", "PET", "polymer"]
+      },
+      "meg": {
+        "keywords": ["MEG", "mono ethylene glycol", "ethylene glycol", "antifreeze", "polyester"]
+      },
+      "carbonDisulfide": {
+        "keywords": ["carbon disulfide", "CS2", "solvent", "chemical", "industrial"]
+      },
+      "sodiumCyanide": {
+        "keywords": ["sodium cyanide", "NaCN", "cyanide", "mining", "gold extraction"]
+      },
+      "antioxidant1010": {
+        "keywords": ["antioxidant 1010", "polymer stabilizer", "additive", "plastic", "antioxidant"]
+      },
+      "basicPetrochemicals": {
+        "description": "Basic petrochemicals and feedstock chemicals for industrial applications",
+        "keywords": ["basic petrochemicals", "feedstock", "naphtha", "benzene", "toluene", "industrial chemicals"]
+      },
+      "fuelAdditives": {
+        "description": "Fuel additives and oxygenates for improved fuel performance",
+        "keywords": ["fuel additives", "oxygenates", "MTBE", "ETBE", "octane booster", "gasoline additives"]
+      },
+      "polymersIntermediates": {
+        "description": "Polymers and intermediate chemicals for plastic and resin production",
+        "keywords": ["polymers", "intermediates", "plastic", "resin", "polyethylene", "polypropylene"]
+      },
+      "phosphorusChemicals": {
+        "description": "Phosphorus-based chemicals and compounds",
+        "keywords": ["phosphorus chemicals", "phosphites", "phosphates", "flame retardants", "stabilizers"]
+      },
+      "sulfurChemicals": {
+        "description": "Sulfur-based chemicals and compounds",
+        "keywords": ["sulfur chemicals", "sulfur", "carbon disulfide", "sodium sulfide", "sulfur compounds"]
+      },
+      "aminesDerivatives": {
+        "description": "Amines and their derivatives for various industrial applications",
+        "keywords": ["amines", "derivatives", "ethylenediamine", "diethanolamine", "industrial chemicals"]
+      },
+      "phenolsDerivatives": {
+        "description": "Phenols and their derivatives for specialty applications",
+        "keywords": ["phenols", "derivatives", "butyl phenol", "specialty chemicals", "antioxidants"]
+      },
+      "aromaticsDerivatives": {
+        "description": "Aromatic chemicals and their derivatives",
+        "keywords": ["aromatics", "derivatives", "benzene", "toluene", "xylene", "aromatic compounds"]
+      },
+      "acrylicMonomers": {
+        "description": "Acrylic monomers and derivatives for polymer production",
+        "keywords": ["acrylic monomers", "derivatives", "acrylamide", "polymer", "plastic"]
+      },
+      "cyanideChemicals": {
+        "description": "Cyanide chemicals for mining and industrial applications",
+        "keywords": ["cyanide chemicals", "sodium cyanide", "mining", "gold extraction", "industrial"]
+      },
+      "organometallicChemicals": {
+        "description": "Organometallic chemicals and compounds",
+        "keywords": ["organometallic", "chemicals", "metal compounds", "catalysts", "specialty chemicals"]
+      },
+      "additivesLubricants": {
+        "description": "Additives and lubricant additives for performance enhancement",
+        "keywords": ["additives", "lubricant additives", "ZDDP", "performance", "enhancement"]
+      },
+      "inorganicChemicals": {
+        "description": "Inorganic chemicals and salts for various applications",
+        "keywords": ["inorganic chemicals", "salts", "potassium bicarbonate", "industrial chemicals"]
+      },
+      "alcoholsGlycols": {
+        "description": "Alcohols and glycols for industrial and chemical applications",
+        "keywords": ["alcohols", "glycols", "methanol", "ethylene glycol", "solvents"]
+      },
+      "solventsHydrocarbons": {
+        "description": "Solvents and hydrocarbon blends for various applications",
+        "keywords": ["solvents", "hydrocarbons", "blends", "aromatic solvents", "industrial solvents"]
+      },
+      "diethylPhosphite": {
+        "keywords": ["diethyl phosphite", "DEPi", "phosphite", "stabilizer", "chemical intermediate"]
+      },
+      "dimethylPhosphite": {
+        "keywords": ["dimethyl phosphite", "DMPi", "phosphite", "stabilizer", "chemical intermediate"]
+      },
+      "mixedHexenes": {
+        "keywords": ["mixed hexenes", "C6 hydrocarbons", "aliphatic", "petrochemical", "feedstock"]
+      },
+      "tertButylamine": {
+        "keywords": ["tert-butylamine", "amine", "chemical intermediate", "specialty chemical"]
+      },
+      "projectChemical": {
+        "keywords": ["chemical products", "specialty chemicals", "bulk chemicals", "distribution", "packaging"]
+      },
+      "projectFtwz": {
+        "keywords": ["FTWZ", "free trade warehouse", "duty-free", "warehousing", "import export"]
+      },
+      "project3pl": {
+        "keywords": ["3PL", "third party logistics", "end-to-end solutions", "storage", "distribution"]
+      },
+      "miningMetals": {
+        "keywords": ["mining", "metals", "extraction", "processing", "mineral processing"]
+      },
+      "paintsCoatings": {
+        "keywords": ["paints", "coatings", "protective", "decorative", "industrial coatings"]
+      },
+      "polymersPlastics": {
+        "keywords": ["polymers", "plastics", "plastic materials", "polymer distribution", "engineering plastics"]
+      },
+      "cyanuricChloride": {
+        "keywords": ["cyanuric chloride", "triazine", "chemical intermediate", "pool chemicals", "disinfectant"]
+      },
+      "ethylenediamine": {
+        "keywords": ["ethylenediamine", "EDA", "amine", "chelating agent", "chemical intermediate"]
+      },
+      "piperazine": {
+        "keywords": ["piperazine", "heterocyclic", "pharmaceutical", "chemical intermediate", "organic compound"]
+      }
+    }
+  },
   "footer": {
     "headline1": "We build bridges",
     "headline2Before": "between ",

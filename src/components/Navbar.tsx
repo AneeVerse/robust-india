@@ -4,8 +4,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { useNavbarVisibility } from '@/context/NavbarVisibilityContext';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FiSearch } from 'react-icons/fi';
+import { useSearch } from '@/hooks/useSearch';
+import SearchDropdown from './SearchDropdown';
 
 // Nav link definitions will be built with translated names inside the component.
 
@@ -32,6 +34,12 @@ function NavbarContent() {
   const { t } = useTranslation('common');
   const [search, setSearch] = useState('');
   const [focused, setFocused] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Use the search hook with translation function
+  const { results, isSearching, hasResults } = useSearch(search, t);
 
   const navLinks = [
     { name: t('nav.about'), href: '/about' },
@@ -40,14 +48,67 @@ function NavbarContent() {
     { name: t('nav.contact'), href: '/contact', highlight: true },
   ];
 
+  // Handle search form submission
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (search.trim()) {
-      // For now, just log the query. Replace with real search logic as needed.
-      console.log('Search:', search);
-      // Optionally, clear input or show results
+      // Navigate to first result if available
+      const firstResult = Object.values(results)[0]?.[0];
+      if (firstResult) {
+        window.location.href = firstResult.url;
+        setShowResults(false);
+        setSearch('');
+        inputRef.current?.blur();
+      }
     }
   };
+
+  // Handle input focus
+  const handleFocus = () => {
+    setFocused(true);
+    if (search.length >= 2) {
+      setShowResults(true);
+    }
+  };
+
+  // Handle input blur
+  const handleBlur = () => {
+    setFocused(false);
+    // Delay hiding results to allow clicks on results
+    setTimeout(() => setShowResults(false), 150);
+  };
+
+  // Handle search input change
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearch(value);
+    setShowResults(value.length >= 2);
+  };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && showResults) {
+        setShowResults(false);
+        inputRef.current?.blur();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [showResults]);
+
+  // Handle clicks outside search
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowResults(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${focused ? 'max-w-3xl' : 'max-w-xl'}`}>
@@ -67,23 +128,37 @@ function NavbarContent() {
         </Link>
       </div>
       
-      {/* Search bar */}
-      <form
-        onSubmit={handleSearchSubmit}
-        className={`relative flex items-center transition-all duration-300 ${focused ? 'w-48 sm:w-64 md:w-80' : 'w-24 sm:w-32 md:w-36'} mr-2 sm:mr-3`}
-      >
-        <FiSearch className="absolute left-3 text-gray-400 w-4 h-4 pointer-events-none" />
-        <input
-          type="text"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
-          placeholder={t('search.placeholder', 'Search...')}
-          className={`w-full pl-9 pr-3 py-1.5 sm:py-2 rounded-xl bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''}`}
-          style={{ minWidth: 0 }}
+      {/* Search bar with dropdown */}
+      <div ref={searchRef} className={`relative transition-all duration-300 ${focused ? 'w-48 sm:w-64 md:w-80' : 'w-24 sm:w-32 md:w-36'} mr-2 sm:mr-3`}>
+        <form onSubmit={handleSearchSubmit} className="relative flex items-center">
+          <FiSearch className="absolute left-3 text-gray-400 w-4 h-4 pointer-events-none z-10" />
+          <input
+            ref={inputRef}
+            type="text"
+            value={search}
+            onChange={handleSearchChange}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            placeholder={t('search.placeholder', 'Search...')}
+            className={`w-full pl-9 pr-3 py-1.5 sm:py-2 rounded-xl bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''}`}
+            style={{ minWidth: 0 }}
+          />
+        </form>
+
+        {/* Search Results Dropdown */}
+        <SearchDropdown
+          results={results}
+          isSearching={isSearching}
+          hasResults={hasResults}
+          query={search}
+          isVisible={showResults && search.length >= 2}
+          onClose={() => setShowResults(false)}
+          onItemClick={() => {
+            setSearch('');
+            inputRef.current?.blur();
+          }}
         />
-      </form>
+      </div>
       
       {/* Navigation links */}
       <div className="flex gap-x-1 sm:gap-x-2 flex-1 justify-end min-w-0">

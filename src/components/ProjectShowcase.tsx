@@ -28,8 +28,43 @@ const projects = [
     image: "/images/demo/shipping.jpg",
     translationKey: "3pl"
   },
- 
 ];
+
+// Enhanced service tags for each project category
+const projectTags = {
+  about: [
+    "Global Supply Chain", "Chemical Trading", "Import Export", "Quality Assurance", 
+    "Regulatory Compliance", "Market Intelligence", "Strategic Partnerships", "Industry Expertise",
+    "Customer Support", "Innovation Hub", "Sustainability", "Risk Management",
+    "Supply Chain Optimization", "Global Network", "Technical Support", "Market Analysis",
+    "Business Solutions", "Trade Finance", "Logistics Excellence", "Chemical Distribution",
+    "Industry Leadership", "Operational Excellence", "Client Relations", "Market Expansion"
+  ],
+  chemical: [
+    "Petrochemicals", "Specialty Chemicals", "Bulk Chemicals", "Fine Chemicals",
+    "Pharmaceutical Intermediates", "Agricultural Chemicals", "Industrial Solvents", "Polymer Additives",
+    "Catalyst Systems", "Chemical Processing", "Quality Control", "Product Development",
+    "Chemical Analysis", "Formulation Services", "Custom Synthesis", "Chemical Storage",
+    "Hazmat Handling", "Chemical Packaging", "Technical Documentation", "Regulatory Support",
+    "Chemical Sourcing", "Product Innovation", "Chemical Engineering", "Process Optimization"
+  ],
+  ftwz: [
+    "Free Trade Zone", "Warehousing Solutions", "Inventory Management", "Cross Docking",
+    "Distribution Centers", "Customs Clearance", "Duty Optimization", "Storage Facilities",
+    "Material Handling", "Order Fulfillment", "Supply Chain Integration", "Logistics Coordination",
+    "Trade Facilitation", "Bonded Storage", "Export Processing", "Import Management",
+    "Cargo Handling", "Documentation Services", "Compliance Management", "Cost Optimization",
+    "Freight Forwarding", "Transportation Services", "Value Added Services", "Digital Tracking"
+  ],
+  "3pl": [
+    "Third Party Logistics", "End-to-End Solutions", "Supply Chain Management", "Freight Management",
+    "Transportation Planning", "Route Optimization", "Delivery Services", "Last Mile Delivery",
+    "Warehouse Management", "Distribution Network", "Logistics Consulting", "Supply Chain Analytics",
+    "Vendor Management", "Procurement Services", "Inventory Optimization", "Order Processing",
+    "Shipping Solutions", "Cargo Insurance", "Track & Trace", "Real-time Monitoring",
+    "Multi-modal Transport", "International Shipping", "Domestic Distribution", "Logistics Technology"
+  ]
+};
 
 const CustomCursor: React.FC<{ visible: boolean; x: number; y: number; text: string }> = ({ visible, x, y, text }) => (
   <div
@@ -61,6 +96,61 @@ const CustomCursor: React.FC<{ visible: boolean; x: number; y: number; text: str
   </div>
 );
 
+// Modern animated tag component with smooth transitions
+const ModernAnimatedTag: React.FC<{ 
+  tag: string; 
+  isVisible: boolean; 
+  delay: number;
+  index: number;
+}> = ({ tag, isVisible, delay, index }) => {
+  return (
+    <span
+      className="inline-block relative overflow-hidden"
+      style={{
+        transform: isVisible ? 'translateY(0)' : 'translateY(100%)',
+        opacity: isVisible ? 1 : 0,
+        transition: `all 0.6s cubic-bezier(0.4, 0, 0.2, 1)`,
+        transitionDelay: `${delay}ms`,
+      }}
+    >
+      <span
+        className="inline-block px-3 py-1.5 text-sm font-medium rounded-full border transition-all duration-300 hover:scale-105"
+        style={{
+          background: 'linear-gradient(135deg, #EBF4FF, #DBEAFE)',
+          color: '#1E40AF',
+          border: '1px solid #93C5FD',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        }}
+      >
+        {tag}
+      </span>
+    </span>
+  );
+};
+
+// Tag container with staggered animations
+const TagContainer: React.FC<{ 
+  tags: string[]; 
+  currentTagSet: number;
+  projectKey: string;
+}> = ({ tags, currentTagSet, projectKey }) => {
+  const visibleTags = tags.slice(currentTagSet * 6, (currentTagSet + 1) * 6);
+  
+  return (
+    <div className="flex flex-wrap gap-2 min-h-[80px] items-start">
+      {visibleTags.map((tag, index) => (
+        <ModernAnimatedTag
+          key={`${projectKey}-${currentTagSet}-${tag}`}
+          tag={tag}
+          isVisible={true}
+          delay={index * 100}
+          index={index}
+        />
+      ))}
+    </div>
+  );
+};
+
 const ProjectShowcase = () => {
   const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -69,53 +159,38 @@ const ProjectShowcase = () => {
   const descRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [cursor, setCursor] = React.useState({ visible: false, x: 0, y: 0 });
 
-  // Helper function to safely get tags array
-  const getProjectTags = (translationKey: string): string[] => {
-    const tags = t(`projects.${translationKey}.tags`, { returnObjects: true });
-    return Array.isArray(tags) ? tags.map(tag => String(tag)) : [];
-  };
+  // State for managing tag animations
+  const [currentTagSets, setCurrentTagSets] = React.useState<{ [key: string]: number }>({
+    about: 0,
+    chemical: 0,
+    ftwz: 0,
+    "3pl": 0
+  });
+  const [isAnimating, setIsAnimating] = React.useState(false);
 
-  // Shuffle state for tags per project
-  const [shuffledTags, setShuffledTags] = React.useState<{ [key: string]: string[] }>({});
-  const [fade, setFade] = React.useState(false);
-
-  // Shuffle function
-  function shuffleArray<T>(array: T[]): T[] {
-    const arr = [...array];
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-  }
-
-  // Set up shuffling for each project
+  // Enhanced tag cycling with smooth transitions
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(true);
+      setIsAnimating(true);
+      
       setTimeout(() => {
-        setShuffledTags(prev => {
-          const newTags: { [key: string]: string[] } = {};
-          for (const project of projects) {
-            const tags = getProjectTags(project.translationKey);
-            newTags[project.translationKey] = shuffleArray(tags);
-          }
-          return newTags;
+        setCurrentTagSets(prev => {
+          const newSets: { [key: string]: number } = {};
+          Object.keys(prev).forEach(key => {
+            const maxSets = Math.ceil(projectTags[key as keyof typeof projectTags].length / 6);
+            newSets[key] = (prev[key] + 1) % maxSets;
+          });
+          return newSets;
         });
-        setFade(false);
-      }, 250); // fade out before shuffle
-    }, 2000);
-    // Initial shuffle
-    setShuffledTags(() => {
-      const newTags: { [key: string]: string[] } = {};
-      for (const project of projects) {
-        const tags = getProjectTags(project.translationKey);
-        newTags[project.translationKey] = shuffleArray(tags);
-      }
-      return newTags;
-    });
+        
+        setTimeout(() => {
+          setIsAnimating(false);
+        }, 100);
+      }, 300);
+    }, 3500); // Change every 3.5 seconds
+
     return () => clearInterval(interval);
-  }, [t]);
+  }, []);
 
   useEffect(() => {
     // Disable scroll-trigger animation on mobile and desktop to prevent unwanted horizontal scroll
@@ -198,7 +273,7 @@ const ProjectShowcase = () => {
       <div className="sm:hidden flex flex-col items-center space-y-8 px-4 py-8 bg-white">
         {projects.map((project) => (
           <Link key={project.slug} href={project.slug === 'chemical-products' ? '/product/chemical' : `/services/${project.slug}`} className="w-full max-w-md">
-            <div className="bg-white rounded-3xl p-6 shadow-lg">
+            <div className="bg-white rounded-3xl p-6 shadow-lg border border-gray-100">
               <Image
                 src={project.image}
                 alt={t(`projects.${project.translationKey}.title`)}
@@ -212,10 +287,15 @@ const ProjectShowcase = () => {
               <p className="text-base text-gray-600 mb-4">
                 {t(`projects.${project.translationKey}.description`)}
               </p>
-              <div className="flex flex-wrap gap-2">
-                {(shuffledTags[project.translationKey] || getProjectTags(project.translationKey)).map((tag: string) => (
-                  <AnimatedTag key={tag} tag={tag} fade={fade} />
-                ))}
+              <div 
+                className="transition-opacity duration-300"
+                style={{ opacity: isAnimating ? 0.6 : 1 }}
+              >
+                <TagContainer
+                  tags={projectTags[project.translationKey as keyof typeof projectTags]}
+                  currentTagSet={currentTagSets[project.translationKey]}
+                  projectKey={project.translationKey}
+                />
               </div>
             </div>
           </Link>
@@ -268,17 +348,19 @@ const ProjectShowcase = () => {
                 ref={el => { descRefs.current[i] = el; }}
                 style={{
                   position: "absolute",
-                  top: "68%",
+                  top: "65%",
                   right: "4vw",
                   transform: "translateY(-50%)",
-                  width: "34vw",
-                  background: "transparent",
+                  width: "36vw",
+                  background: "rgba(255, 255, 255, 0.95)",
+                  backdropFilter: "blur(10px)",
                   padding: "2.5rem 2rem",
                   borderRadius: "2rem",
                   zIndex: 2,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
+                  border: "1px solid rgba(255, 255, 255, 0.2)"
                 }}
               >
                 <h2 style={{
@@ -296,10 +378,18 @@ const ProjectShowcase = () => {
                 }}>
                   {t(`projects.${project.translationKey}.description`)}
                 </p>
-                <div style={{ display: "flex", gap: "0.7rem", flexWrap: "wrap" }}>
-                  {(shuffledTags[project.translationKey] || getProjectTags(project.translationKey)).map((tag: string) => (
-                    <AnimatedTag key={tag} tag={tag} fade={fade} />
-                  ))}
+                <div 
+                  style={{ 
+                    width: "100%",
+                    transition: "opacity 0.3s ease-in-out",
+                    opacity: isAnimating ? 0.6 : 1 
+                  }}
+                >
+                  <TagContainer
+                    tags={projectTags[project.translationKey as keyof typeof projectTags]}
+                    currentTagSet={currentTagSets[project.translationKey]}
+                    projectKey={project.translationKey}
+                  />
                 </div>
               </div>
             </Link>
@@ -309,35 +399,5 @@ const ProjectShowcase = () => {
     </section>
   );
 };
-
-// Replace tag rendering with letter-by-letter animation
-// Helper for splitting tag into spans
-function AnimatedTag({ tag, fade }: { tag: string, fade: boolean }) {
-  return (
-    <span
-      className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full"
-      style={{
-        display: 'inline-block',
-        opacity: fade ? 0 : 1,
-        transition: 'opacity 0.25s',
-        whiteSpace: 'nowrap',
-      }}
-    >
-      {tag.split('').map((char, idx) => (
-        <span
-          key={idx}
-          style={{
-            display: 'inline-block',
-            transition: 'opacity 0.25s',
-            transitionDelay: fade ? '0ms' : `${idx * 30}ms`,
-            opacity: fade ? 0 : 1,
-          }}
-        >
-          {char}
-        </span>
-      ))}
-    </span>
-  );
-}
 
 export default ProjectShowcase; 
