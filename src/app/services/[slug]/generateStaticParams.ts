@@ -10,7 +10,7 @@ export const serviceImages = [
   },
   {
     slug: 'end-to-end-solutions',
-    image: '/images/demo/shipping.jpg',
+    image: '/images/end-to-end.jpg',
     fullImage: '/images/3pl2.jpg',
     smallImages: [
       '/images/3pl1.jpg',
