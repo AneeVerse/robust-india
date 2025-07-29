@@ -77,31 +77,33 @@ export default function ServicesPage() {
             <span className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
           </Link>
           {/* Heading */}
-          <motion.h1 
-            className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light text-center text-gray-900 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-18 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-20 px-1 sm:px-2 max-w-5xl mx-auto break-words" 
-            style={{ fontFamily: 'NoiGrotesk, sans-serif', wordBreak: 'break-word', hyphens: 'auto' }}
-            initial="hidden"
-            animate="visible"
-          >
-            {t('servicesPage.heading').replace('service offerings', 'service  offerings').split('').map((char, idx) => (
-              <motion.span
-                key={idx}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { 
-                    opacity: 1, 
-                    y: 0,
-                    transition: {
-                      duration: 0.5,
-                      delay: idx * 0.03
+          <div className="w-full overflow-x-auto ">
+            <motion.h1 
+              className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light text-center text-gray-900 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-18 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:-mt-0 px-1 sm:px-2 max-w-5xl mx-auto break-words" 
+              style={{ fontFamily: 'NoiGrotesk, sans-serif', wordBreak: 'break-word', hyphens: 'auto' }}
+              initial="hidden"
+              animate="visible"
+            >
+              {t('servicesPage.heading').replace('service offerings', 'service  offerings').split('').map((char, idx) => (
+                <motion.span
+                  key={idx}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { 
+                      opacity: 1, 
+                      y: 0,
+                      transition: {
+                        duration: 0.5,
+                        delay: idx * 0.03
+                      }
                     }
-                  }
-                }}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </motion.h1>
+                  }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.h1>
+          </div>
           
           {/* Services Container */}
           <div
@@ -110,29 +112,41 @@ export default function ServicesPage() {
             onMouseLeave={handleMouseLeave}
           >
             <CustomCursor visible={cursor.visible} x={cursor.x} y={cursor.y} />
-            {/* Service images */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 w-full">
-            {services.map((service, idx) => (
-              <Link key={service.slug} href={`/services/${service.slug}`} className="block rounded-2xl sm:rounded-3xl lg:rounded-4xl overflow-hidden shadow-lg bg-white">
-                <Image
-                  src={serviceImagesArr[idx]}
-                  alt={service.title}
-                  width={1200}
-                  height={600}
-                  className="w-full h-auto object-cover"
-                />
-              </Link>
-            ))}
-          </div>
-          {/* Titles and descriptions */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-6 sm:mt-8 w-full text-left">
-            {services.map((service) => (
-              <Link key={service.slug} href={`/services/${service.slug}`} className="block px-2 sm:px-4">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{service.title}</h2>
-                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{service.description}</p>
-              </Link>
-            ))}
-          </div>
+            {/* New horizontal zig-zag layout */}
+            <div className="flex flex-col lg:flex-row items-stretch gap-6 sm:gap-8 w-full mt-10 mb-10">
+              {/* First image + text pair */}
+              <div className="flex flex-row items-center w-full lg:w-[48%] gap-4">
+                <Link href={`/services/${services[0].slug}`} className="block flex-shrink-0 w-[45%]">
+                  <Image
+                    src={serviceImagesArr[0]}
+                    alt={services[0].title}
+                    width={600}
+                    height={600}
+                    className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl lg:rounded-4xl shadow-lg bg-white"
+                  />
+                </Link>
+                <Link href={`/services/${services[0].slug}`} className="block flex-1 flex flex-col justify-center text-left">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{services[0].title}</h2>
+                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{services[0].description}</p>
+                </Link>
+              </div>
+              {/* Second image + text pair */}
+              <div className="flex flex-row items-center w-full lg:w-[48%] gap-4">
+                <Link href={`/services/${services[1].slug}`} className="block flex-shrink-0 w-[45%]">
+                  <Image
+                    src={serviceImagesArr[1]}
+                    alt={services[1].title}
+                    width={600}
+                    height={600}
+                    className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl lg:rounded-4xl shadow-lg bg-white"
+                  />
+                </Link>
+                <Link href={`/services/${services[1].slug}`} className="block flex-1 flex flex-col justify-center text-left">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-gray-900 mb-2">{services[1].title}</h2>
+                  <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed line-clamp-2 max-w-full sm:max-w-[500px]" style={{ display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{services[1].description}</p>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
       </div>
