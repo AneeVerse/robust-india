@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { useNavbarVisibility } from '@/context/NavbarVisibilityContext';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import { FiSearch } from 'react-icons/fi';
 
 // Nav link definitions will be built with translated names inside the component.
 
@@ -28,6 +30,8 @@ export default function Navbar() {
 
 function NavbarContent() {
   const { t } = useTranslation('common');
+  const [search, setSearch] = useState('');
+  const [focused, setFocused] = useState(false);
 
   const navLinks = [
     { name: t('nav.about'), href: '/about' },
@@ -36,13 +40,22 @@ function NavbarContent() {
     { name: t('nav.contact'), href: '/contact', highlight: true },
   ];
 
+  const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (search.trim()) {
+      // For now, just log the query. Replace with real search logic as needed.
+      console.log('Search:', search);
+      // Optionally, clear input or show results
+    }
+  };
+
   return (
-    <div className="relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg max-w-lg mx-auto border border-[#3c3a38] pointer-events-auto backdrop-blur-md">
+    <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${focused ? 'max-w-3xl' : 'max-w-xl'}`}>
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       
       {/* Logo section */}
-      <div className="flex items-center mr-3 sm:mr-4 flex-shrink-0">
+      <div className="flex items-center mr-2 sm:mr-3 flex-shrink-0">
         <Link href="/" className="block p-1 -m-1 rounded-lg hover:bg-white/10 transition-colors duration-200">
           <Image
             src="/images/nav-logo.png"
@@ -54,17 +67,26 @@ function NavbarContent() {
         </Link>
       </div>
       
-      {/* Vertical Divider */}
-      <div
-        className="h-8 w-[1px] mx-2 sm:mx-3 flex-shrink-0"
-        style={{
-          background: 'linear-gradient(to right, rgba(255,255,255,0.35) 0%, #333 50%, #000 100%)',
-          borderRadius: '1px',
-        }}
-      />
+      {/* Search bar */}
+      <form
+        onSubmit={handleSearchSubmit}
+        className={`relative flex items-center transition-all duration-300 ${focused ? 'w-48 sm:w-64 md:w-80' : 'w-24 sm:w-32 md:w-36'} mr-2 sm:mr-3`}
+      >
+        <FiSearch className="absolute left-3 text-gray-400 w-4 h-4 pointer-events-none" />
+        <input
+          type="text"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          placeholder={t('search.placeholder', 'Search...')}
+          className={`w-full pl-9 pr-3 py-1.5 sm:py-2 rounded-xl bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''}`}
+          style={{ minWidth: 0 }}
+        />
+      </form>
       
       {/* Navigation links */}
-      <div className="flex gap-x-2 sm:gap-x-3 flex-1 justify-end min-w-0">
+      <div className="flex gap-x-1 sm:gap-x-2 flex-1 justify-end min-w-0">
         {navLinks.map((link) => (
           link.href.startsWith('#') ? (
             link.highlight ? (
