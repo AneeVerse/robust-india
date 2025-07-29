@@ -78,31 +78,31 @@ export default function ServicesPage() {
           </Link>
           {/* Heading */}
           <div className="w-full flex justify-center items-center overflow-x-auto">
-            <motion.h1 
+          <motion.h1 
               className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light text-center text-gray-900 mb-6 sm:mb-8 md:mb-12 lg:mb-16 xl:mb-18 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:-mt-0 px-1 sm:px-2 whitespace-nowrap" 
               style={{ fontFamily: 'NoiGrotesk, sans-serif' }}
-              initial="hidden"
-              animate="visible"
-            >
-              {t('servicesPage.heading').replace('service offerings', 'service  offerings').split('').map((char, idx) => (
-                <motion.span
-                  key={idx}
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { 
-                      opacity: 1, 
-                      y: 0,
-                      transition: {
-                        duration: 0.5,
-                        delay: idx * 0.03
-                      }
+            initial="hidden"
+            animate="visible"
+          >
+            {t('servicesPage.heading').replace('service offerings', 'service  offerings').split('').map((char, idx) => (
+              <motion.span
+                key={idx}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      delay: idx * 0.03
                     }
-                  }}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </motion.h1>
+                  }
+                }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.h1>
           </div>
           
           {/* Beautiful Alternating Services Layout */}
@@ -219,9 +219,9 @@ export default function ServicesPage() {
                   <div className="relative group w-full sm:w-1/2 flex-shrink-0">
                     <Link href={`/services/${service.slug}`} className="block relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-100 p-2">
                       <div className="relative overflow-hidden rounded-2xl">
-                        <Image
+                <Image
                           src={serviceImagesArr[index]}
-                          alt={service.title}
+                  alt={service.title}
                           width={600}
                           height={400}
                           className="w-full h-[200px] sm:h-[240px] object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
@@ -229,7 +229,7 @@ export default function ServicesPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                       <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
-                    </Link>
+              </Link>
                   </div>
                   
                   <div className="flex flex-col justify-center space-y-4 w-full sm:w-1/2 text-center sm:text-left">
@@ -245,12 +245,12 @@ export default function ServicesPage() {
                         <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                      </div>
-                    </Link>
+          </div>
+              </Link>
                   </div>
                 </motion.div>
-              ))}
-            </div>
+            ))}
+          </div>
           </div>
         </section>
       </div>
