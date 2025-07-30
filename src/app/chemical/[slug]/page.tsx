@@ -78,6 +78,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
     // Add more fields as needed
   };
   const sectionHeadings: { [key: string]: { [lang: string]: string } } = {
+    overview: { en: 'Overview', ru: 'Обзор' },
     identification: { en: 'Identification', ru: 'Идентификация' },
     physicalChemicalProperties: { en: 'Physical & Chemical Properties', ru: 'Физические и химические свойства' },
     gradesPurity: { en: 'Grades & Purity', ru: 'Сорта и чистота' },
@@ -106,6 +107,77 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
 
       <section className="w-full px-4 sm:px-6 md:px-8 py-16">
         <div className="max-w-6xl mx-auto space-y-16">
+          {/* Overview Section */}
+          {overview && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                {sectionHeadings['overview'][currentLang]}
+              </h3>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                    {overview.name}
+                  </h4>
+                  <p className="text-gray-700 leading-relaxed text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                    {(overview as any).overviewDescription || overview.description}
+                  </p>
+                </div>
+
+                {/* Key Features */}
+                {(overview as any).keyFeatures && (
+                  <div>
+                    <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                      {currentLang === 'en' ? 'Key Features' : 'Ключевые особенности'}
+                    </h5>
+                    <ul className="space-y-2">
+                      {(overview as any).keyFeatures.map((feature: string, idx: number) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-[#6164F6] rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Major Applications */}
+                {(overview as any).majorApplications && (
+                  <div>
+                    <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                      {currentLang === 'en' ? 'Major Applications' : 'Основные применения'}
+                    </h5>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {(overview as any).majorApplications.map((application: string, idx: number) => (
+                        <div key={idx} className="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
+                          <span className="text-gray-700 font-medium" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {application}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Industrial Significance */}
+                {(overview as any).industrialSignificance && (
+                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
+                    <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                      {currentLang === 'en' ? 'Industrial Significance' : 'Промышленное значение'}
+                    </h5>
+                    <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                      {(overview as any).industrialSignificance}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* Identification Section */}
           {identification && (
             <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
