@@ -134,45 +134,12 @@ function NavbarContent() {
           />
         </Link>
       </div>
-      
-      {/* Search bar with dropdown */}
-      <div ref={searchRef} className={`relative transition-all duration-300 ${
-        focused 
-          ? isRussian ? 'w-40 sm:w-48 md:w-72 lg:w-96' : 'w-36 sm:w-48 md:w-64 lg:w-80'
-          : isRussian ? 'w-20 sm:w-28 md:w-36 lg:w-40' : 'w-18 sm:w-24 md:w-32 lg:w-36'
-      } mr-1.5 sm:mr-2 md:mr-3`}>
-        <form onSubmit={handleSearchSubmit} className="relative flex items-center">
-          <FiSearch className="absolute left-2 sm:left-3 text-gray-400 w-3 h-3 sm:w-4 sm:h-4 pointer-events-none z-10" />
-          <input
-            ref={inputRef}
-            type="text"
-            value={search}
-            onChange={handleSearchChange}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            placeholder={t('search.placeholder', 'Search...')}
-            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-1 sm:focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-1 sm:ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''} ${isRussian ? 'text-xs sm:text-sm' : ''}`}
-            style={{ minWidth: 0 }}
-          />
-        </form>
 
-        {/* Search Results Dropdown */}
-        <SearchDropdown
-          results={results}
-          isSearching={isSearching}
-          hasResults={hasResults}
-          query={search}
-          isVisible={showResults && search.length >= 2}
-          onClose={() => setShowResults(false)}
-          onItemClick={() => {
-            setSearch('');
-            inputRef.current?.blur();
-          }}
-        />
-      </div>
+      {/* Vertical line */}
+      <div className="w-px h-6 sm:h-8 md:h-10 bg-white/20 mr-1.5 sm:mr-2 md:mr-3 flex-shrink-0" />
       
       {/* Navigation links */}
-      <div className={`flex gap-x-0.5 sm:gap-x-1 md:gap-x-2 flex-1 justify-end min-w-0 ${isRussian ? 'gap-x-0.5' : ''}`}>
+      <div className={`flex gap-x-0.5 sm:gap-x-1 md:gap-x-2 flex-1 justify-start min-w-0 ${isRussian ? 'gap-x-0.5' : ''}`}>
         {navLinks.map((link) => (
           link.href.startsWith('#') ? (
             link.highlight ? (
@@ -254,6 +221,45 @@ function NavbarContent() {
             )
           )
         ))}
+      </div>
+
+      {/* Vertical line before search */}
+      <div className="w-px h-6 sm:h-8 md:h-10 bg-white/20 mx-1.5 sm:mx-2 md:mx-3 flex-shrink-0" />
+      
+      {/* Search bar with dropdown */}
+      <div ref={searchRef} className={`relative transition-all duration-300 ${
+        focused 
+          ? isRussian ? 'w-28 sm:w-36 md:w-44 lg:w-60' : 'w-20 sm:w-28 md:w-40 lg:w-52'
+          : isRussian ? 'w-14 sm:w-18 md:w-20 lg:w-24' : 'w-14 sm:w-18 md:w-20 lg:w-24'
+      }`}>
+        <form onSubmit={handleSearchSubmit} className="relative flex items-center">
+          <FiSearch className="absolute left-2 sm:left-3 text-gray-400 w-3 h-3 sm:w-4 sm:h-4 pointer-events-none z-10" />
+          <input
+            ref={inputRef}
+            type="text"
+            value={search}
+            onChange={handleSearchChange}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            placeholder={t('search.placeholder', 'Search')}
+            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-1 sm:focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-1 sm:ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''} ${isRussian ? 'text-xs sm:text-sm' : ''}`}
+            style={{ minWidth: 0 }}
+          />
+        </form>
+
+        {/* Search Results Dropdown */}
+        <SearchDropdown
+          results={results}
+          isSearching={isSearching}
+          hasResults={hasResults}
+          query={search}
+          isVisible={showResults && search.length >= 2}
+          onClose={() => setShowResults(false)}
+          onItemClick={() => {
+            setSearch('');
+            inputRef.current?.blur();
+          }}
+        />
       </div>
     </div>
   );
