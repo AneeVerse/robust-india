@@ -643,12 +643,11 @@
       "description": "A wide portfolio of high-quality specialty and bulk chemicals sourced, packaged, and delivered to spec.",
       "tags": ["Chemical Products", "Global Distribution", "Packaging", "Brand Identity"],
       "detailedTags": [
-        "Petrochemicals", "Specialty Chemicals", "Bulk Chemicals", "Fine Chemicals",
-        "Pharmaceutical Intermediates", "Agricultural Chemicals", "Industrial Solvents", "Polymer Additives",
-        "Catalyst Systems", "Chemical Processing", "Quality Control", "Product Development",
-        "Chemical Analysis", "Formulation Services", "Custom Synthesis", "Chemical Storage",
-        "Hazmat Handling", "Chemical Packaging", "Technical Documentation", "Regulatory Support",
-        "Chemical Sourcing", "Product Innovation", "Chemical Engineering", "Process Optimization"
+        "Basic Petrochemicals", "Fuel Additives", "Polymers & Intermediates", "Phosphorus Chemicals",
+        "Sulfur Chemicals", "Amines & Derivatives", "Phenols & Derivatives", "Aromatics & Derivatives",
+        "Acrylic Monomers", "Cyanide Chemicals", "Organometallic Chemicals", "Additives & Lubricants",
+        "Inorganic Chemicals", "Alcohols & Glycols", "Solvents & Hydrocarbons", "Naphtha",
+        "Benzene", "Toluene", "Xylene", "Methanol", "Ethanol", "Acetone", "Propylene", "Paraxylene"
       ]
     },
     "ftwz": {
@@ -669,12 +668,14 @@
       "description": "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",
       "tags": ["Integrated 3PL", "Logistics", "Storage", "Global Distribution"],
       "detailedTags": [
-        "Third Party Logistics", "End-to-End Solutions", "Supply Chain Management", "Freight Management",
-        "Transportation Planning", "Route Optimization", "Delivery Services", "Last Mile Delivery",
-        "Warehouse Management", "Distribution Network", "Logistics Consulting", "Supply Chain Analytics",
-        "Vendor Management", "Procurement Services", "Inventory Optimization", "Order Processing",
-        "Shipping Solutions", "Cargo Insurance", "Track & Trace", "Real-time Monitoring",
-        "Multi-modal Transport", "International Shipping", "Domestic Distribution", "Logistics Technology"
+        "Custom Product Development", "Global Sourcing & Procurement", "Quality Inspection & Assurance",
+        "Compliant Packaging Solutions", "Logistics & Freight Management", "Secure Warehousing & Inventory Control",
+        "Single-Point Accountability", "Faster Time-to-Market", "Cost Optimization", "Regulatory Confidence",
+        "Formulation & R&D", "Pilot-Scale Trials", "Scale-Up Support", "Supplier Vetting",
+        "Competitive Negotiation", "Supply Assurance", "Incoming QC", "In-House Laboratory",
+        "Third-Party Certification", "UN/IMDG-Certified Packaging", "Customized Labeling", "Protective Inner-Packaging",
+        "Multimodal Planning", "Trade-Term Expertise", "Haz-Cargo Specialists", "Bonded & Non-Bonded Storage",
+        "Real-Time Tracking", "Cycle Counting & Audits"
       ]
     },
     "oilAndGas": {

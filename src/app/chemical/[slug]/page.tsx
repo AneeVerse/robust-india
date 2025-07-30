@@ -13,22 +13,50 @@ interface ChemicalParams {
   slug: string;
 }
 
+interface ChemicalOverview {
+  name: string;
+  description: string;
+  overviewDescription?: string;
+  keyFeatures?: string[];
+  majorApplications?: string[];
+  industrialSignificance?: string;
+}
+
+interface ChemicalData {
+  overview: ChemicalOverview;
+  identification?: Record<string, string>;
+  physicalChemicalProperties?: Record<string, string | number | boolean | object | undefined>;
+  physicalProperties?: Record<string, string | number | boolean | object | undefined>;
+  gradesPurity?: Record<string, string>;
+  applicationsUses?: {
+    applications: Array<{ title: string; description: string }>;
+    industriesServed: string[];
+  };
+  applications?: Array<{ title: string; description: string }>;
+  industriesServed?: string[];
+  storageHandling?: Record<string, string>;
+  safetyRegulatory?: Record<string, string>;
+}
+
 export default function ChemicalDetailPage({ params }: { params: Promise<ChemicalParams> }) {
   const { t, i18n } = useTranslation('common');
   const { slug } = use(params);
-  const chemical = t(`chemicalDetail.products.${slug}`, { returnObjects: true });
+  const chemical = t(`chemicalDetail.products.${slug}`, { returnObjects: true }) as ChemicalData;
 
   // Fallback for legacy chemicals
-  const overview = (chemical as unknown as { overview: { name: string; description: string } })?.overview || { name: (chemical as unknown as { name: string })?.name, description: (chemical as unknown as { description: string })?.description };
-  const identification = (chemical as unknown as { [key: string]: string })?.identification;
-  const physical = (chemical as unknown as { [key: string]: string })?.physicalChemicalProperties || (chemical as unknown as { [key: string]: string })?.physicalProperties;
-  const gradesPurity = (chemical as unknown as { [key: string]: string })?.gradesPurity;
-  const applicationsUses: { applications: Array<{ title: string; description: string }>; industriesServed: string[] } = (chemical as unknown as { applicationsUses: { applications: Array<{ title: string; description: string }>; industriesServed: string[] } })?.applicationsUses || {
-    applications: (chemical as unknown as { applications: Array<{ title: string; description: string }> })?.applications,
-    industriesServed: (chemical as unknown as { industriesServed: string[] })?.industriesServed,
+  const overview: ChemicalOverview = chemical?.overview || { 
+    name: (chemical as unknown as { name: string })?.name || '', 
+    description: (chemical as unknown as { description: string })?.description || '' 
   };
-  const storageHandling = (chemical as unknown as { [key: string]: string })?.storageHandling;
-  const safetyRegulatory = (chemical as unknown as { [key: string]: string })?.safetyRegulatory;
+  const identification = chemical?.identification;
+  const physical = chemical?.physicalChemicalProperties || chemical?.physicalProperties;
+  const gradesPurity = chemical?.gradesPurity;
+  const applicationsUses: { applications: Array<{ title: string; description: string }>; industriesServed: string[] } = chemical?.applicationsUses || {
+    applications: chemical?.applications || [],
+    industriesServed: chemical?.industriesServed || [],
+  };
+  const storageHandling = chemical?.storageHandling;
+  const safetyRegulatory = chemical?.safetyRegulatory;
 
   if (!overview || !overview.name) {
     return <div className="p-20 text-center">{t('chemicalDetail.notFound')}</div>;
@@ -122,18 +150,18 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                     {overview.name}
                   </h4>
                   <p className="text-gray-700 leading-relaxed text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                    {(overview as any).overviewDescription || overview.description}
+                    {overview.overviewDescription || overview.description}
                   </p>
                 </div>
 
                 {/* Key Features */}
-                {(overview as any).keyFeatures && (
+                {overview.keyFeatures && (
                   <div>
                     <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {currentLang === 'en' ? 'Key Features' : 'Ключевые особенности'}
                     </h5>
                     <ul className="space-y-2">
-                      {(overview as any).keyFeatures.map((feature: string, idx: number) => (
+                      {overview.keyFeatures.map((feature: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-[#6164F6] rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
@@ -146,13 +174,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 )}
 
                 {/* Major Applications */}
-                {(overview as any).majorApplications && (
+                {overview.majorApplications && (
                   <div>
                     <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {currentLang === 'en' ? 'Major Applications' : 'Основные применения'}
                     </h5>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {(overview as any).majorApplications.map((application: string, idx: number) => (
+                      {overview.majorApplications.map((application: string, idx: number) => (
                         <div key={idx} className="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
                           <span className="text-gray-700 font-medium" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                             {application}
@@ -164,13 +192,13 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 )}
 
                 {/* Industrial Significance */}
-                {(overview as any).industrialSignificance && (
+                {overview.industrialSignificance && (
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
                     <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {currentLang === 'en' ? 'Industrial Significance' : 'Промышленное значение'}
                     </h5>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {(overview as any).industrialSignificance}
+                      {overview.industrialSignificance}
                     </p>
                   </div>
                 )}

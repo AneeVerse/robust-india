@@ -11,7 +11,7 @@ import { useTranslation } from 'next-i18next';
 
 const serviceImagesArr = [
   '/images/demo/ftw.jpg',
-  '/images/end-to-end.jpg',
+  '/images/end-to-end2.jpg',
 ];
 
 const CustomCursor: React.FC<{ visible: boolean; x: number; y: number }> = ({ visible, x, y }) => {

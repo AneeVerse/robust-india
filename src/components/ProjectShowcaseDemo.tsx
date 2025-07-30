@@ -22,7 +22,7 @@ const projects = [
     tags: ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"],
   },
   { slug: 'integrated-3pl',
-    image: "/images/end-to-end.jpg",
+    image: "/images/end-to-end2.jpg",
     title: "Integrated 3PL",
     description:
       "End-to-end logistics including storage, handling, inventory management, and efficient global distribution.",

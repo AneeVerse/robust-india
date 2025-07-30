@@ -115,10 +115,8 @@ function NavbarContent() {
 
   return (
     <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-xl sm:rounded-2xl md:rounded-3xl px-1.5 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-2 md:py-2.5 lg:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${
-      focused 
-        ? isRussian ? 'max-w-5xl' : 'max-w-4xl' 
-        : isRussian ? 'max-w-3xl' : 'max-w-2xl'
-    }`}>
+      isRussian ? 'max-w-3xl' : 'max-w-2xl'
+    }`} style={{ width: isRussian ? 'max-content' : 'max-content' }}>
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       
@@ -139,7 +137,7 @@ function NavbarContent() {
       <div className="w-px h-6 sm:h-8 md:h-10 bg-white/20 mr-1.5 sm:mr-2 md:mr-3 flex-shrink-0" />
       
       {/* Navigation links */}
-      <div className={`flex gap-x-0.5 sm:gap-x-1 md:gap-x-2 flex-1 justify-start min-w-0 ${isRussian ? 'gap-x-0.5' : ''}`}>
+      <div className={`flex gap-x-0.5 sm:gap-x-1 md:gap-x-2 justify-start min-w-0 transition-all duration-300 ${isRussian ? 'gap-x-0.5' : ''} flex-1 ${focused ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         {navLinks.map((link) => (
           link.href.startsWith('#') ? (
             link.highlight ? (
@@ -151,12 +149,17 @@ function NavbarContent() {
               >
                 <a
                   href={link.href}
-                  className={`font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] rounded-md sm:rounded-lg transition-all duration-300 flex items-center justify-center ${
+                  className={`group relative overflow-hidden font-bold bg-gradient-to-r from-[#6164F6] to-[#7C3AED] text-white shadow-md hover:shadow-lg transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#6164F6]/30 active:scale-95 backdrop-blur-sm rounded-md sm:rounded-lg flex items-center justify-center ${
                     isRussian 
                       ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                       : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                   }`}
                 >
+                  {/* Animated background overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] to-[#6164F6] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Content */}
+                  <div className="relative flex items-center">
                   <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
                   <Image
                     src="/images/contact-logo.svg"
@@ -165,6 +168,7 @@ function NavbarContent() {
                     height={16}
                     className={`ml-0.5 sm:ml-1 flex-shrink-0 ${isRussian ? 'w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 hidden md:block' : 'w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 hidden sm:block'}`}
                   />
+                  </div>
                 </a>
               </motion.div>
             ) : (
@@ -190,12 +194,17 @@ function NavbarContent() {
               >
                 <Link
                   href={link.href}
-                  className={`font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] rounded-md sm:rounded-lg transition-all duration-300 flex items-center justify-center ${
+                  className={`group relative overflow-hidden font-bold bg-gradient-to-r from-[#6164F6] to-[#7C3AED] text-white shadow-md hover:shadow-lg transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#6164F6]/30 active:scale-95 backdrop-blur-sm rounded-md sm:rounded-lg flex items-center justify-center ${
                     isRussian 
                       ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                       : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                   }`}
                 >
+                  {/* Animated background overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] to-[#6164F6] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Content */}
+                  <div className="relative flex items-center">
                   <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
                   <Image
                     src="/images/contact-logo.svg"
@@ -204,6 +213,7 @@ function NavbarContent() {
                     height={16}
                     className={`ml-0.5 sm:ml-1 flex-shrink-0 ${isRussian ? 'w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 hidden md:block' : 'w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 hidden sm:block'}`}
                   />
+                  </div>
                 </Link>
               </motion.div>
             ) : (
@@ -224,14 +234,15 @@ function NavbarContent() {
       </div>
 
       {/* Vertical line before search */}
-      <div className="w-px h-6 sm:h-8 md:h-10 bg-white/20 mx-1.5 sm:mx-2 md:mx-3 flex-shrink-0" />
+      <div className={`w-px h-6 sm:h-8 md:h-10 bg-white/20 mx-1.5 sm:mx-2 md:mx-3 flex-shrink-0 transition-opacity duration-300 ${focused ? 'opacity-0' : 'opacity-100'}`} />
       
       {/* Search bar with dropdown */}
-      <div ref={searchRef} className={`relative transition-all duration-300 ${
+  {/* Search bar with dropdown */}
+  <div ref={searchRef} className={`relative transition-all duration-300 cursor-text ${
         focused 
-          ? isRussian ? 'w-28 sm:w-36 md:w-44 lg:w-60' : 'w-20 sm:w-28 md:w-40 lg:w-52'
+          ? 'w-full'
           : isRussian ? 'w-14 sm:w-18 md:w-20 lg:w-24' : 'w-14 sm:w-18 md:w-20 lg:w-24'
-      }`}>
+      }`} onClick={() => inputRef.current?.focus()}>
         <form onSubmit={handleSearchSubmit} className="relative flex items-center">
           <FiSearch className="absolute left-2 sm:left-3 text-gray-400 w-3 h-3 sm:w-4 sm:h-4 pointer-events-none z-10" />
           <input
@@ -242,7 +253,7 @@ function NavbarContent() {
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder={t('search.placeholder', 'Search')}
-            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-1 sm:focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-1 sm:ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''} ${isRussian ? 'text-xs sm:text-sm' : ''}`}
+            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-0 outline-none shadow-inner transition-all duration-300 ${focused ? 'bg-[#232221]/95' : ''} ${isRussian ? 'text-xs sm:text-sm' : ''} cursor-text`}
             style={{ minWidth: 0 }}
           />
         </form>

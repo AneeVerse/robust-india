@@ -25,7 +25,7 @@ const projects = [
   },
   { 
     slug: 'end-to-end',
-    image: "/images/end-to-end.jpg",
+    image: "/images/end-to-end2.jpg",
     translationKey: "3pl"
   },
 ];
