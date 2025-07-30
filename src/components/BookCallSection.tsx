@@ -57,11 +57,11 @@ export default function BookCallSection() {
       </motion.h1>
       
       {/* Content container - more space between heading and content */}
-      <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row justify-between items-center">
+      <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
         {/* Left Side - Text with larger font and width for three lines */}
         <motion.div
           style={{ opacity: contentOpacity, y: contentY }}
-          className="w-full md:w-auto flex flex-col items-center md:items-start"
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start order-2 md:order-1"
         >
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-800 mb-6 sm:mb-10 max-w-xl leading-relaxed text-center md:text-left">
             {t('book.tagline')}
@@ -94,9 +94,9 @@ export default function BookCallSection() {
         {/* Right Side - Video with mute/unmute overlay */}
         <motion.div
           style={{ rotate, scale, x, y }}
-          className="mt-16 md:mt-0 flex justify-center md:justify-end w-full md:w-auto"
+          className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2"
         >
-          <div className="w-full aspect-video bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative sm:w-48 sm:h-64 md:w-72 md:h-88 -mb-20">
+          <div className="w-64 h-40 sm:w-72 sm:h-48 md:w-80 md:h-56 lg:w-96 lg:h-64 bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative">
             <video
               ref={videoRef}
               src="/video/letstalk4.mp4"
@@ -114,14 +114,14 @@ export default function BookCallSection() {
                   return !m;
                 });
               }}
-              className="absolute top-3 right-3 z-10 bg-gray-400/60 rounded-full p-1 w-9 h-9 flex items-center justify-center"
+              className="absolute top-2 right-2 sm:top-3 sm:right-3 z-10 bg-gray-400/60 rounded-full p-1 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center"
             >
               <Image
                 src={muted ? "/images/cta-mute.png" : "/images/cta-unmute.png"}
                 alt={muted ? "Muted" : "Unmuted"}
                 width={28}
                 height={28}
-                className="w-7 h-7"
+                className="w-6 h-6 sm:w-7 sm:h-7"
               />
             </button>
           </div>

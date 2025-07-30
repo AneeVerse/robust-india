@@ -114,23 +114,23 @@ function NavbarContent() {
   }, []);
 
   return (
-    <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-2xl sm:rounded-3xl px-2 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${
+    <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-xl sm:rounded-2xl md:rounded-3xl px-1.5 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-2 md:py-2.5 lg:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${
       focused 
-        ? isRussian ? 'max-w-4xl' : 'max-w-3xl' 
-        : isRussian ? 'max-w-2xl' : 'max-w-xl'
+        ? isRussian ? 'max-w-5xl' : 'max-w-4xl' 
+        : isRussian ? 'max-w-3xl' : 'max-w-2xl'
     }`}>
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       
       {/* Logo section */}
-      <div className="flex items-center mr-2 sm:mr-3 flex-shrink-0">
-        <Link href="/" className="block p-1 -m-1 rounded-lg hover:bg-white/10 transition-colors duration-200">
+      <div className="flex items-center mr-1.5 sm:mr-2 md:mr-3 flex-shrink-0">
+        <Link href="/" className="block p-0.5 sm:p-1 -m-0.5 sm:-m-1 rounded-lg hover:bg-white/10 transition-colors duration-200">
           <Image
             src="/images/nav-logo.png"
             alt="Robust India Nav Logo"
             width={36}
             height={36}
-            className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
           />
         </Link>
       </div>
@@ -138,11 +138,11 @@ function NavbarContent() {
       {/* Search bar with dropdown */}
       <div ref={searchRef} className={`relative transition-all duration-300 ${
         focused 
-          ? isRussian ? 'w-48 sm:w-72 md:w-96' : 'w-48 sm:w-64 md:w-80'
-          : isRussian ? 'w-28 sm:w-36 md:w-40' : 'w-24 sm:w-32 md:w-36'
-      } mr-2 sm:mr-3`}>
+          ? isRussian ? 'w-40 sm:w-48 md:w-72 lg:w-96' : 'w-36 sm:w-48 md:w-64 lg:w-80'
+          : isRussian ? 'w-20 sm:w-28 md:w-36 lg:w-40' : 'w-18 sm:w-24 md:w-32 lg:w-36'
+      } mr-1.5 sm:mr-2 md:mr-3`}>
         <form onSubmit={handleSearchSubmit} className="relative flex items-center">
-          <FiSearch className="absolute left-3 text-gray-400 w-4 h-4 pointer-events-none z-10" />
+          <FiSearch className="absolute left-2 sm:left-3 text-gray-400 w-3 h-3 sm:w-4 sm:h-4 pointer-events-none z-10" />
           <input
             ref={inputRef}
             type="text"
@@ -151,7 +151,7 @@ function NavbarContent() {
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder={t('search.placeholder', 'Search...')}
-            className={`w-full pl-9 pr-3 py-1.5 sm:py-2 rounded-xl bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''} ${isRussian ? 'text-sm' : ''}`}
+            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border border-[#444]/60 focus:border-[#7BB9F7] focus:ring-1 sm:focus:ring-2 focus:ring-[#7BB9F7]/30 outline-none shadow-inner transition-all duration-300 ${focused ? 'ring-1 sm:ring-2 ring-[#7BB9F7]/30 bg-[#232221]/95' : ''} ${isRussian ? 'text-xs sm:text-sm' : ''}`}
             style={{ minWidth: 0 }}
           />
         </form>
@@ -172,7 +172,7 @@ function NavbarContent() {
       </div>
       
       {/* Navigation links */}
-      <div className={`flex gap-x-1 sm:gap-x-2 flex-1 justify-end min-w-0 ${isRussian ? 'gap-x-0.5 sm:gap-x-1' : ''}`}>
+      <div className={`flex gap-x-0.5 sm:gap-x-1 md:gap-x-2 flex-1 justify-end min-w-0 ${isRussian ? 'gap-x-0.5' : ''}`}>
         {navLinks.map((link) => (
           link.href.startsWith('#') ? (
             link.highlight ? (
@@ -184,10 +184,10 @@ function NavbarContent() {
               >
                 <a
                   href={link.href}
-                  className={`font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] rounded-lg transition-all duration-300 flex items-center justify-center ${
+                  className={`font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] rounded-md sm:rounded-lg transition-all duration-300 flex items-center justify-center ${
                     isRussian 
-                      ? 'text-xs sm:text-sm px-1.5 sm:px-2.5 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
-                      : 'text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                      ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                   }`}
                 >
                   <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
@@ -196,7 +196,7 @@ function NavbarContent() {
                     alt="Contact"
                     width={16}
                     height={16}
-                    className={`ml-1 flex-shrink-0 ${isRussian ? 'w-3 h-3 sm:w-3.5 sm:h-3.5 hidden md:block' : 'w-3 h-3 sm:w-4 sm:h-4 hidden sm:block'}`}
+                    className={`ml-0.5 sm:ml-1 flex-shrink-0 ${isRussian ? 'w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 hidden md:block' : 'w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 hidden sm:block'}`}
                   />
                 </a>
               </motion.div>
@@ -204,10 +204,10 @@ function NavbarContent() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-bold text-white/90 hover:bg-white/10 rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
+                className={`font-bold text-white/90 hover:bg-white/10 rounded-md sm:rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
                   isRussian
-                    ? 'text-xs sm:text-sm px-1.5 sm:px-2.5 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
-                    : 'text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                    ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                 }`}
               >
                 <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
@@ -223,10 +223,10 @@ function NavbarContent() {
               >
                 <Link
                   href={link.href}
-                  className={`font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] rounded-lg transition-all duration-300 flex items-center justify-center ${
+                  className={`font-bold bg-[#7BB9F7] text-white shadow-md hover:shadow-xl border border-transparent border-t-2 border-t-[#888aed] rounded-md sm:rounded-lg transition-all duration-300 flex items-center justify-center ${
                     isRussian 
-                      ? 'text-xs sm:text-sm px-1.5 sm:px-2.5 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
-                      : 'text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                      ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                   }`}
                 >
                   <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
@@ -235,7 +235,7 @@ function NavbarContent() {
                     alt="Contact"
                     width={16}
                     height={16}
-                    className={`ml-1 flex-shrink-0 ${isRussian ? 'w-3 h-3 sm:w-3.5 sm:h-3.5 hidden md:block' : 'w-3 h-3 sm:w-4 sm:h-4 hidden sm:block'}`}
+                    className={`ml-0.5 sm:ml-1 flex-shrink-0 ${isRussian ? 'w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 hidden md:block' : 'w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 hidden sm:block'}`}
                   />
                 </Link>
               </motion.div>
@@ -243,10 +243,10 @@ function NavbarContent() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`font-bold text-white/90 hover:bg-white/10 rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
+                className={`font-bold text-white/90 hover:bg-white/10 rounded-md sm:rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
                   isRussian
-                    ? 'text-xs sm:text-sm px-1.5 sm:px-2.5 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
-                    : 'text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2 min-h-[32px] sm:min-h-[36px]'
+                    ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                 }`}
               >
                 <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
