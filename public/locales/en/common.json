@@ -15,7 +15,7 @@
     "contact": "Contact"
   },
   "search": {
-    "placeholder": "Search...",
+    "placeholder": "Search chemical...",
     "categories": {
       "pages": "Pages",
       "chemicals": "Chemical Products",
@@ -289,6 +289,30 @@
       },
       "piperazine": {
         "keywords": ["piperazine", "heterocyclic", "pharmaceutical", "chemical intermediate", "organic compound"]
+      },
+      "polyesterStapleFiber": {
+        "keywords": ["polyester staple fiber", "PSF", "textile fiber", "synthetic fiber", "polyester"]
+      },
+      "polyesterFilamentYarn": {
+        "keywords": ["polyester filament yarn", "PFY", "textile yarn", "synthetic yarn", "polyester"]
+      },
+      "polyethyleneTerephthalate": {
+        "keywords": ["polyethylene terephthalate", "PET", "polyester resin", "bottle resin", "packaging"]
+      },
+      "styreneButadieneRubber": {
+        "keywords": ["styrene butadiene rubber", "SBR", "synthetic rubber", "elastomer", "tire rubber"]
+      },
+      "polybutadieneRubber": {
+        "keywords": ["polybutadiene rubber", "PBR", "synthetic rubber", "elastomer", "high-cis polybutadiene"]
+      },
+      "polyethylene": {
+        "keywords": ["polyethylene", "PE", "polymer", "plastic", "HDPE", "LDPE", "LLDPE"]
+      },
+      "polypropylene": {
+        "keywords": ["polypropylene", "PP", "polymer", "plastic", "thermoplastic", "polyolefin"]
+      },
+      "polyvinylChloride": {
+        "keywords": ["polyvinyl chloride", "PVC", "polymer", "plastic", "vinyl", "thermoplastic"]
       }
     }
   },
@@ -879,19 +903,19 @@
         "count": 5
       },
       "phosphorus": {
-        "name": "Phosphorus Chemicals",
+        "name": "Phosphorus Based Chemicals",
         "count": 4
       },
       "sulfur": {
-        "name": "Sulfur Chemicals",
+        "name": "Sulfur Based Chemicals",
         "count": 3
       },
       "amines": {
-        "name": "Amines & Derivatives",
+        "name": "Nitrogen Based Chemicals (Amines & Derivatives)",
         "count": 6
       },
       "phenols": {
-        "name": "Phenols & Derivatives",
+        "name": "Phenols Based Chemicals",
         "count": 7
       },
       "aromatics": {
@@ -903,7 +927,7 @@
         "count": 3
       },
       "cyanide": {
-        "name": "Cyanide Chemicals",
+        "name": "Cyanide Based Chemicals",
         "count": 1
       },
       "organometallic": {
@@ -911,7 +935,7 @@
         "count": 4
       },
       "additives": {
-        "name": "Additives & Lubricant Additives",
+        "name": "Organometallic Based Chemicals",
         "count": 1
       },
       "inorganics": {
@@ -925,6 +949,46 @@
       "solvents": {
         "name": "Solvents & Hydrocarbon Blends",
         "count": 1
+      },
+      "benzeneBased": {
+        "name": "Benzene-Based Chemicals",
+        "count": 7
+      },
+      "acrylamideSulphonic": {
+        "name": "Acrylamide and Sulphonic Acid-Based Chemicals",
+        "count": 4
+      },
+      "aliphaticBenzyl": {
+        "name": "Aliphatic and Benzyl Derivatives",
+        "count": 8
+      },
+      "potassiumBased": {
+        "name": "Potassium-Based Compounds",
+        "count": 1
+      },
+      "antioxidants": {
+        "name": "Antioxidants",
+        "count": 8
+      },
+      "petrochemicalProducts": {
+        "name": "Petrochemical Products",
+        "count": 5
+      },
+      "polyesterProducts": {
+        "name": "Polyester Products",
+        "count": 3
+      },
+      "chemicalIntermediates": {
+        "name": "Chemical Intermediates",
+        "count": 8
+      },
+      "syntheticRubber": {
+        "name": "Synthetic Rubber",
+        "count": 2
+      },
+      "polymers": {
+        "name": "Polymers",
+        "count": 3
       }
     }
   },
@@ -5563,6 +5627,563 @@
         "keyPerformanceData": {
           "antioxidantEfficiency": "Moderate (better than BHT)",
           "thermalStability": "Up to 200°C"
+        }
+      },
+      "polyester-staple-fiber-psf": {
+        "overview": {
+          "name": "Polyester Staple Fiber (PSF)",
+          "description": "A synthetic fiber made from polyethylene terephthalate (PET) used extensively in textile manufacturing for clothing, home furnishings, and industrial applications.",
+          "overviewDescription": "Polyester Staple Fiber represents one of the most versatile and widely used synthetic fibers in the global textile industry. Derived from PET polymer, PSF offers exceptional durability, wrinkle resistance, and moisture-wicking properties that make it ideal for a vast range of applications from everyday clothing to high-performance technical textiles. Its ability to blend seamlessly with natural fibers like cotton and wool has revolutionized the textile industry, creating fabrics that combine the best properties of both natural and synthetic materials.",
+          "keyFeatures": [
+            "Excellent durability and wrinkle resistance",
+            "Superior moisture-wicking and quick-drying properties",
+            "Versatile blending capabilities with natural fibers",
+            "Consistent quality and uniform properties",
+            "Cost-effective alternative to natural fibers"
+          ],
+          "majorApplications": [
+            "Apparel and clothing manufacturing",
+            "Home furnishings and upholstery",
+            "Technical textiles and industrial fabrics",
+            "Non-woven applications and geotextiles"
+          ],
+          "industrialSignificance": "PSF is a cornerstone of the global textile industry, with annual production exceeding 50 million tons. Its versatility and performance characteristics make it essential for modern textile manufacturing, enabling the production of affordable, durable, and high-performance fabrics that meet diverse consumer and industrial needs."
+        },
+        "identification": {
+          "iupacName": "Poly(ethylene terephthalate) fiber",
+          "commonNames": "PSF, Polyester staple fiber, PET fiber",
+          "casNumber": "25038-59-9",
+          "chemicalFormula": "(C₁₀H₈O₄)ₙ",
+          "molecularWeight": "Variable (polymer)"
+        },
+        "physicalChemicalProperties": {
+          "form": "White to off-white staple fibers",
+          "odor": "Odorless",
+          "appearance": "Crystalline, semi-transparent fibers",
+          "meltingPoint": "250–260°C",
+          "density": "1.38–1.40 g/cm³",
+          "tenacity": "4.5–6.0 g/denier",
+          "elongation": "15–30%",
+          "moistureRegain": "0.4%",
+          "solubility": {
+            "solubleIn": ["Phenol", "m-cresol", "concentrated sulfuric acid"],
+            "insolubleInWater": "Insoluble"
+          }
+        },
+        "gradesPurity": {
+          "fiberGrade": "≥99.5% PET content",
+          "textileGrade": "Standard for apparel applications",
+          "technicalGrade": "Enhanced properties for industrial use"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Apparel", "description": "Clothing, sportswear, outerwear" },
+            { "title": "Home Textiles", "description": "Bedding, curtains, upholstery" },
+            { "title": "Technical Textiles", "description": "Industrial fabrics, geotextiles" },
+            { "title": "Non-wovens", "description": "Wipes, filters, medical textiles" }
+          ],
+          "industriesServed": [
+            "Textiles & Apparel",
+            "Home Furnishings",
+            "Automotive",
+            "Medical & Healthcare"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Dry, ventilated warehouse", "Protect from UV light", "Maintain relative humidity <65%"],
+          "handling": ["Standard textile handling procedures", "Avoid excessive heat and moisture"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Low toxicity", "Non-irritating", "Combustible at high temperatures"],
+          "regulatoryStatus": {"ghsSymbols": ["None"], "euReach": "Registered", "foodContact": "Approved"}
+        }
+      },
+      "polyester-filament-yarn-pfy": {
+        "overview": {
+          "name": "Polyester Filament Yarn (PFY)",
+          "description": "A continuous synthetic yarn made from PET polymer, used for weaving, knitting, and other textile manufacturing processes.",
+          "overviewDescription": "Polyester Filament Yarn represents the continuous fiber form of PET polymer, offering superior strength, uniformity, and processing characteristics compared to staple fibers. PFY is essential for high-speed textile manufacturing processes, enabling the production of smooth, lustrous fabrics with excellent dimensional stability and durability. Its versatility spans from fine apparel fabrics to heavy-duty industrial textiles, making it a fundamental component of modern textile manufacturing.",
+          "keyFeatures": [
+            "Continuous filament structure for smooth fabrics",
+            "Excellent tensile strength and dimensional stability",
+            "Superior uniformity and consistency",
+            "High-speed processing compatibility",
+            "Versatile dyeing and finishing capabilities"
+          ],
+          "majorApplications": [
+            "Woven and knitted fabrics",
+            "Industrial textiles and technical fabrics",
+            "Automotive upholstery and interiors",
+            "High-performance sportswear"
+          ],
+          "industrialSignificance": "PFY is critical for modern textile manufacturing, enabling high-speed, automated production processes that meet the demands of global fashion and industrial textile markets. Its consistent quality and performance characteristics make it indispensable for producing fabrics that meet exacting specifications."
+        },
+        "identification": {
+          "iupacName": "Poly(ethylene terephthalate) filament yarn",
+          "commonNames": "PFY, Polyester filament yarn, PET yarn",
+          "casNumber": "25038-59-9",
+          "chemicalFormula": "(C₁₀H₈O₄)ₙ",
+          "molecularWeight": "Variable (polymer)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Continuous filament yarn",
+          "odor": "Odorless",
+          "appearance": "Lustrous, smooth filaments",
+          "meltingPoint": "250–260°C",
+          "density": "1.38–1.40 g/cm³",
+          "tenacity": "4.5–7.0 g/denier",
+          "elongation": "15–25%",
+          "moistureRegain": "0.4%",
+          "solubility": {
+            "solubleIn": ["Phenol", "m-cresol", "concentrated sulfuric acid"],
+            "insolubleInWater": "Insoluble"
+          }
+        },
+        "gradesPurity": {
+          "textileGrade": "≥99.5% PET content",
+          "industrialGrade": "Enhanced strength and durability",
+          "specialtyGrade": "Custom properties for specific applications"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Woven Fabrics", "description": "Apparel, home textiles, industrial fabrics" },
+            { "title": "Knitted Fabrics", "description": "Sportswear, casual wear, technical textiles" },
+            { "title": "Industrial Textiles", "description": "Conveyor belts, filters, geotextiles" },
+            { "title": "Automotive", "description": "Upholstery, seat covers, interior fabrics" }
+          ],
+          "industriesServed": [
+            "Textiles & Apparel",
+            "Automotive",
+            "Industrial Manufacturing",
+            "Home Furnishings"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Dry, ventilated warehouse", "Protect from UV light", "Maintain relative humidity <65%"],
+          "handling": ["Standard textile handling procedures", "Avoid excessive heat and moisture"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Low toxicity", "Non-irritating", "Combustible at high temperatures"],
+          "regulatoryStatus": {"ghsSymbols": ["None"], "euReach": "Registered", "foodContact": "Approved"}
+        }
+      },
+      "polyethylene-terephthalate-pet": {
+        "overview": {
+          "name": "Polyethylene Terephthalate (PET)",
+          "description": "A thermoplastic polymer resin used for manufacturing bottles, fibers, films, and other packaging materials.",
+          "overviewDescription": "Polyethylene Terephthalate stands as one of the most versatile and widely used polymers globally, serving as the foundation for countless products that define modern life. From the ubiquitous plastic bottles that contain our beverages to the fibers in our clothing and the films that protect our food, PET's unique combination of clarity, strength, barrier properties, and recyclability makes it indispensable across multiple industries. Its role in enabling sustainable packaging solutions and circular economy initiatives positions it as crucial for environmental sustainability.",
+          "keyFeatures": [
+            "Excellent clarity and transparency",
+            "Superior barrier properties for gases and moisture",
+            "High strength-to-weight ratio",
+            "Excellent recyclability and sustainability",
+            "Versatile processing capabilities"
+          ],
+          "majorApplications": [
+            "Beverage and food packaging",
+            "Textile fibers and fabrics",
+            "Engineering plastics and films",
+            "Medical and pharmaceutical packaging"
+          ],
+          "industrialSignificance": "PET is one of the most important polymers globally, with annual production exceeding 80 million tons. Its versatility, performance characteristics, and recyclability make it essential for modern packaging, textile, and engineering applications, driving innovation in sustainable materials development."
+        },
+        "identification": {
+          "iupacName": "Poly(ethylene terephthalate)",
+          "commonNames": "PET, Polyester, Polyethylene terephthalate",
+          "casNumber": "25038-59-9",
+          "chemicalFormula": "(C₁₀H₈O₄)ₙ",
+          "molecularWeight": "Variable (polymer)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Amorphous or semi-crystalline solid",
+          "odor": "Odorless",
+          "appearance": "Clear to opaque, depending on crystallinity",
+          "meltingPoint": "250–260°C",
+          "glassTransitionTemp": "70–80°C",
+          "density": "1.33–1.40 g/cm³",
+          "tensileStrength": "50–80 MPa",
+          "solubility": {
+            "solubleIn": ["Phenol", "m-cresol", "concentrated sulfuric acid"],
+            "insolubleInWater": "Insoluble"
+          }
+        },
+        "gradesPurity": {
+          "bottleGrade": "≥99.9% PET content",
+          "fiberGrade": "≥99.5% PET content",
+          "filmGrade": "≥99.8% PET content",
+          "recycledGrade": "≥95% PET content"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Beverage Bottles", "description": "Soft drinks, water, juices" },
+            { "title": "Food Packaging", "description": "Containers, trays, films" },
+            { "title": "Textile Fibers", "description": "Clothing, carpets, industrial fabrics" },
+            { "title": "Engineering Plastics", "description": "Automotive parts, electronics" }
+          ],
+          "industriesServed": [
+            "Packaging",
+            "Textiles",
+            "Automotive",
+            "Electronics",
+            "Medical & Pharmaceutical"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Dry, ventilated warehouse", "Protect from UV light", "Maintain relative humidity <65%"],
+          "handling": ["Standard polymer handling procedures", "Avoid excessive heat and moisture"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Low toxicity", "Non-irritating", "Combustible at high temperatures"],
+          "regulatoryStatus": {"ghsSymbols": ["None"], "euReach": "Registered", "foodContact": "Approved"}
+        }
+      },
+      "styrene-butadiene-rubber-sbr": {
+        "overview": {
+          "name": "Styrene Butadiene Rubber (SBR)",
+          "description": "A synthetic rubber copolymer of styrene and butadiene, widely used in tire manufacturing and other industrial applications.",
+          "overviewDescription": "Styrene Butadiene Rubber represents one of the most important synthetic rubbers globally, serving as the backbone of the tire industry and countless other applications. This versatile elastomer combines the excellent abrasion resistance and low-temperature flexibility of butadiene with the strength and processability of styrene, creating a material that meets the demanding requirements of modern transportation and industrial applications. SBR's unique balance of properties makes it indispensable for tire treads, conveyor belts, footwear, and numerous other products that require durability, flexibility, and resistance to wear.",
+          "keyFeatures": [
+            "Excellent abrasion resistance and wear properties",
+            "Good low-temperature flexibility and impact resistance",
+            "Superior processability and mixing characteristics",
+            "Cost-effective alternative to natural rubber",
+            "Versatile compounding capabilities for various applications"
+          ],
+          "majorApplications": [
+            "Tire treads and sidewalls",
+            "Conveyor belts and industrial hoses",
+            "Footwear soles and automotive parts",
+            "Adhesives and sealants"
+          ],
+          "industrialSignificance": "SBR is the most widely used synthetic rubber globally, with annual production exceeding 5 million tons. Its dominance in tire manufacturing alone makes it crucial for the automotive and transportation industries, while its versatility enables applications across multiple industrial sectors."
+        },
+        "identification": {
+          "iupacName": "Poly(styrene-co-butadiene)",
+          "commonNames": "SBR, Styrene-butadiene rubber, Buna S",
+          "casNumber": "9003-55-8",
+          "chemicalFormula": "(C₈H₈)ₓ(C₄H₆)ᵧ",
+          "molecularWeight": "Variable (polymer)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Solid elastomer",
+          "odor": "Slight rubber-like",
+          "appearance": "Pale yellow to amber solid",
+          "density": "0.94–0.96 g/cm³",
+          "glassTransitionTemp": "-60 to -50°C",
+          "tensileStrength": "15–25 MPa",
+          "elongation": "300–600%",
+          "hardness": "40–90 Shore A",
+          "solubility": {
+            "solubleIn": ["Toluene", "benzene", "chloroform"],
+            "insolubleInWater": "Insoluble"
+          }
+        },
+        "gradesPurity": {
+          "emulsionSBR": "E-SBR (emulsion polymerization)",
+          "solutionSBR": "S-SBR (solution polymerization)",
+          "highStyreneSBR": "High styrene content for hard rubber"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Tire Manufacturing", "description": "Tread compounds, sidewalls, inner liners" },
+            { "title": "Industrial Products", "description": "Conveyor belts, hoses, gaskets" },
+            { "title": "Footwear", "description": "Shoe soles, athletic shoes" },
+            { "title": "Adhesives", "description": "Pressure-sensitive adhesives, sealants" }
+          ],
+          "industriesServed": [
+            "Automotive & Transportation",
+            "Industrial Manufacturing",
+            "Footwear & Apparel",
+            "Construction"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Cool, dry, ventilated area", "Protect from UV light and ozone", "Maintain relative humidity <65%"],
+          "handling": ["Standard rubber handling procedures", "Avoid excessive heat and direct sunlight"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Low toxicity", "May contain residual monomers", "Combustible at high temperatures"],
+          "regulatoryStatus": {"ghsSymbols": ["None"], "euReach": "Registered", "foodContact": "Conditional"}
+        }
+      },
+      "polybutadiene-rubber-pbr": {
+        "overview": {
+          "name": "Polybutadiene Rubber (PBR)",
+          "description": "A synthetic rubber polymer of butadiene, known for its excellent low-temperature flexibility and resilience.",
+          "overviewDescription": "Polybutadiene Rubber represents a high-performance synthetic elastomer that excels in applications requiring exceptional low-temperature flexibility, resilience, and abrasion resistance. This versatile polymer, produced through various polymerization techniques, offers unique properties that make it essential for tire manufacturing, golf ball cores, and specialized industrial applications. PBR's superior resilience and low-temperature performance characteristics enable the production of products that maintain their properties under extreme conditions, from sub-zero temperatures to high-speed applications.",
+          "keyFeatures": [
+            "Excellent low-temperature flexibility and resilience",
+            "Superior abrasion resistance and wear properties",
+            "High elasticity and rebound characteristics",
+            "Good electrical insulation properties",
+            "Versatile processing and compounding capabilities"
+          ],
+          "majorApplications": [
+            "Tire sidewalls and tread compounds",
+            "Golf ball cores and sports equipment",
+            "Industrial hoses and belts",
+            "Electrical insulation and cable sheathing"
+          ],
+          "industrialSignificance": "PBR is a critical component in high-performance tire formulations and specialized industrial applications. Its unique combination of properties makes it indispensable for products that require exceptional durability, flexibility, and performance under demanding conditions."
+        },
+        "identification": {
+          "iupacName": "Poly(1,3-butadiene)",
+          "commonNames": "PBR, Polybutadiene rubber, BR",
+          "casNumber": "9003-17-2",
+          "chemicalFormula": "(C₄H₆)ₙ",
+          "molecularWeight": "Variable (polymer)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Solid elastomer",
+          "odor": "Slight rubber-like",
+          "appearance": "Colorless to pale yellow solid",
+          "density": "0.91–0.93 g/cm³",
+          "glassTransitionTemp": "-100 to -90°C",
+          "tensileStrength": "15–25 MPa",
+          "elongation": "300–500%",
+          "hardness": "35–85 Shore A",
+          "solubility": {
+            "solubleIn": ["Toluene", "benzene", "chloroform"],
+            "insolubleInWater": "Insoluble"
+          }
+        },
+        "gradesPurity": {
+          "highCisPBR": "High cis-1,4 content (>90%)",
+          "mediumCisPBR": "Medium cis-1,4 content (35-65%)",
+          "lowCisPBR": "Low cis-1,4 content (<35%)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Tire Manufacturing", "description": "Sidewalls, tread compounds, winter tires" },
+            { "title": "Sports Equipment", "description": "Golf ball cores, tennis ball covers" },
+            { "title": "Industrial Products", "description": "Hoses, belts, gaskets" },
+            { "title": "Electrical", "description": "Cable insulation, electrical components" }
+          ],
+          "industriesServed": [
+            "Automotive & Transportation",
+            "Sports & Recreation",
+            "Industrial Manufacturing",
+            "Electronics & Electrical"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Cool, dry, ventilated area", "Protect from UV light and ozone", "Maintain relative humidity <65%"],
+          "handling": ["Standard rubber handling procedures", "Avoid excessive heat and direct sunlight"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Low toxicity", "May contain residual monomers", "Combustible at high temperatures"],
+          "regulatoryStatus": {"ghsSymbols": ["None"], "euReach": "Registered", "foodContact": "Conditional"}
+        }
+      },
+      "polyethylene-pe": {
+        "overview": {
+          "name": "Polyethylene (PE)",
+          "description": "A versatile thermoplastic polymer with the simplest structure of all commercial polymers, widely used in packaging, containers, and various industrial applications.",
+          "overviewDescription": "Polyethylene stands as the most widely produced and used plastic globally, representing the foundation of modern polymer technology. This versatile thermoplastic, with its simple ethylene monomer structure, offers an exceptional combination of properties including excellent chemical resistance, low moisture absorption, and outstanding electrical insulation. PE's versatility spans from flexible packaging films to rigid containers, from household items to sophisticated industrial applications, making it indispensable across virtually every sector of modern industry.",
+          "keyFeatures": [
+            "Excellent chemical resistance and moisture barrier properties",
+            "Superior electrical insulation characteristics",
+            "Low density and high strength-to-weight ratio",
+            "Versatile processing capabilities",
+            "Cost-effective and recyclable material"
+          ],
+          "majorApplications": [
+            "Packaging films and containers",
+            "Pipes and fittings",
+            "Household and consumer products",
+            "Industrial and automotive components"
+          ],
+          "industrialSignificance": "PE is the most important polymer globally, with annual production exceeding 100 million tons. Its versatility, cost-effectiveness, and recyclability make it essential for modern packaging, construction, automotive, and consumer goods industries."
+        },
+        "identification": {
+          "iupacName": "Poly(ethylene)",
+          "commonNames": "PE, Polyethylene, Polythene",
+          "casNumber": "9002-88-4",
+          "chemicalFormula": "(C₂H₄)ₙ",
+          "molecularWeight": "Variable (polymer)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Solid thermoplastic",
+          "odor": "Odorless",
+          "appearance": "White to translucent solid",
+          "density": "0.91–0.97 g/cm³",
+          "meltingPoint": "105–135°C (varies by type)",
+          "glassTransitionTemp": "-125 to -100°C",
+          "tensileStrength": "15–40 MPa",
+          "elongation": "100–1000%",
+          "solubility": {
+            "solubleIn": ["Hot aromatic hydrocarbons", "chlorinated solvents"],
+            "insolubleInWater": "Insoluble"
+          }
+        },
+        "gradesPurity": {
+          "hdpe": "High Density PE (0.94–0.97 g/cm³)",
+          "ldpe": "Low Density PE (0.91–0.94 g/cm³)",
+          "lldpe": "Linear Low Density PE (0.91–0.94 g/cm³)",
+          "uhmwpe": "Ultra High Molecular Weight PE"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Packaging", "description": "Films, bags, containers, bottles" },
+            { "title": "Pipes & Fittings", "description": "Water, gas, and chemical transport" },
+            { "title": "Consumer Products", "description": "Household items, toys, furniture" },
+            { "title": "Industrial", "description": "Automotive parts, electrical insulation" }
+          ],
+          "industriesServed": [
+            "Packaging",
+            "Construction",
+            "Automotive",
+            "Consumer Goods",
+            "Electronics"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Cool, dry, ventilated area", "Protect from UV light", "Maintain relative humidity <65%"],
+          "handling": ["Standard polymer handling procedures", "Avoid excessive heat and direct sunlight"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Low toxicity", "May release fumes at high temperatures", "Combustible"],
+          "regulatoryStatus": {"ghsSymbols": ["None"], "euReach": "Registered", "foodContact": "Approved"}
+        }
+      },
+      "polypropylene-pp": {
+        "overview": {
+          "name": "Polypropylene (PP)",
+          "description": "A versatile thermoplastic polymer known for its excellent chemical resistance, high melting point, and wide range of applications.",
+          "overviewDescription": "Polypropylene represents one of the most versatile and widely used thermoplastics, offering an exceptional combination of properties that make it suitable for applications ranging from food packaging to automotive components. This semi-crystalline polymer, derived from propylene monomer, provides excellent chemical resistance, high heat resistance, and superior mechanical properties compared to many other plastics. PP's unique balance of stiffness, toughness, and processability has made it indispensable in modern manufacturing, enabling the production of lightweight, durable, and cost-effective products.",
+          "keyFeatures": [
+            "Excellent chemical resistance and heat stability",
+            "High stiffness and tensile strength",
+            "Superior moisture barrier properties",
+            "Lightweight with high strength-to-weight ratio",
+            "Versatile processing and molding capabilities"
+          ],
+          "majorApplications": [
+            "Food packaging and containers",
+            "Automotive components and parts",
+            "Textiles and fibers",
+            "Medical devices and equipment"
+          ],
+          "industrialSignificance": "PP is the second most important polymer globally, with annual production exceeding 80 million tons. Its versatility, performance characteristics, and cost-effectiveness make it essential for packaging, automotive, textile, and medical industries."
+        },
+        "identification": {
+          "iupacName": "Poly(propene)",
+          "commonNames": "PP, Polypropylene, Polypropene",
+          "casNumber": "9003-07-0",
+          "chemicalFormula": "(C₃H₆)ₙ",
+          "molecularWeight": "Variable (polymer)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Solid thermoplastic",
+          "odor": "Odorless",
+          "appearance": "White to translucent solid",
+          "density": "0.90–0.92 g/cm³",
+          "meltingPoint": "160–170°C",
+          "glassTransitionTemp": "-10 to 0°C",
+          "tensileStrength": "30–40 MPa",
+          "elongation": "100–600%",
+          "solubility": {
+            "solubleIn": ["Hot aromatic hydrocarbons", "chlorinated solvents"],
+            "insolubleInWater": "Insoluble"
+          }
+        },
+        "gradesPurity": {
+          "homopolymer": "Homopolymer PP (high stiffness)",
+          "copolymer": "Random copolymer PP (improved impact)",
+          "impactCopolymer": "Impact copolymer PP (high toughness)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Packaging", "description": "Food containers, films, bottles" },
+            { "title": "Automotive", "description": "Interior parts, bumpers, battery cases" },
+            { "title": "Textiles", "description": "Fibers, non-wovens, carpets" },
+            { "title": "Medical", "description": "Syringes, medical devices, packaging" }
+          ],
+          "industriesServed": [
+            "Packaging",
+            "Automotive",
+            "Textiles",
+            "Medical & Healthcare",
+            "Consumer Goods"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Cool, dry, ventilated area", "Protect from UV light", "Maintain relative humidity <65%"],
+          "handling": ["Standard polymer handling procedures", "Avoid excessive heat and direct sunlight"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Low toxicity", "May release fumes at high temperatures", "Combustible"],
+          "regulatoryStatus": {"ghsSymbols": ["None"], "euReach": "Registered", "foodContact": "Approved"}
+        }
+      },
+      "polyvinyl-chloride-pvc": {
+        "overview": {
+          "name": "Polyvinyl Chloride (PVC)",
+          "description": "A versatile thermoplastic polymer known for its excellent chemical resistance, durability, and wide range of applications in construction and consumer products.",
+          "overviewDescription": "Polyvinyl Chloride represents one of the most versatile and widely used polymers globally, offering an exceptional combination of properties that make it suitable for both rigid and flexible applications. This thermoplastic polymer, derived from vinyl chloride monomer, provides excellent chemical resistance, flame retardancy, and durability. PVC's unique ability to be formulated as either rigid or flexible materials, combined with its cost-effectiveness and excellent weatherability, has made it indispensable in construction, healthcare, automotive, and consumer goods industries.",
+          "keyFeatures": [
+            "Excellent chemical resistance and durability",
+            "Superior flame retardancy and electrical insulation",
+            "Versatile formulation (rigid or flexible)",
+            "Excellent weatherability and UV resistance",
+            "Cost-effective and long-lasting material"
+          ],
+          "majorApplications": [
+            "Construction materials and pipes",
+            "Electrical insulation and cables",
+            "Medical devices and packaging",
+            "Automotive interiors and components"
+          ],
+          "industrialSignificance": "PVC is one of the most important polymers globally, with annual production exceeding 40 million tons. Its versatility, durability, and cost-effectiveness make it essential for construction, electrical, medical, and automotive industries."
+        },
+        "identification": {
+          "iupacName": "Poly(chloroethene)",
+          "commonNames": "PVC, Polyvinyl chloride, Vinyl",
+          "casNumber": "9002-86-2",
+          "chemicalFormula": "(C₂H₃Cl)ₙ",
+          "molecularWeight": "Variable (polymer)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Solid thermoplastic",
+          "odor": "Odorless",
+          "appearance": "White to off-white solid",
+          "density": "1.30–1.45 g/cm³",
+          "meltingPoint": "100–260°C (varies by formulation)",
+          "glassTransitionTemp": "80–85°C",
+          "tensileStrength": "40–60 MPa",
+          "elongation": "20–400%",
+          "solubility": {
+            "solubleIn": ["Tetrahydrofuran", "cyclohexanone", "dimethylformamide"],
+            "insolubleInWater": "Insoluble"
+          }
+        },
+        "gradesPurity": {
+          "rigidPVC": "Rigid PVC (unplasticized)",
+          "flexiblePVC": "Flexible PVC (plasticized)",
+          "cpvc": "Chlorinated PVC (high temperature)"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Construction", "description": "Pipes, fittings, profiles, flooring" },
+            { "title": "Electrical", "description": "Cable insulation, conduits, switches" },
+            { "title": "Medical", "description": "Tubing, blood bags, medical devices" },
+            { "title": "Automotive", "description": "Interior trim, wire harnesses, seals" }
+          ],
+          "industriesServed": [
+            "Construction",
+            "Electrical & Electronics",
+            "Medical & Healthcare",
+            "Automotive",
+            "Consumer Goods"
+          ]
+        },
+        "storageHandling": {
+          "storage": ["Cool, dry, ventilated area", "Protect from UV light", "Maintain relative humidity <65%"],
+          "handling": ["Standard polymer handling procedures", "Avoid excessive heat and direct sunlight"]
+        },
+        "safetyRegulatory": {
+          "hazards": ["Low toxicity", "May release HCl at high temperatures", "Combustible"],
+          "regulatoryStatus": {"ghsSymbols": ["None"], "euReach": "Registered", "foodContact": "Conditional"}
         }
       }
     }

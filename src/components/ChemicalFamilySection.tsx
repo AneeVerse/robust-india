@@ -50,74 +50,37 @@ interface ChemicalCategory {
 const chemicalCategories: ChemicalCategory[] = [
   {
     id: 'basicPetrochemicals',
-    count: 12,
+    count: 1, // updated count after removing chemical intermediates
     IconComponent: GiChemicalDrop,
     products: [
-      { 
-        name: 'Naphtha',
-        code: 'naphtha'
-      },
-      { 
-        name: 'Propylene (Propene)',
-        code: 'propylene-propene'
-      },
-      { name: 'Isobutylene (IB)', code: 'isobutylene' },
-      { 
-        name: 'Benzene',
-        code: 'benzene'
-      },
-      { name: 'Toluene' },
-      { name: 'Paraxylene (PX)' },
-      { name: 'Ortho Xylene (OX)' },
-      { name: 'Cyclohexane' },
-      { name: 'Isohexane SBP' },
-      { name: 'C-6 Aliphatic Hydrocarbons' },
-      { name: 'Mixed Hexenes', code: 'mixed-hexenes' },
-      { name: 'Methanol' },
-      { name: 'Sulphur' },
-      { name: 'Cyclohexane', code: 'cyclohexane' }
+      { name: 'C-6 Aliphatic Hydrocarbons' }
     ]
   },
   {
     id: 'fuelAdditives',
-    count: 3,
+    count: 1, // updated count after removing ETBE
     IconComponent: IoWaterOutline,
     products: [
-      { name: 'Methyl Tertiary Butyl Ether (MTBE)', code: 'methyl-tertiary-butyl-ether-mtbe' },
-      { name: 'ETBE (Ethyl Tert-Butyl Ether)', code: 'etbe' },
       { name: 'Bio-ETBE' }
     ]
   },
   {
     id: 'additives',
-    count: 3, // incremented from 2
+    count: 2, // updated count after removing cyanuric chloride
     IconComponent: GiTestTubes,
     products: [
       { name: 'Zinc Dialkyl Dithiophosphate (ZDDP-MD)', code: 'zddp-md' },
-      { name: 'Zinc Dialkyl Dithiophosphate (ZDDP-IM)', code: 'zddp-im' },
-      { name: 'Cyanuric Chloride', code: 'cyanuric-chloride' }
+      { name: 'Zinc Dialkyl Dithiophosphate (ZDDP-IM)', code: 'zddp-im' }
     ]
   },
   {
-    id: 'polymers',
-    count: 5,
+    id: 'polymerIntermediates',
+    count: 3, // updated count after removing polymers
     IconComponent: GiMolecule,
     products: [
-      { name: 'Polypropylene (PP)' },
-      { name: 'Polyethylene (PE)' },
       { name: 'Styrene Monomer' },
       { name: 'Vinyl Chloride Monomer' },
-      { name: 'Ethylene Glycol' },
-      {name: 'Purified Terephthalic Acid ', code: 'pta'},
-      {name: 'Mono Ethylene Glycol', code: 'meg'},
-      { name: 'Antioxidant 1010', code: 'antioxidant-1010' },
-      { name: 'Antioxidant 1076', code: 'antioxidant-1076' },
-      { name: 'Antioxidant 168', code: 'antioxidant-168' },
-      { name: 'Antioxidant 1098', code: 'antioxidant-1098' },
-      { name: 'Antioxidant L135', code: 'antioxidant-l135' },
-      { name: 'Antioxidant 1135', code: 'antioxidant-1135' },
-      { name: 'Antioxidant 1315', code: 'antioxidant-1315' },
-      { name: 'Antioxidant Blend (168/1010)', code: 'antioxidant-blend-168-1010' }
+      { name: 'Ethylene Glycol' }
     ]
   },
   {
@@ -140,7 +103,7 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'sulfur',
-    count: 3,
+    count: 5, // corrected count
     IconComponent: GiAcid,
     products: [
       { name: 'Sulfuric Acid' },
@@ -152,7 +115,7 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'amines',
-    count: 12, // incremented from 11
+    count: 11, // updated count after removing tert-butylamine
     IconComponent: GiDna2,
     products: [
       { name: 'Diethylamine' },
@@ -164,14 +127,13 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Aminoethylpiperazine (AEP)', code: 'aminoethylpiperazine' },
       { name: 'Triethanolamine' },
       { name: 'N-Methylpyrrolidone' },
-      { name: 'Tert-Butylamine', code: 'tert-butylamine' },
       { name: 'Ethylenediamine (EDA)', code: 'ethylenediamine' },
       { name: 'Piperazine', code: 'piperazine' }
     ]
   },
   {
     id: 'phenols',
-    count: 9, // incremented from 8
+    count: 8, // updated count after removing PTBBA
     IconComponent: GiCrystalBars,
     products: [
       { name: 'Phenol' },
@@ -182,7 +144,6 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Catechol' },
       { name: 'Nonylphenol' },
       { name: 'Para-Tertiary Butyl Phenol (PTBP)', code: 'para-tertiary-butyl-phenol-ptbp' },
-      { name: 'Para-Tertiary Butyl Benzoic Acid (PTBBA)', code: 'ptbba' },
       { name: '2,4-Di-Tert-Butyl Phenol (2,4-DTBP)', code: '2-4-di-tert-butyl-phenol-2-4-dtbp' },
       { name: '2,6-Di-Tert-Butyl Phenol (2,6-DTBP)', code: '2-6-di-tert-butyl-phenol-2-6-dtbp' },
       { name: 'Di-Sec-Butyl Phenol (2,6-DSBP)', code: '2-6-di-sec-butyl-phenol-2-6-dsbp' },
@@ -192,38 +153,23 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'aromatics',
-    count: 11, // updated count
+    count: 4, // updated count after removing chemical intermediates
     IconComponent: GiPlantRoots,
     products: [
       { name: 'Toluene Diisocyanate' },
       { name: 'Methylene Diphenyl Diisocyanate' },
       { name: 'Aniline' },
-      { name: 'Nitrobenzene' },
-      { name: 'Paraxylene', code: 'px' },
-      { name: 'Ortho Xylene', code: 'ox' },
-      { name: 'Toluene', code: 'toluene' },
-      { name: 'Methyl 4-Tert-Butyl Benzoate (PTBMB)', code: 'ptbmb' },
-      { name: '4-Butylaniline', code: '4-butylaniline' },
-      { name: 'C10 Aromatic Solvent / Aromatic 150', code: 'c10-aromatic-solvent' },
-      { name: '3-Phenylpentane (3-PP)', code: '3-phenylpentane' },
-      { name: 'Tertiary Amyl Benzene (TAB)', code: 'tertiary-amyl-benzene' },
-      { name: 'Secondary Butyl Benzene (SBB)', code: 'secondary-butyl-benzene' },
-      { name: 'Normal Butyl Benzene (NBB)', code: 'normal-butyl-benzene' },
-      { name: 'Isobutyl Benzene (IBB)', code: 'isobutyl-benzene' }
+      { name: 'Nitrobenzene' }
     ]
   },
   {
     id: 'acrylics',
-    count: 5, // updated count
+    count: 3, // updated count after removing acrylamide and sulphonic acid-based chemicals
     IconComponent: GiPaintBrush,
     products: [
       { name: 'Acrylic Acid' },
       { name: 'Methyl Methacrylate' },
-      { name: 'Butyl Acrylate' },
-      { name: 'N-Tert-Octyl Acrylamide (TOA)', code: 'toa' },
-      { name: 'N-Tert-Butyl Acrylamide (TBA)', code: 'tba' },
-      { name: 'Sodium Salt of 2-Acrylamido-2-Methylpropane Sulfonic Acid (NaAMPS)', code: 'naamps' },
-      { name: '2-Acrylamido-2-Methylpropane Sulfonic Acid (ATBS)', code: 'atbs' }
+      { name: 'Butyl Acrylate' }
     ]
   },
   {
@@ -247,26 +193,138 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'inorganics',
-    count: 1,
+    count: 0, // updated count after removing potassium bicarbonate
     IconComponent: GiAcid,
-    products: [
-      { name: 'Potassium Bicarbonate', code: 'potassium-bicarbonate' }
-    ]
+    products: []
   },
   {
     id: 'alcohols',
-    count: 1,
+    count: 0, // updated count after removing methanol
     IconComponent: GiAcid,
-    products: [
-      { name: 'Methanol', code: 'methanol' }
-    ]
+    products: []
   },
   {
     id: 'solvents',
+    count: 0, // updated count after removing isohexane
+    IconComponent: GiAcid,
+    products: []
+  },
+  {
+    id: 'benzeneBased',
+    count: 7,
+    IconComponent: GiPlantRoots,
+    products: [
+      { name: 'Iso Butyl Benzene (IBB)', code: 'isobutyl-benzene' },
+      { name: 'Normal Butyl Benzene (NBB)', code: 'normal-butyl-benzene' },
+      { name: 'Secondary Butyl Benzene (SBB)', code: 'secondary-butyl-benzene' },
+      { name: 'Tertiary Amyl Benzene (TAB)', code: 'tertiary-amyl-benzene' },
+      { name: '3-Phenylpentane (3-PP)', code: '3-phenylpentane' },
+      { name: 'C10 Aromatic Solvent / Aromatic 150', code: 'c10-aromatic-solvent' },
+      { name: '4-Butylaniline', code: '4-butylaniline' }
+    ]
+  },
+  {
+    id: 'acrylamideSulphonic',
+    count: 4,
+    IconComponent: GiMolecule,
+    products: [
+      { name: '2-Acrylamido-2-Methylpropane Sulphonic Acid (ATBS)', code: 'atbs' },
+      { name: 'N-Tertiary Butyl Acrylamide (TBA)', code: 'tba' },
+      { name: 'Sodium Salt of 2-Acrylamido-2-Methylpropane Sulphonic Acid (NaATBS)', code: 'naamps' },
+      { name: 'N-Tertiary Octyl Acrylamide (TOA)', code: 'toa' }
+    ]
+  },
+  {
+    id: 'aliphaticBenzyl',
+    count: 7, // updated count after removing MTBE
+    IconComponent: GiChemicalDrop,
+    products: [
+      { name: 'Isohexane SBP', code: 'isohexane' },
+      { name: 'Methyl 4-Tertiary Butyl Benzoate (PTBMB)', code: 'ptbmb' },
+      { name: 'Para Tertiary Butyl Benzoic Acid (PTBBA)', code: 'ptbba' },
+      { name: 'Isobutylene (IB)', code: 'isobutylene' },
+      { name: 'Methanol', code: 'methanol' },
+      { name: 'Tertiary-Butylamine', code: 'tert-butylamine' },
+      { name: 'Mixed Hexene (C-6 Aliphatic Hydrocarbons)', code: 'mixed-hexenes' }
+    ]
+  },
+  {
+    id: 'potassiumBased',
     count: 1,
     IconComponent: GiAcid,
     products: [
-      { name: 'Isohexane (SBP)', code: 'isohexane' }
+      { name: 'Potassium Bicarbonate (KHCO3)', code: 'potassium-bicarbonate' }
+    ]
+  },
+  {
+    id: 'antioxidants',
+    count: 8,
+    IconComponent: GiMolecule,
+    products: [
+      { name: 'Antioxidant 1010', code: 'antioxidant-1010' },
+      { name: 'Antioxidant 1076', code: 'antioxidant-1076' },
+      { name: 'Antioxidant 168', code: 'antioxidant-168' },
+      { name: 'Antioxidant 1098', code: 'antioxidant-1098' },
+      { name: 'Antioxidant L135', code: 'antioxidant-l135' },
+      { name: 'Antioxidant 1135', code: 'antioxidant-1135' },
+      { name: 'Antioxidant 1315', code: 'antioxidant-1315' },
+      { name: 'Antioxidant Blend (1:2 of CAS 31570-04-4 and 6683-19-8)', code: 'antioxidant-blend-168-1010' }
+    ]
+  },
+  {
+    id: 'petrochemicalProducts',
+    count: 5,
+    IconComponent: GiChemicalDrop,
+    products: [
+      { name: 'Propylene', code: 'propylene-propene' },
+      { name: 'Naphtha', code: 'naphtha' },
+      { name: 'Sulphur', code: 'sulfur' },
+      { name: 'Methyl Tertiary Butyl Ether (MTBE)', code: 'methyl-tertiary-butyl-ether-mtbe' },
+      { name: 'Ethyl Tertiary Butyl Ether (ETBE)', code: 'etbe' }
+    ]
+  },
+  {
+    id: 'polyesterProducts',
+    count: 3,
+    IconComponent: GiMolecule,
+    products: [
+      { name: 'Polyester Staple Fiber (PSF)', code: 'polyester-staple-fiber-psf' },
+      { name: 'Polyester Filament Yarn (PFY)', code: 'polyester-filament-yarn-pfy' },
+      { name: 'Polyethylene Terephthalate (PET)', code: 'polyethylene-terephthalate-pet' }
+    ]
+  },
+  {
+    id: 'chemicalIntermediates',
+    count: 8, // updated count after adding cyanuric chloride
+    IconComponent: GiMolecule,
+    products: [
+      { name: 'Purified Terephthalic Acid (PTA)', code: 'pta' },
+      { name: 'Mono Ethylene Glycol (MEG)', code: 'meg' },
+      { name: 'Paraxylene (PX)', code: 'px' },
+      { name: 'Ortho Xylene (OX)', code: 'ox' },
+      { name: 'Benzene', code: 'benzene' },
+      { name: 'Toluene', code: 'toluene' },
+      { name: 'Cyclohexane', code: 'cyclohexane' },
+      { name: 'Cyanuric Chloride', code: 'cyanuric-chloride' }
+    ]
+  },
+  {
+    id: 'syntheticRubber',
+    count: 2,
+    IconComponent: GiMolecule,
+    products: [
+      { name: 'Styrene Butadiene Rubber (SBR)', code: 'styrene-butadiene-rubber-sbr' },
+      { name: 'Polybutadiene Rubber (PBR)', code: 'polybutadiene-rubber-pbr' }
+    ]
+  },
+  {
+    id: 'polymers',
+    count: 3,
+    IconComponent: GiMolecule,
+    products: [
+      { name: 'Polyethylene (PE)', code: 'polyethylene-pe' },
+      { name: 'Polypropylene (PP)', code: 'polypropylene-pp' },
+      { name: 'Polyvinyl Chloride (PVC)', code: 'polyvinyl-chloride-pvc' }
     ]
   }
 ];
