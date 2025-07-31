@@ -462,7 +462,13 @@ export default function ChemicalFamilySection() {
                 ))}
               </div>
               <div className="mt-10">
-                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                <button 
+                  onClick={() => {
+                    closeModal();
+                    router.push('/contact#contact-form');
+                  }}
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                >
                   {t('chemicalFamily.requestInfo')}
                 </button>
               </div>
