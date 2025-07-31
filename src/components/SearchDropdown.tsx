@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiFile, FiPackage, FiSettings, FiLayers, FiLoader } from 'react-icons/fi';
 
@@ -55,6 +56,7 @@ export default function SearchDropdown({
   onClose,
   onItemClick
 }: SearchDropdownProps) {
+  const router = useRouter();
   if (!isVisible) return null;
 
   return (
@@ -103,29 +105,49 @@ export default function SearchDropdown({
                 {/* Category Items */}
                 <div className="py-1">
                   {items.map((item) => (
-                    <Link
+                    <div
                       key={item.id}
-                      href={item.url}
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
                         onItemClick();
                         onClose();
+                        // Immediate navigation
+                        router.push(item.url);
                       }}
-                      className="block px-4 py-3 hover:bg-[#333]/50 transition-colors duration-150 group"
+                      onMouseDown={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        onItemClick();
+                        onClose();
+                        // Immediate navigation on mouse down
+                        router.push(item.url);
+                      }}
+                      onTouchStart={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        onItemClick();
+                        onClose();
+                        // Immediate navigation on touch start
+                        router.push(item.url);
+                      }}
+                      className="block px-4 py-4 hover:bg-[#333]/50 active:bg-[#444]/70 transition-colors duration-150 group cursor-pointer select-none touch-manipulation"
+                      style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                     >
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-3 w-full">
                         <div className="flex-1 min-w-0">
-                          <div className="text-white font-medium text-sm mb-1 group-hover:text-[#7BB9F7] transition-colors">
+                          <div className="text-white font-medium text-sm mb-1 group-hover:text-[#7BB9F7] transition-colors pointer-events-none">
                             {highlightText(item.title, query)}
                           </div>
-                          <div className="text-gray-400 text-xs line-clamp-2 leading-relaxed">
+                          <div className="text-gray-400 text-xs line-clamp-2 leading-relaxed pointer-events-none">
                             {highlightText(item.description, query)}
                           </div>
                         </div>
-                        <div className="text-gray-500 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="text-gray-500 text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                           →
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   ))}
                 </div>
               </div>

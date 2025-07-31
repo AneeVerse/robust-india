@@ -399,6 +399,262 @@ export const getLocalizedSearchData = (_t: (key: string) => string | string[]): 
     url: '/chemical/piperazine',
     keywordsKey: 'search.items.piperazine.keywords'
   },
+  {
+    id: 'antioxidant-168',
+    titleKey: 'chemicalDetail.products.antioxidant-168.overview.name',
+    descriptionKey: 'chemicalDetail.products.antioxidant-168.overview.description',
+    category: 'chemical',
+    url: '/chemical/antioxidant-168',
+    keywordsKey: 'search.items.antioxidant168.keywords'
+  },
+  {
+    id: 'antioxidant-1098',
+    titleKey: 'chemicalDetail.products.antioxidant-1098.overview.name',
+    descriptionKey: 'chemicalDetail.products.antioxidant-1098.overview.description',
+    category: 'chemical',
+    url: '/chemical/antioxidant-1098',
+    keywordsKey: 'search.items.antioxidant1098.keywords'
+  },
+  {
+    id: 'antioxidant-l135',
+    titleKey: 'chemicalDetail.products.antioxidant-l135.overview.name',
+    descriptionKey: 'chemicalDetail.products.antioxidant-l135.overview.description',
+    category: 'chemical',
+    url: '/chemical/antioxidant-l135',
+    keywordsKey: 'search.items.antioxidantL135.keywords'
+  },
+  {
+    id: 'antioxidant-1135',
+    titleKey: 'chemicalDetail.products.antioxidant-1135.overview.name',
+    descriptionKey: 'chemicalDetail.products.antioxidant-1135.overview.description',
+    category: 'chemical',
+    url: '/chemical/antioxidant-1135',
+    keywordsKey: 'search.items.antioxidant1135.keywords'
+  },
+  {
+    id: 'antioxidant-1315',
+    titleKey: 'chemicalDetail.products.antioxidant-1315.overview.name',
+    descriptionKey: 'chemicalDetail.products.antioxidant-1315.overview.description',
+    category: 'chemical',
+    url: '/chemical/antioxidant-1315',
+    keywordsKey: 'search.items.antioxidant1315.keywords'
+  },
+  {
+    id: 'antioxidant-blend-168-1010',
+    titleKey: 'chemicalDetail.products.antioxidant-blend-168-1010.overview.name',
+    descriptionKey: 'chemicalDetail.products.antioxidant-blend-168-1010.overview.description',
+    category: 'chemical',
+    url: '/chemical/antioxidant-blend-168-1010',
+    keywordsKey: 'search.items.antioxidantBlend.keywords'
+  },
+  {
+    id: 'ptbmb',
+    titleKey: 'chemicalDetail.products.ptbmb.overview.name',
+    descriptionKey: 'chemicalDetail.products.ptbmb.overview.description',
+    category: 'chemical',
+    url: '/chemical/ptbmb',
+    keywordsKey: 'search.items.ptbmb.keywords'
+  },
+  {
+    id: 'toa',
+    titleKey: 'chemicalDetail.products.toa.overview.name',
+    descriptionKey: 'chemicalDetail.products.toa.overview.description',
+    category: 'chemical',
+    url: '/chemical/toa',
+    keywordsKey: 'search.items.toa.keywords'
+  },
+  {
+    id: 'naamps',
+    titleKey: 'chemicalDetail.products.naamps.overview.name',
+    descriptionKey: 'chemicalDetail.products.naamps.overview.description',
+    category: 'chemical',
+    url: '/chemical/naamps',
+    keywordsKey: 'search.items.naamps.keywords'
+  },
+  {
+    id: '3-phenylpentane',
+    titleKey: 'chemicalDetail.products.3-phenylpentane.overview.name',
+    descriptionKey: 'chemicalDetail.products.3-phenylpentane.overview.description',
+    category: 'chemical',
+    url: '/chemical/3-phenylpentane',
+    keywordsKey: 'search.items.3phenylpentane.keywords'
+  },
+  {
+    id: 'tertiary-amyl-benzene',
+    titleKey: 'chemicalDetail.products.tertiary-amyl-benzene.overview.name',
+    descriptionKey: 'chemicalDetail.products.tertiary-amyl-benzene.overview.description',
+    category: 'chemical',
+    url: '/chemical/tertiary-amyl-benzene',
+    keywordsKey: 'search.items.tertiaryAmylBenzene.keywords'
+  },
+  {
+    id: 'normal-butyl-benzene',
+    titleKey: 'chemicalDetail.products.normal-butyl-benzene.overview.name',
+    descriptionKey: 'chemicalDetail.products.normal-butyl-benzene.overview.description',
+    category: 'chemical',
+    url: '/chemical/normal-butyl-benzene',
+    keywordsKey: 'search.items.normalButylBenzene.keywords'
+  },
+  {
+    id: 'isobutyl-benzene',
+    titleKey: 'chemicalDetail.products.isobutyl-benzene.overview.name',
+    descriptionKey: 'chemicalDetail.products.isobutyl-benzene.overview.description',
+    category: 'chemical',
+    url: '/chemical/isobutyl-benzene',
+    keywordsKey: 'search.items.isobutylBenzene.keywords'
+  },
+  {
+    id: 'zddp-md',
+    titleKey: 'chemicalDetail.products.zddp-md.overview.name',
+    descriptionKey: 'chemicalDetail.products.zddp-md.overview.description',
+    category: 'chemical',
+    url: '/chemical/zddp-md',
+    keywordsKey: 'search.items.zddpMd.keywords'
+  },
+  {
+    id: 'zddp-im',
+    titleKey: 'chemicalDetail.products.zddp-im.overview.name',
+    descriptionKey: 'chemicalDetail.products.zddp-im.overview.description',
+    category: 'chemical',
+    url: '/chemical/zddp-im',
+    keywordsKey: 'search.items.zddpIm.keywords'
+  },
+  {
+    id: 'diethylene-triamine',
+    titleKey: 'chemicalDetail.products.diethylene-triamine.overview.name',
+    descriptionKey: 'chemicalDetail.products.diethylene-triamine.overview.description',
+    category: 'chemical',
+    url: '/chemical/diethylene-triamine',
+    keywordsKey: 'search.items.diethyleneTriamine.keywords'
+  },
+  {
+    id: 'aminoethyl-ethanolamine',
+    titleKey: 'chemicalDetail.products.aminoethyl-ethanolamine.overview.name',
+    descriptionKey: 'chemicalDetail.products.aminoethyl-ethanolamine.overview.description',
+    category: 'chemical',
+    url: '/chemical/aminoethyl-ethanolamine',
+    keywordsKey: 'search.items.aminoethylEthanolamine.keywords'
+  },
+  {
+    id: 'aminoethylpiperazine',
+    titleKey: 'chemicalDetail.products.aminoethylpiperazine.overview.name',
+    descriptionKey: 'chemicalDetail.products.aminoethylpiperazine.overview.description',
+    category: 'chemical',
+    url: '/chemical/aminoethylpiperazine',
+    keywordsKey: 'search.items.aminoethylpiperazine.keywords'
+  },
+  {
+    id: 'para-tertiary-butyl-phenol-ptbp',
+    titleKey: 'chemicalDetail.products.para-tertiary-butyl-phenol-ptbp.overview.name',
+    descriptionKey: 'chemicalDetail.products.para-tertiary-butyl-phenol-ptbp.overview.description',
+    category: 'chemical',
+    url: '/chemical/para-tertiary-butyl-phenol-ptbp',
+    keywordsKey: 'search.items.paraTertiaryButylPhenol.keywords'
+  },
+  {
+    id: '2-4-di-tert-butyl-phenol-2-4-dtbp',
+    titleKey: 'chemicalDetail.products.2-4-di-tert-butyl-phenol-2-4-dtbp.overview.name',
+    descriptionKey: 'chemicalDetail.products.2-4-di-tert-butyl-phenol-2-4-dtbp.overview.description',
+    category: 'chemical',
+    url: '/chemical/2-4-di-tert-butyl-phenol-2-4-dtbp',
+    keywordsKey: 'search.items.2-4-di-tert-butyl-phenol.keywords'
+  },
+  {
+    id: '2-6-di-tert-butyl-phenol-2-6-dtbp',
+    titleKey: 'chemicalDetail.products.2-6-di-tert-butyl-phenol-2-6-dtbp.overview.name',
+    descriptionKey: 'chemicalDetail.products.2-6-di-tert-butyl-phenol-2-6-dtbp.overview.description',
+    category: 'chemical',
+    url: '/chemical/2-6-di-tert-butyl-phenol-2-6-dtbp',
+    keywordsKey: 'search.items.2-6-di-tert-butyl-phenol.keywords'
+  },
+  {
+    id: 'ortho-tert-butyl-phenol-otbp',
+    titleKey: 'chemicalDetail.products.ortho-tert-butyl-phenol-otbp.overview.name',
+    descriptionKey: 'chemicalDetail.products.ortho-tert-butyl-phenol-otbp.overview.description',
+    category: 'chemical',
+    url: '/chemical/ortho-tert-butyl-phenol-otbp',
+    keywordsKey: 'search.items.orthoTertButylPhenol.keywords'
+  },
+  {
+    id: 'osbp',
+    titleKey: 'chemicalDetail.products.osbp.overview.name',
+    descriptionKey: 'chemicalDetail.products.osbp.overview.description',
+    category: 'chemical',
+    url: '/chemical/osbp',
+    keywordsKey: 'search.items.osbp.keywords'
+  },
+  {
+    id: 'potassium-bicarbonate',
+    titleKey: 'chemicalDetail.products.potassium-bicarbonate.overview.name',
+    descriptionKey: 'chemicalDetail.products.potassium-bicarbonate.overview.description',
+    category: 'chemical',
+    url: '/chemical/potassium-bicarbonate',
+    keywordsKey: 'search.items.potassiumBicarbonate.keywords'
+  },
+  {
+    id: 'isohexane',
+    titleKey: 'chemicalDetail.products.isohexane.overview.name',
+    descriptionKey: 'chemicalDetail.products.isohexane.overview.description',
+    category: 'chemical',
+    url: '/chemical/isohexane',
+    keywordsKey: 'search.items.isohexane.keywords'
+  },
+  {
+    id: 'atbs',
+    titleKey: 'chemicalDetail.products.atbs.overview.name',
+    descriptionKey: 'chemicalDetail.products.atbs.overview.description',
+    category: 'chemical',
+    url: '/chemical/atbs',
+    keywordsKey: 'search.items.atbs.keywords'
+  },
+  {
+    id: 'tba',
+    titleKey: 'chemicalDetail.products.tba.overview.name',
+    descriptionKey: 'chemicalDetail.products.tba.overview.description',
+    category: 'chemical',
+    url: '/chemical/tba',
+    keywordsKey: 'search.items.tba.keywords'
+  },
+  {
+    id: 'c10-aromatic-solvent',
+    titleKey: 'chemicalDetail.products.c10-aromatic-solvent.overview.name',
+    descriptionKey: 'chemicalDetail.products.c10-aromatic-solvent.overview.description',
+    category: 'chemical',
+    url: '/chemical/c10-aromatic-solvent',
+    keywordsKey: 'search.items.c10AromaticSolvent.keywords'
+  },
+  {
+    id: '4-butylaniline',
+    titleKey: 'chemicalDetail.products.4-butylaniline.overview.name',
+    descriptionKey: 'chemicalDetail.products.4-butylaniline.overview.description',
+    category: 'chemical',
+    url: '/chemical/4-butylaniline',
+    keywordsKey: 'search.items.4butylaniline.keywords'
+  },
+  {
+    id: 'dimethyl-methylphosphonate-dmmp',
+    titleKey: 'chemicalDetail.products.dimethyl-methylphosphonate-dmmp.overview.name',
+    descriptionKey: 'chemicalDetail.products.dimethyl-methylphosphonate-dmmp.overview.description',
+    category: 'chemical',
+    url: '/chemical/dimethyl-methylphosphonate-dmmp',
+    keywordsKey: 'search.items.dimethylMethylphosphonate.keywords'
+  },
+  {
+    id: 'sodium-sulfide-na2s',
+    titleKey: 'chemicalDetail.products.sodium-sulfide-na2s.overview.name',
+    descriptionKey: 'chemicalDetail.products.sodium-sulfide-na2s.overview.description',
+    category: 'chemical',
+    url: '/chemical/sodium-sulfide-na2s',
+    keywordsKey: 'search.items.sodiumSulfide.keywords'
+  },
+  {
+    id: '2-6-di-sec-butyl-phenol-2-6-dsbp',
+    titleKey: 'chemicalDetail.products.2-6-di-sec-butyl-phenol-2-6-dsbp.overview.name',
+    descriptionKey: 'chemicalDetail.products.2-6-di-sec-butyl-phenol-2-6-dsbp.overview.description',
+    category: 'chemical',
+    url: '/chemical/2-6-di-sec-butyl-phenol-2-6-dsbp',
+    keywordsKey: 'search.items.2-6-di-sec-butyl-phenol.keywords'
+  },
 
   // Services - Use actual service routes that exist
   {

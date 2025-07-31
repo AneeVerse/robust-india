@@ -267,6 +267,7 @@ function NavbarContent() {
           onClose={() => setShowResults(false)}
           onItemClick={() => {
             setSearch('');
+            setShowResults(false);
             inputRef.current?.blur();
           }}
         />

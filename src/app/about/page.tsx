@@ -86,9 +86,9 @@ export default function AboutPage() {
   return (
     <div className="w-full bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-2 z-10 max-w-full">
+      <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-4 sm:pt-8 md:pt-12 lg:pt-16 pb-2 z-10 max-w-full">
         {/* Company logo and name */}
-        <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 -mb-10 mt-2 ">
+        <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8">
           <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
           <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-wide">{t('hero.brandName')}</span>
         </Link>
@@ -97,7 +97,7 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           variants={container}
-          className="font-normal text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight mt-4 sm:mt-6 md:mt-8 lg:mt-12 xl:mt-20 tracking-tight text-center max-w-full"
+          className="font-normal text-gray-900 mb-8 sm:mb-12 md:mb-16 lg:mb-20 leading-tight tracking-tight text-center max-w-full"
           style={{ 
             fontFamily: 'NoiGrotesk, sans-serif',
             fontSize: 'clamp(2.5rem, 8vw, 6rem)'
@@ -116,14 +116,15 @@ export default function AboutPage() {
         </motion.h1>
         <p
           ref={paraRef}
-          className="mt-8 sm:mt-10 md:mt-12 max-w-6xl mx-auto text-lg md:text-xl lg:text-2xl text-gray-700 leading-[1.9] mb-16 px-6"
+          className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 max-w-6xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-[1.7] sm:leading-[1.8] md:leading-[1.9] mb-12 sm:mb-16 px-4 sm:px-6 text-left sm:text-justify"
           style={{ 
             fontFamily: 'NoiGrotesk, sans-serif', 
-            textAlign: 'justify', 
             textJustify: 'inter-word',
-            textAlignLast: 'justify',
-            hyphens: 'auto',
-            wordSpacing: '0.1em'
+            textAlignLast: 'left',
+            hyphens: 'none',
+            wordSpacing: '0.05em',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word'
           }}
         >
           {paraLines.map((line, lineIdx) => (
@@ -149,7 +150,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-light text-gray-900 mb-6 mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+            <h2 className="text-3xl md:text-5xl font-light text-gray-900 mb-6 mt-6 sm:mt-8 md:mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
               {t('about.whatWeDo.title')}
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
@@ -324,9 +325,9 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-26 mb-20 text-center"
+            className="mt-16 sm:mt-20 md:mt-26 mb-20 text-center"
           >
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 mt-6 sm:mt-8 md:mt-10" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
               {t('about.mission.title')}
             </h3>
             <p className="text-gray-600 leading-relaxed max-w-7xl mx-auto mb-8 text-center" style={{ 

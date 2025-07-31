@@ -313,6 +313,102 @@
       },
       "polyvinylChloride": {
         "keywords": ["polyvinyl chloride", "PVC", "polymer", "plastic", "vinyl", "thermoplastic"]
+      },
+      "antioxidant168": {
+        "keywords": ["antioxidant 168", "CAS 31570-04-4", "polymer stabilizer", "antioxidant", "plastic additive", "168", "Irganox 168", "tris(2,4-di-tert-butylphenyl) phosphite"]
+      },
+      "antioxidant1098": {
+        "keywords": ["antioxidant 1098", "CAS 23128-74-7", "polymer stabilizer", "antioxidant", "plastic additive", "1098", "Irganox 1098", "N,N'-hexane-1,6-diylbis(3-(3,5-di-tert-butyl-4-hydroxyphenyl)propionamide)"]
+      },
+      "antioxidantL135": {
+        "keywords": ["antioxidant L135", "CAS 125643-61-0", "polymer stabilizer", "antioxidant", "plastic additive", "L135", "hydrolytic stability", "color retention", "high-temperature performance"]
+      },
+      "antioxidant1135": {
+        "keywords": ["antioxidant 1135", "CAS 125643-61-0", "polymer stabilizer", "antioxidant", "plastic additive", "1135", "hydrolytic stability", "color retention", "high-temperature performance"]
+      },
+      "antioxidant1315": {
+        "keywords": ["antioxidant 1315", "polymer stabilizer", "antioxidant", "plastic additive", "1315"]
+      },
+      "antioxidantBlend": {
+        "keywords": ["antioxidant blend", "168/1010 blend", "1:2 ratio", "CAS 31570-04-4", "CAS 6683-19-8", "polymer stabilizer", "antioxidant blend", "Irganox blend"]
+      },
+      "ptbmb": {
+        "keywords": ["methyl 4-tert-butyl benzoate", "PTBMB", "CAS 26537-19-9", "ester", "chemical intermediate", "fragrance", "flavor"]
+      },
+      "toa": {
+        "keywords": ["N-tert-octyl acrylamide", "TOA", "CAS 4223-03-4", "acrylamide", "polymer", "copolymer", "LCST", "lower critical solution temperature"]
+      },
+      "naamps": {
+        "keywords": ["sodium salt of 2-acrylamido-2-methylpropane sulfonic acid", "NaAMPS", "CAS 5165-97-9", "AMPS", "sulfonic acid", "polymer", "water-soluble polymer"]
+      },
+      "3phenylpentane": {
+        "keywords": ["3-phenylpentane", "3-PP", "CAS 1196-58-3", "aromatic hydrocarbon", "solvent", "chemical intermediate"]
+      },
+      "tertiaryAmylBenzene": {
+        "keywords": ["tertiary amyl benzene", "TAB", "CAS 2049-95-8", "aromatic hydrocarbon", "solvent", "chemical intermediate"]
+      },
+      "normalButylBenzene": {
+        "keywords": ["normal butyl benzene", "NBB", "CAS 104-51-8", "aromatic hydrocarbon", "solvent", "chemical intermediate"]
+      },
+      "isobutylBenzene": {
+        "keywords": ["isobutyl benzene", "IBB", "CAS 538-93-2", "aromatic hydrocarbon", "solvent", "chemical intermediate"]
+      },
+      "zddpMd": {
+        "keywords": ["zinc dialkyl dithiophosphate", "ZDDP-MD", "CAS 2215-35-2", "lubricant additive", "anti-wear", "antioxidant", "zinc dithiophosphate"]
+      },
+      "zddpIm": {
+        "keywords": ["zinc dialkyl dithiophosphate", "ZDDP-IM", "CAS 84605-29-8", "lubricant additive", "anti-wear", "antioxidant", "zinc dithiophosphate", "isomer mixture"]
+      },
+      "diethyleneTriamine": {
+        "keywords": ["diethylene triamine", "DETA", "CAS 111-40-0", "amine", "chelating agent", "epoxy curing agent", "chemical intermediate"]
+      },
+      "aminoethylEthanolamine": {
+        "keywords": ["aminoethyl ethanolamine", "AEEA", "CAS 111-41-1", "amine", "chelating agent", "epoxy curing agent", "chemical intermediate"]
+      },
+      "aminoethylpiperazine": {
+        "keywords": ["aminoethylpiperazine", "AEP", "CAS 140-31-8", "amine", "chelating agent", "epoxy curing agent", "chemical intermediate"]
+      },
+      "paraTertiaryButylPhenol": {
+        "keywords": ["para-tertiary butyl phenol", "PTBP", "CAS 98-54-4", "phenol", "antioxidant", "chemical intermediate", "4-tert-butylphenol"]
+      },
+      "2-4-di-tert-butyl-phenol": {
+        "keywords": ["2,4-di-tert-butyl phenol", "2,4-DTBP", "CAS 96-76-4", "phenol", "antioxidant", "chemical intermediate", "bis(tert-butyl)phenol"]
+      },
+      "2-6-di-tert-butyl-phenol": {
+        "keywords": ["2,6-di-tert-butyl phenol", "2,6-DTBP", "CAS 128-39-2", "phenol", "antioxidant", "chemical intermediate", "bis(tert-butyl)phenol"]
+      },
+      "orthoTertButylPhenol": {
+        "keywords": ["ortho-tert-butyl phenol", "OTBP", "CAS 88-18-6", "phenol", "antioxidant", "chemical intermediate", "2-tert-butylphenol"]
+      },
+      "osbp": {
+        "keywords": ["ortho-sec-butyl phenol", "OSBP", "CAS 89-72-5", "phenol", "antioxidant", "chemical intermediate", "2-sec-butylphenol"]
+      },
+      "potassiumBicarbonate": {
+        "keywords": ["potassium bicarbonate", "KHCO3", "bicarbonate", "alkali", "food additive", "buffering agent"]
+      },
+      "isohexane": {
+        "keywords": ["isohexane", "SBP", "special boiling point", "hexane isomers", "aliphatic hydrocarbon", "solvent"]
+      },
+      "atbs": {
+        "keywords": ["2-acrylamido-2-methylpropane sulphonic acid", "ATBS", "acrylamide", "sulfonic acid", "polymer", "water-soluble polymer"]
+      },
+      "tba": {
+        "keywords": ["N-tertiary butyl acrylamide", "TBA", "acrylamide", "polymer", "copolymer", "chemical intermediate"]
+      },
+      "c10AromaticSolvent": {
+        "keywords": ["C10 aromatic solvent", "aromatic 150", "aromatic hydrocarbon", "solvent", "industrial solvent"]
+      },
+      "4butylaniline": {
+        "keywords": ["4-butylaniline", "p-butylaniline", "4-aminobutylbenzene", "aromatic amine", "chemical intermediate"]
+      },
+      "dimethylMethylphosphonate": {
+        "keywords": ["dimethyl methylphosphonate", "DMMP", "phosphonate", "flame retardant", "chemical intermediate"]
+      },
+      "sodiumSulfide": {
+        "keywords": ["sodium sulfide", "Na2S", "sulfide", "reducing agent", "chemical intermediate", "industrial chemical"]
+      },
+      "2-6-di-sec-butyl-phenol": {
+        "keywords": ["2,6-di-sec-butyl phenol", "2,6-DSBP", "CAS 5510-99-6", "phenol", "antioxidant", "chemical intermediate", "bis(sec-butyl)phenol"]
       }
     }
   },
