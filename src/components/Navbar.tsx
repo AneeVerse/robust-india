@@ -237,14 +237,13 @@ function NavbarContent() {
       <div className={`w-px h-6 sm:h-8 md:h-10 bg-white/20 mx-1.5 sm:mx-2 md:mx-3 flex-shrink-0 transition-opacity duration-300 ${focused ? 'opacity-0' : 'opacity-100'}`} />
       
       {/* Search bar with dropdown */}
-  {/* Search bar with dropdown */}
-  <div ref={searchRef} className={`relative transition-all duration-300 cursor-text ${
+      <div ref={searchRef} className={`relative transition-all duration-300 cursor-pointer ${
         focused 
-          ? 'w-full'
-          : isRussian ? 'w-14 sm:w-18 md:w-20 lg:w-24' : 'w-14 sm:w-18 md:w-20 lg:w-24'
+          ? 'w-full cursor-text'
+          : 'w-8 sm:w-10 md:w-12 lg:w-10'
       }`} onClick={() => inputRef.current?.focus()}>
         <form onSubmit={handleSearchSubmit} className="relative flex items-center">
-          <FiSearch className="absolute left-2 sm:left-3 text-gray-400 w-3 h-3 sm:w-4 sm:h-4 pointer-events-none z-10" />
+          <FiSearch className={`absolute left-2 sm:left-3 text-gray-400 w-3 h-3 sm:w-4 sm:h-4 pointer-events-none z-10 transition-all duration-300 ${focused ? 'opacity-100' : 'opacity-80'}`} />
           <input
             ref={inputRef}
             type="text"
@@ -252,8 +251,8 @@ function NavbarContent() {
             onChange={handleSearchChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
-            placeholder={t('search.placeholder', 'Search')}
-            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-0 outline-none shadow-inner transition-all duration-300 ${focused ? 'bg-[#232221]/95' : ''} ${isRussian ? 'text-xs sm:text-sm' : ''} cursor-text`}
+            placeholder={t('search.placeholder', 'Search chemical...')}
+            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-2 focus:ring-[#6164F6]/50 focus:ring-offset-0 outline-none shadow-inner transition-all duration-300 ${focused ? 'bg-[#232221]/95' : 'bg-transparent'} ${isRussian ? 'text-xs sm:text-sm' : ''} cursor-text`}
             style={{ minWidth: 0 }}
           />
         </form>

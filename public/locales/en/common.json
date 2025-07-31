@@ -2830,7 +2830,7 @@
           "hazards": "Low acute toxicity (LD50 >2000 mg/kg oral rat). Dust may cause mechanical eye irritation. Not classified as flammable.",
           "regulations": "GHS Classification: Not classified as hazardous. FDA Status: Approved for food-contact applications. EU REACH: Registered with no restrictions. Disposal: Incineration recommended (with proper emission controls)."
         },
-        "keyTechnicalAdvantages": [
+        "keyAdvantages": [
           "Excellent compatibility with polyamides and polyesters",
           "Low volatility for long-term stabilization",
           "High extraction resistance in demanding applications"
@@ -2965,7 +2965,7 @@
     "hazards": "Low toxicity (LD50 >2000 mg/kg). Dust may cause eye irritation.",
     "regulations": "FDA compliant (food-contact). EU REACH registered. Not classified as hazardous."
   },
-  "keyTechnicalAdvantages": [
+  "keyAdvantages": [
     "Spirocyclic structure: Superior hydrolysis resistance",
     "High melting point: No volatilization during processing",
     "Phenolic-free: No discoloration in clear polymers"
@@ -3567,7 +3567,12 @@
         "safetyRegulatory": {
           "hazards": "Combustible (not highly flammable). Mild irritant (eyes/skin). Low toxicity (LD50 >2000 mg/kg rat oral).",
           "regulations": "GHS Classification: Not hazardous. IFRA Approved for fragrances. EU REACH: Registered."
-        }
+        },
+        "keyCharacteristics": [
+          "Odor Threshold: 0.1-1 ppm",
+          "Vapor Pressure: 0.01 mmHg (25°C)",
+          "Dielectric Constant: ~6.5"
+        ]
       },
       "isohexane": {
         "overview": {
@@ -3696,10 +3701,10 @@
           "hazards": "Skin sensitizer (may cause allergic reactions). Eye irritant. Not flammable but decomposes at high temps.",
           "regulations": "GHS Symbols: Exclamation Mark. Not classified as carcinogenic. EU REACH: Registered."
         },
-        "keyPolymerProperties": {
-          "hydrophobicity": "Increases water resistance",
-          "lcstAdjustable": "Adjustable 20–60°C (Lower Critical Solution Temperature)"
-        }
+        "keyPolymerProperties": [
+          "Hydrophobicity: Increases water resistance",
+          "LCST*: Adjustable 20-60°C"
+        ]
       },
       "tba": {
         "overview": {
@@ -3833,11 +3838,11 @@
           "hazards": "Low toxicity (LD50 >2000 mg/kg oral rat). Dust may irritate eyes/respiratory tract. Not flammable.",
           "regulations": "GHS Classification: Not hazardous. FDA Approved for indirect food contact. EU REACH: Registered."
         },
-        "keyPolymerProperties": {
-          "sulfonateGroup": "Extreme water solubility",
-          "thermalStability": "Stable to 250°C in polymers",
-          "chargeDensity": "Enhances ionic interactions"
-        }
+        "keyPolymerProperties": [
+          "Sulfonate Group: Extreme water solubility",
+          "Thermal Stability: Stable to 250°C in polymers",
+          "Charge Density: Enhances ionic interactions"
+        ]
       },
       "atbs": {
         "overview": {
@@ -4101,10 +4106,10 @@
     "hazards": "Combustible liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
     "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
   },
-  "keyPhysicalProperties": {
-    "vaporPressure": "0.2 mmHg (25°C)",
-    "dielectricConstant": "~2.3"
-  }
+  "keyFeatures": [
+    "Vapor Pressure: 0.2 mmHg (25°C)",
+    "Dielectric Constant: ~2.3"
+  ]
 },
       "tertiary-amyl-benzene": {
         "overview": {
@@ -4169,10 +4174,10 @@
           "hazards": "Combustible liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
           "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
         },
-        "keyPhysicalProperties": {
-          "vaporPressure": "0.3 mmHg (25°C)",
-          "dielectricConstant": "~2.3"
-        }
+        "keyFeatures": [
+          "Vapor Pressure: 0.3 mmHg (25°C)",
+          "Dielectric Constant: ~2.3"
+        ]
       },
       "secondary-butyl-benzene": {
         "overview": {
@@ -4301,10 +4306,10 @@
           "hazards": "Flammable liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
           "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
         },
-        "keyPhysicalProperties": {
-          "vaporPressure": "1.0 mmHg (25°C)",
-          "dielectricConstant": "~2.3"
-        }
+        "keyFeatures": [
+          "Vapor Pressure: 1.0 mmHg (25°C)",
+          "Dielectric Constant: ~2.3"
+        ]
       },
       "isobutyl-benzene": {
         "overview": {
@@ -4369,10 +4374,10 @@
           "hazards": "Flammable liquid. Skin irritant (defatting). Low acute toxicity (LD50 >2000 mg/kg).",
           "regulations": "GHS Symbols: Flame. Not classified as hazardous for transport."
         },
-        "keyPhysicalProperties": {
-          "vaporPressure": "1.5 mmHg (25°C)",
-          "dielectricConstant": "~2.3"
-        }
+        "keyFeatures": [
+          "Vapor Pressure: 1.5 mmHg (25°C)",
+          "Dielectric Constant: ~2.3"
+        ]
       },
       "zddp-md": {
         "overview": {
@@ -4435,10 +4440,10 @@
           "hazards": "Skin/eye irritant. Contains zinc (environmental concern). Thermal decomposition releases toxic gases.",
           "regulations": "GHS Symbols: Health Hazard, Environment. REACH: Registered."
         },
-        "keyPerformanceData": {
-          "wearPrevention": "70–90% reduction",
-          "oxidationStability": "2–3x improvement"
-        }
+        "keyPerformanceData": [
+          "Wear Prevention: 70–90% reduction",
+          "Oxidation Stability: 2–3x improvement"
+        ]
       },
       "zddp-im": {
         "overview": {
@@ -4500,11 +4505,11 @@
           "hazards": "Skin irritant (prolonged contact). Zinc content (regulated in wastewater). Decomposition risk >200°C (toxic fumes).",
           "regulations": "GHS Symbols: Health Hazard, Environment. OECD HPV: Registered. US EPA: Regulated under TSCA."
         },
-        "technicalPerformanceData": {
-          "wearScarDiameter": "≤0.40 mm (ASTM D4172)",
-          "phosphorusContent": "7–8 wt%",
-          "sulfurContent": "14–16 wt%"
-        }
+        "technicalPerformanceData": [
+          "Wear Scar Diameter (ASTM D4172): ≤0.40 mm",
+          "Phosphorus Content: 7–8 wt%",
+          "Sulfur Content: 14–16 wt%"
+        ]
       },
       "sodium-cyanide": {
         "overview": {
@@ -4891,10 +4896,10 @@
           "hazards": "Corrosive (skin/eye burns). Sensitizer (allergic dermatitis). Toxic fumes when heated.",
           "regulations": "GHS Symbols: Corrosion, Health Hazard. UN 2079 (Class 8). OSHA PEL: 1 ppm (skin)"
         },
-        "keyTechnicalData": {
-          "amineValue": "1,630–1,670 mg KOH/g",
-          "equivalentWeight": "34 g/eq (epoxy curing)"
-        }
+        "keyTechnicalData": [
+          "Amine Value: 1,630–1,670 mg KOH/g",
+          "Equivalent Weight: 34 g/eq (epoxy curing)"
+        ]
       },
       "aminoethyl-ethanolamine": {
         "overview": {
@@ -4961,10 +4966,10 @@
           "hazards": "Skin/eye irritant. Sensitizer (allergic reactions possible). Combustible at high temps.",
           "regulations": "GHS Symbols: Health Hazard. Not classified as hazardous for transport. EU REACH: Registered."
         },
-        "keyPerformanceData": {
-          "amineValue": "1,000–1,100 mg KOH/g",
-          "ph": "11–12 (1% solution)"
-        }
+        "keyPerformanceData": [
+          "Amine Value: 1,000–1,100 mg KOH/g",
+          "pH (1% solution): 11–12"
+        ]
       },
       "diethanolamine": {
         "overview": {
@@ -5096,10 +5101,10 @@
           "hazards": "Skin/eye corrosion (pH 11–12). Sensitizer (allergic dermatitis). Combustible at high temps.",
           "regulations": "GHS Symbols: Corrosion, Health Hazard. UN 2735 (Class 8). OSHA PEL: 5 ppm (skin)"
         },
-        "keyTechnicalData": {
-          "amineValue": "1,300–1,350 mg KOH/g",
-          "equivalentWeight": "43 g/eq (epoxy curing)"
-        }
+        "keyTechnicalData": [
+          "Amine Value: 1,300–1,350 mg KOH/g",
+          "Equivalent Weight: 43 g/eq (epoxy curing)"
+        ]
       },
       "para-tertiary-butyl-phenol-ptbp": {
         "overview": {
@@ -5167,10 +5172,10 @@
           "hazards": "Skin/eye irritant. Environmental toxicity (aquatic organisms). Combustible dust when powdered.",
           "regulations": "GHS Symbols: Health Hazard, Environment. EU REACH: Registered. Not classified as carcinogenic."
         },
-        "keyProperties": {
-          "pKa": "10.4 (weak acid)",
-          "vaporPressure": "0.01 mmHg (25°C)"
-        }
+        "keyProperties": [
+          "pKa: 10.4 (weak acid)",
+          "Vapor Pressure: 0.01 mmHg (25°C)"
+        ]
       },
       "2,4-Di-Tert-Butyl Phenol (2,4-DTBP)": "2,4-Di-Tert-Butyl Phenol (2,4-DTBP)",
       "2-4-di-tert-butyl-phenol-2-4-dtbp": {
@@ -5238,10 +5243,10 @@
           "hazards": ["Skin irritant", "Environmental toxicity", "Combustible at high temps"],
           "regulatoryStatus": {"ghsSymbols": ["Health Hazard"], "euReach": "Registered"}
         },
-        "keyPerformanceData": {
-          "antioxidantEfficiency": "3–5x better than BHT",
-          "volatility": "Lower than BHT"
-        }
+        "keyPerformanceData": [
+          "Antioxidant Efficiency: 3–5x better than BHT",
+          "Volatility: Lower than BHT"
+        ]
       },
       "2,6-Di-Tert-Butyl Phenol (2,6-DTBP)": "2,6-Di-Tert-Butyl Phenol (2,6-DTBP)",
       "2-6-di-tert-butyl-phenol-2-6-dtbp": {
@@ -5311,10 +5316,10 @@
           "hazards": ["Skin/eye irritant", "Combustible at high temps", "Low acute toxicity (LD50 >2000 mg/kg)"],
           "regulatoryStatus": {"ghsSymbols": ["Exclamation Mark"], "euReach": "Registered", "fda": "Indirect food additive approved"}
         },
-        "keyChemicalProperties": {
-          "antioxidantEfficiency": "Moderate (better than phenol)",
-          "pKa": "11.5 (weakly acidic)"
-        }
+        "keyChemicalProperties": [
+          "Antioxidant Efficiency: Moderate (better than phenol)",
+          "pKa: 11.5 (weakly acidic)"
+        ]
       },
       "Ortho-Tert-Butyl Phenol (OTBP)": "Ortho-Tert-Butyl Phenol (OTBP)",
       "ortho-tert-butyl-phenol-otbp": {
@@ -5385,10 +5390,10 @@
           "hazards": ["Skin corrosion/irritation (Category 2)", "Environmental toxicity (aquatic organisms)", "Combustible liquid"],
           "regulatoryStatus": {"ghsSymbols": ["Corrosion", "Environment"], "euReach": "Registered", "notCarcinogenic": true}
         },
-        "keyChemicalProperties": {
-          "pKa": "10.6 (weaker acid than phenol)",
-          "vaporPressure": "0.03 mmHg (25°C)"
-        }
+        "keyChemicalProperties": [
+          "pKa: 10.6 (weaker acid than phenol)",
+          "Vapor Pressure: 0.03 mmHg (25°C)"
+        ]
       },
       "osbp": {
         "overview": {
@@ -5467,11 +5472,15 @@
           "transportRegulations": "Not classified as dangerous goods",
           "globalInventories": "TSCA: Listed, REACH: Registered, DSL: Listed"
         },
-        "technicalComparison": {
-          "property": ["Boiling Pt.", "Water Sol.", "pKa"],
-          "osbp": ["226°C", "1 g/L", "10.5"],
-          "4-sec-BP": ["239°C", "0.8 g/L", "10.3"]
-        }
+        "technicalComparison": [
+          "Boiling Pt.: 226°C | 239°C",
+          "Water Sol.: 1 g/L | 0.8 g/L",
+          "pKa: 10.5 | 10.3"
+        ],
+        "keyChemicalProperties": [
+          "pKa: ~10.5 (weak acid)",
+          "Vapor Pressure: 0.05 mmHg (25°C)"
+        ]
       },
       "osbp-detailed": {
   "overview": {
@@ -5624,10 +5633,10 @@
           "hazards": ["Skin/eye irritant", "Combustible at high temps", "Environmental toxicity (aquatic organisms)"],
           "regulatoryStatus": {"ghsSymbols": ["Health Hazard", "Environment"], "euReach": "Registered", "notCarcinogenic": true}
         },
-        "keyPerformanceData": {
-          "antioxidantEfficiency": "Moderate (better than BHT)",
-          "thermalStability": "Up to 200°C"
-        }
+        "keyPerformanceData": [
+          "Antioxidant Efficiency: Moderate (better than BHT)",
+          "Thermal Stability: Up to 200°C"
+        ]
       },
       "polyester-staple-fiber-psf": {
         "overview": {

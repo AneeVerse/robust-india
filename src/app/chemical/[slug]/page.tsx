@@ -20,6 +20,7 @@ interface ChemicalOverview {
   keyFeatures?: string[];
   majorApplications?: string[];
   industrialSignificance?: string;
+  keyAdvantages?: string[];
 }
 
 interface ChemicalData {
@@ -36,6 +37,16 @@ interface ChemicalData {
   industriesServed?: string[];
   storageHandling?: Record<string, string>;
   safetyRegulatory?: Record<string, string>;
+  keyAdvantages?: string[];
+  keyCharacteristics?: string[];
+  keyPolymerProperties?: string[];
+  keyFeatures?: string[];
+  keyPerformanceData?: string[];
+  technicalPerformanceData?: string[];
+  keyTechnicalData?: string[];
+  keyProperties?: string[];
+  keyChemicalProperties?: string[];
+  technicalComparison?: string[];
 }
 
 export default function ChemicalDetailPage({ params }: { params: Promise<ChemicalParams> }) {
@@ -172,6 +183,8 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                     </ul>
                   </div>
                 )}
+
+
 
                 {/* Major Applications */}
                 {overview.majorApplications && (
@@ -425,6 +438,841 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* Key Characteristics - Table format for PTBMB */}
+          {chemical.keyCharacteristics && slug === 'ptbmb' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                {currentLang === 'en' ? 'Key Characteristics' : 'Ключевые характеристики'}
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyCharacteristics.map((characteristic: string, idx: number) => {
+                      const parts = characteristic.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Polymer Properties - Table format for TOA and NaAMPS */}
+          {chemical.keyPolymerProperties && (slug === 'toa' || slug === 'naamps') && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? 'Key Polymer Properties' : 'Ключевые полимерные свойства'}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {slug === 'toa' 
+                          ? (currentLang === 'en' ? 'Copolymer Feature' : 'Особенность сополимера')
+                          : (currentLang === 'en' ? 'Feature' : 'Особенность')
+                        }
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {slug === 'toa' 
+                          ? (currentLang === 'en' ? 'TOA Contribution' : 'Вклад TOA')
+                          : (currentLang === 'en' ? 'Benefit' : 'Преимущество')
+                        }
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyPolymerProperties.map((property: string, idx: number) => {
+                      const parts = property.split(': ');
+                      const feature = parts[0];
+                      const contribution = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {feature}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {contribution}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+              {slug === 'toa' && (
+                <div className="mt-4 text-sm text-gray-600 italic" style={{ fontFamily: 'FusionNeue, sans-serif' }}>
+                  {currentLang === 'en' ? '*Lower Critical Solution Temperature' : '*Нижняя критическая температура раствора'}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Key Features - Table format for 3-PP, TAB, NBB, and IBB */}
+          {chemical.keyFeatures && (slug === '3-phenylpentane' || slug === 'tertiary-amyl-benzene' || slug === 'normal-butyl-benzene' || slug === 'isobutyl-benzene') && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Features
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> особенности
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyFeatures.map((feature: string, idx: number) => {
+                      const parts = feature.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Performance Data - Table format for ZDDP-MD */}
+          {chemical.keyPerformanceData && slug === 'zddp-md' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Performance Data
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> данные производительности
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Parameter' : 'Параметр'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyPerformanceData.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const parameter = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {parameter}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Technical Performance Data - Table format for ZDDP-IM */}
+          {chemical.technicalPerformanceData && slug === 'zddp-im' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Technical</span> Performance Data
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Технические</span> данные производительности
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Parameter' : 'Параметр'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.technicalPerformanceData.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const parameter = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {parameter}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Technical Data - Table format for DETA */}
+          {chemical.keyTechnicalData && slug === 'diethylene-triamine' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Technical Data
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> технические данные
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyTechnicalData.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Performance Data - Table format for AEEA */}
+          {chemical.keyPerformanceData && slug === 'aminoethyl-ethanolamine' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Performance Data
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> данные производительности
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyPerformanceData.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Technical Data - Table format for AEP */}
+          {chemical.keyTechnicalData && slug === 'aminoethylpiperazine' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Technical Data
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> технические данные
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyTechnicalData.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Chemical Properties - Table format for PTBP */}
+          {chemical.keyProperties && slug === 'para-tertiary-butyl-phenol-ptbp' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Chemical Properties
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> химические свойства
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyProperties.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Performance Data - Table format for 2,4-DTBP */}
+          {chemical.keyPerformanceData && slug === '2-4-di-tert-butyl-phenol-2-4-dtbp' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Performance Data
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> данные производительности
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyPerformanceData.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Chemical Properties - Table format for 2,6-DTBP */}
+          {chemical.keyChemicalProperties && slug === '2-6-di-tert-butyl-phenol-2-6-dtbp' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Chemical Properties
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> химические свойства
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyChemicalProperties.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Chemical Properties - Table format for OTBP */}
+          {chemical.keyChemicalProperties && slug === 'ortho-tert-butyl-phenol-otbp' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? 'Key Chemical Properties' : 'Ключевые химические свойства'}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyChemicalProperties.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Chemical Properties - Table format for OSBP */}
+          {chemical.keyChemicalProperties && slug === 'osbp' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? 'Key Chemical Properties' : 'Ключевые химические свойства'}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyChemicalProperties.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Technical Comparison with Isomers - Table format for OSBP */}
+          {chemical.technicalComparison && slug === 'osbp' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? 'Technical Comparison with Isomers' : 'Техническое сравнение с изомерами'}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        OSBP
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        4-sec-BP
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.technicalComparison.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const values = parts[1] || '';
+                      const [osbpValue, secBPValue] = values.split(' | ');
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {osbpValue}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {secBPValue}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Performance Data - Table format for 2,6-DSBP */}
+          {chemical.keyPerformanceData && slug === '2-6-di-sec-butyl-phenol-2-6-dsbp' && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                <span>
+                  {currentLang === 'en' ? (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Performance Data
+                    </>
+                  ) : (
+                    <>
+                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> данные производительности
+                    </>
+                  )}
+                </span>
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-[400px] w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Property' : 'Свойство'}
+                      </th>
+                      <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                        {currentLang === 'en' ? 'Value' : 'Значение'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chemical.keyPerformanceData.map((data: string, idx: number) => {
+                      const parts = data.split(': ');
+                      const property = parts[0];
+                      const value = parts[1] || '';
+                      return (
+                        <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {property}
+                          </td>
+                          <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                            {value}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* Key Advantages */}
+          {chemical.keyAdvantages && (
+            <div className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 mb-8 flex items-center gap-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                <div className="w-12 h-12 bg-[#6164F6] rounded-2xl flex items-center justify-center">
+                  <TbFlask className="w-6 h-6 text-white" />
+                </div>
+                {slug === 'antioxidant-1135' 
+                  ? (currentLang === 'en' ? 'Key Technical Advantages' : 'Ключевые технические преимущества')
+                  : (currentLang === 'en' ? 'Key Advantages' : 'Ключевые преимущества')
+                }
+              </h3>
+              
+              {/* Table format for Antioxidant 1135 */}
+              {slug === 'antioxidant-1135' ? (
+                <div className="overflow-x-auto">
+                  <table className="min-w-[400px] w-full text-left border-collapse">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                          {currentLang === 'en' ? 'Feature' : 'Особенность'}
+                        </th>
+                        <th className="py-3 px-4 font-bold text-gray-800 text-lg" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                          {currentLang === 'en' ? 'Benefit' : 'Преимущество'}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {chemical.keyAdvantages.map((advantage: string, idx: number) => {
+                        const parts = advantage.split(': ');
+                        const feature = parts[0];
+                        const benefit = parts[1] || '';
+                        return (
+                          <tr key={idx} className="border-b hover:bg-gray-50 transition-colors">
+                            <td className="py-3 px-4 font-semibold text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                              {feature}
+                            </td>
+                            <td className="py-3 px-4 text-gray-700" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                              {benefit}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                /* Original bullet point format for all other chemicals */
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {chemical.keyAdvantages.map((advantage: string, idx: number) => (
+                    <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#6164F6] rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-gray-700 leading-relaxed font-medium" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
+                          {advantage}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
