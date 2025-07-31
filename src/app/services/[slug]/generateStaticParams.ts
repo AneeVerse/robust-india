@@ -2,10 +2,10 @@ export const serviceImages = [
   {
     slug: 'integrated-3pl-ftwz',
     image: '/images/demo/ftw.jpg',
-    fullImage: '/images/project/slug1/ftw-1.png',
+    fullImage: '/images/integrated1.jpg',
     smallImages: [
-      '/images/project/slug1/ftw-2.png',
-      '/images/project/slug1/ftw-3.png',
+      '/images/integrated2.jpg',
+      '/images/integrated3.jpg',
     ],
   },
   {
