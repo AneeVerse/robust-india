@@ -63,13 +63,7 @@ export default function LandingPage() {
             >
               <p className="text-gray-300 leading-relaxed text-xl sm:text-2xl lg:text-3xl text-left m-0 inline">
                 {t('about.description')}
-                <a
-                  href="/about"
-                  className="bg-[#6164F6] hover:bg-[#5055E5] text-white px-6 py-2 rounded-xl font-semibold transition-all duration-300 shadow-lg text-base whitespace-nowrap ml-4 align-baseline inline-block"
-                  style={{ textDecoration: 'none', minHeight: 'unset' }}
-                >
-                  Read More
-                </a>
+                
               </p>
             </motion.div>
           </div>

@@ -51,6 +51,8 @@ export async function generateStaticParams() {
     'isobutyl-benzene',
     'zddp-md',
     'zddp-im',
+    'phosphorus-pentoxide',
+    'hp-mtbe',
     'sodium-cyanide',
     'cyanuric-chloride',
     'ethylenediamine',

@@ -85,11 +85,11 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'phosphorus',
-    count: 6, // update count to 6
+    count: 7, // updated count after adding code for Phosphorus Pentoxide
     IconComponent: GiAtomicSlashes,
     products: [
       { name: 'Phosphoric Acid' },
-      { name: 'Phosphorus Pentoxide' },
+      { name: 'Phosphorus Pentoxide', code: 'phosphorus-pentoxide' },
       { name: 'Triphenyl Phosphite (TPPi)', code: 'triphenyl-phosphite-tppi' },
       { name: 'Phosphorus Trichloride' },
       { name: 'Red Phosphorus', code: 'red-phosphorus' },
@@ -239,7 +239,7 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'aliphaticBenzyl',
-    count: 7, // updated count after removing MTBE
+    count: 8, // updated count after adding HP-MTBE
     IconComponent: GiChemicalDrop,
     products: [
       { name: 'Isohexane SBP', code: 'isohexane' },
@@ -248,7 +248,8 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Isobutylene (IB)', code: 'isobutylene' },
       { name: 'Methanol', code: 'methanol' },
       { name: 'Tertiary-Butylamine', code: 'tert-butylamine' },
-      { name: 'Mixed Hexene (C-6 Aliphatic Hydrocarbons)', code: 'mixed-hexenes' }
+      { name: 'Mixed Hexene (C-6 Aliphatic Hydrocarbons)', code: 'mixed-hexenes' },
+      { name: 'High Purity Methyl Tertiary Butyl Ether (HP-MTBE)', code: 'hp-mtbe' }
     ]
   },
   {

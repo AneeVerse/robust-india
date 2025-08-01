@@ -155,6 +155,12 @@
       "redPhosphorus": {
         "keywords": ["red phosphorus", "phosphorus", "flame retardant", "matches", "pyrotechnics"]
       },
+      "phosphorusPentoxide": {
+        "keywords": ["phosphorus pentoxide", "P2O5", "phosphoric anhydride", "desiccant", "dehydrating agent"]
+      },
+      "hpMtbe": {
+        "keywords": ["HP-MTBE", "high purity MTBE", "methyl tert-butyl ether", "fuel additive", "octane booster"]
+      },
       "trimethylPhosphite": {
         "keywords": ["trimethyl phosphite", "TMPi", "phosphite", "stabilizer", "antioxidant"]
       },
@@ -1474,6 +1480,142 @@
           "hazards": "Flammable solid (dust can ignite). Reacts with oxidizers (fire/explosion risk). Chronic exposure may affect bones/liver.",
           "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 1",
           "regulations": "Transported as UN 1338 (Class 4.1 Flammable Solid)"
+        }
+      },
+      "phosphorus-pentoxide": {
+        "overview": {
+          "name": "Phosphorus Pentoxide (P₂O₅)",
+          "description": "A white, crystalline, highly hygroscopic solid used as a powerful desiccant, dehydrating agent, and intermediate in the production of phosphoric acid and other phosphorus compounds.",
+          "overviewDescription": "Phosphorus Pentoxide represents one of the most effective desiccants and dehydrating agents in chemical industry, playing a crucial role in moisture control, chemical synthesis, and the production of essential phosphorus derivatives. This highly reactive compound serves as the primary intermediate for manufacturing phosphoric acid, the foundation of the global phosphate industry. Its exceptional ability to remove water from various substances makes it indispensable in pharmaceutical manufacturing, organic synthesis, and specialized industrial processes where absolute dryness is critical.",
+          "keyFeatures": [
+            "Extremely powerful desiccant and dehydrating agent",
+            "Primary intermediate for phosphoric acid production",
+            "Essential component in pharmaceutical and chemical synthesis",
+            "Highly reactive with water and alcohols",
+            "Critical for moisture-sensitive industrial processes"
+          ],
+          "majorApplications": [
+            "Phosphoric acid production",
+            "Pharmaceutical intermediate synthesis",
+            "Organic chemical dehydration",
+            "Desiccant applications"
+          ],
+          "industrialSignificance": "Phosphorus Pentoxide serves as the cornerstone of the phosphate industry, enabling the production of phosphoric acid which feeds into fertilizers, food additives, and industrial chemicals. Its role in moisture control and chemical synthesis makes it essential for modern manufacturing processes."
+        },
+        "identification": {
+          "iupacName": "Phosphorus pentoxide",
+          "commonNames": "Phosphoric anhydride, Diphosphorus pentoxide, Phosphorus(V) oxide",
+          "casNumber": "1314-56-3",
+          "chemicalFormula": "P₂O₅",
+          "molecularWeight": "141.94 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "White crystalline powder or granules",
+          "color": "White",
+          "odor": "Odorless",
+          "appearance": "White crystalline solid",
+          "boilingPoint": "360°C (sublimes)",
+          "meltingPoint": "340°C",
+          "density": "2.39 g/cm³",
+          "flashPoint": "Non-flammable",
+          "solubility": "Reacts violently with water; soluble in sulfuric acid"
+        },
+        "gradesPurity": {
+          "technicalGrade": "95-98% (industrial)",
+          "highPurityGrade": "≥99% (pharmaceutical)",
+          "impurities": "May contain traces of phosphoric acid and other phosphorus oxides"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Phosphoric Acid Production", "description": "Primary intermediate for manufacturing phosphoric acid through hydration reactions." },
+            { "title": "Desiccant", "description": "Used as a powerful drying agent for gases and organic solvents." },
+            { "title": "Chemical Synthesis", "description": "Dehydrating agent in organic synthesis and pharmaceutical manufacturing." },
+            { "title": "Fertilizer Production", "description": "Intermediate in the production of phosphate fertilizers." },
+            { "title": "Food Additives", "description": "Used in the production of food-grade phosphoric acid." }
+          ],
+          "industriesServed": [
+            "Chemical Manufacturing",
+            "Pharmaceuticals",
+            "Agriculture (fertilizers)",
+            "Food Processing",
+            "Electronics (moisture control)"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in airtight containers in a cool, dry place. Keep away from moisture, water, and incompatible materials.",
+          "handling": "Use appropriate PPE including gloves, goggles, and respiratory protection. Handle in a well-ventilated area or fume hood."
+        },
+        "safetyRegulatory": {
+          "hazards": "Corrosive to skin, eyes, and respiratory tract. Reacts violently with water releasing heat and phosphoric acid. May cause severe burns.",
+          "nfpaRating": "Health: 3 | Flammability: 0 | Reactivity: 2",
+          "regulations": "GHS Symbols: Corrosive, Health Hazard. UN 1807 (Phosphorus Pentoxide)"
+        }
+      },
+      "hp-mtbe": {
+        "overview": {
+          "name": "High Purity Methyl Tertiary Butyl Ether (HP-MTBE)",
+          "description": "A high-purity, colorless, volatile liquid used as a fuel additive to increase octane rating and reduce emissions in gasoline.",
+          "overviewDescription": "High Purity Methyl Tertiary Butyl Ether (HP-MTBE) represents a premium-grade fuel additive that meets the most stringent quality standards for modern gasoline formulations. This specialized ether compound serves as a critical component in clean fuel technology, helping to reduce harmful emissions while improving engine performance. Its exceptional purity levels make it suitable for use in high-performance engines and environmentally sensitive applications where fuel quality is paramount.",
+          "keyFeatures": [
+            "Ultra-high purity grade for premium fuel applications",
+            "Excellent octane boosting properties",
+            "Low volatility and high stability",
+            "Compatible with modern fuel systems",
+            "Meets stringent environmental standards"
+          ],
+          "majorApplications": [
+            "Premium gasoline formulations",
+            "High-performance engine fuels",
+            "Clean fuel technology",
+            "Environmental compliance fuels"
+          ],
+          "industrialSignificance": "HP-MTBE serves as a premium fuel additive that enables the production of high-quality, environmentally compliant gasoline. Its role in clean fuel technology makes it essential for meeting modern emission standards and performance requirements."
+        },
+        "identification": {
+          "iupacName": "2-Methoxy-2-methylpropane",
+          "commonNames": "HP-MTBE, High Purity MTBE, Methyl tert-butyl ether",
+          "casNumber": "1634-04-4",
+          "chemicalFormula": "C₅H₁₂O",
+          "molecularWeight": "88.15 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Colorless liquid",
+          "color": "Colorless",
+          "odor": "Characteristic ether-like",
+          "appearance": "Clear, mobile liquid",
+          "boilingPoint": "55.2°C",
+          "meltingPoint": "-109°C",
+          "density": "0.7404 g/cm³ (at 20°C)",
+          "flashPoint": "-28°C",
+          "solubility": "Slightly soluble in water; miscible with most organic solvents"
+        },
+        "gradesPurity": {
+          "highPurityGrade": "≥99.5% (premium fuel grade)",
+          "ultraHighPurityGrade": "≥99.8% (specialty applications)",
+          "impurities": "Minimal traces of methanol, isobutylene, and other ethers"
+        },
+        "applicationsUses": {
+          "applications": [
+            { "title": "Premium Gasoline", "description": "High-octane additive for premium fuel formulations." },
+            { "title": "Clean Fuel Technology", "description": "Component in environmentally compliant fuel systems." },
+            { "title": "High-Performance Engines", "description": "Fuel additive for high-performance and racing applications." },
+            { "title": "Emission Reduction", "description": "Helps reduce harmful emissions in gasoline engines." }
+          ],
+          "industriesServed": [
+            "Petroleum Refining",
+            "Automotive Fuel",
+            "Racing and Performance",
+            "Environmental Compliance"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in sealed containers in a cool, well-ventilated area. Keep away from heat, sparks, and open flames.",
+          "handling": "Use appropriate PPE including gloves and eye protection. Handle in well-ventilated areas due to flammability."
+        },
+        "safetyRegulatory": {
+          "hazards": "Highly flammable liquid and vapor. May cause drowsiness or dizziness. Harmful if inhaled or swallowed.",
+          "nfpaRating": "Health: 1 | Flammability: 3 | Reactivity: 0",
+          "regulations": "GHS Symbols: Flame, Health Hazard. UN 2398 (Methyl tert-butyl ether)"
         }
       },
       "trimethyl-phosphite-tmpi": {
@@ -6328,6 +6470,7 @@
       "Antioxidant Blend (168/1010)": "Antioxidant Blend (168/1010)",
       "Phosphoric Acid": "Phosphoric Acid",
       "Phosphorus Pentoxide": "Phosphorus Pentoxide",
+      "High Purity Methyl Tertiary Butyl Ether (HP-MTBE)": "High Purity Methyl Tertiary Butyl Ether (HP-MTBE)",
       "Triphenyl Phosphite (TPPi)": "Triphenyl Phosphite (TPPi)",
       "Phosphorus Trichloride": "Phosphorus Trichloride",
       "Red Phosphorus": "Red Phosphorus",

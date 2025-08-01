@@ -301,7 +301,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 </div>
                 {sectionHeadings['gradesPurity'][currentLang]}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className={`grid grid-cols-1 ${Object.keys(gradesPurity).length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'} gap-6`}>
                 {Object.entries(gradesPurity).map(([key, value]: [string, string | number | boolean | object | undefined], idx: number) => (
                   <div key={idx} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300">
                     <h4 className="font-semibold text-gray-900 mb-3 text-lg capitalize" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>

@@ -208,6 +208,22 @@ export const getLocalizedSearchData = (_t: (key: string) => string | string[]): 
     keywordsKey: 'search.items.redPhosphorus.keywords'
   },
   {
+    id: 'phosphorus-pentoxide',
+    titleKey: 'chemicalDetail.products.phosphorus-pentoxide.overview.name',
+    descriptionKey: 'chemicalDetail.products.phosphorus-pentoxide.overview.description',
+    category: 'chemical',
+    url: '/chemical/phosphorus-pentoxide',
+    keywordsKey: 'search.items.phosphorusPentoxide.keywords'
+  },
+  {
+    id: 'hp-mtbe',
+    titleKey: 'chemicalDetail.products.hp-mtbe.overview.name',
+    descriptionKey: 'chemicalDetail.products.hp-mtbe.overview.description',
+    category: 'chemical',
+    url: '/chemical/hp-mtbe',
+    keywordsKey: 'search.items.hpMtbe.keywords'
+  },
+  {
     id: 'trimethyl-phosphite-tmpi',
     titleKey: 'chemicalDetail.products.trimethyl-phosphite-tmpi.overview.name',
     descriptionKey: 'chemicalDetail.products.trimethyl-phosphite-tmpi.overview.description',
