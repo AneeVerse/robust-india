@@ -8,6 +8,8 @@ import FooterSection from '@/components/FooterSection';
 import BookCallSection from '@/components/BookCallSection';
 import ServiceSlider from '@/components/ServiceSlider';
 import { TbAtom, TbFlask } from 'react-icons/tb';
+import GHSSymbols from '@/components/GHSSymbols';
+import { extractGHSSymbols, formatRegulationsText } from '@/utils/ghsUtils';
 
 interface ChemicalParams {
   slug: string;
@@ -137,7 +139,19 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
           <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
         </Link>
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-2 mt-12 tracking-tight" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-          {t(`chemicalDetail.products.${slug}.overview.name`, overview.name).toString()}
+          {(() => {
+            const fullName = t(`chemicalDetail.products.${slug}.overview.name`, overview.name).toString();
+            const match = fullName.match(/^(.+?)\s*\((.+?)\)\s*$/);
+            if (match) {
+              return (
+                <>
+                  <span className="block">{match[1].trim()}</span>
+                  <span className="block text-3xl md:text-4xl text-gray-600 mt-2">({match[2].trim()})</span>
+                </>
+              );
+            }
+            return fullName;
+          })()}
         </h1>
         <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed px-4 mt-4" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
           {t(`chemicalDetail.products.${slug}.overview.description`, overview.description).toString()}
@@ -429,11 +443,53 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                       {fieldLabels[key]?.[currentLang] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
                     </h4>
                     <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
-                      {typeof value === 'object' && value !== null
-                        ? Array.isArray(value)
-                          ? value.join(', ')
-                          : Object.entries(value).map(([k, v]) => `${fieldLabels[k]?.[currentLang] || k}: ${Array.isArray(v) ? v.join(', ') : v}`).join('; ')
-                        : value}
+                      {key === 'regulatoryStatus' && typeof value === 'object' && value !== null ? (
+                        <div>
+                          {/* GHS Symbols */}
+                          {(value as any).ghsSymbols && Array.isArray((value as any).ghsSymbols) && (
+                            <div className="mb-3">
+                              <GHSSymbols 
+                                symbols={(value as any).ghsSymbols} 
+                                size="md" 
+                                className="mb-2"
+                              />
+                            </div>
+                          )}
+                          {/* Regulatory status text */}
+                          <div>
+                            {Object.entries(value).map(([k, v]) => {
+                              if (k === 'ghsSymbols') return null;
+                              return (
+                                <div key={k} className="mb-1">
+                                  <span className="font-medium">{k}: </span>
+                                  <span>{typeof v === 'boolean' ? (v ? 'Yes' : 'No') : v}</span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ) : key === 'regulations' && typeof value === 'string' ? (
+                        <div>
+                          {/* GHS Symbols */}
+                          <div className="mb-3">
+                            <GHSSymbols 
+                              symbols={extractGHSSymbols(value)} 
+                              size="md" 
+                              className="mb-2"
+                            />
+                          </div>
+                          {/* Regulations text without symbols */}
+                          <div>
+                            {formatRegulationsText(value)}
+                          </div>
+                        </div>
+                      ) : (
+                        typeof value === 'object' && value !== null
+                          ? Array.isArray(value)
+                            ? value.join(', ')
+                            : Object.entries(value).map(([k, v]) => `${fieldLabels[k]?.[currentLang] || k}: ${Array.isArray(v) ? v.join(', ') : v}`).join('; ')
+                          : value
+                      )}
                     </p>
                   </div>
                 ))}

@@ -1,5 +1,14 @@
+/* Google Fonts imports for font testing */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+
 @import "tailwindcss";
 
+/* Original custom fonts */
 @font-face {
   font-family: 'NoiGrotesk';
   src: url('/font/NoiGrotesk/NoiGrotesk-Regular.woff') format('woff');
@@ -22,6 +31,53 @@
   font-display: swap;
 }
 
+/* ========================================
+   FONT TESTING - EDIT THESE VALUES ONLY
+   ======================================== */
+
+/* Default CSS Variables */
+:root {
+  --background: #ffffff;
+  --font-heading: 'NoiGrotesk';    /* Default fallback */
+  --font-body: 'FusionNeue';       /* Default fallback */
+}
+
+/* ========================================
+   FONT OPTIONS - ADD THESE CLASSES TO BODY
+   ======================================== */
+
+/* OPTION 1: Poppins + Inter (Google Fonts) */
+.font-option-1 {
+  --font-heading: 'Poppins' !important;
+  --font-body: 'Source Sans Pro' !important;
+}
+
+/* OPTION 2: IBM Plex Sans + Source Sans Pro (Google Fonts) */
+.font-option-2 {
+  --font-heading: 'IBM Plex Sans' !important;
+  --font-body: 'Source Sans Pro' !important;
+}
+
+/* OPTION 3: NoiGrotesk + FusionNeue (Your Custom Fonts) */
+.font-option-3 {
+  --font-heading: 'NoiGrotesk' !important;
+  --font-body: 'NoiGrotesk' !important;
+}
+
+/* OPTION 4: Playfair Display + Lora (Antique/Elegant Fonts) */
+.font-option-4 {
+  --font-heading: 'Playfair Display' !important;
+  --font-body: 'Lora' !important;
+}
+
+/* ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #ededed;
+  }
+}
+
 /* Ensure consistent font rendering across browsers */
 * {
   -webkit-font-smoothing: antialiased;
@@ -29,9 +85,16 @@
   text-rendering: optimizeLegibility;
 }
 
+/* Body styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
 /* Cross-browser font consistency */
 .hero-heading {
-  font-family: 'NoiGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-heading), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
   font-feature-settings: 'kern' 1, 'liga' 1;
   -webkit-font-feature-settings: 'kern' 1, 'liga' 1;
@@ -39,7 +102,7 @@
 }
 
 .hero-subheading {
-  font-family: 'FusionNeue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   font-feature-settings: 'kern' 1, 'liga' 1;
   -webkit-font-feature-settings: 'kern' 1, 'liga' 1;
@@ -87,31 +150,7 @@ html {
   scrollbar-gutter: stable;
 }
 
-:root {
-  --background: #ffffff;
-  
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-   
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* Animations */
 @keyframes service-slider-slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -122,7 +161,7 @@ body {
 }
 
 .headline::first-letter {
-  font-family: 'NoiGrotesk', 'FusionNeue', system-ui, sans-serif;
+  font-family: var(--font-heading), system-ui, sans-serif;
   font-weight: 600;
   letter-spacing: 0.01em;
   font-size: 1.15em;
@@ -169,4 +208,31 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Font utility classes */
+.font-heading {
+  font-family: var(--font-heading), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Apply fonts to common elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+p, span, div, a, button, input, textarea, select {
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Override all hardcoded fonts with global variables */
+* {
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
 }
