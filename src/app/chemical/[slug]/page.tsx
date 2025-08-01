@@ -25,6 +25,13 @@ interface ChemicalOverview {
   keyAdvantages?: string[];
 }
 
+interface RegulatoryStatus {
+  ghsSymbols?: string[];
+  euReach?: string;
+  notCarcinogenic?: boolean;
+  [key: string]: string | string[] | boolean | undefined;
+}
+
 interface ChemicalData {
   overview: ChemicalOverview;
   identification?: Record<string, string>;
@@ -38,7 +45,7 @@ interface ChemicalData {
   applications?: Array<{ title: string; description: string }>;
   industriesServed?: string[];
   storageHandling?: Record<string, string>;
-  safetyRegulatory?: Record<string, string>;
+  safetyRegulatory?: Record<string, string | RegulatoryStatus>;
   keyAdvantages?: string[];
   keyCharacteristics?: string[];
   keyPolymerProperties?: string[];
@@ -446,10 +453,10 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                       {key === 'regulatoryStatus' && typeof value === 'object' && value !== null ? (
                         <div>
                           {/* GHS Symbols */}
-                          {(value as any).ghsSymbols && Array.isArray((value as any).ghsSymbols) && (
+                          {(value as RegulatoryStatus).ghsSymbols && Array.isArray((value as RegulatoryStatus).ghsSymbols) && (
                             <div className="mb-3">
                               <GHSSymbols 
-                                symbols={(value as any).ghsSymbols} 
+                                symbols={(value as RegulatoryStatus).ghsSymbols!} 
                                 size="md" 
                                 className="mb-2"
                               />
