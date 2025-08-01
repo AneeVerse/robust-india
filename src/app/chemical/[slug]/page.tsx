@@ -612,12 +612,12 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 </div>
                 <span>
                   {currentLang === 'en' ? (
-                    <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Features
-                    </>
+                                      <>
+                    <span>Key</span> Features
+                  </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> особенности
+                      <span>Ключевые</span> особенности
                     </>
                   )}
                 </span>
@@ -666,11 +666,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Performance Data
+                      <span>Key</span> Performance Data
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> данные производительности
+                      <span>Ключевые</span> данные производительности
                     </>
                   )}
                 </span>
@@ -719,11 +719,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Technical</span> Performance Data
+                      <span>Technical</span> Performance Data
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Технические</span> данные производительности
+                      <span>Технические</span> данные производительности
                     </>
                   )}
                 </span>
@@ -772,11 +772,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Technical Data
+                      <span>Key</span> Technical Data
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> технические данные
+                      <span>Ключевые</span> технические данные
                     </>
                   )}
                 </span>
@@ -825,11 +825,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Performance Data
+                      <span>Key</span> Performance Data
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> данные производительности
+                      <span>Ключевые</span> данные производительности
                     </>
                   )}
                 </span>
@@ -878,11 +878,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Technical Data
+                      <span>Key</span> Technical Data
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> технические данные
+                      <span>Ключевые</span> технические данные
                     </>
                   )}
                 </span>
@@ -931,11 +931,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Chemical Properties
+                      <span>Key</span> Chemical Properties
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> химические свойства
+                      <span>Ключевые</span> химические свойства
                     </>
                   )}
                 </span>
@@ -984,11 +984,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Performance Data
+                      <span>Key</span> Performance Data
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> данные производительности
+                      <span>Ключевые</span> данные производительности
                     </>
                   )}
                 </span>
@@ -1037,11 +1037,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Chemical Properties
+                      <span>Key</span> Chemical Properties
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> химические свойства
+                      <span>Ключевые</span> химические свойства
                     </>
                   )}
                 </span>
@@ -1232,11 +1232,11 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                 <span>
                   {currentLang === 'en' ? (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Key</span> Performance Data
+                      <span>Key</span> Performance Data
                     </>
                   ) : (
                     <>
-                      <span className="bg-blue-100 px-2 py-1 rounded">Ключевые</span> данные производительности
+                      <span>Ключевые</span> данные производительности
                     </>
                   )}
                 </span>

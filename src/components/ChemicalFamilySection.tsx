@@ -115,7 +115,7 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'amines',
-    count: 11, // updated count after removing tert-butylamine
+    count: 13, // updated count after adding Tertiary-Butylamine and 4-Butylaniline
     IconComponent: GiDna2,
     products: [
       { name: 'Diethylamine' },
@@ -128,7 +128,9 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Triethanolamine' },
       { name: 'N-Methylpyrrolidone' },
       { name: 'Ethylenediamine (EDA)', code: 'ethylenediamine' },
-      { name: 'Piperazine', code: 'piperazine' }
+      { name: 'Piperazine', code: 'piperazine' },
+      { name: 'Tertiary-Butylamine', code: 'tert-butylamine' },
+      { name: '4-Butylaniline', code: '4-butylaniline' }
     ]
   },
   {
@@ -177,7 +179,8 @@ const chemicalCategories: ChemicalCategory[] = [
     count: 2,
     IconComponent: GiDeadlyStrike,
     products: [
-      { name: 'Sodium Cyanide (NaCN)', code: 'sodium-cyanide' }
+      { name: 'Sodium Cyanide (NaCN)', code: 'sodium-cyanide' },
+      { name: 'Cyanuric Chloride', code: 'cyanuric-chloride' }
     ]
   },
   {
@@ -295,7 +298,7 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'chemicalIntermediates',
-    count: 8, // updated count after adding cyanuric chloride
+    count: 7, // updated count after removing cyanuric chloride
     IconComponent: GiMolecule,
     products: [
       { name: 'Purified Terephthalic Acid (PTA)', code: 'pta' },
@@ -304,8 +307,7 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Ortho Xylene (OX)', code: 'ox' },
       { name: 'Benzene', code: 'benzene' },
       { name: 'Toluene', code: 'toluene' },
-      { name: 'Cyclohexane', code: 'cyclohexane' },
-      { name: 'Cyanuric Chloride', code: 'cyanuric-chloride' }
+      { name: 'Cyclohexane', code: 'cyclohexane' }
     ]
   },
   {
@@ -431,7 +433,7 @@ export default function ChemicalFamilySection() {
                       }
                     }}
                   >
-                    <div className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-2xl p-4 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm hover:-translate-y-1 min-h-[140px] h-[140px] max-h-[120px] flex flex-col justify-between">
+                    <div className="bg-blue-500/15 backdrop-blur-md border border-blue-300/40 rounded-2xl p-4 hover:bg-blue-500/20 hover:border-blue-300/50 hover:shadow-lg transition-all duration-300 shadow-sm hover:-translate-y-1 min-h-[160px] flex flex-col justify-between">
                       <div className="flex items-start gap-3 mb-3">
                         <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
                           <GiTestTubes className="w-5 h-5 text-white" />
