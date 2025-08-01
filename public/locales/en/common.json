@@ -756,6 +756,7 @@
       "description": "Robust India delivers end-to-end chemical supply-chain solutions globally, specializing in sourcing, developing, and distributing high-quality chemicals.",
       "tags": ["Integrated FTWZ", "3PL", "Chemical Product", "End-to-End"],
       "detailedTags": [
+        "Single-Point Accountability", "Faster Time-to-Market", "Cost Optimization", "Regulatory Confidence",
         "Global Supply Chain", "Chemical Trading", "Import Export", "Quality Assurance", 
         "Regulatory Compliance", "Market Intelligence", "Strategic Partnerships", "Industry Expertise",
         "Customer Support", "Innovation Hub", "Sustainability", "Risk Management",
@@ -781,7 +782,10 @@
       "description": "Duty-free warehousing, value-added operations, and hassle-free import/export no local entity needed.",
       "tags": ["FTWZ", "Inventory Management", "Import/Export", "Warehousing"],
       "detailedTags": [
-        "Free Trade Zone", "Warehousing Solutions", "Inventory Management", "Cross Docking",
+        "Duty-Free Warehousing", "Value-Added Services", "No Local Entity Required", "Strategic Locations",
+        "Efficient Distribution", "Import & Re-Export", "Real-Time Tracking", "Simplified Payments",
+        "Integrated Solutions", "3PL Services", "FTWZ Operations", "Free Trade Zone",
+        "Warehousing Solutions", "Inventory Management", "Cross Docking",
         "Distribution Centers", "Customs Clearance", "Duty Optimization", "Storage Facilities",
         "Material Handling", "Order Fulfillment", "Supply Chain Integration", "Logistics Coordination",
         "Trade Facilitation", "Bonded Storage", "Export Processing", "Import Management",
@@ -796,8 +800,9 @@
       "detailedTags": [
         "Custom Product Development", "Global Sourcing & Procurement", "Quality Inspection & Assurance",
         "Compliant Packaging Solutions", "Logistics & Freight Management", "Secure Warehousing & Inventory Control",
-        "Single-Point Accountability", "Faster Time-to-Market", "Cost Optimization", "Regulatory Confidence",
-        "Formulation & R&D", "Pilot-Scale Trials", "Scale-Up Support", "Supplier Vetting",
+        "After-Sales Support & Continuous Improvement", "Single-Point Accountability", "Faster Time-to-Market", 
+        "Cost Optimization", "Regulatory Confidence", "End-to-End Solutions", "Comprehensive Services", 
+        "Complete Supply Chain", "Formulation & R&D", "Pilot-Scale Trials", "Scale-Up Support", "Supplier Vetting",
         "Competitive Negotiation", "Supply Assurance", "Incoming QC", "In-House Laboratory",
         "Third-Party Certification", "UN/IMDG-Certified Packaging", "Customized Labeling", "Protective Inner-Packaging",
         "Multimodal Planning", "Trade-Term Expertise", "Haz-Cargo Specialists", "Bonded & Non-Bonded Storage",
