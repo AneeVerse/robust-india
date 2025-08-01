@@ -86,15 +86,11 @@ const ModernAnimatedTag: React.FC<{
       }}
     >
       <span
-        className="inline-block px-3 py-1.5 text-sm font-medium rounded-full border transition-all duration-300 hover:scale-105"
-        style={{
-          background: 'linear-gradient(135deg, #EBF4FF, #DBEAFE)',
-          color: '#1E40AF',
-          border: '1px solid #93C5FD',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-        }}
+        className="inline-block px-3 py-1.5 text-sm font-medium rounded-full border transition-all duration-300 bg-gradient-to-br from-blue-50 to-blue-100 text-blue-700 border-blue-200 shadow-sm group relative overflow-hidden hover:text-white hover:border-[#6164F6]"
       >
-        {tag}
+        {/* Animated background overlay like contact button */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#6164F6] to-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <span className="relative z-10">{tag}</span>
       </span>
     </span>
   );
@@ -248,7 +244,7 @@ const ProjectShowcase = () => {
       <div className="sm:hidden flex flex-col items-center space-y-8 px-4 py-8 bg-white">
         {projects.map((project) => (
           <Link key={project.slug} href={project.slug === 'chemical-products' ? '/product/chemical' : `/services/${project.slug}`} className="w-full max-w-md">
-            <div className="bg-white rounded-3xl p-6 shadow-lg border border-gray-100">
+            <div className="bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 hover:border-blue-200 transition-all duration-300">
               <Image
                 src={project.image}
                 alt={t(`projects.${project.translationKey}.title`)}
