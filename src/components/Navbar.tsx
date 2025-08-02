@@ -151,8 +151,8 @@ function NavbarContent() {
                   href={link.href}
                   className={`group relative overflow-hidden font-bold bg-gradient-to-r from-[#6164F6] to-[#7C3AED] text-white shadow-md hover:shadow-lg transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#6164F6]/30 active:scale-95 backdrop-blur-sm rounded-md sm:rounded-lg flex items-center justify-center ${
                     isRussian 
-                      ? 'text-sm sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
-                      : 'text-sm sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      ? 'text-xs sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      : 'text-xs sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                   }`}
                 >
                   {/* Animated background overlay */}
@@ -177,8 +177,8 @@ function NavbarContent() {
                 href={link.href}
                 className={`font-bold text-white/90 hover:bg-white/10 rounded-md sm:rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
                   isRussian
-                    ? 'text-sm sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
-                    : 'text-sm sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    ? 'text-xs sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    : 'text-xs sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                 }`}
               >
                 <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
@@ -196,8 +196,8 @@ function NavbarContent() {
                   href={link.href}
                   className={`group relative overflow-hidden font-bold bg-gradient-to-r from-[#6164F6] to-[#7C3AED] text-white shadow-md hover:shadow-lg transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#6164F6]/30 active:scale-95 backdrop-blur-sm rounded-md sm:rounded-lg flex items-center justify-center ${
                     isRussian 
-                      ? 'text-sm sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
-                      : 'text-sm sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      ? 'text-xs sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      : 'text-xs sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                   }`}
                 >
                   {/* Animated background overlay */}
@@ -222,8 +222,8 @@ function NavbarContent() {
                 href={link.href}
                 className={`font-bold text-white/90 hover:bg-white/10 rounded-md sm:rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
                   isRussian
-                    ? 'text-sm sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
-                    : 'text-sm sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    ? 'text-xs sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    : 'text-xs sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                 }`}
               >
                 <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
@@ -252,7 +252,7 @@ function NavbarContent() {
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder={t('search.placeholder', 'Search chemical...')}
-            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1.5 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-sm sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-2 focus:ring-[#6164F6]/50 focus:ring-offset-0 outline-none shadow-inner transition-all duration-300 ${focused ? 'bg-[#232221]/95' : 'bg-transparent'} ${isRussian ? 'text-sm sm:text-sm' : ''} cursor-text`}
+            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1.5 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-2 focus:ring-[#6164F6]/50 focus:ring-offset-0 outline-none shadow-inner transition-all duration-300 ${focused ? 'bg-[#232221]/95' : 'bg-transparent'} ${isRussian ? 'text-xs sm:text-sm' : ''} cursor-text`}
             style={{ minWidth: 0 }}
           />
         </form>
