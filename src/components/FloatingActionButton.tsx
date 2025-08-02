@@ -8,7 +8,7 @@ import { useContactWidget } from '@/context/ContactWidgetContext';
 
 const FloatingActionButton = () => {
   const { setHasSubmittedContactForm, isContactWidgetOpen, setIsContactWidgetOpen, pendingAction, setPendingAction } = useContactWidget();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [selectedContactType, setSelectedContactType] = useState('');
   const [formData, setFormData] = useState({
@@ -133,7 +133,7 @@ const FloatingActionButton = () => {
 
   // --- UI ---
   return (
-    <div className="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 z-50 flex flex-col items-center gap-3">
       {/* Floating Action Buttons (stacked above main button) */}
       {open && !showForm && (
         <motion.div 

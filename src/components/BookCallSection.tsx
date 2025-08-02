@@ -56,74 +56,76 @@ export default function BookCallSection() {
         {t('book.heading')}
       </motion.h1>
       
-      {/* Content container - more space between heading and content */}
-      <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
-        {/* Left Side - Text with larger font and width for three lines */}
+      {/* Centered video - moved after heading */}
+      <motion.div
+        style={{ rotate, scale, x, y }}
+        className="w-full flex justify-center mb-8 sm:mb-12 -mt-20"
+      >
+        <div className="w-80 h-64 sm:w-96 sm:h-72 md:w-[500px] md:h-80 lg:w-[600px] lg:h-96 bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative">
+          <video
+            ref={videoRef}
+            src="/video/letstalk4.mp4"
+            className="object-cover w-full h-full transform scale-145"
+            autoPlay
+            loop
+            muted={muted}
+            playsInline
+          />
+          <button
+            type="button"
+            onClick={() => {
+              setMuted((m) => {
+                if (videoRef.current) videoRef.current.muted = !m;
+                return !m;
+              });
+            }}
+            className="absolute top-2 right-2 sm:top-3 sm:right-3 z-10 bg-gray-400/60 rounded-full p-1 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center"
+          >
+            <Image
+              src={muted ? "/images/cta-mute.png" : "/images/cta-unmute.png"}
+              alt={muted ? "Muted" : "Unmuted"}
+              width={28}
+              height={28}
+              className="w-6 h-6 sm:w-7 sm:h-7"
+            />
+          </button>
+        </div>
+      </motion.div>
+      
+      {/* Centered content container */}
+      <div className="w-full max-w-4xl flex flex-col items-center justify-center">
+        {/* Centered text */}
         <motion.div
           style={{ opacity: contentOpacity, y: contentY }}
-          className="w-full md:w-1/2 flex flex-col items-center md:items-start order-2 md:order-1"
+          className="w-full flex flex-col items-center justify-center text-center mb-8 sm:mb-12"
         >
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-800 mb-6 sm:mb-10 max-w-xl leading-relaxed text-center md:text-left">
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-800 mb-8 sm:mb-10 max-w-4xl leading-relaxed whitespace-nowrap text-center mx-auto">
             {t('book.tagline')}
           </p>
-          <div className="flex flex-col sm:flex-row items-center sm:items-stretch gap-4 w-full sm:w-auto">
+          
+          {/* Centered buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
             <motion.button
               style={{ opacity: button1Opacity, y: button1Y }}
-              className="w-full sm:flex-none sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db] cursor-pointer"
+              className="w-full sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-3 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db] cursor-pointer"
               onClick={() => handleProtectedAction('Phone')}
             >
               {t('book.call')}
             </motion.button>
             <motion.button
               style={{ opacity: button2Opacity, y: button2Y }}
-              className="w-full sm:flex-none sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-2 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db] cursor-pointer"
+              className="w-full sm:w-auto bg-gradient-to-b from-[#f8f6f4] to-[#f3ede7] text-black font-bold rounded-xl px-6 py-3 shadow-md border border-gray-300 transition-all duration-300 hover:from-[#f3ede7] hover:to-[#e9e2db] cursor-pointer"
               onClick={() => window.location.href = '/contact#contact-form'}
             >
               {t('book.contact')}
             </motion.button>
             <motion.button
               style={{ opacity: button3Opacity, y: button3Y }}
-              className="w-full sm:w-auto bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-2 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-[#4B4ED0] cursor-pointer"
+              className="w-full sm:w-auto bg-gradient-to-t from-[#6d7cff] to-[#aab6ff] text-white font-bold rounded-xl px-6 py-3 shadow-md transition-all duration-300 hover:from-[#6164f6] hover:to-[#6d7cff] border border-[#4B4ED0] cursor-pointer"
               onClick={() => handleProtectedAction('WhatsApp')}
             >
               {t('book.chat')}
             </motion.button>
-          </div>
-        </motion.div>
-        
-        {/* Right Side - Video with mute/unmute overlay */}
-        <motion.div
-          style={{ rotate, scale, x, y }}
-          className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2"
-        >
-          <div className="w-64 h-48 sm:w-72 sm:h-56 md:w-80 md:h-72 lg:w-80 lg:h-100 bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative">
-            <video
-              ref={videoRef}
-              src="/video/letstalk4.mp4"
-              className="object-cover w-full h-full transform scale-145"
-              autoPlay
-              loop
-              muted={muted}
-              playsInline
-            />
-            <button
-              type="button"
-              onClick={() => {
-                setMuted((m) => {
-                  if (videoRef.current) videoRef.current.muted = !m;
-                  return !m;
-                });
-              }}
-              className="absolute top-2 right-2 sm:top-3 sm:right-3 z-10 bg-gray-400/60 rounded-full p-1 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center"
-            >
-              <Image
-                src={muted ? "/images/cta-mute.png" : "/images/cta-unmute.png"}
-                alt={muted ? "Muted" : "Unmuted"}
-                width={28}
-                height={28}
-                className="w-6 h-6 sm:w-7 sm:h-7"
-              />
-            </button>
           </div>
         </motion.div>
       </div>

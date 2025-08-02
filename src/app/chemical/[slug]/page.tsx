@@ -141,6 +141,19 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center w-full text-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-16 pb-4 z-10 max-w-full">
+        {/* Back Button */}
+        <div className="absolute top-4 left-4 sm:top-8 sm:left-8">
+          <Link 
+            href="/product/chemical#chemical-family-section" 
+            className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-300 font-medium"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="hidden sm:inline">Back to chemical family</span>
+          </Link>
+        </div>
+        
         <Link href="/" className="flex items-center justify-center gap-2 sm:gap-3 mb-4 mt-2 cursor-pointer">
           <Image src="/images/top-logo.png" alt="Robust India Logo" width={38} height={38} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
           <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-wide">ROBUST INDIA</span>
@@ -186,7 +199,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                   </p>
                 </div>
 
-                {/* Key Features */}
+                {/* Key Features
                 {overview.keyFeatures && (
                   <div>
                     <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
@@ -203,12 +216,12 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                       ))}
                     </ul>
                   </div>
-                )}
+                )} */}
 
 
 
                 {/* Major Applications */}
-                {overview.majorApplications && (
+                {/* {overview.majorApplications && (
                   <div>
                     <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {currentLang === 'en' ? 'Major Applications' : 'Основные применения'}
@@ -223,10 +236,10 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                       ))}
                     </div>
                   </div>
-                )}
+                )} */}
 
                 {/* Industrial Significance */}
-                {overview.industrialSignificance && (
+                {/* {overview.industrialSignificance && (
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
                     <h5 className="text-lg font-semibold text-gray-900 mb-3" style={{ fontFamily: 'NoiGrotesk, sans-serif' }}>
                       {currentLang === 'en' ? 'Industrial Significance' : 'Промышленное значение'}
@@ -235,7 +248,7 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
                       {overview.industrialSignificance}
                     </p>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           )}

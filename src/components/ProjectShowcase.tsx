@@ -158,7 +158,7 @@ const ProjectShowcase = () => {
           setIsAnimating(false);
         }, 100);
       }, 300);
-    }, 2000); // Change every 2 seconds
+    }, 1500); // Change every 2 seconds
 
     return () => clearInterval(interval);
   }, [projectTags]);

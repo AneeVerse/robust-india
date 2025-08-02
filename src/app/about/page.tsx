@@ -97,10 +97,11 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           variants={container}
-          className="font-normal text-gray-900 mb-8 sm:mb-12 md:mb-16 lg:mb-20 leading-tight tracking-tight text-center max-w-full"
+          className="font-normal text-gray-900 mb-8 sm:mb-12 md:mb-16 lg:mb-20 leading-none tracking-tight text-center max-w-full"
           style={{ 
             fontFamily: 'NoiGrotesk, sans-serif',
-            fontSize: 'clamp(2.5rem, 8vw, 6rem)'
+            fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+            lineHeight: '0.9'
           }}
         >
           {lines.map((line, lineIndex) => (
@@ -110,13 +111,13 @@ export default function AboutPage() {
                   {char}
                 </motion.span>
               ))}
-              {lineIndex < lines.length - 1 && <br />}
+              {lineIndex < lines.length - 1 && <div className="h-2 sm:h-3 md:h-4"></div>}
             </React.Fragment>
           ))}
         </motion.h1>
         <p
           ref={paraRef}
-          className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 max-w-6xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-[1.7] sm:leading-[1.8] md:leading-[1.9] mb-12 sm:mb-16 px-4 sm:px-6 text-left sm:text-justify"
+          className="mt-0 sm:mt-1 md:mt-2 lg:-mt-8 max-w-4xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-[1.3] sm:leading-[1.4] md:leading-[1.5] mb-2 sm:mb-4 px-1 sm:px-2 text-left sm:text-justify"
           style={{ 
             fontFamily: 'NoiGrotesk, sans-serif', 
             textJustify: 'inter-word',
@@ -358,8 +359,8 @@ export default function AboutPage() {
       </div> */}
 
       {/* Supporting Diverse Industrial Sectors Section */}
-      <div className="w-full overflow-x-hidden">
-      <ServiceSlider />
+      <div className="px-4 sm:px-6 md:px-8 lg:px-10">
+        <ServiceSlider />
       </div>
 
       {/* Book a Call Section */}
