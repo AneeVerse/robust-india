@@ -419,11 +419,11 @@
     }
   },
   "footer": {
-    "headline1": "We build bridges",
-    "headline2Before": "between ",
-    "headlineHighlight": "businesses",
-    "headline2After": "& global markets",
-    "newsletterTitle": "Our newsletter",
+    "headline1": "We Build Bridges",
+    "headline2Before": "Between ",
+    "headlineHighlight": "Businesses",
+    "headline2After": "& Global Markets",
+    "newsletterTitle": "Our Newsletter",
     "newsletterDescription": "Scale your platform the right way. Get expert insights on design, development, and growth.",
     "newsletterPlaceholder": "Enter your email",
     "terms": "Terms of Service",
@@ -1124,12 +1124,12 @@
         "value": "Mumbai"
       },
       "monthlyVisitors": {
-        "label": "Monthly Visitors",
-        "value": "250K+"
+        "label": "Monthly",
+        "value": "5k+ visitors"
       },
       "usedBy": {
         "label": "Used by",
-        "value": "100+ organizations"
+        "value": "23+ org"
       }
     },
     "services": {
@@ -1167,12 +1167,12 @@
         "value": "Mumbai"
       },
       "monthlyVisitors": {
-        "label": "Monthly Visitors",
-        "value": "250K+"
+        "label": "Monthly",
+        "value": "5k+ visitors"
       },
       "usedBy": {
         "label": "Used by",
-        "value": "100+ organizations"
+        "value": "23+ org"
       }
     }
   },

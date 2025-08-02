@@ -32,10 +32,9 @@ export default function StatsSection() {
   const { t } = useTranslation('common');
 
   const stats = [
-    { number: 6, label: t('stats.years') },
-    { number: 100, label: t('stats.organizations') },
+    { number: 9, label: t('stats.years') },
+    { number: 23, label: t('stats.organizations'), suffix: '+' },
     { number: 4.7, label: t('stats.rating') },
-    { number: 81, label: t('stats.repeat'), suffix: '%' },
   ];
 
   return (
@@ -66,7 +65,7 @@ export default function StatsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8"
         >
           {stats.map((stat, index) => (
             <motion.div
