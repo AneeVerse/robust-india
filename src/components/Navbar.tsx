@@ -114,30 +114,30 @@ function NavbarContent() {
   }, []);
 
   return (
-    <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-xl sm:rounded-2xl md:rounded-3xl px-1.5 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-2 md:py-2.5 lg:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${
+    <div className={`relative flex items-center bg-gradient-to-b from-[#3c3a38]/95 to-[#252423]/95 rounded-xl sm:rounded-2xl md:rounded-3xl px-2 sm:px-2 md:px-3 lg:px-4 py-2 sm:py-2 md:py-2.5 lg:py-3 shadow-lg mx-auto /* border border-[#3c3a38] */ pointer-events-auto backdrop-blur-md transition-all duration-300 ${
       isRussian ? 'max-w-3xl' : 'max-w-2xl'
     }`} style={{ width: isRussian ? 'max-content' : 'max-content' }}>
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
       
       {/* Logo section */}
-      <div className="flex items-center mr-1.5 sm:mr-2 md:mr-3 flex-shrink-0">
-        <Link href="/" className="block p-0.5 sm:p-1 -m-0.5 sm:-m-1 rounded-lg hover:bg-white/10 transition-colors duration-200">
+      <div className="flex items-center mr-2 sm:mr-2 md:mr-3 flex-shrink-0">
+        <Link href="/" className="block p-1 sm:p-1 -m-1 sm:-m-1 rounded-lg hover:bg-white/10 transition-colors duration-200">
           <Image
             src="/images/nav-logo.png"
             alt="Robust India Nav Logo"
             width={36}
             height={36}
-            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
+            className="w-6 h-6 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
           />
         </Link>
       </div>
 
       {/* Vertical line */}
-      <div className="w-px h-6 sm:h-8 md:h-10 bg-white/20 mr-1.5 sm:mr-2 md:mr-3 flex-shrink-0" />
+      <div className="w-px h-8 sm:h-8 md:h-10 bg-white/20 mr-2 sm:mr-2 md:mr-3 flex-shrink-0" />
       
       {/* Navigation links */}
-      <div className={`flex gap-x-0.5 sm:gap-x-1 md:gap-x-2 justify-start min-w-0 transition-all duration-300 ${isRussian ? 'gap-x-0.5' : ''} flex-1 ${focused ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+      <div className={`flex gap-x-1 sm:gap-x-1 md:gap-x-2 justify-start min-w-0 transition-all duration-300 ${isRussian ? 'gap-x-1' : ''} flex-1 ${focused ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         {navLinks.map((link) => (
           link.href.startsWith('#') ? (
             link.highlight ? (
@@ -151,8 +151,8 @@ function NavbarContent() {
                   href={link.href}
                   className={`group relative overflow-hidden font-bold bg-gradient-to-r from-[#6164F6] to-[#7C3AED] text-white shadow-md hover:shadow-lg transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#6164F6]/30 active:scale-95 backdrop-blur-sm rounded-md sm:rounded-lg flex items-center justify-center ${
                     isRussian 
-                      ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
-                      : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      ? 'text-sm sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      : 'text-sm sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                   }`}
                 >
                   {/* Animated background overlay */}
@@ -177,8 +177,8 @@ function NavbarContent() {
                 href={link.href}
                 className={`font-bold text-white/90 hover:bg-white/10 rounded-md sm:rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
                   isRussian
-                    ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
-                    : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    ? 'text-sm sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    : 'text-sm sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                 }`}
               >
                 <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
@@ -196,8 +196,8 @@ function NavbarContent() {
                   href={link.href}
                   className={`group relative overflow-hidden font-bold bg-gradient-to-r from-[#6164F6] to-[#7C3AED] text-white shadow-md hover:shadow-lg transform transition-all duration-300 ease-out hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#6164F6]/30 active:scale-95 backdrop-blur-sm rounded-md sm:rounded-lg flex items-center justify-center ${
                     isRussian 
-                      ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
-                      : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      ? 'text-sm sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                      : 'text-sm sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                   }`}
                 >
                   {/* Animated background overlay */}
@@ -222,8 +222,8 @@ function NavbarContent() {
                 href={link.href}
                 className={`font-bold text-white/90 hover:bg-white/10 rounded-md sm:rounded-lg transition-colors duration-200 flex items-center justify-center flex-shrink-0 ${
                   isRussian
-                    ? 'text-xs sm:text-sm md:text-base px-1 sm:px-1.5 md:px-2.5 lg:px-3 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
-                    : 'text-xs sm:text-sm md:text-base px-1.5 sm:px-2 md:px-3 lg:px-4 py-1 sm:py-1.5 md:py-2 min-h-[28px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    ? 'text-sm sm:text-sm md:text-base px-1.5 sm:px-1.5 md:px-2.5 lg:px-3 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
+                    : 'text-sm sm:text-sm md:text-base px-2 sm:px-2 md:px-3 lg:px-4 py-1.5 sm:py-1.5 md:py-2 min-h-[32px] sm:min-h-[32px] md:min-h-[36px] lg:min-h-[38px]'
                 }`}
               >
                 <span className="whitespace-nowrap text-center leading-tight">{link.name}</span>
@@ -234,7 +234,7 @@ function NavbarContent() {
       </div>
 
       {/* Vertical line before search */}
-      <div className={`w-px h-6 sm:h-8 md:h-10 bg-white/20 mx-1.5 sm:mx-2 md:mx-3 flex-shrink-0 transition-opacity duration-300 ${focused ? 'opacity-0' : 'opacity-100'}`} />
+      <div className={`w-px h-8 sm:h-8 md:h-10 bg-white/20 mx-2 sm:mx-2 md:mx-3 flex-shrink-0 transition-opacity duration-300 ${focused ? 'opacity-0' : 'opacity-100'}`} />
       
       {/* Search bar with dropdown */}
       <div ref={searchRef} className={`relative transition-all duration-300 cursor-pointer ${
@@ -252,7 +252,7 @@ function NavbarContent() {
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder={t('search.placeholder', 'Search chemical...')}
-            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-2 focus:ring-[#6164F6]/50 focus:ring-offset-0 outline-none shadow-inner transition-all duration-300 ${focused ? 'bg-[#232221]/95' : 'bg-transparent'} ${isRussian ? 'text-xs sm:text-sm' : ''} cursor-text`}
+            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1.5 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-sm sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-2 focus:ring-[#6164F6]/50 focus:ring-offset-0 outline-none shadow-inner transition-all duration-300 ${focused ? 'bg-[#232221]/95' : 'bg-transparent'} ${isRussian ? 'text-sm sm:text-sm' : ''} cursor-text`}
             style={{ minWidth: 0 }}
           />
         </form>
