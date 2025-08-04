@@ -46,12 +46,12 @@ export default function BookCallSection() {
   return (
     <section
       ref={ref}
-      className="w-full flex flex-col items-center px-6 md:px-20 py-12 sm:py-24 bg-white relative overflow-y-auto overflow-x-hidden scrollbar-hide h-auto sm:overflow-hidden sm:min-h-screen"
+      className="w-full flex flex-col items-center px-6 md:px-20 pt-0 pb-2 sm:pt-0 sm:pb-4 md:pt-0 md:pb-6 bg-white relative overflow-y-auto overflow-x-hidden scrollbar-hide h-auto sm:overflow-hidden sm:min-h-screen"
     >
       {/* Centered heading - bigger text */}
       <motion.h1
         style={{ scale: textScale, opacity: headingOpacity }}
-        className="text-4xl sm:text-6xl md:text-8xl lg:text-[12rem] font-bold text-black mb-8 sm:mb-24 text-center leading-tight whitespace-nowrap"
+        className="text-4xl sm:text-6xl md:text-8xl lg:text-[12rem] font-bold text-black mb-0 sm:mb-2 md:mb-4 text-center leading-tight whitespace-nowrap"
       >
         {t('book.heading')}
       </motion.h1>
@@ -59,9 +59,9 @@ export default function BookCallSection() {
       {/* Centered video - moved after heading */}
       <motion.div
         style={{ rotate, scale, x, y }}
-        className="w-full flex justify-center mb-8 sm:mb-12 -mt-20"
+        className="w-full flex justify-center mb-0 sm:mb-2 md:mb-4 mt-2 sm:mt-4 md:-mt-6"
       >
-        <div className="w-80 h-64 sm:w-96 sm:h-72 md:w-[500px] md:h-80 lg:w-[600px] lg:h-96 bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative">
+        <div className="w-80 h-40 sm:w-96 sm:h-72 md:w-[500px] md:h-80 lg:w-[600px] lg:h-96 bg-gray-200 rounded-2xl shadow-xl overflow-hidden relative">
           <video
             ref={videoRef}
             src="/video/letstalk4.mp4"

@@ -21,12 +21,12 @@ export default function ServiceSlider() {
   const sliderItems = [...services, ...services]; // keep two copies for seamless loop
 
   return (
-    <div className="my-16 sm:my-20 md:my-24 min-h-[300px] py-12 sm:py-16 md:py-20 sm:min-h-[520px] flex flex-col bg-[#181a1b] w-full overflow-hidden rounded-3xl">
-      <div className="w-full px-4 flex justify-center items-center -mt-8">
-                    <h2 
-              className="text-white text-center text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-normal mb-6 sm:mb-14 leading-tight"
-              style={{ letterSpacing: '-1px', whiteSpace: 'nowrap', maxWidth: '100%', overflow: 'visible' }}
-            >
+    <div className="my-8 sm:my-20 md:my-24 min-h-[200px] sm:min-h-[300px] py-6 sm:py-12 md:py-16 lg:py-20 sm:min-h-[520px] flex flex-col bg-[#181a1b] w-full overflow-hidden rounded-3xl">
+      <div className="w-full px-4 flex justify-center items-center -mt-4 sm:-mt-8">
+        <h2 
+          className="text-white text-center text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-7xl font-normal mb-4 sm:mb-6 md:mb-14 leading-tight px-2"
+          style={{ letterSpacing: '-1px', whiteSpace: 'nowrap' }}
+        >
           {t('serviceSlider.title.line1')}{t('serviceSlider.title.line2')}
         </h2>
       </div>
@@ -37,8 +37,8 @@ export default function ServiceSlider() {
         {/* Right blur overlay */}
         <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10" style={{background: 'linear-gradient(to left, #181a1b 70%, transparent 100%)'}} />
         <div
-          className="flex w-max animate-[slide_40s_linear_infinite] mx-auto mt-4 sm:mt-10 justify-center"
-          style={{ willChange: 'transform' }}
+          className="flex w-max animate-[slide_40s_linear_infinite] mx-auto mt-6 sm:mt-8 md:mt-12 justify-center"
+          style={{ willChange: 'transform', animation: 'slide 40s linear infinite' }}
         >
           {sliderItems.map((service, idx) => (
             <div
@@ -59,7 +59,7 @@ export default function ServiceSlider() {
           ))}
         </div>
       </div>
-      <style jsx>{`
+      <style jsx global>{`
         @keyframes slide {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }

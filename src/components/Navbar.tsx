@@ -137,7 +137,7 @@ function NavbarContent() {
       <div className="w-px h-8 sm:h-8 md:h-10 bg-white/20 mr-2 sm:mr-2 md:mr-3 flex-shrink-0" />
       
       {/* Navigation links */}
-      <div className={`flex gap-x-1 sm:gap-x-1 md:gap-x-2 justify-start min-w-0 transition-all duration-300 ${isRussian ? 'gap-x-1' : ''} flex-1 ${focused ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+      <div className={`flex gap-x-1 sm:gap-x-1 md:gap-x-2 justify-start min-w-0 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${isRussian ? 'gap-x-1' : ''} flex-1 ${focused ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         {navLinks.map((link) => (
           link.href.startsWith('#') ? (
             link.highlight ? (
@@ -234,16 +234,16 @@ function NavbarContent() {
       </div>
 
       {/* Vertical line before search */}
-      <div className={`w-px h-8 sm:h-8 md:h-10 bg-white/20 mx-2 sm:mx-2 md:mx-3 flex-shrink-0 transition-opacity duration-300 ${focused ? 'opacity-0' : 'opacity-100'}`} />
+      <div className={`w-px h-8 sm:h-8 md:h-10 bg-white/20 mx-2 sm:mx-2 md:mx-3 flex-shrink-0 transition-opacity duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${focused ? 'opacity-0' : 'opacity-100'}`} />
       
       {/* Search bar with dropdown */}
-      <div ref={searchRef} className={`relative transition-all duration-300 cursor-pointer ${
+      <div ref={searchRef} className={`relative transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer ${
         focused 
           ? 'w-full cursor-text'
           : 'w-8 sm:w-10 md:w-12 lg:w-10'
       }`} onClick={() => inputRef.current?.focus()}>
         <form onSubmit={handleSearchSubmit} className="relative flex items-center">
-          <FiSearch className={`absolute left-2 sm:left-3 text-gray-400 w-3 h-3 sm:w-4 sm:h-4 pointer-events-none z-10 transition-all duration-300 ${focused ? 'opacity-100' : 'opacity-80'}`} />
+          <FiSearch className={`absolute left-2 sm:left-3 text-gray-400 w-3 h-3 sm:w-4 sm:h-4 pointer-events-none z-10 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${focused ? 'opacity-100' : 'opacity-80'}`} />
           <input
             ref={inputRef}
             type="text"
@@ -252,7 +252,7 @@ function NavbarContent() {
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder={t('search.placeholder', 'Search chemical...')}
-            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1.5 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-2 focus:ring-[#6164F6]/50 focus:ring-offset-0 outline-none shadow-inner transition-all duration-300 ${focused ? 'bg-[#232221]/95' : 'bg-transparent'} ${isRussian ? 'text-xs sm:text-sm' : ''} cursor-text`}
+            className={`w-full pl-7 sm:pl-9 pr-2 sm:pr-3 py-1.5 sm:py-1.5 md:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm bg-[#232221]/80 text-white placeholder-gray-400 border-0 focus:ring-2 focus:ring-[#6164F6]/50 focus:ring-offset-0 outline-none shadow-inner transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${focused ? 'bg-[#232221]/95' : 'bg-transparent'} ${isRussian ? 'text-xs sm:text-sm' : ''} cursor-text`}
             style={{ minWidth: 0 }}
           />
         </form>
