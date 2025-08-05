@@ -16,12 +16,7 @@ function getCookie(name: string): string | null {
   return null;
 }
 
-function setCookie(name: string, value: string, days: number = 30): void {
-  if (typeof document === 'undefined') return;
-  const expires = new Date();
-  expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
-}
+
 
 export function LanguageProvider({ children, locale = 'en' }: LanguageProviderProps) {
   const [currentLocale, setCurrentLocale] = useState(locale);
@@ -40,17 +35,6 @@ export function LanguageProvider({ children, locale = 'en' }: LanguageProviderPr
   }, [locale, currentLocale]);
   
   const i18n = createI18nInstance(currentLocale);
-  
-  // Expose a function to change language and persist the choice
-  const changeLanguage = (newLocale: string) => {
-    setCurrentLocale(newLocale);
-    setCookie('user-preferred-language', newLocale, 365); // Persist for 1 year
-  };
-  
-  // Make the changeLanguage function available globally
-  if (typeof window !== 'undefined') {
-    (window as any).changeLanguage = changeLanguage;
-  }
   
   return (
     <I18nextProvider i18n={i18n}>
