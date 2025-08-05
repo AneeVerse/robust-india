@@ -145,12 +145,30 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
         <div className="absolute top-4 left-4 sm:top-8 sm:left-8">
           <Link 
             href="/product/chemical#chemical-family-section" 
-            className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-300 font-medium"
+            className="group relative overflow-hidden
+              px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 
+              rounded-lg sm:rounded-xl md:rounded-2xl 
+              font-semibold text-sm sm:text-base
+              flex items-center gap-2 sm:gap-3
+              bg-gradient-to-r from-[#6164F6] to-[#7C3AED] 
+              text-white shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl
+              transform transition-all duration-300 ease-out
+              hover:scale-105 hover:-translate-y-0.5
+              focus:outline-none focus:ring-2 sm:focus:ring-4 focus:ring-[#6164F6]/30
+              active:scale-95
+              backdrop-blur-sm"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            <span className="hidden sm:inline">Back to chemical family</span>
+            {/* Animated background overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#7C3AED] to-[#6164F6] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            
+            {/* Content */}
+            <div className="relative flex items-center gap-2 sm:gap-3">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+              </svg>
+              <span className="font-bold tracking-wide hidden sm:inline">Back to chemical family</span>
+              <span className="font-bold tracking-wide sm:hidden">Back</span>
+            </div>
           </Link>
         </div>
         
