@@ -5,7 +5,7 @@ import BookACall from '@/components/BookCallSection';
 import FooterSection from '@/components/FooterSection';
 import ChemicalFamilySection from '@/components/ChemicalFamilySection';
 import ServiceSlider from '@/components/ServiceSlider';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 import { chemicalProductImages } from './images';
 
 export default function ProductChemicalPage() {

@@ -16,17 +16,23 @@ function getCookie(name: string): string | null {
   return null;
 }
 
+function setCookie(name: string, value: string, days: number = 30): void {
+  if (typeof document === 'undefined') return;
+  const expires = new Date();
+  expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+  document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+}
+
 export function LanguageProvider({ children, locale = 'en' }: LanguageProviderProps) {
   const [currentLocale, setCurrentLocale] = useState(locale);
   
   useEffect(() => {
-    // Check for auto-detected language from middleware
-    const autoDetectedLanguage = getCookie('auto-detected-language');
-
-    // Always prefer the server-side geo-detected language. We intentionally
-    // ignore any previously stored "preferred-language" so that a manual
-    // switch does not persist across page reloads.
-    const finalLocale = autoDetectedLanguage || locale;
+    // Check for user's manually selected language preference
+    const userPreferredLanguage = getCookie('user-preferred-language');
+    
+    // If user has manually selected a language, use that
+    // Otherwise, always default to English regardless of auto-detection
+    const finalLocale = userPreferredLanguage || 'en';
     
     if (finalLocale !== currentLocale) {
       setCurrentLocale(finalLocale);
@@ -34,6 +40,17 @@ export function LanguageProvider({ children, locale = 'en' }: LanguageProviderPr
   }, [locale, currentLocale]);
   
   const i18n = createI18nInstance(currentLocale);
+  
+  // Expose a function to change language and persist the choice
+  const changeLanguage = (newLocale: string) => {
+    setCurrentLocale(newLocale);
+    setCookie('user-preferred-language', newLocale, 365); // Persist for 1 year
+  };
+  
+  // Make the changeLanguage function available globally
+  if (typeof window !== 'undefined') {
+    (window as any).changeLanguage = changeLanguage;
+  }
   
   return (
     <I18nextProvider i18n={i18n}>

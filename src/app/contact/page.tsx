@@ -7,7 +7,7 @@ import { MapPin, Phone, Mail, Send, User, MessageSquare } from 'lucide-react';
 import FooterSection from '@/components/FooterSection';
 import ServiceSlider from '@/components/ServiceSlider';
 import { useProtectedContact } from '@/hooks/useProtectedContact';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactPage() {
   const { t } = useTranslation();

@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from "react"
 import { Sparkles, Diamond, Heart, Star } from 'lucide-react'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useTranslation } from 'next-i18next'
+import { useTranslation } from 'react-i18next'
 gsap.registerPlugin(ScrollTrigger)
 
 // Card component (inline)

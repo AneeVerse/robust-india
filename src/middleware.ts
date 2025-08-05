@@ -19,20 +19,9 @@ export function middleware(request: NextRequestWithGeo) {
     // Cloudflare provides the country via this header if routed through CF
     request.headers.get('cf-ipcountry') ||
     'US';
-  const acceptLanguage = request.headers.get('accept-language') || '';
   
-  // Determine language based on country
-  let detectedLanguage = 'en'; // default
-  
-  // Country-based language mapping
-  if (country === 'RU' || country === 'BY' || country === 'KZ' || country === 'UA') {
-    detectedLanguage = 'ru';
-  }
-  
-  // Also check browser language as fallback
-  if (detectedLanguage === 'en' && acceptLanguage.includes('ru')) {
-    detectedLanguage = 'ru';
-  }
+  // Always default to English regardless of country
+  const detectedLanguage = 'en';
   
   const response = NextResponse.next();
 

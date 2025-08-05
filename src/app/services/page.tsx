@@ -7,7 +7,7 @@ import Link from 'next/link';
 import ServiceSlider from '@/components/ServiceSlider';
 import FooterSection from '@/components/FooterSection';
 import BookACall from '@/components/BookCallSection';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 
 const serviceImagesArr = [
   '/images/demo/ftw.jpg',

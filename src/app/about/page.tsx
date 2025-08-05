@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { MdVerifiedUser } from "react-icons/md";
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 
 // TODO: Create and import these components
 // import NewsletterSection from '@/components/NewsletterSection';

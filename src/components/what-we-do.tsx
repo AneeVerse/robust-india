@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from 'next/image';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 
 export default function LandingPage() {
   const { t } = useTranslation();

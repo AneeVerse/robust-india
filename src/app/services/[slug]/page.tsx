@@ -5,7 +5,7 @@ import { use } from 'react';
 import BookACall from '@/components/BookCallSection';
 import FooterSection from '@/components/FooterSection';
 import ServiceSlider from '@/components/ServiceSlider';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 import { serviceImages } from './generateStaticParams';
 import Integrated3PLFTWZInfo from '@/components/Integrated3PLFTWZInfo';
 import EndtoEndSoulutionInfo from '@/components/EndtoEndSoulutionInfo';

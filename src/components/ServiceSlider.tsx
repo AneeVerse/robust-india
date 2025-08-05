@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 
 const services = [
   { key: 'oilAndGas', img: '/images/service/oil-rig (2) 1.png' },
