@@ -197,6 +197,18 @@
       "antioxidant1010": {
         "keywords": ["antioxidant 1010", "polymer stabilizer", "additive", "plastic", "antioxidant"]
       },
+      "antioxidant1076": {
+        "keywords": ["antioxidant 1076", "polymer stabilizer", "additive", "plastic", "antioxidant"]
+      },
+      "ptbba": {
+        "keywords": ["PTBBA", "para tertiary butyl benzoic acid", "chemical intermediate", "industrial"]
+      },
+      "secondaryButylBenzene": {
+        "keywords": ["secondary butyl benzene", "SBB", "aromatic hydrocarbon", "solvent", "chemical intermediate"]
+      },
+      "osbpDetailed": {
+        "keywords": ["OSBP detailed", "ortho sec butyl phenol", "phenol derivative", "chemical intermediate"]
+      },
       "basicPetrochemicals": {
         "description": "Basic petrochemicals and feedstock chemicals for industrial applications",
         "keywords": ["basic petrochemicals", "feedstock", "naphtha", "benzene", "toluene", "industrial chemicals"]
@@ -310,6 +322,12 @@
       },
       "polybutadieneRubber": {
         "keywords": ["polybutadiene rubber", "PBR", "synthetic rubber", "elastomer", "high-cis polybutadiene"]
+      },
+      "styreneButadieneRubber": {
+        "keywords": ["styrene butadiene rubber", "SBR", "synthetic rubber", "elastomer", "buna S"]
+      },
+      "polyvinylChloride": {
+        "keywords": ["polyvinyl chloride", "PVC", "polymer", "plastic", "vinyl"]
       },
       "polyethylene": {
         "keywords": ["polyethylene", "PE", "polymer", "plastic", "HDPE", "LDPE", "LLDPE"]
@@ -1005,7 +1023,7 @@
         "name": "Fuel Additives (Oxygenates)",
         "count": 3
       },
-      "polymers": {
+      "polymersIntermediates": {
         "name": "Polymers & Intermediates",
         "count": 5
       },
@@ -1093,7 +1111,7 @@
         "name": "Synthetic Rubber",
         "count": 2
       },
-      "polymers": {
+      "polymersSpecialty": {
         "name": "Polymers",
         "count": 3
       }

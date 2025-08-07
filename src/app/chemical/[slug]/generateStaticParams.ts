@@ -60,7 +60,15 @@ export async function generateStaticParams() {
     'ortho-tert-butyl-phenol-otbp',
     'osbp',
     'osbp-detailed',
-    '2-6-di-sec-butyl-phenol-2-6-dsbp'
+    '2-6-di-sec-butyl-phenol-2-6-dsbp',
+    'polybutadiene-rubber-pbr',
+    'styrene-butadiene-rubber-sbr',
+    'polyvinyl-chloride-pvc',
+    'polyethylene-pe',
+    'polypropylene-pp',
+    'polyester-staple-fiber-psf',
+    'polyester-filament-yarn-pfy',
+    'polyethylene-terephthalate-pet'
   ];
   
   return chemicalSlugs.map((slug) => ({ slug }));

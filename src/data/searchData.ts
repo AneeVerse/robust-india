@@ -535,54 +535,7 @@ export const getLocalizedSearchData = (_t: (key: string) => string | string[]): 
     url: '/chemical/zddp-im',
     keywordsKey: 'search.items.zddpIm.keywords'
   },
-  {
-    id: 'diethylene-triamine',
-    titleKey: 'chemicalDetail.products.diethylene-triamine.overview.name',
-    descriptionKey: 'chemicalDetail.products.diethylene-triamine.overview.description',
-    category: 'chemical',
-    url: '/chemical/diethylene-triamine',
-    keywordsKey: 'search.items.diethyleneTriamine.keywords'
-  },
-  {
-    id: 'aminoethyl-ethanolamine',
-    titleKey: 'chemicalDetail.products.aminoethyl-ethanolamine.overview.name',
-    descriptionKey: 'chemicalDetail.products.aminoethyl-ethanolamine.overview.description',
-    category: 'chemical',
-    url: '/chemical/aminoethyl-ethanolamine',
-    keywordsKey: 'search.items.aminoethylEthanolamine.keywords'
-  },
-  {
-    id: 'aminoethylpiperazine',
-    titleKey: 'chemicalDetail.products.aminoethylpiperazine.overview.name',
-    descriptionKey: 'chemicalDetail.products.aminoethylpiperazine.overview.description',
-    category: 'chemical',
-    url: '/chemical/aminoethylpiperazine',
-    keywordsKey: 'search.items.aminoethylpiperazine.keywords'
-  },
-  {
-    id: 'para-tertiary-butyl-phenol-ptbp',
-    titleKey: 'chemicalDetail.products.para-tertiary-butyl-phenol-ptbp.overview.name',
-    descriptionKey: 'chemicalDetail.products.para-tertiary-butyl-phenol-ptbp.overview.description',
-    category: 'chemical',
-    url: '/chemical/para-tertiary-butyl-phenol-ptbp',
-    keywordsKey: 'search.items.paraTertiaryButylPhenol.keywords'
-  },
-  {
-    id: '2-4-di-tert-butyl-phenol-2-4-dtbp',
-    titleKey: 'chemicalDetail.products.2-4-di-tert-butyl-phenol-2-4-dtbp.overview.name',
-    descriptionKey: 'chemicalDetail.products.2-4-di-tert-butyl-phenol-2-4-dtbp.overview.description',
-    category: 'chemical',
-    url: '/chemical/2-4-di-tert-butyl-phenol-2-4-dtbp',
-    keywordsKey: 'search.items.2-4-di-tert-butyl-phenol.keywords'
-  },
-  {
-    id: '2-6-di-tert-butyl-phenol-2-6-dtbp',
-    titleKey: 'chemicalDetail.products.2-6-di-tert-butyl-phenol-2-6-dtbp.overview.name',
-    descriptionKey: 'chemicalDetail.products.2-6-di-tert-butyl-phenol-2-6-dtbp.overview.description',
-    category: 'chemical',
-    url: '/chemical/2-6-di-tert-butyl-phenol-2-6-dtbp',
-    keywordsKey: 'search.items.2-6-di-tert-butyl-phenol.keywords'
-  },
+
   {
     id: 'ortho-tert-butyl-phenol-otbp',
     titleKey: 'chemicalDetail.products.ortho-tert-butyl-phenol-otbp.overview.name',
@@ -672,6 +625,104 @@ export const getLocalizedSearchData = (_t: (key: string) => string | string[]): 
     keywordsKey: 'search.items.2-6-di-sec-butyl-phenol.keywords'
   },
 
+  // Missing chemicals from generateStaticParams
+  {
+    id: 'antioxidant-1076',
+    titleKey: 'chemicalDetail.products.antioxidant-1076.overview.name',
+    descriptionKey: 'chemicalDetail.products.antioxidant-1076.overview.description',
+    category: 'chemical',
+    url: '/chemical/antioxidant-1076',
+    keywordsKey: 'search.items.antioxidant1076.keywords'
+  },
+  {
+    id: 'ptbba',
+    titleKey: 'chemicalDetail.products.ptbba.overview.name',
+    descriptionKey: 'chemicalDetail.products.ptbba.overview.description',
+    category: 'chemical',
+    url: '/chemical/ptbba',
+    keywordsKey: 'search.items.ptbba.keywords'
+  },
+  {
+    id: 'secondary-butyl-benzene',
+    titleKey: 'chemicalDetail.products.secondary-butyl-benzene.overview.name',
+    descriptionKey: 'chemicalDetail.products.secondary-butyl-benzene.overview.description',
+    category: 'chemical',
+    url: '/chemical/secondary-butyl-benzene',
+    keywordsKey: 'search.items.secondaryButylBenzene.keywords'
+  },
+  {
+    id: 'osbp-detailed',
+    titleKey: 'chemicalDetail.products.osbp-detailed.overview.name',
+    descriptionKey: 'chemicalDetail.products.osbp-detailed.overview.description',
+    category: 'chemical',
+    url: '/chemical/osbp-detailed',
+    keywordsKey: 'search.items.osbpDetailed.keywords'
+  },
+  {
+    id: 'polybutadiene-rubber-pbr',
+    titleKey: 'chemicalDetail.products.polybutadiene-rubber-pbr.overview.name',
+    descriptionKey: 'chemicalDetail.products.polybutadiene-rubber-pbr.overview.description',
+    category: 'chemical',
+    url: '/chemical/polybutadiene-rubber-pbr',
+    keywordsKey: 'search.items.polybutadieneRubber.keywords'
+  },
+  {
+    id: 'styrene-butadiene-rubber-sbr',
+    titleKey: 'chemicalDetail.products.styrene-butadiene-rubber-sbr.overview.name',
+    descriptionKey: 'chemicalDetail.products.styrene-butadiene-rubber-sbr.overview.description',
+    category: 'chemical',
+    url: '/chemical/styrene-butadiene-rubber-sbr',
+    keywordsKey: 'search.items.styreneButadieneRubber.keywords'
+  },
+  {
+    id: 'polyvinyl-chloride-pvc',
+    titleKey: 'chemicalDetail.products.polyvinyl-chloride-pvc.overview.name',
+    descriptionKey: 'chemicalDetail.products.polyvinyl-chloride-pvc.overview.description',
+    category: 'chemical',
+    url: '/chemical/polyvinyl-chloride-pvc',
+    keywordsKey: 'search.items.polyvinylChloride.keywords'
+  },
+  {
+    id: 'polyethylene-pe',
+    titleKey: 'chemicalDetail.products.polyethylene-pe.overview.name',
+    descriptionKey: 'chemicalDetail.products.polyethylene-pe.overview.description',
+    category: 'chemical',
+    url: '/chemical/polyethylene-pe',
+    keywordsKey: 'search.items.polyethylene.keywords'
+  },
+  {
+    id: 'polypropylene-pp',
+    titleKey: 'chemicalDetail.products.polypropylene-pp.overview.name',
+    descriptionKey: 'chemicalDetail.products.polypropylene-pp.overview.description',
+    category: 'chemical',
+    url: '/chemical/polypropylene-pp',
+    keywordsKey: 'search.items.polypropylene.keywords'
+  },
+  {
+    id: 'polyester-staple-fiber-psf',
+    titleKey: 'chemicalDetail.products.polyester-staple-fiber-psf.overview.name',
+    descriptionKey: 'chemicalDetail.products.polyester-staple-fiber-psf.overview.description',
+    category: 'chemical',
+    url: '/chemical/polyester-staple-fiber-psf',
+    keywordsKey: 'search.items.polyesterStapleFiber.keywords'
+  },
+  {
+    id: 'polyester-filament-yarn-pfy',
+    titleKey: 'chemicalDetail.products.polyester-filament-yarn-pfy.overview.name',
+    descriptionKey: 'chemicalDetail.products.polyester-filament-yarn-pfy.overview.description',
+    category: 'chemical',
+    url: '/chemical/polyester-filament-yarn-pfy',
+    keywordsKey: 'search.items.polyesterFilamentYarn.keywords'
+  },
+  {
+    id: 'polyethylene-terephthalate-pet',
+    titleKey: 'chemicalDetail.products.polyethylene-terephthalate-pet.overview.name',
+    descriptionKey: 'chemicalDetail.products.polyethylene-terephthalate-pet.overview.description',
+    category: 'chemical',
+    url: '/chemical/polyethylene-terephthalate-pet',
+    keywordsKey: 'search.items.polyethyleneTerephthalate.keywords'
+  },
+
   // Services - Use actual service routes that exist
   {
     id: 'integrated-3pl-ftwz',
@@ -747,6 +798,7 @@ export const getLocalizedSearchData = (_t: (key: string) => string | string[]): 
     url: '/services',
     keywordsKey: 'search.items.pharmaceuticals.keywords'
   }
+  
 ];
 
 // Category display names with translation keys
