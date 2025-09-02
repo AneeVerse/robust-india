@@ -9,6 +9,8 @@ import ServiceSlider from '@/components/ServiceSlider';
 import { useProtectedContact } from '@/hooks/useProtectedContact';
 import { useTranslation } from 'react-i18next';
 
+
+
 export default function ContactPage() {
   const { t } = useTranslation();
   const { handleProtectedAction } = useProtectedContact();

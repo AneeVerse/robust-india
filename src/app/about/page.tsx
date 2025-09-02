@@ -15,6 +15,8 @@ import { useTranslation } from 'react-i18next';
 // TODO: Create and import these components
 // import NewsletterSection from '@/components/NewsletterSection';
 
+
+
 export default function AboutPage() {
   const { t } = useTranslation('common');
   
