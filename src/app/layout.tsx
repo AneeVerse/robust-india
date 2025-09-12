@@ -5,6 +5,7 @@ import { ContactWidgetProvider } from "../context/ContactWidgetContext";
 import { LanguageProvider } from "../components/LanguageProvider";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import AnimatedNavbar from "../components/AnimatedNavbar";
+import BreadcrumbJsonLdDynamic from "../components/BreadcrumbJsonLdDynamic";
 import FloatingActionButton from "../components/FloatingActionButton";
 
 export const metadata: Metadata = {
@@ -240,6 +241,7 @@ export default function RootLayout({
               <AnimatedNavbar />
               <FloatingActionButton />
               <LanguageSwitcher />
+              <BreadcrumbJsonLdDynamic baseUrl="https://robustindia.com" rootName="Home" />
             </NavbarVisibilityProvider>
           </ContactWidgetProvider>
         </LanguageProvider>
