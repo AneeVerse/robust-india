@@ -215,9 +215,6 @@ export default function RootLayout({
           "@id": "https://robustindia.com/#organization"
         },
         "description": "Leading provider of chemical trade, FTWZ services, and integrated 3PL solutions in India",
-        "breadcrumb": {
-          "@id": "https://robustindia.com/#breadcrumb"
-        },
         "inLanguage": "en-US"
       }
     ]
