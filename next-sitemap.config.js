@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://robustindia.com',
+  siteUrl: process.env.SITE_URL || 'https://robustindia.co',
   generateRobotsTxt: true, // (optional)
   // exclude: ['/server-sitemap.xml'], // <= exclude here
   generateIndexSitemap: false, // (optional) since we have relatively few pages
@@ -13,9 +13,7 @@ module.exports = {
         allow: '/',
       },
     ],
-    additionalSitemaps: [
-      'https://robustindia.com/sitemap.xml',
-    ],
+    additionalSitemaps: [],
   },
   // Optional: Transform function to modify URLs before they're added to sitemap
   transform: async (config, path) => {

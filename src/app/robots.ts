@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
+  const siteUrl = process.env.SITE_URL || 'https://robustindia.co'
+
   return {
     rules: {
       userAgent: '*',
@@ -11,12 +13,10 @@ export default function robots(): MetadataRoute.Robots {
         '/_next/',
         '/private/',
         '/temp/',
-        '*.json',
-        '*.xml',
         '/thank-you',
       ],
     },
-    sitemap: 'https://robustindia.com/sitemap.xml',
-    host: 'https://robustindia.com',
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   }
 }
