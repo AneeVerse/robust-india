@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://robustindia.com
+Host: https://robustindia.co
 
 # Sitemaps
-Sitemap: https://robustindia.com/sitemap.xml
+Sitemap: https://robustindia.co/sitemap.xml
