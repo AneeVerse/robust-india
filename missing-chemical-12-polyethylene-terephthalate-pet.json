@@ -1,0 +1,105 @@
+{
+  "polyethylene-terephthalate-pet": {
+    "overview": {
+      "name": "Polyethylene Terephthalate (PET)",
+      "description": "A thermoplastic polymer resin used for manufacturing bottles, fibers, films, and other packaging materials.",
+      "overviewDescription": "Polyethylene Terephthalate stands as one of the most versatile and widely used polymers globally, serving as the foundation for countless products that define modern life. From the ubiquitous plastic bottles that contain our beverages to the fibers in our clothing and the films that protect our food, PET's unique combination of clarity, strength, barrier properties, and recyclability makes it indispensable across multiple industries. Its role in enabling sustainable packaging solutions and circular economy initiatives positions it as crucial for environmental sustainability.",
+      "keyFeatures": [
+        "Excellent clarity and transparency",
+        "Superior barrier properties for gases and moisture",
+        "High strength-to-weight ratio",
+        "Excellent recyclability and sustainability",
+        "Versatile processing capabilities"
+      ],
+      "majorApplications": [
+        "Beverage and food packaging",
+        "Textile fibers and fabrics",
+        "Engineering plastics and films",
+        "Medical and pharmaceutical packaging"
+      ],
+      "industrialSignificance": "PET is one of the most important polymers globally, with annual production exceeding 80 million tons. Its versatility, performance characteristics, and recyclability make it essential for modern packaging, textile, and engineering applications, driving innovation in sustainable materials development."
+    },
+    "identification": {
+      "iupacName": "Poly(ethylene terephthalate)",
+      "commonNames": "PET, Polyester, Polyethylene terephthalate",
+      "casNumber": "25038-59-9",
+      "chemicalFormula": "(C₁₀H₈O₄)ₙ",
+      "molecularWeight": "Variable (polymer)"
+    },
+    "physicalChemicalProperties": {
+      "form": "Amorphous or semi-crystalline solid",
+      "odor": "Odorless",
+      "appearance": "Clear to opaque, depending on crystallinity",
+      "meltingPoint": "250–260°C",
+      "glassTransitionTemp": "70–80°C",
+      "density": "1.33–1.40 g/cm³",
+      "tensileStrength": "50–80 MPa",
+      "solubility": {
+        "solubleIn": [
+          "Phenol",
+          "m-cresol",
+          "concentrated sulfuric acid"
+        ],
+        "insolubleInWater": "Insoluble"
+      }
+    },
+    "gradesPurity": {
+      "bottleGrade": "≥99.9% PET content",
+      "fiberGrade": "≥99.5% PET content",
+      "filmGrade": "≥99.8% PET content",
+      "recycledGrade": "≥95% PET content"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Beverage Bottles",
+          "description": "Soft drinks, water, juices"
+        },
+        {
+          "title": "Food Packaging",
+          "description": "Containers, trays, films"
+        },
+        {
+          "title": "Textile Fibers",
+          "description": "Clothing, carpets, industrial fabrics"
+        },
+        {
+          "title": "Engineering Plastics",
+          "description": "Automotive parts, electronics"
+        }
+      ],
+      "industriesServed": [
+        "Packaging",
+        "Textiles",
+        "Automotive",
+        "Electronics",
+        "Medical & Pharmaceutical"
+      ]
+    },
+    "storageHandling": {
+      "storage": [
+        "Dry, ventilated warehouse",
+        "Protect from UV light",
+        "Maintain relative humidity <65%"
+      ],
+      "handling": [
+        "Standard polymer handling procedures",
+        "Avoid excessive heat and moisture"
+      ]
+    },
+    "safetyRegulatory": {
+      "hazards": [
+        "Low toxicity",
+        "Non-irritating",
+        "Combustible at high temperatures"
+      ],
+      "regulatoryStatus": {
+        "ghsSymbols": [
+          "None"
+        ],
+        "euReach": "Registered",
+        "foodContact": "Approved"
+      }
+    }
+  }
+}

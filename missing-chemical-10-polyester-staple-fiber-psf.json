@@ -1,0 +1,104 @@
+{
+  "polyester-staple-fiber-psf": {
+    "overview": {
+      "name": "Polyester Staple Fiber (PSF)",
+      "description": "A synthetic fiber made from polyethylene terephthalate (PET) used extensively in textile manufacturing for clothing, home furnishings, and industrial applications.",
+      "overviewDescription": "Polyester Staple Fiber represents one of the most versatile and widely used synthetic fibers in the global textile industry. Derived from PET polymer, PSF offers exceptional durability, wrinkle resistance, and moisture-wicking properties that make it ideal for a vast range of applications from everyday clothing to high-performance technical textiles. Its ability to blend seamlessly with natural fibers like cotton and wool has revolutionized the textile industry, creating fabrics that combine the best properties of both natural and synthetic materials.",
+      "keyFeatures": [
+        "Excellent durability and wrinkle resistance",
+        "Superior moisture-wicking and quick-drying properties",
+        "Versatile blending capabilities with natural fibers",
+        "Consistent quality and uniform properties",
+        "Cost-effective alternative to natural fibers"
+      ],
+      "majorApplications": [
+        "Apparel and clothing manufacturing",
+        "Home furnishings and upholstery",
+        "Technical textiles and industrial fabrics",
+        "Non-woven applications and geotextiles"
+      ],
+      "industrialSignificance": "PSF is a cornerstone of the global textile industry, with annual production exceeding 50 million tons. Its versatility and performance characteristics make it essential for modern textile manufacturing, enabling the production of affordable, durable, and high-performance fabrics that meet diverse consumer and industrial needs."
+    },
+    "identification": {
+      "iupacName": "Poly(ethylene terephthalate) fiber",
+      "commonNames": "PSF, Polyester staple fiber, PET fiber",
+      "casNumber": "25038-59-9",
+      "chemicalFormula": "(C₁₀H₈O₄)ₙ",
+      "molecularWeight": "Variable (polymer)"
+    },
+    "physicalChemicalProperties": {
+      "form": "White to off-white staple fibers",
+      "odor": "Odorless",
+      "appearance": "Crystalline, semi-transparent fibers",
+      "meltingPoint": "250–260°C",
+      "density": "1.38–1.40 g/cm³",
+      "tenacity": "4.5–6.0 g/denier",
+      "elongation": "15–30%",
+      "moistureRegain": "0.4%",
+      "solubility": {
+        "solubleIn": [
+          "Phenol",
+          "m-cresol",
+          "concentrated sulfuric acid"
+        ],
+        "insolubleInWater": "Insoluble"
+      }
+    },
+    "gradesPurity": {
+      "fiberGrade": "≥99.5% PET content",
+      "textileGrade": "Standard for apparel applications",
+      "technicalGrade": "Enhanced properties for industrial use"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Apparel",
+          "description": "Clothing, sportswear, outerwear"
+        },
+        {
+          "title": "Home Textiles",
+          "description": "Bedding, curtains, upholstery"
+        },
+        {
+          "title": "Technical Textiles",
+          "description": "Industrial fabrics, geotextiles"
+        },
+        {
+          "title": "Non-wovens",
+          "description": "Wipes, filters, medical textiles"
+        }
+      ],
+      "industriesServed": [
+        "Textiles & Apparel",
+        "Home Furnishings",
+        "Automotive",
+        "Medical & Healthcare"
+      ]
+    },
+    "storageHandling": {
+      "storage": [
+        "Dry, ventilated warehouse",
+        "Protect from UV light",
+        "Maintain relative humidity <65%"
+      ],
+      "handling": [
+        "Standard textile handling procedures",
+        "Avoid excessive heat and moisture"
+      ]
+    },
+    "safetyRegulatory": {
+      "hazards": [
+        "Low toxicity",
+        "Non-irritating",
+        "Combustible at high temperatures"
+      ],
+      "regulatoryStatus": {
+        "ghsSymbols": [
+          "None"
+        ],
+        "euReach": "Registered",
+        "foodContact": "Approved"
+      }
+    }
+  }
+}

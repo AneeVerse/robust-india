@@ -1,0 +1,78 @@
+{
+  "ptbba": {
+    "overview": {
+      "name": "Para-Tertiary Butyl Benzoic Acid (PTBBA, CAS No. 98-73-7)",
+      "description": "A white, odorless, fine free-flowing crystalline powder used as an intermediate in resins, plasticizers, pharmaceuticals, cosmetics, and as a corrosion inhibitor.",
+      "overviewDescription": "Para-Tertiary Butyl Benzoic Acid stands as a versatile aromatic carboxylic acid that bridges multiple high-value industries through its unique combination of chemical reactivity and structural stability. This specialized intermediate enables the production of advanced resins with enhanced durability, pharmaceuticals with improved bioavailability, and cosmetic ingredients with superior performance characteristics. Its strategic importance lies in its ability to impart desirable properties to end products while maintaining excellent processability and stability, making it indispensable for applications requiring both performance and reliability in demanding environments.",
+      "keyFeatures": [
+        "Versatile intermediate for high-performance resin and polymer synthesis",
+        "Excellent corrosion inhibition properties for metal protection applications",
+        "Superior thermal stability enabling high-temperature processing",
+        "Effective pharmaceutical intermediate with good biocompatibility",
+        "Outstanding solubility characteristics in various organic systems"
+      ],
+      "majorApplications": [
+        "Alkyd resin and polyester resin intermediate production",
+        "Pharmaceutical active ingredient and intermediate synthesis",
+        "Cosmetic and personal care ingredient manufacturing",
+        "Corrosion inhibitor formulations for industrial applications"
+      ],
+      "industrialSignificance": "PTBBA serves as a critical building block in the specialty chemicals industry, enabling the development of advanced materials and formulations that meet increasingly demanding performance requirements. Its role in pharmaceutical synthesis and high-performance resins makes it essential for industries focused on innovation and quality enhancement."
+    },
+    "identification": {
+      "iupacName": "4-(tert-Butyl)benzoic acid",
+      "commonNames": "PTBBA, p-tert-Butylbenzoic acid, 4-(1,1-Dimethylethyl)benzoic acid",
+      "casNumber": "98-73-7",
+      "chemicalFormula": "C₁₁H₁₄O₂",
+      "molecularWeight": "178.23 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "White crystalline powder",
+      "odor": "Odorless",
+      "appearance": "Fine, free-flowing powder",
+      "meltingPoint": "164–167°C",
+      "boilingPoint": "300°C (decomposes)",
+      "density": "~1.12 g/cm³",
+      "solubility": "Soluble in ethanol, acetone, and alkaline solutions; insoluble in water (<0.1 g/L at 25°C)",
+      "pKa": "~4.4 (weak organic acid)"
+    },
+    "gradesPurity": {
+      "technicalGrade": ">=98% (industrial applications)",
+      "highPurityGrade": ">=99.5% (pharmaceutical/cosmetic use)"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Polymer Industry",
+          "description": "Intermediate for alkyd resins, plasticizer stabilizer."
+        },
+        {
+          "title": "Cosmetics",
+          "description": "Preservative (limited use due to regulations)."
+        },
+        {
+          "title": "Pharmaceuticals",
+          "description": "Intermediate for drug synthesis."
+        },
+        {
+          "title": "Lubricants",
+          "description": "Corrosion inhibitor additive."
+        }
+      ],
+      "industriesServed": [
+        "Coatings & Resins",
+        "Personal Care",
+        "Pharmaceuticals",
+        "Chemical Manufacturing"
+      ]
+    },
+    "storageHandling": {
+      "storage": "Tightly sealed containers. Cool, dry place (<30°C). Away from strong oxidizers.",
+      "handling": "Dust mask (NIOSH N95) for powders. Nitrile gloves and goggles."
+    },
+    "safetyRegulatory": {
+      "hazards": "Irritant (eyes/skin/respiratory tract). Not flammable but decomposes at high temps.",
+      "regulations": "GHS Symbols: Exclamation Mark. Not classified as carcinogenic. EU REACH: Registered."
+    }
+  }
+}

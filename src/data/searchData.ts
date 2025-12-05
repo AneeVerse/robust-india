@@ -723,6 +723,176 @@ export const getLocalizedSearchData = (_t: (key: string) => string | string[]): 
     keywordsKey: 'search.items.polyethyleneTerephthalate.keywords'
   },
 
+  // New chemicals from brochure - Phosphorus Based
+  {
+    id: 'tributyl-phosphate-tbp',
+    titleKey: 'chemicalDetail.products.tributyl-phosphate-tbp.overview.name',
+    descriptionKey: 'chemicalDetail.products.tributyl-phosphate-tbp.overview.description',
+    category: 'chemical',
+    url: '/chemical/tributyl-phosphate-tbp',
+    keywordsKey: 'search.items.tributylPhosphate.keywords'
+  },
+
+  // New chemicals from brochure - Alkanolamines Group
+  {
+    id: 'diethylenetriamine-deta',
+    titleKey: 'chemicalDetail.products.diethylenetriamine-deta.overview.name',
+    descriptionKey: 'chemicalDetail.products.diethylenetriamine-deta.overview.description',
+    category: 'chemical',
+    url: '/chemical/diethylenetriamine-deta',
+    keywordsKey: 'search.items.diethyleneTriamine.keywords'
+  },
+  {
+    id: 'aminoethyl-ethanolamine-aeea',
+    titleKey: 'chemicalDetail.products.aminoethyl-ethanolamine-aeea.overview.name',
+    descriptionKey: 'chemicalDetail.products.aminoethyl-ethanolamine-aeea.overview.description',
+    category: 'chemical',
+    url: '/chemical/aminoethyl-ethanolamine-aeea',
+    keywordsKey: 'search.items.aminoethylEthanolamine.keywords'
+  },
+  {
+    id: 'aminoethyl-piperazine-aep',
+    titleKey: 'chemicalDetail.products.aminoethyl-piperazine-aep.overview.name',
+    descriptionKey: 'chemicalDetail.products.aminoethyl-piperazine-aep.overview.description',
+    category: 'chemical',
+    url: '/chemical/aminoethyl-piperazine-aep',
+    keywordsKey: 'search.items.aminoethylpiperazine.keywords'
+  },
+  {
+    id: 'triisopropanolamine-tipa',
+    titleKey: 'chemicalDetail.products.triisopropanolamine-tipa.overview.name',
+    descriptionKey: 'chemicalDetail.products.triisopropanolamine-tipa.overview.description',
+    category: 'chemical',
+    url: '/chemical/triisopropanolamine-tipa',
+    keywordsKey: 'search.items.triisopropanolamine.keywords'
+  },
+  {
+    id: 'monoethanolamine-mea',
+    titleKey: 'chemicalDetail.products.monoethanolamine-mea.overview.name',
+    descriptionKey: 'chemicalDetail.products.monoethanolamine-mea.overview.description',
+    category: 'chemical',
+    url: '/chemical/monoethanolamine-mea',
+    keywordsKey: 'search.items.monoethanolamine.keywords'
+  },
+  {
+    id: 'diethanolamine-dea',
+    titleKey: 'chemicalDetail.products.diethanolamine-dea.overview.name',
+    descriptionKey: 'chemicalDetail.products.diethanolamine-dea.overview.description',
+    category: 'chemical',
+    url: '/chemical/diethanolamine-dea',
+    keywordsKey: 'search.items.diethanolamine.keywords'
+  },
+  {
+    id: 'triethanolamine-tea',
+    titleKey: 'chemicalDetail.products.triethanolamine-tea.overview.name',
+    descriptionKey: 'chemicalDetail.products.triethanolamine-tea.overview.description',
+    category: 'chemical',
+    url: '/chemical/triethanolamine-tea',
+    keywordsKey: 'search.items.triethanolamine.keywords'
+  },
+  {
+    id: '2-phenoxy-ethanol',
+    titleKey: 'chemicalDetail.products.2-phenoxy-ethanol.overview.name',
+    descriptionKey: 'chemicalDetail.products.2-phenoxy-ethanol.overview.description',
+    category: 'chemical',
+    url: '/chemical/2-phenoxy-ethanol',
+    keywordsKey: 'search.items.phenoxyEthanol.keywords'
+  },
+  {
+    id: 'diethanol-isopropanolamine-deipa',
+    titleKey: 'chemicalDetail.products.diethanol-isopropanolamine-deipa.overview.name',
+    descriptionKey: 'chemicalDetail.products.diethanol-isopropanolamine-deipa.overview.description',
+    category: 'chemical',
+    url: '/chemical/diethanol-isopropanolamine-deipa',
+    keywordsKey: 'search.items.diethanolIsopropanolamine.keywords'
+  },
+  {
+    id: 'n-2-hydroxy-ethyl-pyrrolidine',
+    titleKey: 'chemicalDetail.products.n-2-hydroxy-ethyl-pyrrolidine.overview.name',
+    descriptionKey: 'chemicalDetail.products.n-2-hydroxy-ethyl-pyrrolidine.overview.description',
+    category: 'chemical',
+    url: '/chemical/n-2-hydroxy-ethyl-pyrrolidine',
+    keywordsKey: 'search.items.hydroxyEthylPyrrolidine.keywords'
+  },
+
+  // New chemicals from brochure - Bromine Derivatives
+  {
+    id: 'calcium-bromide',
+    titleKey: 'chemicalDetail.products.calcium-bromide.overview.name',
+    descriptionKey: 'chemicalDetail.products.calcium-bromide.overview.description',
+    category: 'chemical',
+    url: '/chemical/calcium-bromide',
+    keywordsKey: 'search.items.calciumBromide.keywords'
+  },
+  {
+    id: 'sodium-bromide',
+    titleKey: 'chemicalDetail.products.sodium-bromide.overview.name',
+    descriptionKey: 'chemicalDetail.products.sodium-bromide.overview.description',
+    category: 'chemical',
+    url: '/chemical/sodium-bromide',
+    keywordsKey: 'search.items.sodiumBromide.keywords'
+  },
+  {
+    id: 'zinc-bromide',
+    titleKey: 'chemicalDetail.products.zinc-bromide.overview.name',
+    descriptionKey: 'chemicalDetail.products.zinc-bromide.overview.description',
+    category: 'chemical',
+    url: '/chemical/zinc-bromide',
+    keywordsKey: 'search.items.zincBromide.keywords'
+  },
+  {
+    id: 'hydrobromic-acid',
+    titleKey: 'chemicalDetail.products.hydrobromic-acid.overview.name',
+    descriptionKey: 'chemicalDetail.products.hydrobromic-acid.overview.description',
+    category: 'chemical',
+    url: '/chemical/hydrobromic-acid',
+    keywordsKey: 'search.items.hydrobromicAcid.keywords'
+  },
+  {
+    id: 'diphenyl-oxide',
+    titleKey: 'chemicalDetail.products.diphenyl-oxide.overview.name',
+    descriptionKey: 'chemicalDetail.products.diphenyl-oxide.overview.description',
+    category: 'chemical',
+    url: '/chemical/diphenyl-oxide',
+    keywordsKey: 'search.items.diphenylOxide.keywords'
+  },
+
+  // New chemicals from brochure - Phenols
+  {
+    id: 'para-tertiary-butyl-phenol-ptbp',
+    titleKey: 'chemicalDetail.products.para-tertiary-butyl-phenol-ptbp.overview.name',
+    descriptionKey: 'chemicalDetail.products.para-tertiary-butyl-phenol-ptbp.overview.description',
+    category: 'chemical',
+    url: '/chemical/para-tertiary-butyl-phenol-ptbp',
+    keywordsKey: 'search.items.paraTertiaryButylPhenol.keywords'
+  },
+  {
+    id: '2-4-di-tertiary-butyl-phenol',
+    titleKey: 'chemicalDetail.products.2-4-di-tertiary-butyl-phenol.overview.name',
+    descriptionKey: 'chemicalDetail.products.2-4-di-tertiary-butyl-phenol.overview.description',
+    category: 'chemical',
+    url: '/chemical/2-4-di-tertiary-butyl-phenol',
+    keywordsKey: 'search.items.2-4-di-tert-butyl-phenol.keywords'
+  },
+  {
+    id: '2-6-di-tertiary-butyl-phenol',
+    titleKey: 'chemicalDetail.products.2-6-di-tertiary-butyl-phenol.overview.name',
+    descriptionKey: 'chemicalDetail.products.2-6-di-tertiary-butyl-phenol.overview.description',
+    category: 'chemical',
+    url: '/chemical/2-6-di-tertiary-butyl-phenol',
+    keywordsKey: 'search.items.2-6-di-tert-butyl-phenol.keywords'
+  },
+
+  // New chemicals from brochure - Aliphatic & Benzyl
+  {
+    id: 'n-benzyl-ethanolamine',
+    titleKey: 'chemicalDetail.products.n-benzyl-ethanolamine.overview.name',
+    descriptionKey: 'chemicalDetail.products.n-benzyl-ethanolamine.overview.description',
+    category: 'chemical',
+    url: '/chemical/n-benzyl-ethanolamine',
+    keywordsKey: 'search.items.nBenzylEthanolamine.keywords'
+  },
+
   // Services - Use actual service routes that exist
   {
     id: 'integrated-3pl-ftwz',
@@ -798,7 +968,7 @@ export const getLocalizedSearchData = (_t: (key: string) => string | string[]): 
     url: '/services',
     keywordsKey: 'search.items.pharmaceuticals.keywords'
   }
-  
+
 ];
 
 // Category display names with translation keys

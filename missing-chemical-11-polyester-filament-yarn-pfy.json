@@ -1,0 +1,104 @@
+{
+  "polyester-filament-yarn-pfy": {
+    "overview": {
+      "name": "Polyester Filament Yarn (PFY)",
+      "description": "A continuous synthetic yarn made from PET polymer, used for weaving, knitting, and other textile manufacturing processes.",
+      "overviewDescription": "Polyester Filament Yarn represents the continuous fiber form of PET polymer, offering superior strength, uniformity, and processing characteristics compared to staple fibers. PFY is essential for high-speed textile manufacturing processes, enabling the production of smooth, lustrous fabrics with excellent dimensional stability and durability. Its versatility spans from fine apparel fabrics to heavy-duty industrial textiles, making it a fundamental component of modern textile manufacturing.",
+      "keyFeatures": [
+        "Continuous filament structure for smooth fabrics",
+        "Excellent tensile strength and dimensional stability",
+        "Superior uniformity and consistency",
+        "High-speed processing compatibility",
+        "Versatile dyeing and finishing capabilities"
+      ],
+      "majorApplications": [
+        "Woven and knitted fabrics",
+        "Industrial textiles and technical fabrics",
+        "Automotive upholstery and interiors",
+        "High-performance sportswear"
+      ],
+      "industrialSignificance": "PFY is critical for modern textile manufacturing, enabling high-speed, automated production processes that meet the demands of global fashion and industrial textile markets. Its consistent quality and performance characteristics make it indispensable for producing fabrics that meet exacting specifications."
+    },
+    "identification": {
+      "iupacName": "Poly(ethylene terephthalate) filament yarn",
+      "commonNames": "PFY, Polyester filament yarn, PET yarn",
+      "casNumber": "25038-59-9",
+      "chemicalFormula": "(C₁₀H₈O₄)ₙ",
+      "molecularWeight": "Variable (polymer)"
+    },
+    "physicalChemicalProperties": {
+      "form": "Continuous filament yarn",
+      "odor": "Odorless",
+      "appearance": "Lustrous, smooth filaments",
+      "meltingPoint": "250–260°C",
+      "density": "1.38–1.40 g/cm³",
+      "tenacity": "4.5–7.0 g/denier",
+      "elongation": "15–25%",
+      "moistureRegain": "0.4%",
+      "solubility": {
+        "solubleIn": [
+          "Phenol",
+          "m-cresol",
+          "concentrated sulfuric acid"
+        ],
+        "insolubleInWater": "Insoluble"
+      }
+    },
+    "gradesPurity": {
+      "textileGrade": "≥99.5% PET content",
+      "industrialGrade": "Enhanced strength and durability",
+      "specialtyGrade": "Custom properties for specific applications"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Woven Fabrics",
+          "description": "Apparel, home textiles, industrial fabrics"
+        },
+        {
+          "title": "Knitted Fabrics",
+          "description": "Sportswear, casual wear, technical textiles"
+        },
+        {
+          "title": "Industrial Textiles",
+          "description": "Conveyor belts, filters, geotextiles"
+        },
+        {
+          "title": "Automotive",
+          "description": "Upholstery, seat covers, interior fabrics"
+        }
+      ],
+      "industriesServed": [
+        "Textiles & Apparel",
+        "Automotive",
+        "Industrial Manufacturing",
+        "Home Furnishings"
+      ]
+    },
+    "storageHandling": {
+      "storage": [
+        "Dry, ventilated warehouse",
+        "Protect from UV light",
+        "Maintain relative humidity <65%"
+      ],
+      "handling": [
+        "Standard textile handling procedures",
+        "Avoid excessive heat and moisture"
+      ]
+    },
+    "safetyRegulatory": {
+      "hazards": [
+        "Low toxicity",
+        "Non-irritating",
+        "Combustible at high temperatures"
+      ],
+      "regulatoryStatus": {
+        "ghsSymbols": [
+          "None"
+        ],
+        "euReach": "Registered",
+        "foodContact": "Approved"
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "methanol": {
+    "overview": {
+      "name": "Methanol (CAS No. 67-56-1)",
+      "description": "A colorless, clear, volatile liquid with a sharp alcoholic odor, used as a chemical feedstock, fuel, solvent, and antifreeze in various industries.",
+      "overviewDescription": "Methanol stands as one of the most versatile and strategically important chemicals in the global economy, serving as both a fundamental building block for countless industrial processes and an emerging clean energy solution. As the simplest alcohol, methanol bridges traditional petrochemical applications with future sustainable technologies, enabling the production of essential materials like formaldehyde, acetic acid, and MTBE while simultaneously offering pathways to renewable fuels and hydrogen storage. Its role in the chemical industry extends from basic solvents to sophisticated pharmaceutical intermediates, making it indispensable for maintaining modern industrial civilization while supporting the transition to cleaner energy systems.",
+      "keyFeatures": [
+        "Primary feedstock for formaldehyde and acetic acid production",
+        "Clean-burning alternative fuel with lower emissions than gasoline",
+        "Excellent solvent for paints, varnishes, and industrial processes",
+        "Critical intermediate for MTBE and other fuel additives",
+        "Renewable production potential from biomass and CO2 conversion"
+      ],
+      "majorApplications": [
+        "Chemical feedstock for formaldehyde, acetic acid, and methyl esters",
+        "Alternative fuel and fuel additive (biodiesel production)",
+        "Industrial solvent for coatings, adhesives, and cleaning",
+        "Antifreeze and coolant formulations"
+      ],
+      "industrialSignificance": "Methanol represents a critical nexus between traditional petrochemicals and sustainable chemistry, with growing importance in renewable energy storage and clean fuel applications. Its production exceeds 100 million tons annually, making it one of the most traded chemicals globally and essential for both current industrial needs and future energy transitions."
+    },
+    "identification": {
+      "iupacName": "Methanol",
+      "commonNames": "Methyl alcohol, Wood alcohol, Carbinol",
+      "casNumber": "67-56-1",
+      "chemicalFormula": "CH₃OH",
+      "molecularWeight": "32.04 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "Colorless liquid",
+      "odor": "Characteristic, sharp alcoholic odor",
+      "appearance": "Clear, volatile liquid",
+      "boilingPoint": "64.7°C",
+      "meltingPoint": "-97.6°C",
+      "density": "0.791 g/cm³ (20°C)",
+      "refractiveIndex": "1.328 (20°C)",
+      "flashPoint": "11°C (flammable liquid)",
+      "solubility": "Miscible with water, ethanol, ether; hygroscopic"
+    },
+    "gradesPurity": {
+      "industrialGrade": ">=99.85% (fuel/chemical use)",
+      "acsGrade": ">=99.9% (laboratory use)",
+      "fuelGrade": "Denatured with additives"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Chemical Feedstock (Primary Use)",
+          "description": "Formaldehyde production (~40% global demand), MTBE/biodiesel synthesis."
+        },
+        {
+          "title": "Fuel Applications",
+          "description": "Racing fuel additive, marine fuel."
+        },
+        {
+          "title": "Solvent Uses",
+          "description": "Paints, inks, resins."
+        },
+        {
+          "title": "Antifreeze",
+          "description": "Windshield washer fluid."
+        }
+      ],
+      "industriesServed": [
+        "Chemicals",
+        "Energy",
+        "Automotive",
+        "Pharmaceuticals"
+      ]
+    },
+    "storageHandling": {
+      "storage": "Sealed containers (carbon steel/stainless steel). Explosion-proof ventilation. Grounded equipment.",
+      "handling": "Chemical-resistant gloves (neoprene/nitrile). Vapor respirator (organic cartridges). No smoking/open flames."
+    },
+    "safetyRegulatory": {
+      "hazards": "Highly flammable (LFL 6%, UFL 36%). Toxic if ingested (30 mL can be fatal). Blindness risk (metabolizes to formic acid).",
+      "regulations": "GHS Symbols: Flame, Skull & Crossbones. Transport Class: UN 1230 (Class 3 Flammable Liquid)."
+    }
+  }
+}

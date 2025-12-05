@@ -1,0 +1,104 @@
+{
+  "polybutadiene-rubber-pbr": {
+    "overview": {
+      "name": "Polybutadiene Rubber (PBR)",
+      "description": "A synthetic rubber polymer of butadiene, known for its excellent low-temperature flexibility and resilience.",
+      "overviewDescription": "Polybutadiene Rubber represents a high-performance synthetic elastomer that excels in applications requiring exceptional low-temperature flexibility, resilience, and abrasion resistance. This versatile polymer, produced through various polymerization techniques, offers unique properties that make it essential for tire manufacturing, golf ball cores, and specialized industrial applications. PBR's superior resilience and low-temperature performance characteristics enable the production of products that maintain their properties under extreme conditions, from sub-zero temperatures to high-speed applications.",
+      "keyFeatures": [
+        "Excellent low-temperature flexibility and resilience",
+        "Superior abrasion resistance and wear properties",
+        "High elasticity and rebound characteristics",
+        "Good electrical insulation properties",
+        "Versatile processing and compounding capabilities"
+      ],
+      "majorApplications": [
+        "Tire sidewalls and tread compounds",
+        "Golf ball cores and sports equipment",
+        "Industrial hoses and belts",
+        "Electrical insulation and cable sheathing"
+      ],
+      "industrialSignificance": "PBR is a critical component in high-performance tire formulations and specialized industrial applications. Its unique combination of properties makes it indispensable for products that require exceptional durability, flexibility, and performance under demanding conditions."
+    },
+    "identification": {
+      "iupacName": "Poly(1,3-butadiene)",
+      "commonNames": "PBR, Polybutadiene rubber, BR",
+      "casNumber": "9003-17-2",
+      "chemicalFormula": "(C₄H₆)ₙ",
+      "molecularWeight": "Variable (polymer)"
+    },
+    "physicalChemicalProperties": {
+      "form": "Solid elastomer",
+      "odor": "Slight rubber-like",
+      "appearance": "Colorless to pale yellow solid",
+      "density": "0.91–0.93 g/cm³",
+      "glassTransitionTemp": "-100 to -90°C",
+      "tensileStrength": "15–25 MPa",
+      "elongation": "300–500%",
+      "hardness": "35–85 Shore A",
+      "solubility": {
+        "solubleIn": [
+          "Toluene",
+          "benzene",
+          "chloroform"
+        ],
+        "insolubleInWater": "Insoluble"
+      }
+    },
+    "gradesPurity": {
+      "highCisPBR": "High cis-1,4 content (>90%)",
+      "mediumCisPBR": "Medium cis-1,4 content (35-65%)",
+      "lowCisPBR": "Low cis-1,4 content (<35%)"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Tire Manufacturing",
+          "description": "Sidewalls, tread compounds, winter tires"
+        },
+        {
+          "title": "Sports Equipment",
+          "description": "Golf ball cores, tennis ball covers"
+        },
+        {
+          "title": "Industrial Products",
+          "description": "Hoses, belts, gaskets"
+        },
+        {
+          "title": "Electrical",
+          "description": "Cable insulation, electrical components"
+        }
+      ],
+      "industriesServed": [
+        "Automotive & Transportation",
+        "Sports & Recreation",
+        "Industrial Manufacturing",
+        "Electronics & Electrical"
+      ]
+    },
+    "storageHandling": {
+      "storage": [
+        "Cool, dry, ventilated area",
+        "Protect from UV light and ozone",
+        "Maintain relative humidity <65%"
+      ],
+      "handling": [
+        "Standard rubber handling procedures",
+        "Avoid excessive heat and direct sunlight"
+      ]
+    },
+    "safetyRegulatory": {
+      "hazards": [
+        "Low toxicity",
+        "May contain residual monomers",
+        "Combustible at high temperatures"
+      ],
+      "regulatoryStatus": {
+        "ghsSymbols": [
+          "None"
+        ],
+        "euReach": "Registered",
+        "foodContact": "Conditional"
+      }
+    }
+  }
+}

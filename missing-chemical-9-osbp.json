@@ -1,0 +1,110 @@
+{
+  "osbp": {
+    "overview": {
+      "name": "Ortho-Sec-Butyl Phenol (OSBP)",
+      "description": "A colorless to pale yellow, clear, viscous liquid with a characteristic phenolic odor. Used as an intermediate for fragrances, agrochemicals, phenolic resins, and as a lubricant additive.",
+      "overviewDescription": "Ortho-Sec-Butyl Phenol represents a sophisticated phenolic intermediate that bridges multiple high-value industries, from luxury fragrances to advanced agricultural solutions and high-performance materials. This versatile compound combines the reactivity of phenolic chemistry with the steric properties of its sec-butyl substitution, enabling the creation of specialized molecules that enhance everything from crop protection to industrial lubrication. Its unique structural characteristics make it indispensable for producing compounds that require precise molecular architecture, supporting innovations in fragrance chemistry, agricultural efficiency, and materials performance.",
+      "keyFeatures": [
+        "Versatile intermediate for complex fragrance molecule synthesis",
+        "Critical component in agrochemical active ingredient production",
+        "Essential building block for high-performance phenolic resins",
+        "Specialized lubricant additive for extreme operating conditions",
+        "Unique ortho-substitution pattern enabling selective chemical transformations"
+      ],
+      "majorApplications": [
+        "Fragrance and flavor intermediate synthesis",
+        "Agrochemical active ingredient and formulation component production",
+        "Phenolic resin manufacturing for advanced composites",
+        "Specialized lubricant additive for high-performance applications"
+      ],
+      "industrialSignificance": "OSBP serves as a crucial link between basic phenolic chemistry and sophisticated end-use applications, enabling the development of products that enhance quality of life through improved fragrances, more effective agricultural solutions, and advanced materials with superior performance characteristics. Its importance continues to grow as industries demand more specialized and high-performance chemical intermediates."
+    },
+    "identification": {
+      "iupacName": "2-(1-Methylpropyl)phenol",
+      "synonyms": "OSBP, 2-sec-Butylphenol, o-(1-Methylpropyl)phenol",
+      "casNumber": "89-72-5",
+      "ecNumber": "201-934-1",
+      "unNumber": "Not regulated"
+    },
+    "molecularCharacteristics": {
+      "chemicalFormula": "C₁₀H₁₄O",
+      "molecularWeight": "150.22 g/mol",
+      "structure": "Phenol with sec-butyl group at ortho position"
+    },
+    "physicalDescription": {
+      "state": "Liquid below 14°C, solid above",
+      "color": "Colorless to pale yellow",
+      "odor": "Characteristic phenolic",
+      "visual": "Clear viscous liquid"
+    },
+    "qualitySpecifications": {
+      "industrial": {
+        "purity": ">=95%",
+        "impurities": "<3% other butylphenols"
+      },
+      "highPurity": {
+        "purity": ">=98%",
+        "impurities": "<1% meta/para isomers"
+      },
+      "pharma": {
+        "purity": ">=99.5%",
+        "impurities": "Heavy metals <10ppm"
+      }
+    },
+    "thermodynamicProperties": {
+      "meltingRange": "12-14°C",
+      "boilingPoint": "226-228°C",
+      "flashPoint": "102°C (PMCC)",
+      "density": "0.983 g/mL (20°C)",
+      "refractiveIndex": "n²⁰D 1.522"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Chemical Manufacturing",
+          "description": "Intermediate for fragrance compounds (musk chemicals), agricultural chemicals"
+        },
+        {
+          "title": "Polymer Industry",
+          "description": "Modifier for phenolic resins"
+        },
+        {
+          "title": "Functional Fluids",
+          "description": "Additive in lubricant formulations"
+        }
+      ],
+      "industriesServed": [
+        "Flavor & Fragrance",
+        "Agrochemicals",
+        "Specialty Polymers",
+        "Lubricant Additives"
+      ]
+    },
+    "storageHandling": {
+      "containerType": "200L steel drums with poly liners, stainless steel totes (bulk storage)",
+      "environmentalControls": "Temperature: 15-25°C (avoid freezing); Atmosphere: Nitrogen blanket recommended",
+      "handlingPPE": "Butyl rubber gloves, chemical goggles + face shield, organic vapor respirator"
+    },
+    "safetyRegulatory": {
+      "acuteHazards": "Skin corrosion (Category 1B), Eye damage (Category 1)",
+      "chronicEffects": "Suspected endocrine disruptor, Aquatic toxicity (LC50 fish <10 mg/L)",
+      "firstAid": "Skin: Wash with soap/water, apply dimethicone. Eyes: Irrigate 15+ minutes.",
+      "fireFighting": "Use alcohol-resistant foam, avoid water jets.",
+      "ghsClassification": [
+        "H314: Causes severe skin burns",
+        "H411: Toxic to aquatic life"
+      ],
+      "transportRegulations": "Not classified as dangerous goods",
+      "globalInventories": "TSCA: Listed, REACH: Registered, DSL: Listed"
+    },
+    "technicalComparison": [
+      "Boiling Pt.: 226°C | 239°C",
+      "Water Sol.: 1 g/L | 0.8 g/L",
+      "pKa: 10.5 | 10.3"
+    ],
+    "keyChemicalProperties": [
+      "pKa: ~10.5 (weak acid)",
+      "Vapor Pressure: 0.05 mmHg (25°C)"
+    ]
+  }
+}

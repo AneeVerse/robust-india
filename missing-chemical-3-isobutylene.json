@@ -1,0 +1,80 @@
+{
+  "isobutylene": {
+    "overview": {
+      "name": "Isobutylene (IB, CAS No. 115-11-7)",
+      "description": "A colorless gas with a mild petroleum-like odor, used primarily in butyl rubber and polyisobutylene production, as well as in fuel additives and chemical intermediates.",
+      "overviewDescription": "Isobutylene represents a crucial branched olefin that enables the production of high-performance polymers and specialty chemicals essential for automotive, aerospace, and advanced materials applications. This four-carbon alkene with its unique tertiary structure provides the foundation for butyl rubber, which offers exceptional air retention properties critical for tire inner tubes and pharmaceutical stoppers, as well as polyisobutylene used in lubricant additives and adhesives. Its role extends from basic fuel octane enhancement to sophisticated polymer chemistry, where its distinctive molecular architecture enables the creation of materials with superior barrier properties and chemical resistance.",
+      "keyFeatures": [
+        "Primary monomer for butyl rubber production with superior gas barrier properties",
+        "Essential feedstock for polyisobutylene manufacturing for lubricant additives",
+        "Critical component in MTBE and other fuel oxygenate production",
+        "Unique branched structure providing enhanced polymer performance characteristics",
+        "Excellent reactivity for carbocationic polymerization processes"
+      ],
+      "majorApplications": [
+        "Butyl rubber production for tires, pharmaceutical stoppers, and sealants",
+        "Polyisobutylene manufacturing for lubricant viscosity improvers",
+        "MTBE and fuel additive synthesis for octane enhancement",
+        "Chemical intermediate for specialty polymer and adhesive production"
+      ],
+      "industrialSignificance": "Isobutylene is fundamental to the high-performance rubber and specialty polymer industries, enabling the production of materials with unique barrier properties essential for automotive safety, pharmaceutical integrity, and industrial sealing applications. Its growing importance in advanced materials and sustainable fuel technologies positions it as crucial for next-generation industrial applications."
+    },
+    "identification": {
+      "iupacName": "2-Methylpropene",
+      "commonNames": "Isobutene, 2-Methylpropylene, IB",
+      "casNumber": "115-11-7",
+      "chemicalFormula": "C₄H₈",
+      "molecularWeight": "56.11 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "Colorless gas (at room temperature)",
+      "odor": "Mild, petroleum-like",
+      "appearance": "Compressed liquefied gas (when pressurized)",
+      "boilingPoint": "-6.9°C",
+      "meltingPoint": "-140.3°C",
+      "density": "0.5879 g/cm³ (liquid at 20°C)",
+      "vaporPressure": "3.1 bar (at 20°C)",
+      "flashPoint": "-80°C (extremely flammable)",
+      "solubility": "Insoluble in water; miscible with most organic solvents"
+    },
+    "gradesPurity": {
+      "polymerGrade": ">=99.5% (for butyl rubber production)",
+      "chemicalGrade": ">=98% (MTBE/ETBE synthesis)",
+      "refineryGrade": "70-90% (mixed with other C₄ hydrocarbons)"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Polymer Production (Primary Use - ~60%)",
+          "description": "Butyl rubber (IIR), Polyisobutylene (PIB)."
+        },
+        {
+          "title": "Fuel Additives",
+          "description": "MTBE/ETBE production (octane boosters)."
+        },
+        {
+          "title": "Chemical Intermediates",
+          "description": "Methacrolein (for methacrylic acid), tert-Butanol (TBA)."
+        },
+        {
+          "title": "Lubricant Additives",
+          "description": "Polyisobutenes (PIBs)."
+        }
+      ],
+      "industriesServed": [
+        "Rubber & Tire",
+        "Petrochemicals",
+        "Fuel & Energy",
+        "Adhesives & Sealants"
+      ]
+    },
+    "storageHandling": {
+      "storage": "Pressurized steel cylinders (small quantities). Refrigerated tanks (large volumes, <10°C). Grounded containers (static prevention).",
+      "handling": "Explosion-proof equipment required. Self-contained breathing apparatus (SCBA) for leaks. Continuous gas detection systems."
+    },
+    "safetyRegulatory": {
+      "hazards": "Extreme Flammability (LFL 1.8%, UFL 8.8%). Asphyxiant (displaces oxygen). Polymerization Risk (if contaminated).",
+      "regulations": "GHS Symbols: Flame, Gas Cylinder. Transport Class: UN 1055 (Class 2.1 Flammable Gas)."
+    }
+  }
+}

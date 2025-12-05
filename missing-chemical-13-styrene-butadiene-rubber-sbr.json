@@ -1,0 +1,104 @@
+{
+  "styrene-butadiene-rubber-sbr": {
+    "overview": {
+      "name": "Styrene Butadiene Rubber (SBR)",
+      "description": "A synthetic rubber copolymer of styrene and butadiene, widely used in tire manufacturing and other industrial applications.",
+      "overviewDescription": "Styrene Butadiene Rubber represents one of the most important synthetic rubbers globally, serving as the backbone of the tire industry and countless other applications. This versatile elastomer combines the excellent abrasion resistance and low-temperature flexibility of butadiene with the strength and processability of styrene, creating a material that meets the demanding requirements of modern transportation and industrial applications. SBR's unique balance of properties makes it indispensable for tire treads, conveyor belts, footwear, and numerous other products that require durability, flexibility, and resistance to wear.",
+      "keyFeatures": [
+        "Excellent abrasion resistance and wear properties",
+        "Good low-temperature flexibility and impact resistance",
+        "Superior processability and mixing characteristics",
+        "Cost-effective alternative to natural rubber",
+        "Versatile compounding capabilities for various applications"
+      ],
+      "majorApplications": [
+        "Tire treads and sidewalls",
+        "Conveyor belts and industrial hoses",
+        "Footwear soles and automotive parts",
+        "Adhesives and sealants"
+      ],
+      "industrialSignificance": "SBR is the most widely used synthetic rubber globally, with annual production exceeding 5 million tons. Its dominance in tire manufacturing alone makes it crucial for the automotive and transportation industries, while its versatility enables applications across multiple industrial sectors."
+    },
+    "identification": {
+      "iupacName": "Poly(styrene-co-butadiene)",
+      "commonNames": "SBR, Styrene-butadiene rubber, Buna S",
+      "casNumber": "9003-55-8",
+      "chemicalFormula": "(C₈H₈)ₓ(C₄H₆)ᵧ",
+      "molecularWeight": "Variable (polymer)"
+    },
+    "physicalChemicalProperties": {
+      "form": "Solid elastomer",
+      "odor": "Slight rubber-like",
+      "appearance": "Pale yellow to amber solid",
+      "density": "0.94–0.96 g/cm³",
+      "glassTransitionTemp": "-60 to -50°C",
+      "tensileStrength": "15–25 MPa",
+      "elongation": "300–600%",
+      "hardness": "40–90 Shore A",
+      "solubility": {
+        "solubleIn": [
+          "Toluene",
+          "benzene",
+          "chloroform"
+        ],
+        "insolubleInWater": "Insoluble"
+      }
+    },
+    "gradesPurity": {
+      "emulsionSBR": "E-SBR (emulsion polymerization)",
+      "solutionSBR": "S-SBR (solution polymerization)",
+      "highStyreneSBR": "High styrene content for hard rubber"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Tire Manufacturing",
+          "description": "Tread compounds, sidewalls, inner liners"
+        },
+        {
+          "title": "Industrial Products",
+          "description": "Conveyor belts, hoses, gaskets"
+        },
+        {
+          "title": "Footwear",
+          "description": "Shoe soles, athletic shoes"
+        },
+        {
+          "title": "Adhesives",
+          "description": "Pressure-sensitive adhesives, sealants"
+        }
+      ],
+      "industriesServed": [
+        "Automotive & Transportation",
+        "Industrial Manufacturing",
+        "Footwear & Apparel",
+        "Construction"
+      ]
+    },
+    "storageHandling": {
+      "storage": [
+        "Cool, dry, ventilated area",
+        "Protect from UV light and ozone",
+        "Maintain relative humidity <65%"
+      ],
+      "handling": [
+        "Standard rubber handling procedures",
+        "Avoid excessive heat and direct sunlight"
+      ]
+    },
+    "safetyRegulatory": {
+      "hazards": [
+        "Low toxicity",
+        "May contain residual monomers",
+        "Combustible at high temperatures"
+      ],
+      "regulatoryStatus": {
+        "ghsSymbols": [
+          "None"
+        ],
+        "euReach": "Registered",
+        "foodContact": "Conditional"
+      }
+    }
+  }
+}

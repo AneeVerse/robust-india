@@ -1,0 +1,105 @@
+{
+  "polyethylene-pe": {
+    "overview": {
+      "name": "Polyethylene (PE)",
+      "description": "A versatile thermoplastic polymer with the simplest structure of all commercial polymers, widely used in packaging, containers, and various industrial applications.",
+      "overviewDescription": "Polyethylene stands as the most widely produced and used plastic globally, representing the foundation of modern polymer technology. This versatile thermoplastic, with its simple ethylene monomer structure, offers an exceptional combination of properties including excellent chemical resistance, low moisture absorption, and outstanding electrical insulation. PE's versatility spans from flexible packaging films to rigid containers, from household items to sophisticated industrial applications, making it indispensable across virtually every sector of modern industry.",
+      "keyFeatures": [
+        "Excellent chemical resistance and moisture barrier properties",
+        "Superior electrical insulation characteristics",
+        "Low density and high strength-to-weight ratio",
+        "Versatile processing capabilities",
+        "Cost-effective and recyclable material"
+      ],
+      "majorApplications": [
+        "Packaging films and containers",
+        "Pipes and fittings",
+        "Household and consumer products",
+        "Industrial and automotive components"
+      ],
+      "industrialSignificance": "PE is the most important polymer globally, with annual production exceeding 100 million tons. Its versatility, cost-effectiveness, and recyclability make it essential for modern packaging, construction, automotive, and consumer goods industries."
+    },
+    "identification": {
+      "iupacName": "Poly(ethylene)",
+      "commonNames": "PE, Polyethylene, Polythene",
+      "casNumber": "9002-88-4",
+      "chemicalFormula": "(C₂H₄)ₙ",
+      "molecularWeight": "Variable (polymer)"
+    },
+    "physicalChemicalProperties": {
+      "form": "Solid thermoplastic",
+      "odor": "Odorless",
+      "appearance": "White to translucent solid",
+      "density": "0.91–0.97 g/cm³",
+      "meltingPoint": "105–135°C (varies by type)",
+      "glassTransitionTemp": "-125 to -100°C",
+      "tensileStrength": "15–40 MPa",
+      "elongation": "100–1000%",
+      "solubility": {
+        "solubleIn": [
+          "Hot aromatic hydrocarbons",
+          "chlorinated solvents"
+        ],
+        "insolubleInWater": "Insoluble"
+      }
+    },
+    "gradesPurity": {
+      "hdpe": "High Density PE (0.94–0.97 g/cm³)",
+      "ldpe": "Low Density PE (0.91–0.94 g/cm³)",
+      "lldpe": "Linear Low Density PE (0.91–0.94 g/cm³)",
+      "uhmwpe": "Ultra High Molecular Weight PE"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Packaging",
+          "description": "Films, bags, containers, bottles"
+        },
+        {
+          "title": "Pipes & Fittings",
+          "description": "Water, gas, and chemical transport"
+        },
+        {
+          "title": "Consumer Products",
+          "description": "Household items, toys, furniture"
+        },
+        {
+          "title": "Industrial",
+          "description": "Automotive parts, electrical insulation"
+        }
+      ],
+      "industriesServed": [
+        "Packaging",
+        "Construction",
+        "Automotive",
+        "Consumer Goods",
+        "Electronics"
+      ]
+    },
+    "storageHandling": {
+      "storage": [
+        "Cool, dry, ventilated area",
+        "Protect from UV light",
+        "Maintain relative humidity <65%"
+      ],
+      "handling": [
+        "Standard polymer handling procedures",
+        "Avoid excessive heat and direct sunlight"
+      ]
+    },
+    "safetyRegulatory": {
+      "hazards": [
+        "Low toxicity",
+        "May release fumes at high temperatures",
+        "Combustible"
+      ],
+      "regulatoryStatus": {
+        "ghsSymbols": [
+          "None"
+        ],
+        "euReach": "Registered",
+        "foodContact": "Approved"
+      }
+    }
+  }
+}

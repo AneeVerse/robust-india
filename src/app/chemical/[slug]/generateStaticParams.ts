@@ -2,7 +2,7 @@ export async function generateStaticParams() {
   // All chemical product slugs from locale files
   const chemicalSlugs = [
     'naphtha',
-    'propylene-propene', 
+    'propylene-propene',
     'benzene',
     'red-phosphorus',
     'trimethyl-phosphite-tmpi',
@@ -68,8 +68,33 @@ export async function generateStaticParams() {
     'polypropylene-pp',
     'polyester-staple-fiber-psf',
     'polyester-filament-yarn-pfy',
-    'polyethylene-terephthalate-pet'
+    'polyethylene-terephthalate-pet',
+    // New chemicals from brochure - Phosphorus Based
+    'tributyl-phosphate-tbp',
+    // New chemicals from brochure - Alkanolamines Group
+    'diethylenetriamine-deta',
+    'aminoethyl-ethanolamine-aeea',
+    'aminoethyl-piperazine-aep',
+    'triisopropanolamine-tipa',
+    'monoethanolamine-mea',
+    'diethanolamine-dea',
+    'triethanolamine-tea',
+    '2-phenoxy-ethanol',
+    'diethanol-isopropanolamine-deipa',
+    'n-2-hydroxy-ethyl-pyrrolidine',
+    // New chemicals from brochure - Bromine Derivatives
+    'calcium-bromide',
+    'sodium-bromide',
+    'zinc-bromide',
+    'hydrobromic-acid',
+    'diphenyl-oxide',
+    // New chemicals from brochure - Phenols
+    'para-tertiary-butyl-phenol-ptbp',
+    '2-4-di-tertiary-butyl-phenol',
+    '2-6-di-tertiary-butyl-phenol',
+    // New chemicals from brochure - Aliphatic & Benzyl
+    'n-benzyl-ethanolamine'
   ];
-  
+
   return chemicalSlugs.map((slug) => ({ slug }));
 } 

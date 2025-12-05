@@ -1,0 +1,104 @@
+{
+  "polypropylene-pp": {
+    "overview": {
+      "name": "Polypropylene (PP)",
+      "description": "A versatile thermoplastic polymer known for its excellent chemical resistance, high melting point, and wide range of applications.",
+      "overviewDescription": "Polypropylene represents one of the most versatile and widely used thermoplastics, offering an exceptional combination of properties that make it suitable for applications ranging from food packaging to automotive components. This semi-crystalline polymer, derived from propylene monomer, provides excellent chemical resistance, high heat resistance, and superior mechanical properties compared to many other plastics. PP's unique balance of stiffness, toughness, and processability has made it indispensable in modern manufacturing, enabling the production of lightweight, durable, and cost-effective products.",
+      "keyFeatures": [
+        "Excellent chemical resistance and heat stability",
+        "High stiffness and tensile strength",
+        "Superior moisture barrier properties",
+        "Lightweight with high strength-to-weight ratio",
+        "Versatile processing and molding capabilities"
+      ],
+      "majorApplications": [
+        "Food packaging and containers",
+        "Automotive components and parts",
+        "Textiles and fibers",
+        "Medical devices and equipment"
+      ],
+      "industrialSignificance": "PP is the second most important polymer globally, with annual production exceeding 80 million tons. Its versatility, performance characteristics, and cost-effectiveness make it essential for packaging, automotive, textile, and medical industries."
+    },
+    "identification": {
+      "iupacName": "Poly(propene)",
+      "commonNames": "PP, Polypropylene, Polypropene",
+      "casNumber": "9003-07-0",
+      "chemicalFormula": "(C₃H₆)ₙ",
+      "molecularWeight": "Variable (polymer)"
+    },
+    "physicalChemicalProperties": {
+      "form": "Solid thermoplastic",
+      "odor": "Odorless",
+      "appearance": "White to translucent solid",
+      "density": "0.90–0.92 g/cm³",
+      "meltingPoint": "160–170°C",
+      "glassTransitionTemp": "-10 to 0°C",
+      "tensileStrength": "30–40 MPa",
+      "elongation": "100–600%",
+      "solubility": {
+        "solubleIn": [
+          "Hot aromatic hydrocarbons",
+          "chlorinated solvents"
+        ],
+        "insolubleInWater": "Insoluble"
+      }
+    },
+    "gradesPurity": {
+      "homopolymer": "Homopolymer PP (high stiffness)",
+      "copolymer": "Random copolymer PP (improved impact)",
+      "impactCopolymer": "Impact copolymer PP (high toughness)"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Packaging",
+          "description": "Food containers, films, bottles"
+        },
+        {
+          "title": "Automotive",
+          "description": "Interior parts, bumpers, battery cases"
+        },
+        {
+          "title": "Textiles",
+          "description": "Fibers, non-wovens, carpets"
+        },
+        {
+          "title": "Medical",
+          "description": "Syringes, medical devices, packaging"
+        }
+      ],
+      "industriesServed": [
+        "Packaging",
+        "Automotive",
+        "Textiles",
+        "Medical & Healthcare",
+        "Consumer Goods"
+      ]
+    },
+    "storageHandling": {
+      "storage": [
+        "Cool, dry, ventilated area",
+        "Protect from UV light",
+        "Maintain relative humidity <65%"
+      ],
+      "handling": [
+        "Standard polymer handling procedures",
+        "Avoid excessive heat and direct sunlight"
+      ]
+    },
+    "safetyRegulatory": {
+      "hazards": [
+        "Low toxicity",
+        "May release fumes at high temperatures",
+        "Combustible"
+      ],
+      "regulatoryStatus": {
+        "ghsSymbols": [
+          "None"
+        ],
+        "euReach": "Registered",
+        "foodContact": "Approved"
+      }
+    }
+  }
+}

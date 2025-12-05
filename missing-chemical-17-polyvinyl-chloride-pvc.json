@@ -1,0 +1,105 @@
+{
+  "polyvinyl-chloride-pvc": {
+    "overview": {
+      "name": "Polyvinyl Chloride (PVC)",
+      "description": "A versatile thermoplastic polymer known for its excellent chemical resistance, durability, and wide range of applications in construction and consumer products.",
+      "overviewDescription": "Polyvinyl Chloride represents one of the most versatile and widely used polymers globally, offering an exceptional combination of properties that make it suitable for both rigid and flexible applications. This thermoplastic polymer, derived from vinyl chloride monomer, provides excellent chemical resistance, flame retardancy, and durability. PVC's unique ability to be formulated as either rigid or flexible materials, combined with its cost-effectiveness and excellent weatherability, has made it indispensable in construction, healthcare, automotive, and consumer goods industries.",
+      "keyFeatures": [
+        "Excellent chemical resistance and durability",
+        "Superior flame retardancy and electrical insulation",
+        "Versatile formulation (rigid or flexible)",
+        "Excellent weatherability and UV resistance",
+        "Cost-effective and long-lasting material"
+      ],
+      "majorApplications": [
+        "Construction materials and pipes",
+        "Electrical insulation and cables",
+        "Medical devices and packaging",
+        "Automotive interiors and components"
+      ],
+      "industrialSignificance": "PVC is one of the most important polymers globally, with annual production exceeding 40 million tons. Its versatility, durability, and cost-effectiveness make it essential for construction, electrical, medical, and automotive industries."
+    },
+    "identification": {
+      "iupacName": "Poly(chloroethene)",
+      "commonNames": "PVC, Polyvinyl chloride, Vinyl",
+      "casNumber": "9002-86-2",
+      "chemicalFormula": "(C₂H₃Cl)ₙ",
+      "molecularWeight": "Variable (polymer)"
+    },
+    "physicalChemicalProperties": {
+      "form": "Solid thermoplastic",
+      "odor": "Odorless",
+      "appearance": "White to off-white solid",
+      "density": "1.30–1.45 g/cm³",
+      "meltingPoint": "100–260°C (varies by formulation)",
+      "glassTransitionTemp": "80–85°C",
+      "tensileStrength": "40–60 MPa",
+      "elongation": "20–400%",
+      "solubility": {
+        "solubleIn": [
+          "Tetrahydrofuran",
+          "cyclohexanone",
+          "dimethylformamide"
+        ],
+        "insolubleInWater": "Insoluble"
+      }
+    },
+    "gradesPurity": {
+      "rigidPVC": "Rigid PVC (unplasticized)",
+      "flexiblePVC": "Flexible PVC (plasticized)",
+      "cpvc": "Chlorinated PVC (high temperature)"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Construction",
+          "description": "Pipes, fittings, profiles, flooring"
+        },
+        {
+          "title": "Electrical",
+          "description": "Cable insulation, conduits, switches"
+        },
+        {
+          "title": "Medical",
+          "description": "Tubing, blood bags, medical devices"
+        },
+        {
+          "title": "Automotive",
+          "description": "Interior trim, wire harnesses, seals"
+        }
+      ],
+      "industriesServed": [
+        "Construction",
+        "Electrical & Electronics",
+        "Medical & Healthcare",
+        "Automotive",
+        "Consumer Goods"
+      ]
+    },
+    "storageHandling": {
+      "storage": [
+        "Cool, dry, ventilated area",
+        "Protect from UV light",
+        "Maintain relative humidity <65%"
+      ],
+      "handling": [
+        "Standard polymer handling procedures",
+        "Avoid excessive heat and direct sunlight"
+      ]
+    },
+    "safetyRegulatory": {
+      "hazards": [
+        "Low toxicity",
+        "May release HCl at high temperatures",
+        "Combustible"
+      ],
+      "regulatoryStatus": {
+        "ghsSymbols": [
+          "None"
+        ],
+        "euReach": "Registered",
+        "foodContact": "Conditional"
+      }
+    }
+  }
+}

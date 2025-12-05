@@ -1,0 +1,92 @@
+{
+  "sulfur": {
+    "overview": {
+      "name": "Sulfur",
+      "description": "A yellow, odorless non-metallic element found in multiple allotropes; essential in fertilizer and chemical production.",
+      "overviewDescription": "Sulfur represents one of the most fundamental elements in industrial chemistry, serving as the cornerstone for countless chemical processes and products. This versatile non-metallic element exists in multiple allotropic forms and plays critical roles in agriculture, chemical manufacturing, and materials science. Its unique chemical properties make it essential for sulfuric acid production, which is considered the most important industrial chemical globally.",
+      "keyFeatures": [
+        "Multiple allotropic forms with distinct physical properties",
+        "Essential component in sulfuric acid production",
+        "Critical element for agricultural fertilizer production",
+        "Versatile chemical building block for organic synthesis",
+        "Natural antimicrobial and fungicidal properties"
+      ],
+      "majorApplications": [
+        "Sulfuric acid production for industrial processes",
+        "Agricultural fertilizers and soil amendments",
+        "Rubber vulcanization and polymer modification",
+        "Pharmaceutical and personal care formulations",
+        "Mining and metallurgical processing"
+      ],
+      "industrialSignificance": "Sulfur's role in sulfuric acid production alone makes it one of the most strategically important elements in global industry. The sulfuric acid produced from sulfur is used in nearly every industrial sector, from fertilizer production to metal processing, making sulfur essential for modern civilization's infrastructure and food production systems."
+    },
+    "identification": {
+      "iupacName": "Sulfur",
+      "commonNames": "Brimstone, Elemental sulfur",
+      "casNumber": "7704-34-9",
+      "chemicalFormula": "S₈",
+      "molecularWeight": "256.48 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "Solid",
+      "color": "Yellow",
+      "odor": "Odorless (pure), rotten egg smell when impure (due to H₂S)",
+      "appearance": "Rhombic sulfur: Yellow crystals; Amorphous sulfur: Dark, plastic-like",
+      "boilingPoint": "444.6°C",
+      "meltingPoint": "115.21°C",
+      "density": "2.07 g/cm³",
+      "flashPoint": null,
+      "solubility": "Insoluble in water; soluble in carbon disulfide and toluene",
+      "viscosity": "N/A"
+    },
+    "gradesPurity": {
+      "technicalGrade": "99.5% (used in agriculture, chemicals)",
+      "highPurityGrade": "99.9% (used in pharmaceuticals, food)",
+      "impurities": "Flowers of sulfur: sublimed fine powder"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Fertilizers",
+          "description": "Used in sulfuric acid production for phosphate fertilizers like ammonium sulfate ((NH₄)₂SO₄)"
+        },
+        {
+          "title": "Chemical Manufacturing",
+          "description": "Sulfuric acid production via the Contact Process"
+        },
+        {
+          "title": "Rubber Industry",
+          "description": "Used in vulcanization of rubber"
+        },
+        {
+          "title": "Pharmaceuticals",
+          "description": "Used in topical treatments for scabies and acne"
+        },
+        {
+          "title": "Pesticides & Fungicides",
+          "description": "Used in lime-sulfur sprays"
+        },
+        {
+          "title": "Batteries",
+          "description": "Present in lead-acid batteries as sulfuric acid electrolyte"
+        }
+      ],
+      "industriesServed": [
+        "Agriculture",
+        "Chemical Manufacturing",
+        "Rubber & Plastics",
+        "Mining & Metallurgy",
+        "Pharmaceuticals"
+      ]
+    },
+    "storageHandling": {
+      "storage": "Store in a dry, well-ventilated area away from oxidizers to prevent H₂S and SO₂ formation.",
+      "handling": "Use dust masks and nitrile gloves when handling powder forms. Avoid dust accumulation and skin contact."
+    },
+    "safetyRegulatory": {
+      "hazards": "Flammable in dust form. Produces toxic SO₂ gas when burned. Can irritate skin and eyes.",
+      "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 0",
+      "regulations": "GHS: Exclamation Mark (Irritant). Not classified as hazardous for bulk transport."
+    }
+  }
+}

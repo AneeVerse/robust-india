@@ -1,0 +1,79 @@
+{
+  "diethanolamine": {
+    "overview": {
+      "name": "Diethanolamine (DEA, CAS No. 141-78-6)",
+      "description": "A colorless, hygroscopic liquid with a mild ammonia-like odor, used as a chemical intermediate, surfactant, and in the production of polymers.",
+      "overviewDescription": "Diethanolamine represents a fundamental ethanolamine derivative that serves as a cornerstone building block across multiple essential industries, from personal care formulations to advanced polymer systems. This versatile intermediate combines the reactivity of a secondary amine with the hydrophilic properties of two hydroxyl groups, making it an essential component in nonionic surfactant formulations that provide gentle cleaning, gas treatment systems that protect the environment, and polymer production that creates durable materials. Its role extends from basic chemical synthesis to sophisticated applications in consumer products, environmental protection, and advanced materials, where its unique molecular architecture enables the creation of products that meet the most demanding performance and safety requirements.",
+      "keyFeatures": [
+        "Versatile secondary amine with dual hydroxyl functionality",
+        "Essential building block for nonionic surfactant synthesis",
+        "Critical component in gas treatment and acid gas removal systems",
+        "High-performance intermediate for polymer and resin production",
+        "Excellent solubility in both aqueous and organic systems"
+      ],
+      "majorApplications": [
+        "Synthesis of nonionic surfactants for personal care and household products",
+        "Gas treatment systems for acid gas removal and environmental protection",
+        "Polymer and resin production for coatings and adhesives",
+        "Chemical intermediates for pharmaceutical and agricultural applications"
+      ],
+      "industrialSignificance": "DEA serves as a critical enabler in personal care, environmental protection, and polymer industries, providing the molecular foundation for products that combine exceptional performance with safety and sustainability. Its importance in surfactant chemistry, gas treatment, and polymer synthesis makes it indispensable for sectors requiring both technical excellence and environmental responsibility."
+    },
+    "identification": {
+      "iupacName": "Diethanolamine",
+      "commonNames": "DEA, Diethanolamine",
+      "casNumber": "141-78-6",
+      "chemicalFormula": "C₂H₆O₂N",
+      "molecularWeight": "74.08 g/mol"
+    },
+    "physicalChemicalProperties": {
+      "form": "Colorless, hygroscopic liquid",
+      "odor": "Mild ammonia-like",
+      "appearance": "Clear",
+      "boilingPoint": "189°C",
+      "meltingPoint": "–15°C",
+      "density": "0.95 g/cm³ (20°C)",
+      "viscosity": "1.5 mPa·s (25°C)",
+      "solubility": "Miscible with water, ethanol, ether; slightly soluble in acetone"
+    },
+    "gradesPurity": {
+      "technicalGrade": "≥98% (industrial use)",
+      "highPurityGrade": "≥99.5% (pharmaceutical intermediates)",
+      "lowChlorideGrade": "≤10 ppm Cl (electronics)"
+    },
+    "applicationsUses": {
+      "applications": [
+        {
+          "title": "Surfactants & Detergents",
+          "description": "Key intermediate for amphoteric surfactants (e.g., cocamidopropyl hydroxysultaine)"
+        },
+        {
+          "title": "Polymer Industry",
+          "description": "Intermediate for alkyd resins, plasticizer stabilizer."
+        },
+        {
+          "title": "Cosmetics",
+          "description": "Preservative (limited use due to regulations)."
+        },
+        {
+          "title": "Lubricants",
+          "description": "Corrosion inhibitor additive."
+        }
+      ],
+      "industriesServed": [
+        "Coatings & Resins",
+        "Personal Care",
+        "Pharmaceuticals",
+        "Chemical Manufacturing"
+      ]
+    },
+    "storageHandling": {
+      "storage": "Tightly sealed containers. Cool (<30°C). Away from strong oxidizers.",
+      "handling": "Dust mask (NIOSH N95) for powders. Nitrile gloves and goggles."
+    },
+    "safetyRegulatory": {
+      "hazards": "Irritant (eyes/skin/respiratory tract). Not flammable but decomposes at high temps.",
+      "regulations": "GHS Symbols: Exclamation Mark. Not classified as carcinogenic. EU REACH: Registered."
+    }
+  }
+}
