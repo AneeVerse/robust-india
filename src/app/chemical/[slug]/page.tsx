@@ -1373,8 +1373,10 @@ export default function ChemicalDetailPage({ params }: { params: Promise<Chemica
       </section>
 
       {/* Supporting Diverse Industrial Sectors Section */}
-      <div className="w-full overflow-x-hidden">
-        <ServiceSlider />
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 overflow-x-hidden">
+        <div className="max-w-8xl mx-auto">
+          <ServiceSlider />
+        </div>
       </div>
 
       {/* Book Call Section */}

@@ -98,7 +98,7 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Diethyl Phosphite (DEPi)', code: 'diethyl-phosphite-depi' },
       { name: 'Dimethyl Phosphite (DMPi)', code: 'dimethyl-phosphite-dmpi' },
       { name: 'Dimethyl Methylphosphonate (DMMP)', code: 'dimethyl-methylphosphonate-dmmp' },
-      { name: 'Sulfur', code: 'sulfur' }
+      // { name: 'Sulfur', code: 'sulfur' }
     ]
   },
   {
@@ -115,22 +115,58 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'amines',
-    count: 13, // updated count after adding Tertiary-Butylamine and 4-Butylaniline
+    count: 5,
     IconComponent: GiDna2,
     products: [
-      { name: 'Diethylamine' },
-      { name: 'Triethylamine' },
-      { name: 'Monoethanolamine' },
-      { name: 'Diethanolamine' },
+      // { name: 'Diethylamine' },
+      // { name: 'Triethylamine' },
+      // { name: 'Monoethanolamine' },
+      // { name: 'Diethanolamine' },
       { name: 'Diethylene Triamine (DETA)', code: 'diethylene-triamine' },
       { name: 'Aminoethyl Ethanolamine (AEEA)', code: 'aminoethyl-ethanolamine' },
       { name: 'Aminoethylpiperazine (AEP)', code: 'aminoethylpiperazine' },
-      { name: 'Triethanolamine' },
-      { name: 'N-Methylpyrrolidone' },
+      // { name: 'Triethanolamine' },
+      // { name: 'N-Methylpyrrolidone' },
       { name: 'Ethylenediamine (EDA)', code: 'ethylenediamine' },
       { name: 'Piperazine', code: 'piperazine' },
-      { name: 'Tertiary-Butylamine', code: 'tert-butylamine' },
-      { name: '4-Butylaniline', code: '4-butylaniline' }
+      // { name: 'Tertiary-Butylamine', code: 'tert-butylamine' },
+      // { name: '4-Butylaniline', code: '4-butylaniline' }
+    ]
+  },
+  {
+    id: 'alkanolamines',
+    count: 6,
+    IconComponent: GiMolecule,
+    products: [
+      { name: 'Methyl Monoethanolamine (MMEA)', code: 'methyl-monoethanolamine-mmea' },
+      { name: 'Methyl Diethanolamine (MDEA)', code: 'methyl-diethanolamine-mdea' },
+      { name: 'Di-Methyl Ethanolamine (DMEA)', code: 'di-methyl-ethanolamine-dmea' },
+      { name: 'Di-Ethyl Ethanolamine (DEEA)', code: 'di-ethyl-ethanolamine-deea' },
+      { name: 'Ethyl Monoethanolamine (EMEA)', code: 'ethyl-monoethanolamine-emea' },
+      { name: 'Ethyl Diethanolamine (EDEA)', code: 'ethyl-diethanolamine-edea' }
+    ]
+  },
+  {
+    id: 'bromineDerivatives',
+    count: 6,
+    IconComponent: GiMolecule,
+    products: [
+      { name: 'Calcium Bromide (Liquid)', code: 'calcium-bromide' },
+      { name: 'Calcium Bromide (Powder)', code: 'calcium-bromide-powder' },
+      { name: 'Sodium Bromide Solution', code: 'sodium-bromide' },
+      { name: 'Zinc Bromide Solution', code: 'zinc-bromide' },
+      { name: 'Hydrobromic Acid - 48%', code: 'hydrobromic-acid' },
+      { name: 'Di-Phenyl Oxide', code: 'diphenyl-oxide' }
+    ]
+  },
+  {
+    id: 'demulsifiersEmulsifiers',
+    count: 3,
+    IconComponent: GiTestTubes,
+    products: [
+      { name: 'Custom Demulsifiers', code: 'custom-demulsifiers' },
+      { name: 'Custom Emulsifiers', code: 'custom-emulsifiers' },
+      { name: 'R&D Support', code: 'rd-support' }
     ]
   },
   {
@@ -287,16 +323,16 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Ethyl Tertiary Butyl Ether (ETBE)', code: 'etbe' }
     ]
   },
-  {
-    id: 'polyesterProducts',
-    count: 3,
-    IconComponent: GiMolecule,
-    products: [
-      { name: 'Polyester Staple Fiber (PSF)', code: 'polyester-staple-fiber-psf' },
-      { name: 'Polyester Filament Yarn (PFY)', code: 'polyester-filament-yarn-pfy' },
-      { name: 'Polyethylene Terephthalate (PET)', code: 'polyethylene-terephthalate-pet' }
-    ]
-  },
+  // {
+  //   id: 'polyesterProducts',
+  //   count: 3,
+  //   IconComponent: GiMolecule,
+  //   products: [
+  //     { name: 'Polyester Staple Fiber (PSF)', code: 'polyester-staple-fiber-psf' },
+  //     { name: 'Polyester Filament Yarn (PFY)', code: 'polyester-filament-yarn-pfy' },
+  //     { name: 'Polyethylene Terephthalate (PET)', code: 'polyethylene-terephthalate-pet' }
+  //   ]
+  // },
   {
     id: 'chemicalIntermediates',
     count: 7, // updated count after removing cyanuric chloride

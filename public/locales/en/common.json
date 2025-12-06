@@ -2183,8 +2183,20 @@
         "count": 3
       },
       "amines": {
-        "name": "Nitrogen Based Chemicals (Amines & Derivatives)",
+        "name": "Amines",
+        "count": 5
+      },
+      "alkanolamines": {
+        "name": "Alkanolamines Group",
         "count": 6
+      },
+      "bromineDerivatives": {
+        "name": "Bromine Derivatives & Specialty Intermediates",
+        "count": 6
+      },
+      "demulsifiersEmulsifiers": {
+        "name": "Demulsifiers & Emulsifiers",
+        "count": 3
       },
       "phenols": {
         "name": "Phenols Based Chemicals",
@@ -2207,7 +2219,7 @@
         "count": 4
       },
       "additives": {
-        "name": "Organometallic Based Chemicals",
+        "name": "Lubricant Additives",
         "count": 1
       },
       "inorganics": {
@@ -2245,10 +2257,6 @@
       "petrochemicalProducts": {
         "name": "Petrochemical Products",
         "count": 5
-      },
-      "polyesterProducts": {
-        "name": "Polyester Products",
-        "count": 3
       },
       "polymers": {
         "name": "Polymers",
@@ -3746,6 +3754,414 @@
           "hazards": "Flammable in dust form. Produces toxic SO₂ gas when burned. Can irritate skin and eyes.",
           "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 0",
           "regulations": "GHS: Exclamation Mark (Irritant). Not classified as hazardous for bulk transport."
+        }
+      },
+      "methyl-monoethanolamine-mmea": {
+        "overview": {
+          "name": "Methyl Monoethanolamine (MMEA)",
+          "description": "A colorless liquid alkanolamine used as a gas treating agent and surfactant intermediate.",
+          "overviewDescription": "Methyl Monoethanolamine (MMEA) is a versatile alkanolamine compound that serves as an important intermediate in gas treatment processes and surfactant manufacturing. This chemical combines the reactivity of an amine group with the hydroxyl functionality of ethanolamine, making it suitable for various industrial applications including gas purification, corrosion inhibition, and specialty chemical synthesis.",
+          "keyFeatures": [
+            "Effective gas treating agent for acid gas removal",
+            "Versatile surfactant intermediate",
+            "Good chemical stability and reactivity",
+            "Suitable for various industrial processes"
+          ],
+          "majorApplications": [
+            "Gas treating agent for natural gas processing",
+            "Surfactant intermediate production",
+            "Chemical synthesis applications"
+          ],
+          "industrialSignificance": "MMEA plays an important role in gas treatment and surfactant manufacturing industries, offering effective solutions for acid gas removal and specialty chemical production."
+        },
+        "identification": {
+          "iupacName": "2-(Methylamino)ethanol",
+          "commonNames": "MMEA, N-Methyl monoethanolamine, N-Methylethanolamine",
+          "casNumber": "109-83-1",
+          "chemicalFormula": "C₃H₉NO",
+          "molecularWeight": "75.11 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Ammonia-like",
+          "appearance": "Clear liquid",
+          "boilingPoint": "159-161°C",
+          "meltingPoint": "-25°C",
+          "density": "0.937 g/cm³ (at 20°C)",
+          "flashPoint": "71°C",
+          "solubility": "Miscible with water and most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98%",
+          "highPurityGrade": "≥99%"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Gas Treating",
+              "description": "Used as a gas treating agent for removing acid gases from natural gas streams."
+            },
+            {
+              "title": "Surfactant Intermediate",
+              "description": "Serves as an important intermediate in the production of surfactants and specialty chemicals."
+            }
+          ],
+          "industriesServed": [
+            "Gas Processing",
+            "Surfactants & Detergents",
+            "Chemical Manufacturing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in a cool, dry, well-ventilated area away from heat, sparks, and open flames. Keep container tightly closed.",
+          "handling": "Use appropriate personal protective equipment including gloves and eye protection. Avoid contact with skin and eyes."
+        },
+        "safetyRegulatory": {
+          "hazards": "May cause skin and eye irritation. Harmful if swallowed or inhaled.",
+          "nfpaRating": "Health: 2 | Flammability: 2 | Reactivity: 0",
+          "regulations": "GHS: Health Hazard, Eye Irritant"
+        }
+      },
+      "methyl-diethanolamine-mdea": {
+        "overview": {
+          "name": "Methyl Diethanolamine (MDEA)",
+          "description": "A colorless liquid alkanolamine used for acid gas scrubbing and as an absorbent for CO₂ and H₂S removal.",
+          "overviewDescription": "Methyl Diethanolamine (MDEA) is a preferred alkanolamine for selective CO₂ removal in gas sweetening processes. This tertiary amine offers excellent performance characteristics including high CO₂ loading capacity, low regeneration energy requirements, and good chemical stability. MDEA is widely used in natural gas processing, refineries, and other industries where efficient acid gas removal is essential.",
+          "keyFeatures": [
+            "Selective CO₂ removal capabilities",
+            "Energy-efficient regeneration process",
+            "High acid gas loading capacity",
+            "Good chemical stability and low degradation rates"
+          ],
+          "majorApplications": [
+            "Natural gas processing and sweetening",
+            "Refinery gas treatment",
+            "Syngas purification",
+            "CO₂ capture from flue gases"
+          ],
+          "industrialSignificance": "MDEA is widely used for energy-efficient CO₂ removal, making it essential for natural gas processing and carbon capture applications."
+        },
+        "identification": {
+          "iupacName": "2,2'-(Methylimino)diethanol",
+          "commonNames": "MDEA, N-Methyl diethanolamine, N-Methyldiethanolamine",
+          "casNumber": "105-59-9",
+          "chemicalFormula": "C₅H₁₃NO₂",
+          "molecularWeight": "119.16 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Amine-like",
+          "appearance": "Clear, viscous liquid",
+          "boilingPoint": "246-248°C",
+          "meltingPoint": "-21°C",
+          "density": "1.037 g/cm³ (at 20°C)",
+          "flashPoint": "126°C",
+          "solubility": "Miscible with water, alcohol, and most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98%",
+          "highPurityGrade": "≥99%"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Acid Gas Scrubbing",
+              "description": "Used for selective removal of CO₂ and H₂S from natural gas, refinery gas, and syngas streams."
+            },
+            {
+              "title": "CO₂ Capture",
+              "description": "Employed as an absorbent for CO₂ capture from flue gases and other industrial gas streams."
+            },
+            {
+              "title": "Gas Sweetening",
+              "description": "Essential component in natural gas sweetening processes to remove sour gas components."
+            }
+          ],
+          "industriesServed": [
+            "Natural Gas Processing",
+            "Petroleum Refining",
+            "Chemical Processing",
+            "Carbon Capture"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in a cool, dry, well-ventilated area. Keep container tightly closed. Protect from moisture and direct sunlight.",
+          "handling": "Use appropriate personal protective equipment. Avoid contact with skin and eyes. Provide adequate ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "May cause skin and eye irritation. Harmful if swallowed or inhaled.",
+          "nfpaRating": "Health: 2 | Flammability: 1 | Reactivity: 0",
+          "regulations": "GHS: Health Hazard, Eye Irritant"
+        }
+      },
+      "di-methyl-ethanolamine-dmea": {
+        "overview": {
+          "name": "Di-Methyl Ethanolamine (DMEA)",
+          "description": "A colorless liquid alkanolamine used as an intermediate for corrosion inhibitors and surfactants.",
+          "overviewDescription": "Di-Methyl Ethanolamine (DMEA) is a versatile tertiary amine that serves as a key intermediate in the production of corrosion inhibitors and surfactants. Its unique chemical structure combines tertiary amine functionality with a hydroxyl group, making it valuable for specialty chemical synthesis and industrial applications requiring effective corrosion protection and surface-active properties.",
+          "keyFeatures": [
+            "Key intermediate for corrosion inhibitor production",
+            "Important building block for surfactant manufacturing",
+            "Good chemical reactivity and stability",
+            "Versatile applications in specialty chemicals"
+          ],
+          "majorApplications": [
+            "Corrosion inhibitor intermediate",
+            "Surfactant production",
+            "Chemical synthesis applications"
+          ],
+          "industrialSignificance": "DMEA is essential for producing effective corrosion inhibitors and surfactants used across various industrial sectors."
+        },
+        "identification": {
+          "iupacName": "2-(Dimethylamino)ethanol",
+          "commonNames": "DMEA, N,N-Dimethyl ethanolamine, Dimethylethanolamine",
+          "casNumber": "108-01-0",
+          "chemicalFormula": "C₄H₁₁NO",
+          "molecularWeight": "89.14 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Amine-like, fishy",
+          "appearance": "Clear liquid",
+          "boilingPoint": "134-135°C",
+          "meltingPoint": "-59°C",
+          "density": "0.887 g/cm³ (at 20°C)",
+          "flashPoint": "40°C",
+          "solubility": "Miscible with water, alcohol, and most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98%",
+          "highPurityGrade": "≥99%"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Corrosion Inhibitor Intermediate",
+              "description": "Used as a key intermediate in the production of corrosion inhibitors for various industrial applications."
+            },
+            {
+              "title": "Surfactant Production",
+              "description": "Serves as an important building block for manufacturing surfactants and surface-active agents."
+            }
+          ],
+          "industriesServed": [
+            "Corrosion Protection",
+            "Surfactants & Detergents",
+            "Chemical Manufacturing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in a cool, dry, well-ventilated area away from heat, sparks, and open flames. Keep container tightly closed.",
+          "handling": "Use appropriate personal protective equipment. Avoid contact with skin and eyes. Flammable - keep away from ignition sources."
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable liquid. May cause skin and eye irritation. Harmful if swallowed or inhaled.",
+          "nfpaRating": "Health: 2 | Flammability: 2 | Reactivity: 0",
+          "regulations": "GHS: Flame, Health Hazard, Eye Irritant"
+        }
+      },
+      "di-ethyl-ethanolamine-deea": {
+        "overview": {
+          "name": "Di-Ethyl Ethanolamine (DEEA)",
+          "description": "A colorless liquid alkanolamine used for gas treating and as a catalyst intermediate.",
+          "overviewDescription": "Di-Ethyl Ethanolamine (DEEA) is a tertiary alkanolamine that finds application in gas treating processes and serves as an important intermediate in catalyst manufacturing. Its chemical structure makes it suitable for various industrial processes requiring amine functionality combined with hydroxyl reactivity.",
+          "keyFeatures": [
+            "Effective gas treating agent",
+            "Important catalyst intermediate",
+            "Good chemical reactivity",
+            "Versatile industrial applications"
+          ],
+          "majorApplications": [
+            "Gas treating applications",
+            "Catalyst intermediate production",
+            "Chemical synthesis"
+          ],
+          "industrialSignificance": "DEEA plays a role in gas processing and catalyst manufacturing, contributing to efficient industrial processes."
+        },
+        "identification": {
+          "iupacName": "2-(Diethylamino)ethanol",
+          "commonNames": "DEEA, N,N-Diethyl ethanolamine, Diethylethanolamine",
+          "casNumber": "100-37-8",
+          "chemicalFormula": "C₆H₁₅NO",
+          "molecularWeight": "117.19 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Amine-like",
+          "appearance": "Clear liquid",
+          "boilingPoint": "162-163°C",
+          "meltingPoint": "-70°C",
+          "density": "0.892 g/cm³ (at 20°C)",
+          "flashPoint": "60°C",
+          "solubility": "Miscible with water, alcohol, and most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98%",
+          "highPurityGrade": "≥99%"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Gas Treating",
+              "description": "Used in gas treating processes for removal of acid gases and impurities."
+            },
+            {
+              "title": "Catalyst Intermediate",
+              "description": "Serves as an intermediate in the production of catalysts for various chemical processes."
+            }
+          ],
+          "industriesServed": [
+            "Gas Processing",
+            "Catalyst Manufacturing",
+            "Chemical Processing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in a cool, dry, well-ventilated area. Keep container tightly closed. Protect from moisture.",
+          "handling": "Use appropriate personal protective equipment. Avoid contact with skin and eyes. Flammable - handle with care."
+        },
+        "safetyRegulatory": {
+          "hazards": "Flammable liquid. May cause skin and eye irritation. Harmful if swallowed or inhaled.",
+          "nfpaRating": "Health: 2 | Flammability: 2 | Reactivity: 0",
+          "regulations": "GHS: Flame, Health Hazard, Eye Irritant"
+        }
+      },
+      "ethyl-monoethanolamine-emea": {
+        "overview": {
+          "name": "Ethyl Monoethanolamine (EMEA)",
+          "description": "A colorless liquid alkanolamine used as a solvent and intermediate for surfactant production.",
+          "overviewDescription": "Ethyl Monoethanolamine (EMEA) is a secondary alkanolamine that serves dual roles as a solvent and as an intermediate in surfactant manufacturing. Its balanced chemical properties make it valuable for applications requiring both amine reactivity and hydroxyl functionality, particularly in the production of specialty surfactants and surface-active agents.",
+          "keyFeatures": [
+            "Versatile solvent properties",
+            "Important surfactant intermediate",
+            "Good chemical reactivity",
+            "Suitable for specialty chemical synthesis"
+          ],
+          "majorApplications": [
+            "Solvent applications",
+            "Surfactant intermediate production",
+            "Specialty chemical synthesis"
+          ],
+          "industrialSignificance": "EMEA contributes to surfactant and specialty chemical manufacturing, enabling the production of surface-active agents used across various industries."
+        },
+        "identification": {
+          "iupacName": "2-(Ethylamino)ethanol",
+          "commonNames": "EMEA, N-Ethyl monoethanolamine, N-Ethylethanolamine",
+          "casNumber": "110-73-6",
+          "chemicalFormula": "C₄H₁₁NO",
+          "molecularWeight": "89.14 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Amine-like",
+          "appearance": "Clear liquid",
+          "boilingPoint": "167-168°C",
+          "meltingPoint": "-50°C",
+          "density": "0.918 g/cm³ (at 20°C)",
+          "flashPoint": "75°C",
+          "solubility": "Miscible with water, alcohol, and most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98%",
+          "highPurityGrade": "≥99%"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Solvent",
+              "description": "Used as a solvent in various chemical processes and formulations."
+            },
+            {
+              "title": "Surfactant Intermediate",
+              "description": "Serves as an intermediate in the production of surfactants and surface-active agents."
+            }
+          ],
+          "industriesServed": [
+            "Surfactants & Detergents",
+            "Chemical Manufacturing",
+            "Solvents"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in a cool, dry, well-ventilated area. Keep container tightly closed. Protect from moisture.",
+          "handling": "Use appropriate personal protective equipment. Avoid contact with skin and eyes."
+        },
+        "safetyRegulatory": {
+          "hazards": "May cause skin and eye irritation. Harmful if swallowed or inhaled.",
+          "nfpaRating": "Health: 2 | Flammability: 2 | Reactivity: 0",
+          "regulations": "GHS: Health Hazard, Eye Irritant"
+        }
+      },
+      "ethyl-diethanolamine-edea": {
+        "overview": {
+          "name": "Ethyl Diethanolamine (EDEA)",
+          "description": "A colorless liquid alkanolamine used for gas purification and as a surfactant additive.",
+          "overviewDescription": "Ethyl Diethanolamine (EDEA) is a tertiary alkanolamine that finds application in gas purification processes and serves as an additive in surfactant formulations. Its chemical structure provides effective properties for acid gas removal while also contributing to the performance characteristics of surfactant systems.",
+          "keyFeatures": [
+            "Effective gas purification properties",
+            "Surfactant additive applications",
+            "Good chemical stability",
+            "Versatile industrial uses"
+          ],
+          "majorApplications": [
+            "Gas purification processes",
+            "Surfactant additive",
+            "Chemical manufacturing"
+          ],
+          "industrialSignificance": "EDEA supports gas purification and surfactant manufacturing, contributing to efficient industrial processes and product performance."
+        },
+        "identification": {
+          "iupacName": "2,2'-(Ethylimino)diethanol",
+          "commonNames": "EDEA, N-Ethyl diethanolamine, N-Ethyldiethanolamine",
+          "casNumber": "139-87-7",
+          "chemicalFormula": "C₆H₁₅NO₂",
+          "molecularWeight": "133.19 g/mol"
+        },
+        "physicalChemicalProperties": {
+          "form": "Liquid",
+          "color": "Colorless to pale yellow",
+          "odor": "Amine-like",
+          "appearance": "Clear, viscous liquid",
+          "boilingPoint": "268-270°C",
+          "meltingPoint": "-46°C",
+          "density": "1.001 g/cm³ (at 20°C)",
+          "flashPoint": "138°C",
+          "solubility": "Miscible with water, alcohol, and most organic solvents"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥98%",
+          "highPurityGrade": "≥99%"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Gas Purification",
+              "description": "Used in gas purification processes for removal of acid gases and impurities from gas streams."
+            },
+            {
+              "title": "Surfactant Additive",
+              "description": "Serves as an additive in surfactant formulations to enhance performance characteristics."
+            }
+          ],
+          "industriesServed": [
+            "Gas Processing",
+            "Surfactants & Detergents",
+            "Chemical Manufacturing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in a cool, dry, well-ventilated area. Keep container tightly closed. Protect from moisture and direct sunlight.",
+          "handling": "Use appropriate personal protective equipment. Avoid contact with skin and eyes. Provide adequate ventilation."
+        },
+        "safetyRegulatory": {
+          "hazards": "May cause skin and eye irritation. Harmful if swallowed or inhaled.",
+          "nfpaRating": "Health: 2 | Flammability: 1 | Reactivity: 0",
+          "regulations": "GHS: Health Hazard, Eye Irritant"
         }
       },
       "etbe": {
@@ -9955,6 +10371,72 @@
           "regulations": "GHS: Skin Corrosion 1A, Serious Eye Damage 1. UN Transport: UN 1788 (Hydrobromic acid, Class 8 Corrosive)."
         }
       },
+      "calcium-bromide-powder": {
+        "overview": {
+          "name": "Calcium Bromide (Powder)",
+          "description": "A white crystalline powder form of calcium bromide used as a source of bromine for flame retardant formulations and specialty chemical applications.",
+          "overviewDescription": "Calcium Bromide in powder form offers a convenient solid source of bromine for flame retardant formulations and specialty chemical manufacturing. This anhydrous or dihydrate powder provides excellent handling characteristics and precise bromine content for applications requiring solid-state bromine sources.",
+          "keyFeatures": [
+            "High purity powder form",
+            "Source of bromine for flame retardant formulations",
+            "Excellent handling and storage characteristics",
+            "Precise bromine content"
+          ],
+          "majorApplications": [
+            "Flame retardant formulations",
+            "Source of bromine for specialty chemicals",
+            "Chemical synthesis applications"
+          ],
+          "industrialSignificance": "Calcium bromide powder serves as an important bromine source for flame retardant and specialty chemical applications, providing precise control over bromine content in formulations."
+        },
+        "identification": {
+          "iupacName": "Calcium dibromide",
+          "commonNames": "Calcium bromide powder, CaBr₂",
+          "casNumber": "7789-41-5",
+          "chemicalFormula": "CaBr₂ or CaBr₂·2H₂O",
+          "molecularWeight": "199.89 g/mol (anhydrous), 235.92 g/mol (dihydrate)"
+        },
+        "physicalChemicalProperties": {
+          "form": "Solid powder",
+          "color": "White",
+          "odor": "Odorless",
+          "appearance": "White crystalline powder or granules",
+          "meltingPoint": "730°C (anhydrous)",
+          "density": "3.38 g/cm³ (anhydrous)",
+          "solubility": "Very soluble in water (125 g/100mL at 0°C)",
+          "hygroscopic": "Highly hygroscopic"
+        },
+        "gradesPurity": {
+          "technicalGrade": "≥95% (dihydrate)",
+          "highPurityGrade": "≥98% (anhydrous)"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Flame Retardant Formulations",
+              "description": "Used as a source of bromine for flame retardant formulations in plastics, textiles, and coatings."
+            },
+            {
+              "title": "Specialty Chemicals",
+              "description": "Serves as a bromine source for specialty chemical synthesis and manufacturing processes."
+            }
+          ],
+          "industriesServed": [
+            "Flame Retardants",
+            "Specialty Chemicals",
+            "Chemical Manufacturing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in a cool, dry, well-ventilated area in tightly sealed containers. Protect from moisture and incompatible materials.",
+          "handling": "Use appropriate personal protective equipment. Avoid dust generation and contact with skin and eyes. Highly hygroscopic - handle in dry conditions."
+        },
+        "safetyRegulatory": {
+          "hazards": "May cause eye and skin irritation. Hygroscopic material.",
+          "nfpaRating": "Health: 1 | Flammability: 0 | Reactivity: 0",
+          "regulations": "GHS: Eye Irritant. Not classified as dangerous for transport."
+        }
+      },
       "diphenyl-oxide": {
         "overview": {
           "name": "Diphenyl Oxide",
@@ -10025,6 +10507,182 @@
           "hazards": "Combustible liquid. May cause skin and eye irritation. Harmful if swallowed.",
           "nfpaRating": "Health: 1 | Flammability: 1 | Reactivity: 0",
           "regulations": "GHS: Combustible Liquid. Standard chemical handling required."
+        }
+      },
+      "custom-demulsifiers": {
+        "overview": {
+          "name": "Custom Demulsifiers",
+          "description": "Tailor-made blends for efficient water-oil separation in oilfield production, refining, and crude dehydration applications.",
+          "overviewDescription": "Custom Demulsifiers are specialized chemical formulations designed to break emulsions and efficiently separate water from oil in various industrial processes. These tailor-made blends are formulated to meet specific customer requirements, ensuring optimal performance in challenging separation applications across oilfield production, refining operations, and crude dehydration processes.",
+          "keyFeatures": [
+            "Tailor-made blends for specific applications",
+            "Efficient water-oil separation",
+            "Optimized for challenging separation conditions",
+            "Custom formulation based on feedstock characteristics"
+          ],
+          "majorApplications": [
+            "Oilfield production operations",
+            "Refining and crude processing",
+            "Crude dehydration systems"
+          ],
+          "industrialSignificance": "Custom demulsifiers play a critical role in ensuring efficient separation processes in oil and gas operations, reducing processing costs and improving product quality."
+        },
+        "identification": {
+          "iupacName": "Custom blend (proprietary)",
+          "commonNames": "Custom demulsifiers, De-emulsifying agents, Demulsifying blends",
+          "casNumber": "Proprietary blend"
+        },
+        "physicalChemicalProperties": {
+          "form": "Liquid blend",
+          "appearance": "Varies by formulation",
+          "solubility": "Formulated for compatibility with oil-water systems"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Oilfield Production",
+              "description": "Efficient separation of water from crude oil in production operations, improving crude quality and reducing processing costs."
+            },
+            {
+              "title": "Refining Operations",
+              "description": "Breaking emulsions in refining processes to ensure efficient separation and optimal processing conditions."
+            },
+            {
+              "title": "Crude Dehydration",
+              "description": "Removal of water from crude oil streams to meet pipeline and processing specifications."
+            }
+          ],
+          "industriesServed": [
+            "Oil & Gas Production",
+            "Petroleum Refining",
+            "Crude Processing"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in appropriate containers as specified by manufacturer. Protect from extreme temperatures and incompatible materials.",
+          "handling": "Follow manufacturer's recommendations and safety data sheets. Use appropriate personal protective equipment."
+        },
+        "safetyRegulatory": {
+          "hazards": "Refer to product-specific safety data sheet for hazards information.",
+          "regulations": "Compliance with applicable regulations as per product formulation."
+        }
+      },
+      "custom-emulsifiers": {
+        "overview": {
+          "name": "Custom Emulsifiers",
+          "description": "Designed for stability in oil-in-water or water-in-oil systems for agrochemicals, lubricants, coatings, and industrial formulations.",
+          "overviewDescription": "Custom Emulsifiers are specialized surface-active agents formulated to create and maintain stable emulsions in both oil-in-water and water-in-oil systems. These custom-formulated products are designed to meet specific performance requirements across diverse applications including agrochemical formulations, lubricants, coatings, and various industrial applications where emulsion stability is critical.",
+          "keyFeatures": [
+            "Designed for stable oil-in-water or water-in-oil systems",
+            "Custom formulation for specific applications",
+            "Optimized performance characteristics",
+            "Suitable for diverse industrial applications"
+          ],
+          "majorApplications": [
+            "Agrochemical formulations",
+            "Lubricant manufacturing",
+            "Coatings and paint formulations",
+            "Industrial formulations"
+          ],
+          "industrialSignificance": "Custom emulsifiers enable the creation of stable emulsion systems essential for various industrial applications, ensuring product performance and shelf-life stability."
+        },
+        "identification": {
+          "iupacName": "Custom blend (proprietary)",
+          "commonNames": "Custom emulsifiers, Emulsifying agents, Emulsifying blends",
+          "casNumber": "Proprietary blend"
+        },
+        "physicalChemicalProperties": {
+          "form": "Liquid blend",
+          "appearance": "Varies by formulation",
+          "solubility": "Formulated for emulsion stability"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Agrochemicals",
+              "description": "Creating stable emulsions for pesticide and fertilizer formulations to ensure effective application and performance."
+            },
+            {
+              "title": "Lubricants",
+              "description": "Formulating stable emulsions for metalworking fluids, cutting oils, and specialty lubricants."
+            },
+            {
+              "title": "Coatings",
+              "description": "Developing stable emulsion systems for paint, coating, and surface treatment formulations."
+            },
+            {
+              "title": "Industrial Formulations",
+              "description": "Custom emulsifier solutions for various industrial applications requiring stable emulsion systems."
+            }
+          ],
+          "industriesServed": [
+            "Agrochemicals",
+            "Lubricants & Metalworking Fluids",
+            "Coatings & Paints",
+            "Industrial Chemicals"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Store in appropriate containers as specified by manufacturer. Protect from extreme temperatures and incompatible materials.",
+          "handling": "Follow manufacturer's recommendations and safety data sheets. Use appropriate personal protective equipment."
+        },
+        "safetyRegulatory": {
+          "hazards": "Refer to product-specific safety data sheet for hazards information.",
+          "regulations": "Compliance with applicable regulations as per product formulation."
+        }
+      },
+      "rd-support": {
+        "overview": {
+          "name": "R&D Support",
+          "description": "Developed as per client feedstock and performance requirements with customized research and development services.",
+          "overviewDescription": "R&D Support services provide customized research and development solutions tailored to client-specific feedstock characteristics and performance requirements. Our technical team works closely with clients to develop specialized formulations and products that meet unique application needs, ensuring optimal performance and cost-effectiveness through dedicated research and development support.",
+          "keyFeatures": [
+            "Customized R&D services",
+            "Development based on client feedstock",
+            "Performance requirement optimization",
+            "Technical collaboration and support"
+          ],
+          "majorApplications": [
+            "Custom product development",
+            "Formulation optimization",
+            "Performance improvement projects",
+            "Application-specific solutions"
+          ],
+          "industrialSignificance": "R&D Support services enable clients to develop tailored solutions that meet specific requirements, optimizing performance and ensuring successful application outcomes."
+        },
+        "identification": {
+          "iupacName": "Custom development service",
+          "commonNames": "R&D Support, Research & Development Services, Custom Development",
+          "casNumber": "Service-based"
+        },
+        "applicationsUses": {
+          "applications": [
+            {
+              "title": "Custom Product Development",
+              "description": "Development of specialized products and formulations tailored to specific client requirements and feedstock characteristics."
+            },
+            {
+              "title": "Formulation Optimization",
+              "description": "Optimizing existing formulations to improve performance, reduce costs, or meet new application requirements."
+            },
+            {
+              "title": "Performance Improvement",
+              "description": "Enhancing product performance through targeted research and development activities based on client needs."
+            }
+          ],
+          "industriesServed": [
+            "All Industries",
+            "Custom Development",
+            "Technical Services"
+          ]
+        },
+        "storageHandling": {
+          "storage": "Service-based offering - storage requirements vary by developed products.",
+          "handling": "Handling procedures specific to developed products as per product specifications."
+        },
+        "safetyRegulatory": {
+          "hazards": "Product-specific based on developed formulations.",
+          "regulations": "Compliance ensured for all developed products as per applicable regulations."
         }
       },
       "para-tertiary-butyl-phenol-ptbp": {
