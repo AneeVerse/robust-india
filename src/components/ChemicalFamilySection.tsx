@@ -135,7 +135,7 @@ const chemicalCategories: ChemicalCategory[] = [
   },
   {
     id: 'alkanolamines',
-    count: 6,
+    count: 14,
     IconComponent: GiMolecule,
     products: [
       { name: 'Methyl Monoethanolamine (MMEA)', code: 'methyl-monoethanolamine-mmea' },
@@ -143,7 +143,15 @@ const chemicalCategories: ChemicalCategory[] = [
       { name: 'Di-Methyl Ethanolamine (DMEA)', code: 'di-methyl-ethanolamine-dmea' },
       { name: 'Di-Ethyl Ethanolamine (DEEA)', code: 'di-ethyl-ethanolamine-deea' },
       { name: 'Ethyl Monoethanolamine (EMEA)', code: 'ethyl-monoethanolamine-emea' },
-      { name: 'Ethyl Diethanolamine (EDEA)', code: 'ethyl-diethanolamine-edea' }
+      { name: 'Ethyl Diethanolamine (EDEA)', code: 'ethyl-diethanolamine-edea' },
+      { name: 'Triisopropanolamine (TIPA 85%)', code: 'triisopropanolamine-tipa' },
+      { name: 'Monoethanolamine (MEA)', code: 'monoethanolamine-mea' },
+      { name: 'Diethanolamine (DEA)', code: 'diethanolamine-dea' },
+      { name: 'Triethanolamine-Tech (TEA-85%)', code: 'triethanolamine-tea' },
+      { name: 'Triethanolamine-Pure (TEA-99%)', code: 'triethanolamine-tea' },
+      { name: '2-Phenoxy Ethanol', code: '2-phenoxy-ethanol' },
+      { name: 'Diethanol Isopropanolamine (DEIPA 85%)', code: 'diethanol-isopropanolamine-deipa' },
+      { name: 'N-2 Hydroxy Ethyl Pyrrolidine', code: 'n-2-hydroxy-ethyl-pyrrolidine' }
     ]
   },
   {
