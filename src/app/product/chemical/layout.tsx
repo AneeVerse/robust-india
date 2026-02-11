@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import commonEn from '../../../../public/locales/en/common.json';
 
 export const metadata: Metadata = {
     title: "Chemical Products - Specialty & Bulk Chemical Sourcing",

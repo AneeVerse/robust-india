@@ -3,9 +3,19 @@ import commonEn from '../../../../public/locales/en/common.json';
 
 export { generateStaticParams } from './generateStaticParams';
 
+interface ChemicalProduct {
+  overview?: {
+    name?: string;
+    description?: string;
+  };
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const chemical = (commonEn as any).chemicalDetail?.products?.[slug];
+  const data = commonEn as Record<string, unknown>;
+  const chemicalDetail = data.chemicalDetail as Record<string, unknown> | undefined;
+  const products = chemicalDetail?.products as Record<string, ChemicalProduct> | undefined;
+  const chemical = products?.[slug];
 
   const name = chemical?.overview?.name || slug.split('-').map((s: string) => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
   const description = chemical?.overview?.description || `Leading provider of ${name} and integrated chemical trade solutions in India.`;
@@ -27,7 +37,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Layout({ children, params }: { children: React.ReactNode; params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const chemical = (commonEn as any).chemicalDetail?.products?.[slug];
+  const data = commonEn as Record<string, unknown>;
+  const chemicalDetail = data.chemicalDetail as Record<string, unknown> | undefined;
+  const products = chemicalDetail?.products as Record<string, ChemicalProduct> | undefined;
+  const chemical = products?.[slug];
   const name = chemical?.overview?.name || slug;
   const description = chemical?.overview?.description || "";
 

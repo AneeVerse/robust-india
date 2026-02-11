@@ -3,10 +3,18 @@ import commonEn from '../../../../public/locales/en/common.json';
 
 export { generateStaticParams } from './generateStaticParams';
 
+interface ServiceDetail {
+  slug: string;
+  title: string;
+  description: string;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const services = (commonEn as any).servicesPage?.mainServices || [];
-  const service = services.find((s: any) => s.slug === slug);
+  const data = commonEn as Record<string, unknown>;
+  const servicesPage = data.servicesPage as Record<string, unknown> | undefined;
+  const mainServices = servicesPage?.mainServices as ServiceDetail[] | undefined;
+  const service = mainServices?.find((s) => s.slug === slug);
 
   const title = service?.title || slug.split('-').map((s: string) => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
   const description = service?.description || `Expert ${title} services by Robust India. We provide integrated FTWZ and 3PL solutions for the chemical industry.`;
@@ -34,8 +42,10 @@ export default async function ServiceLayout({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const services = (commonEn as any).servicesPage?.mainServices || [];
-  const service = services.find((s: any) => s.slug === slug);
+  const data = commonEn as Record<string, unknown>;
+  const servicesPage = data.servicesPage as Record<string, unknown> | undefined;
+  const mainServices = servicesPage?.mainServices as ServiceDetail[] | undefined;
+  const service = mainServices?.find((s) => s.slug === slug);
   const name = service?.title || slug;
   const description = service?.description || "";
 
