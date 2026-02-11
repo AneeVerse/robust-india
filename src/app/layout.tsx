@@ -70,6 +70,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    'max-video-preview': -1,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
     googleBot: {
       index: true,
       follow: true,
@@ -93,7 +96,7 @@ export const metadata: Metadata = {
         type: 'image/png',
       },
       {
-        media: '(prefers-color-scheme: dark)', 
+        media: '(prefers-color-scheme: dark)',
         url: '/images/nav-logo.png',
         type: 'image/png',
       },

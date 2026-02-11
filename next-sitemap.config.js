@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://robustindia.co',
-  generateRobotsTxt: true, // (optional)
+  siteUrl: process.env.SITE_URL || 'https://robustindia.com',
+  generateRobotsTxt: false, // We manage robots.txt via src/app/robots.ts
   // exclude: ['/server-sitemap.xml'], // <= exclude here
   generateIndexSitemap: false, // (optional) since we have relatively few pages
   sitemapSize: 7000,
@@ -54,7 +54,7 @@ module.exports = {
   additionalPaths: async (config) => {
     // Add any additional dynamic paths that aren't automatically discovered
     const result = [];
-    
+
     // Add chemical product paths
     const chemicalSlugs = [
       'naphtha', 'propylene-propene', 'benzene', 'red-phosphorus',

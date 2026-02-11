@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // All chemical product slugs from generateStaticParams
   const chemicalSlugs = [
     'naphtha',
-    'propylene-propene', 
+    'propylene-propene',
     'benzene',
     'red-phosphorus',
     'trimethyl-phosphite-tmpi',
@@ -73,7 +73,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'polypropylene-pp',
     'polyester-staple-fiber-psf',
     'polyester-filament-yarn-pfy',
-    'polyethylene-terephthalate-pet'
+    'polyethylene-terephthalate-pet',
+    'tributyl-phosphate-tbp',
+    'diethylenetriamine-deta',
+    'aminoethyl-ethanolamine-aeea',
+    'aminoethyl-piperazine-aep',
+    'triisopropanolamine-tipa',
+    'monoethanolamine-mea',
+    'diethanolamine-dea',
+    'triethanolamine-tea',
+    'methyl-monoethanolamine-mmea',
+    'methyl-diethanolamine-mdea',
+    'di-methyl-ethanolamine-dmea',
+    'di-ethyl-ethanolamine-deea',
+    'ethyl-monoethanolamine-emea',
+    'ethyl-diethanolamine-edea',
+    '2-phenoxy-ethanol',
+    'diethanol-isopropanolamine-deipa',
+    'n-2-hydroxy-ethyl-pyrrolidine',
+    'calcium-bromide',
+    'calcium-bromide-powder',
+    'sodium-bromide',
+    'zinc-bromide',
+    'hydrobromic-acid',
+    'diphenyl-oxide',
+    'custom-demulsifiers',
+    'custom-emulsifiers',
+    'rd-support',
+    'para-tertiary-butyl-phenol-ptbp',
+    '2-4-di-tertiary-butyl-phenol',
+    '2-6-di-tertiary-butyl-phenol',
+    'n-benzyl-ethanolamine'
   ];
 
   // Service slugs
